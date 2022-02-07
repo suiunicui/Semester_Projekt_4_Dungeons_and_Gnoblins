@@ -1,0 +1,31 @@
+MUST
+  - have en GUI
+  - have en Database
+  - Have Netværkskommunikation
+  - Have en serie af sammenhængende rum.
+  - Have et start og slut rum som ikke er det samme rum.
+  - Spillet skal kunne gemmes på en Database.
+  - Skal kunne hente save game fra databasen
+  - Skal have en authentication system (Accounts)
+  - Hvert Rum skal bestå af et beskrivende element og en serie af actioner.
+  - Spillet skal have instillinger.
+  - Spillet skal have en Character.
+  - Spillet skal kunne tage imod user input.
+  - Work
+
+SHOULD
+  - Enemies
+  - Items
+  - Combat mechanics
+  - End Screen
+  - Character Stats
+
+COULD
+  - Level development
+  - Procedual world
+  - Text Parser
+  - 
+
+WON't
+  - Security
+  - Graphics
