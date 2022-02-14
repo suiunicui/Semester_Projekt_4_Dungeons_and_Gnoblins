@@ -113,7 +113,20 @@ Test af User Story 7-11 - Exit Menu
         Givet at brugeren er logget ind
         Og har adgang til spillet
         Og trykket "Load Game"
-        
+        Når bruger trykker Load Game i listen af gemte spil på profilen
+        Så loader spillet det gemte spil med det valgte game state
+      Scenarie - Main Menu -> Load Game -> Delete Game
+        Givet at brugeren er logget ind
+        Og har adgang til spillet
+        Og trykket "Load Game"
+        Når Bruger trykker "Delete Game" i load game-menuen
+        Så slettes game statet fra Cloud
+      Scenarie - Main Menu -> Load Game -> Back
+        Givet at brugeren er logget ind
+        Og har adgang til spillet
+        Og trykket "Load Game"
+        Når Bruger trykker "back" i load game-menuen
+        Så vender spillet tilbage til hovedemenuen
        
       
      
