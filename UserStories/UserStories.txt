@@ -1,23 +1,36 @@
 User Story 1 : Log in
-  Som Bruger Kan jeg logge ind, og ser En Main Menu så jeg kan spille spillet.
+  Som Bruger 
+  Kan jeg logge ind
+  For at kunne se en Main Menu så jeg kan spille spillet.
   
 User Story 2 : Opret Bruger
-  Som Bruger Kan jeg oprette en ny profil, så jeg kan logge ind på spillet.
+  Som Bruger 
+  Kan jeg oprette en ny profil
+  så jeg kan logge ind på spillet.
 
 User Story 3 : Main Menu -> Settings
-  Som Bruger kan jeg tilgå indstillinger, så jeg kan customize interfacet
+  Som Bruger 
+  Kan jeg tilgå indstillinger
+  For at jeg kan customize interfacet
 
 UserStory 4 : Main Menu --> Start Spil
-  Som bruger kan jeg starte et nyt spil, ved at give spillet et navn som bruges til save games
+  Som bruger 
+  Kan jeg starte et nyt spil 
+  Ved at give spillet et navn som bruges til save games
 
 UserStory 5 : Spil Spillet
-  Som bruger kan jeg vælge mellem actioner ved at bruge talene 0-9 eller pilstart til at bevæge mig for at interagere med spillet.
+  Som bruger 
+  Kan jeg vælge mellem actioner ved at bruge tallene 0-9 eller piltasterne til at bevæge mig
+  For at interagere med spillet.
 
 UserStory 6 : Enter nyt room
-  Som bruger for jeg en beskrivelse af et rum, når jeg kommer ind i rummet, så jeg ved hvad jeg kan inteagere med.
+  Som bruger 
+  Får jeg en beskrivelse af et rum, når jeg kommer ind i rummet
+  Så jeg ved hvad jeg kan inteagere med.
 
 UserStory 7 : Exit spil
-  Som Bruger kan jeg trykke Esc, Jeg ser en menu med mulighederne "Return to game", "Save and Exit", "Exit without saving" and "Settings".
+  Som Bruger 
+  Kan jeg trykke Esc, For at se en menu med mulighederne "Return to game", "Save and Exit", "Exit without saving" and "Settings".
 
 UserStory 8 : Exit Menu -> Resume Game
   Som Bruger kan jeg trykke på "Return to game" og vende tilbage til spillet
