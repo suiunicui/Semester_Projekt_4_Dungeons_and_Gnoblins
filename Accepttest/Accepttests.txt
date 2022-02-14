@@ -1,0 +1,42 @@
+//Accepttest
+
+Test af User Story 1 - Login
+    Scenarie - Succesfuld login
+        Givet at brugerens profil er oprettet på databasen
+        og at serveren er oppe.
+        Når bruger indtaster sit login(Brugernavn og password)
+        og trykker "Log in" på UI
+        Så skifter skærmen til hovedmenu
+    Scenarie - Fejlet login
+        Givet at brugerns profil er oprettet på databasen
+        og at serveren er oppe.
+        Når bruger indtaster et forkert login(Brugernavn og password)
+        og trykker "Log in" på UI
+        Så signaleres der om forkert login-oplysninger til bruger
+ Test af User Story 2 - Opret profil
+     Scenarie - Bruger opretter profil
+        Givet brugers profil ikke er oprettet i databasen
+        og at serveren er oppe.
+        Når bruger vælger at oprette profil
+        Så gemmes dataen for brugerens profil på databasen
+     Scenarie - Bruger opretter samme profil
+        Givet brugers profil er oprettet i databasen
+        og at serveren er oppe
+        Når bruger vælger at oprette en allerede-eksisterende profil
+        Så signaleres der om at profil allerede eksisterer
+ Test af User Story 3 og 4- Main Menu
+     Scenarie - Tilgå Settings
+        Givet at brugeren er logget ind
+        og har adgang til spillet
+        Når bruger trykker settings i UI
+        Så går spillet til settings menuen
+     Scenarie - Start spillet
+        Givet at brugeren er logget ind
+        og har adgang til spillet
+        Når bruger trykker "Start Spil"
+        Så vises game interface for brugeren
+        
+      
+       
+      
+     
