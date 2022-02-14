@@ -13,7 +13,7 @@ Test af User Story 1 - Login
         Når bruger indtaster et forkert login(Brugernavn og password)
         og trykker "Log in" på UI
         Så signaleres der om forkert login-oplysninger til bruger
- Test af User Story 2 - Opret profil
+Test af User Story 2 - Opret profil
      Scenarie - Bruger opretter profil
         Givet brugers profil ikke er oprettet i databasen
         og at serveren er oppe.
@@ -24,7 +24,7 @@ Test af User Story 1 - Login
         og at serveren er oppe
         Når bruger vælger at oprette en allerede-eksisterende profil
         Så signaleres der om at profil allerede eksisterer
- Test af User Story 3 og 4- Main Menu
+Test af User Story 3 og 4- Main Menu
      Scenarie - Tilgå Settings
         Givet at brugeren er logget ind
         og har adgang til spillet
@@ -35,8 +35,51 @@ Test af User Story 1 - Login
         og har adgang til spillet
         Når bruger trykker "Start Spil"
         Så vises game-interface for brugeren
-  Test af User Story 5 og 6 - 
-     Scenarie - Sp
+Test af User Story 5 og 6 - Spil spillet
+     Scenarie - Spil spillet
+        Givet at bruger har trykket "Start Spil"
+        Når bruger anvender tasterne 0-9 eller piltasterne på keyboard
+        Så interagerer bruger med spillet/////////////////
+     Scenarie - Enter nyt room
+        Givet at bruger har trykket "Start Spil"
+        Når bruger går ind i et nyt rum ved brug af keyboard
+        Så giver UI en beskrivelse af rummet spilleren befinder i sig i i spillet
+Test af User Story 7-11 - Exit Menu
+     Scenarie - Exit spil
+        Givet at bruger har trykket "Start Spil"
+        Når bruger trykket "Escape" på keyboard
+        Så popper et menuvindue op med mulighederne "Return to game", "Save and Exit", Exit without saving"
+        og "settings"
+     Scenarie - Exit menu -> Resume game
+        Givet at bruger har trykket "Start Spil"
+        og derefter har trykket "Escape" på keyboard
+        Når bruger trykker på "Resume Game" i exit menu
+        Så forsvinder menuvinduet
+        og fortsætter spillet
+     Scenarie - Exit menu -> Save and Exit
+        Givet at bruger har trykket "Start Spil"
+        og derefter har trykket "Escape" på keyboard
+        Når bruger trykker på "Save and Exit" i exit menu
+        Så stoppes spillet
+        og hovedmenu bliver vist
+     Scenarie - Exit menu -> Exit Without Saving
+        Givet at bruger har trykket "Start Spil"
+        og derefter har trykket "Escape" på keyboard
+        Når bruger trykker på "Exit Without Saving" i exit menu
+        Så vises et vindue til bruger med teksten "Are you sure?
+        og mulighederne "Yes" og "No"
+     Scenarie - Exit menu -> Save and Exit(Yes)
+        Givet at bruger har trykket "Exit Without Saving" i exit menu
+        Når bruger trykker på "Yes"
+        Så stoppes spillet uden at gemme gemmet
+        og hovedmenu bliver vist
+     Scenarie - Exit menu -> Save and Exit(No)
+        Givet at bruger har trykket "Exit Without Saving" i exit menu
+        Når bruger trykker på "No"
+        Så vender spillet tilbage til exit menu
+  Test af User Story 7-11 - Exit Menu
+      
+      
       
        
       
