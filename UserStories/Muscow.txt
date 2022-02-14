@@ -24,7 +24,6 @@ COULD
   - Level development
   - Procedual world
   - Text Parser
-  - 
 
 WON't
   - Security
