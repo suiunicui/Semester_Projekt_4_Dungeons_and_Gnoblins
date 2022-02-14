@@ -77,10 +77,43 @@ Test af User Story 7-11 - Exit Menu
         Givet at bruger har trykket "Exit Without Saving" i exit menu
         Når bruger trykker på "No"
         Så vender spillet tilbage til exit menu
-  Test af User Story 7-11 - Exit Menu
-      
-      
-      
+     Scenarie - Exit menu -> Settings
+        Givet at bruger har trykket "Start Spil"
+        og derefter har trykket "Escape" på keyboard
+        Når bruger trykker "Settings"
+        Så åbnes et vindue med mulighed for konfiguration af spil for bruger
+     Scenarie - Exit menu -> Settings -> Apply
+        Givet at bruger har trykket "Settings"
+        Og ændret på mindst 1 indstilling
+        Når bruger trykker "Apply"
+        Så ændres indstilninger som brugeren har ændret
+        Og exit menu vises
+     Scenarie - Exit menu -> Settings -> Back
+        Givet at bruger har trykket "Settings"
+        Når bruger trykker på "back"
+        Så vises exit menu
+     Scenarie - Exit menu -> Settings -> Cancel
+        Givet at bruger har trykket "Settings"
+        Og har ændret i mindst 1 indstilling
+        Når bruger trykker på "Cancel"
+        Så vises exit menu
+        Og de valgte ændringer er ikke ændret
+     Scenarie - Exit menu -> Settings -> Default
+        Givet at bruger har trykket "Settings"
+        Og har ændret mindst 1 indstilling
+        Når bruger trykker på "Default"
+        Så ændres alle indstilninger tilbage til default settings
+  Test af User Story 12-13 - Main Menu
+      Scenarie - Main Menu -> Load Game
+        Givet at brugeren er logget ind
+        Og har adgang til spillet
+        Når Bruger trykker "Load Game"
+        Så vises en liste af gemte spil på profilen
+      Scenarie - Main Menu -> Load Game -> Load
+        Givet at brugeren er logget ind
+        Og har adgang til spillet
+        Og trykket "Load Game"
+        
        
       
      
