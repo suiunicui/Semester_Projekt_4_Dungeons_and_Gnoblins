@@ -6,3 +6,21 @@ Login credentials - Login og password
 Gemte spil og navn
 
 
+Ved tilføjelse af et combat system, skal følgende også gemmes:
+Hvilke monstre er slået ihjel, og derigennem hvilke er ikke.
+
+
+Ved tilføjelse af et level system, skal følgende også gemmes:
+Spillerens level, og de stats der følger med.
+hvor langt spilleren er fra at stige til næste level.
+
+
+Ved tilføljelse af et item system, skal følgende også gemmes:
+Hvilke items har spilleren samlet op, og hvilke items bruger spilleren lige nu.
+
+Ved tilføjelse af en random map hver gang man spiller, skal følgende også gemmes:
+Hvilket "seed" bruger det nuværende map.
+
+
+
+
