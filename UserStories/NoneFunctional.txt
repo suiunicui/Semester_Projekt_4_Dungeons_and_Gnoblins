@@ -1,0 +1,43 @@
+None Functional
+  GUI:
+    - GUI'en skal tilbyde valget mellem 3 resolutions
+    - GUI'en skal kunne være fullscreen
+  
+  EASTER: 
+    - Spillet indeholder 3 easter eggs.
+
+  SOUND:
+    - Lyden skal kunne justeres mellem 0-100% relativt til PC'ens output.
+
+  DATABASE:
+    - Skal kunne gemme 5 save games
+    - Skal kunne load it spil indenfor 5s +- 1s
+
+  PORTABILITY:
+    - Spillet er udviklet til Windows
+
+  PERFORMANCE:
+    - Spillet skal vise responds indenfore 1s +- 0.5s
+    - Spillet Queuer ikke kommandoer
+
+  USABILITY:
+    - Spillet skal score mindst 60 usability
+
+  CRASH:
+    - Spillet saver i tilfælde af et crash
+
+  STABILITY:
+    - MEANTIME BETWEEN FAILURE - 1Time +- 10Min
+    - Spillet skal være testbart i.e. skal være designet med testing in mind.
+  
+  DOCUMENTATION:
+    - Spillet skal have en manual til hvordan alting virker.
+
+  SECURITY:
+    - Username skal være mindst 6 characters
+    - Password skal være mindst 8 characters
+    - Password skal have store og små bogstaver
+    - Password må ikke indeholde username.
+
+
+
