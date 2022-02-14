@@ -34,8 +34,9 @@ Test af User Story 1 - Login
         Givet at brugeren er logget ind
         og har adgang til spillet
         Når bruger trykker "Start Spil"
-        Så vises game interface for brugeren
-        
+        Så vises game-interface for brugeren
+  Test af User Story 5 og 6 - 
+     Scenarie - Sp
       
        
       
