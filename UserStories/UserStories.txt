@@ -1,64 +1,67 @@
 User Story 1 : Log in
   Som Bruger Kan jeg logge ind, og ser En Main Menu så jeg kan spille spillet.
+  
+User Story 2 : Opret Bruger
+  Som Bruger Kan jeg oprette en ny profil, så jeg kan logge ind på spillet.
 
-User Story 2 : Main Menu -> Settings
+User Story 3 : Main Menu -> Settings
   Som Bruger kan jeg tilgå indstillinger, så jeg kan customize interfacet
 
-UserStory 3 : Main Menu --> Start Spil
+UserStory 4 : Main Menu --> Start Spil
   Som bruger kan jeg starte et nyt spil, ved at give spillet et navn som bruges til save games
 
-UserStory 4 : Spil Spillet
+UserStory 5 : Spil Spillet
   Som bruger kan jeg vælge mellem actioner ved at bruge talene 0-9 eller pilstart til at bevæge mig for at interagere med spillet.
 
-UserStory 5 : Enter nyt room
+UserStory 6 : Enter nyt room
   Som bruger for jeg en beskrivelse af et rum, når jeg kommer ind i rummet, så jeg ved hvad jeg kan inteagere med.
 
-UserStory 6 : Exit spil
+UserStory 7 : Exit spil
   Som Bruger kan jeg trykke Esc, Jeg ser en menu med mulighederne "Return to game", "Save and Exit", "Exit without saving" and "Settings".
 
-UserStory 7 : Exit Menu -> Resume Game
+UserStory 8 : Exit Menu -> Resume Game
   Som Bruger kan jeg trykke på "Return to game" og vende tilbage til spillet
 
-UserStory 8 : Exit Menu -> Save and Exit
+UserStory 9 : Exit Menu -> Save and Exit
   Som Bruger kan jeg trykke på "Save and Exit" og spillet gemmes og bruger bliver vist Main Menu
 
-UserStory 9 : Exit Menu -> Exit Without Saving
+UserStory 10 : Exit Menu -> Exit Without Saving
   Som Bruger kan jeg trykke på "Exit Without Saving" og får en "Are you Sure" alert
 
-UserStory 9 : Exit Menu -> Exit Without Saving -> No
+UserStory 10 : Exit Menu -> Exit Without Saving -> No
   Brugeren vender tilbage til exit menu
 
-UserStory 9 : Exit Menu -> Exit Without Saving -> yes
+UserStory 10 : Exit Menu -> Exit Without Saving -> yes
   Brugeren vender tilbage til Main Menu no save games.
 
-UserStory 10 : Exit Menu -> Settings
+UserStory 11 : Exit Menu -> Settings
   Som Bruger Kan jeg trykke på "Settings" og så ser jeg Settings Menuen.
 
-UserStory 11 : Settings Menu -> Efter ændringer
+UserStory 12 : Settings Menu -> Efter ændringer
   Som bruger Kan jeg trykke "Apply", "back", "Cancel" og "Default"
 
-UserStory 11 : Settings Menu -> Efter ændringer -> Apply
+UserStory 12 : Settings Menu -> Efter ændringer -> Apply
   Som Bruger kan jeg  trykke "Apply" og så ændres settings
 
-UserStory 11 : Settings Menu -> Efter ændringer -> back
+UserStory 12 : Settings Menu -> Efter ændringer -> back
   Som Bruger kan jeg trykke "back" og brugerens sendes tilbage til Esc Menu
 
-UserStory 11 : Settings Menu -> Efter ændringer -> Cancel
+UserStory 12 : Settings Menu -> Efter ændringer -> Cancel
   Som Bruger kan heg trykke på "Cancel" og ændringerne bliver reverted
 
-UserStory 11 : Settings Menu -> Efter ændringer -> Default
+UserStory 12 : Settings Menu -> Efter ændringer -> Default
   Som bruger kan jeg trykke på "Default" og så sætte settings til defaults
   
-UserStory 12 : Main Menu -> Load Game
+UserStory 13 : Main Menu -> Load Game
   Som bruger kan heg trykke på "load game" og får en liste a save games.
 
-UserStory 12 : Main Meny -> Load Game -> Load
+UserStory 13 : Main Meny -> Load Game -> Load
   Som bruger kan jeg trykke på "load game" og så kommer brugen ind i gamet med det valgte game state
 
-UserStory 12 : Main Meny -> Load Game -> Delete Game
+UserStory 13 : Main Meny -> Load Game -> Delete Game
   Som bruger kan jeg trykke "delete game"  og så bliver game statet slette fra cloud.
 
-UserStory 12 : Main Menu -> Load Game -> Back
+UserStory 13 : Main Menu -> Load Game -> Back
   Som bruger kan jeg trykke "back" og så vender jeg tilbage til Main Menu
 
 
