@@ -13,7 +13,9 @@ MUST
   - Spillet skal have instillinger.
   - Spillet skal have en Character.
   - Spillet skal kunne tage imod user input.
-  - Work
+  - Spillet skal være udviklet til Windows.
+  - Spillet skal være testbart i.e. skal være designet med testing in mind.
+
 
 SHOULD
   - Enemies
