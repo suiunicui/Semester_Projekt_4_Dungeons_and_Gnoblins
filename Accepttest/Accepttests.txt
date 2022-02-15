@@ -38,8 +38,9 @@ Test af User Story 3 og 4- Main Menu
 Test af User Story 5 og 6 - Spil spillet
      Scenarie - Spil spillet
         Givet at bruger har trykket "Start Spil"
+        og derefter trykket på tasten som repræsenterer Nord i spillet
         Når bruger anvender tasterne 0-9 eller piltasterne på keyboard
-        Så interagerer bruger med spillet/////////////////
+        Så bevæger brugeren sig ind i rummet "Nord" for det rum han står i
      Scenarie - Enter nyt room
         Givet at bruger har trykket "Start Spil"
         Når bruger går ind i et nyt rum ved brug af keyboard
