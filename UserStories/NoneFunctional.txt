@@ -22,7 +22,7 @@ None Functional
     - Spillet må ikke have mere end én kommando i aktionskøen af gangen
 
   USABILITY:
-    - ??Spillet skal score mindst 60 i usability tests??
+    - ??Spillet skal score have en SUS (System Usability Scale) score på mindst 68 i usability tests??
 
   CRASH:
     - Spillet gemmes i tilfælde af et crash
