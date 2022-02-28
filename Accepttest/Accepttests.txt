@@ -118,7 +118,7 @@ Test af User Story 5-16 - Exit Menu
         Og trykket "Load Game"
         Når Bruger trykker "back" i load game-menuen
         Så vender spillet tilbage til hovedemenuen
-Test af User Story 21-25 - Spil spillet
+Test af User Story 21-26 - Spil spillet
      Scenarie - Spil spillet - Start spil
         Givet at bruger har trykket "Start Spil"
         og derefter trykket på tasten som repræsenterer Nord i spillet
