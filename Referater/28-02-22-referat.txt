@@ -1,0 +1,22 @@
+
+Vi har ikke lavet teknologiundersøgelse af unity endnu. Vi skal finde ud af hvad der gør det til et 8 mands projekt
+
+vi skal have lavet userstories om hvad som sker i spillet (ikke kun alt rundt om spillet)
+
+Vi har mange userstories som kunne være scenarier
+
+Tidsplan: vi er lidt bagud ifht. projekt formulering
+
+
+actionspunkter:
+
+lav teknologiundersøgelse af unity
+
+lav userstories om spillet
+
+sæt userstories sammen til scenarier.
+
+Vi skal have beskrevet spil-story (hvad skal man gøre, hvad møder man undervejs) (What is game?)
+
+
+
