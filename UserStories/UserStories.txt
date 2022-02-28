@@ -6,7 +6,7 @@ User Story 1 : Log in
 User Story 2 : Opret Bruger
   Som Bruger 
   Kan jeg oprette en ny profil
-  så jeg kan logge ind på spillet.
+  For at jeg kan logge ind på spillet.
 
 User Story 3 : Main Menu -> Settings
   Som Bruger 
@@ -56,6 +56,7 @@ UserStory 11 : Exit Menu -> Settings
 UserStory 12 : Settings Menu -> Efter ændringer
   Som bruger 
   Kan jeg trykke "Apply", "back", "Cancel" og "Default"
+  For at tilpasse spillets indstillinger
 
 UserStory 13 : Settings Menu -> Efter ændringer -> Apply
   Som Bruger 
