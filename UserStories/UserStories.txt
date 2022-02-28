@@ -122,7 +122,10 @@ UserStory 25 : Spil spillet -> Interact
   Kan jeg trykke på "interact" knappen
   For at interagere med objekter i det nuværende rum
   
-
+UserStory 26 : Spil Spillet -> Level klaret
+  Som bruger
+  Kan jeg færdiggøre det sidste rum
+  For at få en besked om at spillet er fuldført og mulighed for at tilgå Main Menu
 
   
   
