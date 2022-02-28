@@ -18,37 +18,27 @@ UserStory 4 : Main Menu --> Start Spil
   Kan jeg starte et nyt spil 
   Ved at give spillet et navn som bruges til save games
 
-UserStory 5 : Spil Spillet
-  Som bruger 
-  Kan jeg vælge mellem actioner ved at bruge tallene 0-9 eller piltasterne til at bevæge mig
-  For at interagere med spillet.
-
-UserStory 6 : Enter nyt room
-  Som bruger 
-  Får jeg en beskrivelse af et rum, når jeg kommer ind i rummet
-  Så jeg ved hvad jeg kan inteagere med.
-
-UserStory 7 : Exit spil
+UserStory 5 : Exit spil
   Som Bruger 
   Kan jeg trykke Esc
   For at se en menu med mulighederne "Return to game", "Save and Exit", "Exit without saving" and "Settings".
 
-UserStory 8 : Exit Menu -> Resume Game
+UserStory 6 : Exit Menu -> Resume Game
   Som Bruger 
   Kan jeg trykke på "Return to game" 
   For at vende tilbage til spillet
 
-UserStory 9 : Exit Menu -> Save and Exit
+UserStory 7 : Exit Menu -> Save and Exit
   Som Bruger 
   Kan jeg trykke på "Save and Exit" 
   For at spillet gemmes og bruger bliver vist Main Menu
 
-UserStory 10 : Exit Menu -> Exit Without Saving
+UserStory 8 : Exit Menu -> Exit Without Saving
   Som Bruger 
   Kan jeg trykke på "Exit Without Saving" 
   For at får en "Are you Sure" alert
 
-UserStory 10 : Exit Menu -> Exit Without Saving -> No
+UserStory 9 : Exit Menu -> Exit Without Saving -> No
   Som Bruger
   Kan jeg trykke på "No" 
   For at vende tilbage til exit menu
@@ -67,44 +57,79 @@ UserStory 12 : Settings Menu -> Efter ændringer
   Som bruger 
   Kan jeg trykke "Apply", "back", "Cancel" og "Default"
 
-UserStory 12 : Settings Menu -> Efter ændringer -> Apply
+UserStory 13 : Settings Menu -> Efter ændringer -> Apply
   Som Bruger 
   Kan jeg  trykke "Apply" 
   For at ændre settings
 
-UserStory 12 : Settings Menu -> Efter ændringer -> back
+UserStory 14 : Settings Menu -> Efter ændringer -> back
   Som Bruger 
   Kan jeg trykke "back" 
   For at brugeren sendes tilbage til Esc Menu
 
-UserStory 12 : Settings Menu -> Efter ændringer -> Cancel
+UserStory 15 : Settings Menu -> Efter ændringer -> Cancel
   Som Bruger 
   Kan jeg trykke på "Cancel" 
   For at ændringerne bliver reverted
 
-UserStory 12 : Settings Menu -> Efter ændringer -> Default
+UserStory 16 : Settings Menu -> Efter ændringer -> Default
   Som bruger 
   Kan jeg trykke på "Default" 
   For at sætte settings til defaults
   
-UserStory 13 : Main Menu -> Load Game
+UserStory 17 : Main Menu -> Load Game
   Som bruger 
   Kan jeg trykke på "load game" 
   For at få en liste a save games.
 
-UserStory 13 : Main Meny -> Load Game -> Load
+UserStory 18 : Main Menu -> Load Game -> Load
   Som bruger 
   Kan jeg trykke på "load game" 
   For at komme ind i spillet og fortsætte med at spille det valgte spil
 
-UserStory 13 : Main Meny -> Load Game -> Delete Game
+UserStory 19 : Main Menu -> Load Game -> Delete Game
   Som bruger 
   Kan jeg trykke "delete game" 
   For at game statet bliver slette fra cloud.
 
-UserStory 13 : Main Menu -> Load Game -> Back
+UserStory 20 : Main Menu -> Load Game -> Back
   Som bruger 
   Kan jeg trykke "back" 
   For at vende tilbage til Main Menu
+  
+UserStory 21 : Spil Spillet -> Bevægelse i spil
+  Som bruger 
+  Kan jeg vælge mellem actioner ved at bruge tallene 0-9 eller piltasterne til at bevæge mig
+  For at bevæge karakteren i spillet til et andet rum.
 
+UserStory 22 : Spil spillet -> Enter nyt room
+  Som bruger 
+  Får jeg en beskrivelse af et rum, når jeg kommer ind i rummet
+  Så jeg ved hvad jeg kan inteagere med.
+  
+UserStory 23 : Spil spillet -> Combat
+  Som bruger
+  Kan jeg trykke på "attack" knappen
+  For at skade fjenden
+  
+UserStory 24 : Spil spillet -> Looting
+  Som bruger
+  Kan jeg trykke på "loot" knappen
+  For at se potentielle genstande fra rummet
+  
+UserStory 25 : Spil spillet -> Inventory
+  Som bruger
+  Kan jeg trykke på "Inventory" knappen
+  For at tilgå karakterens udrustning
+  
+UserStory 26 : Spil spillet -> Interact
+  Som bruger
+  Kan jeg trykke på "interact" knappen
+  For at interagere med objekter i det nuværende rum
+  
+
+
+  
+  
+  
 
