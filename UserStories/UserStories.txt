@@ -112,17 +112,12 @@ UserStory 23 : Spil spillet -> Combat
   Kan jeg trykke på "attack" knappen
   For at skade fjenden
   
-UserStory 24 : Spil spillet -> Looting
-  Som bruger
-  Kan jeg trykke på "loot" knappen
-  For at se potentielle genstande fra rummet
-  
-UserStory 25 : Spil spillet -> Inventory
+UserStory 24 : Spil spillet -> Inventory
   Som bruger
   Kan jeg trykke på "Inventory" knappen
   For at tilgå karakterens udrustning
   
-UserStory 26 : Spil spillet -> Interact
+UserStory 25 : Spil spillet -> Interact
   Som bruger
   Kan jeg trykke på "interact" knappen
   For at interagere med objekter i det nuværende rum
