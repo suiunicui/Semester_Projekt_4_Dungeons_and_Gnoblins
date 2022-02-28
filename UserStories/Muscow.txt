@@ -18,18 +18,18 @@ MUST
 
 
 SHOULD
-  - Enemies
-  - Items
-  - Combat mechanics
-  - End Screen
-  - Character Stats
+  - Have Enemies
+  - Have Items
+  - Have Combat mechanics
+  - Have End Screen
+  - Have Character Stats
 
 COULD
-  - Level development
-  - Procedual world
-  - Text Parser
-  - Difficulty
+  - Have Level development
+  - Have Procedual world
+  - Have Text Parser
+  - Have Difficulty
 
 WON't
-  - Security
-  - Graphics
+  - Have Security
+  - Have Graphics
