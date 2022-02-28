@@ -137,8 +137,12 @@ Test af User Story 21-25 - Spil spillet
         Givet at bruger har trykket "Start Spil"
         Når bruger trykker "Inventory"
         Så vises genstande som bruger besidder
-      Scenarie - Spil spil - Interact
+      Scenarie - Spil spillet - Interact
         Givet at der ikke er fjender i rummet
         Når bruger trykker "Interact"
         Så kan bruger tage potentielle genstande i rummet til brugerens inventory
-     
+      Scenarie - Spil spillet - Level klaret
+        Givet at bruger har fuldført det sidste rum
+        Når bruger trykker "Interact"
+        Så får bruger en besked om at level er klaret
+        og får mulighed for at gå til "Main Menu"
