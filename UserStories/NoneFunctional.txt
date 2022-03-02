@@ -12,13 +12,13 @@ None Functional
 
   DATABASE:
     - Skal kunne gemme mindst 5 save games
-    - Skal kunne loade et spil indenfor 5s +- 1s
+    - Skal kunne loade et spil indenfoe maksimalt 5s
 
   PORTABILITY:
     ??
 
   PERFORMANCE:
-    - Spillet skal respondere indenfor 1s +- 0.5s
+    - Spillet skal respondere indenfor maksimalt 1s
     - Spillet må ikke have mere end én kommando i aktionskøen af gangen
 
   USABILITY:

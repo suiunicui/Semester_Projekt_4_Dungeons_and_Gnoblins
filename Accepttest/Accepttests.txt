@@ -35,17 +35,7 @@ Test af User Story 3 og 4- Main Menu
         og har adgang til spillet
         Når bruger trykker "Start Spil"
         Så vises game-interface for brugeren
-Test af User Story 5 og 6 - Spil spillet
-     Scenarie - Spil spillet
-        Givet at bruger har trykket "Start Spil"
-        og derefter trykket på tasten som repræsenterer Nord i spillet
-        Når bruger anvender tasterne 0-9 eller piltasterne på keyboard
-        Så bevæger brugeren sig ind i rummet "Nord" for det rum han står i
-     Scenarie - Enter nyt room
-        Givet at bruger har trykket "Start Spil"
-        Når bruger går ind i et nyt rum ved brug af keyboard
-        Så giver UI en beskrivelse af rummet spilleren befinder i sig i i spillet
-Test af User Story 7-11 - Exit Menu
+Test af User Story 5-16 - Exit Menu
      Scenarie - Exit spil
         Givet at bruger har trykket "Start Spil"
         Når bruger trykket "Escape" på keyboard
@@ -104,7 +94,7 @@ Test af User Story 7-11 - Exit Menu
         Og har ændret mindst 1 indstilling
         Når bruger trykker på "Default"
         Så ændres alle indstilninger tilbage til default settings
-  Test af User Story 12-13 - Main Menu
+  Test af User Story 17-20 - Main Menu
       Scenarie - Main Menu -> Load Game
         Givet at brugeren er logget ind
         Og har adgang til spillet
@@ -128,6 +118,31 @@ Test af User Story 7-11 - Exit Menu
         Og trykket "Load Game"
         Når Bruger trykker "back" i load game-menuen
         Så vender spillet tilbage til hovedemenuen
-       
-      
-     
+Test af User Story 21-26 - Spil spillet
+     Scenarie - Spil spillet - Start spil
+        Givet at bruger har trykket "Start Spil"
+        og derefter trykket på tasten som repræsenterer Nord i spillet
+        Når bruger anvender tasterne 0-9 eller piltasterne på keyboard
+        Så bevæger brugeren sig ind i rummet "Nord" for det rum han står i
+     Scenarie - Spil spillet - Enter nyt room
+        Givet at bruger har trykket "Start Spil"
+        Når bruger går ind i et nyt rum ved brug af keyboard
+        Så giver UI en beskrivelse af rummet spilleren befinder i sig i i spillet
+      Scenarie - Spil spillet - Combat
+        Givet at bruger møder en fjende i et rum
+        Når bruger trykker attack
+        Så ruller brugeren en et tal mod fjenden om at skade fjenden
+        eller blive skadet
+      Scenarie - Spil spillet - Inventory
+        Givet at bruger har trykket "Start Spil"
+        Når bruger trykker "Inventory"
+        Så vises genstande som bruger besidder
+      Scenarie - Spil spillet - Interact
+        Givet at der ikke er fjender i rummet
+        Når bruger trykker "Interact"
+        Så kan bruger tage potentielle genstande i rummet til brugerens inventory
+      Scenarie - Spil spillet - Level klaret
+        Givet at bruger har fuldført det sidste rum
+        Når bruger trykker "Interact"
+        Så får bruger en besked om at level er klaret
+        og får mulighed for at gå til "Main Menu"
