@@ -1,0 +1,51 @@
+Introduktion:
+
+I projektgruppen har vi identificeret at der er to oplagte frameworks, til at lave projektet i.
+Det første framework er Microsofts eget, nemlig "WPF" til frontend og "ASP.NET" til vores backend.
+Det andet framework er Unity Technologies' framework "Unity" til kombineret frontend og backend.
+Ens for de to framework er at de begge understøtter blandt andet:
+- Understøtter C# 
+- Versionskontrol i form af Git
+- integrerede/let integrerbare Testframeworks
+
+Unity:
+
+Unity lader dig bygge fulde spil fra bunden, dette giver rig mulighed for udvidelse og ændringer af spil designet, dette kombineret med 
+at Unity er bygget til cross-platform kompilering, hvilket gør at ens spil automatisk bliver portabelt og ens målgruppe bliver udvidet og derved
+bliver markedsføring af produktet mere bred. Dette har naturligvis en pris, i form af at en Unity licens til firmaer med en årlig omsætning 
+på over 100.000$, koster minimum 1.800$.
+Derudover er Unity umiddelbart intuitivt og nemt at bruge, med det menes der at Unity's frontend er informativ, 
+dog er hele frameworket nyt og skal derfor læres fra bunden. Dette resulterer i at der skal undersøges mange basale ting for at der kan laves et spil,
+og tiden det tager at lave første iteration kan hurtigt eksplodere. Unity er også et program i aktiv udvikling og det betyder
+for det første at features hele tiden bliver udviklet og udvidet. Dette resulterer også i at dokumentationen omhandlende Unity
+hele tiden skifter og derfor kan det være svært at søge hjælp på nettet, når man sidder fast i udviklingen.
+Unity har udover sit udviklingsværktøj, en Asset store, som giver mulighed for at købe allerede programmerede Assets og trække dem direkte ind
+i ens program. Dette giver selvfølgelig mulighed for at spare en masse arbejde, men da projektarbejde netop handler om at lave tingene selv,
+giver dette ikke meget mening at bruge i dette tilfælde.
+Et negativ ved at bruge et så gennemført og feature rigt udviklingsværktøj, er at kompilerings, loading og test tider bliver markant højere end
+ved brug af lettere udviklingsværktøjer.
+Til sidst skal der nævnes at udvikling i Unity ikke bliver opdelt i frontend/backend, sådan som det bliver lært at udvikling skal opdeles på 4. semester,
+Tværtimod sidder frontend/backend meget tæt sammen, når man udvikler med Unity.
+
+
+
+.NET framework:
+
+- Free
+- Mindre overhead = hurtigere load, compile tider.
+- Frontend/backend sepereret (Passer til projektarbejde og undervisningsformen)
+- Kendt viden (masser af dokumentation)
+- Vi ved hvordan Continious Integration skal sættes op.
+- Vi kan fokusere på at lave noget godt og ikke bare på basics.
+
+
+
+
+Kilder:
+Unity:
+www.Unity.com
+https://www.newgenapps.com/blogs/unity-3d-pros-cons-analysis-choose-unity/
+https://citrusbits.com/a-unity-review-pros-and-cons/
+
+.NET:
+Microsoft.com
