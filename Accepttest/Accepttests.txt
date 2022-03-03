@@ -1,0 +1,148 @@
+//Accepttest
+
+Test af User Story 1 - Login
+    Scenarie - Succesfuld login
+        Givet at brugerens profil er oprettet på databasen
+        og at serveren er oppe.
+        Når bruger indtaster sit login(Brugernavn og password)
+        og trykker "Log in" på UI
+        Så skifter skærmen til hovedmenu
+    Scenarie - Fejlet login
+        Givet at brugerns profil er oprettet på databasen
+        og at serveren er oppe.
+        Når bruger indtaster et forkert login(Brugernavn og password)
+        og trykker "Log in" på UI
+        Så signaleres der om forkert login-oplysninger til bruger
+Test af User Story 2 - Opret profil
+     Scenarie - Bruger opretter profil
+        Givet brugers profil ikke er oprettet i databasen
+        og at serveren er oppe.
+        Når bruger vælger at oprette profil
+        Så gemmes dataen for brugerens profil på databasen
+     Scenarie - Bruger opretter samme profil
+        Givet brugers profil er oprettet i databasen
+        og at serveren er oppe
+        Når bruger vælger at oprette en allerede-eksisterende profil
+        Så signaleres der om at profil allerede eksisterer
+Test af User Story 3 og 4- Main Menu
+     Scenarie - Tilgå Settings
+        Givet at brugeren er logget ind
+        og har adgang til spillet
+        Når bruger trykker settings i UI
+        Så går spillet til settings menuen
+     Scenarie - Start spillet
+        Givet at brugeren er logget ind
+        og har adgang til spillet
+        Når bruger trykker "Start Spil"
+        Så vises game-interface for brugeren
+Test af User Story 5-16 - Exit Menu
+     Scenarie - Exit spil
+        Givet at bruger har trykket "Start Spil"
+        Når bruger trykket "Escape" på keyboard
+        Så popper et menuvindue op med mulighederne "Return to game", "Save and Exit", Exit without saving"
+        og "settings"
+     Scenarie - Exit menu -> Resume game
+        Givet at bruger har trykket "Start Spil"
+        og derefter har trykket "Escape" på keyboard
+        Når bruger trykker på "Resume Game" i exit menu
+        Så forsvinder menuvinduet
+        og fortsætter spillet
+     Scenarie - Exit menu -> Save and Exit
+        Givet at bruger har trykket "Start Spil"
+        og derefter har trykket "Escape" på keyboard
+        Når bruger trykker på "Save and Exit" i exit menu
+        Så stoppes spillet
+        og hovedmenu bliver vist
+     Scenarie - Exit menu -> Exit Without Saving
+        Givet at bruger har trykket "Start Spil"
+        og derefter har trykket "Escape" på keyboard
+        Når bruger trykker på "Exit Without Saving" i exit menu
+        Så vises et vindue til bruger med teksten "Are you sure?
+        og mulighederne "Yes" og "No"
+     Scenarie - Exit menu -> Save and Exit(Yes)
+        Givet at bruger har trykket "Exit Without Saving" i exit menu
+        Når bruger trykker på "Yes"
+        Så stoppes spillet uden at gemme gemmet
+        og hovedmenu bliver vist
+     Scenarie - Exit menu -> Save and Exit(No)
+        Givet at bruger har trykket "Exit Without Saving" i exit menu
+        Når bruger trykker på "No"
+        Så vender spillet tilbage til exit menu
+     Scenarie - Exit menu -> Settings
+        Givet at bruger har trykket "Start Spil"
+        og derefter har trykket "Escape" på keyboard
+        Når bruger trykker "Settings"
+        Så åbnes et vindue med mulighed for konfiguration af spil for bruger
+     Scenarie - Exit menu -> Settings -> Apply
+        Givet at bruger har trykket "Settings"
+        Og ændret på mindst 1 indstilling
+        Når bruger trykker "Apply"
+        Så ændres indstilninger som brugeren har ændret
+        Og exit menu vises
+     Scenarie - Exit menu -> Settings -> Back
+        Givet at bruger har trykket "Settings"
+        Når bruger trykker på "back"
+        Så vises exit menu
+     Scenarie - Exit menu -> Settings -> Cancel
+        Givet at bruger har trykket "Settings"
+        Og har ændret i mindst 1 indstilling
+        Når bruger trykker på "Cancel"
+        Så vises exit menu
+        Og de valgte ændringer er ikke ændret
+     Scenarie - Exit menu -> Settings -> Default
+        Givet at bruger har trykket "Settings"
+        Og har ændret mindst 1 indstilling
+        Når bruger trykker på "Default"
+        Så ændres alle indstilninger tilbage til default settings
+  Test af User Story 17-20 - Main Menu
+      Scenarie - Main Menu -> Load Game
+        Givet at brugeren er logget ind
+        Og har adgang til spillet
+        Når Bruger trykker "Load Game"
+        Så vises en liste af gemte spil på profilen
+      Scenarie - Main Menu -> Load Game -> Load
+        Givet at brugeren er logget ind
+        Og har adgang til spillet
+        Og trykket "Load Game"
+        Når bruger trykker Load Game i listen af gemte spil på profilen
+        Så loader spillet det gemte spil med det valgte game state
+      Scenarie - Main Menu -> Load Game -> Delete Game
+        Givet at brugeren er logget ind
+        Og har adgang til spillet
+        Og trykket "Load Game"
+        Når Bruger trykker "Delete Game" i load game-menuen
+        Så slettes game statet fra Cloud
+      Scenarie - Main Menu -> Load Game -> Back
+        Givet at brugeren er logget ind
+        Og har adgang til spillet
+        Og trykket "Load Game"
+        Når Bruger trykker "back" i load game-menuen
+        Så vender spillet tilbage til hovedemenuen
+Test af User Story 21-26 - Spil spillet
+     Scenarie - Spil spillet - Start spil
+        Givet at bruger har trykket "Start Spil"
+        og derefter trykket på tasten som repræsenterer Nord i spillet
+        Når bruger anvender tasterne 0-9 eller piltasterne på keyboard
+        Så bevæger brugeren sig ind i rummet "Nord" for det rum han står i
+     Scenarie - Spil spillet - Enter nyt room
+        Givet at bruger har trykket "Start Spil"
+        Når bruger går ind i et nyt rum ved brug af keyboard
+        Så giver UI en beskrivelse af rummet spilleren befinder i sig i i spillet
+      Scenarie - Spil spillet - Combat
+        Givet at bruger møder en fjende i et rum
+        Når bruger trykker attack
+        Så ruller brugeren en et tal mod fjenden om at skade fjenden
+        eller blive skadet
+      Scenarie - Spil spillet - Inventory
+        Givet at bruger har trykket "Start Spil"
+        Når bruger trykker "Inventory"
+        Så vises genstande som bruger besidder
+      Scenarie - Spil spillet - Interact
+        Givet at der ikke er fjender i rummet
+        Når bruger trykker "Interact"
+        Så kan bruger tage potentielle genstande i rummet til brugerens inventory
+      Scenarie - Spil spillet - Level klaret
+        Givet at bruger har fuldført det sidste rum
+        Når bruger trykker "Interact"
+        Så får bruger en besked om at level er klaret
+        og får mulighed for at gå til "Main Menu"

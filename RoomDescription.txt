@@ -1,0 +1,48 @@
+Room 1: 
+
+The Big Bad Gnoblin has stolen the SWORD OF DESTINY and is hiding in the Caves of Evil. 
+Without the sword the realm is in danger of beeing overrun by evil forces.
+
+You are the Hero of the Realm, sent to recover this priceless artefact.
+
+Beware! The caves are full of danger , and you must use all your skill 
+to survive this perilous ordeal and conpleete your quest. 
+
+You stand outside the entrance to the Caves of Evil. The entrance, just south of you, appears ungarded.
+
+{Use "keys" to move}
+
+[options: go south (enter the caves)]
+
+
+Room 2:
+
+The Entrance {tutorial island/room of dumbasses/the gatekeeper}
+
+The entrance room is mostly empty. Next to the entrance you see a chair. A sword is resting against the chair.
+
+{Press interact to pick up the sword}
+
+...
+
+A Gnoblin has entered the room through an opening to the east. He attacks you.
+
+{You are now in a combat. Press "FIGHT" to attack the Gnoblin}
+
+...
+
+The room is mostly empty. There is a chair near the entrance, a dead Gnoblin on the floor and an opening to the East.
+
+
+Room 3:
+
+
+
+
+Room 20:
+
+You have found the SWORD OF DESTINY, and saved the realm.
+
+Congratulations, you have won the game.
+
+[options: End game]
