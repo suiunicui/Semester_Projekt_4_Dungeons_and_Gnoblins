@@ -1,0 +1,53 @@
+﻿<Window x:Class="FrontEnd_GameLayout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEnd_GameLayout"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Background="Black">
+    <Window.Resources>
+        <system:String x:Key="description">The Big Bad Gnoblin has stolen the SWORD OF DESTINY and is hiding in the Caves of Evil. 
+Without the sword the realm is in danger of beeing overrun by evil forces.
+
+You are the Hero of the Realm, sent to recover this priceless artefact.
+
+Beware! The caves are full of danger , and you must use all your skill 
+to survive this perilous ordeal and conpleete your quest. 
+
+You stand outside the entrance to the Caves of Evil. The entrance, just south of you, appears ungarded.</system:String>
+    </Window.Resources>
+    <DockPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" 
+                       Text="{DynamicResource description}" Foreground="White" TextWrapping="Wrap" Margin="20"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="There is nothing to interact with here." Foreground="White" TextWrapping="Wrap" Margin="20"/>
+            <Canvas x:Name="MapCanvas" Grid.Column="1" Grid.Row="0">
+                <Rectangle Width="380" Height="197" Fill="Gray" Canvas.Left="10" Canvas.Top="10"/>
+                <Rectangle Width="20" Height="20" Fill="Black" Canvas.Left="190" Canvas.Top="176"/>
+                <Line X1="0" Y1="0" X2="0" Y2="10" Stroke="Black" Canvas.Left="200" Canvas.Top="166"/>
+            </Canvas>
+            <Button x:Name="north" Content="Go North" Margin="85,117,227,80" Height="20" Width="80" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="east" Content="Go East" Margin="133,144,179,53" Height="20" Width="80" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="west" Content="Go West" Margin="36,144,276,53" Height="20" Width="80" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="south" Content="Go South" Margin="85,170,227,27" Height="20" Width="80" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="character" Content="Character" Margin="285,122,27,75" Height="20" Width="80" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="inventory" Content="Inventory" Margin="285,149,27,48" Height="20" Width="80" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="menu" Content="Main Menu" Margin="285,175,27,22" Height="20" Width="80" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="interact" Content="Interact" Margin="159,45,100,142" Height="30" Width="140" Grid.Column="1" Grid.Row="1"/>
+
+        </Grid>
+    </DockPanel>
+</Window>

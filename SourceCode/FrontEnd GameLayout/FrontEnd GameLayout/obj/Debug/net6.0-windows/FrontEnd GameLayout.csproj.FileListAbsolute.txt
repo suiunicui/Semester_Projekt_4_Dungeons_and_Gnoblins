@@ -1,0 +1,25 @@
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.exe
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.deps.json
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.runtimeconfig.json
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.dll
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\ref\FrontEnd GameLayout.dll
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.pdb
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\Prism.dll
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\Prism.Wpf.dll
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.csproj.AssemblyReference.cache
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\App.g.cs
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout_MarkupCompile.cache
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout_MarkupCompile.lref
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\MainWindow.baml
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.g.resources
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.GeneratedMSBuildEditorConfig.editorconfig
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.AssemblyInfoInputs.cache
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.AssemblyInfo.cs
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.csproj.CoreCompileInputs.cache
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.csproj.CopyComplete
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.dll
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\ref\FrontEnd GameLayout.dll
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.pdb
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.genruntimeconfig.cache

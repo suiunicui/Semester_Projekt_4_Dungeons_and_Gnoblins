@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "H9rc5/n3OwbiSIzzARiMyVqLc/0DIPat9/VnXFeONA/iM0YSLZrPCZPTClL+LtcsINgL9jh6BEhKsl1yot24EA==",
+  "success": true,
+  "projectFilePath": "D:\\Sune\\Documents\\UNI\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sune\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\Sune\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\Sune\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
+  ],
+  "logs": []
+}
