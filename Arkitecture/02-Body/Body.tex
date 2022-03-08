@@ -215,16 +215,19 @@
   \centering
   \begin{tikzpicture}
     \node[draw, rectangle, dashed , minimum width = \linewidth, minimum height = 12cm] (Game State) at (0,0) {};
-    \umlclass[x = 4.5]{GameState::Player}{}{}
+    \umlclass[x = 4.5, y = 4]{GameState::Player}{}{}
     \umlclass[x = -4.5, y = 4]{GameState::Map}{}{}
     \umlclass[x = 0, y = 0]{GameState::Item}{}{}
     \umlclass[x = -4.5, y = 0]{GameState::Room}{}{}
-    \umlclass[x = -4, y = -4]{GameState::Chest}{}{}
+    \umlclass[x = -4.5, y = -4]{GameState::Chest}{}{}
     \umlclass[x = 0, y = -4]{GameState::Weapon}{}{}
+    \umlclass[x = 0, y = 4]{GameState::Enemy}{}{}
+    \umlclass[x = 4.5]{GameState::Actor}{}{}
     \umldep[]{GameState::Map}{GameState::Room}
     \umlinherit[]{GameState::Chest}{GameState::Item}
     \umlinherit[]{GameState::Weapon}{GameState::Item}
-    
+    \umlinherit[]{GameState::Enemy}{GameState::Actor}
+    \umlinherit[]{GameState::Player}{GameState::Actor}
   \end{tikzpicture}
 \end{figure}
 
