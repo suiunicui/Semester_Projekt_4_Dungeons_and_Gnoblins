@@ -23,3 +23,4 @@ D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd G
 D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\ref\FrontEnd GameLayout.dll
 D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.pdb
 D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.genruntimeconfig.cache
+D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\App.baml
