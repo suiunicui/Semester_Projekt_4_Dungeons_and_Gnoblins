@@ -5,6 +5,16 @@
              StartupUri="MainWindow.xaml"
              xmlns:system="clr-namespace:System;assembly=mscorlib">
     <Application.Resources>
-        
+        <SolidColorBrush x:Key="backgroundColor" Color="Black"/>
+        <SolidColorBrush x:Key="textColor" Color="LightGray"/>
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource backgroundColor}"/>
+            <Setter Property="Foreground" Value="{StaticResource textColor}"/>
+        </Style>
+        <Style x:Key="textblockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource textColor}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
     </Application.Resources>
 </Application>
