@@ -11,7 +11,6 @@
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\bin\Debug\net6.0\GameEngineTest.deps.json
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\bin\Debug\net6.0\GameEngineTest.runtimeconfig.json
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\bin\Debug\net6.0\GameEngineTest.dll
-\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\bin\Debug\net6.0\ref\GameEngineTest.dll
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\bin\Debug\net6.0\GameEngineTest.pdb
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\bin\Debug\net6.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\bin\Debug\net6.0\Microsoft.TestPlatform.CoreUtilities.dll
@@ -100,3 +99,6 @@
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\obj\Debug\net6.0\ref\GameEngineTest.dll
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\obj\Debug\net6.0\GameEngineTest.pdb
 \\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\obj\Debug\net6.0\GameEngineTest.genruntimeconfig.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\obj\Debug\net6.0\refint\GameEngineTest.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\bin\Debug\net6.0\Castle.Core.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineTest\bin\Debug\net6.0\Moq.dll

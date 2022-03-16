@@ -1,43 +1,61 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace GameEngine
+namespace GameEngine;
+
+public class Dice
 {
-    public class Dice
+  public readonly Regex DiceRollRegex;
+  public Dice()
+  {
+    DiceRollRegex = new Regex(@"\G[1-9]([0-9]*)[d][1-9]([0-9]*)");
+  }
+
+  #region Methods
+
+  public virtual uint RollDiceAndSumResult(string diceString)
+  {
+    if (!DiceStringMatchesRegex(diceString))
     {
-        private Regex _diceRollRegex;
-
-        public Dice()
-        {
-        _diceRollRegex = new Regex(@"\G[1-9]([0-9]*)[d][1-9]([0-9]*)");
-        }
-        
-        #region Properties
-
-        public Regex DiceRollRegex
-        {
-          get { return _diceRollRegex; }
-        }
-
-        #endregion
-
-        #region Methods
-
-        public int RollDice(string diceString)
-        {
-            Match match = DiceRollRegex.Match(diceString);
-            if (!match.Success)
-            {
-                throw new ArgumentException("Please use strings with format [1-9]([0-9]*)[d][1-9]([0-9]*)");
-            }
-            
-            string[] diceElements = diceString.Split("d"); 
-            Random random = new Random(); 
-            int rollResult = (int) random.NextInt64(Int64.Parse(diceElements[0]), Int64.Parse(diceElements[1]+1));
-
-            return rollResult;
-        }
-
-
-        #endregion
+      throw new ArgumentException("Please use strings with format [1-9]([0-9]*)[d][1-9]([0-9]*)");
     }
+
+    uint numOfDice = GetDiceElements(diceString, 0);
+    uint numOfDiceSides = GetDiceElements(diceString, 1);
+
+    return RollNDice(numOfDice, numOfDiceSides);
+  }
+
+  public bool DiceStringMatchesRegex(string diceString)
+  {
+    var m = DiceRollRegex.Match(diceString);
+    return m.Success;
+  }
+
+  #endregion
+
+  #region Private Methods
+
+  private uint RollNDice(uint numOfDice, uint numOfDiceSides, uint sum = 0)
+  {
+    if (numOfDice == 0)
+    {
+      return sum;
+    }
+
+    sum += RollDie(numOfDiceSides);
+    return RollNDice(--numOfDice, numOfDiceSides, sum);
+  }
+  private uint RollDie(uint numOfSides)
+  {
+    Random rand = new Random();
+    uint result = (uint) rand.NextInt64(1, ++numOfSides);
+    return result;
+  }
+  private uint GetDiceElements(string diceString, uint index)
+  {
+    var diceElements = diceString.Split("d");
+    return uint.Parse(diceElements[index]);
+  }
+
+  #endregion
 }
