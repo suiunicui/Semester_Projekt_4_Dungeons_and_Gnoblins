@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\
 FrontEnd_GameLayout
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\App.xaml
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\App.xaml
 11407045341
 
 52082425003
-197-1648933152
+197-1040910941
 MainWindow.xaml;
 
-True
+False
 
