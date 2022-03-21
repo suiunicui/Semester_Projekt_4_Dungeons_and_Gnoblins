@@ -24,3 +24,32 @@ D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd G
 D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.pdb
 D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.genruntimeconfig.cache
 D:\Sune\Documents\UNI\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\App.baml
+<<<<<<< HEAD
+=======
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.exe
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.deps.json
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.runtimeconfig.json
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\FrontEnd GameLayout.pdb
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\Prism.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\bin\Debug\net6.0-windows\Prism.Wpf.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\MainWindow.g.cs
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\App.g.cs
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout_MarkupCompile.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout_MarkupCompile.lref
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\App.baml
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\MainWindow.baml
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.g.resources
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.AssemblyInfo.cs
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.csproj.CopyComplete
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\refint\FrontEnd GameLayout.dll
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.pdb
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.genruntimeconfig.cache
+\\wsl.localhost\Ubuntu\home\morten\Documents\University\SemesterProjekt4\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\ref\FrontEnd GameLayout.dll
+>>>>>>> 0f28d37c411db7c0368a2602a7225219c3d5e567

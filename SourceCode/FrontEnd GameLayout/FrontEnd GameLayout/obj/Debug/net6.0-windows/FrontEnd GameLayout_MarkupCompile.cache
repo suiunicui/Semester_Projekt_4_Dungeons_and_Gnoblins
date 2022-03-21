@@ -16,5 +16,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 197-537589207
 MainWindow.xaml;
 
+<<<<<<< HEAD
 True
+=======
+False
+>>>>>>> 0f28d37c411db7c0368a2602a7225219c3d5e567
 
