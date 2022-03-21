@@ -127,25 +127,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sune\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\morte\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Sune\\Documents\\UNI\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
+      "projectUniqueName": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
       "projectName": "FrontEnd GameLayout",
-      "projectPath": "D:\\Sune\\Documents\\UNI\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
-      "packagesPath": "C:\\Users\\Sune\\.nuget\\packages\\",
-      "outputPath": "D:\\Sune\\Documents\\UNI\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\obj\\",
+      "projectPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
+      "packagesPath": "C:\\Users\\morte\\.nuget\\packages\\",
+      "outputPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sune\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\morte\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

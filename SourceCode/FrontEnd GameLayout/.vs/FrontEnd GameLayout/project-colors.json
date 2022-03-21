@@ -10,7 +10,17 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "beb8302d-3657-4451-a73d-95f5f800e6e6": {
+      "ProjectGuid": "beb8302d-3657-4451-a73d-95f5f800e6e6",
+      "DisplayName": "GameEngineLibrary",
+      "ColorIndex": 1
+    },
+    "f0577bd7-38be-4946-bfd8-b6fac36508bc": {
+      "ProjectGuid": "f0577bd7-38be-4946-bfd8-b6fac36508bc",
+      "DisplayName": "GameEngineLibraryTest",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }

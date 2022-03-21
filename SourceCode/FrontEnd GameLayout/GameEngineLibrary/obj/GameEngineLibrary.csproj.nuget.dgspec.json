@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj": {}
+    "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {}
   },
   "projects": {
-    "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj": {
+    "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
-        "projectName": "FrontEnd GameLayout",
-        "projectPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
+        "projectUniqueName": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
+        "projectName": "GameEngineLibrary",
+        "projectPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
         "packagesPath": "C:\\Users\\morte\\.nuget\\packages\\",
-        "outputPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\obj\\",
+        "outputPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -41,18 +41,8 @@
         }
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
-          "dependencies": {
-            "Prism.Core": {
-              "target": "Package",
-              "version": "[8.1.97, )"
-            },
-            "Prism.Wpf": {
-              "target": "Package",
-              "version": "[8.1.97, )"
-            }
-          },
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -66,9 +56,6 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
