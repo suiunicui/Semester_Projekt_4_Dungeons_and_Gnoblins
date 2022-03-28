@@ -11,6 +11,7 @@
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
     },
+<<<<<<< HEAD
     "beb8302d-3657-4451-a73d-95f5f800e6e6": {
       "ProjectGuid": "beb8302d-3657-4451-a73d-95f5f800e6e6",
       "DisplayName": "GameEngineLibrary",
@@ -19,6 +20,16 @@
     "f0577bd7-38be-4946-bfd8-b6fac36508bc": {
       "ProjectGuid": "f0577bd7-38be-4946-bfd8-b6fac36508bc",
       "DisplayName": "GameEngineLibraryTest",
+=======
+    "13b0d951-7d6e-4f40-98d2-c8a881001c85": {
+      "ProjectGuid": "13b0d951-7d6e-4f40-98d2-c8a881001c85",
+      "DisplayName": "GameEngine",
+      "ColorIndex": 1
+    },
+    "02d07273-bc6d-4e73-8a59-83eafd7704c5": {
+      "ProjectGuid": "02d07273-bc6d-4e73-8a59-83eafd7704c5",
+      "DisplayName": "GameEngineTest",
+>>>>>>> 0f28d37c411db7c0368a2602a7225219c3d5e567
       "ColorIndex": 2
     }
   },

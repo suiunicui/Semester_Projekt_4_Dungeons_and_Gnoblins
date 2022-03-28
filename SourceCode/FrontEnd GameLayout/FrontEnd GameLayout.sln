@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontEnd GameLayout", "FrontEnd GameLayout\FrontEnd GameLayout.csproj", "{2F0D64AA-5D74-43D5-B995-4E93FF814E29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngineLibrary", "GameEngineLibrary\GameEngineLibrary.csproj", "{BEB8302D-3657-4451-A73D-95F5F800E6E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameEngineLibrary", "GameEngineLibrary\GameEngineLibrary.csproj", "{BEB8302D-3657-4451-A73D-95F5F800E6E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngineLibraryTest", "GameEngineLibraryTest\GameEngineLibraryTest.csproj", "{F0577BD7-38BE-4946-BFD8-B6FAC36508BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameEngineLibraryTest", "GameEngineLibraryTest\GameEngineLibraryTest.csproj", "{F0577BD7-38BE-4946-BFD8-B6FAC36508BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
