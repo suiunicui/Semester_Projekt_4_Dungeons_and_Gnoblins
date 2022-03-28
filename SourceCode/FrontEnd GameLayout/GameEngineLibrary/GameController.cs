@@ -9,6 +9,7 @@ namespace GameEngineLibrary
 
     public class GameController : Descriptor
     {
+        public Map GameMap { get; set; }
         public GameController() { }
 
 
