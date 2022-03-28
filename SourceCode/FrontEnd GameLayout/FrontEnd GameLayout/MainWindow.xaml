@@ -12,15 +12,7 @@
         Background="{StaticResource backgroundColor}" 
         ResizeMode="NoResize">
     <Window.Resources>
-        <system:String x:Key="description">The Big Bad Gnoblin has stolen the SWORD OF DESTINY and is hiding in the Caves of Evil. 
-Without the sword the realm is in danger of beeing overrun by evil forces.
-
-You are the Hero of the Realm, sent to recover this priceless artefact.
-
-Beware! The caves are full of danger , and you must use all your skill 
-to survive this perilous ordeal and conpleete your quest. 
-
-You stand outside the entrance to the Caves of Evil. The entrance, just south of you, appears ungarded.</system:String>
+        
     </Window.Resources>
     <DockPanel>
         <Grid>
@@ -33,14 +25,14 @@ You stand outside the entrance to the Caves of Evil. The entrance, just south of
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.Column="0" 
-                       Text="{DynamicResource description}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="20"/>
+                       Text="{Binding description}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="20"/>
             <TextBlock Grid.Row="1" Grid.Column="0" Text="There is nothing to interact with here." Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="20"/>
             <Canvas x:Name="MapCanvas" Grid.Column="1" Grid.Row="0">
                 <Rectangle Width="476" Height="293" Fill="Gray" Canvas.Left="32" Canvas.Top="28"/>
                 <Rectangle Width="20" Height="20" Fill="Black" Canvas.Left="64" Canvas.Top="166"/>
                 <Line X1="0" Y1="0" X2="0" Y2="10" Stroke="Black" Canvas.Left="74" Canvas.Top="186"/>
             </Canvas>
-            <Button x:Name="north" Content="Go North" Margin="94,169,325,143" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
+            <Button x:Name="north" Content="Go North" Margin="94,169,325,143" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}" Command="{Binding MoveCommand}"/>
             <Button x:Name="east" Content="Go East" Margin="167,223,253,88" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
             <Button x:Name="west" Content="Go West" Margin="21,223,398,88" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
             <Button x:Name="south" Content="Go South" Margin="94,276,325,35" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>

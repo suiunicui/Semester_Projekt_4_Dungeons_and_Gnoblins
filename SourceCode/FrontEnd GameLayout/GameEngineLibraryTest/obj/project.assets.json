@@ -3870,23 +3870,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UniquesKernel\\.nuget\\packages\\": {},
+    "C:\\Users\\morte\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
+      "projectUniqueName": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
       "projectName": "GameEngineLibraryTest",
-      "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
-      "packagesPath": "C:\\Users\\UniquesKernel\\.nuget\\packages\\",
-      "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\obj\\",
+      "projectPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
+      "packagesPath": "C:\\Users\\morte\\.nuget\\packages\\",
+      "outputPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\UniquesKernel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\morte\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3901,8 +3901,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
-              "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj"
+            "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
+              "projectPath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj"
             }
           }
         }
@@ -3949,7 +3949,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
