@@ -10,17 +10,9 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         Background="{StaticResource backgroundColor}" 
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" WindowState="Maximized">
     <Window.Resources>
-        <system:String x:Key="description">The Big Bad Gnoblin has stolen the SWORD OF DESTINY and is hiding in the Caves of Evil. 
-Without the sword the realm is in danger of beeing overrun by evil forces.
 
-You are the Hero of the Realm, sent to recover this priceless artefact.
-
-Beware! The caves are full of danger , and you must use all your skill 
-to survive this perilous ordeal and conpleete your quest. 
-
-You stand outside the entrance to the Caves of Evil. The entrance, just south of you, appears ungarded.</system:String>
     </Window.Resources>
     <DockPanel>
         <Grid>
@@ -33,22 +25,47 @@ You stand outside the entrance to the Caves of Evil. The entrance, just south of
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.Column="0" 
-                       Text="{DynamicResource description}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="20"/>
+                       Text="{Binding description}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="20"/>
             <TextBlock Grid.Row="1" Grid.Column="0" Text="There is nothing to interact with here." Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="20"/>
             <Canvas x:Name="MapCanvas" Grid.Column="1" Grid.Row="0">
                 <Rectangle Width="476" Height="293" Fill="Gray" Canvas.Left="32" Canvas.Top="28"/>
                 <Rectangle Width="20" Height="20" Fill="Black" Canvas.Left="64" Canvas.Top="166"/>
                 <Line X1="0" Y1="0" X2="0" Y2="10" Stroke="Black" Canvas.Left="74" Canvas.Top="186"/>
             </Canvas>
-            <Button x:Name="north" Content="Go North" Margin="94,169,325,143" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
-            <Button x:Name="east" Content="Go East" Margin="167,223,253,88" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
-            <Button x:Name="west" Content="Go West" Margin="21,223,398,88" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
-            <Button x:Name="south" Content="Go South" Margin="94,276,325,35" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
-            <Button x:Name="character" Content="Character" Margin="395,179,24,133" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
-            <Button x:Name="inventory" Content="Inventory" Margin="395,233,24,78" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
-            <Button x:Name="menu" Content="Main Menu" Margin="395,287,24,25" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
-            <Button x:Name="interact" Content="Interact" Margin="201,24,128,267" Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="24*"/>
+                    <RowDefinition Height="93*"/>
+                    <RowDefinition Height="53*"/>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="13*"/>
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="15*"/>
+                    <RowDefinition Height="44*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="21*"/>
+                    <ColumnDefinition Width="75*"/>
+                    <ColumnDefinition Width="47*"/>
+                    <ColumnDefinition Width="26*"/>
+                    <ColumnDefinition Width="46*"/>
+                    <ColumnDefinition Width="74*"/>
+                    <ColumnDefinition Width="108*"/>
+                    <ColumnDefinition Width="119*"/>
+                    <ColumnDefinition Width="24*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="north" Content="Go North" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="3" Style="{StaticResource buttonStyle}" Command="{Binding MoveCommand}"/>
+                <Button x:Name="east" Content="Go East" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="5" Style="{StaticResource buttonStyle}"/>
+                <Button x:Name="west" Content="Go West"  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5" Style="{StaticResource buttonStyle}"/>
+                <Button x:Name="south" Content="Go South"  Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="7" Style="{StaticResource buttonStyle}"/>
+                <Button x:Name="character" Content="Character"  Grid.Column="7" Grid.Row="3" Style="{StaticResource buttonStyle}"/>
+                <Button x:Name="inventory" Content="Inventory"  Grid.Column="7" Grid.Row="5" Style="{StaticResource buttonStyle}"/>
+                <Button x:Name="menu" Content="Main Menu"  Grid.Column="7" Grid.Row="7" Style="{StaticResource buttonStyle}"/>
+                <Button x:Name="interact" Content="Interact" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="1" Style="{StaticResource buttonStyle}"/>
 
+            </Grid>
+            
         </Grid>
     </DockPanel>
 </Window>

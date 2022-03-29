@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "i3q5/3leTzlZRWa6gkN8VwcCvoYIF2EnHM11Aud6aNfVskBSobiDxrJvV1yz2RJjy8h2WOcV9FFsqACZ2s1HXw==",
+  "dgSpecHash": "ZoQpJuWyOxnbcI47gvY9Y0QfsGDKsRK0T3kV8K1pRpTKZe9cmKGTKZGl1SGCnwyRAd+I/r+wZNDjuBozeYLqNg==",
   "success": true,
-  "projectFilePath": "\\\\wsl.localhost\\Ubuntu\\home\\morten\\Documents\\University\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
+  "projectFilePath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\UniquesKernel\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
-    "C:\\Users\\UniquesKernel\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
-    "C:\\Users\\UniquesKernel\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
+    "C:\\Users\\morte\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\morte\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\morte\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
   ],
   "logs": []
 }
