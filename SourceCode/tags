@@ -1,0 +1,85 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddEnemy	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public void AddEnemy(Enemy enemy)$/;"	m	class:GameEngineLibrary.Room
+AddPlayer	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public void AddPlayer(Player player)$/;"	m	class:GameEngineLibrary.Room
+App	FrontEnd GameLayout/FrontEnd GameLayout/App.xaml.cs	/^    public partial class App : Application$/;"	c	namespace:FrontEnd_GameLayout
+App	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.cs	/^    public partial class App : System.Windows.Application {$/;"	c	namespace:FrontEnd_GameLayout
+App	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.i.cs	/^    public partial class App : System.Windows.Application {$/;"	c	namespace:FrontEnd_GameLayout
+Description	FrontEnd GameLayout/GameEngineLibrary/Descriptor.cs	/^        public virtual string Description { get; set; } = "";$/;"	p	class:GameEngineLibrary.Descriptor
+Descriptor	FrontEnd GameLayout/GameEngineLibrary/Descriptor.cs	/^    public abstract class Descriptor$/;"	c	namespace:GameEngineLibrary
+Enemy	FrontEnd GameLayout/GameEngineLibrary/Enemy.cs	/^    public class Enemy$/;"	c	namespace:GameEngineLibrary
+Enemy	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public Enemy? Enemy { get; private set; } = null;$/;"	p	class:GameEngineLibrary.Room
+FrontEnd_GameLayout	FrontEnd GameLayout/FrontEnd GameLayout/App.xaml.cs	/^namespace FrontEnd_GameLayout$/;"	n
+FrontEnd_GameLayout	FrontEnd GameLayout/FrontEnd GameLayout/MainWindow.xaml.cs	/^namespace FrontEnd_GameLayout$/;"	n
+FrontEnd_GameLayout	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.cs	/^namespace FrontEnd_GameLayout {$/;"	n
+FrontEnd_GameLayout	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.i.cs	/^namespace FrontEnd_GameLayout {$/;"	n
+FrontEnd_GameLayout	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^namespace FrontEnd_GameLayout {$/;"	n
+FrontEnd_GameLayout	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^namespace FrontEnd_GameLayout {$/;"	n
+GameEngineLibrary	FrontEnd GameLayout/GameEngineLibrary/Descriptor.cs	/^namespace GameEngineLibrary$/;"	n
+GameEngineLibrary	FrontEnd GameLayout/GameEngineLibrary/Enemy.cs	/^namespace GameEngineLibrary$/;"	n
+GameEngineLibrary	FrontEnd GameLayout/GameEngineLibrary/Player.cs	/^namespace GameEngineLibrary$/;"	n
+GameEngineLibrary	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^﻿namespace GameEngineLibrary$/;"	n
+GameEngineLibraryTest	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^namespace GameEngineLibraryTest$/;"	n
+InitializeComponent	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.cs	/^        public void InitializeComponent() {$/;"	m	class:FrontEnd_GameLayout.App
+InitializeComponent	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.i.cs	/^        public void InitializeComponent() {$/;"	m	class:FrontEnd_GameLayout.App
+InitializeComponent	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        public void InitializeComponent() {$/;"	m	class:FrontEnd_GameLayout.MainWindow
+InitializeComponent	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        public void InitializeComponent() {$/;"	m	class:FrontEnd_GameLayout.MainWindow
+Main	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.cs	/^        public static void Main() {$/;"	m	class:FrontEnd_GameLayout.App
+Main	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.i.cs	/^        public static void Main() {$/;"	m	class:FrontEnd_GameLayout.App
+MainWindow	FrontEnd GameLayout/FrontEnd GameLayout/MainWindow.xaml.cs	/^        public MainWindow()$/;"	m	class:FrontEnd_GameLayout.MainWindow
+MainWindow	FrontEnd GameLayout/FrontEnd GameLayout/MainWindow.xaml.cs	/^    public partial class MainWindow : Window$/;"	c	namespace:FrontEnd_GameLayout
+MainWindow	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^    public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {$/;"	c	namespace:FrontEnd_GameLayout
+MainWindow	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^    public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {$/;"	c	namespace:FrontEnd_GameLayout
+MapCanvas	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        internal System.Windows.Controls.Canvas MapCanvas;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+MapCanvas	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        internal System.Windows.Controls.Canvas MapCanvas;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+MemberOverwriteException	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public MemberOverwriteException(string Message) $/;"	m	class:GameEngineLibrary.MemberOverwriteException
+MemberOverwriteException	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^    public class MemberOverwriteException : Exception$/;"	c	namespace:GameEngineLibrary
+Player	FrontEnd GameLayout/GameEngineLibrary/Player.cs	/^    public class Player$/;"	c	namespace:GameEngineLibrary
+Player	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public Player? Player { get; private set; } = null;$/;"	p	class:GameEngineLibrary.Room
+RemoveEnemy	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public Enemy RemoveEnemy()$/;"	m	class:GameEngineLibrary.Room
+RemovePlayer	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public Player RemovePlayer()$/;"	m	class:GameEngineLibrary.Room
+Room	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public Room() { }$/;"	m	class:GameEngineLibrary.Room
+Room	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public Room(uint id) $/;"	m	class:GameEngineLibrary.Room
+Room	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^    public class Room : Descriptor$/;"	c	namespace:GameEngineLibrary
+RoomCanAddEnemy	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void RoomCanAddEnemy()$/;"	m	class:GameEngineLibraryTest.RoomTest
+RoomCanAddPlayer	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void RoomCanAddPlayer()$/;"	m	class:GameEngineLibraryTest.RoomTest
+RoomCanRemoveEnemy	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void RoomCanRemoveEnemy()$/;"	m	class:GameEngineLibraryTest.RoomTest
+RoomCanRemovePlayer	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void RoomCanRemovePlayer()$/;"	m	class:GameEngineLibraryTest.RoomTest
+RoomHasDescription	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void RoomHasDescription()$/;"	m	class:GameEngineLibraryTest.RoomTest
+RoomHasId	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void RoomHasId()$/;"	m	class:GameEngineLibraryTest.RoomTest
+RoomHasNoEnemy	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void RoomHasNoEnemy()$/;"	m	class:GameEngineLibraryTest.RoomTest
+RoomHasNoPlayer	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void RoomHasNoPlayer()$/;"	m	class:GameEngineLibraryTest.RoomTest
+RoomId	FrontEnd GameLayout/GameEngineLibrary/Room.cs	/^        public uint RoomId { get; private set; }$/;"	p	class:GameEngineLibrary.Room
+RoomTest	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^    public class RoomTest$/;"	c	namespace:GameEngineLibraryTest
+Room_AddEnemy_ThrowsExceptionIfEnemyIsNotNull	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void Room_AddEnemy_ThrowsExceptionIfEnemyIsNotNull()$/;"	m	class:GameEngineLibraryTest.RoomTest
+Room_AddPlayer_ThrowsExceptionIfPlayerIsNotNull	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void Room_AddPlayer_ThrowsExceptionIfPlayerIsNotNull()$/;"	m	class:GameEngineLibraryTest.RoomTest
+Room_RemoveEnemy_ThrowsExceptionIfEnemyIsNull	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void Room_RemoveEnemy_ThrowsExceptionIfEnemyIsNull()$/;"	m	class:GameEngineLibraryTest.RoomTest
+Room_RemovePlayer_ThrowsExceptionIfPlayerIsNull	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void Room_RemovePlayer_ThrowsExceptionIfPlayerIsNull()$/;"	m	class:GameEngineLibraryTest.RoomTest
+Setup	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        public void Setup()$/;"	m	class:GameEngineLibraryTest.RoomTest
+System.Windows.Markup.IComponentConnector.Connect	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {$/;"	m	class:FrontEnd_GameLayout.MainWindow	file:
+System.Windows.Markup.IComponentConnector.Connect	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {$/;"	m	class:FrontEnd_GameLayout.MainWindow	file:
+_contentLoaded	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.cs	/^        private bool _contentLoaded;$/;"	f	class:FrontEnd_GameLayout.App	file:
+_contentLoaded	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/App.g.i.cs	/^        private bool _contentLoaded;$/;"	f	class:FrontEnd_GameLayout.App	file:
+_contentLoaded	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        private bool _contentLoaded;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+_contentLoaded	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        private bool _contentLoaded;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+_uut	FrontEnd GameLayout/GameEngineLibraryTest/RoomTest.cs	/^        private Room _uut = new();$/;"	f	class:GameEngineLibraryTest.RoomTest	file:
+character	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        internal System.Windows.Controls.Button character;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+character	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        internal System.Windows.Controls.Button character;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+east	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        internal System.Windows.Controls.Button east;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+east	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        internal System.Windows.Controls.Button east;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+interact	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        internal System.Windows.Controls.Button interact;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+interact	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        internal System.Windows.Controls.Button interact;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+inventory	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        internal System.Windows.Controls.Button inventory;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+inventory	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        internal System.Windows.Controls.Button inventory;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+menu	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        internal System.Windows.Controls.Button menu;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+menu	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        internal System.Windows.Controls.Button menu;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+north	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        internal System.Windows.Controls.Button north;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+north	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        internal System.Windows.Controls.Button north;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+south	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        internal System.Windows.Controls.Button south;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+south	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        internal System.Windows.Controls.Button south;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+west	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.cs	/^        internal System.Windows.Controls.Button west;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:
+west	FrontEnd GameLayout/FrontEnd GameLayout/obj/Debug/net6.0-windows/MainWindow.g.i.cs	/^        internal System.Windows.Controls.Button west;$/;"	f	class:FrontEnd_GameLayout.MainWindow	file:

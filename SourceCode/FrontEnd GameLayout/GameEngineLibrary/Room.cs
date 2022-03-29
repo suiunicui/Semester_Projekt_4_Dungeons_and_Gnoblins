@@ -14,7 +14,7 @@
         public uint RoomId { get; private set; }
         public Player? Player { get; private set; } = null;
         public Enemy? Enemy { get; private set; } = null;
-
+        
         #endregion
 
         #region Methods
