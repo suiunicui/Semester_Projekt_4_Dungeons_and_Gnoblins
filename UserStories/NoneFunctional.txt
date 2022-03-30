@@ -8,11 +8,38 @@ None Functional
     - Spillet mindst indeholder 3 easter eggs.
 
   SOUND:
-    - Lyden skal kunne justeres mellem 0-100% relativt til PC'ens output.
+    - Lyden skal kunne justeres mellem 0-100% relativt til PC'ens lyd niveau.
 
   DATABASE:
     - Skal kunne gemme mindst 5 save games
-    - Skal kunne loade et spil indenfoe maksimalt 5s
+    - Skal kunne loade et spil indenfor maksimalt 5s
+    
+  GAMEPLAY:
+    - Spillets kort skal holde styr på hvilke rum man kan komme til for et givet rum.
+    - Spillets kort skal kun vise de rum som spilleren har været i.
+    - Spillets kort skal, hvis spilleren har været i alle rum vise alle rum.
+    
+    - Et rum kan have maksimalt 4 forbindelser til andre rum.
+    - Et rum skal have mindst 1 forbindelse til andre rum.
+    - Alle Rum skal kunne nås fra ethvert andet rum, måske ikke direkte, men man skal kunne komme dertil.
+    
+    - Spilleren skal have en rygsæk, hvori man kan putte ting man har samlet op.
+    - Spillerens rygsæk skal kunne indeholde alle spillets genstande.
+    - Spilleren skal have mulighed for at bruge ét våben og én rustning af gangen.
+    - Spilleren skal have mulighed for at skifte hvilket våben og hvilken rustning der bruges.
+    - Spilleren skal kunne inspicere indholdet af sin rygsæk.
+    - Spilleren skal kunne gemme spillet, hvis man er i et gamestate der tillader det.
+  
+  
+  
+  COMBAT:
+    - Når spilleren/fjenden prøver at slå, rammer man kun hvis man på sit angreb slår højere end modstanderens rustningsværdi. Dette afgøres af et simuleret 20-sidet       terninge kast, hvortil der lægges en værdi til, korresponderende til spilleren/fjendens våben bonusser.
+    - Hvis spilleren/fjenden rammer, bliver skaden bestemt af et/flere simulerede terningekast, afhængigt af hvilket våben der bruges.
+    - Hvis spilleren, når nul liv inden fjenden, så dør spilleren og spillet er tabt.
+    - Hvis fjenden, når nul liv inden spilleren, så dør fjenden og spilleren kan nu frit udforske rummet, som fjenden var i.
+    - Hvis spilleren drikker en livseleksir bliver spillerens nuværende liv sat til ????????
+    - Hvis spilleren løber fra en fjende, kommer spilleren tilbage til det rum han kom fra, men får ikke sit mistede liv tilbage igen.
+  
 
   PORTABILITY:
     ??
