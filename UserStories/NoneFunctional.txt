@@ -13,6 +13,13 @@ None Functional
   DATABASE:
     - Skal kunne gemme mindst 5 save games
     - Skal kunne loade et spil indenfor maksimalt 5s
+    - Skal gemme hvilket rum man var i da man gemte spillet.
+    - Skal gemme hvilke genstande man har i sin rygsæk
+    - Skal gemme hvilke genstande man bruger lige nu
+    - Skal gemme hvor meget liv man har tilbage.
+    - Skal gemme hvilke fjender man har slået ihjel.
+    - Skal gemme hvilke puzzles man har løst
+    - Skal gemme hvilke rum man har været i.
     
   GAMEPLAY:
     - Spillets kort skal holde styr på hvilke rum man kan komme til for et givet rum.
