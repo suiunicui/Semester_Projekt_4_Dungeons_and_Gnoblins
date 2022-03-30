@@ -11,7 +11,7 @@ None Functional
     - Lyden skal kunne justeres mellem 0-100% relativt til PC'ens lyd niveau.
 
   DATABASE:
-    - Skal kunne gemme mindst 5 save games
+    - Skal kunne gemme maksimalt 5 save games
     - Skal kunne loade et spil indenfor maksimalt 5s
     - Skal gemme hvilket rum man var i da man gemte spillet.
     - Skal gemme hvilke genstande man har i sin rygsæk
