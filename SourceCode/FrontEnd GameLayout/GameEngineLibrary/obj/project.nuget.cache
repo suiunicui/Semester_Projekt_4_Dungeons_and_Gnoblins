@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7BLaJnvkHLloURWMQ47LipnrSl+E1OgTsLuh0FhnvD7o+TXy2k9x0InadcwqCIjJvfYIgxGBJPy9MNNwFT9FoA==",
+  "dgSpecHash": "CneX37OB/BuJqAzLOPQWHY7Z2veYpSCDGshVFY8j9OUMNCObslQ117vAPIz2MtPtvmFhJiKXLz5u8Llvp/+7XQ==",
   "success": true,
-  "projectFilePath": "\\\\wsl.localhost\\Ubuntu-20.04\\home\\morten\\Documents\\SemesterProject\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
+  "projectFilePath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

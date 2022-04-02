@@ -143,26 +143,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sune\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\magnu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Sune\\Documents\\UNI\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
+      "projectUniqueName": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
       "projectName": "FrontEnd GameLayout",
-      "projectPath": "D:\\Sune\\Documents\\UNI\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
-      "packagesPath": "C:\\Users\\Sune\\.nuget\\packages\\",
-      "outputPath": "D:\\Sune\\Documents\\UNI\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\obj\\",
+      "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
+      "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Sune\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -176,8 +169,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\Sune\\Documents\\UNI\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
-              "projectPath": "D:\\Sune\\Documents\\UNI\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj"
+            "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
+              "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj"
             }
           }
         }
