@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\magnu\\source\\repos\\BED\\TestHttpClient\\TestHttpClient\\TestHttpClient.csproj",
+      "projectUniqueName": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\TestHttpClient\\TestHttpClient\\TestHttpClient.csproj",
       "projectName": "TestHttpClient",
-      "projectPath": "C:\\Users\\magnu\\source\\repos\\BED\\TestHttpClient\\TestHttpClient\\TestHttpClient.csproj",
+      "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\TestHttpClient\\TestHttpClient\\TestHttpClient.csproj",
       "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\magnu\\source\\repos\\BED\\TestHttpClient\\TestHttpClient\\obj\\",
+      "outputPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\TestHttpClient\\TestHttpClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -15,7 +15,7 @@ namespace TestHttpClient
 
             var httpController = new HttpController("https://localhost:7046/api/Players");
 
-            //httpController.PostPlayer(player);
+            httpController.PostPlayer(player);
 
             httpController.GetPlayer();
 
