@@ -15,12 +15,7 @@
       "ProjectGuid": "beb8302d-3657-4451-a73d-95f5f800e6e6",
       "DisplayName": "GameEngineLibrary",
       "ColorIndex": 1
-    },
-    "f0577bd7-38be-4946-bfd8-b6fac36508bc": {
-      "ProjectGuid": "f0577bd7-38be-4946-bfd8-b6fac36508bc",
-      "DisplayName": "GameEngineLibraryTest",
-      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 2
 }

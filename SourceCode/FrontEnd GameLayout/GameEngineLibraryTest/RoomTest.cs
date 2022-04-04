@@ -108,7 +108,7 @@ namespace GameEngineLibraryTest
         [Test]
         public void Room_RemoveEnemy_ThrowsExceptionIfEnemyIsNull()
         {
-            Assert.Throws<MemberOverwriteException>(() => { _uut.RemoveEnemy(); });
+          Assert.Throws<MemberOverwriteException>(() => { _uut.RemoveEnemy(); });
         }
     }
 }
