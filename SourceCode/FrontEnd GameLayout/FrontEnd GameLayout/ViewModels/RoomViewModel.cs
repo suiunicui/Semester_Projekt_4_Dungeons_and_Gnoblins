@@ -12,14 +12,14 @@ using GameEngineLibrary;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    public class RoomViewModel : BindableBase
     {
 
        GameController game = new GameController();
 
-        public MainWindowViewModel()
+        public RoomViewModel()
         {
-            Description = "";
+            Description = "test";
         }
 
         #region Properties
