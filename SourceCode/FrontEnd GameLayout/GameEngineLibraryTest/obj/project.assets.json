@@ -3840,34 +3840,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\magnu\\.nuget\\packages\\": {}
+    "/home/morten/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
+      "projectUniqueName": "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/GameEngineLibraryTest.csproj",
       "projectName": "GameEngineLibraryTest",
-      "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
-      "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\obj\\",
+      "projectPath": "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/GameEngineLibraryTest.csproj",
+      "packagesPath": "/home/morten/.nuget/packages/",
+      "outputPath": "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/morten/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
-              "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj"
+            "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibrary/GameEngineLibrary.csproj": {
+              "projectPath": "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibrary/GameEngineLibrary.csproj"
             }
           }
         }
@@ -3914,7 +3912,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }
