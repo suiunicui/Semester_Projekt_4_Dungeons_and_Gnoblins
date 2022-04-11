@@ -25,6 +25,12 @@ namespace GameEngineLibraryTest
         }
 
         [Test]
+        public void RoomDescriptionIsEmptyByDefault()
+        {
+          Assert.That(_uut.Description,Is.Empty);
+        }
+
+        [Test]
         public void RoomHasDescription()
         {
             _uut.Description = "This is a Room";
