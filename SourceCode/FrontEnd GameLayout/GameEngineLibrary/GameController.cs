@@ -10,41 +10,42 @@ namespace GameEngineLibrary
     public class GameController : Descriptor
     {
         public Map GameMap { get; set; }
-        public GameController() { }
+        public Room CurrentRoom { get; set; }
+        public Player CurrentPlayer { get; set; }
 
+        public GameController()
+        {
+          InitializeGame();
+        }
+        private void InitializeGame()
+        {
+          GameMap = new Map();
+          CurrentRoom = GameMap.Rooms[0];
+          CurrentPlayer = new Player();
+          GameMap.Rooms[0].AddPlayer(CurrentPlayer);
+        }
 
-        public string Move(string direction)
-        {
-            return direction;
-        }
-         public string RoomDescription(Room Roomid, string Description)
-        {
-            //Få beskrivelse af Rum ud fra rummets id
-            string roomdescription = Description;
-
-            return roomdescription;
-        }
-        public void StartGame(Player player)
-        {
-        //Add map to game
-        Room.AddPlayer(Player player)
-        
-        }
         //Overfører spiller til nyt rum
-        public void MovePlayer(Player player)
+        public Log MovePlayer(Room curRoom, string direction)
         {
-        Room.AddPlayer(Player player)
-        
+          Log log = new Log();
+          
+          log.RecordEvent("Previous Room", curRoom.RoomId.ToString());
+          
+          CurrentRoom.RemovePlayer();
+          CurrentRoom = GameMap.GetRoomByDirection(curRoom, direction);
+          CurrentRoom.AddPlayer(CurrentPlayer);
+
+          log.RecordEvent("New Room", curRoom.RoomId.ToString());
+          log.RecordEvent("New Room Description", CurrentRoom.Description);
+         
+          return log;
         }
-        //fjerner spiller fra rummet han kom fra
-        public void PlayerMoved(Player player)
-        {
-        Room.Player RemovePlayer()
-        }
+
         //Fjerner spiller fra spillet og viser death screen.
         public void PlayerDead(Player player)
         {
-        Room.Player RemovePlayer()
+          CurrentRoom.RemovePlayer();
         //Display Death screen
         }
     }
