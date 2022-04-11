@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\magnu\\source\\repos\\Backend_API\\Backend_API\\Backend_API.csproj": {}
+    "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\magnu\\source\\repos\\Backend_API\\Backend_API\\Backend_API.csproj": {
+    "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\magnu\\source\\repos\\Backend_API\\Backend_API\\Backend_API.csproj",
+        "projectUniqueName": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj",
         "projectName": "Backend_API",
-        "projectPath": "C:\\Users\\magnu\\source\\repos\\Backend_API\\Backend_API\\Backend_API.csproj",
+        "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj",
         "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\magnu\\source\\repos\\Backend_API\\Backend_API\\obj\\",
+        "outputPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
