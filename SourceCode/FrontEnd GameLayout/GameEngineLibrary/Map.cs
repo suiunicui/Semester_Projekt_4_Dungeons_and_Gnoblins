@@ -7,12 +7,43 @@ namespace GameEngineLibrary
   {
     public List<Room> Rooms { get; set; } = new List<Room>();
     public LinkedList<int>[] MapLayout { get; set; }
-    private readonly string _mapLayoutResource = Environment.CurrentDirectory + "\\Resource.txt";
+    private readonly string _mapLayoutResource = Path.GetFullPath(Environment.CurrentDirectory + @"\\Resource.txt");
 
     public Map()
     {
       MapLayout = CalculateLinkedListSizeFromMapLayoutFile();
       CreateConnectionsBetweenRoomsFromMapLayoutFile();
+    }
+
+    public Room GetRoomByDirection(Room curRoom, string direction)
+    {
+      string dir = direction.ToLower();
+      Room newRoom = null;
+      int newRoomId;
+      switch (dir)
+      {
+        case "west":
+          newRoomId = MapLayout[curRoom.RoomId].First.Value;
+          newRoom = Rooms[newRoomId];
+          break;
+        case "north":
+          newRoomId = MapLayout[curRoom.RoomId].First.Next.Value;
+          newRoom = Rooms[newRoomId];
+          break;
+        case "east":
+          newRoomId = MapLayout[curRoom.RoomId].First.Next.Next.Value;
+          newRoom = Rooms[newRoomId];
+          break;
+        case "south":
+          newRoomId = MapLayout[curRoom.RoomId].First.Next.Next.Next.Value;
+          newRoom = Rooms[newRoomId];
+          break;
+        default:
+          break;
+
+      }
+
+      return newRoom;
     }
 
     private LinkedList<int>[] CalculateLinkedListSizeFromMapLayoutFile()
