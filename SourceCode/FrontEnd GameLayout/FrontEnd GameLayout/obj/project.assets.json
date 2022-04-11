@@ -143,19 +143,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\magnu\\.nuget\\packages\\": {}
+    "C:\\Users\\Ander\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
+      "projectUniqueName": "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
       "projectName": "FrontEnd GameLayout",
-      "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
-      "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\obj\\",
+      "projectPath": "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\FrontEnd GameLayout.csproj",
+      "packagesPath": "C:\\Users\\Ander\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\FrontEnd GameLayout\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -169,8 +169,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
-              "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj"
+            "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
+              "projectPath": "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj"
             }
           }
         }
@@ -212,7 +212,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

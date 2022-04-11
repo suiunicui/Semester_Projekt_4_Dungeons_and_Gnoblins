@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibrary/GameEngineLibrary.csproj": {}
+    "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {}
   },
   "projects": {
-    "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibrary/GameEngineLibrary.csproj": {
+    "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibrary/GameEngineLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
         "projectName": "GameEngineLibrary",
-        "projectPath": "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibrary/GameEngineLibrary.csproj",
-        "packagesPath": "/home/morten/.nuget/packages/",
-        "outputPath": "/home/morten/Documents/University/SemesterProject4/SourceCode/FrontEnd GameLayout/GameEngineLibrary/obj/",
+        "projectPath": "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
+        "packagesPath": "C:\\Users\\Ander\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ander\\OneDrive\\Software teknologi\\4. Semester\\PRJ4\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/morten/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -18,7 +18,7 @@ namespace FrontEnd_GameLayout.Views
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Room : Window
+    public partial class Room : UserControl
     {
         public Room()
         {

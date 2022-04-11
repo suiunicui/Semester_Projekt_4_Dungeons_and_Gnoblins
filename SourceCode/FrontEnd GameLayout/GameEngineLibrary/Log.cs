@@ -9,7 +9,7 @@ namespace GameEngineLibrary
       _logEntry = new Dictionary<string, string>();
     }
 
-    public void recordEvent(string key, string value)
+    public void RecordEvent(string key, string value)
     {
       _logEntry[key] = value;
     }
