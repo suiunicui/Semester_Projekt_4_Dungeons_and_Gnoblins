@@ -36,6 +36,22 @@ namespace Backend_API.Migrations
 
                     b.ToTable("Players");
                 });
+
+            modelBuilder.Entity("Backend_API.Models.Save", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<int>("RoomID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Saves");
+                });
 #pragma warning restore 612, 618
         }
     }

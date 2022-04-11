@@ -2,6 +2,6 @@
 {
     public class PlayerDTO
     {
-        public long RoomId { get; set; }
+        public int RoomId { get; set; }
     }
 }

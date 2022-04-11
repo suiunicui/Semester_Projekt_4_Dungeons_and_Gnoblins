@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\engel\\OneDrive - Aarhus Universitet\\Skole\\4. semester\\Projekt\\DataBase\\DataBase\\DataBase.csproj": {}
+    "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\DataBase\\DataBase\\DataBase.csproj": {}
   },
   "projects": {
-    "C:\\Users\\engel\\OneDrive - Aarhus Universitet\\Skole\\4. semester\\Projekt\\DataBase\\DataBase\\DataBase.csproj": {
+    "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\DataBase\\DataBase\\DataBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\engel\\OneDrive - Aarhus Universitet\\Skole\\4. semester\\Projekt\\DataBase\\DataBase\\DataBase.csproj",
+        "projectUniqueName": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\DataBase\\DataBase\\DataBase.csproj",
         "projectName": "DataBase",
-        "projectPath": "C:\\Users\\engel\\OneDrive - Aarhus Universitet\\Skole\\4. semester\\Projekt\\DataBase\\DataBase\\DataBase.csproj",
-        "packagesPath": "C:\\Users\\engel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\engel\\OneDrive - Aarhus Universitet\\Skole\\4. semester\\Projekt\\DataBase\\DataBase\\obj\\",
+        "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\DataBase\\DataBase\\DataBase.csproj",
+        "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\DataBase\\DataBase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\engel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

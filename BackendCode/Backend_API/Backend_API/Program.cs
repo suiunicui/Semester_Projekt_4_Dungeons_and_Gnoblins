@@ -12,7 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<DaG_db>(options =>
        options.UseSqlServer(builder.Configuration.GetConnectionString("DaG_dbConnectionString")));
-
+//builder.Services.AddDbContext<MyDbContext>(options =>
+//         options.UseInMemoryDatabase("ProjectDatabase"));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
