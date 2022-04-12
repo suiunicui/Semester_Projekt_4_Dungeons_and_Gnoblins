@@ -17,61 +17,37 @@ namespace Backend_API.Controllers
     [ApiController]
     public class SaveController : Controller
     {
-        private readonly DaG_db _context;
-
+        private readonly Save_DAL _save;
 
 
         public SaveController(DaG_db context)
         {
-            _context = context;
+            _save = new Save_DAL(context);
+
         }
 
-        //private readonly Save_DAL _DAL = new Save_DAL();
-
-        
-
-
-        
-        // GET: Players
+        // GET: Save
         [HttpGet]
 
         public async Task<ActionResult<Save>> GetSave(int id)
         {
-            var save = await _context.Saves.FindAsync(id);
-
-            return save;
+            var save = _save.GetSaveByID(id);
+            if(save == null)
+            {
+                return NotFound();
+            }
+            return await save;
 
         }
 
-        //public async Task<ActionResult<Save>> GetPlayer(int id)
-        //{
 
-            
-        //    return await _DAL.GetSaveByID(id);
-            
-        //}
-
-
+        // Post: Save
         [HttpPost]
 
-        //public void PostPlayer(Save save)
-        //{
-        //    _DAL.SaveGame(save);
-        //}
-
-        //[ValidateAntiForgeryToken]
-        public async Task<ActionResult<Save>> PostSave(PlayerDTO playerDTO)
+        public async Task<ActionResult<Save>> PostSave(SaveDTO saveDTO)
         {
 
-
-            var save = new Save()
-            {
-                RoomID = playerDTO.RoomId
-            };
-
-            _context.Add(save);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction("GetSave", new { id = save.ID });
+            return await _save.SaveGame(saveDTO);
 
         }
 

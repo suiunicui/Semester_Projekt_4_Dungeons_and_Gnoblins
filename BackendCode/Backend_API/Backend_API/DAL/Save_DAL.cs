@@ -11,53 +11,39 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 
+
 namespace Backend_API.DAL
 {
     public class Save_DAL
     {
-
-        //private readonly MyDbContext _context;
         private readonly DaG_db _context;
 
-
-
-        public async void SaveGame(PlayerDTO playerDTO)
+        public Save_DAL(DaG_db context)
         {
+            _context = context;
+
+        }
+
+
+        public async Task<ActionResult<Save>> SaveGame(SaveDTO saveDTO)
+        {
+
             var newSave = new Save()
             {
-                RoomID = playerDTO.RoomId
+                RoomID = saveDTO.RoomId
             };
 
-            _context.Add(newSave);
+            _context.Saves.Add(newSave);
             await _context.SaveChangesAsync();
-            //return CreatedAtAction("GetPlayer", new { id = player.PlayerId });
 
-
-            //_context.Saves.Add(save);
-
-            //_context.SaveChanges();
+            return newSave;
 
         }
 
 
         public async Task<ActionResult<Save>> GetSaveByID(int SaveId)
-        {
-
-            
-
-            var save = await _context.Saves.FindAsync(SaveId);
-
-
-
-            return save;
-
-            //foreach (var save in saves)
-            //{
-            //    if (save.ID == SaveId)
-            //        return save;
-            //}
-
-            //return null;
+        { 
+            return await _context.Saves.FindAsync(SaveId);
 
         }
     }

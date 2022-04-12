@@ -9,7 +9,7 @@ namespace WepApiTest
 {
     public class UnitTest
     {
-        PlayerDTO player;
+        SaveDTO player;
         public UnitTest()
         {
             player.RoomId = 1;
@@ -18,7 +18,7 @@ namespace WepApiTest
         //[Theory]
         //[InlineData()]
         
-        public async Task PostPlayerSucess(PlayerDTO playerDTO)
+        public async Task PostPlayerSucess(SaveDTO playerDTO)
         {
             var app = new WebApplicationFactory<Program>()
                 .WithWebHostBuilder(webHostBuilder => { });
