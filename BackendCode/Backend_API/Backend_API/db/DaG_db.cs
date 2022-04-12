@@ -8,8 +8,6 @@ namespace Backend_API.db
         public DaG_db(DbContextOptions<DaG_db> options)
             : base(options) { }
 
-        public DbSet<Player> Players { get; set; }
-
         public DbSet<Save> Saves { get; set; }
 
     }

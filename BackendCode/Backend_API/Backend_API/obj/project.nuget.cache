@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jgaSOAht0V8SJmmcQsf/EL7MSWUmD8krYemhnQ/b6EHYPPsxlJeZG+qY+f6jxNBbEWwmNpdFqrSvF79DthNLLw==",
+  "dgSpecHash": "Z/iCLM24/Y/YB7ShcV2PNopmQ9kV9eds39F7lqxueUgeP9amwflzbsPqhDD63+EHAo62tdq/87uBL4fX1qdIeA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\magnu\\source\\repos\\Backend_API\\Backend_API\\Backend_API.csproj",
+  "projectFilePath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\magnu\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\magnu\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",

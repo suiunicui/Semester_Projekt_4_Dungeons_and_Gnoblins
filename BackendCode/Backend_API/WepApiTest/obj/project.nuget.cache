@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OL1Dr7ubnKl3Xv06a4Tn3Ar8fCufWNNwYHUkKZdn5GJ8o/bAUgM6cl6qSojiBXhKS5hIC6E8Q9J97LzXERI/EA==",
+  "dgSpecHash": "SsLAaJGT+TUP7EJAwHMaBTAx+SfRb1jrdqz8egT/NAeu/r6Xr6f2eRvlQ98n4w26G3uSVGYYNT6thdjGUPUsPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\magnu\\source\\repos\\Backend_API\\WepApiTest\\WepApiTest.csproj",
+  "projectFilePath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\WepApiTest\\WepApiTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\magnu\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\magnu\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
