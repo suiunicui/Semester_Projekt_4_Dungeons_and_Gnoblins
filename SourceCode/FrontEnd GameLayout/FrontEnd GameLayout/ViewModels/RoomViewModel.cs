@@ -112,8 +112,16 @@ namespace FrontEnd_GameLayout.ViewModels
         {
             PlayerRow = 3;
             PlayerColumn = 1;
+            
             OnPropertyChanged("PlayerRow");
             OnPropertyChanged("PlayerColumn");
+            Views.Room maroom = new Views.Room();
+            maroom.Mapgrid.Children.IndexOf(maroom.Room_10);
+            string RoomId = game.CurrentRoom.RoomId.ToString();
+            if (maroom.Player1.Uid == RoomId)
+            {
+            }
+
         }
         bool CanExecuteInteractCommand(string direction)
         {

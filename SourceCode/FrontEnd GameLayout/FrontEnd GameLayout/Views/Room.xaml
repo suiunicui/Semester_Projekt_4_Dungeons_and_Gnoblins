@@ -28,118 +28,118 @@
             <!--Setting up the Map-->
             <Grid x:Name="Mapgrid" Grid.Row="0" Grid.Column="1" >
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.5*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="144*"/>
-                    <ColumnDefinition Width="50.28*"/>
-                    <ColumnDefinition Width="50.28*"/>
-                    <ColumnDefinition Width="50.28*"/>
-                    <ColumnDefinition Width="50.28*"/>
-                    <ColumnDefinition Width="50.28*"/>
-                    <ColumnDefinition Width="144*"/>
+                    <ColumnDefinition Width="255*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="255*"/>
                 </Grid.ColumnDefinitions>
                 <Border Background="Gray" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="1" Grid.RowSpan="5"/>
-                <Ellipse x:Name="Player1"  Fill="Red" Width="10" Height="10" Panel.ZIndex="3" Grid.Row="{Binding PlayerRow}" Grid.Column="{Binding PlayerColumn}" Margin="0,0,40,24"/>
                 <Canvas x:Name="Room_1" Grid.Row="2" Grid.Column="1">
-                    <Line X1="0" Y1="0" X2="0" Y2="70" Stroke="Black" Margin="25,15,0,0" Panel.ZIndex="1"/>
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" Panel.ZIndex="2"/>
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
                 <Canvas x:Name="Room_2" Grid.Row="3" Grid.Column="1">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_3" Grid.Row="3" Grid.Column="2">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="-20" Stroke="Black" Margin="25,10,0,0"/>
-                    <Line X1="0" Y1="0" X2="0" Y2="20" Stroke="Black" Margin="25,40,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_4" Grid.Row="2" Grid.Column="2">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="-20" Stroke="Black" Margin="25,10,0,0"/>
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_5" Grid.Row="4" Grid.Column="2">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="-20" Stroke="Black" Margin="25,10,0,0"/>
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
-                    <Line X1="0" Y1="0" X2="-20" Y2="0" Stroke="Black" Margin="10,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
+                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_6" Grid.Row="4" Grid.Column="1">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="20" Stroke="Black" Margin="25,40,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_7" Grid.Row="5" Grid.Column="1">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
                 </Canvas>
                 <Canvas x:Name="Room_8" Grid.Row="1" Grid.Column="2">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="20" Stroke="Black" Margin="25,40,0,0"/>
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_9" Grid.Row="1" Grid.Column="3">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
-                    <Line X1="0" Y1="0" X2="-20" Y2="0" Stroke="Black" Margin="10,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
+                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_10" Grid.Row="1" Grid.Column="4">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="20" Stroke="Black" Margin="25,40,0,0"/>
-                    <Line X1="0" Y1="0" X2="-20" Y2="0" Stroke="Black" Margin="10,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0"/>
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
+                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_11" Grid.Row="2" Grid.Column="4">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="20" Stroke="Black" Margin="25,40,0,0"/>
-                    <Line X1="0" Y1="0" X2="0" Y2="-20" Stroke="Black" Margin="25,10,0,0"/>
-                    <Line X1="0" Y1="0" X2="-20" Y2="0" Stroke="Black" Margin="10,25,0,0"/>
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
+                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
+                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_12" Grid.Row="2" Grid.Column="5">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
                 </Canvas>
                 <Canvas x:Name="Room_13" Grid.Row="2" Grid.Column="3">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="20" Stroke="Black" Margin="25,40,0,0"/>
-                    <Line X1="0" Y1="0" X2="-20" Y2="0" Stroke="Black" Margin="10,25,0,0"/>
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
+                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_14" Grid.Row="3" Grid.Column="3">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
                 </Canvas>
                 <Canvas x:Name="Room_15" Grid.Row="3" Grid.Column="4">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="20" Stroke="Black" Margin="25,40,0,0"/>
-                    <Line X1="0" Y1="0" X2="0" Y2="-20" Stroke="Black" Margin="25,10,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
+                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_16" Grid.Row="4" Grid.Column="4">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="-20" Stroke="Black" Margin="25,10,0,0"/>
-                    <Line X1="0" Y1="0" X2="-20" Y2="0" Stroke="Black" Margin="10,25,0,0"/>
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
+                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_17" Grid.Row="4" Grid.Column="5">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
                 </Canvas>
                 <Canvas x:Name="Room_18" Grid.Row="4" Grid.Column="3">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="20" Stroke="Black" Margin="25,40,0,0"/>
-                    <Line X1="0" Y1="0" X2="-20" Y2="0" Stroke="Black" Margin="10,25,0,0"/>
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
+                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_19" Grid.Row="5" Grid.Column="3">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
-                    <Line X1="0" Y1="0" X2="0" Y2="-20" Stroke="Black" Margin="25,10,0,0"/>
-                    <Line X1="0" Y1="0" X2="20" Y2="0" Stroke="Black" Margin="40,25,0,0"/>
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
                 </Canvas>
                 <Canvas x:Name="Room_20" Grid.Row="5" Grid.Column="4">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="10,10,0,0" />
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
                 </Canvas>
+                <Ellipse x:Name="Player1"  Fill="Red" Width="10" Height="10" Panel.ZIndex="3" Grid.Row="{Binding PlayerRow}" Grid.Column="{Binding PlayerColumn}" Margin="0,0,0,0"/>
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="1">

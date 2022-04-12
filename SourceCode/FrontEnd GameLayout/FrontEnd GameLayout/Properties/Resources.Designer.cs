@@ -59,5 +59,14 @@ namespace FrontEnd_GameLayout.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.GetFullPath(Environment.CurrentDirectory + @&quot;\\Resource.txt&quot;).
+        /// </summary>
+        internal static string Map {
+            get {
+                return ResourceManager.GetString("Map", resourceCulture);
+            }
+        }
     }
 }
