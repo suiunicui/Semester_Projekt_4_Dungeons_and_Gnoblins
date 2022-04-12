@@ -1126,3 +1126,6 @@ C:\Users\magnu\Documents\GitHub\SemesterProjekt4\BackendCode\Backend_API\Backend
 C:\Users\magnu\Documents\GitHub\SemesterProjekt4\BackendCode\Backend_API\Backend_API\obj\Debug\net6.0\ref\Backend_API.dll
 C:\Users\magnu\Documents\GitHub\SemesterProjekt4\BackendCode\Backend_API\Backend_API\obj\Debug\net6.0\Backend_API.pdb
 C:\Users\magnu\Documents\GitHub\SemesterProjekt4\BackendCode\Backend_API\Backend_API\obj\Debug\net6.0\Backend_API.genruntimeconfig.cache
+C:\Users\magnu\Documents\GitHub\SemesterProjekt4\BackendCode\Backend_API\Backend_API\bin\Debug\net6.0\BCrypt.Net.dll
+C:\Users\magnu\Documents\GitHub\SemesterProjekt4\BackendCode\Backend_API\Backend_API\obj\Debug\net6.0\Backend_API.RazorAssemblyInfo.cache
+C:\Users\magnu\Documents\GitHub\SemesterProjekt4\BackendCode\Backend_API\Backend_API\obj\Debug\net6.0\Backend_API.RazorAssemblyInfo.cs
