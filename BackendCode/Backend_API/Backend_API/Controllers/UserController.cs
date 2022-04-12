@@ -14,12 +14,17 @@ using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore.Identity;
+
 
 namespace Backend_API.Controllers
 {
+
     [Authorize]
     public class UserController : Controller
     {
+        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly DaG_db _context;
 
         const int BcryptWorkfactor = 11;
@@ -53,13 +58,13 @@ namespace Backend_API.Controllers
 
             var jwtToken = new Token();
 
-            jwtToken.JWT = generateToken(user);
+            jwtToken.JWT = GenerateToken(user);
 
             return CreatedAtAction("Get", new { userName = user.Username }, jwtToken);
 
         }
 
-        private string generateToken(User user)
+        private string GenerateToken(User user)
         {
             var claims = new Claim[]
             {
@@ -73,5 +78,29 @@ namespace Backend_API.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
+
+        [HttpPost("jwtlogin"), AllowAnonymous]
+        public async Task<IActionResult> JWTlogin([FromBody] User loginUser)
+        {
+            var user = await _userManager.FindByNameAsync(loginUser.Username);
+            if (user == null)
+            {
+                ModelState.AddModelError(string.Empty, "Invalid Username");
+                return BadRequest();
+            }
+
+            var passwordSignInResult = await _signInManager.CheckPasswordSignInAsync(user, loginUser.Password
+                                                                    , false);
+            if (passwordSignInResult.Succeeded)
+                return new ObjectResult(GenerateToken(loginUser));
+            return BadRequest("Invalid login");
+        }
+
+        //[HttpPost("login"), AllowAnonymous]
+        //public async Task<ActionResult<Token>> Login(LoginUser login)
+
+        //{
+
+        //}
     }
 }

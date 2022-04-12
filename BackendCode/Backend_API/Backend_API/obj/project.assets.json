@@ -11074,6 +11074,12 @@
   },
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\jacob\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\BackendCode\\Backend_API\\Backend_API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
