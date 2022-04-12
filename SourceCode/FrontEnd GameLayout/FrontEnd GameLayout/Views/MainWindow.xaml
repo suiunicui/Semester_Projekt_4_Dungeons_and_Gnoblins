@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FrontEnd_GameLayout.Views"
         mc:Ignorable="d"
-        Title="Dungeons and Gnoblins" Height="720" Width="1080"
+        Title="Dungeons and Gnoblins" Height="1080" Width="1920"
         Background="{StaticResource backgroundColor}" 
         ResizeMode="NoResize" WindowState="Maximized">
     <Grid>
