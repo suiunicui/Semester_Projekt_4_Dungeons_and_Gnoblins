@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jacob\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj": {}
+    "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jacob\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj": {
+    "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jacob\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj",
+        "projectUniqueName": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj",
         "projectName": "Backend_API",
-        "projectPath": "C:\\Users\\jacob\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj",
-        "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jacob\\-Semester-Projekt-4---Dungeons-and-Gnoblins\\BackendCode\\Backend_API\\Backend_API\\obj\\",
+        "projectPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\Backend_API.csproj",
+        "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\magnu\\Documents\\GitHub\\SemesterProjekt4\\BackendCode\\Backend_API\\Backend_API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
