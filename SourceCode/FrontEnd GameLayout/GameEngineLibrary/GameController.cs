@@ -51,6 +51,8 @@ namespace GameEngineLibrary
         public LoadGame()
         {
         HttpController GetPlayer()
+        //læs string fra func
+        
         }
 
         //Fjerner spiller fra spillet og viser death screen.
