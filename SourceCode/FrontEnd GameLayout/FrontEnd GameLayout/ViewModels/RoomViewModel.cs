@@ -19,11 +19,14 @@ namespace FrontEnd_GameLayout.ViewModels
 
        GameController game = new GameController();
 
+        private ObservableCollection<EllipseGeometry> _PlayerPos = new ObservableCollection<EllipseGeometry>();
         public RoomViewModel()
         {
         }
 
         #region Properties
+
+
 
         public string Name
         {

@@ -47,9 +47,11 @@ namespace GameEngineLibrary
 
     private LinkedList<int>[] CalculateLinkedListSizeFromMapLayoutFile()
     {
-      ResourceReader reader = new ResourceReader(_mapLayoutResource);
+      var Test = File.Open(_mapLayoutResource, FileMode.Open);
+      ResourceReader reader = new ResourceReader(Test);
       int MapLayoutSize = CalculateMapLayoutSize(reader);
       reader.Close();
+      Test.Close();
 
       return new LinkedList<int>[MapLayoutSize];
     }

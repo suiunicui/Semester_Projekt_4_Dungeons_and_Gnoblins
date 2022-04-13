@@ -115,29 +115,35 @@
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
                     <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
+                    <Ellipse Uid="15"  Fill="Red" Width="10" Height="10" Panel.ZIndex="3" Margin="40,40,0,0" Visibility="Hidden"/>
                 </Canvas>
                 <Canvas x:Name="Room_16" Grid.Row="4" Grid.Column="4">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
                     <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
                     <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0"/>
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
+                    <Ellipse Uid="16"  Fill="Red" Width="10" Height="10" Panel.ZIndex="3" Margin="40,40,0,0" Visibility="Hidden"/>
                 </Canvas>
                 <Canvas x:Name="Room_17" Grid.Row="4" Grid.Column="5">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Ellipse Uid="17"  Fill="Red" Width="10" Height="10" Panel.ZIndex="3" Margin="40,40,0,0" Visibility="Hidden"/>
                 </Canvas>
                 <Canvas x:Name="Room_18" Grid.Row="4" Grid.Column="3">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0"/>
                     <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0"/>
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
+                    <Ellipse Uid="18"  Fill="Red" Width="10" Height="10" Panel.ZIndex="3" Margin="40,40,0,0" Visibility="Hidden"/>
                 </Canvas>
                 <Canvas x:Name="Room_19" Grid.Row="5" Grid.Column="3">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
                     <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0"/>
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0"/>
+                    <Ellipse Uid="19"  Fill="Red" Width="10" Height="10" Panel.ZIndex="3" Margin="40,40,0,0" Visibility="Hidden"/>
                 </Canvas>
                 <Canvas x:Name="Room_20" Grid.Row="5" Grid.Column="4">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" />
+                    <Ellipse Uid="20"  Fill="Red" Width="10" Height="10" Panel.ZIndex="3" Margin="40,40,0,0" Visibility="Hidden"/>
                 </Canvas>
                 <Ellipse x:Name="Player1"  Fill="Red" Width="10" Height="10" Panel.ZIndex="3" Grid.Row="{Binding PlayerRow}" Grid.Column="{Binding PlayerColumn}" Margin="0,0,0,0"/>
             </Grid>
