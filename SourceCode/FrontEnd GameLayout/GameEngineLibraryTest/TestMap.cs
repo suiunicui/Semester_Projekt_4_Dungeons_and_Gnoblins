@@ -12,12 +12,12 @@ namespace GameEngineLibraryTest;
 public class TestMap
 {
   private Map _uut;
-  private string filepath = Environment.CurrentDirectory + "\\Resource.txt";
+  private string filepath = Environment.CurrentDirectory + "\\Resource.resources";
 
   [SetUp]
   public void Setup()
   {
-    var filecreator = File.Create(filepath);
+    ResourceWriter filecreator = new ResourceWriter(filepath);
     filecreator.Close();
   }
 
