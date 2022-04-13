@@ -41,6 +41,17 @@ namespace GameEngineLibrary
          
           return log;
         }
+        //Gemmer spil
+        public Savegame(Room curRoom)
+        {
+        HttpController PostPlayer(Player player)
+        }
+        
+        //Loader gemt spil
+        public LoadGame()
+        {
+        HttpController GetPlayer()
+        }
 
         //Fjerner spiller fra spillet og viser death screen.
         public void PlayerDead(Player player)
