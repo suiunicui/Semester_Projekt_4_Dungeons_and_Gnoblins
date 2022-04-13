@@ -7,7 +7,7 @@ namespace GameEngineLibrary
   {
     public List<Room> Rooms { get; set; } = new List<Room>();
     public LinkedList<int>[] MapLayout { get; set; }
-    private readonly string _mapLayoutResource = Environment.CurrentDirectory + "\\Resource.txt";
+    private readonly string _mapLayoutResource = Path.GetFullPath(Environment.CurrentDirectory + @"\\Resource.resources");
 
     public Map()
     {
@@ -15,11 +15,43 @@ namespace GameEngineLibrary
       CreateConnectionsBetweenRoomsFromMapLayoutFile();
     }
 
+    public Room GetRoomByDirection(Room curRoom, string direction)
+    {
+      string dir = direction.ToLower();
+      Room newRoom = null;
+      int newRoomId;
+      switch (dir)
+      {
+        case "west":
+          newRoomId = MapLayout[curRoom.RoomId].ElementAt(0);
+          newRoom = Rooms[newRoomId];
+          break;
+        case "north":
+          newRoomId = MapLayout[curRoom.RoomId].ElementAt(1);
+          newRoom = Rooms[newRoomId];
+          break;
+        case "east":
+          newRoomId = MapLayout[curRoom.RoomId].ElementAt(2);
+          newRoom = Rooms[newRoomId];
+          break;
+        case "south":
+          newRoomId = MapLayout[curRoom.RoomId].ElementAt(3);
+          newRoom = Rooms[newRoomId];
+          break;
+        default:
+          break;
+      }
+
+      return newRoom;
+    }
+
     private LinkedList<int>[] CalculateLinkedListSizeFromMapLayoutFile()
     {
-      ResourceReader reader = new ResourceReader(_mapLayoutResource);
+      var Test = File.Open(_mapLayoutResource, FileMode.Open);
+      ResourceReader reader = new ResourceReader(Test);
       int MapLayoutSize = CalculateMapLayoutSize(reader);
       reader.Close();
+      Test.Close();
 
       return new LinkedList<int>[MapLayoutSize];
     }
