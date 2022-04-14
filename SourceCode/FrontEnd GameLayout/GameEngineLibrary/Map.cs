@@ -3,16 +3,25 @@ using System.Resources;
 
 namespace GameEngineLibrary
 {
-  public class Map
+  public class Maps
   {
-    public List<Room> Rooms { get; set; } = new List<Room>();
+    public Room[] Rooms { get; set; }
     public LinkedList<int>[] MapLayout { get; set; }
     private readonly string _mapLayoutResource = Path.GetFullPath(Environment.CurrentDirectory + @"\\Resource.resources");
 
-    public Map()
+    public Maps()
     {
       MapLayout = CalculateLinkedListSizeFromMapLayoutFile();
-      CreateConnectionsBetweenRoomsFromMapLayoutFile();
+      // CreateConnectionsBetweenRoomsFromMapLayoutFile();
+      Rooms = new Room[20];
+
+      int i = 0;
+      foreach (Room room in Rooms)
+      {
+        Rooms[i] = new Room((uint) i);
+        i++;
+      }
+
     }
 
     public Room GetRoomByDirection(Room curRoom, string direction)
@@ -45,13 +54,29 @@ namespace GameEngineLibrary
       return newRoom;
     }
 
+    private string convertMapLayout(string mapLayoutPath)
+    {
+      StreamReader sr = new StreamReader(mapLayoutPath);
+      string newFilePath = Environment.CurrentDirectory + @"\\newResource.resources";
+      ResourceWriter rw = new ResourceWriter(newFilePath);
+
+      int i = 0;
+      while (!sr.EndOfStream)
+      {
+        rw.AddResource((i++).ToString(), sr.ReadLine());
+      }
+      rw.Close();
+      sr.Close();
+
+      return newFilePath;
+    }
+
     private LinkedList<int>[] CalculateLinkedListSizeFromMapLayoutFile()
     {
-      var Test = File.Open(_mapLayoutResource, FileMode.Open);
-      ResourceReader reader = new ResourceReader(Test);
+      string _convertedFileType = convertMapLayout(_mapLayoutResource);
+      ResourceReader reader = new ResourceReader(_convertedFileType);
       int MapLayoutSize = CalculateMapLayoutSize(reader);
       reader.Close();
-      Test.Close();
 
       return new LinkedList<int>[MapLayoutSize];
     }
@@ -63,12 +88,14 @@ namespace GameEngineLibrary
       {
         MapLayoutSize++;
       }
+      
       return MapLayoutSize;
     }
 
     private void CreateConnectionsBetweenRoomsFromMapLayoutFile()
     {
-      ResourceReader reader = new ResourceReader(_mapLayoutResource);
+      string convetedFilePath = convertMapLayout(_mapLayoutResource);
+      ResourceReader reader = new ResourceReader(convetedFilePath);
       CreateConnectionsBetweenRooms(reader);
       reader.Close();
     }
@@ -86,12 +113,10 @@ namespace GameEngineLibrary
 
     private LinkedList<int> CreateConnection(DictionaryEntry entry)
     {
-      int[] connections = entry.Value.ToString()
-                                     .Split(",")
-                                     .Select(line => int.Parse(line))
-                                     .ToArray();
-      
-      return new LinkedList<int>(connections);
+      int indexOfEqual = entry.Value.ToString().IndexOf("=") + 1;
+      string connectionString = entry.Value.ToString().Remove(0, indexOfEqual);
+      int[] connectionArray = connectionString.Split(",").Select(c => c=="" ? -1 : int.Parse(c)).ToArray();
+      return new LinkedList<int>(connectionArray.Where(r => r != -1));
     }
   }
 }

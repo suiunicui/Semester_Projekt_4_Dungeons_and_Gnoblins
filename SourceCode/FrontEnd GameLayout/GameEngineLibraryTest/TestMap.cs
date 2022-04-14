@@ -4,12 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Resources;
 using GameEngineLibrary;
+using GameEngineLibrary.MapImpl;
 using NUnit.Framework;
 
 namespace GameEngineLibraryTest;
 
 [TestFixture]
-public class TestMap
+private class TestMap
 {
   private Map _uut;
   private string filepath = Environment.CurrentDirectory + "\\Resource.resources";
@@ -52,8 +53,8 @@ public class TestMap
   [TearDown]
   public void TearDown()
   {
-    GC.Collect();
-    File.Delete(filepath);
+    // GC.Collect();
+    // File.Delete(filepath);
   }
 
 }
