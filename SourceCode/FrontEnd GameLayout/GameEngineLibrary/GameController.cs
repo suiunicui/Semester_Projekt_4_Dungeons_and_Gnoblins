@@ -17,7 +17,7 @@ namespace GameEngineLibrary
 
         public GameController()
         {
-          InitializeGame();
+          //InitializeGame();
         }
         private void InitializeGame()
         {

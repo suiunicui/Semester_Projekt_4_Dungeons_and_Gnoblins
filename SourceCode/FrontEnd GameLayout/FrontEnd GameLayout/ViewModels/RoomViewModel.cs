@@ -17,16 +17,17 @@ namespace FrontEnd_GameLayout.ViewModels
     public class RoomViewModel : BaseViewModel, IPageViewModel
     {
 
-       GameController game = new GameController();
+        GameController game = new GameController();
 
-        private ObservableCollection<EllipseGeometry> _PlayerPos = new ObservableCollection<EllipseGeometry>();
-        public RoomViewModel()
+
+    public RoomViewModel()
         {
         }
 
         #region Properties
 
 
+        public int i = 0;
 
         public string Name
         {
@@ -98,15 +99,66 @@ namespace FrontEnd_GameLayout.ViewModels
         _moveCommand ?? (_moveCommand = new DelegateCommand<string>(ExecuteMoveCommand, CanExecuteMoveCommand));
         void ExecuteMoveCommand(string direction)
         {
-            Log = new Log();
-            Log = game.MovePlayer(game.CurrentRoom, direction);
-            Description = Log.GetEventRecord("New Room Description");
+            //Log = new Log();
+            //Log = game.MovePlayer(game.CurrentRoom, direction);
+            //Description = Log.GetEventRecord("New Room Description");
+            if (i == 0)
+            {
+                MovePlayerOnMap(2);
+                i++;
+            }
+            else if (i == 1)
+            {
+                MovePlayerOnMap(3);
+                i++;
+            }
+            else if (i == 2)
+            {
+                MovePlayerOnMap(4);
+                i++;
+            }
+            else
+            {
+                MovePlayerOnMap(1);
+                i = 0;
+            }
         }
         bool CanExecuteMoveCommand(string direction)
         { 
             return true;
         }
 
+        void MovePlayerOnMap(int RoomId)
+        {
+            Views.Room maroom = new Views.Room();
+            switch (RoomId)
+            {
+                case 1:
+                    PlayerRow = 2;
+                    PlayerColumn = 1;
+                    break;
+                case 2:
+                    PlayerRow = 3;
+                    PlayerColumn = 1;
+                    break;
+                case 3:
+                    PlayerRow = 3;
+                    PlayerColumn = 2;
+                    break;
+                case 4:
+                    PlayerRow = 2;
+                    playerColumn = 2;
+                    break;
+                case 5:
+                    PlayerRow = 4;
+                    playerColumn = 2;
+                    break;
+
+            }
+
+            OnPropertyChanged("PlayerRow");
+            OnPropertyChanged("PlayerColumn");
+        }
 
         private DelegateCommand<string> _interactCommand;
         public DelegateCommand<string> InteractCommand =>
@@ -115,15 +167,9 @@ namespace FrontEnd_GameLayout.ViewModels
         {
             PlayerRow = 3;
             PlayerColumn = 1;
-            
+            Views.Room maroom = new Views.Room();
             OnPropertyChanged("PlayerRow");
             OnPropertyChanged("PlayerColumn");
-            Views.Room maroom = new Views.Room();
-            maroom.Mapgrid.Children.IndexOf(maroom.Room_10);
-            string RoomId = game.CurrentRoom.RoomId.ToString();
-            if (maroom.Player1.Uid == RoomId)
-            {
-            }
 
         }
         bool CanExecuteInteractCommand(string direction)
