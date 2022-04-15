@@ -6,6 +6,7 @@
         public Room(uint id) 
         {
             RoomId = id;
+            Description = Description + (id +1 );
         }
 
         public Room() { }
@@ -13,6 +14,7 @@
         #region Properties
 
         public uint RoomId { get; private set; }
+        public string Description { get; private set; } = "Hello, welcome to room ";
         public Player? Player { get; private set; } = null;
         public Enemy? Enemy { get; private set; } = null;
         

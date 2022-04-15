@@ -100,3 +100,9 @@ C:/Users/Ander/OneDrive/Software teknologi/4. Semester/PRJ4/-Semester-Projekt-4-
 C:/Users/Ander/OneDrive/Software teknologi/4. Semester/PRJ4/-Semester-Projekt-4---Dungeons-and-Gnoblins/SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/obj/Debug/net6.0/GameEngineLibraryTest.pdb
 C:/Users/Ander/OneDrive/Software teknologi/4. Semester/PRJ4/-Semester-Projekt-4---Dungeons-and-Gnoblins/SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/obj/Debug/net6.0/GameEngineLibraryTest.genruntimeconfig.cache
 C:/Users/Ander/OneDrive/Software teknologi/4. Semester/PRJ4/-Semester-Projekt-4---Dungeons-and-Gnoblins/SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/obj/Debug/net6.0/ref/GameEngineLibraryTest.dll
+C:\Users\mads\Documents\GitHub\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineLibraryTest\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\mads\Documents\GitHub\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineLibraryTest\obj\Debug\net6.0\GameEngineLibraryTest.csproj.AssemblyReference.cache
+C:\Users\mads\Documents\GitHub\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineLibraryTest\obj\Debug\net6.0\GameEngineLibraryTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mads\Documents\GitHub\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineLibraryTest\obj\Debug\net6.0\GameEngineLibraryTest.AssemblyInfoInputs.cache
+C:\Users\mads\Documents\GitHub\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineLibraryTest\obj\Debug\net6.0\GameEngineLibraryTest.AssemblyInfo.cs
+C:\Users\mads\Documents\GitHub\SemesterProjekt4\SourceCode\FrontEnd GameLayout\GameEngineLibraryTest\obj\Debug\net6.0\GameEngineLibraryTest.csproj.CoreCompileInputs.cache

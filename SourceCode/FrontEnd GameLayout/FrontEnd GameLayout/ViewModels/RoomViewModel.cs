@@ -22,6 +22,8 @@ namespace FrontEnd_GameLayout.ViewModels
 
     public RoomViewModel()
         {
+            Description = game.CurrentRoom.Description;
+            MovePlayerOnMap();
         }
 
         #region Properties
@@ -38,7 +40,7 @@ namespace FrontEnd_GameLayout.ViewModels
         }
 
 
-        private int playerRow = 2;
+        private int playerRow;
         public int PlayerRow
         {
             get { return playerRow; }
@@ -46,7 +48,7 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private int playerColumn = 1;
+        private int playerColumn;
         public int PlayerColumn
         {
             get { return playerColumn; }
@@ -57,7 +59,7 @@ namespace FrontEnd_GameLayout.ViewModels
         }
 
 
-        private string description = "Hello i am test";
+        private string description;
 
         public string Description 
         { 
@@ -67,6 +69,7 @@ namespace FrontEnd_GameLayout.ViewModels
                 if (value != description)
                 {
                     description = value;
+                    OnPropertyChanged("Description");
                 }
             }
         }
@@ -101,28 +104,9 @@ namespace FrontEnd_GameLayout.ViewModels
         {
             Log = new Log();
             Log = game.MovePlayer(game.CurrentRoom, direction);
-            Description = Log.GetEventRecord("New Room Description");
+            //Description = Log.GetEventRecord("New Room Description");
+            Description = game.CurrentRoom.Description;
             MovePlayerOnMap();
-            //if (i == 0)
-            //{
-            //    MovePlayerOnMap(2);
-            //    i++;
-            //}
-            //else if (i == 1)
-            //{
-            //    MovePlayerOnMap(3);
-            //    i++;
-            //}
-            //else if (i == 2)
-            //{
-            //    MovePlayerOnMap(4);
-            //    i++;
-            //}
-            //else
-            //{
-            //    MovePlayerOnMap(1);
-            //    i = 0;
-            //}
         }
         bool CanExecuteMoveCommand(string direction)
         { 
@@ -132,7 +116,6 @@ namespace FrontEnd_GameLayout.ViewModels
 
         void MovePlayerOnMap()
         {
-            Views.Room maroom = new Views.Room();
             switch (game.CurrentRoom.RoomId + 1)
             {
                 case 1:
@@ -227,12 +210,6 @@ namespace FrontEnd_GameLayout.ViewModels
         _interactCommand ?? (_interactCommand = new DelegateCommand<string>(ExecuteInteractCommand, CanExecuteInteractCommand));
         void ExecuteInteractCommand(string direction)
         {
-            PlayerRow = 3;
-            PlayerColumn = 1;
-            Views.Room maroom = new Views.Room();
-            OnPropertyChanged("PlayerRow");
-            OnPropertyChanged("PlayerColumn");
-
         }
         bool CanExecuteInteractCommand(string direction)
         {
