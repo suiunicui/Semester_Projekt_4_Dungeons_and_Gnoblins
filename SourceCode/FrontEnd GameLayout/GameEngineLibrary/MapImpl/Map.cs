@@ -29,7 +29,7 @@ public class Map : IMap
   private LinkedList<int>[] CreateConnectionsBetweenRoomsFromLayoutFile(string filepath)
   {
     StreamReader sr = new StreamReader(filepath);
-    LinkedList<int>[] connections = new LinkedList<int>[19];
+    LinkedList<int>[] connections = new LinkedList<int>[20];
     int index = 0;
     while (!sr.EndOfStream)
     {
