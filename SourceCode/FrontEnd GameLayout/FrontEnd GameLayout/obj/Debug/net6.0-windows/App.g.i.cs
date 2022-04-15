@@ -11,12 +11,6 @@
 
 using FrontEnd_GameLayout.ViewModels;
 using FrontEnd_GameLayout.Views;
-using Prism.Interactivity;
-using Prism.Ioc;
-using Prism.Mvvm;
-using Prism.Regions;
-using Prism.Regions.Behaviors;
-using Prism.Services.Dialogs;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -60,7 +54,7 @@ namespace FrontEnd_GameLayout {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FrontEnd GameLayout;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FrontEnd GameLayout;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
