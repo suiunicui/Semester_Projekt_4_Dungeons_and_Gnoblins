@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj": {}
+    "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj": {
+    "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
+        "projectUniqueName": "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
         "projectName": "GameEngineLibraryTest",
-        "projectPath": "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
-        "packagesPath": "C:\\Users\\UniquesKernel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\obj\\",
+        "projectPath": "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\GameEngineLibraryTest.csproj",
+        "packagesPath": "C:\\Users\\mads\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibraryTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\UniquesKernel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mads\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
-                "projectPath": "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj"
+              "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
+                "projectPath": "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj"
               }
             }
           }
@@ -84,25 +80,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
+    "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
         "projectName": "GameEngineLibrary",
-        "projectPath": "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
-        "packagesPath": "C:\\Users\\UniquesKernel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\UniquesKernel\\Desktop\\Semester4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\obj\\",
+        "projectPath": "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\GameEngineLibrary.csproj",
+        "packagesPath": "C:\\Users\\mads\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mads\\Documents\\GitHub\\SemesterProjekt4\\SourceCode\\FrontEnd GameLayout\\GameEngineLibrary\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\UniquesKernel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mads\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

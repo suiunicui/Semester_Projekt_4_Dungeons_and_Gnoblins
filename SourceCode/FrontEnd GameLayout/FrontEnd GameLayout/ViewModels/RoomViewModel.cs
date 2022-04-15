@@ -99,39 +99,40 @@ namespace FrontEnd_GameLayout.ViewModels
         _moveCommand ?? (_moveCommand = new DelegateCommand<string>(ExecuteMoveCommand, CanExecuteMoveCommand));
         void ExecuteMoveCommand(string direction)
         {
-            //Log = new Log();
-            //Log = game.MovePlayer(game.CurrentRoom, direction);
-            //Description = Log.GetEventRecord("New Room Description");
-            if (i == 0)
-            {
-                MovePlayerOnMap(2);
-                i++;
-            }
-            else if (i == 1)
-            {
-                MovePlayerOnMap(3);
-                i++;
-            }
-            else if (i == 2)
-            {
-                MovePlayerOnMap(4);
-                i++;
-            }
-            else
-            {
-                MovePlayerOnMap(1);
-                i = 0;
-            }
+            Log = new Log();
+            Log = game.MovePlayer(game.CurrentRoom, direction);
+            Description = Log.GetEventRecord("New Room Description");
+            MovePlayerOnMap();
+            //if (i == 0)
+            //{
+            //    MovePlayerOnMap(2);
+            //    i++;
+            //}
+            //else if (i == 1)
+            //{
+            //    MovePlayerOnMap(3);
+            //    i++;
+            //}
+            //else if (i == 2)
+            //{
+            //    MovePlayerOnMap(4);
+            //    i++;
+            //}
+            //else
+            //{
+            //    MovePlayerOnMap(1);
+            //    i = 0;
+            //}
         }
         bool CanExecuteMoveCommand(string direction)
         { 
             return true;
         }
 
-        void MovePlayerOnMap(int RoomId)
+        void MovePlayerOnMap()
         {
             Views.Room maroom = new Views.Room();
-            switch (RoomId)
+            switch (game.CurrentRoom.RoomId)
             {
                 case 1:
                     PlayerRow = 2;
@@ -152,6 +153,66 @@ namespace FrontEnd_GameLayout.ViewModels
                 case 5:
                     PlayerRow = 4;
                     playerColumn = 2;
+                    break;
+                case 6:
+                    PlayerRow = 4;
+                    playerColumn = 1;
+                    break;
+                case 7:
+                    PlayerRow = 5;
+                    playerColumn = 1;
+                    break;
+                case 8:
+                    PlayerRow = 1;
+                    playerColumn = 2;
+                    break;
+                case 9:
+                    PlayerRow = 1;
+                    playerColumn = 3;
+                    break;
+                case 10:
+                    PlayerRow = 1;
+                    playerColumn = 4;
+                    break;
+                case 11:
+                    PlayerRow = 2;
+                    playerColumn = 4;
+                    break;
+                case 12:
+                    PlayerRow = 2;
+                    playerColumn = 5;
+                    break;
+                case 13:
+                    PlayerRow = 2;
+                    playerColumn = 3;
+                    break;
+                case 14:
+                    PlayerRow = 3;
+                    playerColumn = 3;
+                    break;
+                case 15:
+                    PlayerRow = 3;
+                    playerColumn = 4;
+                    break;
+                case 16:
+                    PlayerRow = 4;
+                    playerColumn = 4;
+                    break;
+                case 17:
+                    PlayerRow = 4;
+                    playerColumn = 5;
+                    break;
+                case 18:
+                    PlayerRow = 4;
+                    playerColumn = 3;
+                    break;
+                case 19:
+                    PlayerRow = 5;
+                    playerColumn = 3;
+                    break;
+                case 20:
+                    PlayerRow = 5;
+                    playerColumn = 4;
                     break;
 
             }
