@@ -14,9 +14,9 @@ public class BaseMapCreator : IMapCreator
   public void GenerateMapLayoutFile()
   {
     StreamWriter sw = new StreamWriter(FilePath);
-    sw.WriteLine("-1, -1, -1, 2");
-    sw.WriteLine("-1,-1,3,-1");
-    sw.WriteLine("2,4,-1,5");
+    sw.WriteLine("-1, -1, -1, 1");
+    sw.WriteLine("-1,0,2,-1");
+    sw.WriteLine("1,3,-1,4");
     sw.WriteLine("-1,8,13,3");
     sw.WriteLine("6,3,18,-1");
     sw.WriteLine("-1,-1,5,7");

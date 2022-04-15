@@ -7,7 +7,7 @@ namespace GameEngineLibrary.MapImpl;
 
 public class Map : IMap
 {
-  public Room[] Rooms { get; private set; } = new Room[19];
+  public Room[] Rooms { get; private set; } = new Room[20];
   public LinkedList<int>[] MapLayout { get; set; }
   public Map(IMapCreator mapCreator)
   {

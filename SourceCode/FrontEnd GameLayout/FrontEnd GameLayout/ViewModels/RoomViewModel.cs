@@ -126,13 +126,14 @@ namespace FrontEnd_GameLayout.ViewModels
         }
         bool CanExecuteMoveCommand(string direction)
         { 
+            
             return true;
         }
 
         void MovePlayerOnMap()
         {
             Views.Room maroom = new Views.Room();
-            switch (game.CurrentRoom.RoomId)
+            switch (game.CurrentRoom.RoomId + 1)
             {
                 case 1:
                     PlayerRow = 2;
