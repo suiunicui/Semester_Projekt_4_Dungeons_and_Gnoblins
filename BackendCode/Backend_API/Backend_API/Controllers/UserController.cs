@@ -15,7 +15,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
-
+using Backend_API.Models.DTO;
 
 namespace Backend_API.Controllers
 {
@@ -35,10 +35,26 @@ namespace Backend_API.Controllers
             _context = context;
         }
 
+        
+        [HttpGet("GetUser")]
+        public async Task<ActionResult<UserDTO>> GetUser(string username)
+        {
+            var user = await _context.Users.FindAsync(username);
 
-        [HttpPost("register"), AllowAnonymous]
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var userDto = new UserDTO();
+            userDto.Username = user.Username;
 
-        public async Task<ActionResult<Token>> Register(User regUser)
+            return userDto;
+        }
+
+
+        [HttpPost("Register"), AllowAnonymous]
+
+        public async Task<ActionResult<Token>> Register(UserDTO regUser)
         {
             regUser.Username = regUser.Username.ToLower();
             var nameExist = await _context.Users.Where(u => u.Username == regUser.Username).FirstOrDefaultAsync();
@@ -58,13 +74,33 @@ namespace Backend_API.Controllers
 
             var jwtToken = new Token();
 
-            jwtToken.JWT = GenerateToken(user);
+            jwtToken.JWT = GenerateToken(regUser);
 
-            return CreatedAtAction("Get", new { userName = user.Username }, jwtToken);
+            return CreatedAtAction("GetUser", new { username = user.Username }, jwtToken);
 
         }
 
-        private string GenerateToken(User user)
+        [HttpPost("Login"), AllowAnonymous]
+        public async Task<ActionResult<Token>> Login(UserDTO userDTO)
+
+        {
+            userDTO.Username = userDTO.Username.ToLower();
+            var user = await _context.Users.Where(u => u.Username == userDTO.Username).FirstOrDefaultAsync();
+            if (user != null)
+            {
+                var isValid = BCrypt.Net.BCrypt.Verify(userDTO.Password, user.Password);
+                if (isValid == true)
+                {
+                    return new Token {JWT = GenerateToken(userDTO)};
+                }
+
+            }
+            ModelState.AddModelError(string.Empty, "Wrong Username or Password");
+            return BadRequest(ModelState);
+        }
+
+
+        private string GenerateToken(UserDTO user)
         {
             var claims = new Claim[]
             {
@@ -73,34 +109,28 @@ namespace Backend_API.Controllers
                 new Claim(JwtRegisteredClaimNames.Exp, new DateTimeOffset(DateTime.Now.AddHours(2)).ToUnixTimeSeconds().ToString()),
             };
 
-            var token = new JwtSecurityToken(new JwtHeader(new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes("")),
+            var token = new JwtSecurityToken(new JwtHeader(new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes("adfhsjddsadh@£€{1425452}")),
                 SecurityAlgorithms.HmacSha256)), new JwtPayload(claims));
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
 
         [HttpPost("jwtlogin"), AllowAnonymous]
-        public async Task<IActionResult> JWTlogin([FromBody] User loginUser)
+        public async Task<IActionResult> JWTlogin([FromBody] UserDTO loginUser)
         {
             var user = await _userManager.FindByNameAsync(loginUser.Username);
             if (user == null)
             {
-                ModelState.AddModelError(string.Empty, "Invalid Username");
-                return BadRequest();
+                ModelState.AddModelError(string.Empty, "Invalid Username or Password");
+                return BadRequest(ModelState);
             }
 
-            var passwordSignInResult = await _signInManager.CheckPasswordSignInAsync(user, loginUser.Password
-                                                                    , false);
+            var passwordSignInResult = await _signInManager.CheckPasswordSignInAsync(user, loginUser.Password, false);
             if (passwordSignInResult.Succeeded)
                 return new ObjectResult(GenerateToken(loginUser));
             return BadRequest("Invalid login");
         }
 
-        //[HttpPost("login"), AllowAnonymous]
-        //public async Task<ActionResult<Token>> Login(LoginUser login)
 
-        //{
-
-        //}
     }
 }
