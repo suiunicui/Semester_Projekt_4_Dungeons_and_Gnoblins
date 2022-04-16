@@ -23,7 +23,7 @@ public class BaseMapCreator : IMapCreator
     sw.WriteLine("-1,5,-1,-1");
     sw.WriteLine("-1,-1,8,3");
     sw.WriteLine("7,-1,9,-1");
-    sw.WriteLine("8,-1,-1,-1");
+    sw.WriteLine("8,-1,-1,10");
     sw.WriteLine("12,9,11,14");
     sw.WriteLine("10,-1,-1,-1");
     sw.WriteLine("3,-1,10,13");
