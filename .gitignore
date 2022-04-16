@@ -13,6 +13,12 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+SourceCode/FrontEnd GameLayout/GameEngineLibrary/bin
+SourceCode/FrontEnd GameLayout/GameEngineLibrary/obj
+SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/bin
+SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/obj
+
+
 # Mono auto generated files
 mono_crash.*
 

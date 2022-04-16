@@ -11,6 +11,12 @@
 
 using FrontEnd_GameLayout.ViewModels;
 using FrontEnd_GameLayout.Views;
+using Prism.Interactivity;
+using Prism.Ioc;
+using Prism.Mvvm;
+using Prism.Regions;
+using Prism.Regions.Behaviors;
+using Prism.Services.Dialogs;
 using System;
 using System.Diagnostics;
 using System.Windows;
