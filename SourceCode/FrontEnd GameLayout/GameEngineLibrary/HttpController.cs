@@ -35,7 +35,7 @@ namespace TestHttpClient
                 var _player = JsonSerializer.Deserialize<List<Player>>(responsBody, options);
                 foreach (var player in _player)
                 {
-                    Console.WriteLine("RoomId: {0}", player.RoomId);
+                    Console.WriteLine("RoomId: {0}", save.RoomId);
 
                 }
             }
