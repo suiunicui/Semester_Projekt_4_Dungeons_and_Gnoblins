@@ -46,7 +46,7 @@ namespace GameEngineLibrary
         //Gemmer spil
         public Savegame(Room curRoom)
         {
-        HttpController PostPlayer(Player player)
+        HttpController PostPlayer(Save RoomId)
         }
         
         //Loader gemt spil
