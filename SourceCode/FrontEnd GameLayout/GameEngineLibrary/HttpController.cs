@@ -55,7 +55,7 @@ namespace TestHttpClient
                 {
                     PropertyNamingPolicy = JsonNamingPolicy.CamelCase
                 };
-                var json = JsonSerializer.Serialize(RoomId, options);
+                var json = JsonSerializer.Serialize(Save.RoomId, options);
                 using (var stringContent = new StringContent(json, Encoding.UTF8, "application/json"))
                 {
                     request.Content = stringContent;
