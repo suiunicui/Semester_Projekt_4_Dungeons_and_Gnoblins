@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Immutable;
+using System.Reflection.Metadata.Ecma335;
 using System.Resources;
 using GameEngineLibrary.Interfaces;
 
@@ -79,29 +80,33 @@ public class Map : IMap
       {
         case "west":
           newRoomId = MapLayout[curRoom.RoomId].ElementAt(0);
+          if (!isValidRoom(newRoomId)) return curRoom;
           newRoom = Rooms[newRoomId];
           break;
         case "north":
           newRoomId = MapLayout[curRoom.RoomId].ElementAt(1);
+          if (!isValidRoom(newRoomId)) return curRoom;
           newRoom = Rooms[newRoomId];
           break;
         case "east":
           newRoomId = MapLayout[curRoom.RoomId].ElementAt(2);
+          if (!isValidRoom(newRoomId)) return curRoom;
           newRoom = Rooms[newRoomId];
           break;
         case "south":
           newRoomId = MapLayout[curRoom.RoomId].ElementAt(3);
+          if (!isValidRoom(newRoomId)) return curRoom;
           newRoom = Rooms[newRoomId];
           break;
         default:
           break;
       }
 
-      if (newRoom == null)
-      {
-        return curRoom;
-      }
-
       return newRoom;
     }
+
+  private bool isValidRoom(int roomId)
+  {
+    return roomId > 0;
+  }
 }
