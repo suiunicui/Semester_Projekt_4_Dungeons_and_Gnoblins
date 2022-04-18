@@ -61,7 +61,13 @@ public class Map : IMap
   private Room[] GenerateRooms(string LayoutFilePath)
   {
     int mapSize = CalculateMapSize(LayoutFilePath);
-    return new Room[mapSize];
+    Room[] rooms = new Room[mapSize];
+
+    for (int i = 0; i < mapSize; i++)
+    {
+      rooms[i] = new Room((uint) i);
+    }
+    return rooms;
   }
 
   public Room GetRoomByDirection(Room curRoom, string direction)
