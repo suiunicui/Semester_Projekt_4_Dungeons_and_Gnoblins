@@ -12,7 +12,7 @@ namespace TestHttpClient
     {
         private readonly string _url;
         private readonly HttpClient _httpClient;
-        private readonly List<Model> _player;
+        private readonly List<Save> _save;
 
         public HttpController(string url)
         {
@@ -20,7 +20,7 @@ namespace TestHttpClient
             
             _httpClient = new HttpClient();
             
-            _player = new List<Model>();
+            _save = new List<Save>();
         }
         public async void GetPlayer()
         {
@@ -32,10 +32,10 @@ namespace TestHttpClient
                     PropertyNameCaseInsensitive = true,
                 };
 
-                var _player = JsonSerializer.Deserialize<List<Player>>(responsBody, options);
-                foreach (var player in _player)
+                var _save = JsonSerializer.Deserialize<List<Save>>(responsBody, options);
+                foreach (var save in _save)
                 {
-                    Console.WriteLine("RoomId: {0}", player.RoomId);
+                    Console.WriteLine("RoomId: {0}", save.RoomId);
 
                 }
             }
@@ -47,7 +47,7 @@ namespace TestHttpClient
             }
         }
 
-        public async void PostPlayer(Player player)
+        public async void PostPlayer(Save save)
         {
             using (var request = new HttpRequestMessage(HttpMethod.Post, _url))
             {
@@ -55,7 +55,7 @@ namespace TestHttpClient
                 {
                     PropertyNamingPolicy = JsonNamingPolicy.CamelCase
                 };
-                var json = JsonSerializer.Serialize(player, options);
+                var json = JsonSerializer.Serialize(save, options);
                 using (var stringContent = new StringContent(json, Encoding.UTF8, "application/json"))
                 {
                     request.Content = stringContent;

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestHttpClient.Models
 {
-    public class Player
+    public class Save
     {
-
         public long RoomId { get; set; }
-
-
     }
 }

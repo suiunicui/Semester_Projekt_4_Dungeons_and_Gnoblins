@@ -7,7 +7,7 @@ namespace TestHttpClient
     {
         static void Main(string[] args)
         {
-            var player = new Player
+            var save = new Save
             {
       
                 RoomId = 2,
@@ -15,7 +15,7 @@ namespace TestHttpClient
 
             var httpController = new HttpController("https://localhost:7046/api/Players");
 
-            httpController.PostPlayer(player);
+            httpController.PostPlayer(save);
 
             httpController.GetPlayer();
 
