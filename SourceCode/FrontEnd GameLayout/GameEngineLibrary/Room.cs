@@ -13,8 +13,8 @@
 
         #region Properties
 
-        public uint RoomId { get; private set; }
-        public string Description { get; private set; } = "Hello, welcome to room ";
+        public uint RoomId { get; }
+        public string Description { get; }
         public Player? Player { get; private set; } = null;
         public Enemy? Enemy { get; private set; } = null;
         
