@@ -54,7 +54,6 @@ namespace GameEngineLibrary
         {
        
         HttpController GetPlayer();
-        //læs string fra func
         curRoom = save.Roomid;
         return curRoom;
         }
