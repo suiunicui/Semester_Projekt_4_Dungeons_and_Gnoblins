@@ -97,6 +97,11 @@ public class Map : IMap
           break;
       }
 
+      if (newRoom == null)
+      {
+        return curRoom;
+      }
+
       return newRoom;
     }
 }
