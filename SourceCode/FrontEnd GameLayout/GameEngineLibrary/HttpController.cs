@@ -47,7 +47,7 @@ namespace TestHttpClient
             }
         }
 
-        public async void PostPlayer(Player player)
+        public async void PostPlayer(Save RoomId)
         {
             using (var request = new HttpRequestMessage(HttpMethod.Post, _url))
             {
@@ -55,7 +55,7 @@ namespace TestHttpClient
                 {
                     PropertyNamingPolicy = JsonNamingPolicy.CamelCase
                 };
-                var json = JsonSerializer.Serialize(player, options);
+                var json = JsonSerializer.Serialize(RoomId, options);
                 using (var stringContent = new StringContent(json, Encoding.UTF8, "application/json"))
                 {
                     request.Content = stringContent;
