@@ -1,4 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Resources;
 using GameEngineLibrary;
 using NUnit.Framework;
 
@@ -8,18 +12,48 @@ namespace GameEngineLibraryTest;
 public class TestMap
 {
   private Map _uut;
+  private string filepath = Environment.CurrentDirectory + "\\Resource.resources";
 
   [SetUp]
   public void Setup()
   {
-    _uut = new Map(10);
+    ResourceWriter filecreator = new ResourceWriter(filepath);
+    filecreator.Close();
   }
 
   [Test]
-  public void MapCanReturnRoom()
+  public void MapConstructorGivesEmptyListByDefault()
   {
-    int RoomId = 0;
+    ResourceWriter rw = new ResourceWriter(filepath);
+    rw.Close();
 
-    Assert.That(_uut.GetRoom(RoomId), Is.Empty);
+    _uut = new Map();
+    
+    Assert.That(_uut.MapLayout, Is.Empty);
   }
+
+  [Test]
+  public void MapConstructorWorks()
+  {
+    ResourceWriter rw = new ResourceWriter(filepath);
+    rw.AddResource("room1","0,0,0,1");
+    rw.Close();
+
+    _uut = new Map();
+    LinkedList<int> rooms = new LinkedList<int>();
+    rooms.AddLast(0);
+    rooms.AddLast(0);
+    rooms.AddLast(0);
+    rooms.AddLast(1);
+
+    Assert.That(_uut.MapLayout[0], Is.EqualTo(rooms));
+  }
+
+  [TearDown]
+  public void TearDown()
+  {
+    GC.Collect();
+    File.Delete(filepath);
+  }
+
 }

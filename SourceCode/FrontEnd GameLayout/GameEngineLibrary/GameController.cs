@@ -10,12 +10,56 @@ namespace GameEngineLibrary
     public class GameController : Descriptor
     {
         public Map GameMap { get; set; }
-        public GameController() { }
+        public Room CurrentRoom { get; set; }
+        public Player CurrentPlayer { get; set; }
 
-
-        public string Move(string direction)
+        public GameController()
         {
-            return direction;
+          InitializeGame();
+        }
+        private void InitializeGame()
+        {
+          GameMap = new Map();
+          CurrentRoom = GameMap.Rooms[0];
+          CurrentPlayer = new Player();
+          GameMap.Rooms[0].AddPlayer(CurrentPlayer);
+        }
+
+        //Overfører spiller til nyt rum
+        public Log MovePlayer(Room curRoom, string direction)
+        {
+          Log log = new Log();
+          
+          log.RecordEvent("Previous Room", curRoom.RoomId.ToString());
+          
+          CurrentRoom.RemovePlayer();
+          CurrentRoom = GameMap.GetRoomByDirection(curRoom, direction);
+          CurrentRoom.AddPlayer(CurrentPlayer);
+
+          log.RecordEvent("New Room", curRoom.RoomId.ToString());
+          log.RecordEvent("New Room Description", CurrentRoom.Description);
+         
+          return log;
+        }
+        //Gemmer spil
+        public Savegame(Room curRoom)
+        {
+        HttpController PostPlayer(Player player)
+        }
+        
+        //Loader gemt spil
+        public LoadGame()
+        {
+        HttpController GetPlayer()
+        //læs string fra func
+        
+        }
+
+        //Fjerner spiller fra spillet og viser death screen.
+        public void PlayerDead(Player player)
+        {
+          CurrentRoom.RemovePlayer();
+        //Display Death screen
         }
     }
 }
