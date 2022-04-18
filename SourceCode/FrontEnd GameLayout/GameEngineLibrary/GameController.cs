@@ -52,10 +52,11 @@ namespace GameEngineLibrary
         //Loader gemt spil
         public LoadGame()
         {
-        save.Roomid = Room curRoom;
+       
         HttpController GetPlayer();
         //læs string fra func
-        
+        curRoom = save.Roomid;
+        return curRoom;
         }
 
         //Fjerner spiller fra spillet og viser death screen.
