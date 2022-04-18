@@ -17,7 +17,7 @@ namespace FrontEnd_GameLayout.Views
     /// <summary>
     /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class MainMenu : Window
+    public partial class MainMenu : UserControl
     {
         public MainMenu()
         {

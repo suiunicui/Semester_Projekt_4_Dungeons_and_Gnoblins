@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameEngineLibrary.MapCreator;
+using GameEngineLibrary.MapImpl;
 
 namespace GameEngineLibrary
 {
@@ -19,7 +21,7 @@ namespace GameEngineLibrary
         }
         private void InitializeGame()
         {
-          GameMap = new Map();
+          GameMap = new Map(new BaseMapCreator());
           CurrentRoom = GameMap.Rooms[0];
           CurrentPlayer = new Player();
           GameMap.Rooms[0].AddPlayer(CurrentPlayer);
