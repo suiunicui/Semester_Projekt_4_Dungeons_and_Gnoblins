@@ -52,7 +52,8 @@ namespace GameEngineLibrary
         //Loader gemt spil
         public LoadGame()
         {
-        HttpController GetPlayer()
+        save.Roomid = Room curRoom;
+        HttpController GetPlayer();
         //læs string fra func
         
         }
