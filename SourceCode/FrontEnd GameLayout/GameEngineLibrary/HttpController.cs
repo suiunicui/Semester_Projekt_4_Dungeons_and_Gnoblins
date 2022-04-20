@@ -10,34 +10,33 @@ namespace TestHttpClient
 {
     internal class HttpController
     {
-        private readonly string _url;
+        public string _urlPostSave;
+        public string _urlGetSave;
         private readonly HttpClient _httpClient;
-        private readonly List<Save> _save;
+        private readonly Save _save;
 
-        public HttpController(string url)
+        public HttpController()
         {
-            _url = url;
-            
+
             _httpClient = new HttpClient();
             
-            _save = new List<Save>();
         }
-        public async void GetPlayer()
+        public async  Task<Save>GetSave(int id)
         {
+            _urlGetSave = $"https://localhost:7046/api/Save?id={id}";
             try
             {
-                string responsBody = await _httpClient.GetStringAsync(_url);
+                string responsBody = await _httpClient.GetStringAsync(_urlGetSave);
                 var options = new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true,
+
                 };
 
-                var _save = JsonSerializer.Deserialize<List<Save>>(responsBody, options);
-                foreach (var save in _save)
-                {
-                    Console.WriteLine("RoomId: {0}", save.RoomId);
+                var _save = JsonSerializer.Deserialize<Save>(responsBody, options);
+          
+                Console.WriteLine("RoomId: {0}", _save.RoomId);
 
-                }
             }
             catch (HttpRequestException e)
             {
@@ -45,11 +44,15 @@ namespace TestHttpClient
                 Console.WriteLine("Message: {0}", e.Message);
                 throw;
             }
+
+            return _save;
         }
 
-        public async void PostPlayer(Save save)
+        public async void PostSave(Save save)
         {
-            using (var request = new HttpRequestMessage(HttpMethod.Post, _url))
+            _urlPostSave = "https://localhost:7046/api/Save";
+
+            using (var request = new HttpRequestMessage(HttpMethod.Post, _urlPostSave))
             {
                 var options = new JsonSerializerOptions
                 {
