@@ -23,11 +23,11 @@ namespace DataBase.Models
 
             modelBuilder.Entity<Save>()
                 .HasData(
-                new Save { RoomID = 14, ID = 2 },
-                new Save { RoomID = 12, ID = 1 },
-                new Save { RoomID = 3, ID = 3 },
-                new Save { RoomID = 4, ID = 4 },
-                new Save { RoomID = 5, ID = 5 }
+                new Save { RoomID = 14, ID = 2, SaveName = "LuyenGame1" },
+                new Save { RoomID = 12, ID = 1, SaveName = "AndersGame2" },
+                new Save { RoomID = 3, ID = 3, SaveName = "MortenGame" },
+                new Save { RoomID = 4, ID = 4 , SaveName = "ODGame"},
+                new Save { RoomID = 5, ID = 5, SaveName = "SuneGame" }
                 );
         }
 
