@@ -59,7 +59,7 @@ namespace GameEngineLibrary
             Save game = new Save();
             newSave.GetSave();
             curRoom.Roomid = Game.Roomid;
-            return curRoom.Roomid;
+            CurrentRoom.AddPlayer(CurrentPlayer);
 
         //Fjerner spiller fra spillet og viser death screen.
         public void PlayerDead(Player player)
