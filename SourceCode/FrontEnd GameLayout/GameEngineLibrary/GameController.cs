@@ -49,7 +49,7 @@ namespace GameEngineLibrary
             HttpController newSave = new HttpController();
             Save Game = new Save();
             Game.RoomId = curRoom.RoomId;
-            newSave.PostPlayer(Game);
+            newSave.PostSave(Game);
         }
         
         //Loader gemt spil
@@ -57,7 +57,7 @@ namespace GameEngineLibrary
         {
             HttpController LoadSave = new HttpController();
             Save game = new Save();
-            newSave.GetPlayer();
+            newSave.GetSave();
             curRoom.Roomid = Game.Roomid;
             return curRoom.Roomid;
 
