@@ -46,17 +46,17 @@ namespace GameEngineLibrary
         //Gemmer spil
         public Savegame(Room curRoom)
         {
-        HttpController PostPlayer(Save RoomId)
+            HttpController newSave = new HttpController();
+            Save Game = new Save();
+            Game.RoomId = curRoom.RoomId;
+            newSave.PostPlayer(Game);
         }
         
         //Loader gemt spil
         public LoadGame()
         {
-       
-        HttpController GetPlayer();
-        curRoom = save.Roomid;
-        return curRoom;
-        }
+            HttpController LoadSave = new HttpController();
+            Save 
 
         //Fjerner spiller fra spillet og viser death screen.
         public void PlayerDead(Player player)
