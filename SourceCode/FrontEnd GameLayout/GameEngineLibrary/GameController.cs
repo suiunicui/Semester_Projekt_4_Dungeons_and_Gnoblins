@@ -56,7 +56,10 @@ namespace GameEngineLibrary
         public LoadGame()
         {
             HttpController LoadSave = new HttpController();
-            Save 
+            Save game = new Save();
+            newSave.GetPlayer();
+            curRoom.Roomid = Game.Roomid;
+            return curRoom.Roomid;
 
         //Fjerner spiller fra spillet og viser death screen.
         public void PlayerDead(Player player)
