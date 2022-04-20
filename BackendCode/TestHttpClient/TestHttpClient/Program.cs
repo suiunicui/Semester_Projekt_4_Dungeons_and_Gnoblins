@@ -9,15 +9,14 @@ namespace TestHttpClient
         {
             var save = new Save
             {
-      
-                RoomId = 2,
+                RoomId = 24,
             };
 
-            var httpController = new HttpController("https://localhost:7046/api/Players");
+            var httpController = new HttpController();
 
-            httpController.PostPlayer(save);
+            //httpController.PostPlayer(save);
 
-            httpController.GetPlayer();
+            httpController.GetPlayer(1);
 
             while (true)
             {

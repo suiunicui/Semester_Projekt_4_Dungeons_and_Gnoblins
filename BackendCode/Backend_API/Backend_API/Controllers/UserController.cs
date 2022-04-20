@@ -23,8 +23,8 @@ namespace Backend_API.Controllers
     [Authorize]
     public class UserController : Controller
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        //private readonly SignInManager<IdentityUser> _signInManager;
+        //private readonly UserManager<IdentityUser> _userManager;
         private readonly DaG_db _context;
 
         const int BcryptWorkfactor = 11;
@@ -32,6 +32,9 @@ namespace Backend_API.Controllers
 
         public UserController(DaG_db context)
         {
+            //_signInManager = signInManager;
+            //_userManager = userManager;
+
             _context = context;
         }
 
@@ -118,15 +121,15 @@ namespace Backend_API.Controllers
         [HttpPost("jwtlogin"), AllowAnonymous]
         public async Task<IActionResult> JWTlogin([FromBody] UserDTO loginUser)
         {
-            var user = await _userManager.FindByNameAsync(loginUser.Username);
+            var user = await _context.Users.Where(u => u.Username == loginUser.Username).FirstOrDefaultAsync();
             if (user == null)
             {
                 ModelState.AddModelError(string.Empty, "Invalid Username or Password");
                 return BadRequest(ModelState);
             }
 
-            var passwordSignInResult = await _signInManager.CheckPasswordSignInAsync(user, loginUser.Password, false);
-            if (passwordSignInResult.Succeeded)
+            var isValid = BCrypt.Net.BCrypt.Verify(loginUser.Password, user.Password);
+            if (isValid == true)
                 return new ObjectResult(GenerateToken(loginUser));
             return BadRequest("Invalid login");
         }
