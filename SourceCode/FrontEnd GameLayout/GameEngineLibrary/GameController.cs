@@ -57,7 +57,7 @@ namespace GameEngineLibrary
         {
             HttpController LoadSave = new HttpController();
             Save game = new Save();
-            newSave.GetSave();
+            newSave.GetSave(Save game);
             curRoom.Roomid = Game.Roomid;
             CurrentRoom.AddPlayer(CurrentPlayer);
 
