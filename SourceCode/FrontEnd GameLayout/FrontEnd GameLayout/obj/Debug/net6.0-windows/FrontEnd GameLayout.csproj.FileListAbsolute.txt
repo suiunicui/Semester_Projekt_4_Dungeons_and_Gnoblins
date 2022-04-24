@@ -68,3 +68,5 @@ C:\Users\Ander\OneDrive\Software teknologi\4. Semester\PRJ4\-Semester-Projekt-4-
 C:\Users\Ander\OneDrive\Software teknologi\4. Semester\PRJ4\-Semester-Projekt-4---Dungeons-and-Gnoblins\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.pdb
 C:\Users\Ander\OneDrive\Software teknologi\4. Semester\PRJ4\-Semester-Projekt-4---Dungeons-and-Gnoblins\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\FrontEnd GameLayout.genruntimeconfig.cache
 C:\Users\Ander\OneDrive\Software teknologi\4. Semester\PRJ4\-Semester-Projekt-4---Dungeons-and-Gnoblins\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\ref\FrontEnd GameLayout.dll
+C:\Users\Ander\OneDrive\Software teknologi\4. Semester\PRJ4\-Semester-Projekt-4---Dungeons-and-Gnoblins\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\Views\LoadMenu.g.cs
+C:\Users\Ander\OneDrive\Software teknologi\4. Semester\PRJ4\-Semester-Projekt-4---Dungeons-and-Gnoblins\SourceCode\FrontEnd GameLayout\FrontEnd GameLayout\obj\Debug\net6.0-windows\Views\LoadMenu.baml
