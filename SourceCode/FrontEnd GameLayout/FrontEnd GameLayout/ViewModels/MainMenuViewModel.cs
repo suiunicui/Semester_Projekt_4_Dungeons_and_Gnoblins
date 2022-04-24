@@ -23,6 +23,19 @@ namespace FrontEnd_GameLayout.ViewModels
                 }));
             }
         }
+
+        private ICommand _gameLoad;
+
+        public ICommand LoadMenu
+        {
+            get
+            {
+                return _gameLoad ?? (_gameLoad = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToLoadMenu", "");
+                }));
+            }
+        }
     }
 }
 

@@ -59,16 +59,23 @@ namespace FrontEnd_GameLayout.ViewModels
             ChangeViewModel(PageViewModels[1]);
         }
 
+        private void OnGoToLoadMenu(object obj)
+        {
+            ChangeViewModel(PageViewModels[2]);
+        }
+
         public MainWindowViewModel()
         {
             // Add available pages and set page
             PageViewModels.Add(new MainMenuViewModel());
             PageViewModels.Add(new RoomViewModel());
+            PageViewModels.Add(new LoadMenuViewModel());
             game.MovePlayer(game.CurrentRoom, "South");
             CurrentPageViewModel = PageViewModels[0];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
             Mediator.Subscribe("GameStart", OnGameStart);
+            Mediator.Subscribe("GoToLoadMenu", OnGoToLoadMenu);
         }
     }
 }
