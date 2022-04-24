@@ -70,6 +70,7 @@ namespace FrontEnd_GameLayout.ViewModels
             PageViewModels.Add(new MainMenuViewModel());
             PageViewModels.Add(new RoomViewModel());
             PageViewModels.Add(new LoadMenuViewModel());
+
             game.MovePlayer(game.CurrentRoom, "South");
             CurrentPageViewModel = PageViewModels[0];
 

@@ -9,8 +9,21 @@ using FrontEnd_GameLayout.Helper_classes;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
-    public class LoadMenuViewModel : BaseViewModel, IPageViewModel
+    public class LoadMenuViewModel :BaseViewModel, IPageViewModel
     {
-        
+
+        private ICommand _mainMenu;
+
+        public ICommand MainMenu
+        {
+            get
+            {
+                return _mainMenu ?? (_mainMenu = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToMainMenu", "");
+                }));
+            }
+        }
+
     }
 }
