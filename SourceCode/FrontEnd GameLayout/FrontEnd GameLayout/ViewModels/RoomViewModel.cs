@@ -17,7 +17,7 @@ namespace FrontEnd_GameLayout.ViewModels
     public class RoomViewModel : BaseViewModel, IPageViewModel
     {
 
-        GameController game = new GameController();
+        GameController game = GameController.Instance;
 
 
     public RoomViewModel()
@@ -28,8 +28,6 @@ namespace FrontEnd_GameLayout.ViewModels
 
         #region Properties
 
-
-        public int i = 0;
 
         public string Name
         {
@@ -106,7 +104,8 @@ namespace FrontEnd_GameLayout.ViewModels
             Log = game.MovePlayer(game.CurrentRoom, direction);
             //Description = Log.GetEventRecord("New Room Description");
             Description = game.CurrentRoom.Description;
-            MovePlayerOnMap();
+            var Maroom = new Views.Room();
+            MovePlayerOnMap(Maroom);
         }
         bool CanExecuteMoveCommand(string direction)
         { 
@@ -114,8 +113,9 @@ namespace FrontEnd_GameLayout.ViewModels
             return true;
         }
 
-        void MovePlayerOnMap()
+        void MovePlayerOnMap(Views.Room Room = null)
         {
+
             switch (game.CurrentRoom.RoomId + 1)
             {
                 case 1:

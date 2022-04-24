@@ -15,10 +15,25 @@ namespace GameEngineLibrary
         public Room CurrentRoom { get; set; }
         public Player CurrentPlayer { get; set; }
 
-        public GameController()
+        //Making the GameController a Singleton
+        private static volatile GameController instance = null;
+        private GameController()
         {
           InitializeGame();
         }
+        //Singleton logic
+        public static GameController Instance 
+        { 
+            get 
+            { 
+                if (instance == null)
+                {
+                    instance = new GameController();
+                }
+                return instance; 
+            } 
+        }
+
         private void InitializeGame()
         {
           GameMap = new Map(new BaseMapCreator());

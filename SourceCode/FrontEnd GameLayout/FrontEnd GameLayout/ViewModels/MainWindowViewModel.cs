@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.ComponentModel;
 using FrontEnd_GameLayout.Helper_classes;
+using GameEngineLibrary;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
+        GameController game = GameController.Instance;
         private IPageViewModel _currentPageViewModel;
         private List<IPageViewModel> _pageViewModels;
 
@@ -52,7 +54,7 @@ namespace FrontEnd_GameLayout.ViewModels
             ChangeViewModel(PageViewModels[0]);
         }
 
-        private void OnGoToRoomScreen(object obj)
+        private void OnGameStart(object obj)
         {
             ChangeViewModel(PageViewModels[1]);
         }
@@ -62,11 +64,11 @@ namespace FrontEnd_GameLayout.ViewModels
             // Add available pages and set page
             PageViewModels.Add(new MainMenuViewModel());
             PageViewModels.Add(new RoomViewModel());
-
+            game.MovePlayer(game.CurrentRoom, "South");
             CurrentPageViewModel = PageViewModels[0];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
-            Mediator.Subscribe("GoToRoomScreen", OnGoToRoomScreen);
+            Mediator.Subscribe("GameStart", OnGameStart);
         }
     }
 }
