@@ -64,7 +64,6 @@ namespace FrontEnd_GameLayout.ViewModels
             // Add available pages and set page
             PageViewModels.Add(new MainMenuViewModel());
             PageViewModels.Add(new RoomViewModel());
-            game.MovePlayer(game.CurrentRoom, "South");
             CurrentPageViewModel = PageViewModels[0];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
