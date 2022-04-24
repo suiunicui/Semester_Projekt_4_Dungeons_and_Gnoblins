@@ -11,6 +11,32 @@ namespace FrontEnd_GameLayout.ViewModels
 {
     public class LoadMenuViewModel :BaseViewModel, IPageViewModel
     {
+        public LoadMenuViewModel()
+        {
+            SavedGames.Add("testGame1");
+            SavedGames.Add("testGame2");
+            
+        }
+
+        #region Properties
+
+        private List<String> _savedGames = new List<string>();
+
+        public List<String> SavedGames {
+            get { return _savedGames; }
+            set
+            {
+                if (value != _savedGames)
+                {
+                    _savedGames = value;
+                    OnPropertyChanged("SavedGames");
+                }
+            }
+        }
+
+        #endregion
+
+        #region Commands
 
         private ICommand _mainMenu;
 
@@ -25,5 +51,6 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        #endregion
     }
 }

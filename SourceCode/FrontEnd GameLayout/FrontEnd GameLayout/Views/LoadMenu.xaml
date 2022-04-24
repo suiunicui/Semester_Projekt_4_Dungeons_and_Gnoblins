@@ -18,8 +18,8 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="20*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -32,11 +32,19 @@
                 Content="Load" Grid.Row="5"/>
         
         <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
-                Content="Back" Grid.Row="6"/>
+                Content="Back" Command="{Binding MainMenu}" Grid.Row="6"/>
         
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Load Game" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
 
-        <ListView Grid.Column="1" Grid.Row="4" Background="{StaticResource backgroundColor}" Foreground="{StaticResource textColor}"></ListView>
+        <ListBox Grid.Column="1" Grid.Row="4" Style="{StaticResource listStyle}" ItemsSource="{Binding SavedGames}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </UserControl>

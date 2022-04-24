@@ -49,5 +49,12 @@
             <Setter Property="FontSize" Value="45"/>
             <Setter Property="FontStyle" Value="Italic"/>
         </Style>
+        <Style x:Key="listStyle" TargetType="ListBox">
+            <Setter Property="Background" Value="{StaticResource backgroundColor}"/>
+            <Setter Property="Foreground" Value="{StaticResource textColor}"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
     </Application.Resources>
 </Application>
