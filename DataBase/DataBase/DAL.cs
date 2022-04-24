@@ -35,5 +35,20 @@ namespace DataBase
             return null;
 
         }
+
+        public static RoomDescription GetRoomDescription(int RDID)
+        {
+            var Context = new MyDbContext();
+
+            var room = Context.RoomDescriptions.Where(i => i.RoomDescriptionID == RDID).First();
+
+            if(room == null)
+            {
+                return null;
+            }
+
+            return room;
+
+        }
     }
 }
