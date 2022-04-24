@@ -13,16 +13,14 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="14*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -30,13 +28,15 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="1" Grid.Row="4" Style="{StaticResource buttonStyle}"
-                Content="New Game" Command="{Binding GameStart}"/>
+        <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
+                Content="Load" Grid.Row="5"/>
+        
+        <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
+                Content="Back" Grid.Row="6"/>
+        
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Load Game" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
 
-        <Button Grid.Column="1" Grid.Row="6" Style="{StaticResource buttonStyle}"
-                Content="Load Game" Command="{Binding LoadMenu}"/>
-        <Button Grid.Column="1" Grid.Row="8" Style="{StaticResource buttonStyle}"
-                Content="Exit Game"/>
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}"/>
+        <ListView Grid.Column="1" Grid.Row="4" Background="{StaticResource backgroundColor}" Foreground="{StaticResource textColor}"></ListView>
     </Grid>
 </UserControl>
