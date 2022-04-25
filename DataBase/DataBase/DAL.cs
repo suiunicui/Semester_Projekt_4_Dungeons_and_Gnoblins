@@ -36,6 +36,17 @@ namespace DataBase
 
         }
 
+        public static List<Save> GetAllSaves()
+        {
+            var Context = new MyDbContext();
+
+            var rooms = Context.Saves.ToList();
+
+            return rooms;
+
+        }
+
+
         public static RoomDescription GetRoomDescription(int RDID)
         {
             var Context = new MyDbContext();
