@@ -22,7 +22,7 @@ namespace TestHttpClient
             _httpClient = new HttpClient();
             
         }
-        public async void GetPlayer(int id)
+        public async  Task<Save>GetSave(int id)
         {
             _urlGetSave = $"https://localhost:7046/api/Save?id={id}";
             try
@@ -45,9 +45,11 @@ namespace TestHttpClient
                 Console.WriteLine("Message: {0}", e.Message);
                 throw;
             }
+
+            return _save;
         }
 
-        public async void PostPlayer(Save save)
+        public async void PostSave(Save save)
         {
             _urlPostSave = "https://localhost:7046/api/Save";
 
