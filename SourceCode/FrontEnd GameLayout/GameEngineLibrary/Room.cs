@@ -1,4 +1,6 @@
-﻿namespace GameEngineLibrary
+﻿using GameEngineLibrary.Actors;
+
+namespace GameEngineLibrary
 {
     public class Room : Descriptor
     {
@@ -6,7 +8,7 @@
         public Room(uint id) 
         {
             RoomId = id;
-            Description = Description + (id +1 );
+            Description = Description + (id + 1);
         }
 
         public Room() { }
