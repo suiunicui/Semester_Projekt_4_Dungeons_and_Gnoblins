@@ -35,9 +35,9 @@
                 Content="Back" Command="{Binding MainMenu}" Grid.Row="6"/>
         
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
-        <TextBlock Grid.Column="1" Grid.Row="3" Text="Load Game" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Select Game" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
 
-        <ListBox Grid.Column="1" Grid.Row="4" Style="{StaticResource listStyle}" ItemsSource="{Binding SavedGames}">
+        <ListBox Grid.Column="1" Grid.Row="4" Style="{StaticResource listStyle}" ItemsSource="{Binding SavedGames}" SelectedItem="{Binding SelectedSave}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">

@@ -34,6 +34,23 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        
+
+        private String _selectedSave;
+
+        public String SelectedSave
+        {
+            get { return _selectedSave; }
+            set
+            {
+                if (value != _selectedSave)
+                {
+                    _selectedSave = value;
+                    OnPropertyChanged("SelectedSave");
+                }
+            }
+        }
+
         #endregion
 
         #region Commands
