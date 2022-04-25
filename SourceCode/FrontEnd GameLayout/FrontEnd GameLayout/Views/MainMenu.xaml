@@ -31,10 +31,10 @@
         </Grid.ColumnDefinitions>
 
         <Button Grid.Column="1" Grid.Row="4" Style="{StaticResource buttonStyle}"
-                Content="New Game" Command="{Binding GoToRoomScreen}"/>
+                Content="New Game" Command="{Binding GameStart}"/>
 
         <Button Grid.Column="1" Grid.Row="6" Style="{StaticResource buttonStyle}"
-                Content="Load Game"/>
+                Content="Load Game" Command="{Binding LoadMenu}"/>
         <Button Grid.Column="1" Grid.Row="8" Style="{StaticResource buttonStyle}"
                 Content="Exit Game"/>
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}"/>

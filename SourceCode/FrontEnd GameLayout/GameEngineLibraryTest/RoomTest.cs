@@ -33,7 +33,7 @@ namespace GameEngineLibraryTest
         [Test]
         public void RoomHasDescription()
         {
-            _uut.Description = "This is a Room";
+            //_uut.Description = "This is a Room";
             Assert.That(_uut.Description, Is.EqualTo("This is a Room"));
         }
 

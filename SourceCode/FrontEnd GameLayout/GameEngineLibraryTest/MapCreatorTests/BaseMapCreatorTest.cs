@@ -14,7 +14,8 @@ public class BaseMapCreatorTest
   [SetUp]
   public void Setup()
   {
-    _uut = new BaseMapCreator(@"TestMapFile");
+    //_uut = new BaseMapCreator(@"TestMapFile");
+    _uut = new BaseMapCreator();
   }
 
   [Test]

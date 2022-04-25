@@ -11,15 +11,28 @@ namespace FrontEnd_GameLayout.ViewModels
 {
     public class MainMenuViewModel :BaseViewModel, IPageViewModel
     {
-        private ICommand _goToRoomScreen;
+        private ICommand _gameStart;
 
-        public ICommand GoToRoomScreen
+        public ICommand GameStart
         {
             get
             {
-                return _goToRoomScreen ?? (_goToRoomScreen = new RelayCommand(x =>
+                return _gameStart ?? (_gameStart = new RelayCommand(x =>
                 {
-                    Mediator.Notify("GoToRoomScreen", "");
+                    Mediator.Notify("GameStart","");
+                }));
+            }
+        }
+
+        private ICommand _gameLoad;
+
+        public ICommand LoadMenu
+        {
+            get
+            {
+                return _gameLoad ?? (_gameLoad = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToLoadMenu", "");
                 }));
             }
         }

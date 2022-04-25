@@ -50,93 +50,93 @@
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_2" Grid.Row="3" Grid.Column="1">
+                <Canvas x:Name="Room_2" Grid.Row="3" Grid.Column="1" Visibility="{Binding Room_2_Visibility}">
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_3" Grid.Row="3" Grid.Column="2">
+                <Canvas x:Name="Room_3" Grid.Row="3" Grid.Column="2" Visibility="{Binding Room_3_Visibility}">
                     <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0"  Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_4" Grid.Row="2" Grid.Column="2">
+                <Canvas x:Name="Room_4" Grid.Row="2" Grid.Column="2" Visibility="{Binding Room_4_Visibility}">
                     <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_5" Grid.Row="4" Grid.Column="2">
+                <Canvas x:Name="Room_5" Grid.Row="4" Grid.Column="2" Visibility="{Binding Room_5_Visibility}">
                     <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0" Panel.ZIndex="1"/>                    
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_6" Grid.Row="4" Grid.Column="1">
+                <Canvas x:Name="Room_6" Grid.Row="4" Grid.Column="1" Visibility="{Binding Room_6_Visibility}">
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_7" Grid.Row="5" Grid.Column="1">
+                <Canvas x:Name="Room_7" Grid.Row="5" Grid.Column="1" Visibility="{Binding Room_7_Visibility}">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0"  Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_8" Grid.Row="1" Grid.Column="2">                    
+                <Canvas x:Name="Room_8" Grid.Row="1" Grid.Column="2" Visibility="{Binding Room_8_Visibility}">                    
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_9" Grid.Row="1" Grid.Column="3">
+                <Canvas x:Name="Room_9" Grid.Row="1" Grid.Column="3" Visibility="{Binding Room_9_Visibility}">
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0" Panel.ZIndex="1"/>
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_10" Grid.Row="1" Grid.Column="4">
+                <Canvas x:Name="Room_10" Grid.Row="1" Grid.Column="4" Visibility="{Binding Room_10_Visibility}">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0" Panel.ZIndex="1"/>
                 </Canvas>
-                <Canvas x:Name="Room_11" Grid.Row="2" Grid.Column="4">
+                <Canvas x:Name="Room_11" Grid.Row="2" Grid.Column="4" Visibility="{Binding Room_11_Visibility}">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
+                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0" Panel.ZIndex="1"/>
+                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0" Panel.ZIndex="1"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
+                </Canvas>
+                <Canvas x:Name="Room_12" Grid.Row="2" Grid.Column="5" Visibility="{Binding Room_12_Visibility}">
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
+                </Canvas>
+                <Canvas x:Name="Room_13" Grid.Row="2" Grid.Column="3" Visibility="{Binding Room_13_Visibility}">
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
+                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0" Panel.ZIndex="1"/>
+                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
+                </Canvas>
+                <Canvas x:Name="Room_14" Grid.Row="3" Grid.Column="3" Visibility="{Binding Room_14_Visibility}">
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
+                </Canvas>
+                <Canvas x:Name="Room_15" Grid.Row="3" Grid.Column="4" Visibility="{Binding Room_15_Visibility}">
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
+                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
+                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0" Panel.ZIndex="1"/>
+                </Canvas>
+                <Canvas x:Name="Room_16" Grid.Row="4" Grid.Column="4" Visibility="{Binding Room_16_Visibility}">
+                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                     <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
                 </Canvas>
-                <Canvas x:Name="Room_12" Grid.Row="2" Grid.Column="5">
+                <Canvas x:Name="Room_17" Grid.Row="4" Grid.Column="5" Visibility="{Binding Room_17_Visibility}">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
-                <Canvas x:Name="Room_13" Grid.Row="2" Grid.Column="3">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
-                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
-                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0" Panel.ZIndex="1"/>
-                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
-                </Canvas>
-                <Canvas x:Name="Room_14" Grid.Row="3" Grid.Column="3">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
-                </Canvas>
-                <Canvas x:Name="Room_15" Grid.Row="3" Grid.Column="4">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
-                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
-                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0" Panel.ZIndex="1"/>
-                </Canvas>
-                <Canvas x:Name="Room_16" Grid.Row="4" Grid.Column="4">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
-                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0" Panel.ZIndex="1"/>
-                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0" Panel.ZIndex="1"/>
-                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
-                </Canvas>
-                <Canvas x:Name="Room_17" Grid.Row="4" Grid.Column="5">
-                    <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
-                </Canvas>
-                <Canvas x:Name="Room_18" Grid.Row="4" Grid.Column="3">
+                <Canvas x:Name="Room_18" Grid.Row="4" Grid.Column="3" Visibility="{Binding Room_18_Visibility}">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="45,60,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="30,45,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
                 </Canvas>
-                <Canvas x:Name="Room_19" Grid.Row="5" Grid.Column="3">
+                <Canvas x:Name="Room_19" Grid.Row="5" Grid.Column="3" Visibility="{Binding Room_19_Visibility}">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                     <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="45,30,0,0" Panel.ZIndex="1"/>
                     <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="60,45,0,0" Panel.ZIndex="1"/>
                 </Canvas>
-                <Canvas x:Name="Room_20" Grid.Row="5" Grid.Column="4">
+                <Canvas x:Name="Room_20" Grid.Row="5" Grid.Column="4" Visibility="{Binding Room_20_Visibility}">
                     <Rectangle Width="30" Height="30" Fill="Ivory" Stroke="Black" Margin="30,30,0,0" Panel.ZIndex="2"/>
                 </Canvas>
                 <Ellipse Uid="1" Name="Player_1"  Fill="Red" Grid.Row="{Binding PlayerRow}" Grid.Column="{Binding PlayerColumn}" Width="10" Height="10" Panel.ZIndex="3" Margin="0,0,0,0" />
