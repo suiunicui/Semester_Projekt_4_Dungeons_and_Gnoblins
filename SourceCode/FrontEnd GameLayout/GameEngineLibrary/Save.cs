@@ -8,6 +8,9 @@ namespace TestHttpClient.Models
 {
     public class Save
     {
+
         public long RoomId { get; set; }
+
+
     }
 }

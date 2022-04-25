@@ -9,7 +9,7 @@ namespace DataBase
 {
     public class DAL
     {
-        public void SaveGame(Save save)
+        public static void SaveGame(Save save)
         {
             var context = new MyDbContext();
 
@@ -20,11 +20,11 @@ namespace DataBase
         }
 
 
-        public Save GetSaveByID(int SaveId)
+        public static Save GetSaveByID(int SaveId)
         {
             var Context = new MyDbContext();
 
-            var saves = Context.Saves.ToList();
+            var saves = Context.Saves.Where(s => s.ID == SaveId);
 
             foreach (var save in saves)
             {
@@ -33,6 +33,32 @@ namespace DataBase
             }
 
             return null;
+
+        }
+
+        public static List<Save> GetAllSaves()
+        {
+            var Context = new MyDbContext();
+
+            var rooms = Context.Saves.ToList();
+
+            return rooms;
+
+        }
+
+
+        public static RoomDescription GetRoomDescription(int RDID)
+        {
+            var Context = new MyDbContext();
+
+            var room = Context.RoomDescriptions.Where(i => i.RoomDescriptionID == RDID).First();
+
+            if(room == null)
+            {
+                return null;
+            }
+
+            return room;
 
         }
     }
