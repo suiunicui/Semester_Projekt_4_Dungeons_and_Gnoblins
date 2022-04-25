@@ -9,12 +9,7 @@ namespace DataBase.Models
 {
     public class MyDbContext : DbContext
     {
-        protected override void OnConfiguring(
-            DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseInMemoryDatabase("ProjektDatabase");
-        }
-
+   
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Save>()
