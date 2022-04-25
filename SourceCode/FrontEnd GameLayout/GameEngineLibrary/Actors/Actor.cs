@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameEngineLibrary.Actors
+﻿namespace GameEngineLibrary.Actors
 {
     public abstract class Actor
     {
