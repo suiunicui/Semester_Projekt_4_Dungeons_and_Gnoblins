@@ -51,7 +51,7 @@ namespace GameEngineLibrary
             Game.RoomId = curRoom.RoomId;
             newSave.PostSave(Game);
         }
-        
+
         //Loader gemt spil
         public LoadGame()
         {
@@ -60,6 +60,7 @@ namespace GameEngineLibrary
             newSave.GetSave(Save game);
             curRoom.Roomid = Game.Roomid;
             CurrentRoom.AddPlayer(CurrentPlayer);
+        }
 
         //Fjerner spiller fra spillet og viser death screen.
         public void PlayerDead(Player player)
