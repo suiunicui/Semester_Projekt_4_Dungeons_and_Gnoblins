@@ -57,7 +57,7 @@ namespace Backend_API.db
 
         public DbSet<Save> Saves { get; set; }
 
-        public DbSet<User> Users { get; set; }
+        //public DbSet<User> Users { get; set; }
 
     }
 }
