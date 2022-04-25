@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Backend_API.Models;
+using Backend_API.Models.DTO;
 
 
 namespace TestHttpClient
@@ -14,7 +14,7 @@ namespace TestHttpClient
         public string _urlPostSave;
         public string _urlGetSave;
         private readonly HttpClient _httpClient;
-        private readonly Save _save;
+        private SaveDTO _save;
 
         public HttpController()
         {
@@ -22,7 +22,7 @@ namespace TestHttpClient
             _httpClient = new HttpClient();
             
         }
-        public async  Task<Save>GetSave(int id)
+        public async  Task<SaveDTO>GetSave(int id)
         {
             _urlGetSave = $"https://localhost:7046/api/Save?id={id}";
             try
@@ -34,9 +34,9 @@ namespace TestHttpClient
 
                 };
 
-                var _save = JsonSerializer.Deserialize<Save>(responsBody, options);
+                _save = JsonSerializer.Deserialize<SaveDTO>(responsBody, options);
           
-                Console.WriteLine("RoomId: {0}", _save.RoomID);
+                Console.WriteLine("RoomId: {0}", _save.RoomId);
 
             }
             catch (HttpRequestException e)
@@ -49,9 +49,9 @@ namespace TestHttpClient
             return _save;
         }
 
-        public async Task<List<Save>> GetListOfSave()
+        public async Task<List<SaveDTO>> GetListOfSave()
         {
-            List<Save> _save;
+            List<SaveDTO> _save;
             _urlGetSave = $"https://localhost:7046/api/Save";
             try
             {
@@ -62,7 +62,7 @@ namespace TestHttpClient
 
                 };
 
-                _save = JsonSerializer.Deserialize<List<Save>>(responsBody, options);
+                _save = JsonSerializer.Deserialize<List<SaveDTO>>(responsBody, options);
 
             }
             catch (HttpRequestException e)
@@ -75,7 +75,7 @@ namespace TestHttpClient
             return _save;
         }
 
-        public async void PostSave(Save save)
+        public async void PostSave(SaveDTO save)
         {
             _urlPostSave = "https://localhost:7046/api/Save";
 

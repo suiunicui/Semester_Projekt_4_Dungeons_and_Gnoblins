@@ -7,7 +7,7 @@ using GameEngineLibrary.MapCreator;
 using GameEngineLibrary.MapImpl;
 using GameEngineLibrary.Actors;
 using TestHttpClient;
-using Backend_API.Models;
+using Backend_API.Models.DTO;
 
 namespace GameEngineLibrary
 {
@@ -65,8 +65,9 @@ namespace GameEngineLibrary
         public void Savegame()
         {
             HttpController newSave = new HttpController();
-            Save Game = new Save();
-            Game.RoomID = (int) CurrentRoom.RoomId;
+            SaveDTO Game = new SaveDTO();
+            Game.RoomId = (int) CurrentRoom.RoomId;
+            Game.SaveName = "Default";
             newSave.PostSave(Game);
         }
 
@@ -74,8 +75,8 @@ namespace GameEngineLibrary
         public async void LoadGame(int id)
         {
             HttpController SaveLoader = new HttpController();
-            Save Game = await SaveLoader.GetSave(id);
-            CurrentRoom.RoomId = (uint) Game.RoomID;
+            SaveDTO Game = await SaveLoader.GetSave(id);
+            CurrentRoom.RoomId = (uint) Game.RoomId;
             CurrentRoom.AddPlayer(CurrentPlayer);
         }
 

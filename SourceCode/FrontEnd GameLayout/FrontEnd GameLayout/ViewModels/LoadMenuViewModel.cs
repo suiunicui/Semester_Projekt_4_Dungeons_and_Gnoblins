@@ -7,7 +7,7 @@ using Prism.Mvvm;
 using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
 using GameEngineLibrary;
-using Backend_API.Models;
+using Backend_API.Models.DTO;
 using Backend_API;
 using TestHttpClient;
 
@@ -30,9 +30,9 @@ namespace FrontEnd_GameLayout.ViewModels
 
         #region Properties
 
-        private List<Save> _savedGames = new List<Save>();
+        private List<SaveDTO> _savedGames = new List<SaveDTO>();
 
-        public List<Save> SavedGames {
+        public List<SaveDTO> SavedGames {
             get { return _savedGames; }
             set
             {

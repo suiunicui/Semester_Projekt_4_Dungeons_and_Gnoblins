@@ -41,7 +41,7 @@ namespace Backend_API.Controllers
         }
 
         // GET: list of Saves
-        [HttpGet]
+        [HttpGet("Get List Of Saves")]
 
         public async Task<ActionResult<List<Save>>> GetListOfSave()
         {
