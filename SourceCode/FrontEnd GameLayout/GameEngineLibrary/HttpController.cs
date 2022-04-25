@@ -36,7 +36,7 @@ namespace TestHttpClient
 
                 var _save = JsonSerializer.Deserialize<Save>(responsBody, options);
           
-                Console.WriteLine("RoomId: {0}", _save.RoomId);
+                Console.WriteLine("RoomId: {0}", _save.RoomID);
 
             }
             catch (HttpRequestException e)
@@ -51,7 +51,7 @@ namespace TestHttpClient
 
         public async Task<List<Save>> GetListOfSave()
         {
-
+            List<Save> _save;
             _urlGetSave = $"https://localhost:7046/api/Save";
             try
             {
@@ -62,7 +62,7 @@ namespace TestHttpClient
 
                 };
 
-                var _save = JsonSerializer.Deserialize<List<Save>>(responsBody, options);
+                _save = JsonSerializer.Deserialize<List<Save>>(responsBody, options);
 
             }
             catch (HttpRequestException e)
