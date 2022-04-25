@@ -17,12 +17,12 @@ namespace Backend_API.Controllers
     [ApiController]
     public class SaveController : Controller
     {
-        private readonly Save_DAL _save;
+        private readonly DAL.DAL _save;
 
 
         public SaveController(DaG_db context)
         {
-            _save = new Save_DAL(context);
+            _save = new DAL.DAL(context);
 
         }
 

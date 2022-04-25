@@ -14,11 +14,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Backend_API.DAL
 {
-    public class Save_DAL
+    public class DAL
     {
         private readonly DaG_db _context;
 
-        public Save_DAL(DaG_db context)
+        public DAL(DaG_db context)
         {
             _context = context;
 
@@ -30,7 +30,8 @@ namespace Backend_API.DAL
 
             var newSave = new Save()
             {
-                RoomID = saveDTO.RoomId
+                RoomID = saveDTO.RoomId,
+                SaveName = saveDTO.SaveName,
             };
 
             _context.Saves.Add(newSave);
@@ -44,6 +45,30 @@ namespace Backend_API.DAL
         public async Task<ActionResult<Save>> GetSaveByID(int SaveId)
         { 
             return await _context.Saves.FindAsync(SaveId);
+
+        }
+
+        public async Task<ActionResult<List<Save>>> GetAllSaves()
+        {
+
+            var rooms = await _context.Saves.ToListAsync();
+
+            return rooms;
+
+        }
+
+
+        public RoomDescription GetRoomDescription(int RDID)
+        {
+
+            var room = _context.RoomDescriptions.Where(i => i.RoomDescriptionID == RDID).First();
+
+            if (room == null)
+            {
+                return null;
+            }
+
+            return room;
 
         }
     }
