@@ -48,6 +48,31 @@ namespace TestHttpClient
             return _save;
         }
 
+        public async Task<Save> GetListOfSave()
+        {
+            _urlGetSave = $"https://localhost:7046/api/Save";
+            try
+            {
+                string responsBody = await _httpClient.GetStringAsync(_urlGetSave);
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+
+                };
+
+                var _save = JsonSerializer.Deserialize<List<Save>>(responsBody, options);
+
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine("Exception caught");
+                Console.WriteLine("Message: {0}", e.Message);
+                throw;
+            }
+
+            return _save;
+        }
+
         public async void PostSave(Save save)
         {
             _urlPostSave = "https://localhost:7046/api/Save";
