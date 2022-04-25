@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using GameEngineLibrary.MapCreator;
 using GameEngineLibrary.MapImpl;
+using TestHttpClient;
+using TestHttpClient.Models;
 
 namespace GameEngineLibrary
 {
@@ -59,7 +61,7 @@ namespace GameEngineLibrary
           return log;
         }
         //Gemmer spil
-        public Savegame(Room curRoom)
+        public void Savegame(Room curRoom)
         {
             HttpController newSave = new HttpController();
             Save Game = new Save();
@@ -68,12 +70,11 @@ namespace GameEngineLibrary
         }
 
         //Loader gemt spil
-        public LoadGame()
+        public async void LoadGame(int id)
         {
-            HttpController LoadSave = new HttpController();
-            Save game = new Save();
-            newSave.GetSave(Save game);
-            curRoom.Roomid = Game.Roomid;
+            HttpController SaveLoader = new HttpController();
+            Save Game = await SaveLoader.GetSave(id);
+            CurrentRoom.RoomId = Game.RoomId;
             CurrentRoom.AddPlayer(CurrentPlayer);
         }
 
