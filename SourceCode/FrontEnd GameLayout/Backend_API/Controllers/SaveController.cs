@@ -40,6 +40,15 @@ namespace Backend_API.Controllers
 
         }
 
+        // GET: list of Saves
+        [HttpGet]
+
+        public async Task<ActionResult<List<Save>>> GetSave()
+        {
+            return await _save.GetAllSaves();
+
+        }
+
 
         // Post: Save
         [HttpPost]
