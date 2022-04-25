@@ -66,7 +66,7 @@ namespace GameEngineLibrary
         {
             HttpController newSave = new HttpController();
             Save Game = new Save();
-            Game.RoomId = CurrentRoom.RoomId;
+            Game.RoomID = (int) CurrentRoom.RoomId;
             newSave.PostSave(Game);
         }
 
@@ -75,7 +75,7 @@ namespace GameEngineLibrary
         {
             HttpController SaveLoader = new HttpController();
             Save Game = await SaveLoader.GetSave(id);
-            CurrentRoom.RoomId = Game.RoomId;
+            CurrentRoom.RoomId = (uint) Game.RoomID;
             CurrentRoom.AddPlayer(CurrentPlayer);
         }
 
