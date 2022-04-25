@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using TestHttpClient.Models;
+using Backend_API.Models;
+
 
 namespace TestHttpClient
 {
-    internal class HttpController
+    public class HttpController
     {
         public string _urlPostSave;
         public string _urlGetSave;
@@ -48,7 +49,7 @@ namespace TestHttpClient
             return _save;
         }
 
-        public async Task<Save> GetListOfSave()
+        public async Task<List<Save>> GetListOfSave()
         {
             _urlGetSave = $"https://localhost:7046/api/Save";
             try

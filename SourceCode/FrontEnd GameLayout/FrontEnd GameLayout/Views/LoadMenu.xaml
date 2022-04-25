@@ -29,7 +29,7 @@
         </Grid.ColumnDefinitions>
 
         <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
-                Content="Load" Grid.Row="5"/>
+                Content="Load" Command="{Binding LoadGame}" Grid.Row="5"/>
         
         <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
                 Content="Back" Command="{Binding MainMenu}" Grid.Row="6"/>

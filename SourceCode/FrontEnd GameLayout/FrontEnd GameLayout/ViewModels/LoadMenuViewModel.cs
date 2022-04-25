@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using Prism.Mvvm;
 using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
+using GameEngineLibrary;
+using Backend_API.Models;
+using Backend_API;
+using TestHttpClient;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -13,16 +17,22 @@ namespace FrontEnd_GameLayout.ViewModels
     {
         public LoadMenuViewModel()
         {
-            SavedGames.Add("testGame1");
-            SavedGames.Add("testGame2");
             
         }
 
+
+        private  async void getListOfSaves()
+        {
+            HttpController httpHandler = new HttpController();
+            SavedGames = await httpHandler.GetListOfSave();
+        }
+
+
         #region Properties
 
-        private List<String> _savedGames = new List<string>();
+        private List<Save> _savedGames = new List<Save>();
 
-        public List<String> SavedGames {
+        public List<Save> SavedGames {
             get { return _savedGames; }
             set
             {
@@ -36,9 +46,9 @@ namespace FrontEnd_GameLayout.ViewModels
 
         
 
-        private String _selectedSave;
+        private int _selectedSave;
 
-        public String SelectedSave
+        public int SelectedSave
         {
             get { return _selectedSave; }
             set
@@ -64,6 +74,19 @@ namespace FrontEnd_GameLayout.ViewModels
                 return _mainMenu ?? (_mainMenu = new RelayCommand(x =>
                 {
                     Mediator.Notify("GoToMainMenu", "");
+                }));
+            }
+        }
+
+        private ICommand _loadGame;
+
+        public ICommand LoadGame
+        {
+            get
+            {
+                return _loadGame ?? (_loadGame = new RelayCommand(x =>
+                {
+                    GameController.Instance.LoadGame(SelectedSave);
                 }));
             }
         }

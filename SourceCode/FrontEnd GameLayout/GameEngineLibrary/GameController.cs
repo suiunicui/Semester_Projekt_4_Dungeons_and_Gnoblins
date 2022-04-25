@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using GameEngineLibrary.MapCreator;
 using GameEngineLibrary.MapImpl;
+using GameEngineLibrary.Actors;
 using TestHttpClient;
-using TestHttpClient.Models;
+using Backend_API.Models;
 
 namespace GameEngineLibrary
 {
@@ -40,7 +41,7 @@ namespace GameEngineLibrary
         {
           GameMap = new Map(new BaseMapCreator());
           CurrentRoom = GameMap.Rooms[0];
-          CurrentPlayer = new Player();
+          CurrentPlayer = new Player(10,16);
           GameMap.Rooms[0].AddPlayer(CurrentPlayer);
         }
 
@@ -61,11 +62,11 @@ namespace GameEngineLibrary
           return log;
         }
         //Gemmer spil
-        public void Savegame(Room curRoom)
+        public void Savegame()
         {
             HttpController newSave = new HttpController();
             Save Game = new Save();
-            Game.RoomId = curRoom.RoomId;
+            Game.RoomId = CurrentRoom.RoomId;
             newSave.PostSave(Game);
         }
 

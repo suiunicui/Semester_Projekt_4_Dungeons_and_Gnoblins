@@ -11,6 +11,7 @@ using System.Windows;
 using GameEngineLibrary;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using DataBase;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -458,6 +459,7 @@ namespace FrontEnd_GameLayout.ViewModels
         _interactCommand ?? (_interactCommand = new DelegateCommand<string>(ExecuteInteractCommand, CanExecuteInteractCommand));
         void ExecuteInteractCommand(string direction)
         {
+            GameController.Instance.Savegame();
         }
         bool CanExecuteInteractCommand(string direction)
         {
