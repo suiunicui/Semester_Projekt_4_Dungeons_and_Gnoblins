@@ -15,7 +15,7 @@ namespace GameEngineLibrary
 
         #region Properties
 
-        public uint RoomId { get; }
+        public uint RoomId { get; set; }
         public string Description { get; }
         public Player? Player { get; private set; } = null;
         public Enemy? Enemy { get; private set; } = null;
