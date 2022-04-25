@@ -1,4 +1,6 @@
-﻿namespace GameEngineLibrary
+﻿using GameEngineLibrary.Actors;
+
+namespace GameEngineLibrary
 {
     public class Room : Descriptor
     {
