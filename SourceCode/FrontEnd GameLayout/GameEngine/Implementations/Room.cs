@@ -8,6 +8,7 @@ public class Room : ILocation
     public Room(uint roomId)
     {
         Id = roomId;
+        Description += "Room Id: " + (Id + 1);
     }
 
 
@@ -28,6 +29,16 @@ public class Room : ILocation
     public void RemovePlayer()
     {
         Player = null;
+    }
+
+    public void AddEnemy(Enemy enemy)
+    {
+        Enemy = enemy;
+    }
+
+    public void RemoveEnemy()
+    {
+        Enemy = null;
     }
 
     public Enemy Enemy { get; set; }

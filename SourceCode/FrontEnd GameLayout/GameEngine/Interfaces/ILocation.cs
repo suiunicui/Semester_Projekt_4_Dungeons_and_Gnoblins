@@ -8,4 +8,6 @@ public interface ILocation : IDescriptor
     public Player Player { get; set; }
     public void AddPlayer(Player player);
     public void RemovePlayer();
+    public void AddEnemy(Enemy enemy);
+    public void RemoveEnemy();
 }
