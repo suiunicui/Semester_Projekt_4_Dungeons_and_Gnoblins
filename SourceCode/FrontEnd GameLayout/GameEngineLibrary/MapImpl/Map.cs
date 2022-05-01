@@ -8,7 +8,6 @@ public class Map : IMap
   public LinkedList<int>[] MapLayout { get; set; }
   public Map(IMapCreator mapCreator)
   {
-
     MapLayout = GenerateMapLayoutFromFile(mapCreator.FilePath);
     Rooms = GenerateRooms(mapCreator.FilePath);
   }
