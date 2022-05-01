@@ -41,7 +41,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="{Binding}" />
+                        <TextBlock Text="{Binding SaveName}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

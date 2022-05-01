@@ -17,11 +17,18 @@ namespace FrontEnd_GameLayout.ViewModels
     {
         public LoadMenuViewModel()
         {
+            getListOfSaves();
+
+            /* For testing purposes:
             
+            SavedGames.Add(new SaveDTO { RoomId = 0, SaveName = "TestName1" });
+            SavedGames.Add(new SaveDTO { RoomId = 1, SaveName = "TestName2" });
+
+            */
         }
 
 
-        private  async void getListOfSaves()
+        private async void getListOfSaves()
         {
             HttpController httpHandler = new HttpController();
             SavedGames = await httpHandler.GetListOfSave();
