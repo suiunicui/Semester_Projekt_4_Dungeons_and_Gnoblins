@@ -9,7 +9,7 @@ public class GameController : IGameController
     public ILocation CurrentLocation { get; set; }
     public Player CurrentPlayer { get; set; }
 
-    private static volatile GameController instance = null;
+    private static volatile IGameController instance;
     public GameController(IMapCreator mapCreator)
     {
         GameMap = new BaseMap(mapCreator);
@@ -17,7 +17,7 @@ public class GameController : IGameController
         CurrentPlayer = new Player(10, 14);
         CurrentLocation.AddPlayer(CurrentPlayer);
     }
-    public static GameController Instance
+    public static IGameController Instance
     {
         get
         {
@@ -27,9 +27,6 @@ public class GameController : IGameController
             }
             return instance;
         }
-    {
-        
-    }
     }
 
     public ILog Move(Direction dir)
