@@ -20,4 +20,15 @@ public class RoomTest
         Assert.That(uut.Id, Is.EqualTo(1));
     }
 
+    [Test]
+    public void Constructor_Player_HasNoPlayerByDefault()
+    {
+        Assert.That(uut.Player, Is.Null);
+    }
+
+    [Test]
+    public void Constructor_Enemy_HasNoEnemyByDefault()
+    {
+        Assert.That(uut.Enemy,Is.Null);
+    }
 }

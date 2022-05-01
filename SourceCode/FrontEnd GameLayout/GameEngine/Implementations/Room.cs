@@ -10,6 +10,8 @@ public class Room : ILocation
     }
 
 
-    public string Description { get; set; } = "";
+    public string Description { get; set; }
     public uint Id { get; set; }
+    public Player Player { get; set; }
+    public Enemy Enemy { get; set; }
 }
