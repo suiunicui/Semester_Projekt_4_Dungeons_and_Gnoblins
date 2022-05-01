@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameEngineLibrary.Actors;
 using GameEngineLibrary.MapCreator;
 using GameEngineLibrary.MapImpl;
 using TestHttpClient;
@@ -40,7 +41,7 @@ namespace GameEngineLibrary
         {
           GameMap = new Map(new BaseMapCreator());
           CurrentRoom = GameMap.Rooms[0];
-          CurrentPlayer = new Player();
+          CurrentPlayer = new Player(10,16);
           GameMap.Rooms[0].AddPlayer(CurrentPlayer);
         }
 
