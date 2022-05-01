@@ -17,14 +17,14 @@ namespace FrontEnd_GameLayout.ViewModels
     {
         public LoadMenuViewModel()
         {
-            //getListOfSaves();
-
-            /* For testing purposes:
             
+            getListOfSaves();
+
+            /*
             SavedGames.Add(new SaveDTO { RoomId = 0, SaveName = "TestName1" });
             SavedGames.Add(new SaveDTO { RoomId = 1, SaveName = "TestName2" });
-
             */
+
         }
 
 
@@ -53,9 +53,9 @@ namespace FrontEnd_GameLayout.ViewModels
 
         
 
-        private int _selectedSave;
+        private SaveDTO _selectedSave;
 
-        public int SelectedSave
+        public SaveDTO SelectedSave
         {
             get { return _selectedSave; }
             set
@@ -93,7 +93,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _loadGame ?? (_loadGame = new RelayCommand(x =>
                 {
-                    GameController.Instance.LoadGame(SelectedSave);
+                    GameController.Instance.LoadGame(SelectedSave.RoomId);
                 }));
             }
         }
