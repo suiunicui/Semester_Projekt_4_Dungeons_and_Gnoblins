@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <Folder Include="LocationTest\" />
+    <Folder Include="ActorTest\" />
   </ItemGroup>
 
   <ItemGroup>
