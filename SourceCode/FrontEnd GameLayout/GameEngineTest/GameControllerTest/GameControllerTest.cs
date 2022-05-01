@@ -25,9 +25,9 @@ public class GameControllerTest
     [Test]
     public void Move_ChangeRoom_CorrectlyChangeRoom()
     {
-        string expectedLocationId = uut.GameMap.Rooms[1].Description;
+        ILocation expectedLocation = uut.GameMap.Rooms[1];
         uut.Move(Direction.South);
-        Assert.That(uut.CurrentLocation.Description, Is.EqualTo(expectedLocationId));
+        Assert.That(uut.CurrentLocation, Is.EqualTo(expectedLocation));
     }
 
     [Test]
@@ -37,5 +37,6 @@ public class GameControllerTest
         uut.Move(Direction.South);
         Assert.That(oldLocation.Player,Is.Null);
     }
+
 
 }

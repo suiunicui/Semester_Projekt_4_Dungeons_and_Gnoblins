@@ -1,4 +1,5 @@
-﻿using GameEngine.Interfaces;
+﻿using System.ComponentModel;
+using GameEngine.Interfaces;
 
 namespace GameEngine.Implementations;
 
@@ -8,13 +9,27 @@ public class GameController : IGameController
     public ILocation CurrentLocation { get; set; }
     public Player CurrentPlayer { get; set; }
 
-
+    private static volatile GameController instance = null;
     public GameController(IMapCreator mapCreator)
     {
         GameMap = new BaseMap(mapCreator);
         CurrentLocation = GameMap.Rooms[0];
         CurrentPlayer = new Player(10, 14);
         CurrentLocation.AddPlayer(CurrentPlayer);
+    }
+    public static GameController Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new GameController(new BaseMapCreator(@"MapLayOutFile"));
+            }
+            return instance;
+        }
+    {
+        
+    }
     }
 
     public ILog Move(Direction dir)
