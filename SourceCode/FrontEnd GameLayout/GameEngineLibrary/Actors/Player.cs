@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.VisualBasic.CompilerServices;
+
 namespace GameEngineLibrary.Actors
 {
     public class Player : Actor

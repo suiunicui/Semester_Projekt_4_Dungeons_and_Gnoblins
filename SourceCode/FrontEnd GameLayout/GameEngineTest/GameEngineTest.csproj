@@ -20,6 +20,7 @@
     <Folder Include="ActorTest\" />
     <Folder Include="MapTest\" />
     <Folder Include="LogTest\" />
+    <Folder Include="GameControllerTest\" />
   </ItemGroup>
 
   <ItemGroup>
