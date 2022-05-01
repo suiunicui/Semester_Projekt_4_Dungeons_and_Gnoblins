@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using GameEngine.Implementations;
-using GameEngineLibrary.MapCreator;
+using GameEngine.Interfaces;
 using NUnit.Framework;
 
 
@@ -15,8 +15,7 @@ public class BaseMapCreatorTest
   [SetUp]
   public void Setup()
   {
-    //_uut = new BaseMapCreator(@"TestMapFile");
-    _uut = new BaseMapCreator();
+    _uut = new BaseMapCreator(@"TestMapFile");
   }
 
   [Test]
