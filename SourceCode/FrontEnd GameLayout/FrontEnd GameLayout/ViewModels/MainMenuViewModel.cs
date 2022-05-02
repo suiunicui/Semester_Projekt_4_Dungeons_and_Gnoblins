@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Prism.Mvvm;
 using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
+using Prism.Commands;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -36,6 +37,19 @@ namespace FrontEnd_GameLayout.ViewModels
                 }));
             }
         }
+
+        private DelegateCommand _exitGameCommand;
+        public DelegateCommand ExitGameCommand =>
+        _exitGameCommand ?? (_exitGameCommand = new DelegateCommand(ExecuteExitGameCommand, CanExecuteExitGameCommand));
+        void ExecuteExitGameCommand()
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+        bool CanExecuteExitGameCommand()
+        {
+            return true;
+        }
+
     }
 }
 
