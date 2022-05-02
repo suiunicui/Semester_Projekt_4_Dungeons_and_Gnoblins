@@ -21,8 +21,8 @@ namespace FrontEnd_GameLayout.ViewModels
             getListOfSaves();
 
             /*
-            SavedGames.Add(new SaveDTO { RoomId = 0, SaveName = "TestName1" });
-            SavedGames.Add(new SaveDTO { RoomId = 1, SaveName = "TestName2" });
+            SavedGames.Add(new SaveDTO { ID = 1, RoomId = 0, SaveName = "TestName1" });
+            SavedGames.Add(new SaveDTO { ID = 2, RoomId = 1, SaveName = "TestName2" });
             */
 
         }
@@ -93,7 +93,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _loadGame ?? (_loadGame = new RelayCommand(x =>
                 {
-                    GameController.Instance.LoadGame(SelectedSave.RoomId);
+                    GameController.Instance.LoadGame(SelectedSave.ID);
                 }));
             }
         }
