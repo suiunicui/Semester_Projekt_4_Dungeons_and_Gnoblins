@@ -20,11 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GameEngineLibrary\GameEngineLibrary.csproj" />
+    <Folder Include="MapTests\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="MapTests\" />
+    <ProjectReference Include="..\GameEngine\GameEngine.csproj" />
   </ItemGroup>
 
 </Project>

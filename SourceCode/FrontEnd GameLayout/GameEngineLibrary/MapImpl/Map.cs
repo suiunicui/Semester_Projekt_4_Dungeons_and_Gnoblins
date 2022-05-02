@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Immutable;
-using System.Reflection.Metadata.Ecma335;
-using System.Resources;
-using GameEngineLibrary.Interfaces;
+﻿using GameEngineLibrary.Interfaces;
 
 namespace GameEngineLibrary.MapImpl;
 
@@ -12,7 +8,6 @@ public class Map : IMap
   public LinkedList<int>[] MapLayout { get; set; }
   public Map(IMapCreator mapCreator)
   {
-
     MapLayout = GenerateMapLayoutFromFile(mapCreator.FilePath);
     Rooms = GenerateRooms(mapCreator.FilePath);
   }

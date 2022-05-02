@@ -6,5 +6,6 @@
         public uint AC { get; set; }
 
         public abstract uint Attack(Actor target);
+
     }
 }

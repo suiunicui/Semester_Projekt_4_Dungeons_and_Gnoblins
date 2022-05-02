@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Resources;
 using Castle.Core.Internal;
-using GameEngineLibrary.MapCreator;
-using GameEngineLibrary.MapImpl;
 using NUnit.Framework;
 
 namespace GameEngineLibraryTest.MapTests;

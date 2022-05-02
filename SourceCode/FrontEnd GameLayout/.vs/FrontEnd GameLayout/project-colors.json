@@ -30,7 +30,17 @@
       "ProjectGuid": "025f671a-0d96-48ea-b64a-33afad56aeab",
       "DisplayName": "Backend_API",
       "ColorIndex": 4
+    },
+    "fb1202f6-9249-421f-812d-076cb439a4fe": {
+      "ProjectGuid": "fb1202f6-9249-421f-812d-076cb439a4fe",
+      "DisplayName": "GameEngine",
+      "ColorIndex": 5
+    },
+    "efc0816b-b02f-41d8-908d-1e30ddd7f237": {
+      "ProjectGuid": "efc0816b-b02f-41d8-908d-1e30ddd7f237",
+      "DisplayName": "GameEngineTest",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 7
 }
