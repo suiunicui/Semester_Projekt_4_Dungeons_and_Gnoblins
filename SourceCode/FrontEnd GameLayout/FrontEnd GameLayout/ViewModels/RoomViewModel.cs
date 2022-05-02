@@ -8,21 +8,22 @@ using System;
 using System.Windows.Media;
 using System.Windows.Threading;
 using System.Windows;
-using GameEngineLibrary;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using GameEngine.Implementations;
+using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
     public class RoomViewModel : BaseViewModel, IPageViewModel
     {
 
-        GameController game = GameController.Instance;
+        IGameController game = GameController.Instance;
 
 
     public RoomViewModel()
         {
-            Description = game.CurrentRoom.Description;
+            Description = game.CurrentLocation.Description;
             MovePlayerOnMap();
         }
 
@@ -72,9 +73,9 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private Log log;
+        private ILog log;
 
-        public Log Log
+        public ILog Log
         {
             get { return log; }
             set
@@ -305,19 +306,19 @@ namespace FrontEnd_GameLayout.ViewModels
 
         #region Commands
 
-        private DelegateCommand<string> _moveCommand;
-        public DelegateCommand<string> MoveCommand =>
-        _moveCommand ?? (_moveCommand = new DelegateCommand<string>(ExecuteMoveCommand, CanExecuteMoveCommand));
-        void ExecuteMoveCommand(string direction)
+        private DelegateCommand<Direction> _moveCommand;
+        public DelegateCommand<Direction> MoveCommand =>
+        _moveCommand ?? (_moveCommand = new DelegateCommand<Direction>(ExecuteMoveCommand, CanExecuteMoveCommand));
+        void ExecuteMoveCommand(Direction direction)
         {
             Log = new Log();
-            Log = game.MovePlayer(game.CurrentRoom, direction);
+            Log = game.Move(direction);
             //Description = Log.GetEventRecord("New Room Description");
-            Description = game.CurrentRoom.Description;
+            Description = game.CurrentLocation.Description;
             var Maroom = new Views.Room();
             MovePlayerOnMap(Maroom);
         }
-        bool CanExecuteMoveCommand(string direction)
+        bool CanExecuteMoveCommand(Direction direction)
         { 
             
             return true;
@@ -326,7 +327,7 @@ namespace FrontEnd_GameLayout.ViewModels
         void MovePlayerOnMap(Views.Room Room = null)
         {
 
-            switch (game.CurrentRoom.RoomId + 1)
+            switch (game.CurrentLocation.Id + 1)
             {
                 case 1:
                     PlayerRow = 2;
