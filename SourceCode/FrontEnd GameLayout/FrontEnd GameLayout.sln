@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameEngineLibraryTest", "Ga
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend_API", "Backend_API\Backend_API.csproj", "{025F671A-0D96-48EA-B64A-33AFAD56AEAB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameEngine", "GameEngine\GameEngine.csproj", "{FB1202F6-9249-421F-812D-076CB439A4FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameEngineTest", "GameEngineTest\GameEngineTest.csproj", "{EFC0816B-B02F-41D8-908D-1E30DDD7F237}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

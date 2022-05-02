@@ -19,6 +19,8 @@
       &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.MapTest_baseMap.BaseMapConstructorGivesNonEmptyMapLayoytList&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.MapTest_baseMap.BaseMapConstructorCorrectlyConstructLayoutList&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.MapTest_baseMap&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::EFC0816B-B02F-41D8-908D-1E30DDD7F237::net6.0::GameEngineTest.LocationTest.RoomTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::EFC0816B-B02F-41D8-908D-1E30DDD7F237::net6.0::GameEngineTest.GameControllerTest.GameControllerTest.Constructor_GameMap_NotNull&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

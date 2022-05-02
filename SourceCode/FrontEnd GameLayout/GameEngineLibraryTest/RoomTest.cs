@@ -1,4 +1,5 @@
 using GameEngineLibrary;
+using GameEngineLibrary.Actors;
 using NUnit.Framework;
 
 namespace GameEngineLibraryTest
