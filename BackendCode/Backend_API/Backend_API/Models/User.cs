@@ -12,7 +12,7 @@ namespace Backend_API.Models
 
         [Required]
         [MaxLength(64)]
-        public string Password { get; set; }
+        public string PasswordHash { get; set; }
 
         public List<Save> Saves { get; set; }
 

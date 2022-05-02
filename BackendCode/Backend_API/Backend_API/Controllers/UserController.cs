@@ -67,7 +67,7 @@ namespace Backend_API.Controllers
             {
                 Username = regUser.Username,
             };
-            user.Password = BCrypt.Net.BCrypt.HashPassword(regUser.Password, BcryptWorkfactor);
+            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(regUser.Password, BcryptWorkfactor);
             _context.Users.Add(user);
 
             await _context.SaveChangesAsync();
@@ -88,7 +88,7 @@ namespace Backend_API.Controllers
             var user = await _context.Users.Where(u => u.Username == userDTO.Username).FirstOrDefaultAsync();
             if (user != null)
             {
-                var isValid = BCrypt.Net.BCrypt.Verify(userDTO.Password, user.Password);
+                var isValid = BCrypt.Net.BCrypt.Verify(userDTO.Password, user.PasswordHash);
                 if (isValid == true)
                 {
                     return new Token {JWT = GenerateToken(userDTO)};
