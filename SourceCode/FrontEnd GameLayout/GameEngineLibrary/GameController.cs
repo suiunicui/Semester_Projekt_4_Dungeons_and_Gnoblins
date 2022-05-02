@@ -76,8 +76,9 @@ namespace GameEngineLibrary
         {
             HttpController SaveLoader = new HttpController();
             SaveDTO Game = await SaveLoader.GetSave(id);
-            CurrentRoom.RoomId = (uint) Game.RoomId;
-            CurrentRoom.AddPlayer(CurrentPlayer);
+            CurrentRoom.RemovePlayer();
+            CurrentRoom = GameMap.Rooms[Game.RoomId];
+            GameMap.Rooms[CurrentRoom.RoomId].AddPlayer(CurrentPlayer);
         }
 
         //Fjerner spiller fra spillet og viser death screen.

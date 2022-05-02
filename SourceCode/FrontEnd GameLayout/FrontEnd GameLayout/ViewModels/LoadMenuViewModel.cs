@@ -10,6 +10,7 @@ using GameEngineLibrary;
 using Backend_API.Models.DTO;
 using Backend_API;
 using TestHttpClient;
+using Prism.Commands;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -85,17 +86,19 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private ICommand _loadGame;
+        private DelegateCommand _loadGame;
+        
+        public DelegateCommand LoadGame => _loadGame ?? (_loadGame = new DelegateCommand(ExecuteLoadCommand, CanExecuteLoadCommand));
 
-        public ICommand LoadGame
+        void ExecuteLoadCommand()
         {
-            get
-            {
-                return _loadGame ?? (_loadGame = new RelayCommand(x =>
-                {
-                    GameController.Instance.LoadGame(SelectedSave.ID);
-                }));
-            }
+            GameController.Instance.LoadGame(SelectedSave.ID);
+            Mediator.Notify("GameStart", "");
+        }
+
+        bool CanExecuteLoadCommand()
+        {
+            return true;
         }
 
         #endregion
