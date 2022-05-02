@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using System.Text.Json;
+using Backend_API.Models.DTO;
 using DataBase.Models;
 using GameEngine.Interfaces;
 
@@ -7,44 +8,70 @@ namespace GameEngine.Implementations;
 
 public class BackEndController : IBackEndController
  {
-        public string _urlPostSave;
-        public string _urlGetSave;
-        private readonly HttpClient _httpClient;
-        private readonly Save _save;
+    public string _urlPostSave;
+    public string _urlGetSave;
+    private readonly HttpClient _httpClient;
+    private readonly SaveDTO _save;
 
-        public BackEndController()
-        {
-            _httpClient = new HttpClient();
-        }
+    public BackEndController()
+    {
+        _httpClient = new HttpClient();
+    }
 
-        public async Task<Save>GetSaveAsync(int id)
+    public async Task<SaveDTO>GetSaveAsync(int id)
+    {
+        _urlGetSave = $"https://localhost:7046/api/Save?id={id}";
+        try
         {
-            _urlGetSave = $"https://localhost:7046/api/Save?id={id}";
-            try
+            string responsBody = await _httpClient.GetStringAsync(_urlGetSave);
+            var options = new JsonSerializerOptions
             {
-                string responsBody = await _httpClient.GetStringAsync(_urlGetSave);
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true,
+                PropertyNameCaseInsensitive = true,
 
-                };
+            };
 
-                var _save = JsonSerializer.Deserialize<Save>(responsBody, options);
+            var _save = JsonSerializer.Deserialize<SaveDTO>(responsBody, options);
           
-                Console.WriteLine("RoomId: {0}", _save.RoomID);
+            Console.WriteLine("RoomId: {0}", _save.RoomId);
 
-            }
-            catch (HttpRequestException e)
-            {
-                Console.WriteLine("Exception caught");
-                Console.WriteLine("Message: {0}", e.Message);
-                throw;
-            }
-
-            return _save;
+        }
+        catch (HttpRequestException e)
+        {
+            Console.WriteLine("Exception caught");
+            Console.WriteLine("Message: {0}", e.Message);
+            throw;
         }
 
-        public async void PostSaveAsync(Save save)
+        return _save;
+    }
+
+
+    public async Task<List<SaveDTO>> GetListOfSave()
+    {
+        List<SaveDTO> _save;
+        _urlGetSave = $"https://localhost:7046/api/Save/Get List Of Saves";
+        try
+        {
+            string responsBody = await _httpClient.GetStringAsync(_urlGetSave);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+
+            };
+
+            _save = JsonSerializer.Deserialize<List<SaveDTO>>(responsBody, options);
+
+        }
+        catch (HttpRequestException e)
+        {
+            Console.WriteLine("Exception caught");
+            Console.WriteLine("Message: {0}", e.Message);
+            throw;
+        }
+
+        return _save;
+    }
+    public async void PostSaveAsync(SaveDTO save)
         {
             _urlPostSave = "https://localhost:7046/api/Save";
 

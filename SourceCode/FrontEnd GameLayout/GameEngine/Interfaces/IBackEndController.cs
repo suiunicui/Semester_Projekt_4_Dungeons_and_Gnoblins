@@ -1,10 +1,10 @@
 ﻿using System.Xml.Linq;
-using DataBase.Models;
+using Backend_API.Models.DTO;
 
 namespace GameEngine.Interfaces;
 
 public interface IBackEndController
 {
-    public Task<Save> GetSaveAsync(int id);
-    public void PostSaveAsync(Save save);
+    public Task<SaveDTO> GetSaveAsync(int id);
+    public void PostSaveAsync(SaveDTO save);
 }

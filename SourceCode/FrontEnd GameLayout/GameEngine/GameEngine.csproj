@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Backend_API\Backend_API.csproj" />
     <ProjectReference Include="..\Database\Database.csproj" />
   </ItemGroup>
 

@@ -23,4 +23,8 @@
     <Folder Include="MapTests\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GameEngine\GameEngine.csproj" />
+  </ItemGroup>
+
 </Project>

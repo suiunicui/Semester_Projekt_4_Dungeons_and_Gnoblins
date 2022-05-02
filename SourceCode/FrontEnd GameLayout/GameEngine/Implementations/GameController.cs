@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using Backend_API.Models.DTO;
 using GameEngine.Interfaces;
 
 namespace GameEngine.Implementations;
@@ -43,5 +44,15 @@ public class GameController : IGameController
         log.RecordEvent("New Room Description", CurrentLocation.Description);
 
         return log;
+    }
+
+    //Loader gemt spil
+    public async void LoadGame(int id)
+    {
+        BackEndController SaveLoader = new BackEndController();
+        SaveDTO Game = await SaveLoader.GetSaveAsync(id);
+        CurrentLocation.RemovePlayer();
+        CurrentLocation = GameMap.Rooms[Game.RoomId];
+        GameMap.Rooms[CurrentLocation.Id].AddPlayer(CurrentPlayer);
     }
 }
