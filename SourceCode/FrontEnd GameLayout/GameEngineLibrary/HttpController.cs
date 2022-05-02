@@ -52,7 +52,7 @@ namespace TestHttpClient
         public async Task<List<SaveDTO>> GetListOfSave()
         {
             List<SaveDTO> _save;
-            _urlGetSave = $"https://localhost:7046/api/Save";
+            _urlGetSave = $"https://localhost:7046/api/Save/Get List Of Saves";
             try
             {
                 string responsBody = await _httpClient.GetStringAsync(_urlGetSave);
