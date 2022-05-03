@@ -1,0 +1,24 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bfc2b9e3_002D2a21_002D4cf7_002Db9b7_002Dba035acd6e9b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BaseMapCreatorMapLayoutFileExists" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.BaseMapCreatorTest.BaseMapCreatorMapLayoutFileExists&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.BaseMapCreatorTest.BaseMapCreatorConcatenateCorrectFilePath&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.BaseMapCreatorTest.BaseMapCreatorMapLayoutFileIsCorrectFormat&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Not&gt;&#xD;
+        &lt;TestAncestor&gt;&#xD;
+          &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.BaseMapCreatorTest.BaseMapCreatorMapLayoutFileIsCorrectFormat&lt;/TestId&gt;&#xD;
+        &lt;/TestAncestor&gt;&#xD;
+      &lt;/Not&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.MapTest.MapHasNineTeenRoomsByDefault&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.MapTest_baseMap.BaseMapHasNineTeenRoomsByDefault&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.MapTest_baseMap.BaseMapConstructorGivesNonEmptyMapLayoytList&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.MapTest_baseMap.BaseMapConstructorCorrectlyConstructLayoutList&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::F0577BD7-38BE-4946-BFD8-B6FAC36508BC::net6.0::GameEngineLibraryTest.MapTests.MapTest_baseMap&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -1,20 +1,66 @@
 ﻿<Application x:Class="FrontEnd_GameLayout.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:FrontEnd_GameLayout"
-             StartupUri="MainWindow.xaml"
-             xmlns:system="clr-namespace:System;assembly=mscorlib">
+             xmlns:local="clr-namespace:FrontEnd_GameLayout.ViewModels"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:local1="clr-namespace:FrontEnd_GameLayout.Views">
     <Application.Resources>
+        <DataTemplate DataType="{x:Type local:MainMenuViewModel}">
+            <local1:MainMenu />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:RoomViewModel}">
+            <local1:Room />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:LoadMenuViewModel}">
+            <local1:LoadMenu />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:SaveMenuViewModel}">
+            <local1:SaveMenu />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:InGameMenuViewModel}">
+            <local1:InGameMenu />
+        </DataTemplate>
         <SolidColorBrush x:Key="backgroundColor" Color="Black"/>
         <SolidColorBrush x:Key="textColor" Color="LightGray"/>
+        <SolidColorBrush x:Key="textHighligtColor" Color="IndianRed"/>
         <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
             <Setter Property="Background" Value="{StaticResource backgroundColor}"/>
             <Setter Property="Foreground" Value="{StaticResource textColor}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="{StaticResource textHighligtColor}"/>
+                    <Setter Property="Background" Value="{StaticResource backgroundColor}"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
         <Style x:Key="textblockStyle" TargetType="TextBlock">
             <Setter Property="Foreground" Value="{StaticResource textColor}"/>
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+        <Style x:Key="titleblockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource textColor}"/>
+            <Setter Property="FontSize" Value="45"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+        <Style x:Key="listStyle" TargetType="ListBox">
+            <Setter Property="Background" Value="{StaticResource backgroundColor}"/>
+            <Setter Property="Foreground" Value="{StaticResource textColor}"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="BorderThickness" Value="0"/>
         </Style>
     </Application.Resources>
 </Application>

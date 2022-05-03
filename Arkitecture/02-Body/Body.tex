@@ -1,0 +1,234 @@
+\section{C4 Arkitecture}
+
+\subsection{Context Diagram}
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    \node[module, blueish] (Game) at (0,0) 
+      {%
+        \textbf{\Large Game system}\\
+        \text{[Software System]}\\ \\
+        Allows the user to see infomation \\
+        about and play the game.
+      };
+    \node[module, blueish] (User) at (0,6)
+      {%
+        \textbf{\Large User} \\
+        \text{[Person]} \\ \\
+        A Person whom is interested in \\
+        playing the game.
+      };
+    \node[module, blueish] (Database) at (0,-6)
+      {%
+        \textbf{Database} \\
+        \text{[Software System]} \\ \\
+        Contains the game state and user data.
+      };
+    \draw[myArrow] (User) to 
+      [" \large Views Game State and \\
+        \large inputs game commands \\
+        \large to the game."] (Game);
+    \draw[myArrow] (Game) to 
+    [" \large Reads and Writes \\
+        \large to the database
+    "] (Database);
+    \end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\subsection{Container Diagram}
+\begin{figure}[h]
+  \centering
+  \resizebox{0.8\linewidth}{!}{%
+    \begin{tikzpicture}
+      \node[module, blueish] (User) at (-4.5,8)
+        {%
+          \textbf{\Large User} \\
+          \text{[Person]} \\ \\
+          A Person whom is interested in \\
+          playing the game.
+        };
+      \node[draw, rectangle, dashed , minimum width = \linewidth, minimum height = 10cm] (Game) at (0,0) {};
+      \node[module, blueish] (Front-End) at (-4.5, 3)
+        {%
+          \textbf{Front-End} \\
+          \text{[Software Module]} \\ \\
+          Handles input from the user \\
+          and displays the current state \\
+          of the game to the screen.
+        };
+      \node[module, blueish] (Game Module) at (5, 3) 
+        {%
+          \textbf{Game Module} \\
+          \text{[Software Module]} \\ \\
+          Updates the game state \\
+          and handles the games \\
+          internal logic.
+        };
+      \node[module, blueish] (Infobroker) at (-4.5,-2.5)
+        {%
+          \textbf{Infobroker} \\
+          \text{[Software Module]} \\ \\
+          Handles the message \\ 
+          between Game modules.
+        };
+      \node[module, blueish] (Back-End) at (5,-2.5)
+        {%
+          \textbf{Back-End} \\
+          \text{[Software Module]} \\ \\
+          Handles communication with \\
+          games database. 
+        };
+      \node[module, blueish] (Database) at (5, -8)
+        {%
+          \textbf{Database} \\
+          \text{[Container: database schema]} \\ \\
+          Stores user information and game data.
+        };
+      \draw[myArrow] (User) to 
+        ["User pushes \\ buttons and view \\ screen output"] (Front-End);
+      \draw[myArrow] (Back-End) to
+        ["Makes Queries to save \\ or retrieve game data"] (Database);
+      \draw[myArrow] (Front-End) to 
+        [" Sends an action \\
+           request to the \\
+           infobroker
+        "] (Infobroker);
+      \draw[myArrow] (Infobroker) to 
+        [" passes request on \\
+           to back-end for \\
+           processing.
+        "] (Back-End);
+      \draw[myArrow] (Front-End) to 
+        [" Passes user input to \\
+           Game Module to update \\
+           the game state \\
+        "] (Game Module);
+      \draw[myArrow] (Back-End) to 
+        [" Request or Update \\
+           game state when loading \\
+           or saving the game."] (Game Module);
+    \end{tikzpicture}
+    }
+\end{figure}
+
+\newpage
+
+\subsection{Game Module Component}
+
+\begin{figure}[h]
+  \centering
+  \resizebox{0.8\linewidth}{!}{%
+  \begin{tikzpicture}
+    \node[draw, rectangle, dashed , minimum width = \linewidth, minimum height = 12cm] (Game) at (0,0) {};
+    \node[module, blueish] (Front-End) at (-4,8) 
+      {%
+        \textbf{Front-End} \\
+        \text{[Container]} \\ \\
+        Handels user input \\
+        and displays them to \\
+        the screen.
+      };
+
+    \node[module, blueish] (Main Controller) at (-4.5,2)
+      {%
+        \textbf{Main Controller} \\
+        \text{[Component]} \\ \\
+        Control the main game loop, \\
+        moving from room to room and \\
+        interacting with the environment.
+      };
+
+    \node[module, blueish] (combat controller) at (4.5, 4)
+      {%
+        \textbf{Combat Controller} \\
+        \text{[Component]} \\ \\
+        Controls the combat loop \\
+        Combat logic, such as attacking \\
+        defending and updating player and \\
+        enemy stats.
+      };
+
+    \node[module, blueish] (Puzzle Controller) at (4.5,-4)
+    {%
+      \textbf{Puzzle Controller} \\
+      \text{[Component: Special]} \\ \\
+      Controll the players interaction \\
+      with different non-combat related \\ 
+      problems the player runs into
+    };
+
+    \node[module, blueish] (Game State) at (-4.5,-4)
+      {%
+        \textbf{Game States} \\
+        \text{[Component]} \\ \\
+        Contains the game state
+      };
+    \draw[myArrow] (Front-End) to 
+      [" Perform actions outside \\
+         of combat.
+      "] (Main Controller);
+    \draw[myArrow] (Front-End) to 
+      [" Perform actions inside \\
+         of combat.
+      "] (combat controller);
+    \draw[myArrow] (Front-End) to 
+      [" Perform actions inside \\
+         of puzzles.
+      "] (Puzzle Controller);
+    \draw[myArrow] (Main Controller) to 
+      [" Calls API to make \\
+         changes to a \\
+         object's state.
+      "] (Game State);
+    \draw[myArrow] (Puzzle Controller) to 
+      [" Calls API to make \\
+         changes to a \\
+         object's state.
+      "] (Game State);
+    \draw[myArrow] (combat controller) to 
+      [" Calls API to make \\
+         changes to a \\
+         object's state.
+      "] (Game State);
+
+    \node[module,blueish] (Back-End) at (-3,-10)
+      {%
+        \textbf{Back-End} \\
+        \text{[Container]} \\ \\
+        Handles Calls to Database
+      };
+    \draw[myArrow] (Back-End) to 
+      [" Makes a API Call \\
+         to collect game state \\
+         or set game state.
+      "] (Game State);
+  \end{tikzpicture}
+  }
+\end{figure}
+
+\newpage
+
+\subsection{Game State}
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    \node[draw, rectangle, dashed , minimum width = \linewidth, minimum height = 12cm] (Game State) at (0,0) {};
+    \umlclass[x = 4.5, y = 4]{GameState::Player}{}{}
+    \umlclass[x = -4.5, y = 4]{GameState::Map}{}{}
+    \umlclass[x = 0, y = 0]{GameState::Item}{}{}
+    \umlclass[x = -4.5, y = 0]{GameState::Room}{}{}
+    \umlclass[x = -4.5, y = -4]{GameState::Chest}{}{}
+    \umlclass[x = 0, y = -4]{GameState::Weapon}{}{}
+    \umlclass[x = 0, y = 4]{GameState::Enemy}{}{}
+    \umlclass[x = 4.5]{GameState::Actor}{}{}
+    \umldep[]{GameState::Map}{GameState::Room}
+    \umlinherit[]{GameState::Chest}{GameState::Item}
+    \umlinherit[]{GameState::Weapon}{GameState::Item}
+    \umlinherit[]{GameState::Enemy}{GameState::Actor}
+    \umlinherit[]{GameState::Player}{GameState::Actor}
+  \end{tikzpicture}
+\end{figure}
+
+\newpage
