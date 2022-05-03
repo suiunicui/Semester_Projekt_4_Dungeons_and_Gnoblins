@@ -64,17 +64,31 @@ namespace FrontEnd_GameLayout.ViewModels
             ChangeViewModel(PageViewModels[2]);
         }
 
+        private void OnGoToSaveMenu(object obj)
+        {
+            ChangeViewModel(PageViewModels[3]);
+        }
+
+        private void OnGoToInGameMenu(object obj)
+        {
+            ChangeViewModel(PageViewModels[4]);
+        }
+
         public MainWindowViewModel()
         {
             // Add available pages and set page
             PageViewModels.Add(new MainMenuViewModel());
             PageViewModels.Add(new RoomViewModel());
             PageViewModels.Add(new LoadMenuViewModel());
+            PageViewModels.Add(new SaveMenuViewModel());
+            PageViewModels.Add(new InGameMenuViewModel());
             CurrentPageViewModel = PageViewModels[0];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
             Mediator.Subscribe("GameStart", OnGameStart);
             Mediator.Subscribe("GoToLoadMenu", OnGoToLoadMenu);
+            Mediator.Subscribe("GoToSaveMenu", OnGoToSaveMenu);
+            Mediator.Subscribe("GoToInGameMenu", OnGoToInGameMenu);
         }
     }
 }

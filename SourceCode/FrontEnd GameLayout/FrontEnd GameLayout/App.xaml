@@ -14,6 +14,12 @@
         <DataTemplate DataType="{x:Type local:LoadMenuViewModel}">
             <local1:LoadMenu />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type local:SaveMenuViewModel}">
+            <local1:SaveMenu />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:InGameMenuViewModel}">
+            <local1:InGameMenu />
+        </DataTemplate>
         <SolidColorBrush x:Key="backgroundColor" Color="Black"/>
         <SolidColorBrush x:Key="textColor" Color="LightGray"/>
         <SolidColorBrush x:Key="textHighligtColor" Color="IndianRed"/>
