@@ -11,6 +11,8 @@ using System.Windows;
 using GameEngineLibrary;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Windows.Input;
+using FrontEnd_GameLayout.Helper_classes;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -314,8 +316,8 @@ namespace FrontEnd_GameLayout.ViewModels
             Log = game.MovePlayer(game.CurrentRoom, direction);
             //Description = Log.GetEventRecord("New Room Description");
             Description = game.CurrentRoom.Description;
-            var Maroom = new Views.Room();
-            MovePlayerOnMap(Maroom);
+            var RoomView = new Views.Room();
+            MovePlayerOnMap(RoomView);
         }
         bool CanExecuteMoveCommand(string direction)
         { 
@@ -463,6 +465,19 @@ namespace FrontEnd_GameLayout.ViewModels
         bool CanExecuteInteractCommand(string direction)
         {
             return true;
+        }
+
+        private ICommand _mainMenu;
+
+        public ICommand MainMenu
+        {
+            get
+            {
+                return _mainMenu ?? (_mainMenu = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToMainMenu", "");
+                }));
+            }
         }
 
         #endregion

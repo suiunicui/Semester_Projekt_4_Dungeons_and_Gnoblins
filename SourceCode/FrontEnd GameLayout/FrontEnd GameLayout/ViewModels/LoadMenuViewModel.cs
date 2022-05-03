@@ -90,9 +90,9 @@ namespace FrontEnd_GameLayout.ViewModels
         
         public DelegateCommand LoadGame => _loadGame ?? (_loadGame = new DelegateCommand(ExecuteLoadCommand, CanExecuteLoadCommand));
 
-        void ExecuteLoadCommand()
+        async void ExecuteLoadCommand()
         {
-            GameController.Instance.LoadGame(SelectedSave.ID);
+            await GameController.Instance.LoadGame(SelectedSave.ID);
             Mediator.Notify("GameStart", "");
         }
 

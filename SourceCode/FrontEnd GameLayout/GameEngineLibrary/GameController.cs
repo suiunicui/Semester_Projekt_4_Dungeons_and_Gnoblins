@@ -72,7 +72,7 @@ namespace GameEngineLibrary
         }
 
         //Loader gemt spil
-        public async void LoadGame(int id)
+        public async Task LoadGame(int id)
         {
             HttpController SaveLoader = new HttpController();
             SaveDTO Game = await SaveLoader.GetSave(id);
