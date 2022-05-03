@@ -17,15 +17,8 @@ namespace FrontEnd_GameLayout.ViewModels
     public class LoadMenuViewModel :BaseViewModel, IPageViewModel
     {
         public LoadMenuViewModel()
-        {
-            
+        {  
             getListOfSaves();
-
-            /*
-            SavedGames.Add(new SaveDTO { ID = 1, RoomId = 0, SaveName = "TestName1" });
-            SavedGames.Add(new SaveDTO { ID = 2, RoomId = 1, SaveName = "TestName2" });
-            */
-
         }
 
 
