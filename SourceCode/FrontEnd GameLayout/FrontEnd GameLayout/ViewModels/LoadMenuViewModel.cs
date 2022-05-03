@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 using Prism.Mvvm;
 using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
-using GameEngineLibrary;
 using Backend_API.Models.DTO;
 using Backend_API;
-using TestHttpClient;
 using Prism.Commands;
+using GameEngine.Implementations;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -24,7 +23,7 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private async void getListOfSaves()
         {
-            HttpController httpHandler = new HttpController();
+            BackEndController httpHandler = new BackEndController();
             SavedGames = await httpHandler.GetListOfSave();
         }
 

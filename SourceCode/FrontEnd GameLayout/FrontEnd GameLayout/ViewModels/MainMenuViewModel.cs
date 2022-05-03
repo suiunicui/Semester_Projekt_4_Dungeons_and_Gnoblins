@@ -7,14 +7,15 @@ using Prism.Mvvm;
 using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
 using Prism.Commands;
-using GameEngineLibrary;
+using GameEngine.Implementations;
+using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
     public class MainMenuViewModel :BaseViewModel, IPageViewModel
     {
 
-        GameController game = GameController.Instance;
+        IGameController game = GameController.Instance;
 
         private ICommand _gameStart;
 
@@ -24,9 +25,9 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameStart ?? (_gameStart = new RelayCommand(x =>
                 {
-                    game.CurrentRoom.RemovePlayer();
-                    game.CurrentRoom = game.GameMap.Rooms[0];
-                    game.GameMap.Rooms[game.CurrentRoom.RoomId].AddPlayer(game.CurrentPlayer);
+                    game.CurrentLocation.RemovePlayer();
+                    game.CurrentLocation = game.GameMap.Rooms[0];
+                    game.GameMap.Rooms[game.CurrentLocation.Id].AddPlayer(game.CurrentPlayer);
                     Mediator.Notify("GameStart","");
                 }));
             }

@@ -8,23 +8,24 @@ using System;
 using System.Windows.Media;
 using System.Windows.Threading;
 using System.Windows;
-using GameEngineLibrary;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
+using GameEngine.Implementations;
+using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
     public class RoomViewModel : BaseViewModel, IPageViewModel
     {
 
-        GameController game = GameController.Instance;
+        IGameController game = GameController.Instance;
 
 
     public RoomViewModel()
         {
-            Description = game.CurrentRoom.Description;
+            Description = game.CurrentLocation.Description;
             MovePlayerOnMap();
         }
 
@@ -74,9 +75,9 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private Log log;
+        private ILog log;
 
-        public Log Log
+        public ILog Log
         {
             get { return log; }
             set
@@ -312,10 +313,26 @@ namespace FrontEnd_GameLayout.ViewModels
         _moveCommand ?? (_moveCommand = new DelegateCommand<string>(ExecuteMoveCommand, CanExecuteMoveCommand));
         void ExecuteMoveCommand(string direction)
         {
+            Direction TempDirection = Direction.North;
             Log = new Log();
-            Log = game.MovePlayer(game.CurrentRoom, direction);
+            switch (direction)
+            {
+                case "North":
+                    TempDirection = Direction.North;
+                    break;
+                case "East":
+                    TempDirection = Direction.East;
+                    break;
+                case "South":
+                    TempDirection = Direction.South;
+                    break;
+                case "West":
+                    TempDirection = Direction.West;
+                    break;
+            }
+            Log = game.Move(TempDirection);
             //Description = Log.GetEventRecord("New Room Description");
-            Description = game.CurrentRoom.Description;
+            Description = game.CurrentLocation.Description;
             var RoomView = new Views.Room();
             MovePlayerOnMap(RoomView);
         }
@@ -328,7 +345,7 @@ namespace FrontEnd_GameLayout.ViewModels
         void MovePlayerOnMap(Views.Room Room = null)
         {
 
-            switch (game.CurrentRoom.RoomId + 1)
+            switch (game.CurrentLocation.Id + 1)
             {
                 case 1:
                     PlayerRow = 2;

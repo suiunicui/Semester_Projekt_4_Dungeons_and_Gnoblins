@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.ComponentModel;
 using FrontEnd_GameLayout.Helper_classes;
-using GameEngineLibrary;
+using GameEngine.Implementations;
+using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
-        GameController game = GameController.Instance;
+        IGameController game = GameController.Instance;
         private IPageViewModel _currentPageViewModel;
         private List<IPageViewModel> _pageViewModels;
 
