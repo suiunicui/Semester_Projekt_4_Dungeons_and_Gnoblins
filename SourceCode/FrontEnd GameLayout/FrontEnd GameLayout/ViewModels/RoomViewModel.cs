@@ -17,20 +17,25 @@ using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
+    
     public class RoomViewModel : BaseViewModel, IPageViewModel
     {
 
         IGameController game = GameController.Instance;
-
+        Resolution Res = Resolution.Instance;
 
     public RoomViewModel()
         {
             Description = game.CurrentLocation.Description;
             loadMap();
             MovePlayerOnMap();
+            Window_Height = Res.Height;
+            Window_Width = Res.Width;
         }
 
         #region Properties
+
+
 
 
         public string Name
@@ -41,6 +46,27 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        static int window_Width=1920;
+        public int Window_Width
+        {
+            get { return window_Width; }
+            set 
+            { 
+                window_Width = value;
+                OnPropertyChanged("Window_Width");
+            }
+        }
+
+        static int window_Height=1080;
+        public int Window_Height
+        {
+            get { return window_Height; }
+            set
+            {
+                window_Height = value;
+                OnPropertyChanged("Window_Height");
+            }
+        }
 
         private int playerRow;
         public int PlayerRow
@@ -583,6 +609,21 @@ namespace FrontEnd_GameLayout.ViewModels
         _interactCommand ?? (_interactCommand = new DelegateCommand<string>(ExecuteInteractCommand, CanExecuteInteractCommand));
         void ExecuteInteractCommand(string direction)
         {
+            if (Window_Width == 1920)
+            {
+                Window_Width = 1280;
+                Window_Height = 720;
+                Res.Width = Window_Width;
+                Res.Height = Window_Height;
+            }
+            else
+            {
+                Window_Width = 1920;
+                Window_Height = 1080;
+                Res.Width = Window_Width;
+                Res.Height = Window_Height;
+            }
+
         }
         bool CanExecuteInteractCommand(string direction)
         {

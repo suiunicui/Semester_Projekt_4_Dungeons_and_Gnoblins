@@ -13,9 +13,32 @@ namespace FrontEnd_GameLayout.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
+        Resolution Res = Resolution.Instance;
         IGameController game = GameController.Instance;
         private IPageViewModel _currentPageViewModel;
         private List<IPageViewModel> _pageViewModels;
+
+        static int window_Width;
+        public int Window_Width
+        {
+            get { return window_Width; }
+            set
+            {
+                window_Width = value;
+                OnPropertyChanged("Window_Width");
+            }
+        }
+
+        static int window_Height = 1080;
+        public int Window_Height
+        {
+            get { return window_Height; }
+            set
+            {
+                window_Height = value;
+                OnPropertyChanged("Window_Height");
+            }
+        }
 
         public List<IPageViewModel> PageViewModels
         {
@@ -77,6 +100,8 @@ namespace FrontEnd_GameLayout.ViewModels
 
         public MainWindowViewModel()
         {
+            Window_Height = Res.Height;
+            Window_Width = Res.Width;
             // Add available pages and set page
             PageViewModels.Add(new MainMenuViewModel());
             PageViewModels.Add(new RoomViewModel());

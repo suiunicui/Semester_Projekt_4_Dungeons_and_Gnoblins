@@ -14,11 +14,38 @@ namespace FrontEnd_GameLayout.ViewModels
 {
     public class SaveMenuViewModel :BaseViewModel, IPageViewModel
     {
+        Resolution Res = Resolution.Instance;
+
+
+
         public SaveMenuViewModel()
-        {  
-            //getListOfSaves();
+        {
+            getListOfSaves();
+            Window_Width = Res.Width;
+            Window_Height = Res.Height;
         }
 
+        static int window_Width;
+        public int Window_Width
+        {
+            get { return window_Width; }
+            set
+            {
+                window_Width = value;
+                OnPropertyChanged("Window_Width");
+            }
+        }
+
+        static int window_Height = 1080;
+        public int Window_Height
+        {
+            get { return window_Height; }
+            set
+            {
+                window_Height = value;
+                OnPropertyChanged("Window_Height");
+            }
+        }
 
         private async void getListOfSaves()
         {

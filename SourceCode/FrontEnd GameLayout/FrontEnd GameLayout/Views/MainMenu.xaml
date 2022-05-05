@@ -8,8 +8,7 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        d:DesignHeight="1080"
-        d:DesignWidth ="1920">
+        Height="{Binding Window_Height}" Width="{Binding Window_Width}">
 
     <Grid>
         <Grid.RowDefinitions>
