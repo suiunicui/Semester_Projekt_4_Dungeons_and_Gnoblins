@@ -50,6 +50,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _mainMenu ?? (_mainMenu = new RelayCommand(x =>
                 {
+                    game.VisitedRooms.Clear();
                     Mediator.Notify("GoToMainMenu", "");
                 }));
             }
