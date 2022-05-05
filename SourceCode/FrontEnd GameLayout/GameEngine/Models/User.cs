@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Backend_API.Models
+namespace GameEngine.Models
 {
     public class User
     {

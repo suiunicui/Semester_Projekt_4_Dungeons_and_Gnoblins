@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 
-namespace Backend_API.Models
+namespace GameEngine.Models
 {
     public class Save
     {

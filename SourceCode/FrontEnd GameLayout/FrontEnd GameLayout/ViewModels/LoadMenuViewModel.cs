@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 using Prism.Mvvm;
 using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
-using Backend_API.Models.DTO;
-using Backend_API;
+using GameEngine.Models.DTO;
 using Prism.Commands;
 using GameEngine.Implementations;
 

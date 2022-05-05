@@ -1,5 +1,5 @@
 ﻿
-namespace Backend_API.Models
+namespace GameEngine.Models
 {
     public class RoomDescription
     {

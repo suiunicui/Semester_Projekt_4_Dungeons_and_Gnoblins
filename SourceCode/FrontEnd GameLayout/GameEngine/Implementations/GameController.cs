@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel;
-using Backend_API.Models.DTO;
+using GameEngine.Models.DTO;
 using GameEngine.Interfaces;
 
 namespace GameEngine.Implementations;

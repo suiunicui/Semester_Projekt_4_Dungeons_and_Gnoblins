@@ -27,6 +27,9 @@
     <Compile Update="Views\InGameMenu .xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Options.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +41,10 @@
 
   <ItemGroup>
     <Page Update="Views\InGameMenu .xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Options.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>

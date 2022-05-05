@@ -1,4 +1,4 @@
-﻿namespace Backend_API.Models.DTO
+﻿namespace GameEngine.Models.DTO
 {
     public class SaveDTO
     {
