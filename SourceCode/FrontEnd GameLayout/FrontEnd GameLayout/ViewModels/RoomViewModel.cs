@@ -484,15 +484,15 @@ namespace FrontEnd_GameLayout.ViewModels
             return true;
         }
 
-        private ICommand _mainMenu;
+        private ICommand _gameMenu;
 
-        public ICommand MainMenu
+        public ICommand GameMenu
         {
             get
             {
-                return _mainMenu ?? (_mainMenu = new RelayCommand(x =>
+                return _gameMenu ?? (_gameMenu = new RelayCommand(x =>
                 {
-                    Mediator.Notify("GoToMainMenu", "");
+                    Mediator.Notify("GoToInGameMenu", "");
                 }));
             }
         }

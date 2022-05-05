@@ -25,23 +25,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameStart ?? (_gameStart = new RelayCommand(x =>
                 {
-                    game.CurrentLocation.RemovePlayer();
-                    game.CurrentLocation = game.GameMap.Rooms[0];
-                    game.GameMap.Rooms[game.CurrentLocation.Id].AddPlayer(game.CurrentPlayer);
                     Mediator.Notify("GameStart","");
-                }));
-            }
-        }
-
-        private ICommand _gameLoad;
-
-        public ICommand LoadMenu
-        {
-            get
-            {
-                return _gameLoad ?? (_gameLoad = new RelayCommand(x =>
-                {
-                    Mediator.Notify("GoToLoadMenu", "");
                 }));
             }
         }
@@ -58,6 +42,31 @@ namespace FrontEnd_GameLayout.ViewModels
             return true;
         }
 
+        private ICommand _mainMenu;
+
+        public ICommand MainMenu
+        {
+            get
+            {
+                return _mainMenu ?? (_mainMenu = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToMainMenu", "");
+                }));
+            }
+        }
+
+        private ICommand _saveMenu;
+
+        public ICommand SaveMenu
+        {
+            get
+            {
+                return _saveMenu ?? (_saveMenu = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToSaveMenu", "");
+                }));
+            }
+        }
     }
 }
 

@@ -17,7 +17,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
         public LoadMenuViewModel()
         {  
-            getListOfSaves();
+            //getListOfSaves();
         }
 
 
