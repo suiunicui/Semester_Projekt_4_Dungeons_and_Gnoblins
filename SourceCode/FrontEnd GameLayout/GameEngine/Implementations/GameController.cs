@@ -10,6 +10,8 @@ public class GameController : IGameController
     public ILocation CurrentLocation { get; set; }
     public Player CurrentPlayer { get; set; }
 
+    public List<uint> VisitedRooms { get; set; } = new List<uint>();
+
     private static volatile IGameController instance;
     public GameController(IMapCreator mapCreator)
     {
