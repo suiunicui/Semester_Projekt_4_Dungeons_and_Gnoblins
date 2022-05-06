@@ -12,7 +12,7 @@ namespace FrontEnd_GameLayout.Helper_classes
         public int Height { get; }
         public string Name { get; }
 
-        public Resolution(int height, int width)
+        public Resolution(int width, int height)
         {
             Width = width;
             Height = height;
