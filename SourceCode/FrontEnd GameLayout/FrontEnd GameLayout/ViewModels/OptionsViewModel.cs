@@ -17,14 +17,77 @@ namespace FrontEnd_GameLayout.ViewModels
 
         IGameController game = GameController.Instance;
         ScreenInfo Res = ScreenInfo.Instance;
-
-
+        public List<Resolution> Resolutions { get; set; } = new List<Resolution>();
 
         public OptionsViewModel()
         {
             Window_Width = Res.Width;
             Window_Height = Res.Height;
+            SliderVal = Res.UselessSlider;
+            Resolutions.Add(new Resolution(1080, 1920));
+            Resolutions.Add(new Resolution(720, 1280));
+            if(Window_Height == 1080)
+            {
+                ChosenResolution = Resolutions[0];
+            }
+            else
+            {
+                ChosenResolution = Resolutions[1];
+            }
+
         }
+
+        #region Properties
+
+        Resolution _chosenResolution;
+
+        public Resolution ChosenResolution
+        {
+            get { return _chosenResolution; }
+            set
+            {
+                _chosenResolution = value;
+                OnPropertyChanged("ChosenResolution");
+            }
+        }
+
+
+        int _sliderVal;
+
+        public int SliderVal
+        {
+            get { return _sliderVal; }
+            set 
+            { 
+                _sliderVal = value;
+                OnPropertyChanged("SliderVal");
+            }
+        }
+
+        int _chosenWindowHeight;
+
+        public int ChoosenWindowHeight
+        {
+            get { return _chosenWindowHeight; }
+            set
+            {
+                _chosenWindowHeight = value;
+                OnPropertyChanged("ChoosenWindowHeight");
+            }
+        }
+
+        int _chosenWindowWidth;
+
+        public int ChoosenWindowWidth
+        {
+            get { return _chosenWindowWidth; }
+            set
+            {
+                _chosenWindowWidth = value;
+                OnPropertyChanged("ChoosenWindowHeight");
+            }
+        }
+
 
         static int window_Width;
         public int Window_Width
@@ -47,6 +110,20 @@ namespace FrontEnd_GameLayout.ViewModels
                 OnPropertyChanged("Window_Height");
             }
         }
+        #endregion
+
+        #region Methods
+
+        void saveSettings()
+        {
+            Res.UselessSlider = SliderVal;
+            Res.Width = ChosenResolution.Width;
+            Res.Height = ChosenResolution.Height;
+        }
+
+        #endregion
+
+        #region Commands
 
         private ICommand _applyCommand;
 
@@ -56,7 +133,9 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _applyCommand ?? (_applyCommand = new RelayCommand(x =>
                 {
-                    Mediator.Notify("GoToSettingsMenu", "");
+                    saveSettings(); 
+                    Window_Width = Res.Width;
+                    Window_Height = Res.Height;
                 }));
             }
         }
@@ -82,7 +161,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _backCommand ?? (_backCommand = new RelayCommand(x =>
                 {
-                    if (ScreenInfo.Instance.LastScreen == "InGameMenu")
+                    if (Res.LastScreen == "InGameMenu")
                     {
                         Mediator.Notify("GoToInGameMenu", "");
                     }
@@ -96,6 +175,8 @@ namespace FrontEnd_GameLayout.ViewModels
 
             }
         }
+
+        #endregion
     }
 }
 

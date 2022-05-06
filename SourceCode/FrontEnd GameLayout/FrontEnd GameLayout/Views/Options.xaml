@@ -8,25 +8,23 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        d:DesignHeight="1080" d:DesignWidth="1920"
+        d:DesignHeight="720" d:DesignWidth="1280"
         Height="{Binding Window_Height}"
         Width ="{Binding Window_Width}">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="6*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="144*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="104*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="24*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -42,17 +40,18 @@
                    TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}"/>
 
 
-        <Button Grid.Column="1" Grid.Row="11" Style="{StaticResource buttonStyle}"
+        <Button Grid.Column="1" Grid.Row="9" Style="{StaticResource buttonStyle}"
                 Content="Default" Command="{Binding ResetSettings}"/>
-        <Button Grid.Column="3" Grid.Row="11" Style="{StaticResource buttonStyle}"
-                Content="Apply" Command="{Binding ApplyCommand}"/>
-        <Button Grid.Column="5" Grid.Row="11" Style="{StaticResource buttonStyle}"
+        <Button Grid.Column="2" Grid.Row="9" Style="{StaticResource buttonStyle}"
+                Content="Apply" Command="{Binding ApplyCommand}" Grid.ColumnSpan="3"/>
+        <Button Grid.Column="5" Grid.Row="9" Style="{StaticResource buttonStyle}"
                 Content="Back" Command="{Binding BackCommand}"/>
         <TextBlock Grid.Column="2" Grid.Row="3" Text="Resolution" 
-                   TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}"/>
-        <Menu x:Name="resolutionSelect" Grid.Column="2" Grid.Row="5">
-            <MenuItem Header="1080x1920"/>
-            <MenuItem Header="720x1280"/>
-        </Menu>
+                   TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}" />
+        <ComboBox Grid.Column="2" Grid.Row="4" ItemsSource="{Binding Resolutions}" SelectedItem="{Binding ChosenResolution}" DisplayMemberPath="Name"/>
+
+        <TextBlock Grid.Column="2" Grid.Row="6" Text="Adjust slider to adjust slider" 
+                   TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}" TextWrapping="WrapWithOverflow"/>
+        <Slider x:Name="slider" Grid.Row="7" Grid.Column="2" Maximum="100" VerticalAlignment="Center" Value="{Binding SliderVal}"/>
     </Grid>
 </UserControl>

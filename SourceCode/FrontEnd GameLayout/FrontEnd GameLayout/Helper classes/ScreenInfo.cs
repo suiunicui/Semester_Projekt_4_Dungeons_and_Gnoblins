@@ -11,6 +11,7 @@ namespace FrontEnd_GameLayout.Helper_classes
         public int Width { get; set; }
         public int Height { get; set; }
         public string LastScreen { get; set; }
+        public int UselessSlider { get; set; }
 
         private static volatile ScreenInfo instance;
 
@@ -19,6 +20,7 @@ namespace FrontEnd_GameLayout.Helper_classes
             Width = 1920;
             Height = 1080;
             LastScreen = "MainMenu";
+            UselessSlider = 0;
         }
         public static ScreenInfo Instance
         {
