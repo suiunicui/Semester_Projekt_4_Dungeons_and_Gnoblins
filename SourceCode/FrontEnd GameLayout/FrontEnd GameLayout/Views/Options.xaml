@@ -48,7 +48,6 @@
                 Content="Back" Command="{Binding BackCommand}"/>
         <TextBlock Grid.Column="2" Grid.Row="3" Text="Resolution" 
                    TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}" />
-        <ComboBox Grid.Column="2" Grid.Row="4" ItemsSource="{Binding Resolutions}" SelectedItem="{Binding ChosenResolution}" DisplayMemberPath="Name"/>
         <TextBlock Grid.Column="4" Grid.Row="3" Text="Music Playing:" 
                    TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}" HorizontalAlignment="Right" Margin="0,0,10,0" />
         <CheckBox x:Name="Pause_Music_Button" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Grid.Column="5" IsChecked="{Binding MusicPlaying}">
