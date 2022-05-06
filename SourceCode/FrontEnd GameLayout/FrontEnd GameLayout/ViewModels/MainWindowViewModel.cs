@@ -8,6 +8,7 @@ using System.ComponentModel;
 using FrontEnd_GameLayout.Helper_classes;
 using GameEngine.Implementations;
 using GameEngine.Interfaces;
+using System.Windows.Media;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -17,6 +18,7 @@ namespace FrontEnd_GameLayout.ViewModels
         IGameController game = GameController.Instance;
         private IPageViewModel _currentPageViewModel;
         private List<IPageViewModel> _pageViewModels;
+
 
         static int window_Width;
         public int Window_Width
@@ -104,8 +106,11 @@ namespace FrontEnd_GameLayout.ViewModels
 
         public MainWindowViewModel()
         {
+            Res.Toggle_Music();
+            //Set Up the resolution of the views
             Window_Height = Res.Height;
             Window_Width = Res.Width;
+
             // Add available pages and set page
             PageViewModels.Add(new MainMenuViewModel());
             PageViewModels.Add(new RoomViewModel());

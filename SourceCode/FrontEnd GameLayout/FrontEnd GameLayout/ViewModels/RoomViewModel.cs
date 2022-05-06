@@ -23,18 +23,18 @@ namespace FrontEnd_GameLayout.ViewModels
 
         IGameController game = GameController.Instance;
         ScreenInfo Res = ScreenInfo.Instance;
+        
+        public RoomViewModel()
+            {
+                Description = game.CurrentLocation.Description;
+                loadMap();
+                MovePlayerOnMap();
+                Window_Height = Res.Height;
+                Window_Width = Res.Width;
 
-    public RoomViewModel()
-        {
-            Description = game.CurrentLocation.Description;
-            loadMap();
-            MovePlayerOnMap();
-            Window_Height = Res.Height;
-            Window_Width = Res.Width;
-        }
+            }
 
         #region Properties
-
 
 
 
@@ -609,21 +609,13 @@ namespace FrontEnd_GameLayout.ViewModels
         _interactCommand ?? (_interactCommand = new DelegateCommand<string>(ExecuteInteractCommand, CanExecuteInteractCommand));
         void ExecuteInteractCommand(string direction)
         {
-            if (Window_Width == 1920)
-            {
-                Window_Width = 1280;
-                Window_Height = 720;
-                Res.Width = Window_Width;
-                Res.Height = Window_Height;
-            }
+            if (Res.MusicPlaying)
+                Res.MusicPlaying = false;
             else
             {
-                Window_Width = 1920;
-                Window_Height = 1080;
-                Res.Width = Window_Width;
-                Res.Height = Window_Height;
+                Res.MusicPlaying = true;
             }
-
+            Res.Toggle_Music();
         }
         bool CanExecuteInteractCommand(string direction)
         {

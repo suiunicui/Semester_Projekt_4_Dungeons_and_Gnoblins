@@ -17,6 +17,7 @@ namespace FrontEnd_GameLayout.ViewModels
 
         IGameController game = GameController.Instance;
         ScreenInfo Res = ScreenInfo.Instance;
+        
         public List<Resolution> Resolutions { get; set; } = new List<Resolution>();
 
         public OptionsViewModel()
@@ -24,6 +25,7 @@ namespace FrontEnd_GameLayout.ViewModels
             Window_Width = Res.Width;
             Window_Height = Res.Height;
             SliderVal = Res.UselessSlider;
+            VolumeSliderVal = Res.Volume;
             Resolutions.Add(new Resolution(1080, 1920));
             Resolutions.Add(new Resolution(720, 1280));
             if(Window_Height == 1080)
@@ -61,6 +63,32 @@ namespace FrontEnd_GameLayout.ViewModels
             { 
                 _sliderVal = value;
                 OnPropertyChanged("SliderVal");
+            }
+        }
+
+        bool _musicPlaying = true;
+
+        public bool MusicPlaying
+        {
+            get { return _musicPlaying; }
+            set
+            {
+                _musicPlaying = value;
+                Res.MusicPlaying = value;
+                Res.Toggle_Music();
+            }
+        }
+
+        double _volumeSliderVal;
+
+        public double VolumeSliderVal 
+        { 
+            get { return _volumeSliderVal; }
+            set
+            {
+                _volumeSliderVal = value;
+                Res.Volume = value;
+                OnPropertyChanged("VolumeSliderVal");
             }
         }
 
