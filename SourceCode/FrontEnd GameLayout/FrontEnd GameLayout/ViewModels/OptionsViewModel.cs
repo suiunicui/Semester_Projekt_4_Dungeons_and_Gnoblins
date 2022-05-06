@@ -12,11 +12,11 @@ using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
-    public class OptionsViewModel :BaseViewModel, IPageViewModel
+    public class OptionsViewModel : BaseViewModel, IPageViewModel
     {
 
         IGameController game = GameController.Instance;
-        Resolution Res = Resolution.Instance;
+        ScreenInfo Res = ScreenInfo.Instance;
 
 
 
@@ -48,47 +48,54 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private ICommand _gameStart;
+        private ICommand _applyCommand;
 
-        public ICommand GameStart
+        public ICommand ApplyCommand
         {
             get
             {
-                return _gameStart ?? (_gameStart = new RelayCommand(x =>
+                return _applyCommand ?? (_applyCommand = new RelayCommand(x =>
                 {
-                    game.CurrentLocation.RemovePlayer();
-                    game.CurrentLocation = game.GameMap.Rooms[0];
-                    game.GameMap.Rooms[game.CurrentLocation.Id].AddPlayer(game.CurrentPlayer);
-                    Mediator.Notify("GameStart","");
+                    Mediator.Notify("GoToSettingsMenu", "");
                 }));
             }
         }
 
-        private ICommand _gameLoad;
+        private ICommand _resetSettings;
 
-        public ICommand LoadMenu
+        public ICommand ResetSettings
         {
             get
             {
-                return _gameLoad ?? (_gameLoad = new RelayCommand(x =>
+                return _resetSettings ?? (_resetSettings = new RelayCommand(x =>
                 {
-                    Mediator.Notify("GoToLoadMenu", "");
+                    //Mediator.Notify("", "");
                 }));
             }
         }
 
-        private DelegateCommand _exitGameCommand;
-        public DelegateCommand ExitGameCommand =>
-        _exitGameCommand ?? (_exitGameCommand = new DelegateCommand(ExecuteExitGameCommand, CanExecuteExitGameCommand));
-        void ExecuteExitGameCommand()
-        {
-            System.Windows.Application.Current.Shutdown();
-        }
-        bool CanExecuteExitGameCommand()
-        {
-            return true;
-        }
+        private ICommand _backCommand;
 
+        public ICommand BackCommand
+        {
+            get
+            {
+                return _backCommand ?? (_backCommand = new RelayCommand(x =>
+                {
+                    if (ScreenInfo.Instance.LastScreen == "InGameMenu")
+                    {
+                        Mediator.Notify("GoToInGameMenu", "");
+                    }
+                    else
+                    {
+                        Mediator.Notify("GoToMainMenu", "");
+                    }
+
+                }));
+
+
+            }
+        }
     }
 }
 

@@ -8,35 +8,51 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
+        d:DesignHeight="1080" d:DesignWidth="1920"
         Height="{Binding Window_Height}"
         Width ="{Binding Window_Width}">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="14*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="6*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
+            <RowDefinition Height="4*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
+            <RowDefinition Height="4*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="1" Grid.Row="4" Style="{StaticResource buttonStyle}"
-                Content="New Game" Command="{Binding GameStart}"/>
+        <TextBlock Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Text="Dungeons and Gnoblins" 
+                   TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}"/>
 
-        <Button Grid.Column="1" Grid.Row="6" Style="{StaticResource buttonStyle}"
-                Content="Load Game" Command="{Binding LoadMenu}"/>
-        <Button Grid.Column="1" Grid.Row="8" Style="{StaticResource buttonStyle}"
-                Content="Exit Game" Command="{Binding ExitGameCommand}"/>
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}"/>
+
+        <Button Grid.Column="1" Grid.Row="11" Style="{StaticResource buttonStyle}"
+                Content="Default" Command="{Binding ResetSettings}"/>
+        <Button Grid.Column="3" Grid.Row="11" Style="{StaticResource buttonStyle}"
+                Content="Apply" Command="{Binding ApplyCommand}"/>
+        <Button Grid.Column="5" Grid.Row="11" Style="{StaticResource buttonStyle}"
+                Content="Back" Command="{Binding BackCommand}"/>
+        <TextBlock Grid.Column="2" Grid.Row="3" Text="Resolution" 
+                   TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}"/>
+        <Menu x:Name="resolutionSelect" Grid.Column="2" Grid.Row="5">
+            <MenuItem Header="1080x1920"/>
+            <MenuItem Header="720x1280"/>
+        </Menu>
     </Grid>
 </UserControl>

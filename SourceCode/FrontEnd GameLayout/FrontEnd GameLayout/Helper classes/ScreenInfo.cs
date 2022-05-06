@@ -6,25 +6,27 @@ using System.Threading.Tasks;
 
 namespace FrontEnd_GameLayout.Helper_classes
 {
-    public class Resolution
+    public class ScreenInfo
     {
         public int Width { get; set; }
         public int Height { get; set; }
+        public string LastScreen { get; set; }
 
-        private static volatile Resolution instance;
+        private static volatile ScreenInfo instance;
 
-        public Resolution()
+        public ScreenInfo()
         {
             Width = 1920;
             Height = 1080;
+            LastScreen = "MainMenu";
         }
-        public static Resolution Instance
+        public static ScreenInfo Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new Resolution();
+                    instance = new ScreenInfo();
                 }
                 return instance;
             }

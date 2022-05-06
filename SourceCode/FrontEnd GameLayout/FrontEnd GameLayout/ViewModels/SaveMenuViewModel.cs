@@ -14,13 +14,13 @@ namespace FrontEnd_GameLayout.ViewModels
 {
     public class SaveMenuViewModel :BaseViewModel, IPageViewModel
     {
-        Resolution Res = Resolution.Instance;
+        ScreenInfo Res = ScreenInfo.Instance;
 
 
 
         public SaveMenuViewModel()
         {
-            getListOfSaves();
+            //getListOfSaves();
             Window_Width = Res.Width;
             Window_Height = Res.Height;
         }

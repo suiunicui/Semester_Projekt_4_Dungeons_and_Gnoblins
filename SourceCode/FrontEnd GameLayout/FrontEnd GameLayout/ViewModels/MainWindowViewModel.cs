@@ -13,7 +13,7 @@ namespace FrontEnd_GameLayout.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
-        Resolution Res = Resolution.Instance;
+        ScreenInfo Res = ScreenInfo.Instance;
         IGameController game = GameController.Instance;
         private IPageViewModel _currentPageViewModel;
         private List<IPageViewModel> _pageViewModels;
@@ -97,6 +97,10 @@ namespace FrontEnd_GameLayout.ViewModels
         {
             ChangeViewModel(PageViewModels[4]);
         }
+        private void OnGoToSettingsMenu(object obj)
+        {
+            ChangeViewModel(PageViewModels[5]);
+        }
 
         public MainWindowViewModel()
         {
@@ -108,6 +112,7 @@ namespace FrontEnd_GameLayout.ViewModels
             PageViewModels.Add(new LoadMenuViewModel());
             PageViewModels.Add(new SaveMenuViewModel());
             PageViewModels.Add(new InGameMenuViewModel());
+            PageViewModels.Add(new OptionsViewModel());
             CurrentPageViewModel = PageViewModels[0];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
@@ -115,6 +120,7 @@ namespace FrontEnd_GameLayout.ViewModels
             Mediator.Subscribe("GoToLoadMenu", OnGoToLoadMenu);
             Mediator.Subscribe("GoToSaveMenu", OnGoToSaveMenu);
             Mediator.Subscribe("GoToInGameMenu", OnGoToInGameMenu);
+            Mediator.Subscribe("GoToSettingsMenu", OnGoToSettingsMenu);
         }
     }
 }

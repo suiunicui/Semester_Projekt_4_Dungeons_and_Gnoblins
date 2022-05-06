@@ -22,7 +22,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
 
         IGameController game = GameController.Instance;
-        Resolution Res = Resolution.Instance;
+        ScreenInfo Res = ScreenInfo.Instance;
 
     public RoomViewModel()
         {
