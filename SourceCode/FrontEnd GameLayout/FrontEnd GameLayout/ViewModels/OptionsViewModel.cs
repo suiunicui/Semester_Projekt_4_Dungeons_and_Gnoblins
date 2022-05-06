@@ -94,31 +94,6 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        int _chosenWindowHeight;
-
-        public int ChoosenWindowHeight
-        {
-            get { return _chosenWindowHeight; }
-            set
-            {
-                _chosenWindowHeight = value;
-                OnPropertyChanged("ChoosenWindowHeight");
-            }
-        }
-
-        int _chosenWindowWidth;
-
-        public int ChoosenWindowWidth
-        {
-            get { return _chosenWindowWidth; }
-            set
-            {
-                _chosenWindowWidth = value;
-                OnPropertyChanged("ChoosenWindowHeight");
-            }
-        }
-
-
         static int window_Width;
         public int Window_Width
         {
@@ -178,7 +153,9 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _resetSettings ?? (_resetSettings = new RelayCommand(x =>
                 {
-                    //Mediator.Notify("", "");
+                    SliderVal = 0;
+                    ChosenResolution = Resolutions[0];
+                    VolumeSliderVal = 0.5;
                 }));
             }
         }
