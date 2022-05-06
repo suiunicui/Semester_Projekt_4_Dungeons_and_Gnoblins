@@ -57,6 +57,9 @@
             </CheckBox.LayoutTransform>
         </CheckBox>
 
+        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle}" Grid.Column="2" Grid.Row="4" Style="{DynamicResource ComboBoxStyle1}"
+                  ItemsSource="{Binding Resolutions}" SelectedItem="{Binding ChosenResolution}" DisplayMemberPath="Name"/>
+
         <TextBlock Grid.Column="2" Grid.Row="6" Text="Adjust slider to adjust slider" 
                    TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}" TextWrapping="WrapWithOverflow"/>
         <Slider x:Name="Slider" Grid.Row="7" Grid.Column="2" Maximum="100" VerticalAlignment="Center" Value="{Binding SliderVal}"/>
