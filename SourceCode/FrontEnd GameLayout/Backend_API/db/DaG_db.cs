@@ -73,7 +73,7 @@ namespace Backend_API.db
         }
 
 
-
+        public DbSet<VisitedRooms> VisitedRooms { get; set; }
 
         public DbSet<RoomDescription> RoomDescriptions { get; set; }
 
