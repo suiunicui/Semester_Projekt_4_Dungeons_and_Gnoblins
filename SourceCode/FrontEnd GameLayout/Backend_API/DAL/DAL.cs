@@ -24,6 +24,21 @@ namespace Backend_API.DAL
 
         }
 
+        public void DeleteGame(int SaveId)
+        {
+            List<VisitedRooms> visitedRooms = _context.VisitedRooms.Where(r => r.SaveId == SaveId).ToList();
+
+            Save Save = _context.Saves.Where(i => i.ID == SaveId).FirstOrDefault();
+
+            _context.Saves.Remove(Save);
+
+            foreach(VisitedRooms room in visitedRooms)
+            {
+                _context.VisitedRooms.Remove(room);
+            }
+
+        }
+
 
         public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO saveDTO)
         {
@@ -61,11 +76,11 @@ namespace Backend_API.DAL
 
         public async Task<ActionResult<SaveDTO>> GetSaveByID(int SaveId)
         { 
-            var save = await _context.Saves.FindAsync(SaveId);
+            Save save = await _context.Saves.FindAsync(SaveId);
 
-            var visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
+            List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
 
-            var SaveDTO = new SaveDTO()
+            SaveDTO SaveDTO = new SaveDTO()
             {
                 SaveName = save.SaveName,
                 ID = save.ID,
@@ -73,7 +88,7 @@ namespace Backend_API.DAL
                 VisitedRooms = new List<uint>(),
             };
 
-            foreach (var r in visitedList)
+            foreach (VisitedRooms r in visitedList)
             {
                 SaveDTO.VisitedRooms.Add(r.VistedRoomId);
             }
