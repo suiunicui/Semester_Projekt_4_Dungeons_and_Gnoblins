@@ -35,6 +35,17 @@ namespace Backend_API.DAL
             };
 
             _context.Saves.Add(newSave);
+
+            foreach (uint r in saveDTO.VisitedRooms)
+            {
+                var room = new VisitedRooms()
+                {
+                    VistedRoomId = r,
+                    SaveId = newSave.ID
+                };
+
+                _context.VisitedRooms.Add(room);
+            }
             await _context.SaveChangesAsync();
 
             return newSave;
