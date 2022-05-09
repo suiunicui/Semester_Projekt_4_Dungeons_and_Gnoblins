@@ -12,7 +12,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+SourceCode/FrontEnd GameLayout/FrontEnd GameLayout/bin
 SourceCode/FrontEnd GameLayout/GameEngineLibrary/bin
 SourceCode/FrontEnd GameLayout/GameEngineLibrary/obj
 SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/bin
