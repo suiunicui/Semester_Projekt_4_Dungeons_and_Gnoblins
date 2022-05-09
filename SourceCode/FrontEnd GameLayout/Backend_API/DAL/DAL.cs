@@ -38,17 +38,17 @@ namespace Backend_API.DAL
 
             await _context.SaveChangesAsync();
 
-            var save = _context.Saves.Where(i => i.ID == saveDTO.ID).First();
+            var save = _context.Saves.Where(i => i.SaveName == saveDTO.SaveName).First();
 
             foreach (uint r in saveDTO.VisitedRooms)
             {
-                var room = new VisitedRooms()
+                var Visitedroom = new VisitedRooms()
                 {
                     VistedRoomId = r,
                     SaveId = save.ID
                 };
 
-                _context.VisitedRooms.Add(room);
+                _context.VisitedRooms.Add(Visitedroom);
             }
 
             await _context.SaveChangesAsync();
