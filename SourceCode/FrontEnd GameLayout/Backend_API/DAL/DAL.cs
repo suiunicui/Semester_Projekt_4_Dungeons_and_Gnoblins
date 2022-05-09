@@ -24,6 +24,21 @@ namespace Backend_API.DAL
 
         }
 
+        public void DeleteGame(int SaveId)
+        {
+            List<VisitedRooms> visitedRooms = _context.VisitedRooms.Where(r => r.SaveId == SaveId).ToList();
+
+            Save Save = _context.Saves.Where(i => i.ID == SaveId).FirstOrDefault();
+
+            _context.Saves.Remove(Save);
+
+            foreach(VisitedRooms room in visitedRooms)
+            {
+                _context.VisitedRooms.Remove(room);
+            }
+
+        }
+
 
         public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO saveDTO)
         {
