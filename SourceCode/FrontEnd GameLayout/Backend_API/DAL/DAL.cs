@@ -60,18 +60,18 @@ namespace Backend_API.DAL
 
         public async Task<ActionResult<SaveDTO>> GetSaveByID(int SaveId)
         { 
-            var save = await _context.Saves.FindAsync(SaveId);
+            Save save = await _context.Saves.FindAsync(SaveId);
 
-            var visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
+            List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
 
-            var SaveDTO = new SaveDTO()
+            SaveDTO SaveDTO = new SaveDTO()
             {
                 SaveName = save.SaveName,
                 ID = save.ID,
                 RoomId = save.RoomID,
             };
 
-            foreach (var r in visitedList)
+            foreach (VisitedRooms r in visitedList)
             {
                 SaveDTO.VisitedRooms.Add(r.VistedRoomId);
             }
