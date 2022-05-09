@@ -20,7 +20,7 @@ namespace GameEngine.Models
 
         public string SaveName { get; set; }
 
-
+        public List<uint> VisitedRooms { get; set; }
 
     }
 }

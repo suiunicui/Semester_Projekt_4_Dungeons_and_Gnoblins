@@ -1,4 +1,5 @@
-﻿using GameEngine.Exceptions;
+﻿using Backend_API.Models;
+using GameEngine.Exceptions;
 using GameEngine.Interfaces;
 
 namespace GameEngine.Implementations;
@@ -8,7 +9,7 @@ public class Room : ILocation
     public Room(uint roomId)
     {
         Id = roomId;
-        Description += "Room Id: " + (Id + 1);
+       
     }
 
 

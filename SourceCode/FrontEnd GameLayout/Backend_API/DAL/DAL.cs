@@ -70,6 +70,7 @@ namespace Backend_API.DAL
                 SaveName = save.SaveName,
                 ID = save.ID,
                 RoomId = save.RoomID,
+                VisitedRooms = new List<uint>(),
             };
 
             foreach (var r in visitedList)
@@ -92,10 +93,10 @@ namespace Backend_API.DAL
         }
 
 
-        public RoomDescription GetRoomDescription(int RDID)
+        public async Task<ActionResult<RoomDescription>> GetRoomDescription(int RDID)
         {
 
-            var room = _context.RoomDescriptions.Where(i => i.RoomDescriptionID == RDID).First();
+            var room = _context.RoomDescriptions.Where(i => i.RoomDescriptionID == RDID).FirstOrDefault();
 
             if (room == null)
             {

@@ -7,5 +7,7 @@
         public int RoomId { get; set; }
 
         public string SaveName { get; set; }
+
+        public List<uint> VisitedRooms { get; set; }
     }
 }

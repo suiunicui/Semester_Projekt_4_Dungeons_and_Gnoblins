@@ -29,7 +29,7 @@ namespace FrontEnd_GameLayout.Helper_classes
         {
             MusicBot = new MediaPlayer();
             //Start the MusicPlayer With the file located in bin/debug/net6.0 or bin/release/net6.0
-            MusicBot.Open(new Uri(String.Format("{0}\\Music.wav", AppDomain.CurrentDomain.BaseDirectory)));
+            MusicBot.Open(new Uri(String.Format("{0}\\Music\\Music.wav", AppDomain.CurrentDomain.BaseDirectory)));
             //Set up event for loop music
             MusicBot.MediaEnded += new EventHandler(Media_Ended);
 

@@ -29,7 +29,7 @@ namespace Backend_API.Controllers
         // GET: Save
         [HttpGet]
 
-        public async Task<ActionResult<Save>> GetSave(int id)
+        public async Task<ActionResult<SaveDTO>> GetSave(int id)
         {
             var save = _save.GetSaveByID(id);
             if(save == null)
@@ -46,6 +46,14 @@ namespace Backend_API.Controllers
         public async Task<ActionResult<List<Save>>> GetListOfSave()
         {
             return await _save.GetAllSaves();
+
+        }
+
+        [HttpGet("Get_Room_Description")]
+
+        public async Task<ActionResult<RoomDescription>> GetRoomDescription(int id)
+        {
+            return await _save.GetRoomDescription(id);
 
         }
 

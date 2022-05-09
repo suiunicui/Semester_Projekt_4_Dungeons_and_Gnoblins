@@ -2,6 +2,7 @@
 using System.Text.Json;
 using GameEngine.Models.DTO;
 using GameEngine.Interfaces;
+using Backend_API.Models;
 
 namespace GameEngine.Implementations;
 
@@ -9,6 +10,8 @@ public class BackEndController : IBackEndController
  {
         public string _urlPostSave;
         public string _urlGetSave;
+        public string _urlGetDescription;
+    private RoomDescription _roomDescription;
         private readonly HttpClient _httpClient;
         private SaveDTO _save;
 
@@ -43,6 +46,32 @@ public class BackEndController : IBackEndController
 
             return _save;
         }
+
+    public async Task<RoomDescription> GetRoomDescriptionAsync(int id)
+    {
+        _urlGetDescription = $"https://localhost:7046/api/Save/Get_Room_Description?id={id}";
+        try
+        {
+            string responsBody = await _httpClient.GetStringAsync(_urlGetDescription);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+
+            };
+
+            _roomDescription = JsonSerializer.Deserialize<RoomDescription>(responsBody, options);
+
+
+        }
+        catch (HttpRequestException e)
+        {
+            Console.WriteLine("Exception caught");
+            Console.WriteLine("Message: {0}", e.Message);
+            throw;
+        }
+
+        return _roomDescription;
+    }
 
     public async Task<List<SaveDTO>> GetListOfSave()
     {

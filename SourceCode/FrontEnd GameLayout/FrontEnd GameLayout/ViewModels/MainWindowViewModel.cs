@@ -126,6 +126,8 @@ namespace FrontEnd_GameLayout.ViewModels
             Mediator.Subscribe("GoToSaveMenu", OnGoToSaveMenu);
             Mediator.Subscribe("GoToInGameMenu", OnGoToInGameMenu);
             Mediator.Subscribe("GoToSettingsMenu", OnGoToSettingsMenu);
+
+            game.GetRoomDescriptionAsync();
         }
     }
 }
