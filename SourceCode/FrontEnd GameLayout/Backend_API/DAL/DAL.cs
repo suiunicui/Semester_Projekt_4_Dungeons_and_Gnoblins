@@ -42,13 +42,13 @@ namespace Backend_API.DAL
 
             foreach (uint r in saveDTO.VisitedRooms)
             {
-                var room = new VisitedRooms()
+                var Visitedroom = new VisitedRooms()
                 {
                     VistedRoomId = r,
                     SaveId = save.ID
                 };
 
-                _context.VisitedRooms.Add(room);
+                _context.VisitedRooms.Add(Visitedroom);
             }
 
             await _context.SaveChangesAsync();
