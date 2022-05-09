@@ -39,6 +39,7 @@ public class GameController : IGameController
         SaveDTO Game = new SaveDTO();
         Game.RoomId = (int) CurrentLocation.Id;
         Game.SaveName = "Default";
+        Game.VisitedRooms = VisitedRooms;
         newSave.PostSaveAsync(Game);
     }
 
@@ -49,6 +50,7 @@ public class GameController : IGameController
         SaveDTO Game = await SaveLoader.GetSaveAsync(id);
         CurrentLocation.RemovePlayer();
         CurrentLocation = GameMap.Rooms[Game.RoomId];
+        VisitedRooms = Game.VisitedRooms;
         GameMap.Rooms[CurrentLocation.Id].AddPlayer(CurrentPlayer);
     }
 
