@@ -22,5 +22,7 @@ namespace Backend_API.Models
 
 
 
+        public List<VisitedRooms> VisitedRooms { get; set; }
+
     }
 }

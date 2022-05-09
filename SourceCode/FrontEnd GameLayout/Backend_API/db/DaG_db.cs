@@ -12,17 +12,39 @@ namespace Backend_API.db
         {
             modelBuilder.Entity<Save>()
                 .HasKey(k => k.ID);
-
+                
             modelBuilder.Entity<RoomDescription>()
                 .HasKey(x => x.RoomDescriptionID);
 
+            modelBuilder.Entity<VisitedRooms>()
+                .HasKey(x => new {x.SaveId, x.VistedRoomId});
+
+
+            modelBuilder.Entity<VisitedRooms>()
+                .HasOne<Save>(x => x.Save)
+                .WithMany(y => y.VisitedRooms)
+                .HasForeignKey(x => x.SaveId);
+
+
+            modelBuilder.Entity<VisitedRooms>()
+                .HasData(
+                new VisitedRooms { SaveId = 1, VistedRoomId = 1 },
+                new VisitedRooms { SaveId = 1, VistedRoomId = 2 },
+                new VisitedRooms { SaveId = 1, VistedRoomId = 3 },
+                new VisitedRooms { SaveId = 1, VistedRoomId = 4 },
+                new VisitedRooms { SaveId = 1, VistedRoomId = 5 },
+                new VisitedRooms { SaveId = 1, VistedRoomId = 6 },
+                new VisitedRooms { SaveId = 1, VistedRoomId = 7 }
+
+                );
+
             modelBuilder.Entity<Save>()
                 .HasData(
-                new Save { RoomID = 14, ID = 2, SaveName = "LuyenGame1" },
+                new Save { RoomID = 14, ID = 2, SaveName = "LuyenGame1"  },
                 new Save { RoomID = 12, ID = 1, SaveName = "AndersGame2" },
                 new Save { RoomID = 3, ID = 3, SaveName = "MortenGame" },
-                new Save { RoomID = 4, ID = 4, SaveName = "ODGame" },
-                new Save { RoomID = 5, ID = 5, SaveName = "SuneGame" }
+                new Save { RoomID = 4, ID = 4, SaveName = "ODGame"},
+                new Save { RoomID = 5, ID = 5, SaveName = "SuneGame"}
                 );
 
             modelBuilder.Entity<RoomDescription>()
