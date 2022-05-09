@@ -53,7 +53,7 @@ namespace Backend_API.Controllers
         // Post: Save
         [HttpPost]
 
-        public async Task<ActionResult<Save>> PostSave(SaveDTO saveDTO)
+        public async Task<ActionResult<SaveDTO>> PostSave(SaveDTO saveDTO)
         {
 
             return await _save.SaveGame(saveDTO);
