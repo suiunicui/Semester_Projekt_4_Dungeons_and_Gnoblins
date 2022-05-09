@@ -12,12 +12,12 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-!FrontEnd GameLayout/FrontEnd GameLayout/bin/Debug/net6.0-windows/Music/Music.wav
-!SourceCode/FrontEnd GameLayout/FrontEnd GameLayout/bin/Debug/net6.0-windows/Music/Music.wav
+
 SourceCode/FrontEnd GameLayout/GameEngineLibrary/bin
 SourceCode/FrontEnd GameLayout/GameEngineLibrary/obj
 SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/bin
 SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/obj
+!SourceCode/FrontEnd GameLayout/FrontEnd GameLayout/bin/Debug/net6.0-windows/Music/Music.wav
 
 
 # Mono auto generated files
@@ -25,6 +25,7 @@ mono_crash.*
 
 # Build results
 [Dd]ebugPublic/
+[Rr]elease/
 [Rr]eleases/
 x64/
 x86/
