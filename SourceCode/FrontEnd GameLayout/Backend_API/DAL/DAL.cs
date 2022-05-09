@@ -25,13 +25,14 @@ namespace Backend_API.DAL
         }
 
 
-        public async Task<ActionResult<Save>> SaveGame(SaveDTO saveDTO)
+        public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO saveDTO)
         {
 
             var newSave = new Save()
             {
                 RoomID = saveDTO.RoomId,
                 SaveName = saveDTO.SaveName,
+
             };
 
             _context.Saves.Add(newSave);
@@ -49,11 +50,11 @@ namespace Backend_API.DAL
                 };
 
                 _context.VisitedRooms.Add(Visitedroom);
+
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
-
-            return newSave;
+            return saveDTO;
 
         }
 
