@@ -32,12 +32,10 @@ namespace Backend_API.DAL
 
             _context.Saves.Remove(Save);
 
-            await _context.SaveChangesAsync();
 
             foreach (VisitedRooms room in visitedList)
             {
                 _context.VisitedRooms.Remove(room);
-                await _context.SaveChangesAsync();
             }
 
         }
@@ -57,6 +55,7 @@ namespace Backend_API.DAL
             {
                 RoomID = saveDTO.RoomId,
                 SaveName = saveDTO.SaveName,
+                ID = saveDTO.ID,
 
             };
 
