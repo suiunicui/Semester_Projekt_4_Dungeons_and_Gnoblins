@@ -70,7 +70,19 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        
+        public string SaveName
+        {
+            get { return SelectedSave.SaveName; }
+            set
+            {
+                if (value != SelectedSave.SaveName)
+                {
+                    SelectedSave.SaveName = value;
+                    OnPropertyChanged("SaveName");
+                }
+            }
+        }
+
 
         private SaveDTO _selectedSave;
 
@@ -110,8 +122,11 @@ namespace FrontEnd_GameLayout.ViewModels
 
         async void ExecuteSaveCommand()
         {
-            //await GameController.Instance.SaveGame(SelectedSave.ID, string savename);
-            Mediator.Notify("GameStart", "");
+            if (SelectedSave != null)
+            {
+                await GameController.Instance.SaveGame(SelectedSave.ID, SaveName);
+                Mediator.Notify("GameStart", "");
+            }
         }
 
         bool CanExecuteSaveCommand()

@@ -45,7 +45,7 @@ public class GameController : IGameController
     }
 
     //Gemmer spil
-    public void Savegame(int id, string Savename)
+    public async Task SaveGame(int id, string Savename)
     {
         BackEndController newSave = new BackEndController();
         SaveDTO Game = new SaveDTO();

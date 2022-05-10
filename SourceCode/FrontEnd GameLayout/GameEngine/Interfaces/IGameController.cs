@@ -9,7 +9,7 @@ public interface IGameController
     Player CurrentPlayer { get; set; }
     List<uint> VisitedRooms { get; set; }
     ILog Move(Direction dir);
-    void Savegame(int id, string savename);
+    Task SaveGame(int id, string savename);
     Task LoadGame(int id);
     Task GetRoomDescriptionAsync();
 
