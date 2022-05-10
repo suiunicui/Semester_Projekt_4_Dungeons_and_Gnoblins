@@ -24,17 +24,20 @@ namespace Backend_API.DAL
 
         }
 
-        public void DeleteGame(int SaveId)
+        public async Task DeleteGame(int SaveId)
         {
-            List<VisitedRooms> visitedRooms = _context.VisitedRooms.Where(r => r.SaveId == SaveId).ToList();
+            List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
 
             Save Save = _context.Saves.Where(i => i.ID == SaveId).FirstOrDefault();
 
             _context.Saves.Remove(Save);
 
-            foreach(VisitedRooms room in visitedRooms)
+            await _context.SaveChangesAsync();
+
+            foreach (VisitedRooms room in visitedList)
             {
                 _context.VisitedRooms.Remove(room);
+                await _context.SaveChangesAsync();
             }
 
         }
@@ -44,10 +47,10 @@ namespace Backend_API.DAL
         {
             //check if save already exits if it does delete it
 
-            Save oldSave = await _context.Saves.FindAsync(saveDTO.ID);
+            Save oldSave = _context.Saves.Where(i => i.ID == saveDTO.ID).FirstOrDefault();
             if(oldSave != null)
             {
-                DeleteGame(saveDTO.ID);
+                await DeleteGame(oldSave.ID);
             }
 
             var newSave = new Save()
@@ -61,14 +64,12 @@ namespace Backend_API.DAL
 
             await _context.SaveChangesAsync();
 
-            var save = _context.Saves.Where(i => i.SaveName == saveDTO.SaveName).First();
-
             foreach (uint r in saveDTO.VisitedRooms)
             {
                 var Visitedroom = new VisitedRooms()
                 {
                     VistedRoomId = r,
-                    SaveId = save.ID
+                    SaveId = newSave.ID
                 };
 
                 _context.VisitedRooms.Add(Visitedroom);

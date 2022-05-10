@@ -26,25 +26,14 @@ namespace Backend_API.db
                 .HasForeignKey(x => x.SaveId);
 
 
-            modelBuilder.Entity<VisitedRooms>()
-                .HasData(
-                new VisitedRooms { SaveId = 1, VistedRoomId = 1 },
-                new VisitedRooms { SaveId = 1, VistedRoomId = 2 },
-                new VisitedRooms { SaveId = 1, VistedRoomId = 3 },
-                new VisitedRooms { SaveId = 1, VistedRoomId = 4 },
-                new VisitedRooms { SaveId = 1, VistedRoomId = 5 },
-                new VisitedRooms { SaveId = 1, VistedRoomId = 6 },
-                new VisitedRooms { SaveId = 1, VistedRoomId = 7 }
-
-                );
 
             modelBuilder.Entity<Save>()
                 .HasData(
-                new Save { RoomID = 14, ID = 2, SaveName = "LuyenGame1"  },
-                new Save { RoomID = 12, ID = 1, SaveName = "AndersGame2" },
-                new Save { RoomID = 3, ID = 3, SaveName = "MortenGame" },
-                new Save { RoomID = 4, ID = 4, SaveName = "ODGame"},
-                new Save { RoomID = 5, ID = 5, SaveName = "SuneGame"}
+                new Save { RoomID = 1, ID = 2, SaveName = "NewGame2"  },
+                new Save { RoomID = 1, ID = 1, SaveName = "NewGame1" },
+                new Save { RoomID = 1, ID = 3, SaveName = "NewGame3" },
+                new Save { RoomID = 1, ID = 4, SaveName = "NewGame4" },
+                new Save { RoomID = 1, ID = 5, SaveName = "NewGame5" }
                 );
 
             modelBuilder.Entity<RoomDescription>()
