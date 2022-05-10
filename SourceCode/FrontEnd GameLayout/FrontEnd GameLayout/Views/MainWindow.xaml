@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Dungeons and Gnoblins" Height="{Binding Window_Height}" Width="{Binding Window_Width}"
         Background="{StaticResource backgroundColor}" 
-        ResizeMode="NoResize" WindowState="Normal" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+        ResizeMode="CanResize" WindowState="Normal" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid>
         <ContentControl Content="{Binding CurrentPageViewModel}" />
     </Grid>

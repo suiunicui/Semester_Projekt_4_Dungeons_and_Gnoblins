@@ -26,9 +26,10 @@ namespace FrontEnd_GameLayout.ViewModels
             Window_Height = Res.Height;
             SliderVal = Res.UselessSlider;
             VolumeSliderVal = Res.Volume;
+            Resolutions.Add(new Resolution(2048, 1152));
             Resolutions.Add(new Resolution(1920, 1080));
             Resolutions.Add(new Resolution(1280, 720));
-            Resolutions.Add(new Resolution(640, 480));
+
 
             ChosenResolution = Resolutions[0];
             foreach (Resolution resolution in Resolutions)

@@ -11,8 +11,9 @@
              d:DesignHeight="1080"
              d:DesignWidth="1920"
         Height="{Binding Window_Height}"
-        Width ="{Binding Window_Width}">
-
+        Width ="{Binding Window_Width}"
+             Focusable="true" IsTabStop="True">
+        
     <UserControl.InputBindings>
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="North" Key="Up"/>
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="East" Key="Right"/>
