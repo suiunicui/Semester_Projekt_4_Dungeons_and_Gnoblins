@@ -110,7 +110,7 @@ namespace FrontEnd_GameLayout.ViewModels
 
         async void ExecuteSaveCommand()
         {
-            await GameController.Instance.SaveGame(SelectedSave.ID);
+            //await GameController.Instance.SaveGame(SelectedSave.ID, string savename);
             Mediator.Notify("GameStart", "");
         }
 

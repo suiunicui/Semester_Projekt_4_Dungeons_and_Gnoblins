@@ -11,7 +11,7 @@ public interface IGameController
     ILog Move(Direction dir);
     void Savegame(int id, string savename);
     Task LoadGame(int id);
-
+    Task GetRoomDescriptionAsync();
 
 }
 

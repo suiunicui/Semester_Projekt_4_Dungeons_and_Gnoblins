@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using GameEngine.Models.DTO;
 using GameEngine.Interfaces;
+using Backend_API.Models;
 
 namespace GameEngine.Implementations;
 
@@ -29,6 +30,17 @@ public class GameController : IGameController
                 instance = new GameController(new BaseMapCreator(@"MapLayOutFile"));
             }
             return instance;
+        }
+    }
+
+    public async Task GetRoomDescriptionAsync()
+    {
+        BackEndController roomDescription = new BackEndController();
+        foreach (var item in GameMap.Rooms)
+        {
+            int IntId = Convert.ToInt32(item.Id+1);
+            RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
+            item.Description = tempDesc.Description;
         }
     }
 

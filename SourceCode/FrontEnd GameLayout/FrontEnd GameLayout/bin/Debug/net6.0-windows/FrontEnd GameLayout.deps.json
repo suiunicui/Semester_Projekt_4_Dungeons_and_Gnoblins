@@ -119,14 +119,17 @@
           "Microsoft.AspNetCore.WebUtilities": "6.0.0.0",
           "Microsoft.CSharp.Reference": "6.0.0.0",
           "Microsoft.Extensions.Caching.Abstractions.Reference": "6.0.0.0",
+          "Microsoft.Extensions.Caching.Memory.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Abstractions.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Binder.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.CommandLine.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Reference": "6.0.0.0",
+          "Microsoft.Extensions.Configuration.EnvironmentVariables.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Ini": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Json.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.KeyPerFile": "6.0.0.0",
+          "Microsoft.Extensions.Configuration.UserSecrets.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Xml": "6.0.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions.Reference": "6.0.0.0",
           "Microsoft.Extensions.DependencyInjection.Reference": "6.0.0.0",
@@ -139,6 +142,7 @@
           "Microsoft.Extensions.FileProviders.Physical.Reference": "6.0.0.0",
           "Microsoft.Extensions.FileSystemGlobbing.Reference": "6.0.0.0",
           "Microsoft.Extensions.Hosting.Abstractions.Reference": "6.0.0.0",
+          "Microsoft.Extensions.Hosting.Reference": "6.0.0.0",
           "Microsoft.Extensions.Http": "6.0.0.0",
           "Microsoft.Extensions.Identity.Core": "6.0.0.0",
           "Microsoft.Extensions.Identity.Stores": "6.0.0.0",
@@ -168,16 +172,16 @@
           "Microsoft.Win32.SystemEvents.Reference": "6.0.0.0",
           "mscorlib": "4.0.0.0",
           "netstandard": "2.1.0.0",
-          "PresentationCore": "6.0.0.0",
-          "PresentationFramework.Aero": "6.0.0.0",
-          "PresentationFramework.Aero2": "6.0.0.0",
-          "PresentationFramework.AeroLite": "6.0.0.0",
-          "PresentationFramework.Classic": "6.0.0.0",
-          "PresentationFramework": "6.0.0.0",
-          "PresentationFramework.Luna": "6.0.0.0",
-          "PresentationFramework.Royale": "6.0.0.0",
-          "PresentationUI": "6.0.0.0",
-          "ReachFramework": "6.0.0.0",
+          "PresentationCore": "6.0.2.0",
+          "PresentationFramework.Aero": "6.0.2.0",
+          "PresentationFramework.Aero2": "6.0.2.0",
+          "PresentationFramework.AeroLite": "6.0.2.0",
+          "PresentationFramework.Classic": "6.0.2.0",
+          "PresentationFramework": "6.0.2.0",
+          "PresentationFramework.Luna": "6.0.2.0",
+          "PresentationFramework.Royale": "6.0.2.0",
+          "PresentationUI": "6.0.2.0",
+          "ReachFramework": "6.0.2.0",
           "System.AppContext.Reference": "6.0.0.0",
           "System.Buffers.Reference": "6.0.0.0",
           "System.CodeDom": "6.0.0.0",
@@ -233,6 +237,7 @@
           "System.IO.IsolatedStorage": "6.0.0.0",
           "System.IO.MemoryMappedFiles": "6.0.0.0",
           "System.IO.Packaging": "6.0.0.0",
+          "System.IO.Pipelines.Reference": "6.0.0.0",
           "System.IO.Pipes.AccessControl": "6.0.0.0",
           "System.IO.Pipes": "6.0.0.0",
           "System.IO.UnmanagedMemoryStream": "6.0.0.0",
@@ -262,7 +267,7 @@
           "System.Numerics": "4.0.0.0",
           "System.Numerics.Vectors.Reference": "6.0.0.0",
           "System.ObjectModel.Reference": "6.0.0.0",
-          "System.Printing": "6.0.0.0",
+          "System.Printing": "6.0.2.0",
           "System.Reflection.DispatchProxy": "6.0.0.0",
           "System.Reflection.Reference": "6.0.0.0",
           "System.Reflection.Emit.Reference": "6.0.0.0",
@@ -332,12 +337,12 @@
           "System.ValueTuple": "4.0.3.0",
           "System.Web": "4.0.0.0",
           "System.Web.HttpUtility": "6.0.0.0",
-          "System.Windows.Controls.Ribbon": "6.0.0.0",
+          "System.Windows.Controls.Ribbon": "6.0.2.0",
           "System.Windows": "4.0.0.0",
           "System.Windows.Extensions.Reference": "6.0.0.0",
-          "System.Windows.Input.Manipulations": "6.0.0.0",
-          "System.Windows.Presentation": "6.0.0.0",
-          "System.Xaml": "6.0.0.0",
+          "System.Windows.Input.Manipulations": "6.0.2.0",
+          "System.Windows.Presentation": "6.0.2.0",
+          "System.Xaml": "6.0.2.0",
           "System.Xml": "4.0.0.0",
           "System.Xml.Linq": "4.0.0.0",
           "System.Xml.ReaderWriter.Reference": "6.0.0.0",
@@ -347,11 +352,11 @@
           "System.Xml.XmlSerializer": "6.0.0.0",
           "System.Xml.XPath": "6.0.0.0",
           "System.Xml.XPath.XDocument": "6.0.0.0",
-          "UIAutomationClient": "6.0.0.0",
-          "UIAutomationClientSideProviders": "6.0.0.0",
-          "UIAutomationProvider": "6.0.0.0",
-          "UIAutomationTypes": "6.0.0.0",
-          "WindowsBase": "6.0.0.0"
+          "UIAutomationClient": "6.0.2.0",
+          "UIAutomationClientSideProviders": "6.0.2.0",
+          "UIAutomationProvider": "6.0.2.0",
+          "UIAutomationTypes": "6.0.2.0",
+          "WindowsBase": "6.0.2.0"
         },
         "runtime": {
           "FrontEnd GameLayout.dll": {}
@@ -1523,9 +1528,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/6.0.0": {
@@ -1560,9 +1562,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration.FileExtensions/6.0.0": {
@@ -1595,9 +1594,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/6.0.0": {
@@ -1667,9 +1663,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.Hosting.dll": {}
         }
       },
       "Microsoft.Extensions.Hosting.Abstractions/6.0.0": {
@@ -2693,9 +2686,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
-        },
-        "compile": {
-          "lib/net6.0/System.IO.Pipelines.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -3671,6 +3661,12 @@
         },
         "compileOnly": true
       },
+      "Microsoft.Extensions.Caching.Memory.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.Extensions.Caching.Memory.dll": {}
+        },
+        "compileOnly": true
+      },
       "Microsoft.Extensions.Configuration.Abstractions.Reference/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -3695,6 +3691,12 @@
         },
         "compileOnly": true
       },
+      "Microsoft.Extensions.Configuration.EnvironmentVariables.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
+        },
+        "compileOnly": true
+      },
       "Microsoft.Extensions.Configuration.FileExtensions.Reference/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.FileExtensions.dll": {}
@@ -3716,6 +3718,12 @@
       "Microsoft.Extensions.Configuration.KeyPerFile/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.KeyPerFile.dll": {}
+        },
+        "compileOnly": true
+      },
+      "Microsoft.Extensions.Configuration.UserSecrets.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.Extensions.Configuration.UserSecrets.dll": {}
         },
         "compileOnly": true
       },
@@ -3788,6 +3796,12 @@
       "Microsoft.Extensions.Hosting.Abstractions.Reference/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Hosting.Abstractions.dll": {}
+        },
+        "compileOnly": true
+      },
+      "Microsoft.Extensions.Hosting.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.Extensions.Hosting.dll": {}
         },
         "compileOnly": true
       },
@@ -3965,61 +3979,61 @@
         },
         "compileOnly": true
       },
-      "PresentationCore/6.0.0.0": {
+      "PresentationCore/6.0.2.0": {
         "compile": {
           "PresentationCore.dll": {}
         },
         "compileOnly": true
       },
-      "PresentationFramework.Aero/6.0.0.0": {
+      "PresentationFramework.Aero/6.0.2.0": {
         "compile": {
           "PresentationFramework.Aero.dll": {}
         },
         "compileOnly": true
       },
-      "PresentationFramework.Aero2/6.0.0.0": {
+      "PresentationFramework.Aero2/6.0.2.0": {
         "compile": {
           "PresentationFramework.Aero2.dll": {}
         },
         "compileOnly": true
       },
-      "PresentationFramework.AeroLite/6.0.0.0": {
+      "PresentationFramework.AeroLite/6.0.2.0": {
         "compile": {
           "PresentationFramework.AeroLite.dll": {}
         },
         "compileOnly": true
       },
-      "PresentationFramework.Classic/6.0.0.0": {
+      "PresentationFramework.Classic/6.0.2.0": {
         "compile": {
           "PresentationFramework.Classic.dll": {}
         },
         "compileOnly": true
       },
-      "PresentationFramework/6.0.0.0": {
+      "PresentationFramework/6.0.2.0": {
         "compile": {
           "PresentationFramework.dll": {}
         },
         "compileOnly": true
       },
-      "PresentationFramework.Luna/6.0.0.0": {
+      "PresentationFramework.Luna/6.0.2.0": {
         "compile": {
           "PresentationFramework.Luna.dll": {}
         },
         "compileOnly": true
       },
-      "PresentationFramework.Royale/6.0.0.0": {
+      "PresentationFramework.Royale/6.0.2.0": {
         "compile": {
           "PresentationFramework.Royale.dll": {}
         },
         "compileOnly": true
       },
-      "PresentationUI/6.0.0.0": {
+      "PresentationUI/6.0.2.0": {
         "compile": {
           "PresentationUI.dll": {}
         },
         "compileOnly": true
       },
-      "ReachFramework/6.0.0.0": {
+      "ReachFramework/6.0.2.0": {
         "compile": {
           "ReachFramework.dll": {}
         },
@@ -4355,6 +4369,12 @@
         },
         "compileOnly": true
       },
+      "System.IO.Pipelines.Reference/6.0.0.0": {
+        "compile": {
+          "System.IO.Pipelines.dll": {}
+        },
+        "compileOnly": true
+      },
       "System.IO.Pipes.AccessControl/6.0.0.0": {
         "compile": {
           "System.IO.Pipes.AccessControl.dll": {}
@@ -4529,7 +4549,7 @@
         },
         "compileOnly": true
       },
-      "System.Printing/6.0.0.0": {
+      "System.Printing/6.0.2.0": {
         "compile": {
           "System.Printing.dll": {}
         },
@@ -4949,7 +4969,7 @@
         },
         "compileOnly": true
       },
-      "System.Windows.Controls.Ribbon/6.0.0.0": {
+      "System.Windows.Controls.Ribbon/6.0.2.0": {
         "compile": {
           "System.Windows.Controls.Ribbon.dll": {}
         },
@@ -4967,19 +4987,19 @@
         },
         "compileOnly": true
       },
-      "System.Windows.Input.Manipulations/6.0.0.0": {
+      "System.Windows.Input.Manipulations/6.0.2.0": {
         "compile": {
           "System.Windows.Input.Manipulations.dll": {}
         },
         "compileOnly": true
       },
-      "System.Windows.Presentation/6.0.0.0": {
+      "System.Windows.Presentation/6.0.2.0": {
         "compile": {
           "System.Windows.Presentation.dll": {}
         },
         "compileOnly": true
       },
-      "System.Xaml/6.0.0.0": {
+      "System.Xaml/6.0.2.0": {
         "compile": {
           "System.Xaml.dll": {}
         },
@@ -5039,31 +5059,31 @@
         },
         "compileOnly": true
       },
-      "UIAutomationClient/6.0.0.0": {
+      "UIAutomationClient/6.0.2.0": {
         "compile": {
           "UIAutomationClient.dll": {}
         },
         "compileOnly": true
       },
-      "UIAutomationClientSideProviders/6.0.0.0": {
+      "UIAutomationClientSideProviders/6.0.2.0": {
         "compile": {
           "UIAutomationClientSideProviders.dll": {}
         },
         "compileOnly": true
       },
-      "UIAutomationProvider/6.0.0.0": {
+      "UIAutomationProvider/6.0.2.0": {
         "compile": {
           "UIAutomationProvider.dll": {}
         },
         "compileOnly": true
       },
-      "UIAutomationTypes/6.0.0.0": {
+      "UIAutomationTypes/6.0.2.0": {
         "compile": {
           "UIAutomationTypes.dll": {}
         },
         "compileOnly": true
       },
-      "WindowsBase/6.0.0.0": {
+      "WindowsBase/6.0.2.0": {
         "compile": {
           "WindowsBase.dll": {}
         },
@@ -6986,6 +7006,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.Extensions.Caching.Memory.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Microsoft.Extensions.Configuration.Abstractions.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -7006,6 +7031,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.Extensions.Configuration.EnvironmentVariables.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Microsoft.Extensions.Configuration.FileExtensions.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -7022,6 +7052,11 @@
       "sha512": ""
     },
     "Microsoft.Extensions.Configuration.KeyPerFile/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Configuration.UserSecrets.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -7082,6 +7117,11 @@
       "sha512": ""
     },
     "Microsoft.Extensions.Hosting.Abstractions.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Hosting.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -7231,52 +7271,52 @@
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationCore/6.0.0.0": {
+    "PresentationCore/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationFramework.Aero/6.0.0.0": {
+    "PresentationFramework.Aero/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationFramework.Aero2/6.0.0.0": {
+    "PresentationFramework.Aero2/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationFramework.AeroLite/6.0.0.0": {
+    "PresentationFramework.AeroLite/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationFramework.Classic/6.0.0.0": {
+    "PresentationFramework.Classic/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationFramework/6.0.0.0": {
+    "PresentationFramework/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationFramework.Luna/6.0.0.0": {
+    "PresentationFramework.Luna/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationFramework.Royale/6.0.0.0": {
+    "PresentationFramework.Royale/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "PresentationUI/6.0.0.0": {
+    "PresentationUI/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "ReachFramework/6.0.0.0": {
+    "ReachFramework/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -7556,6 +7596,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "System.IO.Pipelines.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "System.IO.Pipes.AccessControl/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -7701,7 +7746,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Printing/6.0.0.0": {
+    "System.Printing/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -8051,7 +8096,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Windows.Controls.Ribbon/6.0.0.0": {
+    "System.Windows.Controls.Ribbon/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -8066,17 +8111,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Windows.Input.Manipulations/6.0.0.0": {
+    "System.Windows.Input.Manipulations/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "System.Windows.Presentation/6.0.0.0": {
+    "System.Windows.Presentation/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "System.Xaml/6.0.0.0": {
+    "System.Xaml/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -8126,27 +8171,27 @@
       "serviceable": false,
       "sha512": ""
     },
-    "UIAutomationClient/6.0.0.0": {
+    "UIAutomationClient/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "UIAutomationClientSideProviders/6.0.0.0": {
+    "UIAutomationClientSideProviders/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "UIAutomationProvider/6.0.0.0": {
+    "UIAutomationProvider/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "UIAutomationTypes/6.0.0.0": {
+    "UIAutomationTypes/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "WindowsBase/6.0.0.0": {
+    "WindowsBase/6.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
