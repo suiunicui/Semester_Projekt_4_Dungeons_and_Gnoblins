@@ -42,6 +42,13 @@ namespace Backend_API.DAL
 
         public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO saveDTO)
         {
+            //check if save already exits if it does delete it
+
+            Save oldSave = await _context.Saves.FindAsync(saveDTO.ID);
+            if(oldSave != null)
+            {
+                DeleteGame(saveDTO.ID);
+            }
 
             var newSave = new Save()
             {
@@ -77,6 +84,8 @@ namespace Backend_API.DAL
         public async Task<ActionResult<SaveDTO>> GetSaveByID(int SaveId)
         { 
             Save save = await _context.Saves.FindAsync(SaveId);
+
+           
 
             List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
 
