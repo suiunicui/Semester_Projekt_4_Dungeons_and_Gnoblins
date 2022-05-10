@@ -59,29 +59,7 @@
                     <ColumnDefinition Width="30*"/>
                     <ColumnDefinition Width="255*"/>
                 </Grid.ColumnDefinitions>
-                <Border Background="Gray" Grid.Column="1" Grid.ColumnSpan="11" Grid.Row="1" Grid.RowSpan="11" Panel.ZIndex="0"/>
-
-                <Canvas x:Name="Room_8_lines" Grid.Row="2" Grid.Column="5" Visibility="{Binding Room_8_Visibility}">
-                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="15,30,0,0" Panel.ZIndex="-1"/>
-                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="30,15,0,0" Panel.ZIndex="-1"/>
-                </Canvas>
-
-                <Canvas x:Name="Room_9_lines" Grid.Row="2" Grid.Column="8" Visibility="{Binding Room_9_Visibility}">
-                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="30,15,0,0" Panel.ZIndex="-1"/>
-                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="0,15,0,0" Panel.ZIndex="-1"/>
-                </Canvas>
-
-                <Canvas x:Name="Room_10_lines" Grid.Row="2" Grid.Column="11" Visibility="{Binding Room_10_Visibility}">
-                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="15,30,0,0" Panel.ZIndex="-1"/>
-                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="0,15,0,0" Panel.ZIndex="-1"/>
-                </Canvas>
-
-                <Canvas x:Name="Room_11_lines" Grid.Row="5" Grid.Column="11" Visibility="{Binding Room_11_Visibility}">
-                    <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="15,30,0,0" Panel.ZIndex="-1"/>
-                    <Line X1="0" Y1="0" X2="0" Y2="-60" Stroke="Black" Margin="15,0,0,0" Panel.ZIndex="-1"/>
-                    <Line X1="0" Y1="0" X2="-60" Y2="0" Stroke="Black" Margin="0,15,0,0" Panel.ZIndex="-1"/>
-                    <Line X1="0" Y1="0" X2="60" Y2="0" Stroke="Black" Margin="30,15,0,0" Panel.ZIndex="-1"/>
-                </Canvas>
+                <Border Background="Gray" Grid.Column="1" Grid.ColumnSpan="11" Grid.Row="1" Grid.RowSpan="11"/>
 
                 <Canvas x:Name="Room_13_lines" Grid.Row="5" Grid.Column="8" Visibility="{Binding Room_13_Visibility}">
                     <Line X1="0" Y1="0" X2="0" Y2="60" Stroke="Black" Margin="15,30,0,0" Panel.ZIndex="-1"/>
@@ -196,32 +174,73 @@
                                Fill="Ivory" Stroke="Black" Margin="0,0,0,0" Panel.ZIndex="2"/>
                 </Canvas>
 
-                <Canvas x:Name="Room_8_room" Grid.Row="2" Grid.Column="5" Visibility="{Binding Room_8_Visibility}">
+                <Canvas x:Name="Room_8_room" Grid.Row="2" Grid.Column="4" Visibility="{Binding Room_8_Visibility}">
                     <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                             Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}" 
                             Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Canvas}}" 
                             Fill="Ivory" Stroke="Black" Margin="0,0,0,0" Panel.ZIndex="2"/>
                 </Canvas>
+                <Canvas x:Name="Room_8_lines_east" Grid.Row="2" Grid.Column="5" Visibility="{Binding Room_8_Visibility}">
+                    <Line X1="0" Y1="0" X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}" Y2="0" 
+                          Stroke="Black" Margin="0,15,0,0" Panel.ZIndex="-1"/>
+                </Canvas>
+                <Canvas x:Name="Room_8_lines_south" Grid.Row="3" Grid.Column="4" Visibility="{Binding Room_8_Visibility}">
+                    <Line X1="0" Y1="0" X2="0" Y2="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Canvas}}" 
+                          Stroke="Black" Margin="15,0,0,0" Panel.ZIndex="-1"/>
+                </Canvas>
 
-                <Canvas x:Name="Room_9_Room" Grid.Row="2" Grid.Column="8" Visibility="{Binding Room_9_Visibility}">
+
+                <Canvas x:Name="Room_9_Room" Grid.Row="2" Grid.Column="6" Visibility="{Binding Room_9_Visibility}">
                 <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                                Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}" 
                                Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Canvas}}" 
-                               Fill="Ivory" Stroke="Black" Margin="0,0,0,0" Panel.ZIndex="2"/>
+                               Fill="Ivory" Stroke="Black" Panel.ZIndex="2"/>
+                </Canvas>
+                <Canvas x:Name="Room_9_lines_east" Grid.Row="2" Grid.Column="7" Visibility="{Binding Room_9_Visibility}">
+                    <Line X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}"
+                          Stroke="Black" Margin="0,15,0,0" Panel.ZIndex="-1"/>
+                </Canvas>
+                <Canvas x:Name="Room_9_lines_west" Grid.Row="2" Grid.Column="5" Visibility="{Binding Room_9_Visibility}">
+                    <Line X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}"
+                          Stroke="Black" Margin="0,15,0,0" Panel.ZIndex="-1"/>
                 </Canvas>
 
-                <Canvas x:Name="Room_10_room" Grid.Row="2" Grid.Column="11" Visibility="{Binding Room_10_Visibility}">
+                <Canvas x:Name="Room_10_room" Grid.Row="2" Grid.Column="8" Visibility="{Binding Room_10_Visibility}">
                     <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                                Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}" 
                                Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Canvas}}" 
-                               Fill="Ivory" Stroke="Black" Margin="0,0,0,0" Panel.ZIndex="2"/>
+                               Fill="Ivory" Stroke="Black"/>
+                </Canvas>
+                <Canvas x:Name="Room_10_lines_south" Grid.Row="3" Grid.Column="8" Visibility="{Binding Room_10_Visibility}">
+                    <Line Y2="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Canvas}}"
+                          Stroke="Black" Margin="15,0,0,0" />
+                </Canvas>
+                <Canvas x:Name="Room_10_lines_west" Grid.Row="2" Grid.Column="7" Visibility="{Binding Room_10_Visibility}">
+                    <Line X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}"
+                          Stroke="Black" Margin="0,15,0,0" />
                 </Canvas>
 
-                <Canvas x:Name="Room_11_room" Grid.Row="5" Grid.Column="11" Visibility="{Binding Room_11_Visibility}">
+                <Canvas x:Name="Room_11_room" Grid.Row="4" Grid.Column="8" Visibility="{Binding Room_11_Visibility}">
                     <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                                Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}" 
                                Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Canvas}}" 
-                               Fill="Ivory" Stroke="Black" Margin="0,0,0,0" Panel.ZIndex="2"/>
+                               Fill="Ivory" Stroke="Black"/>
+                </Canvas>
+                <Canvas x:Name="Room_11_lines_north" Grid.Row="3" Grid.Column="8" Visibility="{Binding Room_11_Visibility}">
+                    <Line Y2="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Canvas}}"  
+                          Stroke="Black" Margin="15,0,0,0" />
+                </Canvas>
+                <Canvas x:Name="Room_11_lines_east" Grid.Row="4" Grid.Column="9" Visibility="{Binding Room_11_Visibility}">
+                    <Line X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}"
+                          Stroke="Black" Margin="0,15,0,0" />
+                </Canvas>
+                <Canvas x:Name="Room_11_lines_south" Grid.Row="5" Grid.Column="8" Visibility="{Binding Room_11_Visibility}">
+                    <Line Y2="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Canvas}}" 
+                          Stroke="Black" Margin="15,0,0,0" />
+                </Canvas>
+                <Canvas x:Name="Room_11_lines_west" Grid.Row="4" Grid.Column="7" Visibility="{Binding Room_11_Visibility}">
+                    <Line X2="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Canvas}}"
+                          Stroke="Black" Margin="0,15,0,0" />
                 </Canvas>
 
                 <Canvas x:Name="Room_12" Grid.Row="5" Grid.Column="14" Visibility="{Binding Room_12_Visibility}">
