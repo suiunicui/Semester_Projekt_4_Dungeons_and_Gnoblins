@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
 using GameEngine.Models.DTO;
 using GameEngine.Interfaces;
-using Backend_API.Models;
 
 namespace GameEngine.Implementations;
 
@@ -16,25 +15,11 @@ public class GameController : IGameController
     private static volatile IGameController instance;
     public GameController(IMapCreator mapCreator)
     {
-
         GameMap = new BaseMap(mapCreator);
         CurrentLocation = GameMap.Rooms[0];
         CurrentPlayer = new Player(10, 14);
         CurrentLocation.AddPlayer(CurrentPlayer);
     }
-
-    public async Task GetRoomDescriptionAsync()
-    {
-        BackEndController roomDescription = new BackEndController();
-        foreach (var item in GameMap.Rooms)
-        {
-            int IntId = Convert.ToInt32(item.Id);
-            RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
-            item.Description = tempDesc.Description;
-        }
-
-    }
-
     public static IGameController Instance
     {
         get
@@ -48,12 +33,13 @@ public class GameController : IGameController
     }
 
     //Gemmer spil
-    public void Savegame()
+    public void Savegame(int id, string Savename)
     {
         BackEndController newSave = new BackEndController();
         SaveDTO Game = new SaveDTO();
+        Game.ID = id;
         Game.RoomId = (int) CurrentLocation.Id;
-        Game.SaveName = "Default";
+        Game.SaveName = Savename;
         Game.VisitedRooms = VisitedRooms;
         newSave.PostSaveAsync(Game);
     }

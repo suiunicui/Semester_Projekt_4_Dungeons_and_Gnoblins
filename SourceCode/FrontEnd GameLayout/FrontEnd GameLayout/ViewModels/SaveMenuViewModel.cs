@@ -104,17 +104,17 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private DelegateCommand _loadGame;
+        private DelegateCommand _saveGame;
         
-        public DelegateCommand LoadGame => _loadGame ?? (_loadGame = new DelegateCommand(ExecuteLoadCommand, CanExecuteLoadCommand));
+        public DelegateCommand SaveGame => _saveGame ?? (_saveGame = new DelegateCommand(ExecuteSaveCommand, CanExecuteSaveCommand));
 
-        async void ExecuteLoadCommand()
+        async void ExecuteSaveCommand()
         {
-            await GameController.Instance.LoadGame(SelectedSave.ID);
+            await GameController.Instance.SaveGame(SelectedSave.ID);
             Mediator.Notify("GameStart", "");
         }
 
-        bool CanExecuteLoadCommand()
+        bool CanExecuteSaveCommand()
         {
             return true;
         }
