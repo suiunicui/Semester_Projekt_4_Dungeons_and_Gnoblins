@@ -28,7 +28,8 @@ namespace FrontEnd_GameLayout.ViewModels
             VolumeSliderVal = Res.Volume;
             Resolutions.Add(new Resolution(1920, 1080));
             Resolutions.Add(new Resolution(1280, 720));
-            Resolutions.Add(new Resolution(640, 480));
+            Resolutions.Add(new Resolution(1600, 800));
+
 
             ChosenResolution = Resolutions[0];
             foreach (Resolution resolution in Resolutions)
