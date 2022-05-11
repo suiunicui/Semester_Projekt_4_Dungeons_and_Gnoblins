@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 
-
 namespace Backend_API.DAL
 {
     public class DAL
@@ -109,7 +108,7 @@ namespace Backend_API.DAL
 
         public async Task<ActionResult<List<Save>>> GetAllSaves()
         {
-
+            
             var rooms = await _context.Saves.ToListAsync();
 
             return rooms;

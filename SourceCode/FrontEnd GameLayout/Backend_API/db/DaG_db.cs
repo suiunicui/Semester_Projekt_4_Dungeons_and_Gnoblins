@@ -10,12 +10,20 @@ namespace Backend_API.db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+
             modelBuilder.Entity<User>()
-                .HasKey(x => x.UserId);
+                .HasKey(x => x.Username);
+
+            modelBuilder.Entity<User>()
+                .HasIndex(p => new { p.Username, p.Password }).IsUnique();
 
             modelBuilder.Entity<Save>()
                 .HasKey(x => x.ID);
-                
+
+            modelBuilder.Entity<Save>()
+                .HasIndex(n => new { n.SaveName, n.Username }).IsUnique();
+
             modelBuilder.Entity<RoomDescription>()
                 .HasKey(x => x.RoomDescriptionID);
 
@@ -28,20 +36,25 @@ namespace Backend_API.db
                 .WithMany(y => y.VisitedRooms)
                 .HasForeignKey(x => x.SaveId);
 
+            modelBuilder.Entity<Save>()
+                .HasOne<User>(s => s.User)
+                .WithMany(s => s.Saves)
+                .HasForeignKey(i => i.Username);
+
 
 
             modelBuilder.Entity<Save>()
                 .HasData(
-                new Save { RoomID = 1, ID = 2, SaveName = "NewGame2", UserId = 1 },
-                new Save { RoomID = 1, ID = 1, SaveName = "NewGame1", UserId = 2 },
-                new Save { RoomID = 1, ID = 3, SaveName = "NewGame3", UserId = 3 },
-                new Save { RoomID = 1, ID = 4, SaveName = "NewGame4", UserId = 4 },
-                new Save { RoomID = 1, ID = 5, SaveName = "NewGame5", UserId = 5 }
+                new Save { RoomID = 1, ID = 2, SaveName = "NewGame2", Username = "gamer1" },
+                new Save { RoomID = 1, ID = 1, SaveName = "NewGame1", Username = "gamer1" },
+                new Save { RoomID = 1, ID = 3, SaveName = "NewGame3", Username = "gamer1" },
+                new Save { RoomID = 1, ID = 4, SaveName = "NewGame4", Username = "gamer1" },
+                new Save { RoomID = 1, ID = 5, SaveName = "NewGame5", Username = "gamer1" }
                 );
 
             modelBuilder.Entity<User>()
                 .HasData(
-                new User { Username = "Gamer1", Password = "123"});
+                new User { Username = "Gamer1", Password = BCrypt.Net.BCrypt.HashPassword("123", 11) });
 
 
             modelBuilder.Entity<RoomDescription>()

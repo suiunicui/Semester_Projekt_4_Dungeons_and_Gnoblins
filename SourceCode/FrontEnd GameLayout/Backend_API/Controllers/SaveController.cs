@@ -47,16 +47,18 @@ namespace Backend_API.Controllers
 
         public async Task<ActionResult<List<Save>>> GetListOfSave()
         {
-            //var identity = User.Identity;
-            
-            //var saveList = await _save.GetAllSaves();
+            var identity = User.Identity;
 
-            //if (saveList.Value[0].SaveName == identity.Name)
+            var saveList = await _save.GetAllSaves();
+
+            var currentUserSaves = saveList.Value.Where(u => u.Username.ToLower() == identity.Name).ToList();
+
+            if (currentUserSaves != null)
             {
-                return await _save.GetAllSaves();
+                return currentUserSaves;
             }
-
-            //return Unauthorized();
+            else
+                return Unauthorized();
 
         }
 

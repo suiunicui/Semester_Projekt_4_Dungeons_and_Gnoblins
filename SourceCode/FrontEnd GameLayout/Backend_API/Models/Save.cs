@@ -22,8 +22,7 @@ namespace Backend_API.Models
 
         public User User { get; set; }
 
-
-        public int UserId { get; set; }
+        public string Username { get; set; }
 
         public List<VisitedRooms> VisitedRooms { get; set; }
 

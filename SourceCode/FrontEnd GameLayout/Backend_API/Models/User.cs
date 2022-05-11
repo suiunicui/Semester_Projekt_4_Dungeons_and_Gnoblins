@@ -4,7 +4,6 @@ namespace Backend_API.Models
 {
     public class User
     {
-        public int UserId { get; set; }
 
         [Required]
         [MaxLength(64)]
@@ -14,6 +13,9 @@ namespace Backend_API.Models
         [Required]
         [MaxLength(64)]
         public string Password { get; set; }
+
+
+        public List<Save> Saves { get; set; }
 
 
     }

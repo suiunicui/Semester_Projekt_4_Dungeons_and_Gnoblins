@@ -68,9 +68,18 @@ namespace Backend_API.Controllers
             {
                 Username = regUser.Username,
                 
-        };
+            };
+
+
             user.Password = BCrypt.Net.BCrypt.HashPassword(regUser.Password, BcryptWorkfactor);
             _context.Users.Add(user);
+
+            _context.Saves.AddRange(
+                new Save { RoomID = 1,SaveName = "NewGame1", Username = user.Username},
+                new Save { RoomID = 1, SaveName = "NewGame2", Username = user.Username },
+                new Save { RoomID = 1, SaveName = "NewGame3", Username = user.Username },
+                new Save { RoomID = 1, SaveName = "NewGame4", Username = user.Username },
+                new Save { RoomID = 1, SaveName = "NewGame5", Username = user.Username });
 
             await _context.SaveChangesAsync();
 
