@@ -12,8 +12,8 @@
         d:DesignWidth="1920"
              Focusable="true"
         Height="{Binding Window_Height}"
-        Width ="{Binding Window_Width}">
-        
+        Width ="{Binding Window_Width}" Loaded="UserControl_Loaded">
+
     <UserControl.InputBindings>
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="North" Key="Up"/>
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="East" Key="Right"/>
@@ -21,7 +21,7 @@
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="West" Key="Left"/>
         <KeyBinding Command="{Binding GameMenu}" Key="Esc"/>
     </UserControl.InputBindings>
-    <DockPanel>
+    <DockPanel x:Name="Main" Focusable="True">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -29,15 +29,16 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="63*"/>
+                <ColumnDefinition Width="64*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" 
-                       Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="20"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="There is nothing to interact with here." Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="20"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" 
+                       Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="There is nothing to interact with here." Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
 
 
             <!--Setting up the Map-->
-            <Grid x:Name="Mapgrid" Grid.Row="0" Grid.Column="1" >
+            <Grid x:Name="Mapgrid" Grid.Row="0" Grid.Column="2" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="45*"/>
                     <RowDefinition Height="30*"/>
@@ -341,7 +342,7 @@
                          Width="10" Height="10"/>
             </Grid>
 
-            <Grid Grid.Row="1" Grid.Column="1">
+            <Grid Grid.Row="1" Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="25*"/>
                     <RowDefinition Height="100*"/>

@@ -25,12 +25,12 @@ namespace FrontEnd_GameLayout.ViewModels
         ScreenInfo Res = ScreenInfo.Instance;
         
         public RoomViewModel()
-            {
-                Description = game.CurrentLocation.Description;
-                loadMap();
-                MovePlayerOnMap();
-                Window_Height = Res.Height;
-                Window_Width = Res.Width;
+        {
+            Description = game.CurrentLocation.Description;
+            loadMap();
+            MovePlayerOnMap();
+            Window_Height = Res.Height;
+            Window_Width = Res.Width;
         }
 
         #region Properties
