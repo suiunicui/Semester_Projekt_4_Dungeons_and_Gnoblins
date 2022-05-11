@@ -9,6 +9,9 @@ using FrontEnd_GameLayout.Helper_classes;
 using GameEngine.Implementations;
 using GameEngine.Interfaces;
 using System.Windows.Media;
+using System.Windows;
+using System.Windows.Input;
+using FrontEnd_GameLayout.Views;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
