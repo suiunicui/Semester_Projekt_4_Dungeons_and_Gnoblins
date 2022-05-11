@@ -8,11 +8,11 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-             d:DesignHeight="1080"
-             d:DesignWidth="1920"
+        d:DesignHeight="1080"
+        d:DesignWidth="1920"
+             Focusable="true"
         Height="{Binding Window_Height}"
-        Width ="{Binding Window_Width}"
-             Focusable="true" IsTabStop="True">
+        Width ="{Binding Window_Width}">
         
     <UserControl.InputBindings>
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="North" Key="Up"/>

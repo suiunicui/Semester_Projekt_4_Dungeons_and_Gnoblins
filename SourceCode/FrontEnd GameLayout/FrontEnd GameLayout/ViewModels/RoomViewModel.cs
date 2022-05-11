@@ -31,8 +31,7 @@ namespace FrontEnd_GameLayout.ViewModels
                 MovePlayerOnMap();
                 Window_Height = Res.Height;
                 Window_Width = Res.Width;
-
-            }
+        }
 
         #region Properties
 
