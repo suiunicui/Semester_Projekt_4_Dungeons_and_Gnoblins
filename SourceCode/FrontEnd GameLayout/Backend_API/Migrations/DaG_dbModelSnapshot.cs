@@ -36,7 +36,7 @@ namespace Backend_API.Migrations
 
                     b.HasKey("RoomDescriptionID");
 
-                    b.ToTable("RoomDescriptions");
+                    b.ToTable("RoomDescriptions", (string)null);
 
                     b.HasData(
                         new
@@ -163,7 +163,7 @@ namespace Backend_API.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Saves");
+                    b.ToTable("Saves", (string)null);
 
                     b.HasData(
                         new
@@ -218,7 +218,7 @@ namespace Backend_API.Migrations
 
                     b.HasKey("UserId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Backend_API.Models.VisitedRooms", b =>
@@ -231,7 +231,7 @@ namespace Backend_API.Migrations
 
                     b.HasKey("SaveId", "VistedRoomId");
 
-                    b.ToTable("VisitedRooms");
+                    b.ToTable("VisitedRooms", (string)null);
                 });
 
             modelBuilder.Entity("Backend_API.Models.Save", b =>

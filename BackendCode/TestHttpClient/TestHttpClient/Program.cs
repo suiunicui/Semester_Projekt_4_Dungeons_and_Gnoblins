@@ -7,17 +7,16 @@ namespace TestHttpClient
     {
         static void Main(string[] args)
         {
-            var save = new Save
+            var user = new UserDTO
             {
-      
-                RoomId = 2,
+                Username = "4567891",
+                Password = "567"
+     
             };
 
-            var httpController = new HttpController("https://localhost:7046/api/Players");
+            var httpController = new HttpController();
 
-            httpController.PostPlayer(save);
-
-            httpController.GetPlayer();
+            httpController.PostLoginAsync(user);
 
             while (true)
             {

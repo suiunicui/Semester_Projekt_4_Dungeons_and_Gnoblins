@@ -69,5 +69,81 @@ namespace TestHttpClient
                 }
             }
         }
+
+        public async void PostRegisterAsync(UserDTO user)
+        {
+            var _url = "https://localhost:7046/api/User/Register";
+
+            using (var request = new HttpRequestMessage(HttpMethod.Post, _url))
+            {
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                };
+                var json = JsonSerializer.Serialize(user, options);
+                using (var stringContent = new StringContent(json, Encoding.UTF8, "application/json"))
+                {
+                    request.Content = stringContent;
+                    using (var response = await _httpClient
+                        .SendAsync(request, HttpCompletionOption.ResponseHeadersRead)
+                        .ConfigureAwait(false))
+
+                    {
+                        response.EnsureSuccessStatusCode();
+
+                        var responseContent = await response.Content.ReadAsStringAsync();
+                        var jsonOptions = new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true,
+
+                        };
+
+                        var token = JsonSerializer.Deserialize<Token>(responseContent, options);
+
+                        Console.WriteLine(token.JWT);
+                    }
+
+                }
+
+            }
+        }
+
+        public async void PostLoginAsync(UserDTO user)
+        {
+            var _url = "https://localhost:7046/api/User/Login";
+
+            using (var request = new HttpRequestMessage(HttpMethod.Post, _url))
+            {
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                };
+                var json = JsonSerializer.Serialize(user, options);
+                using (var stringContent = new StringContent(json, Encoding.UTF8, "application/json"))
+                {
+                    request.Content = stringContent;
+                    using (var response = await _httpClient
+                        .SendAsync(request, HttpCompletionOption.ResponseHeadersRead)
+                        .ConfigureAwait(false))
+
+                    {
+                        response.EnsureSuccessStatusCode();
+
+                        var responseContent = await response.Content.ReadAsStringAsync();
+                        var jsonOptions = new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true,
+
+                        };
+
+                        var token = JsonSerializer.Deserialize<Token>(responseContent, options);
+
+                        Console.WriteLine(token.JWT);
+                    }
+
+                }
+
+            }
+        }
     }
 }

@@ -30,7 +30,12 @@
       "ProjectGuid": "025f671a-0d96-48ea-b64a-33afad56aeab",
       "DisplayName": "Backend_API",
       "ColorIndex": 4
+    },
+    "0b86af21-72d1-4717-be3b-0f10643d80f4": {
+      "ProjectGuid": "0b86af21-72d1-4717-be3b-0f10643d80f4",
+      "DisplayName": "GameEngine",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 6
 }

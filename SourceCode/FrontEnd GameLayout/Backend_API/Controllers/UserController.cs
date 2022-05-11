@@ -19,7 +19,8 @@ using Backend_API.Models.DTO;
 
 namespace Backend_API.Controllers
 {
-
+    [Route("api/[controller]")]
+    [ApiController]
     [Authorize]
     public class UserController : Controller
     {
@@ -66,7 +67,8 @@ namespace Backend_API.Controllers
             var user = new User()
             {
                 Username = regUser.Username,
-            };
+                
+        };
             user.Password = BCrypt.Net.BCrypt.HashPassword(regUser.Password, BcryptWorkfactor);
             _context.Users.Add(user);
 

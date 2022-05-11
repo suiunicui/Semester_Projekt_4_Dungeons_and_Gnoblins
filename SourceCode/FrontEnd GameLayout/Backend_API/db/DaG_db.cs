@@ -10,16 +10,19 @@ namespace Backend_API.db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>()
+                .HasKey(x => x.UserId);
+
             modelBuilder.Entity<Save>()
-                .HasKey(k => k.ID);
+                .HasKey(x => x.ID);
                 
             modelBuilder.Entity<RoomDescription>()
                 .HasKey(x => x.RoomDescriptionID);
 
             modelBuilder.Entity<VisitedRooms>()
-                .HasKey(x => new {x.SaveId, x.VistedRoomId});
+                .HasKey(x => new { x.SaveId, x.VistedRoomId});
 
-
+            // one to many relationship save vistedRooms
             modelBuilder.Entity<VisitedRooms>()
                 .HasOne<Save>(x => x.Save)
                 .WithMany(y => y.VisitedRooms)
@@ -29,12 +32,17 @@ namespace Backend_API.db
 
             modelBuilder.Entity<Save>()
                 .HasData(
-                new Save { RoomID = 1, ID = 2, SaveName = "NewGame2"  },
-                new Save { RoomID = 1, ID = 1, SaveName = "NewGame1" },
-                new Save { RoomID = 1, ID = 3, SaveName = "NewGame3" },
-                new Save { RoomID = 1, ID = 4, SaveName = "NewGame4" },
-                new Save { RoomID = 1, ID = 5, SaveName = "NewGame5" }
+                new Save { RoomID = 1, ID = 2, SaveName = "NewGame2", UserId = 1 },
+                new Save { RoomID = 1, ID = 1, SaveName = "NewGame1", UserId = 2 },
+                new Save { RoomID = 1, ID = 3, SaveName = "NewGame3", UserId = 3 },
+                new Save { RoomID = 1, ID = 4, SaveName = "NewGame4", UserId = 4 },
+                new Save { RoomID = 1, ID = 5, SaveName = "NewGame5", UserId = 5 }
                 );
+
+            modelBuilder.Entity<User>()
+                .HasData(
+                new User { Username = "Gamer1", Password = "123"});
+
 
             modelBuilder.Entity<RoomDescription>()
                 .HasData(

@@ -10,11 +10,13 @@ using Backend_API.Models;
 using Backend_API.db;
 using Backend_API.Models.DTO;
 using Backend_API.DAL;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Backend_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class SaveController : Controller
     {
         private readonly DAL.DAL _save;
@@ -45,7 +47,16 @@ namespace Backend_API.Controllers
 
         public async Task<ActionResult<List<Save>>> GetListOfSave()
         {
-            return await _save.GetAllSaves();
+            //var identity = User.Identity;
+            
+            //var saveList = await _save.GetAllSaves();
+
+            //if (saveList.Value[0].SaveName == identity.Name)
+            {
+                return await _save.GetAllSaves();
+            }
+
+            //return Unauthorized();
 
         }
 
