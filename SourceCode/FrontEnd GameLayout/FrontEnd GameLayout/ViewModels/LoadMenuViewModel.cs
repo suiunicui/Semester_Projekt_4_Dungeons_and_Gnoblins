@@ -6,23 +6,59 @@ using System.Threading.Tasks;
 using Prism.Mvvm;
 using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
+using GameEngine.Models.DTO;
+using Prism.Commands;
+using GameEngine.Implementations;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
     public class LoadMenuViewModel :BaseViewModel, IPageViewModel
     {
+        ScreenInfo Res = ScreenInfo.Instance;
+
+
+
         public LoadMenuViewModel()
         {
-            SavedGames.Add("testGame1");
-            SavedGames.Add("testGame2");
-            
+            getListOfSaves();
+            Window_Width = Res.Width;
+            Window_Height = Res.Height;
         }
+
+        static int window_Width;
+        public int Window_Width
+        {
+            get { return window_Width; }
+            set
+            {
+                window_Width = value;
+                OnPropertyChanged("Window_Width");
+            }
+        }
+
+        static int window_Height = 1080;
+        public int Window_Height
+        {
+            get { return window_Height; }
+            set
+            {
+                window_Height = value;
+                OnPropertyChanged("Window_Height");
+            }
+        }
+
+        private async void getListOfSaves()
+        {
+            BackEndController httpHandler = new BackEndController();
+            SavedGames = await httpHandler.GetListOfSave();
+        }
+
 
         #region Properties
 
-        private List<String> _savedGames = new List<string>();
+        private List<SaveDTO> _savedGames = new List<SaveDTO>();
 
-        public List<String> SavedGames {
+        public List<SaveDTO> SavedGames {
             get { return _savedGames; }
             set
             {
@@ -36,9 +72,9 @@ namespace FrontEnd_GameLayout.ViewModels
 
         
 
-        private String _selectedSave;
+        private SaveDTO _selectedSave;
 
-        public String SelectedSave
+        public SaveDTO SelectedSave
         {
             get { return _selectedSave; }
             set
@@ -66,6 +102,21 @@ namespace FrontEnd_GameLayout.ViewModels
                     Mediator.Notify("GoToMainMenu", "");
                 }));
             }
+        }
+
+        private DelegateCommand _loadGame;
+        
+        public DelegateCommand LoadGame => _loadGame ?? (_loadGame = new DelegateCommand(ExecuteLoadCommand, CanExecuteLoadCommand));
+
+        async void ExecuteLoadCommand()
+        {
+            await GameController.Instance.LoadGame(SelectedSave.ID);
+            Mediator.Notify("GameStart", "");
+        }
+
+        bool CanExecuteLoadCommand()
+        {
+            return true;
         }
 
         #endregion

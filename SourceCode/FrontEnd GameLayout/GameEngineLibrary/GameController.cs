@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using GameEngineLibrary.MapCreator;
 using GameEngineLibrary.MapImpl;
+using GameEngineLibrary.Actors;
 using TestHttpClient;
-using TestHttpClient.Models;
+using Backend_API.Models.DTO;
 
 namespace GameEngineLibrary
 {
@@ -40,7 +41,7 @@ namespace GameEngineLibrary
         {
           GameMap = new Map(new BaseMapCreator());
           CurrentRoom = GameMap.Rooms[0];
-          CurrentPlayer = new Player();
+          CurrentPlayer = new Player(10,16);
           GameMap.Rooms[0].AddPlayer(CurrentPlayer);
         }
 
@@ -61,21 +62,23 @@ namespace GameEngineLibrary
           return log;
         }
         //Gemmer spil
-        public void Savegame(Room curRoom)
+        public void Savegame()
         {
             HttpController newSave = new HttpController();
-            Save Game = new Save();
-            Game.RoomId = curRoom.RoomId;
+            SaveDTO Game = new SaveDTO();
+            Game.RoomId = (int) CurrentRoom.RoomId;
+            Game.SaveName = "Default";
             newSave.PostSave(Game);
         }
 
         //Loader gemt spil
-        public async void LoadGame(int id)
+        public async Task LoadGame(int id)
         {
             HttpController SaveLoader = new HttpController();
-            Save Game = await SaveLoader.GetSave(id);
-            CurrentRoom.RoomId = Game.RoomId;
-            CurrentRoom.AddPlayer(CurrentPlayer);
+            SaveDTO Game = await SaveLoader.GetSave(id);
+            CurrentRoom.RemovePlayer();
+            CurrentRoom = GameMap.Rooms[Game.RoomId];
+            GameMap.Rooms[CurrentRoom.RoomId].AddPlayer(CurrentPlayer);
         }
 
         //Fjerner spiller fra spillet og viser death screen.

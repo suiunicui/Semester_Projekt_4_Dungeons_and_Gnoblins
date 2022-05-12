@@ -17,12 +17,12 @@ namespace Backend_API.Controllers
     [ApiController]
     public class SaveController : Controller
     {
-        private readonly Save_DAL _save;
+        private readonly DAL.DAL _save;
 
 
         public SaveController(DaG_db context)
         {
-            _save = new Save_DAL(context);
+            _save = new DAL.DAL(context);
 
         }
 
@@ -37,6 +37,15 @@ namespace Backend_API.Controllers
                 return NotFound();
             }
             return await save;
+
+        }
+
+        // GET: list of Saves
+        [HttpGet]
+
+        public async Task<ActionResult<List<Save>>> GetSave()
+        {
+            return await _save.GetAllSaves();
 
         }
 

@@ -8,8 +8,7 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        d:DesignHeight="1080"
-        d:DesignWidth ="1920">
+        Height="{Binding Window_Height}" Width="{Binding Window_Width}">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -29,7 +28,7 @@
         </Grid.ColumnDefinitions>
 
         <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
-                Content="Load" Grid.Row="5"/>
+                Content="Load" Command="{Binding LoadGame}" Grid.Row="5"/>
         
         <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
                 Content="Back" Command="{Binding MainMenu}" Grid.Row="6"/>
@@ -41,7 +40,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="{Binding}" />
+                        <TextBlock Text="{Binding SaveName}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

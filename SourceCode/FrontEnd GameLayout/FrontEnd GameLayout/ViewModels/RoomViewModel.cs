@@ -8,25 +8,33 @@ using System;
 using System.Windows.Media;
 using System.Windows.Threading;
 using System.Windows;
-using GameEngineLibrary;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Windows.Input;
+using FrontEnd_GameLayout.Helper_classes;
+using GameEngine.Implementations;
+using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
+    
     public class RoomViewModel : BaseViewModel, IPageViewModel
     {
 
-        GameController game = GameController.Instance;
-
-
-    public RoomViewModel()
+        IGameController game = GameController.Instance;
+        ScreenInfo Res = ScreenInfo.Instance;
+        
+        public RoomViewModel()
         {
-            Description = game.CurrentRoom.Description;
+            Description = game.CurrentLocation.Description;
+            loadMap();
             MovePlayerOnMap();
+            Window_Height = Res.Height;
+            Window_Width = Res.Width;
         }
 
         #region Properties
+
 
 
         public string Name
@@ -37,6 +45,27 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        static int window_Width=1920;
+        public int Window_Width
+        {
+            get { return window_Width; }
+            set 
+            { 
+                window_Width = value;
+                OnPropertyChanged("Window_Width");
+            }
+        }
+
+        static int window_Height=1080;
+        public int Window_Height
+        {
+            get { return window_Height; }
+            set
+            {
+                window_Height = value;
+                OnPropertyChanged("Window_Height");
+            }
+        }
 
         private int playerRow;
         public int PlayerRow
@@ -72,9 +101,9 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private Log log;
+        private ILog log;
 
-        public Log Log
+        public ILog Log
         {
             get { return log; }
             set
@@ -300,7 +329,111 @@ namespace FrontEnd_GameLayout.ViewModels
 
         #region Methods
 
+        void checkIfRoomIsNew()
+        {
+            bool RoomIsNew = true;
+            foreach (uint room in game.VisitedRooms)
+            {
+                if (room == game.CurrentLocation.Id)
+                {
+                    RoomIsNew = false;
+                }
+            }
+            if (RoomIsNew)
+            {
+                game.VisitedRooms.Add(game.CurrentLocation.Id);
+            }
+        }
 
+        void loadMap()
+        {
+            foreach (uint id in game.VisitedRooms)
+            {
+                switch (id + 1)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        Room_2_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_2_Visibility");
+                        break;
+                    case 3:
+                        Room_3_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_3_Visibility");
+                        break;
+                    case 4:
+                        Room_4_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_4_Visibility");
+                        break;
+                    case 5:
+                        Room_5_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_5_Visibility");
+                        break;
+                    case 6:
+                        Room_6_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_6_Visibility");
+                        break;
+                    case 7:
+                        Room_7_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_7_Visibility");
+                        break;
+                    case 8:
+                        Room_8_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_8_Visibility");
+                        break;
+                    case 9:
+                        Room_9_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_9_Visibility");
+                        break;
+                    case 10:
+                        Room_10_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_10_Visibility");
+                        break;
+                    case 11:
+                        PlayerRow = 2;
+                        playerColumn = 4;
+                        Room_11_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_11_Visibility");
+                        break;
+                    case 12:
+                        Room_12_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_12_Visibility");
+                        break;
+                    case 13:
+                        Room_13_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_13_Visibility");
+                        break;
+                    case 14:
+                        Room_14_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_14_Visibility");
+                        break;
+                    case 15:
+                        Room_15_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_15_Visibility");
+                        break;
+                    case 16:
+                        Room_16_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_16_Visibility");
+                        break;
+                    case 17:
+                        Room_17_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_17_Visibility");
+                        break;
+                    case 18:
+                        Room_18_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_18_Visibility");
+                        break;
+                    case 19:
+                        Room_19_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_19_Visibility");
+                        break;
+                    case 20:
+                        Room_20_Visibility = Visibility.Visible;
+                        OnPropertyChanged("Room_20_Visibility");
+                        break;
+                }
+            }
+        }
         #endregion
 
         #region Commands
@@ -310,12 +443,29 @@ namespace FrontEnd_GameLayout.ViewModels
         _moveCommand ?? (_moveCommand = new DelegateCommand<string>(ExecuteMoveCommand, CanExecuteMoveCommand));
         void ExecuteMoveCommand(string direction)
         {
+            Direction TempDirection = Direction.North;
             Log = new Log();
-            Log = game.MovePlayer(game.CurrentRoom, direction);
+            switch (direction)
+            {
+                case "North":
+                    TempDirection = Direction.North;
+                    break;
+                case "East":
+                    TempDirection = Direction.East;
+                    break;
+                case "South":
+                    TempDirection = Direction.South;
+                    break;
+                case "West":
+                    TempDirection = Direction.West;
+                    break;
+            }
+            Log = game.Move(TempDirection);
             //Description = Log.GetEventRecord("New Room Description");
-            Description = game.CurrentRoom.Description;
-            var Maroom = new Views.Room();
-            MovePlayerOnMap(Maroom);
+            Description = game.CurrentLocation.Description;
+            var RoomView = new Views.Room();
+            checkIfRoomIsNew();
+            MovePlayerOnMap(RoomView);
         }
         bool CanExecuteMoveCommand(string direction)
         { 
@@ -326,123 +476,123 @@ namespace FrontEnd_GameLayout.ViewModels
         void MovePlayerOnMap(Views.Room Room = null)
         {
 
-            switch (game.CurrentRoom.RoomId + 1)
+            switch (game.CurrentLocation.Id + 1)
             {
                 case 1:
-                    PlayerRow = 2;
-                    PlayerColumn = 1;
+                    PlayerRow = 4;
+                    PlayerColumn = 2;
                     break;
                 case 2:
-                    PlayerRow = 3;
-                    PlayerColumn = 1;
+                    PlayerRow = 6;
+                    PlayerColumn = 2;
                     Room_2_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_2_Visibility");
                     break;
                 case 3:
-                    PlayerRow = 3;
-                    PlayerColumn = 2;
+                    PlayerRow = 6;
+                    PlayerColumn = 4;
                     Room_3_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_3_Visibility");
                     break;
                 case 4: 
-                    PlayerRow = 2;
-                    playerColumn = 2;
+                    PlayerRow = 4;
+                    playerColumn = 4;
                     Room_4_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_4_Visibility");
                     break;
                 case 5:
-                    PlayerRow = 4;
-                    playerColumn = 2;
+                    PlayerRow = 8;
+                    playerColumn = 4;
                     Room_5_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_5_Visibility");
                     break;
                 case 6:
-                    PlayerRow = 4;
-                    playerColumn = 1;
+                    PlayerRow = 8;
+                    playerColumn = 2;
                     Room_6_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_6_Visibility");
                     break;
                 case 7:
-                    PlayerRow = 5;
-                    playerColumn = 1;
+                    PlayerRow = 10;
+                    playerColumn = 2;
                     Room_7_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_7_Visibility");
                     break;
                 case 8:
-                    PlayerRow = 1;
-                    playerColumn = 2;
+                    PlayerRow = 2;
+                    playerColumn = 4;
                     Room_8_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_8_Visibility");
                     break;
                 case 9:
-                    PlayerRow = 1;
-                    playerColumn = 3;
+                    PlayerRow = 2;
+                    playerColumn = 6;
                     Room_9_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_9_Visibility");
                     break;
                 case 10:
-                    PlayerRow = 1;
-                    playerColumn = 4;
+                    PlayerRow = 2;
+                    playerColumn = 8;
                     Room_10_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_10_Visibility");
                     break;
                 case 11:
-                    PlayerRow = 2;
-                    playerColumn = 4;
+                    PlayerRow = 4;
+                    playerColumn = 8;
                     Room_11_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_11_Visibility");
                     break;
                 case 12:
-                    PlayerRow = 2;
-                    playerColumn = 5;
+                    PlayerRow = 4;
+                    playerColumn = 10;
                     Room_12_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_12_Visibility");
                     break;
                 case 13:
-                    PlayerRow = 2;
-                    playerColumn = 3;
+                    PlayerRow = 4;
+                    playerColumn = 6;
                     Room_13_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_13_Visibility");
                     break;
                 case 14:
-                    PlayerRow = 3;
-                    playerColumn = 3;
+                    PlayerRow = 6;
+                    playerColumn = 6;
                     Room_14_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_14_Visibility");
                     break;
                 case 15:
-                    PlayerRow = 3;
-                    playerColumn = 4;
+                    PlayerRow = 6;
+                    playerColumn = 8;
                     Room_15_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_15_Visibility");
                     break;
                 case 16:
-                    PlayerRow = 4;
-                    playerColumn = 4;
+                    PlayerRow = 8;
+                    playerColumn = 8;
                     Room_16_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_16_Visibility");
                     break;
                 case 17:
-                    PlayerRow = 4;
-                    playerColumn = 5;
+                    PlayerRow = 8;
+                    playerColumn = 10;
                     Room_17_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_17_Visibility");
                     break;
                 case 18:
-                    PlayerRow = 4;
-                    playerColumn = 3;
+                    PlayerRow = 8;
+                    playerColumn = 6;
                     Room_18_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_18_Visibility");
                     break;
                 case 19:
-                    PlayerRow = 5;
-                    playerColumn = 3;
+                    PlayerRow = 10;
+                    playerColumn = 6;
                     Room_19_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_19_Visibility");
                     break;
                 case 20:
-                    PlayerRow = 5;
-                    playerColumn = 4;
+                    PlayerRow = 10;
+                    playerColumn = 8;
                     Room_20_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_20_Visibility");
                     break;
@@ -458,10 +608,30 @@ namespace FrontEnd_GameLayout.ViewModels
         _interactCommand ?? (_interactCommand = new DelegateCommand<string>(ExecuteInteractCommand, CanExecuteInteractCommand));
         void ExecuteInteractCommand(string direction)
         {
+            if (Res.MusicPlaying)
+                Res.MusicPlaying = false;
+            else
+            {
+                Res.MusicPlaying = true;
+            }
+            Res.Toggle_Music();
         }
         bool CanExecuteInteractCommand(string direction)
         {
             return true;
+        }
+
+        private ICommand _gameMenu;
+
+        public ICommand GameMenu
+        {
+            get
+            {
+                return _gameMenu ?? (_gameMenu = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToInGameMenu", "");
+                }));
+            }
         }
 
         #endregion

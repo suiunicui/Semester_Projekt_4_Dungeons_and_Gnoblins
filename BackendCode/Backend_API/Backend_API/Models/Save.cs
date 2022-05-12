@@ -18,26 +18,9 @@ namespace Backend_API.Models
 
         public int RoomID { get; set; }
 
-        //[Required]
-        //public long Health { get; set; }
-
-        //public int Armour_ID { get; set; }
-
-        //public int Weapon_ID { get; set; }
-
-        //[Required]
-        //public int Room_ID { get; set; }
-
-        //public List<Puzzles> Save_Puzzles { get; set; }
-
-        //public List<Inventory_Items> Save_Inventory_Items { get; set; }
-
-        //public List<Enemies_killed> Save_Enemies_killed { get; set; }
+        public string SaveName { get; set; }
 
 
-        
-
-       
 
     }
 }

@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FrontEnd_GameLayout.Views"
         mc:Ignorable="d"
-        Title="Dungeons and Gnoblins" Height="1080" Width="1920"
+        Title="Dungeons and Gnoblins" Height="{Binding Window_Height}" Width="{Binding Window_Width}"
         Background="{StaticResource backgroundColor}" 
-        ResizeMode="NoResize" WindowState="Normal" SizeToContent="Manual" WindowStartupLocation="CenterScreen">
+        ResizeMode="CanResize" WindowState="Normal" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid>
         <ContentControl Content="{Binding CurrentPageViewModel}" />
     </Grid>

@@ -1,5 +1,4 @@
-﻿
-namespace GameEngineLibrary.Actors
+﻿namespace GameEngineLibrary.Actors
 {
     public class Player : Actor
     {

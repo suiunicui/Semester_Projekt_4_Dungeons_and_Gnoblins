@@ -15,6 +15,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\InGameMenu .xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Options.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SaveMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\MainMenu.xaml">
       <SubType>Designer</SubType>
     </Page>

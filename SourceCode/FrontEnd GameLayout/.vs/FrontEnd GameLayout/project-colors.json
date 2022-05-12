@@ -15,7 +15,27 @@
       "ProjectGuid": "beb8302d-3657-4451-a73d-95f5f800e6e6",
       "DisplayName": "GameEngineLibrary",
       "ColorIndex": 1
+    },
+    "f0577bd7-38be-4946-bfd8-b6fac36508bc": {
+      "ProjectGuid": "f0577bd7-38be-4946-bfd8-b6fac36508bc",
+      "DisplayName": "GameEngineLibraryTest",
+      "ColorIndex": 2
+    },
+    "f53d1a05-86a7-47aa-95d9-401c3f550cda": {
+      "ProjectGuid": "f53d1a05-86a7-47aa-95d9-401c3f550cda",
+      "DisplayName": "Backend_API",
+      "ColorIndex": 3
+    },
+    "025f671a-0d96-48ea-b64a-33afad56aeab": {
+      "ProjectGuid": "025f671a-0d96-48ea-b64a-33afad56aeab",
+      "DisplayName": "Backend_API",
+      "ColorIndex": 4
+    },
+    "0b86af21-72d1-4717-be3b-0f10643d80f4": {
+      "ProjectGuid": "0b86af21-72d1-4717-be3b-0f10643d80f4",
+      "DisplayName": "GameEngine",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 6
 }
