@@ -6,5 +6,9 @@ namespace GameEngine.Interfaces;
 public interface IBackEndController
 {
     public Task<SaveDTO> GetSaveAsync(int id);
-    public void PostSaveAsync(SaveDTO save);
+    public Task PostSaveAsync(SaveDTO save);
+
+    public Task PostRegisterAsync(UserDTO user);
+
+    public Task PostLoginAsync(UserDTO user);
 }

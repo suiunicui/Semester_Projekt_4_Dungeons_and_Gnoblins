@@ -16,11 +16,9 @@ namespace FrontEnd_GameLayout.ViewModels
     {
         ScreenInfo Res = ScreenInfo.Instance;
 
-
-
         public LoadMenuViewModel()
         {
-            getListOfSaves();
+            //getListOfSaves();
             Window_Width = Res.Width;
             Window_Height = Res.Height;
         }

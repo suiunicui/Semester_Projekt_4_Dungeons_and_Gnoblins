@@ -13,6 +13,7 @@ public class BackEndController : IBackEndController
     private RoomDescription _roomDescription;
     private readonly HttpClient _httpClient;
     private SaveDTO _save;
+    public Token token;
 
     public BackEndController()
     {
@@ -78,6 +79,7 @@ public class BackEndController : IBackEndController
         _url = $"https://localhost:7046/api/Save/Get List Of Saves";
         try
         {
+            _httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token.JWT);
             string responsBody = await _httpClient.GetStringAsync(_url);
             var options = new JsonSerializerOptions
             {
@@ -98,7 +100,7 @@ public class BackEndController : IBackEndController
         return _savelist;
     }
 
-    public async void PostSaveAsync(SaveDTO save)
+    public async Task PostSaveAsync(SaveDTO save)
     {
         _url = "https://localhost:7046/api/Save";
 
@@ -121,8 +123,9 @@ public class BackEndController : IBackEndController
             }
         }
     }
-    public async void PostRegisterAsync(UserDTO user)
+    public async Task PostRegisterAsync(UserDTO user)
     {
+
         var _url = "https://localhost:7046/api/User/Register";
 
         using (var request = new HttpRequestMessage(HttpMethod.Post, _url))
@@ -149,7 +152,7 @@ public class BackEndController : IBackEndController
 
                     };
 
-                    var token = JsonSerializer.Deserialize<Token>(responseContent, options);
+                    token = JsonSerializer.Deserialize<Token>(responseContent, options);
 
                     Console.WriteLine(token.JWT);
                 }
@@ -158,7 +161,7 @@ public class BackEndController : IBackEndController
 
         }
     }
-    public async void PostLoginAsync(UserDTO user)
+    public async Task PostLoginAsync(UserDTO user)
     {
         var _url = "https://localhost:7046/api/User/Login";
 
@@ -186,7 +189,7 @@ public class BackEndController : IBackEndController
 
                     };
 
-                    var token = JsonSerializer.Deserialize<Token>(responseContent, options);
+                    token = JsonSerializer.Deserialize<Token>(responseContent, options);
 
                     Console.WriteLine(token.JWT);
                 }

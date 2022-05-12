@@ -30,7 +30,9 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-
+        
+        <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource buttonStyle}"
+                Content="Register" Command="{Binding RegisterMenu}"/>
         <Button Grid.Column="1" Grid.Row="4" Style="{StaticResource buttonStyle}"
                 Content="New Game" Command="{Binding GameStart}"/>
         <Button Grid.Column="1" Grid.Row="6" Style="{StaticResource buttonStyle}"

@@ -100,6 +100,20 @@ namespace FrontEnd_GameLayout.ViewModels
                 }));
             }
         }
+
+        private ICommand _RegisterMenu;
+
+        public ICommand RegisterMenu
+        {
+            get
+            {
+                return _RegisterMenu ?? (_RegisterMenu = new RelayCommand(x =>
+                {
+                    //ScreenInfo.Instance.LastScreen = "MainMenu";
+                    Mediator.Notify("GoToRegisterMenu", "");
+                }));
+            }
+        }
     }
 }
 

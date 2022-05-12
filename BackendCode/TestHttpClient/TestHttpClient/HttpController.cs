@@ -10,10 +10,11 @@ namespace TestHttpClient
 {
     internal class HttpController
     {
-        public string _urlPostSave;
-        public string _urlGetSave;
+
+        private string _url;
         private readonly HttpClient _httpClient;
         private readonly Save _save;
+        public Token token;
 
         public HttpController()
         {
@@ -23,10 +24,10 @@ namespace TestHttpClient
         }
         public async void GetPlayer(int id)
         {
-            _urlGetSave = $"https://localhost:7046/api/Save?id={id}";
+            _url = $"https://localhost:7046/api/Save?id={id}";
             try
             {
-                string responsBody = await _httpClient.GetStringAsync(_urlGetSave);
+                string responsBody = await _httpClient.GetStringAsync(_url);
                 var options = new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true,
@@ -35,7 +36,7 @@ namespace TestHttpClient
 
                 var _save = JsonSerializer.Deserialize<Save>(responsBody, options);
           
-                Console.WriteLine("RoomId: {0}", _save.RoomId);
+                Console.WriteLine("RoomId: {0}", _save.RoomID);
 
             }
             catch (HttpRequestException e)
@@ -46,11 +47,39 @@ namespace TestHttpClient
             }
         }
 
+        public async Task<List<Save>> GetListOfSave()
+        {
+            List<Save> _savelist;
+            _url = $"https://localhost:7046/api/Save/Get List Of Saves";
+            try
+            {
+                _httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token.JWT);
+                string responsBody = await _httpClient.GetStringAsync(_url);
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+
+
+                };
+
+                _savelist = JsonSerializer.Deserialize<List<Save>>(responsBody, options);
+
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine("Exception caught");
+                Console.WriteLine("Message: {0}", e.Message);
+                throw;
+            }
+
+            return _savelist;
+        }
+
         public async void PostPlayer(Save save)
         {
-            _urlPostSave = "https://localhost:7046/api/Save";
+            _url = "https://localhost:7046/api/Save";
 
-            using (var request = new HttpRequestMessage(HttpMethod.Post, _urlPostSave))
+            using (var request = new HttpRequestMessage(HttpMethod.Post, _url))
             {
                 var options = new JsonSerializerOptions
                 {
@@ -98,7 +127,7 @@ namespace TestHttpClient
 
                         };
 
-                        var token = JsonSerializer.Deserialize<Token>(responseContent, options);
+                        token = JsonSerializer.Deserialize<Token>(responseContent, options);
 
                         Console.WriteLine(token.JWT);
                     }
@@ -108,7 +137,7 @@ namespace TestHttpClient
             }
         }
 
-        public async void PostLoginAsync(UserDTO user)
+        public async Task PostLoginAsync(UserDTO user)
         {
             var _url = "https://localhost:7046/api/User/Login";
 
@@ -136,7 +165,7 @@ namespace TestHttpClient
 
                         };
 
-                        var token = JsonSerializer.Deserialize<Token>(responseContent, options);
+                        token = JsonSerializer.Deserialize<Token>(responseContent, options);
 
                         Console.WriteLine(token.JWT);
                     }

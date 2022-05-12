@@ -13,12 +13,18 @@
     <Compile Update="Views\MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\RegisterMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\InGameMenu .xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Options.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RegisterMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SaveMenu.xaml">
