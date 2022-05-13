@@ -9,10 +9,14 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         d:DesignHeight="720" d:DesignWidth="1280"
+        Loaded="UserControl_Loaded"
         Height="{Binding Window_Height}"
-        Width ="{Binding Window_Width}">
-
-    <Grid>
+        Width ="{Binding Window_Width}"
+        >
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding BackCommand}" Key="Esc"/>
+    </UserControl.InputBindings>
+    <Grid x:Name="Main" Focusable="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="48*"/>
             <RowDefinition Height="144*"/>

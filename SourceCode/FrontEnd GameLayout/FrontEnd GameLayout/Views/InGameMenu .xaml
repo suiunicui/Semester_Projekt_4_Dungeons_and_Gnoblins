@@ -8,9 +8,13 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        Height="{Binding Window_Height}" Width="{Binding Window_Width}">
+        Loaded="UserControl_Loaded"
+        Height="{Binding Window_Height}" Width="{Binding Window_Width}" Focusable="True">
 
-    <Grid>
+    <UserControl.InputBindings>
+    <KeyBinding Command="{Binding GameStart}" Key="Esc"/>
+    </UserControl.InputBindings>
+    <Grid x:Name="Main" Focusable="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="14*"/>
