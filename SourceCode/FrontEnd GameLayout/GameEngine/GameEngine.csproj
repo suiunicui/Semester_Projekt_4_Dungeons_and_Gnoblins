@@ -7,9 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Abstract Class\" />
-    <Folder Include="Implementations\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
 

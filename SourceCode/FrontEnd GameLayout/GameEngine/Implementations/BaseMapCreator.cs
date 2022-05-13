@@ -4,11 +4,15 @@ namespace GameEngine.Implementations;
 
 public class BaseMapCreator : IMapCreator
 {
-  public string FilePath { get; set; } = Environment.CurrentDirectory + @"\\"; 
+  public string FilePath { get; set; } = Environment.CurrentDirectory + @"\\";
+  public string EnemyFilePath { get; set; } = Environment.CurrentDirectory + @"\\EnemyFile";
+  public string ItemFilePath { get; set; } = Environment.CurrentDirectory + @"ItemFile";
   public BaseMapCreator(string fileName)
   {
       FilePath += fileName;
       GenerateMapLayoutFile();
+      GenerateEnemyLayoutFile();
+      GenerateItemLayoutFile();
   }
   public void GenerateMapLayoutFile()
   { 
@@ -35,4 +39,23 @@ public class BaseMapCreator : IMapCreator
     sw.WriteLine("18,-1,-1,-1");
     sw.Close();
   }
+
+  public void GenerateEnemyLayoutFile()
+  {
+    StreamWriter sw = new StreamWriter(EnemyFilePath);
+    sw.WriteLine("2, 10, 12, 8, 1, 2");
+    sw.WriteLine("5, 10, 12, 8, 1, 2");
+    sw.WriteLine("13, 10, 12, 8, 1, 2");
+    sw.WriteLine("16, 10, 12, 8, 1, 2");
+    sw.WriteLine("19, 10, 12, 8, 1, 2");
+    sw.Close();
+  }
+
+  public void GenerateItemLayoutFile()
+  {
+    StreamWriter sw = new StreamWriter(ItemFilePath);
+    sw.WriteLine("1 ,1 ,8 ,1 ,2 ,2");
+    sw.Close();
+  }
+
 }

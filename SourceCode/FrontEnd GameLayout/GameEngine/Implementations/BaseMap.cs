@@ -10,7 +10,8 @@ public class BaseMap : IMap
     public BaseMap(IMapCreator mapCreator)
     {
         MapLayout = GenerateMapLayoutFromFile(mapCreator.FilePath);
-        Rooms = GenerateRooms(mapCreator.FilePath);
+        Rooms = GenerateRooms(mapCreator.FilePath, mapCreator.EnemyFilePath, mapCreator.ItemFilePath);
+
     }
 
     private LinkedList<int>[] GenerateMapLayoutFromFile(string filePath)
@@ -57,7 +58,7 @@ public class BaseMap : IMap
         return mapSize;
     }
 
-    private ILocation[] GenerateRooms(string LayoutFilePath)
+    private ILocation[] GenerateRooms(string LayoutFilePath, string enemyFilePath, string itemFilePath)
     {
         int mapSize = CalculateMapSize(LayoutFilePath);
         ILocation[] rooms = new ILocation[mapSize];
@@ -66,6 +67,46 @@ public class BaseMap : IMap
         {
             rooms[i] = new Room((uint) i);
         }
+
+        StreamReader reader = new StreamReader(enemyFilePath);
+        while(!reader.EndOfStream)
+        {
+            string s = reader.ReadLine();
+            uint[] ss = s.Split(",").Select(uint.Parse).ToArray();
+
+            for (int i = 0; i < mapSize; i++)
+            {
+                if (i == ss[0])
+                {
+                    rooms[i].AddEnemy(new Enemy(ss[1], ss[2], (ss[3], ss[4]), ss[5]));
+                    break;
+                }
+            }
+        }
+        reader.Close();
+
+        reader = new StreamReader(itemFilePath);
+        while(!reader.EndOfStream)
+        {
+            string s = reader.ReadLine();
+            uint[] ss = s.Split(",").Select(uint.Parse).ToArray();
+
+            for(int i = 0; i < mapSize; i++)
+            {
+                if (i == ss[0])
+                {
+                    switch (ss[1])
+                    {
+                        case 1:
+                            rooms[i].Chest.Add(new Sword((ss[2], ss[3]), ss[4], ss[5]));
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+        reader.Close();
         return rooms;
     }
     public ILocation GetLocationByDirection(ILocation currentRoom, Direction direction)

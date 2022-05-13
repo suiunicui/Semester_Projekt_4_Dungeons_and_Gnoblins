@@ -1,4 +1,5 @@
 ﻿using GameEngine.Interfaces;
+using System.Collections;
 
 namespace GameEngine.Implementations;
 
@@ -20,5 +21,15 @@ public class Log : ILog
     {
         string lowerKey = key.ToLower();
         return LogEntry[lowerKey];
+    }
+
+    public static ILog operator +(ILog a, Log b)
+    {
+        foreach (var entry in b.LogEntry)
+        {
+            a.RecordEvent(entry.Key, entry.Value);
+        }
+
+        return a;
     }
 }

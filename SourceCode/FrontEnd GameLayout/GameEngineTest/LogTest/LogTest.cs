@@ -42,4 +42,15 @@ public class LogTest
         uut.RecordEvent("MESsage", "Hello Test");
         Assert.That(uut.GetRecord("message"), Is.EqualTo("Hello Test"));
     }
+
+    [Test]
+    public void Operator_AdditionOverload_addAllEntries_FromLogBToLogA()
+    {
+        Log log = new Log();
+        log.RecordEvent("message", "Hello World");
+        string expectedMessage = "Hello World";
+        uut += log;
+
+        Assert.That(uut.GetRecord("message"), Is.EqualTo(expectedMessage));
+    }
 }

@@ -50,7 +50,7 @@ namespace FrontEnd_GameLayout.ViewModels
         private async void getListOfSaves()
         {
             BackEndController httpHandler = new BackEndController();
-            SavedGames = await httpHandler.GetListOfSave();
+           // SavedGames = await httpHandler.GetListOfSave();
         }
 
 

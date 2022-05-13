@@ -2,6 +2,7 @@
 using GameEngine.Models.DTO;
 using GameEngine.Interfaces;
 using Backend_API.Models;
+using GameEngine.Abstract_Class;
 
 namespace GameEngine.Implementations;
 
@@ -10,16 +11,21 @@ public class GameController : IGameController
     public IMap GameMap { get; set; }
     public ILocation CurrentLocation { get; set; }
     public Player CurrentPlayer { get; set; }
+    public CombatController CombatController { get; set; }
 
     public List<uint> VisitedRooms { get; set; } = new List<uint>();
+    public List<uint> SlainEnemies { get; set; } = new List<uint>();
+    public List<uint> Inventory { get; set; } = new List<uint>();
+
 
     private static volatile IGameController instance;
     public GameController(IMapCreator mapCreator)
     {
         GameMap = new BaseMap(mapCreator);
         CurrentLocation = GameMap.Rooms[0];
-        CurrentPlayer = new Player(10, 14);
+        CurrentPlayer = new Player(10, 14, null);
         CurrentLocation.AddPlayer(CurrentPlayer);
+        CombatController = new CombatController(new BasicDiceRoller());
     }
     public static IGameController Instance
     {
@@ -33,12 +39,17 @@ public class GameController : IGameController
         }
     }
 
+    public void Reset()
+    {
+        instance = new GameController(new BaseMapCreator(@"MayLayoutFile"));
+    }
+
     public async Task GetRoomDescriptionAsync()
     {
         BackEndController roomDescription = new BackEndController();
         foreach (var item in GameMap.Rooms)
         {
-            int IntId = Convert.ToInt32(item.Id+1);
+            int IntId = Convert.ToInt32(item.Id + 1);
             RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
             item.Description = tempDesc.Description;
         }
@@ -50,7 +61,7 @@ public class GameController : IGameController
         BackEndController newSave = new BackEndController();
         SaveDTO Game = new SaveDTO();
         Game.ID = id;
-        Game.RoomId = (int) CurrentLocation.Id;
+        Game.RoomId = (int)CurrentLocation.Id;
         Game.SaveName = Savename;
         Game.VisitedRooms = VisitedRooms;
         newSave.PostSaveAsync(Game);
@@ -82,4 +93,17 @@ public class GameController : IGameController
 
         return log;
     }
-}
+
+    public void EliminateEnemy()
+    {
+        SlainEnemies.Add(CurrentLocation.Enemy.Id);
+        CurrentLocation.RemoveEnemy();
+    }
+
+    public void PickUpItem(Item item)
+    {
+        Inventory.Add(item.Id);
+        CurrentPlayer.Inventory.Add(item);
+    }
+
+}   

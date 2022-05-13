@@ -3,7 +3,7 @@ using GameEngine.Interfaces;
 using NUnit.Framework;
 using NSubstitute;
 
-namespace GameEngineTest.GameControllerTest;
+namespace GameEngineTest.ControllerTest.GameControllerTest;
 
 [TestFixture]
 public class GameControllerTest
