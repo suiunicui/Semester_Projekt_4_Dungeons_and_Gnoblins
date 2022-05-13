@@ -55,6 +55,7 @@ namespace Backend_API.DAL
                 RoomID = saveDTO.RoomId,
                 SaveName = saveDTO.SaveName,
                 ID = saveDTO.ID,
+                Username = oldSave.Username
 
             };
 
@@ -88,20 +89,21 @@ namespace Backend_API.DAL
 
             List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
 
-            SaveDTO SaveDTO = new SaveDTO()
+            SaveDTO newSave = new SaveDTO()
             {
                 SaveName = save.SaveName,
                 ID = save.ID,
                 RoomId = save.RoomID,
                 VisitedRooms = new List<uint>(),
+                Username = save.Username,
             };
 
             foreach (VisitedRooms r in visitedList)
             {
-                SaveDTO.VisitedRooms.Add(r.VistedRoomId);
+                newSave.VisitedRooms.Add(r.VistedRoomId);
             }
 
-            return SaveDTO;
+            return newSave;
 
 
         }

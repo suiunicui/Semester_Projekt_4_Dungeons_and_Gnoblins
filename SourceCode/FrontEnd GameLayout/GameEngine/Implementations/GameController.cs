@@ -13,6 +13,7 @@ public class GameController : IGameController
 
     public List<uint> VisitedRooms { get; set; } = new List<uint>();
 
+    BackEndController backEndController = BackEndController.Instance;
     private static volatile IGameController instance;
     public GameController(IMapCreator mapCreator)
     {
@@ -35,11 +36,11 @@ public class GameController : IGameController
 
     public async Task GetRoomDescriptionAsync()
     {
-        BackEndController roomDescription = new BackEndController();
+        //BackEndController roomDescription = new BackEndController();
         foreach (var item in GameMap.Rooms)
         {
             int IntId = Convert.ToInt32(item.Id+1);
-            RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
+            RoomDescription tempDesc = await backEndController.GetRoomDescriptionAsync(IntId);
             item.Description = tempDesc.Description;
         }
     }
@@ -47,20 +48,21 @@ public class GameController : IGameController
     //Gemmer spil
     public async Task SaveGame(int id, string Savename)
     {
-        BackEndController newSave = new BackEndController();
+        //BackEndController newSave = new BackEndController();
         SaveDTO Game = new SaveDTO();
         Game.ID = id;
         Game.RoomId = (int) CurrentLocation.Id;
         Game.SaveName = Savename;
+        Game.Username = "null";
         Game.VisitedRooms = VisitedRooms;
-        newSave.PostSaveAsync(Game);
+        await backEndController.PostSaveAsync(Game);
     }
 
     //Loader gemt spil
     public async Task LoadGame(int id)
     {
-        BackEndController SaveLoader = new BackEndController();
-        SaveDTO Game = await SaveLoader.GetSaveAsync(id);
+        //BackEndController SaveLoader = new BackEndController();
+        SaveDTO Game = await backEndController.GetSaveAsync(id);
         CurrentLocation.RemovePlayer();
         CurrentLocation = GameMap.Rooms[Game.RoomId];
         VisitedRooms = Game.VisitedRooms;

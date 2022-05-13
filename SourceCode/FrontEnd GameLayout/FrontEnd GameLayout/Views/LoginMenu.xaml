@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="FrontEnd_GameLayout.Views.LoginMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEnd_GameLayout.Views"
+        mc:Ignorable="d"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Height="{Binding Window_Height}" Width="{Binding Window_Width}">
+
+    <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons &amp; Gnoblins" TextAlignment="Center"
+                   VerticalAlignment="Center" Style="{StaticResource titleblockStyle}"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Username" 
+                   TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}" />
+        <TextBlock Grid.Column="1" Grid.Row="4" Text="Password" 
+                   TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}" />
+
+        <TextBox Name="InputUsername" Grid.Row="3" Grid.Column="1" FontSize="20"
+                 Text="{Binding Username}"/>
+
+        <TextBox Name="InputPassword" Grid.Row="5" Grid.Column="1" FontSize="20" 
+                 Text="{Binding Password}"/>
+
+        <Button Grid.Column="1" Grid.Row="6" Style="{StaticResource buttonStyle}"
+                Content="Login" Command="{Binding Login}"/>
+
+        <Button Grid.Column="3" Grid.Row="7" Style="{StaticResource buttonStyle}"
+                Content="Back" Command="{Binding BackCommand}"/>
+
+    </Grid>
+</UserControl>

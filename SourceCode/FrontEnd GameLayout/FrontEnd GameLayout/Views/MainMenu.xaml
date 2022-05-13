@@ -30,16 +30,18 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        
+
         <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource buttonStyle}"
                 Content="Register" Command="{Binding RegisterMenu}"/>
         <Button Grid.Column="1" Grid.Row="4" Style="{StaticResource buttonStyle}"
-                Content="New Game" Command="{Binding GameStart}"/>
+                Content="Login" Command="{Binding LoginMenu}"/>
         <Button Grid.Column="1" Grid.Row="6" Style="{StaticResource buttonStyle}"
-                Content="Settings" Command="{Binding SettingsMenu}"/>
+                Content="New Game" Command="{Binding GameStart}"/>
         <Button Grid.Column="1" Grid.Row="8" Style="{StaticResource buttonStyle}"
-                Content="Load Game" Command="{Binding LoadMenu}"/>
+                Content="Settings" Command="{Binding SettingsMenu}"/>
         <Button Grid.Column="1" Grid.Row="10" Style="{StaticResource buttonStyle}"
+                Content="Load Game" Command="{Binding LoadMenu}"/>
+        <Button Grid.Column="1" Grid.Row="12" Style="{StaticResource buttonStyle}"
                 Content="Exit Game" Command="{Binding ExitGameCommand}"/>
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons &amp; Gnoblins" TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}"/>
     </Grid>

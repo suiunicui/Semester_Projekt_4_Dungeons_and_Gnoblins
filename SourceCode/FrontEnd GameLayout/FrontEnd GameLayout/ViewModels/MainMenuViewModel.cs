@@ -109,8 +109,20 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _RegisterMenu ?? (_RegisterMenu = new RelayCommand(x =>
                 {
-                    //ScreenInfo.Instance.LastScreen = "MainMenu";
                     Mediator.Notify("GoToRegisterMenu", "");
+                }));
+            }
+        }
+
+        private ICommand _LoginMenu;
+
+        public ICommand LoginMenu
+        {
+            get
+            {
+                return _LoginMenu ?? (_LoginMenu = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToLoginMenu", "");
                 }));
             }
         }
