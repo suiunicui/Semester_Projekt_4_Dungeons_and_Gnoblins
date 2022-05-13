@@ -38,5 +38,28 @@ public class GameControllerTest
         Assert.That(oldLocation.Player,Is.Null);
     }
 
+    [Test]
+    public void PickUp_ItemIsGoneFromRoom_AddedToInventory()
+    {
+        uut.Move(Direction.South);
+        uut.PickUpItem(uut.CurrentLocation.Chest.ToArray()[0]);
 
+        Assert.That(uut.CurrentLocation.Chest,Is.Empty);
+        Assert.That(uut.Inventory, Is.Not.Empty);
+        Assert.That(uut.CurrentPlayer.Inventory, Is.Not.Empty);
+    }
+
+    [Test]
+    public void EliminateEnemy_EnemyGoneFromRoom_AddedToSlainEnemiesList()
+    {
+        uut.CurrentLocation = uut.GameMap.Rooms[2];
+
+        Assert.That(uut.CurrentLocation.Enemy, Is.Not.Null);
+        Assert.That(uut.SlainEnemies, Is.Empty);
+
+        uut.EliminateEnemy();
+
+        Assert.That(uut.CurrentLocation.Enemy, Is.Null);
+        Assert.That(uut.SlainEnemies, Is.Not.Empty);
+    }
 }

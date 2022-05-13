@@ -104,6 +104,7 @@ public class GameController : IGameController
     {
         Inventory.Add(item.Id);
         CurrentPlayer.Inventory.Add(item);
+        CurrentLocation.Chest.Remove(item);
     }
 
 }   
