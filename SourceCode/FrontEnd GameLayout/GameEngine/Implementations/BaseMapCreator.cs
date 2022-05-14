@@ -45,9 +45,9 @@ public class BaseMapCreator : IMapCreator
     StreamWriter sw = new StreamWriter(EnemyFilePath);
     sw.WriteLine("2, 10, 12, 8, 1, 2");
     sw.WriteLine("5, 10, 12, 8, 1, 2");
-    sw.WriteLine("13, 10, 12, 8, 1, 2");
-    sw.WriteLine("16, 10, 12, 8, 1, 2");
-    sw.WriteLine("19, 10, 12, 8, 1, 2");
+    sw.WriteLine("12, 10, 12, 8, 1, 2");
+    sw.WriteLine("15, 10, 12, 8, 1, 2");
+    sw.WriteLine("18, 10, 12, 8, 1, 2");
     sw.Close();
   }
 
