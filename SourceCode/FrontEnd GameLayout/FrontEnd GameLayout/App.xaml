@@ -30,6 +30,9 @@
         <DataTemplate DataType="{x:Type local:LoginMenuViewModel}">
             <local1:LoginMenu />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type local:CombatViewModel}">
+            <local1:Combat />
+        </DataTemplate>
         <SolidColorBrush x:Key="backgroundColor" Color="Black"/>
         <SolidColorBrush x:Key="textColor" Color="LightGray"/>
         <SolidColorBrush x:Key="textHighligtColor" Color="IndianRed"/>

@@ -18,15 +18,20 @@ using GameEngine.Interfaces;
 namespace FrontEnd_GameLayout.ViewModels
 {
     
-    public class RoomViewModel : BaseViewModel, IPageViewModel
+    public class CombatViewModel : BaseViewModel, IPageViewModel
     {
 
         IGameController game = GameController.Instance;
         ScreenInfo Res = ScreenInfo.Instance;
         
-        public RoomViewModel()
+        public CombatViewModel()
         {
-            Description = game.CurrentLocation.Description;
+            Description = "Fight!!";//= game.CurrentLocation.Description;
+            if(game.CurrentLocation.Enemy != null) {
+                CombatLog = "You face a" + game.CurrentLocation.Enemy.Id + "\n"; //Make it a name...
+                CombatLog += "You have " + game.CurrentLocation.Player.HP + " hitpoint left. \n";
+                CombatLog += "The enemy has " + game.CurrentLocation.Enemy.HP + " hitpoints \n";
+            }
             loadMap();
             MovePlayerOnMap();
             Window_Height = Res.Height;
@@ -35,15 +40,6 @@ namespace FrontEnd_GameLayout.ViewModels
 
         #region Properties
 
-
-
-        public string Name
-        {
-            get
-            {
-                return "Room";
-            }
-        }
 
         static int window_Width=1920;
         public int Window_Width
@@ -87,7 +83,6 @@ namespace FrontEnd_GameLayout.ViewModels
 
 
         private string description;
-
         public string Description 
         { 
             get { return description; } 
@@ -97,6 +92,20 @@ namespace FrontEnd_GameLayout.ViewModels
                 {
                     description = value;
                     OnPropertyChanged("Description");
+                }
+            }
+        }
+
+        private string _combatLog;
+        public string CombatLog
+        {
+            get { return _combatLog; }
+            set
+            {
+                if (value != _combatLog)
+                {
+                    _combatLog = value;
+                    OnPropertyChanged("CombatLog");
                 }
             }
         }
@@ -456,7 +465,7 @@ namespace FrontEnd_GameLayout.ViewModels
                     Room_3_Visibility = Visibility.Visible;
                     OnPropertyChanged("Room_3_Visibility");
                     break;
-                case 4: 
+                case 4:
                     PlayerRow = 4;
                     playerColumn = 4;
                     Room_4_Visibility = Visibility.Visible;
@@ -564,64 +573,72 @@ namespace FrontEnd_GameLayout.ViewModels
             OnPropertyChanged("PlayerRow");
             OnPropertyChanged("PlayerColumn");
         }
-
         #endregion
 
         #region Commands
 
-        private DelegateCommand<string> _moveCommand;
-        public DelegateCommand<string> MoveCommand =>
-        _moveCommand ?? (_moveCommand = new DelegateCommand<string>(ExecuteMoveCommand, CanExecuteMoveCommand));
-        void ExecuteMoveCommand(string direction)
+
+
+
+        private DelegateCommand _fightCommand;
+        public DelegateCommand FightCommand =>
+        _fightCommand ?? (_fightCommand = new DelegateCommand(ExecuteFightCommand, CanExecuteFightCommand));
+        void ExecuteFightCommand()
         {
-            Direction TempDirection = Direction.North;
-            Log = new Log();
-            switch (direction)
-            {
-                case "North":
-                    TempDirection = Direction.North;
-                    break;
-                case "East":
-                    TempDirection = Direction.East;
-                    break;
-                case "South":
-                    TempDirection = Direction.South;
-                    break;
-                case "West":
-                    TempDirection = Direction.West;
-                    break;
-            }
-            Log = game.Move(TempDirection);
-            //Description = Log.GetEventRecord("New Room Description");
-            if(game.CurrentLocation.Enemy != null)
-            {
-                Mediator.Notify("GoToCombat", "");
-            }
-            Description = game.CurrentLocation.Description;
-            var RoomView = new Views.Room();
-            checkIfRoomIsNew();
-            MovePlayerOnMap(RoomView);
-        }
-        bool CanExecuteMoveCommand(string direction)
-        { 
+            Player tPlayer = game.CurrentLocation.Player;
+            Enemy tEnemy = game.CurrentLocation.Enemy;
+
+            log = game.CombatController.EngageCombat(ref tPlayer, ref tEnemy);
+
+            game.CurrentLocation.Player = tPlayer;
+            game.CurrentLocation.Enemy = tEnemy;
+
+            CombatLog = "You face a " + game.CurrentLocation.Enemy.Id + "\n"; //Make it a name...
             
+
+            if (game.CombatController.CombatIsOver)
+            {
+                if(game.CurrentLocation.Enemy.HP == 0)
+                {
+                    CombatLog = log.GetRecord("Enemy Status");
+                    Mediator.Notify("GameStart", "");
+                }
+                else
+                {
+                    CombatLog = log.GetRecord("Player Status");
+                    Mediator.Notify("GoToMainMenu", "");
+                }
+            }
+            else
+            {
+                CombatLog += log.GetRecord("player attack") + " \n";
+                if(log.GetRecord("player attack") != "Your attack missed, dealing 0 damage to the enemy.") 
+                {
+                    CombatLog += log.GetRecord("player damage") + " \n";
+                }
+                CombatLog += log.GetRecord("enemy attack") + " \n";
+                if (log.GetRecord("enemy attack") != "The enemy's attack missed, dealing 0 damage to you.")
+                {
+                    CombatLog += log.GetRecord("enemy damage") + " \n";
+                }
+            }
+
+            CombatLog += "You have " + game.CurrentLocation.Player.HP + " hitpoint left. \n";
+            CombatLog += "The enemy has " + game.CurrentLocation.Enemy.HP + " hitpoints \n";
+        }
+        bool CanExecuteFightCommand()
+        {
             return true;
         }
 
-        private DelegateCommand<string> _interactCommand;
-        public DelegateCommand<string> InteractCommand =>
-        _interactCommand ?? (_interactCommand = new DelegateCommand<string>(ExecuteInteractCommand, CanExecuteInteractCommand));
-        void ExecuteInteractCommand(string direction)
+        private DelegateCommand _fleeCommand;
+        public DelegateCommand FleeCommand =>
+        _fleeCommand ?? (_fleeCommand = new DelegateCommand(ExecuteFleeCommand, CanExecuteFleeCommand));
+        void ExecuteFleeCommand()
         {
-            if (Res.MusicPlaying)
-                Res.MusicPlaying = false;
-            else
-            {
-                Res.MusicPlaying = true;
-            }
-            Res.Toggle_Music();
+            game.CombatController.Flee();
         }
-        bool CanExecuteInteractCommand(string direction)
+        bool CanExecuteFleeCommand()
         {
             return true;
         }

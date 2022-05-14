@@ -90,13 +90,13 @@ namespace GameEngine.Implementations
                 else
                 {
                     uint damageDealt = enemy.Attack(ref player);
-                    log.RecordEvent("enemy attack", "You Hit the enemy.");
+                    log.RecordEvent("enemy attack", "The enemy Hit You.");
                     log.RecordEvent("enemy damage", $"The attack dealt {damageDealt} damage to you.");
                     return log;
                 }
             }
 
-            log.RecordEvent("enemy attack", $"Your attack missed, dealing {0} damage to you.");
+            log.RecordEvent("enemy attack", $"The enemy's attack missed, dealing {0} damage to you.");
             return log;
         }
         private bool isDead(Actor actor) => actor.HP == 0;

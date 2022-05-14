@@ -11,5 +11,6 @@ namespace GameEngine.Interfaces
     {
         public ILog EngageCombat(ref Player player, ref Enemy enemy);
         public void Flee();
+        public bool CombatIsOver { get; set; }
     }
 }
