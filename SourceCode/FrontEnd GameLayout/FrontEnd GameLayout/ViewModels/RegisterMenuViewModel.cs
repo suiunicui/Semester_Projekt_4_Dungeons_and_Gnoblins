@@ -81,6 +81,21 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        private string _errorText;
+
+        public string ErrorText
+        {
+            get { return _errorText; }
+            set
+            {
+                if (value != _errorText)
+                {
+                    _errorText = value;
+                    OnPropertyChanged("ErrorText");
+                }
+            }
+        }
+
 
 
         private ICommand _backCommand;
@@ -91,15 +106,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _backCommand ?? (_backCommand = new RelayCommand(x =>
                 {
-                    if (Res.LastScreen == "InGameMenu")
-                    {
-                        Mediator.Notify("GoToInGameMenu", "");
-                    }
-                    else
-                    {
-                        Mediator.Notify("GoToMainMenu", "");
-                    }
-
+                    Mediator.Notify("GoToLoginMenu", "");
                 }));
 
 
@@ -112,12 +119,29 @@ namespace FrontEnd_GameLayout.ViewModels
 
         async void ExecuteRegisterCommand()
         {
+            bool RegistrationSuccessful = true;
             _newUser = new UserDTO()
             {
                 Username = _username,
                 Password = _password
             };
-            await httpHandler.PostRegisterAsync(_newUser);
+            
+            try
+            {
+                await httpHandler.PostRegisterAsync(_newUser);
+            }
+            catch (System.Net.Http.HttpRequestException Exception)
+            {
+                Password = null;
+                RegistrationSuccessful = false;
+                ErrorText =
+                    "Registration was unsuccessful." +
+                    "\nThe username is already in use, please pick another." +
+                    "\nThen try again!";
+            }
+            if (RegistrationSuccessful)
+            Mediator.Notify("GoToLoginMenu","");
+
         }
 
         bool CanExecuteRegisterCommand()

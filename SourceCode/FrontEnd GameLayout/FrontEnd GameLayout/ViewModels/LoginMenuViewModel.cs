@@ -80,29 +80,44 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        private string _errorText;
 
+        public string ErrorText
+        {
+            get { return _errorText; }
+            set
+            {
+                if (value != _errorText)
+                {
+                    _errorText = value;
+                    OnPropertyChanged("ErrorText");
+                }
+            }
+        }
 
-        private ICommand _backCommand;
+        private ICommand _registerScreenCommand;
 
-        public ICommand BackCommand
+        public ICommand RegisterScreenCommand
         {
             get
             {
-                return _backCommand ?? (_backCommand = new RelayCommand(x =>
+                return _registerScreenCommand ?? (_registerScreenCommand = new RelayCommand(x =>
                 {
-                    if (Res.LastScreen == "InGameMenu")
-                    {
-                        Mediator.Notify("GoToInGameMenu", "");
-                    }
-                    else
-                    {
-                        Mediator.Notify("GoToMainMenu", "");
-                    }
-
+                    Mediator.Notify("GoToRegisterMenu", "");
                 }));
-
-
             }
+        }
+
+        private DelegateCommand _exitGameCommand;
+        public DelegateCommand ExitGameCommand =>
+            _exitGameCommand ?? (_exitGameCommand = new DelegateCommand(ExecuteExitGameCommand, CanExecuteExitGameCommand));
+        void ExecuteExitGameCommand()
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+        bool CanExecuteExitGameCommand()
+        {
+            return true;
         }
 
         private DelegateCommand _login;
@@ -111,15 +126,28 @@ namespace FrontEnd_GameLayout.ViewModels
 
         async void ExecuteLoginCommand()
         {
+            bool LoginSuccessful = true;
             _newUser = new UserDTO()
             {
                 Username = _username,
                 Password = _password
             };
-            await backEndController.PostLoginAsync(_newUser);
-
+            try
+            {
+                await backEndController.PostLoginAsync(_newUser);
+            }
+            catch (System.Net.Http.HttpRequestException Exception)
+            {
+                Password = null;
+                LoginSuccessful = false;
+                ErrorText =
+                    "Login was unsuccessful, " +
+                    "please ensure you have a valid account " +
+                    "\nand that your credentials are in order!" +
+                    " Then try again!";
+            }
+            if (LoginSuccessful)
             Mediator.Notify("GoToMainMenu", "");
-
         }
 
         bool CanExecuteLoginCommand()
