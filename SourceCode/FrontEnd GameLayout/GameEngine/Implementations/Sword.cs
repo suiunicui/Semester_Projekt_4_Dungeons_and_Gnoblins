@@ -15,6 +15,7 @@ namespace GameEngine.Implementations
             DamageDice = damageDice;
             Damage = damage;
             Hit = hit;
+            ItemType = "Sword";
         }
     }
 }
