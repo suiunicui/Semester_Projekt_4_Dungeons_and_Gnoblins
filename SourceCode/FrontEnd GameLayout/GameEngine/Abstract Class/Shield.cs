@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace GameEngine.Abstract_Class
 {
-    public abstract class Item
+    public class Shield : Item
     {
-        protected static uint ID = 0;
-        public uint Id { get; set; }
-        public static void reset()
+        public uint AC { get; set; }
+        public Shield(uint armorClass)
         {
-            ID = 0;
+            AC = armorClass;
         }
-
     }
 }
