@@ -39,10 +39,11 @@ public class GameController : IGameController
         }
     }
 
-    public void Reset()
+    public async void Reset()
     {
         instance = new GameController(new BaseMapCreator(@"MayLayoutFile"));
         Enemy.resetID();
+        await GetRoomDescriptionAsync();
     }
 
     public async Task GetRoomDescriptionAsync()
