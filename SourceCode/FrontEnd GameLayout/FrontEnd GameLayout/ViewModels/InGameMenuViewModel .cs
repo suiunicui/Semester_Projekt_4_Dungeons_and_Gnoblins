@@ -91,17 +91,19 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private ICommand _saveMenu;
-
-        public ICommand SaveMenu
+        private DelegateCommand _saveMenu;
+        public DelegateCommand SaveMenu =>
+        _saveMenu ?? (_saveMenu = new DelegateCommand(ExecuteSaveMenu, CanExecuteSaveMenu));
+        void ExecuteSaveMenu()
         {
-            get
-            {
-                return _saveMenu ?? (_saveMenu = new RelayCommand(x =>
-                {
-                    Mediator.Notify("GoToSaveMenu", "");
-                }));
-            }
+            System.Windows.Application.Current.Shutdown();
+        }
+        bool CanExecuteSaveMenu()
+        {
+            if (Res.LastScreenCombat == true)
+                return false;
+            else
+                return true;
         }
 
         private ICommand _settingsMenu;
