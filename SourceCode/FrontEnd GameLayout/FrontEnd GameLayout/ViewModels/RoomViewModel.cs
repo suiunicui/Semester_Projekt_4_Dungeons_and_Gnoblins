@@ -14,6 +14,7 @@ using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
 using GameEngine.Implementations;
 using GameEngine.Interfaces;
+using GameEngine.Abstract_Class;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -22,15 +23,18 @@ namespace FrontEnd_GameLayout.ViewModels
     {
 
         IGameController game = GameController.Instance;
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
         
         public RoomViewModel()
         {
-            Description = game.CurrentLocation.Description;
             loadMap();
             MovePlayerOnMap();
             Window_Height = Res.Height;
             Window_Width = Res.Width;
+            Res.LastScreenCombat = false;
+            Description = game.CurrentLocation.Description;
+            Items = game.CurrentLocation.Chest;
+
         }
 
         #region Properties
@@ -97,6 +101,31 @@ namespace FrontEnd_GameLayout.ViewModels
                 {
                     description = value;
                     OnPropertyChanged("Description");
+                }
+            }
+        }
+
+        private Item _selectedItem;
+        public Item SelectedItem
+        {
+            get { return _selectedItem; }
+            set
+            {
+                _selectedItem = value;
+                OnPropertyChanged("SelectedItem");
+            }
+        }
+
+        private List<Item> _items;
+        public List<Item> Items
+        {
+            get { return _items; }
+            set
+            {
+                if (value != _items)
+                {
+                    _items = value;
+                    OnPropertyChanged("Items");
                 }
             }
         }
@@ -434,44 +463,6 @@ namespace FrontEnd_GameLayout.ViewModels
                 }
             }
         }
-        #endregion
-
-        #region Commands
-
-        private DelegateCommand<string> _moveCommand;
-        public DelegateCommand<string> MoveCommand =>
-        _moveCommand ?? (_moveCommand = new DelegateCommand<string>(ExecuteMoveCommand, CanExecuteMoveCommand));
-        void ExecuteMoveCommand(string direction)
-        {
-            Direction TempDirection = Direction.North;
-            Log = new Log();
-            switch (direction)
-            {
-                case "North":
-                    TempDirection = Direction.North;
-                    break;
-                case "East":
-                    TempDirection = Direction.East;
-                    break;
-                case "South":
-                    TempDirection = Direction.South;
-                    break;
-                case "West":
-                    TempDirection = Direction.West;
-                    break;
-            }
-            Log = game.Move(TempDirection);
-            //Description = Log.GetEventRecord("New Room Description");
-            Description = game.CurrentLocation.Description;
-            var RoomView = new Views.Room();
-            checkIfRoomIsNew();
-            MovePlayerOnMap(RoomView);
-        }
-        bool CanExecuteMoveCommand(string direction)
-        { 
-            
-            return true;
-        }
 
         void MovePlayerOnMap(Views.Room Room = null)
         {
@@ -603,22 +594,70 @@ namespace FrontEnd_GameLayout.ViewModels
             OnPropertyChanged("PlayerColumn");
         }
 
-        private DelegateCommand<string> _interactCommand;
-        public DelegateCommand<string> InteractCommand =>
-        _interactCommand ?? (_interactCommand = new DelegateCommand<string>(ExecuteInteractCommand, CanExecuteInteractCommand));
-        void ExecuteInteractCommand(string direction)
+        #endregion
+
+        #region Commands
+
+        private DelegateCommand<string> _moveCommand;
+        public DelegateCommand<string> MoveCommand =>
+        _moveCommand ?? (_moveCommand = new DelegateCommand<string>(ExecuteMoveCommand, CanExecuteMoveCommand));
+        void ExecuteMoveCommand(string direction)
         {
-            if (Res.MusicPlaying)
-                Res.MusicPlaying = false;
-            else
+            Direction TempDirection = Direction.North;
+            Log = new Log();
+            switch (direction)
             {
-                Res.MusicPlaying = true;
+                case "North":
+                    TempDirection = Direction.North;
+                    break;
+                case "East":
+                    TempDirection = Direction.East;
+                    break;
+                case "South":
+                    TempDirection = Direction.South;
+                    break;
+                case "West":
+                    TempDirection = Direction.West;
+                    break;
             }
-            Res.Toggle_Music();
+            Res.LastRoom = game.CurrentLocation.Id;
+            Log = game.Move(TempDirection);
+            //Description = Log.GetEventRecord("New Room Description");
+            if(game.CurrentLocation.Enemy != null)
+            {
+                Res.MusicUri = new Uri(String.Format("{0}\\Music\\Battle.mp3", AppDomain.CurrentDomain.BaseDirectory));
+                Res.Toggle_Music();
+                Mediator.Notify("GoToCombat", "");
+            }
+            Description = game.CurrentLocation.Description;
+            Items = game.CurrentLocation.Chest;
+            var RoomView = new Views.Room();
+            checkIfRoomIsNew();
+            MovePlayerOnMap(RoomView);
         }
-        bool CanExecuteInteractCommand(string direction)
-        {
+        bool CanExecuteMoveCommand(string direction)
+        { 
+            
             return true;
+        }
+
+        private DelegateCommand _interactCommand;
+        public DelegateCommand InteractCommand =>
+        _interactCommand ?? (_interactCommand = new DelegateCommand(ExecuteInteractCommand));
+        void ExecuteInteractCommand()
+        {
+            if (SelectedItem != null)
+            {
+                game.PickUpItem(SelectedItem);
+                if(SelectedItem.Id == 1)
+                {
+                    game.CurrentPlayer.EquippedWeapon = (Weapon)SelectedItem;
+                }
+                if (SelectedItem.Id == 2)
+                {
+                    game.CurrentPlayer.EquippedShield = (Shield)SelectedItem;
+                }
+            }
         }
 
         private ICommand _gameMenu;

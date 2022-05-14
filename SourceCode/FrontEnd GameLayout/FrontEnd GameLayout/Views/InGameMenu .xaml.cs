@@ -23,5 +23,9 @@ namespace FrontEnd_GameLayout.Views
         {
             InitializeComponent();
         }
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            Keyboard.Focus(Main);
+        }
     }
 }

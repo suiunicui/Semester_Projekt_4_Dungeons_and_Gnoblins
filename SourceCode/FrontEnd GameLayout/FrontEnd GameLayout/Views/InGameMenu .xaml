@@ -8,9 +8,13 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        Height="{Binding Window_Height}" Width="{Binding Window_Width}">
+        Loaded="UserControl_Loaded"
+        Height="{Binding Window_Height}" Width="{Binding Window_Width}" Focusable="True">
 
-    <Grid>
+    <UserControl.InputBindings>
+    <KeyBinding Command="{Binding GameStart}" Key="Esc"/>
+    </UserControl.InputBindings>
+    <Grid x:Name="Main" Focusable="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="14*"/>
@@ -35,8 +39,8 @@
                 Content="Resume Game" Command="{Binding GameStart}"/>
         <Button Grid.Column="1" Grid.Row="6" Style="{StaticResource buttonStyle}"
                 Content="Settings" Command="{Binding SettingsMenu}"/>
-        <Button Grid.Column="1" Grid.Row="8" Style="{StaticResource buttonStyle}"
-                Content="Save Game" Command="{Binding SaveMenu}"/>
+        <Button Grid.Column="1" Grid.Row="8" Style="{StaticResource buttonStyle}" 
+                Content="{Binding SaveGame}" Command="{Binding SaveMenu}"/>
         <Button Grid.Column="1" Grid.Row="10" Style="{StaticResource buttonStyle}"
                 Content="Main Menu" Command="{Binding MainMenu}"/>
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons &amp; Gnoblins" TextAlignment="Center" VerticalAlignment="Center" 

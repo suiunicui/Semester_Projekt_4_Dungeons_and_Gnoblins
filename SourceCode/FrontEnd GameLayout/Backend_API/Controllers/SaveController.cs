@@ -33,12 +33,21 @@ namespace Backend_API.Controllers
 
         public async Task<ActionResult<SaveDTO>> GetSave(int id)
         {
-            var save = _save.GetSaveByID(id);
-            if(save == null)
+            var identity = User.Identity;
+
+            var save = await _save.GetSaveByID(id);
+
+            if (save == null)
             {
                 return NotFound();
             }
-            return await save;
+
+            if (identity.Name == save.Value.Username.ToLower())
+            {
+                return save;
+            }
+            else
+                return Unauthorized();
 
         }
 
@@ -62,7 +71,8 @@ namespace Backend_API.Controllers
 
         }
 
-        [HttpGet("Get_Room_Description")]
+        [HttpGet("Get_Room_Description"), AllowAnonymous]
+        
 
         public async Task<ActionResult<RoomDescription>> GetRoomDescription(int id)
         {

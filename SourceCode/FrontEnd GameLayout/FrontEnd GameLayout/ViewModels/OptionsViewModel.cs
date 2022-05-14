@@ -16,7 +16,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
 
         IGameController game = GameController.Instance;
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
         
         public List<Resolution> Resolutions { get; set; } = new List<Resolution>();
 
@@ -69,14 +69,11 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        bool _musicPlaying = true;
-
         public bool MusicPlaying
         {
-            get { return _musicPlaying; }
+            get { return Res.MusicPlaying; }
             set
             {
-                _musicPlaying = value;
                 Res.MusicPlaying = value;
                 Res.Toggle_Music();
             }
@@ -155,7 +152,7 @@ namespace FrontEnd_GameLayout.ViewModels
                 return _resetSettings ?? (_resetSettings = new RelayCommand(x =>
                 {
                     SliderVal = 0;
-                    ChosenResolution = Resolutions[0];
+                    ChosenResolution = Resolutions[1];
                     VolumeSliderVal = 0.5;
                 }));
             }

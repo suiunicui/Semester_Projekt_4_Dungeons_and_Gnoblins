@@ -1,4 +1,6 @@
-﻿using Backend_API.Models;
+﻿#nullable disable
+using Backend_API.Models;
+using GameEngine.Abstract_Class;
 using GameEngine.Exceptions;
 using GameEngine.Interfaces;
 
@@ -9,13 +11,15 @@ public class Room : ILocation
     public Room(uint roomId)
     {
         Id = roomId;
-       
     }
 
 
     public string Description { get; set; }
     public uint Id { get; set; }
     public Player Player { get; set; }
+    public Enemy Enemy { get; set; }
+    public List<Item> Chest { get; set; } = new List<Item>();
+
     public void AddPlayer(Player player)
     {
         if (Player != null)
@@ -42,6 +46,5 @@ public class Room : ILocation
         Enemy = null;
     }
 
-    public Enemy Enemy { get; set; }
 
 }

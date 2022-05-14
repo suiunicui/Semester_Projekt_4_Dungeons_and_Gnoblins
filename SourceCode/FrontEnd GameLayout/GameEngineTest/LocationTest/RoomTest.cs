@@ -54,7 +54,7 @@ public class RoomTest
     [Test]
     public void AddPlayer_IfRoomHasNoPlayer_CanAddPlayer()
     {
-        Player player = new Player(10, 16);
+        Player player = new Player(10, 16, null);
         uut.AddPlayer(player);
         Assert.That(uut.Player, Is.EqualTo(player));
     }
@@ -62,7 +62,7 @@ public class RoomTest
     [Test]
     public void AddPlayer_IfRoomHasPlayer_ThrowMemberOverwriteException()
     {
-        Player player = new Player(10, 16);
+        Player player = new Player(10, 16, null);
         uut.AddPlayer(player);
         Assert.Throws<MemberOverwriteException>(() => { uut.AddPlayer(player); });
     }
@@ -70,7 +70,7 @@ public class RoomTest
     [Test]
     public void RemovePlayer_IfRoomHasPlayer_RemovePlayer()
     {
-        Player player = new Player(10, 16);
+        Player player = new Player(10, 16, null);
         uut.AddPlayer(player);
         uut.RemovePlayer();
         Assert.That(uut.Player, Is.Null);
@@ -79,7 +79,7 @@ public class RoomTest
     [Test]
     public void AddEnemy_IfRoomHasNoEnemy_CanAddEnemy()
     {
-        Enemy enemy = new Enemy(10, 16, 2);
+        Enemy enemy = new Enemy(10, 16, (1, 2), 2);
         uut.AddEnemy(enemy);
         Assert.That(uut.Enemy,Is.EqualTo(enemy));
     }
@@ -87,7 +87,7 @@ public class RoomTest
     [Test]
     public void RemoveEnemy_IfRoomHasEnemy_canRemoveEnemy()
     {
-        Enemy enemy = new Enemy(10, 16, 2);
+        Enemy enemy = new Enemy(10, 16, (1, 2), 2);
         uut.AddEnemy(enemy);
         uut.RemoveEnemy();
         Assert.That(uut.Enemy,Is.Null);

@@ -33,8 +33,17 @@
                 <ColumnDefinition Width="64*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.Column="1" 
-                       Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
-            <TextBlock Grid.Row="1" Grid.Column="1" Text="There is nothing to interact with here." Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
+                       Text="{Binding Description}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
+
+            <ListBox Grid.Column="1" Grid.Row="1" Style="{StaticResource listStyle}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Margin="5,20,20,20">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding ItemType}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
 
 
             <!--Setting up the Map-->

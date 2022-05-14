@@ -9,6 +9,7 @@ using FrontEnd_GameLayout.Helper_classes;
 using Prism.Commands;
 using GameEngine.Interfaces;
 using GameEngine.Implementations;
+using System.Windows;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -16,7 +17,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
 
         IGameController game = GameController.Instance;
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
 
         public InGameMenuViewModel()
         {
@@ -45,6 +46,18 @@ namespace FrontEnd_GameLayout.ViewModels
                 OnPropertyChanged("Window_Height");
             }
         }
+
+        private string _saveGame = "Save Game";
+        public string SaveGame
+        {
+            get { return _saveGame; }
+            set
+            {
+                _saveGame = value;
+                OnPropertyChanged("SaveGame");
+            }
+        }
+
         private ICommand _gameStart;
 
         public ICommand GameStart
@@ -53,7 +66,14 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameStart ?? (_gameStart = new RelayCommand(x =>
                 {
-                    Mediator.Notify("GameStart","");
+                    if (Res.LastScreenCombat == true)
+                    {
+                        Res.MusicUri = new Uri(String.Format("{0}\\Music\\Battle.mp3", AppDomain.CurrentDomain.BaseDirectory));
+                        Res.Toggle_Music();
+                        Mediator.Notify("GoToCombat", "");
+                    }
+                    else
+                        Mediator.Notify("GameStart", "");
                 }));
             }
         }
@@ -84,16 +104,24 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private ICommand _saveMenu;
-
-        public ICommand SaveMenu
+        private DelegateCommand _saveMenu;
+        public DelegateCommand SaveMenu =>
+        _saveMenu ?? (_saveMenu = new DelegateCommand(ExecuteSaveMenu, CanExecuteSaveMenu));
+        void ExecuteSaveMenu()
         {
-            get
+            Mediator.Notify("GoToSaveMenu","");
+        }
+        bool CanExecuteSaveMenu()
+        {
+            if (Res.LastScreenCombat == true)
             {
-                return _saveMenu ?? (_saveMenu = new RelayCommand(x =>
-                {
-                    Mediator.Notify("GoToSaveMenu", "");
-                }));
+                SaveGame = null;
+                return false;
+            }
+            else
+            {
+                SaveGame = "Save Game";
+                return true;
             }
         }
 
@@ -105,7 +133,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _settingsMenu ?? (_settingsMenu = new RelayCommand(x =>
                 {
-                    ScreenInfo.Instance.LastScreen = "InGameMenu";
+                    ViewInfo.Instance.LastScreen = "InGameMenu";
                     Mediator.Notify("GoToSettingsMenu", "");
                 }));
             }
