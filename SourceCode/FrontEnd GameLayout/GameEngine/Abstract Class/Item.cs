@@ -10,7 +10,7 @@ namespace GameEngine.Abstract_Class
     {
         protected static uint ID = 0;
         public uint Id { get; set; }
-        public static void reset()
+        public static void ResetID()
         {
             ID = 0;
         }

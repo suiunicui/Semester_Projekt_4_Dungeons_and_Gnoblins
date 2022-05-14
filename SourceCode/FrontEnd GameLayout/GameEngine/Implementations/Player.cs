@@ -7,17 +7,17 @@ public class Player : Actor
 {
     public Weapon? EquippedWeapon { get; set; } = null;
     public Shield? EquippedShield { get; set; } = null;
-    public uint AC
+    public override uint AC
     {
         get
         {
             if (EquippedShield != null)
             {
-                return AC + EquippedShield.AC;
+                return base.AC + EquippedShield.AC;
             }
-            return AC;
+            return base.AC;
         }
-        set { AC = value; }
+        set { base.AC = value; }
     }
     public List<Item> Inventory { get; set; } = new List<Item>();
     private DiceRoller _diceRoller;

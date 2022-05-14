@@ -42,7 +42,8 @@ public class GameController : IGameController
     public void Reset()
     {
         instance = new GameController(new BaseMapCreator(@"MayLayoutFile"));
-        Enemy.resetID();
+        Enemy.ResetID();
+        Item.ResetID();
     }
 
     public async Task GetRoomDescriptionAsync()
