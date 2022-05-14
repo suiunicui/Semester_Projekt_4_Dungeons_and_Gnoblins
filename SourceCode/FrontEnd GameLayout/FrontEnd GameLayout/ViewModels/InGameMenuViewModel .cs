@@ -17,7 +17,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
 
         IGameController game = GameController.Instance;
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
 
         public InGameMenuViewModel()
         {
@@ -133,7 +133,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _settingsMenu ?? (_settingsMenu = new RelayCommand(x =>
                 {
-                    ScreenInfo.Instance.LastScreen = "InGameMenu";
+                    ViewInfo.Instance.LastScreen = "InGameMenu";
                     Mediator.Notify("GoToSettingsMenu", "");
                 }));
             }

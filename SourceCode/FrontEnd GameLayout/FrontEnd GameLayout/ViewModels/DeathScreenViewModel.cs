@@ -16,7 +16,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
 
         IGameController game = GameController.Instance;
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
 
         public DeathScreenViewModel()
         {

@@ -23,7 +23,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
 
         IGameController game = GameController.Instance;
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
         
         public RoomViewModel()
         {
@@ -620,6 +620,7 @@ namespace FrontEnd_GameLayout.ViewModels
                     TempDirection = Direction.West;
                     break;
             }
+            Res.LastRoom = game.CurrentLocation.Id;
             Log = game.Move(TempDirection);
             //Description = Log.GetEventRecord("New Room Description");
             if(game.CurrentLocation.Enemy != null)

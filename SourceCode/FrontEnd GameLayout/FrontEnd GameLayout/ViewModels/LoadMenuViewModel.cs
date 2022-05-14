@@ -14,7 +14,7 @@ namespace FrontEnd_GameLayout.ViewModels
 {
     public class LoadMenuViewModel :BaseViewModel, IPageViewModel
     {
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
         BackEndController backEndController = BackEndController.Instance;
 
         public LoadMenuViewModel()
@@ -55,7 +55,6 @@ namespace FrontEnd_GameLayout.ViewModels
             }
             
         }
-
 
         #region Properties
 

@@ -14,7 +14,7 @@ namespace FrontEnd_GameLayout.ViewModels
 {
     public class SaveMenuViewModel :BaseViewModel, IPageViewModel
     {
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
 
         BackEndController backEndController = BackEndController.Instance;
 

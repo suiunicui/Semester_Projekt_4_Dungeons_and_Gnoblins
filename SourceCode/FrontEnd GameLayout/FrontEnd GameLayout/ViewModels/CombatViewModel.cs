@@ -22,7 +22,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
 
         IGameController game = GameController.Instance;
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
         
         public CombatViewModel()
         {
@@ -641,17 +641,16 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private DelegateCommand _fleeCommand;
         public DelegateCommand FleeCommand =>
-        _fleeCommand ?? (_fleeCommand = new DelegateCommand(ExecuteFleeCommand, CanExecuteFleeCommand));
+        _fleeCommand ?? (_fleeCommand = new DelegateCommand(ExecuteFleeCommand));
         void ExecuteFleeCommand()
         {
             game.CombatController.Flee();
             Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
             Res.Toggle_Music();
+            game.CurrentLocation.RemovePlayer();
+            game.CurrentLocation = game.GameMap.Rooms[ViewInfo.Instance.LastRoom];
+            game.CurrentLocation.AddPlayer(game.CurrentPlayer);
             Mediator.Notify("GameStart", "");
-        }
-        bool CanExecuteFleeCommand()
-        {
-            return true;
         }
 
         private ICommand _gameMenu;

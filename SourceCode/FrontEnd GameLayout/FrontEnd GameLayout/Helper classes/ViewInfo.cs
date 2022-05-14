@@ -7,13 +7,14 @@ using System.Windows.Media;
 
 namespace FrontEnd_GameLayout.Helper_classes
 {
-    public class ScreenInfo
+    public class ViewInfo
     {
         public int Width { get; set; }
         public int Height { get; set; }
         public string LastScreen { get; set; }
         public bool LastScreenCombat { get; set; }
         public int UselessSlider { get; set; }
+        public uint LastRoom { get; set; }
         public bool MusicPlaying { get; set; } = true;
         private TimeSpan timeSpan { get; set; } = TimeSpan.Zero;
         private MediaPlayer MusicBot { get; set; }
@@ -28,10 +29,10 @@ namespace FrontEnd_GameLayout.Helper_classes
             set { MusicBot.Volume = value; }
         }
 
-        private static volatile ScreenInfo instance;
+        private static volatile ViewInfo instance;
 
 
-        public ScreenInfo()
+        public ViewInfo()
         {
             MusicBot = new MediaPlayer();
             //Start the MusicPlayer With the file located in bin/debug/net6.0 or bin/release/net6.0
@@ -45,13 +46,13 @@ namespace FrontEnd_GameLayout.Helper_classes
             LastScreen = "MainMenu";
             UselessSlider = 0;
         }
-        public static ScreenInfo Instance
+        public static ViewInfo Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new ScreenInfo();
+                    instance = new ViewInfo();
                 }
                 return instance;
             }

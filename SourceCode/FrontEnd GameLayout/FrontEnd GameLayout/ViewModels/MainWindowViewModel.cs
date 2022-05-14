@@ -17,7 +17,7 @@ namespace FrontEnd_GameLayout.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
         IGameController game = GameController.Instance;
         private IPageViewModel _currentPageViewModel;
         private List<IPageViewModel> _pageViewModels;

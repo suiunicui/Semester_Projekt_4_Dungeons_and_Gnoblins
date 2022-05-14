@@ -18,7 +18,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
         BackEndController httpHandler = new BackEndController();
         IGameController game = GameController.Instance;
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
 
         public RegisterMenuViewModel()
         {

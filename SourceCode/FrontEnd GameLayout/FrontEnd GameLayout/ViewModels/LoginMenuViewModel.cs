@@ -17,7 +17,7 @@ namespace FrontEnd_GameLayout.ViewModels
     {
         BackEndController backEndController = BackEndController.Instance;
         IGameController game = GameController.Instance;
-        ScreenInfo Res = ScreenInfo.Instance;
+        ViewInfo Res = ViewInfo.Instance;
 
         public LoginMenuViewModel()
         {
