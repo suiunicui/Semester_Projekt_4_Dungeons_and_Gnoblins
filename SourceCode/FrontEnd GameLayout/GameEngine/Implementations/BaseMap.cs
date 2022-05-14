@@ -1,4 +1,5 @@
-﻿using GameEngine.Interfaces;
+﻿using GameEngine.Abstract_Class;
+using GameEngine.Interfaces;
 
 namespace GameEngine.Implementations;
 
@@ -99,6 +100,9 @@ public class BaseMap : IMap
                     {
                         case 1:
                             rooms[i].Chest.Add(new Sword((ss[2], ss[3]), ss[4], ss[5]));
+                            break;
+                        case 2:
+                            rooms[i].Chest.Add(new Shield(ss[2]));
                             break;
                         default:
                             break;

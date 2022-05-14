@@ -12,7 +12,6 @@ public class GameController : IGameController
     public ILocation CurrentLocation { get; set; }
     public Player CurrentPlayer { get; set; }
     public ICombatController CombatController { get; set; }
-
     public List<uint> VisitedRooms { get; set; } = new List<uint>();
     public List<uint> SlainEnemies { get; set; } = new List<uint>();
     public List<uint> Inventory { get; set; } = new List<uint>();
@@ -43,6 +42,7 @@ public class GameController : IGameController
     {
         instance = new GameController(new BaseMapCreator(@"MayLayoutFile"));
         Enemy.resetID();
+        Item.ResetID();
         await GetRoomDescriptionAsync();
     }
 
@@ -109,5 +109,4 @@ public class GameController : IGameController
         CurrentPlayer.Inventory.Add(item);
         CurrentLocation.Chest.Remove(item);
     }
-
-}   
+}

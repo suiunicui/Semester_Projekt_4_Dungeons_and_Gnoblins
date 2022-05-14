@@ -6,9 +6,28 @@ namespace GameEngine.Implementations;
 public class Player : Actor
 {
     public Weapon? EquippedWeapon { get; set; } = null;
+    public Shield? EquippedShield { get; set; } = null;
+    public override uint AC
+    {
+        get
+        {
+            if (EquippedShield != null)
+            {
+                return base.AC + EquippedShield.AC;
+            }
+            return base.AC;
+        }
+        set { base.AC = value; }
+    }
     public List<Item> Inventory { get; set; } = new List<Item>();
     private DiceRoller _diceRoller;
 
+    public Player(uint healthPoint, uint armorClass)
+    {
+        HP = healthPoint;
+        AC = armorClass;
+        _diceRoller = new BasicDiceRoller();
+    }
     public Player(uint healthPoint, uint armorClass, Weapon weapon)
     {
         HP = healthPoint;

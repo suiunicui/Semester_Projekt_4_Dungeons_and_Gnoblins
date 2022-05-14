@@ -9,6 +9,7 @@ public class Enemy : Actor
     public uint Id;
 
     public (uint numOfSides, uint numOfDice) DamageDice { get; set; }
+
     public uint ToHit { get; set; }
     private DiceRoller _diceRoller;
     public Enemy(uint healthPoint, uint armorClass, (uint numOfSides, uint numOfDice) damageDice, uint hit)
@@ -72,7 +73,7 @@ public class Enemy : Actor
         HP -= damage;
     }
 
-    public static void resetID()
+    public static void ResetID()
     {
         ID = 0;
     }
