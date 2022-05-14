@@ -27,8 +27,9 @@ namespace FrontEnd_GameLayout.ViewModels
         public CombatViewModel()
         {
             Description = "Fight!!";//= game.CurrentLocation.Description;
+            game.CombatController.CombatIsOver = false;
             if(game.CurrentLocation.Enemy != null) {
-                CombatLog = "You face a" + game.CurrentLocation.Enemy.Id + "\n"; //Make it a name...
+                CombatLog = "You face a " + game.CurrentLocation.Enemy.Id + "\n"; //Make it a name...
                 CombatLog += "You have " + game.CurrentLocation.Player.HP + " hitpoint left. \n";
                 CombatLog += "The enemy has " + game.CurrentLocation.Enemy.HP + " hitpoints \n";
             }
