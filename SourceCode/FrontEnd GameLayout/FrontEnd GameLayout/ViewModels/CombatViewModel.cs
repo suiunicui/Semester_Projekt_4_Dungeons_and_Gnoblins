@@ -613,7 +613,7 @@ namespace FrontEnd_GameLayout.ViewModels
                     CombatLog = log.GetRecord("Player Status");
                     Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
                     Res.Toggle_Music();
-                    Mediator.Notify("GoToMainMenu", "");
+                    Mediator.Notify("GoToDeathScreen", "");
                 }
             }
             else

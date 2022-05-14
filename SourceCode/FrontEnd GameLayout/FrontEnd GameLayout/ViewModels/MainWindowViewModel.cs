@@ -120,6 +120,10 @@ namespace FrontEnd_GameLayout.ViewModels
         {
             ChangeViewModel(PageViewModels[8]);
         }
+        private void OnGoToDeathScreen(object obj)
+        {
+            ChangeViewModel(PageViewModels[9]);
+        }
 
         public MainWindowViewModel()
         {
@@ -138,6 +142,7 @@ namespace FrontEnd_GameLayout.ViewModels
             PageViewModels.Add(new RegisterMenuViewModel());
             PageViewModels.Add(new LoginMenuViewModel());
             PageViewModels.Add(new CombatViewModel());
+            PageViewModels.Add(new DeathScreenViewModel());
             CurrentPageViewModel = PageViewModels[7];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
@@ -149,6 +154,7 @@ namespace FrontEnd_GameLayout.ViewModels
             Mediator.Subscribe("GoToRegisterMenu", OnGoToRegisterMenu);
             Mediator.Subscribe("GoToLoginMenu", OnGoToLoginMenu);
             Mediator.Subscribe("GoToCombat", OnGoToCombat);
+            Mediator.Subscribe("GoToDeathScreen", OnGoToDeathScreen);
 
             game.GetRoomDescriptionAsync();
         }
