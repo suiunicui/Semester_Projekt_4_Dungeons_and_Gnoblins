@@ -27,13 +27,14 @@ namespace FrontEnd_GameLayout.ViewModels
         
         public RoomViewModel()
         {
-            Description = game.CurrentLocation.Description;
-            Items = game.CurrentLocation.Chest;
             loadMap();
             MovePlayerOnMap();
             Window_Height = Res.Height;
             Window_Width = Res.Width;
             Res.LastScreenCombat = false;
+            Description = game.CurrentLocation.Description;
+            Items = game.CurrentLocation.Chest;
+
         }
 
         #region Properties
@@ -628,6 +629,7 @@ namespace FrontEnd_GameLayout.ViewModels
                 Mediator.Notify("GoToCombat", "");
             }
             Description = game.CurrentLocation.Description;
+            Items = game.CurrentLocation.Chest;
             var RoomView = new Views.Room();
             checkIfRoomIsNew();
             MovePlayerOnMap(RoomView);
@@ -643,17 +645,19 @@ namespace FrontEnd_GameLayout.ViewModels
         _interactCommand ?? (_interactCommand = new DelegateCommand<string>(ExecuteInteractCommand, CanExecuteInteractCommand));
         void ExecuteInteractCommand(string direction)
         {
-            if (Res.MusicPlaying)
-                Res.MusicPlaying = false;
-            else
-            {
-                Res.MusicPlaying = true;
-            }
-            Res.Toggle_Music();
+            game.PickUpItem(SelectedItem);
         }
         bool CanExecuteInteractCommand(string direction)
         {
-            return true;
+            if (SelectedItem != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         private ICommand _gameMenu;

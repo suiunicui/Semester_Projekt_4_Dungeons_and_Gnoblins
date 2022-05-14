@@ -11,7 +11,6 @@ public class Room : ILocation
     public Room(uint roomId)
     {
         Id = roomId;
-        Description = "Room Id: " + (roomId + 1);
     }
 
 
