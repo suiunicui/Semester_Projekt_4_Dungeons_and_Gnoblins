@@ -53,7 +53,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameStart ?? (_gameStart = new RelayCommand(x =>
                 {
-                    if (Res.LastScreen == "CombatView")
+                    if (Res.LastScreenCombat == true)
                     {
                         Res.MusicUri = new Uri(String.Format("{0}\\Music\\Battle.mp3", AppDomain.CurrentDomain.BaseDirectory));
                         Res.Toggle_Music();

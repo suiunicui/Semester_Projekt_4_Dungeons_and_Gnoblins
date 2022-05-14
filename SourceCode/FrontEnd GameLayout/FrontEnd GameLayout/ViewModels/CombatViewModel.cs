@@ -36,6 +36,7 @@ namespace FrontEnd_GameLayout.ViewModels
             MovePlayerOnMap();
             Window_Height = Res.Height;
             Window_Width = Res.Width;
+            Res.LastScreenCombat = true;
         }
 
         #region Properties
@@ -660,7 +661,6 @@ namespace FrontEnd_GameLayout.ViewModels
                 {
                     Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
                     Res.Toggle_Music();
-                    Res.LastScreen = "CombatView";
                     Mediator.Notify("GoToInGameMenu", "");
                 }));
             }

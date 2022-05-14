@@ -12,6 +12,7 @@ namespace FrontEnd_GameLayout.Helper_classes
         public int Width { get; set; }
         public int Height { get; set; }
         public string LastScreen { get; set; }
+        public bool LastScreenCombat { get; set; }
         public int UselessSlider { get; set; }
         public bool MusicPlaying { get; set; } = true;
         private TimeSpan timeSpan { get; set; } = TimeSpan.Zero;
