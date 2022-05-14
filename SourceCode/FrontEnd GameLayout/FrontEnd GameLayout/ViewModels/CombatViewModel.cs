@@ -601,11 +601,15 @@ namespace FrontEnd_GameLayout.ViewModels
                 if(game.CurrentLocation.Enemy.HP == 0)
                 {
                     CombatLog = log.GetRecord("Enemy Status");
+                    Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+                    Res.Toggle_Music();
                     Mediator.Notify("GameStart", "");
                 }
                 else
                 {
                     CombatLog = log.GetRecord("Player Status");
+                    Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+                    Res.Toggle_Music();
                     Mediator.Notify("GoToMainMenu", "");
                 }
             }
@@ -651,6 +655,9 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameMenu ?? (_gameMenu = new RelayCommand(x =>
                 {
+                    Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+                    Res.Toggle_Music();
+                    Res.LastScreen = "CombatView";
                     Mediator.Notify("GoToInGameMenu", "");
                 }));
             }

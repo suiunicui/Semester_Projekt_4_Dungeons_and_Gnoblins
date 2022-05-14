@@ -53,7 +53,14 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameStart ?? (_gameStart = new RelayCommand(x =>
                 {
-                    Mediator.Notify("GameStart","");
+                    if (Res.LastScreen == "CombatView")
+                    {
+                        Res.MusicUri = new Uri(String.Format("{0}\\Music\\Battle.mp3", AppDomain.CurrentDomain.BaseDirectory));
+                        Res.Toggle_Music();
+                        Mediator.Notify("GoToCombat", "");
+                    }
+                    else
+                        Mediator.Notify("GameStart", "");
                 }));
             }
         }
