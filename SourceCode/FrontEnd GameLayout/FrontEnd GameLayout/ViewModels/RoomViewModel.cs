@@ -622,6 +622,8 @@ namespace FrontEnd_GameLayout.ViewModels
             //Description = Log.GetEventRecord("New Room Description");
             if(game.CurrentLocation.Enemy != null)
             {
+                Res.MusicUri = new Uri(String.Format("{0}\\Music\\Battle.mp3", AppDomain.CurrentDomain.BaseDirectory));
+                Res.Toggle_Music();
                 Mediator.Notify("GoToCombat", "");
             }
             Description = game.CurrentLocation.Description;

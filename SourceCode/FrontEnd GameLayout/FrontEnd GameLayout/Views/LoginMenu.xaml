@@ -9,9 +9,12 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         Height="{Binding Window_Height}" Width="{Binding Window_Width}"
-        d:DesignHeight="1080" d:DesignWidth="1920">
+        d:DesignHeight="1080" d:DesignWidth="1920" Loaded="UserControl_Loaded">
 
-    <Grid>
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding Login}" Key="Enter"/>
+    </UserControl.InputBindings>
+    <Grid x:Name="Main" Focusable="True">
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1*" />

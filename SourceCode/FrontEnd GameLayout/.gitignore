@@ -14,6 +14,8 @@
 *.userprefs
 !FrontEnd GameLayout/FrontEnd GameLayout/bin/Debug/net6.0-windows/Music/Music.mp3
 !SourceCode/FrontEnd GameLayout/FrontEnd GameLayout/bin/Debug/net6.0-windows/Music/Music.mp3
+!FrontEnd GameLayout/FrontEnd GameLayout/bin/Debug/net6.0-windows/Music/Battle.mp3
+!SourceCode/FrontEnd GameLayout/FrontEnd GameLayout/bin/Debug/net6.0-windows/Music/Battle.mp3
 SourceCode/FrontEnd GameLayout/GameEngineLibrary/bin
 SourceCode/FrontEnd GameLayout/GameEngineLibrary/obj
 SourceCode/FrontEnd GameLayout/GameEngineLibraryTest/bin
