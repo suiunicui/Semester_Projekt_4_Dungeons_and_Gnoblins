@@ -19,7 +19,7 @@ namespace FrontEnd_GameLayout.ViewModels
 
         public LoadMenuViewModel()
         {
-            getListOfSaves();
+            //getListOfSaves();
             Window_Width = Res.Width;
             Window_Height = Res.Height;
         }

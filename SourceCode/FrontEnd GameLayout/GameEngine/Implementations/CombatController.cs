@@ -84,19 +84,19 @@ namespace GameEngine.Implementations
                 {
                     uint damageDealt = enemy.AttackCrit(ref player);
                     log.RecordEvent("enemy attack", "The enemy made a critical strike against you.");
-                    log.RecordEvent("player damage", $"The attack dealt {damageDealt} damage to the enemy.");
+                    log.RecordEvent("enemy damage", $"The attack dealt {damageDealt} damage to you.");
                     return log;
                 }
                 else
                 {
                     uint damageDealt = enemy.Attack(ref player);
                     log.RecordEvent("enemy attack", "You Hit the enemy.");
-                    log.RecordEvent("enemy damage", $"The attack dealt {damageDealt} damage to the enemy.");
+                    log.RecordEvent("enemy damage", $"The attack dealt {damageDealt} damage to you.");
                     return log;
                 }
             }
 
-            log.RecordEvent("player attack", $"Your attack missed, dealing {0} damage to the enemy.");
+            log.RecordEvent("enemy attack", $"Your attack missed, dealing {0} damage to you.");
             return log;
         }
         private bool isDead(Actor actor) => actor.HP == 0;

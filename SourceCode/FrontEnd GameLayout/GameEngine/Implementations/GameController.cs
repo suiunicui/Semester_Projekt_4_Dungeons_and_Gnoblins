@@ -11,7 +11,7 @@ public class GameController : IGameController
     public IMap GameMap { get; set; }
     public ILocation CurrentLocation { get; set; }
     public Player CurrentPlayer { get; set; }
-    public CombatController CombatController { get; set; }
+    public ICombatController CombatController { get; set; }
 
     public List<uint> VisitedRooms { get; set; } = new List<uint>();
     public List<uint> SlainEnemies { get; set; } = new List<uint>();
