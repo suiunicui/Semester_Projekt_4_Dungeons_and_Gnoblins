@@ -73,7 +73,7 @@ public class Enemy : Actor
         HP -= damage;
     }
 
-    public void resetID()
+    public static void ResetID()
     {
         ID = 0;
     }

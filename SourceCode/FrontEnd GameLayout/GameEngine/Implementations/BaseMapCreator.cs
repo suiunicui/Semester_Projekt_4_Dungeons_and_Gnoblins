@@ -42,6 +42,7 @@ public class BaseMapCreator : IMapCreator
 
   public void GenerateEnemyLayoutFile()
   {
+    // Room ID, HP, AC, DamageDiceSides, DamageDiceCount, ToHitBonus
     StreamWriter sw = new StreamWriter(EnemyFilePath);
     sw.WriteLine("2, 10, 12, 8, 1, 2");
     sw.WriteLine("5, 10, 12, 8, 1, 2");
@@ -53,8 +54,14 @@ public class BaseMapCreator : IMapCreator
 
   public void GenerateItemLayoutFile()
   {
+    // Room Id, Item Type, DamageDiceSides, DamageDiceCount, BaseDamage, ToHitBonus
     StreamWriter sw = new StreamWriter(ItemFilePath);
+
+    // Weapons
     sw.WriteLine("1 ,1 ,8 ,1 ,2 ,2");
+
+    // Shields Room Id, Item Type, AC
+    sw.WriteLine("2,2,1");
     sw.Close();
   }
 

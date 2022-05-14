@@ -7,6 +7,18 @@ public class Player : Actor
 {
     public Weapon? EquippedWeapon { get; set; } = null;
     public Shield? EquippedShield { get; set; } = null;
+    public uint AC
+    {
+        get
+        {
+            if (EquippedShield != null)
+            {
+                return AC + EquippedShield.AC;
+            }
+            return AC;
+        }
+        set { AC = value; }
+    }
     public List<Item> Inventory { get; set; } = new List<Item>();
     private DiceRoller _diceRoller;
 
