@@ -52,9 +52,9 @@ namespace FrontEnd_GameLayout.ViewModels
         {
             get
             {
-                return _gameStart ?? (_gameStart = new RelayCommand(x =>
+                return _gameStart ?? (_gameStart = new RelayCommand(async x =>
                 {
-                    game.Reset();
+                    await game.Reset();
                     Mediator.Notify("GameStart","");
                 }));
             }

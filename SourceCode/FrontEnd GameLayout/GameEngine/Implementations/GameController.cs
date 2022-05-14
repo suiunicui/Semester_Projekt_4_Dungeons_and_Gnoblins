@@ -38,12 +38,20 @@ public class GameController : IGameController
         }
     }
 
-    public async void Reset()
+    public async Task Reset()
     {
-        instance = new GameController(new BaseMapCreator(@"MayLayoutFile"));
-        Enemy.resetID();
+        Enemy.ResetID();
         Item.ResetID();
+        GameMap = new BaseMap(new BaseMapCreator(@"MapLayOutFile"));
+        CurrentLocation = GameMap.Rooms[0];
+        CurrentPlayer = new Player(10, 14, null);
+        CurrentLocation.AddPlayer(CurrentPlayer);
+        CombatController = new CombatController(new BasicDiceRoller());
         await GetRoomDescriptionAsync();
+        VisitedRooms = new List<uint>();
+        SlainEnemies = new List<uint>();
+        Inventory = new List<uint>();
+        CurrentLocation.Description = GameMap.Rooms[0].Description;
     }
 
     public async Task GetRoomDescriptionAsync()
