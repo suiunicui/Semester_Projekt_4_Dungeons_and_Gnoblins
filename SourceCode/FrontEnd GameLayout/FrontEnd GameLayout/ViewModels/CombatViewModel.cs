@@ -603,7 +603,7 @@ namespace FrontEnd_GameLayout.ViewModels
                     CombatLog = log.GetRecord("Enemy Status");
                     Mediator.Notify("GameStart", "");
                 }
-                else
+                else if(game.CurrentLocation.Player.HP == 0)
                 {
                     CombatLog = log.GetRecord("Player Status");
                     Mediator.Notify("GoToMainMenu", "");
@@ -637,6 +637,7 @@ namespace FrontEnd_GameLayout.ViewModels
         void ExecuteFleeCommand()
         {
             game.CombatController.Flee();
+            Mediator.Notify("GameStart", "");
         }
         bool CanExecuteFleeCommand()
         {

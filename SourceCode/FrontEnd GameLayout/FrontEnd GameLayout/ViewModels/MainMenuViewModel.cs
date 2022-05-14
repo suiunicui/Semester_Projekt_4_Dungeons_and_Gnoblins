@@ -54,9 +54,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameStart ?? (_gameStart = new RelayCommand(x =>
                 {
-                    game.CurrentLocation.RemovePlayer();
-                    game.CurrentLocation = game.GameMap.Rooms[0];
-                    game.GameMap.Rooms[game.CurrentLocation.Id].AddPlayer(game.CurrentPlayer);
+                    game.Reset();
                     Mediator.Notify("GameStart","");
                 }));
             }
@@ -97,32 +95,6 @@ namespace FrontEnd_GameLayout.ViewModels
                 {
                     ScreenInfo.Instance.LastScreen = "MainMenu";
                     Mediator.Notify("GoToSettingsMenu", "");
-                }));
-            }
-        }
-
-        private ICommand _RegisterMenu;
-
-        public ICommand RegisterMenu
-        {
-            get
-            {
-                return _RegisterMenu ?? (_RegisterMenu = new RelayCommand(x =>
-                {
-                    Mediator.Notify("GoToRegisterMenu", "");
-                }));
-            }
-        }
-
-        private ICommand _LoginMenu;
-
-        public ICommand LoginMenu
-        {
-            get
-            {
-                return _LoginMenu ?? (_LoginMenu = new RelayCommand(x =>
-                {
-                    Mediator.Notify("GoToLoginMenu", "");
                 }));
             }
         }

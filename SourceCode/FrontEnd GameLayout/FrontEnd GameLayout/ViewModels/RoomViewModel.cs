@@ -14,6 +14,7 @@ using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
 using GameEngine.Implementations;
 using GameEngine.Interfaces;
+using GameEngine.Abstract_Class;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -27,6 +28,7 @@ namespace FrontEnd_GameLayout.ViewModels
         public RoomViewModel()
         {
             Description = game.CurrentLocation.Description;
+            Items = game.CurrentLocation.Chest;
             loadMap();
             MovePlayerOnMap();
             Window_Height = Res.Height;
@@ -97,6 +99,31 @@ namespace FrontEnd_GameLayout.ViewModels
                 {
                     description = value;
                     OnPropertyChanged("Description");
+                }
+            }
+        }
+
+        private Item _selectedItem;
+        public Item SelectedItem
+        {
+            get { return _selectedItem; }
+            set
+            {
+                _selectedItem = value;
+                OnPropertyChanged("SelecedItem");
+            }
+        }
+
+        private List<Item> _items;
+        public List<Item> Items
+        {
+            get { return _items; }
+            set
+            {
+                if (value != _items)
+                {
+                    _items = value;
+                    OnPropertyChanged("Items");
                 }
             }
         }

@@ -18,5 +18,6 @@ public interface IGameController
     void EliminateEnemy();
     void PickUpItem(Item item);
     ICombatController CombatController { get; set; }
+    void Reset();
 }
 
