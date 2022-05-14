@@ -9,6 +9,7 @@ using FrontEnd_GameLayout.Helper_classes;
 using Prism.Commands;
 using GameEngine.Interfaces;
 using GameEngine.Implementations;
+using System.Windows;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
@@ -45,6 +46,18 @@ namespace FrontEnd_GameLayout.ViewModels
                 OnPropertyChanged("Window_Height");
             }
         }
+
+        private string _saveGame = "Save Game";
+        public string SaveGame
+        {
+            get { return _saveGame; }
+            set
+            {
+                _saveGame = value;
+                OnPropertyChanged("SaveGame");
+            }
+        }
+
         private ICommand _gameStart;
 
         public ICommand GameStart
@@ -96,14 +109,20 @@ namespace FrontEnd_GameLayout.ViewModels
         _saveMenu ?? (_saveMenu = new DelegateCommand(ExecuteSaveMenu, CanExecuteSaveMenu));
         void ExecuteSaveMenu()
         {
-            System.Windows.Application.Current.Shutdown();
+            Mediator.Notify("GoToSaveMenu","");
         }
         bool CanExecuteSaveMenu()
         {
             if (Res.LastScreenCombat == true)
+            {
+                SaveGame = null;
                 return false;
+            }
             else
+            {
+                SaveGame = "Save Game";
                 return true;
+            }
         }
 
         private ICommand _settingsMenu;
