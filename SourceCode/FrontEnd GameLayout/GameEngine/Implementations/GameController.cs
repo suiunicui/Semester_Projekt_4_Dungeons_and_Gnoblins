@@ -11,12 +11,11 @@ public class GameController : IGameController
     public IMap GameMap { get; set; }
     public ILocation CurrentLocation { get; set; }
     public Player CurrentPlayer { get; set; }
-    public CombatController CombatController { get; set; }
-
+    public ICombatController CombatController { get; set; }
     public List<uint> VisitedRooms { get; set; } = new List<uint>();
     public List<uint> SlainEnemies { get; set; } = new List<uint>();
     public List<uint> Inventory { get; set; } = new List<uint>();
-
+    BackEndController backEndController = BackEndController.Instance;
 
     private static volatile IGameController instance;
     public GameController(IMapCreator mapCreator)
@@ -37,13 +36,14 @@ public class GameController : IGameController
             }
             return instance;
         }
-    }
+    };
 
-    public void Reset()
+    public async void Reset()
     {
         instance = new GameController(new BaseMapCreator(@"MayLayoutFile"));
-        Enemy.ResetID();
+        Enemy.resetID();
         Item.ResetID();
+        await GetRoomDescriptionAsync();
     }
 
     public async Task GetRoomDescriptionAsync()
@@ -60,20 +60,21 @@ public class GameController : IGameController
     //Gemmer spil
     public async Task SaveGame(int id, string Savename)
     {
-        BackEndController newSave = new BackEndController();
+        //BackEndController newSave = new BackEndController();
         SaveDTO Game = new SaveDTO();
         Game.ID = id;
-        Game.RoomId = (int)CurrentLocation.Id;
+        Game.RoomId = (int) CurrentLocation.Id;
         Game.SaveName = Savename;
+        Game.Username = "null";
         Game.VisitedRooms = VisitedRooms;
-        newSave.PostSaveAsync(Game);
+        await backEndController.PostSaveAsync(Game);
     }
 
     //Loader gemt spil
     public async Task LoadGame(int id)
     {
-        BackEndController SaveLoader = new BackEndController();
-        SaveDTO Game = await SaveLoader.GetSaveAsync(id);
+        //BackEndController SaveLoader = new BackEndController();
+        SaveDTO Game = await backEndController.GetSaveAsync(id);
         CurrentLocation.RemovePlayer();
         CurrentLocation = GameMap.Rooms[Game.RoomId];
         VisitedRooms = Game.VisitedRooms;
@@ -108,5 +109,4 @@ public class GameController : IGameController
         CurrentPlayer.Inventory.Add(item);
         CurrentLocation.Chest.Remove(item);
     }
-
-}   
+}

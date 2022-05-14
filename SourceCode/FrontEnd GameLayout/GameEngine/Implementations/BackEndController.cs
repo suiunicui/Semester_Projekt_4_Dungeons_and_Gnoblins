@@ -3,6 +3,7 @@ using System.Text.Json;
 using GameEngine.Models.DTO;
 using GameEngine.Interfaces;
 using Backend_API.Models;
+using System.Net.Http.Headers;
 
 namespace GameEngine.Implementations;
 
@@ -13,15 +14,33 @@ public class BackEndController : IBackEndController
     private RoomDescription _roomDescription;
     private readonly HttpClient _httpClient;
     private SaveDTO _save;
+    public Token token;
+
+    private static volatile BackEndController instance;
 
     public BackEndController()
     {
         _httpClient = new HttpClient();
+        //_httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token.JWT);
+        
+    }
+
+    public static BackEndController Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new BackEndController();
+            }
+            return instance;
+        }
     }
 
     public async Task<SaveDTO>GetSaveAsync(int id)
     {
         _url = $"https://localhost:7046/api/Save?id={id}";
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.JWT);
         try
         {
             string responsBody = await _httpClient.GetStringAsync(_url);
@@ -76,8 +95,10 @@ public class BackEndController : IBackEndController
     {
         List<SaveDTO> _savelist;
         _url = $"https://localhost:7046/api/Save/Get List Of Saves";
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.JWT);
         try
         {
+            
             string responsBody = await _httpClient.GetStringAsync(_url);
             var options = new JsonSerializerOptions
             {
@@ -98,9 +119,10 @@ public class BackEndController : IBackEndController
         return _savelist;
     }
 
-    public async void PostSaveAsync(SaveDTO save)
+    public async Task PostSaveAsync(SaveDTO save)
     {
         _url = "https://localhost:7046/api/Save";
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.JWT);
 
         using (var request = new HttpRequestMessage(HttpMethod.Post, _url))
         {
@@ -121,8 +143,9 @@ public class BackEndController : IBackEndController
             }
         }
     }
-    public async void PostRegisterAsync(UserDTO user)
+    public async Task PostRegisterAsync(UserDTO user)
     {
+
         var _url = "https://localhost:7046/api/User/Register";
 
         using (var request = new HttpRequestMessage(HttpMethod.Post, _url))
@@ -149,7 +172,7 @@ public class BackEndController : IBackEndController
 
                     };
 
-                    var token = JsonSerializer.Deserialize<Token>(responseContent, options);
+                    token = JsonSerializer.Deserialize<Token>(responseContent, options);
 
                     Console.WriteLine(token.JWT);
                 }
@@ -158,7 +181,7 @@ public class BackEndController : IBackEndController
 
         }
     }
-    public async void PostLoginAsync(UserDTO user)
+    public async Task PostLoginAsync(UserDTO user)
     {
         var _url = "https://localhost:7046/api/User/Login";
 
@@ -186,7 +209,7 @@ public class BackEndController : IBackEndController
 
                     };
 
-                    var token = JsonSerializer.Deserialize<Token>(responseContent, options);
+                    token = JsonSerializer.Deserialize<Token>(responseContent, options);
 
                     Console.WriteLine(token.JWT);
                 }

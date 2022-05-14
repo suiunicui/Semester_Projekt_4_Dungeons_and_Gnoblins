@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace FrontEnd_GameLayout.Views
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for LoginMenu.xaml
     /// </summary>
-    public partial class Options : UserControl
+    public partial class LoginMenu : UserControl
     {
-        public Options()
+        public LoginMenu()
         {
             InitializeComponent();
         }

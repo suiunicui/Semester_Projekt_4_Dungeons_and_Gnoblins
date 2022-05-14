@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace FrontEnd_GameLayout.Views
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for RegisterMenu.xaml
     /// </summary>
-    public partial class Options : UserControl
+    public partial class RegisterMenu : UserControl
     {
-        public Options()
+        public RegisterMenu()
         {
             InitializeComponent();
         }

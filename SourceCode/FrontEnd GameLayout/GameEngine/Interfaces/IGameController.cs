@@ -15,8 +15,9 @@ public interface IGameController
     Task SaveGame(int id, string savename);
     Task LoadGame(int id);
     Task GetRoomDescriptionAsync();
-    public void EliminateEnemy();
-    public void PickUpItem(Item item);
-
+    void EliminateEnemy();
+    void PickUpItem(Item item);
+    ICombatController CombatController { get; set; }
+    void Reset();
 }
 

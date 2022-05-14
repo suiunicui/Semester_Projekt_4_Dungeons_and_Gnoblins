@@ -8,6 +8,8 @@
 
         public string SaveName { get; set; }
 
+        public string Username { get; set; }
+
         public List<uint> VisitedRooms { get; set; }
     }
 }

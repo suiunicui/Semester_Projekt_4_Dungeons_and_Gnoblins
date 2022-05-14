@@ -54,9 +54,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameStart ?? (_gameStart = new RelayCommand(x =>
                 {
-                    game.CurrentLocation.RemovePlayer();
-                    game.CurrentLocation = game.GameMap.Rooms[0];
-                    game.GameMap.Rooms[game.CurrentLocation.Id].AddPlayer(game.CurrentPlayer);
+                    game.Reset();
                     Mediator.Notify("GameStart","");
                 }));
             }

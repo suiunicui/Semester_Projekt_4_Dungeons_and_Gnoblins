@@ -107,6 +107,20 @@ namespace FrontEnd_GameLayout.ViewModels
             ChangeViewModel(PageViewModels[5]);
         }
 
+        private void OnGoToRegisterMenu(object obj)
+        {
+            ChangeViewModel(PageViewModels[6]);
+        }
+
+        private void OnGoToLoginMenu(object obj)
+        {
+            ChangeViewModel(PageViewModels[7]);
+        }
+        private void OnGoToCombat(object obj)
+        {
+            ChangeViewModel(PageViewModels[8]);
+        }
+
         public MainWindowViewModel()
         {
             Res.Toggle_Music();
@@ -121,7 +135,10 @@ namespace FrontEnd_GameLayout.ViewModels
             PageViewModels.Add(new SaveMenuViewModel());
             PageViewModels.Add(new InGameMenuViewModel());
             PageViewModels.Add(new OptionsViewModel());
-            CurrentPageViewModel = PageViewModels[0];
+            PageViewModels.Add(new RegisterMenuViewModel());
+            PageViewModels.Add(new LoginMenuViewModel());
+            PageViewModels.Add(new CombatViewModel());
+            CurrentPageViewModel = PageViewModels[7];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
             Mediator.Subscribe("GameStart", OnGameStart);
@@ -129,6 +146,9 @@ namespace FrontEnd_GameLayout.ViewModels
             Mediator.Subscribe("GoToSaveMenu", OnGoToSaveMenu);
             Mediator.Subscribe("GoToInGameMenu", OnGoToInGameMenu);
             Mediator.Subscribe("GoToSettingsMenu", OnGoToSettingsMenu);
+            Mediator.Subscribe("GoToRegisterMenu", OnGoToRegisterMenu);
+            Mediator.Subscribe("GoToLoginMenu", OnGoToLoginMenu);
+            Mediator.Subscribe("GoToCombat", OnGoToCombat);
 
             game.GetRoomDescriptionAsync();
         }

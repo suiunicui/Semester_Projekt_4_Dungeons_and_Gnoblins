@@ -10,19 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FrontEnd_GameLayout.Views
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Options : UserControl
+    public partial class Combat : UserControl
     {
-        public Options()
+        public Combat()
         {
             InitializeComponent();
         }
+
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             Keyboard.Focus(Main);

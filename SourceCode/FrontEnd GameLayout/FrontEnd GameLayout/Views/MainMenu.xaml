@@ -8,7 +8,8 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        Height="{Binding Window_Height}" Width="{Binding Window_Width}">
+        Height="{Binding Window_Height}" Width="{Binding Window_Width}"
+        d:DesignHeight="1080" d:DesignWidth="1920">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -20,9 +21,8 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="7*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
+
+
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -31,13 +31,13 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="1" Grid.Row="4" Style="{StaticResource buttonStyle}"
+        <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource buttonStyle}"
                 Content="New Game" Command="{Binding GameStart}"/>
+        <Button Grid.Column="1" Grid.Row="4" Style="{StaticResource buttonStyle}"
+                Content="Load Game" Command="{Binding LoadMenu}"/>
         <Button Grid.Column="1" Grid.Row="6" Style="{StaticResource buttonStyle}"
                 Content="Settings" Command="{Binding SettingsMenu}"/>
         <Button Grid.Column="1" Grid.Row="8" Style="{StaticResource buttonStyle}"
-                Content="Load Game" Command="{Binding LoadMenu}"/>
-        <Button Grid.Column="1" Grid.Row="10" Style="{StaticResource buttonStyle}"
                 Content="Exit Game" Command="{Binding ExitGameCommand}"/>
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons &amp; Gnoblins" TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}"/>
     </Grid>

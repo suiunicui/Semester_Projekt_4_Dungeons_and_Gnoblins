@@ -15,8 +15,7 @@ namespace FrontEnd_GameLayout.ViewModels
     public class LoadMenuViewModel :BaseViewModel, IPageViewModel
     {
         ScreenInfo Res = ScreenInfo.Instance;
-
-
+        BackEndController backEndController = BackEndController.Instance;
 
         public LoadMenuViewModel()
         {
@@ -49,8 +48,12 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private async void getListOfSaves()
         {
-            BackEndController httpHandler = new BackEndController();
-       //     SavedGames = await httpHandler.GetListOfSave();
+            // Only loads if user is signed in
+            if(backEndController.token != null)
+            {
+                SavedGames = await backEndController.GetListOfSave();
+            }
+            
         }
 
 

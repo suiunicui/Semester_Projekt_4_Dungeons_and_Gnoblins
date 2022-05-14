@@ -128,17 +128,14 @@
           "Microsoft.AspNetCore.WebUtilities": "6.0.0.0",
           "Microsoft.CSharp.Reference": "6.0.0.0",
           "Microsoft.Extensions.Caching.Abstractions.Reference": "6.0.0.0",
-          "Microsoft.Extensions.Caching.Memory.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Abstractions.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Binder.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.CommandLine.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Reference": "6.0.0.0",
-          "Microsoft.Extensions.Configuration.EnvironmentVariables.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Ini": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Json.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.KeyPerFile": "6.0.0.0",
-          "Microsoft.Extensions.Configuration.UserSecrets.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Xml": "6.0.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions.Reference": "6.0.0.0",
           "Microsoft.Extensions.DependencyInjection.Reference": "6.0.0.0",
@@ -151,7 +148,6 @@
           "Microsoft.Extensions.FileProviders.Physical.Reference": "6.0.0.0",
           "Microsoft.Extensions.FileSystemGlobbing.Reference": "6.0.0.0",
           "Microsoft.Extensions.Hosting.Abstractions.Reference": "6.0.0.0",
-          "Microsoft.Extensions.Hosting.Reference": "6.0.0.0",
           "Microsoft.Extensions.Http": "6.0.0.0",
           "Microsoft.Extensions.Identity.Core": "6.0.0.0",
           "Microsoft.Extensions.Identity.Stores": "6.0.0.0",
@@ -229,7 +225,6 @@
           "System.IO.FileSystem.Watcher": "6.0.0.0",
           "System.IO.IsolatedStorage": "6.0.0.0",
           "System.IO.MemoryMappedFiles": "6.0.0.0",
-          "System.IO.Pipelines.Reference": "6.0.0.0",
           "System.IO.Pipes.AccessControl": "6.0.0.0",
           "System.IO.Pipes": "6.0.0.0",
           "System.IO.UnmanagedMemoryStream": "6.0.0.0",
@@ -1519,6 +1514,9 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/6.0.0": {
@@ -1553,6 +1551,9 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration.FileExtensions/6.0.0": {
@@ -1585,6 +1586,9 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/6.0.0": {
@@ -1654,6 +1658,9 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.Hosting.dll": {}
         }
       },
       "Microsoft.Extensions.Hosting.Abstractions/6.0.0": {
@@ -2683,6 +2690,9 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
           }
+        },
+        "compile": {
+          "lib/net6.0/System.IO.Pipelines.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -3668,12 +3678,6 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Caching.Memory.Reference/6.0.0.0": {
-        "compile": {
-          "Microsoft.Extensions.Caching.Memory.dll": {}
-        },
-        "compileOnly": true
-      },
       "Microsoft.Extensions.Configuration.Abstractions.Reference/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -3698,12 +3702,6 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Configuration.EnvironmentVariables.Reference/6.0.0.0": {
-        "compile": {
-          "Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
-        },
-        "compileOnly": true
-      },
       "Microsoft.Extensions.Configuration.FileExtensions.Reference/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.FileExtensions.dll": {}
@@ -3725,12 +3723,6 @@
       "Microsoft.Extensions.Configuration.KeyPerFile/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.KeyPerFile.dll": {}
-        },
-        "compileOnly": true
-      },
-      "Microsoft.Extensions.Configuration.UserSecrets.Reference/6.0.0.0": {
-        "compile": {
-          "Microsoft.Extensions.Configuration.UserSecrets.dll": {}
         },
         "compileOnly": true
       },
@@ -3803,12 +3795,6 @@
       "Microsoft.Extensions.Hosting.Abstractions.Reference/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Hosting.Abstractions.dll": {}
-        },
-        "compileOnly": true
-      },
-      "Microsoft.Extensions.Hosting.Reference/6.0.0.0": {
-        "compile": {
-          "Microsoft.Extensions.Hosting.dll": {}
         },
         "compileOnly": true
       },
@@ -4271,12 +4257,6 @@
       "System.IO.MemoryMappedFiles/6.0.0.0": {
         "compile": {
           "System.IO.MemoryMappedFiles.dll": {}
-        },
-        "compileOnly": true
-      },
-      "System.IO.Pipelines.Reference/6.0.0.0": {
-        "compile": {
-          "System.IO.Pipelines.dll": {}
         },
         "compileOnly": true
       },
@@ -6799,11 +6779,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Caching.Memory.Reference/6.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Microsoft.Extensions.Configuration.Abstractions.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -6824,11 +6799,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Configuration.EnvironmentVariables.Reference/6.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Microsoft.Extensions.Configuration.FileExtensions.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -6845,11 +6815,6 @@
       "sha512": ""
     },
     "Microsoft.Extensions.Configuration.KeyPerFile/6.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Extensions.Configuration.UserSecrets.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6910,11 +6875,6 @@
       "sha512": ""
     },
     "Microsoft.Extensions.Hosting.Abstractions.Reference/6.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Extensions.Hosting.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -7300,11 +7260,6 @@
       "sha512": ""
     },
     "System.IO.MemoryMappedFiles/6.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "System.IO.Pipelines.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
