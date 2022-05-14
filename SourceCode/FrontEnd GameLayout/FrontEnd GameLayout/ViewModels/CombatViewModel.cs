@@ -641,6 +641,8 @@ namespace FrontEnd_GameLayout.ViewModels
         void ExecuteFleeCommand()
         {
             game.CombatController.Flee();
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
             Mediator.Notify("GameStart", "");
         }
         bool CanExecuteFleeCommand()
