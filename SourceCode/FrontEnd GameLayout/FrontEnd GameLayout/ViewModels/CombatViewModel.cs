@@ -607,7 +607,6 @@ namespace FrontEnd_GameLayout.ViewModels
                     Res.Toggle_Music();
                     game.EliminateEnemy();
                     Mediator.Notify("GameStart", "");
-
                 }
                 else if(game.CurrentLocation.Player.HP == 0)
                 {

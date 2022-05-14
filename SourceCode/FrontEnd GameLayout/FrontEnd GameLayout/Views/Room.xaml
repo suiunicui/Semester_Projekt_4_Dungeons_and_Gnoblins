@@ -39,7 +39,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{Binding}" />
+                            <TextBlock Text="{Binding ItemType}" />
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

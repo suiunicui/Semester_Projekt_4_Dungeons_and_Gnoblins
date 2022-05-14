@@ -12,6 +12,7 @@ namespace GameEngine.Abstract_Class
         public Shield(uint armorClass)
         {
             AC = armorClass;
+            ItemType = "Shield";
         }
     }
 }
