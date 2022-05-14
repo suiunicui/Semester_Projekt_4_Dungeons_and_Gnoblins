@@ -35,7 +35,7 @@
             <TextBlock Grid.Row="0" Grid.Column="1" 
                        Text="{Binding Description}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
 
-            <ListBox Grid.Column="1" Grid.Row="1" Style="{StaticResource listStyle}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelecedItem}" Margin="5,20,20,20">
+            <ListBox Grid.Column="1" Grid.Row="1" Style="{StaticResource listStyle}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Margin="5,20,20,20">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical">

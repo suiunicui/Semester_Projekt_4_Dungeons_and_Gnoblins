@@ -111,7 +111,7 @@ namespace FrontEnd_GameLayout.ViewModels
             set
             {
                 _selectedItem = value;
-                OnPropertyChanged("SelecedItem");
+                OnPropertyChanged("SelectedItem");
             }
         }
 
@@ -639,24 +639,23 @@ namespace FrontEnd_GameLayout.ViewModels
             return true;
         }
 
-        private DelegateCommand<string> _interactCommand;
-        public DelegateCommand<string> InteractCommand =>
-        _interactCommand ?? (_interactCommand = new DelegateCommand<string>(ExecuteInteractCommand, CanExecuteInteractCommand));
-        void ExecuteInteractCommand(string direction)
-        {
-            game.PickUpItem(SelectedItem);
-        }
-        bool CanExecuteInteractCommand(string direction)
+        private DelegateCommand _interactCommand;
+        public DelegateCommand InteractCommand =>
+        _interactCommand ?? (_interactCommand = new DelegateCommand(ExecuteInteractCommand));
+        void ExecuteInteractCommand()
         {
             if (SelectedItem != null)
             {
-                return true;
+                game.PickUpItem(SelectedItem);
+                if(SelectedItem.Id == 1)
+                {
+                    game.CurrentPlayer.EquippedWeapon = (Weapon)SelectedItem;
+                }
+                if (SelectedItem.Id == 2)
+                {
+                    game.CurrentPlayer.EquippedShield = (Shield)SelectedItem;
+                }
             }
-            else
-            {
-                return false;
-            }
-
         }
 
         private ICommand _gameMenu;
