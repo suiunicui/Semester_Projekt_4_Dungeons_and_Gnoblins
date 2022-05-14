@@ -32,6 +32,7 @@ namespace FrontEnd_GameLayout.Helper_classes
             MusicBot.Open(new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             //Set up event for loop music
             MusicBot.MediaEnded += new EventHandler(Media_Ended);
+            MusicBot.Volume = 0.10;
 
             Width = 1920;
             Height = 1080;

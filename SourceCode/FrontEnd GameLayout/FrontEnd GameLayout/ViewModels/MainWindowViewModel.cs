@@ -138,7 +138,7 @@ namespace FrontEnd_GameLayout.ViewModels
             PageViewModels.Add(new RegisterMenuViewModel());
             PageViewModels.Add(new LoginMenuViewModel());
             PageViewModels.Add(new CombatViewModel());
-            CurrentPageViewModel = PageViewModels[0];
+            CurrentPageViewModel = PageViewModels[7];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
             Mediator.Subscribe("GameStart", OnGameStart);
@@ -151,7 +151,7 @@ namespace FrontEnd_GameLayout.ViewModels
             Mediator.Subscribe("GoToCombat", OnGoToCombat);
 
 
-            //game.GetRoomDescriptionAsync();
+            game.GetRoomDescriptionAsync();
 
         }
     }
