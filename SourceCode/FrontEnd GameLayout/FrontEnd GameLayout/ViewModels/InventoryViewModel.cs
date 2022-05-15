@@ -145,23 +145,37 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        private ICommand _characterCommand;
+
+        public ICommand CharacterCommand
+        {
+            get
+            {
+                return _characterCommand ?? (_characterCommand = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToCharacterScreen", "");
+                }));
+            }
+        }
+
         private DelegateCommand _equipCommand;
         
         public DelegateCommand EquipCommand => _equipCommand ?? (_equipCommand = new DelegateCommand(ExecuteEquipCommand));
 
-        async void ExecuteEquipCommand()
+        void ExecuteEquipCommand()
         {
             if(SelectedItem != null)
             {
-                if (SelectedItem.Id == 1)
+                switch (SelectedItem)
                 {
-                    game.CurrentPlayer.EquippedWeapon = (Weapon)SelectedItem;
-                    EquippedWeapon = SelectedItem.ItemType;
-                }
-                if (SelectedItem.Id == 0)
-                {
-                    game.CurrentPlayer.EquippedShield = (Shield)SelectedItem;
-                    EquippedShield = SelectedItem.ItemType;
+                    case Weapon weapon:
+                        game.CurrentPlayer.EquippedWeapon = weapon;
+                        EquippedWeapon = weapon.ItemType;
+                        break;
+                    case Shield shield:
+                        game.CurrentPlayer.EquippedShield = shield;
+                        EquippedShield = shield.ItemType;
+                        break;
                 }
             }
         }
