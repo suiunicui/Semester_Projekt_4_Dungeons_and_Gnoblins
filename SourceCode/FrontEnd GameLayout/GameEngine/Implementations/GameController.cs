@@ -75,6 +75,8 @@ public class GameController : IGameController
         Game.SaveName = Savename;
         Game.Username = "null";
         Game.VisitedRooms = VisitedRooms;
+        //Game.EnemiesSlain = SlainEnemies;
+        //Game.ItemsPickedUp = Inventory;
         await backEndController.PostSaveAsync(Game);
     }
 
@@ -86,6 +88,8 @@ public class GameController : IGameController
         CurrentLocation.RemovePlayer();
         CurrentLocation = GameMap.Rooms[Game.RoomId];
         VisitedRooms = Game.VisitedRooms;
+        //SlainEnemies= Game.EnemiesSlain;
+        //Inventory = Game.ItemsPickedUp;
         GameMap.Rooms[CurrentLocation.Id].AddPlayer(CurrentPlayer);
     }
 
