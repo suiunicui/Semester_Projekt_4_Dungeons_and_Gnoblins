@@ -689,6 +689,18 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        private ICommand _characterCommand;
+
+        public ICommand CharacterCommand
+        {
+            get
+            {
+                return _characterCommand ?? (_characterCommand = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToCharacterScreen", "");
+                }));
+            }
+        }
         #endregion
 
     }

@@ -9,17 +9,37 @@ using FrontEnd_GameLayout.Helper_classes;
 using GameEngine.Models.DTO;
 using Prism.Commands;
 using GameEngine.Implementations;
+using GameEngine.Abstract_Class;
+using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
     public class CharacterScreenViewModel : BaseViewModel, IPageViewModel
     {
         ViewInfo Res = ViewInfo.Instance;
-        BackEndController backEndController = BackEndController.Instance;
+        IGameController game = GameController.Instance;
 
         public CharacterScreenViewModel()
         {
-            getListOfSaves();
+            if (game.CurrentPlayer.EquippedWeapon != null)
+            {
+                EquippedWeapon = game.CurrentPlayer.EquippedWeapon.ItemType;
+            }
+            else
+            {
+                EquippedWeapon = "";
+            }
+            if (game.CurrentPlayer.EquippedShield != null)
+            {
+                EquippedShield = game.CurrentPlayer.EquippedShield.ItemType;
+            }
+            else
+            {
+                EquippedShield = "";
+            }
+            PlayerAC = game.CurrentPlayer.AC.ToString();
+            PlayerHP = game.CurrentPlayer.HP.ToString();
+
             Window_Width = Res.Width;
             Window_Height = Res.Height;
         }
@@ -46,79 +66,99 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private async void getListOfSaves()
-        {
-            // Only loads if user is signed in
-            if(backEndController.token != null)
-            {
-                SavedGames = await backEndController.GetListOfSave();
-            }
-            
-        }
 
         #region Properties
 
-        private List<SaveDTO> _savedGames = new List<SaveDTO>();
+        private String _equippedWeapon;
 
-        public List<SaveDTO> SavedGames {
-            get { return _savedGames; }
-            set
-            {
-                if (value != _savedGames)
-                {
-                    _savedGames = value;
-                    OnPropertyChanged("SavedGames");
-                }
-            }
-        }
-
-        
-
-        private SaveDTO _selectedSave;
-
-        public SaveDTO SelectedSave
+        public String EquippedWeapon
         {
-            get { return _selectedSave; }
+            get { return _equippedWeapon; }
             set
             {
-                if (value != _selectedSave)
+                if (value != _equippedWeapon)
                 {
-                    _selectedSave = value;
-                    OnPropertyChanged("SelectedSave");
+                    _equippedWeapon = "Weapon: " + value;
+                    OnPropertyChanged("EquippedWeapon");
                 }
             }
         }
+
+        private String _equippedShield;
+
+        public String EquippedShield
+        {
+            get { return _equippedShield; }
+            set
+            {
+                if (value != _equippedShield)
+                {
+                    _equippedShield = "Shield: " + value;
+                    OnPropertyChanged("EquippedShield");
+                }
+            }
+        }
+
+
+        private String _playerHP;
+
+        public String PlayerHP
+        {
+            get { return _playerHP; }
+            set
+            {
+                if (value != _playerHP)
+                {
+                    _playerHP = "HP: " + value;
+                    OnPropertyChanged("PlayerHP");
+                }
+            }
+        }
+
+        private String _playerAC;
+
+        public String PlayerAC
+        {
+            get { return _playerAC; }
+            set
+            {
+                if (value != _playerAC)
+                {
+                    _playerAC = "AC: " + value;
+                    OnPropertyChanged("PlayerAC");
+                }
+            }
+        }
+
 
         #endregion
 
         #region Commands
 
-        private ICommand _mainMenu;
+        private ICommand _backCommand;
 
-        public ICommand MainMenu
+        public ICommand BackCommand
         {
             get
             {
-                return _mainMenu ?? (_mainMenu = new RelayCommand(x =>
+                return _backCommand ?? (_backCommand = new RelayCommand(x =>
                 {
-                    Mediator.Notify("GoToMainMenu", "");
+                    Mediator.Notify("GameStart", "");
                 }));
             }
         }
 
-        private DelegateCommand _loadGame;
-        
-        public DelegateCommand LoadGame => _loadGame ?? (_loadGame = new DelegateCommand(ExecuteLoadCommand, CanExecuteLoadCommand));
+        private ICommand _inventoryCommand;
 
-        async void ExecuteLoadCommand()
+        public ICommand InventoryCommand
         {
-            await GameController.Instance.LoadGame(SelectedSave.ID);
-            Mediator.Notify("GameStart", "");
-        }
-
-        bool CanExecuteLoadCommand()
-        {
-            return true;
+            get
+            {
+                return _inventoryCommand ?? (_inventoryCommand = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToInventory", "");
+                }));
+            }
         }
 
         #endregion

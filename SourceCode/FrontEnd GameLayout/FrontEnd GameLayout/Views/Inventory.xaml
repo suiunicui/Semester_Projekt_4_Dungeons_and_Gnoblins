@@ -38,8 +38,10 @@
         <Button Grid.Column="2" Style="{StaticResource buttonStyle}"
                 Content="Equip" Command="{Binding EquipCommand}" Grid.Row="9"/>
         
-        <Button Grid.Column="2" Style="{StaticResource buttonStyle}"
+        <Button Grid.Column="3" Style="{StaticResource buttonStyle}"
                 Content="Back" Command="{Binding BackCommand}" Grid.Row="10"/>
+        <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
+                Content="Character" Command="{Binding CharacterCommand}" Grid.Row="10"/>
 
         <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Inventory" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
