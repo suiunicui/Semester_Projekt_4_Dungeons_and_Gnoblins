@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="FrontEnd_GameLayout.Views.LoadMenu"
+﻿<UserControl x:Class="FrontEnd_GameLayout.Views.CharacterScreen"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -36,14 +36,5 @@
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Select Game" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
 
-        <ListBox Grid.Column="1" Grid.Row="4" Style="{StaticResource listStyle}" ItemsSource="{Binding SavedGames}" SelectedItem="{Binding SelectedSave}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="{Binding SaveName}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
     </Grid>
 </UserControl>

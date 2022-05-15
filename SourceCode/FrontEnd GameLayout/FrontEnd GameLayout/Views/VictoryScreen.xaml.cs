@@ -17,9 +17,9 @@ namespace FrontEnd_GameLayout.Views
     /// <summary>
     /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class DeathScreen : UserControl
+    public partial class VictoryScreen : UserControl
     {
-        public DeathScreen()
+        public VictoryScreen()
         {
             InitializeComponent();
         }

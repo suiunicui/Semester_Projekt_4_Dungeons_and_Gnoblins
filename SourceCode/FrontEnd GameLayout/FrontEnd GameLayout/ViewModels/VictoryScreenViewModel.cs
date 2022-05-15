@@ -12,13 +12,13 @@ using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
-    public class DeathScreenViewModel :BaseViewModel, IPageViewModel
+    public class VictoryScreenViewModel : BaseViewModel, IPageViewModel
     {
 
         IGameController game = GameController.Instance;
         ViewInfo Res = ViewInfo.Instance;
 
-        public DeathScreenViewModel()
+        public VictoryScreenViewModel()
         {
             Window_Width = Res.Width;
             Window_Height = Res.Height;

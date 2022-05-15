@@ -12,12 +12,12 @@ using GameEngine.Implementations;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
-    public class LoadMenuViewModel :BaseViewModel, IPageViewModel
+    public class CharacterScreenViewModel : BaseViewModel, IPageViewModel
     {
         ViewInfo Res = ViewInfo.Instance;
         BackEndController backEndController = BackEndController.Instance;
 
-        public LoadMenuViewModel()
+        public CharacterScreenViewModel()
         {
             getListOfSaves();
             Window_Width = Res.Width;

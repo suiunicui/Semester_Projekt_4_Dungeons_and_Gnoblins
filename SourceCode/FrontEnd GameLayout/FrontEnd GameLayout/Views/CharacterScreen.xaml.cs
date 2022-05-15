@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace FrontEnd_GameLayout.Views
 {
     /// <summary>
-    /// Interaction logic for LoadMenu.xaml
+    /// Interaction logic for CharacterScreen.xaml
     /// </summary>
-    public partial class LoadMenu : UserControl
+    public partial class CharacterScreen : UserControl
     {
-        public LoadMenu()
+        public CharacterScreen()
         {
             InitializeComponent();
         }

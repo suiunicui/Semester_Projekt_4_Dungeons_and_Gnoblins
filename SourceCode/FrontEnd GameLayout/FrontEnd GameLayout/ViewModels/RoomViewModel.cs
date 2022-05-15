@@ -629,6 +629,8 @@ namespace FrontEnd_GameLayout.ViewModels
                 Res.Toggle_Music();
                 Mediator.Notify("GoToCombat", "");
             }
+            if (game.CurrentLocation.Id == 19)
+                Mediator.Notify("GoToVictoryScreen", "");
             Description = game.CurrentLocation.Description;
             Items = game.CurrentLocation.Chest;
             var RoomView = new Views.Room();

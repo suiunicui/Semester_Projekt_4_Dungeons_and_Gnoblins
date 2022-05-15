@@ -36,6 +36,15 @@
         <DataTemplate DataType="{x:Type local:DeathScreenViewModel}">
             <local1:DeathScreen />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type local:VictoryScreenViewModel}">
+            <local1:VictoryScreen />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:CharacterScreenViewModel}">
+            <local1:CharacterScreen />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:InventoryViewModel}">
+            <local1:Inventory />
+        </DataTemplate>
         <SolidColorBrush x:Key="backgroundColor" Color="Black"/>
         <SolidColorBrush x:Key="textColor" Color="LightGray"/>
         <SolidColorBrush x:Key="textHighligtColor" Color="IndianRed"/>
