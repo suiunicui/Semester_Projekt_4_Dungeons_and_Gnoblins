@@ -8,6 +8,8 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
+        d:DesignHeight="1080"
+        d:DesignWidth="1920"
         Height="{Binding Window_Height}" Width="{Binding Window_Width}">
 
     <Grid>
@@ -16,7 +18,11 @@
             <RowDefinition Height="5*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="4*"/>
-            <RowDefinition Height="20*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="10*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="2*"/>
@@ -25,18 +31,20 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
-                Content="Equip" Command="{Binding EquipCommand}" Grid.Row="5"/>
+        <Button Grid.Column="2" Style="{StaticResource buttonStyle}"
+                Content="Equip" Command="{Binding EquipCommand}" Grid.Row="9"/>
         
-        <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
-                Content="Back" Command="{Binding BackCommand}" Grid.Row="6"/>
+        <Button Grid.Column="2" Style="{StaticResource buttonStyle}"
+                Content="Back" Command="{Binding BackCommand}" Grid.Row="10"/>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Inventory" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
 
-        <ListBox Grid.Column="1" Grid.Row="4" Style="{StaticResource listStyle}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}">
+        <ListBox Grid.Column="1" Grid.Row="4" Grid.RowSpan="5" Style="{StaticResource listStyle}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
@@ -45,5 +53,9 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+
+        <TextBlock Grid.Column="3" Grid.Row="3" Text="Equiped" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
+        <TextBlock Grid.Column="3" Grid.Row="5" Text="{Binding EquippedWeapon}" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource textblockStyle}"/>
+        <TextBlock Grid.Column="3" Grid.Row="7" Text="{Binding EquippedShield}" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource textblockStyle}"/>
     </Grid>
 </UserControl>
