@@ -124,6 +124,18 @@ namespace FrontEnd_GameLayout.ViewModels
         {
             ChangeViewModel(PageViewModels[9]);
         }
+        private void OnGoToVictoryScreen(object obj)
+        {
+            ChangeViewModel(PageViewModels[10]);
+        }
+        private void OnGoToCharacterScreen(object obj)
+        {
+            ChangeViewModel(PageViewModels[11]);
+        }
+        private void OnGoToInventory(object obj)
+        {
+            ChangeViewModel(PageViewModels[12]);
+        }
 
         public MainWindowViewModel()
         {
@@ -143,6 +155,9 @@ namespace FrontEnd_GameLayout.ViewModels
             PageViewModels.Add(new LoginMenuViewModel());
             PageViewModels.Add(new CombatViewModel());
             PageViewModels.Add(new DeathScreenViewModel());
+            PageViewModels.Add(new VictoryScreenViewModel());
+            PageViewModels.Add(new CharacterScreenViewModel());
+            PageViewModels.Add(new InventoryViewModel());
             CurrentPageViewModel = PageViewModels[7];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
@@ -155,6 +170,9 @@ namespace FrontEnd_GameLayout.ViewModels
             Mediator.Subscribe("GoToLoginMenu", OnGoToLoginMenu);
             Mediator.Subscribe("GoToCombat", OnGoToCombat);
             Mediator.Subscribe("GoToDeathScreen", OnGoToDeathScreen);
+            Mediator.Subscribe("GoToVictoryScreen", OnGoToVictoryScreen);
+            Mediator.Subscribe("GoToCharacterScreen", OnGoToCharacterScreen);
+            Mediator.Subscribe("GoToInventory", OnGoToInventory);
 
             game.GetRoomDescriptionAsync();
         }
