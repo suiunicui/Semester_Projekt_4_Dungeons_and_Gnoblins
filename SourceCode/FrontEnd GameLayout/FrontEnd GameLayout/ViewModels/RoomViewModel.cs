@@ -651,14 +651,6 @@ namespace FrontEnd_GameLayout.ViewModels
             if (SelectedItem != null)
             {
                 game.PickUpItem(SelectedItem);
-                if(SelectedItem.Id == 1)
-                {
-                    game.CurrentPlayer.EquippedWeapon = (Weapon)SelectedItem;
-                }
-                if (SelectedItem.Id == 2)
-                {
-                    game.CurrentPlayer.EquippedShield = (Shield)SelectedItem;
-                }
             }
         }
 

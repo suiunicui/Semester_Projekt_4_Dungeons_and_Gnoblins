@@ -20,7 +20,7 @@ namespace FrontEnd_GameLayout.ViewModels
 
         public InventoryViewModel()
         {
-            
+            Items = game.CurrentPlayer.Inventory;
             Window_Width = Res.Width;
             Window_Height = Res.Height;
         }
@@ -83,13 +83,13 @@ namespace FrontEnd_GameLayout.ViewModels
 
         #region Commands
 
-        private ICommand _mainMenu;
+        private ICommand _backCommand;
 
-        public ICommand MainMenu
+        public ICommand BackCommand
         {
             get
             {
-                return _mainMenu ?? (_mainMenu = new RelayCommand(x =>
+                return _backCommand ?? (_backCommand = new RelayCommand(x =>
                 {
                     Mediator.Notify("GameStart", "");
                 }));
