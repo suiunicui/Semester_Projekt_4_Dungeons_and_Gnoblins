@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 using Prism.Mvvm;
 using System.Windows.Input;
 using FrontEnd_GameLayout.Helper_classes;
-using GameEngine.Models.DTO;
 using Prism.Commands;
 using GameEngine.Implementations;
+using GameEngine.Abstract_Class;
+using GameEngine.Interfaces;
 
 namespace FrontEnd_GameLayout.ViewModels
 {
-    public class LoadMenuViewModel :BaseViewModel, IPageViewModel
+    public class InventoryViewModel : BaseViewModel, IPageViewModel
     {
         ViewInfo Res = ViewInfo.Instance;
-        BackEndController backEndController = BackEndController.Instance;
+        IGameController game = GameController.Instance;
 
-        public LoadMenuViewModel()
+        public InventoryViewModel()
         {
-            getListOfSaves();
+            
             Window_Width = Res.Width;
             Window_Height = Res.Height;
         }
@@ -46,45 +47,34 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private async void getListOfSaves()
-        {
-            // Only loads if user is signed in
-            if(backEndController.token != null)
-            {
-                SavedGames = await backEndController.GetListOfSave();
-            }
-            
-        }
 
         #region Properties
 
-        private List<SaveDTO> _savedGames = new List<SaveDTO>();
+        private List<Item> _items = new List<Item>();
 
-        public List<SaveDTO> SavedGames {
-            get { return _savedGames; }
+        public List<Item> Items {
+            get { return _items; }
             set
             {
-                if (value != _savedGames)
+                if (value != _items)
                 {
-                    _savedGames = value;
-                    OnPropertyChanged("SavedGames");
+                    _items = value;
+                    OnPropertyChanged("Items");
                 }
             }
         }
 
-        
+        private Item _selectedItem;
 
-        private SaveDTO _selectedSave;
-
-        public SaveDTO SelectedSave
+        public Item SelectedItem
         {
-            get { return _selectedSave; }
+            get { return _selectedItem; }
             set
             {
-                if (value != _selectedSave)
+                if (value != _selectedItem)
                 {
-                    _selectedSave = value;
-                    OnPropertyChanged("SelectedSave");
+                    _selectedItem = value;
+                    OnPropertyChanged("SelectedItem");
                 }
             }
         }
@@ -101,25 +91,30 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _mainMenu ?? (_mainMenu = new RelayCommand(x =>
                 {
-                    Mediator.Notify("GoToMainMenu", "");
+                    Mediator.Notify("GameStart", "");
                 }));
             }
         }
 
-        private DelegateCommand _loadGame;
+        private DelegateCommand _equipCommand;
         
-        public DelegateCommand LoadGame => _loadGame ?? (_loadGame = new DelegateCommand(ExecuteLoadCommand, CanExecuteLoadCommand));
+        public DelegateCommand EquipCommand => _equipCommand ?? (_equipCommand = new DelegateCommand(ExecuteEquipCommand));
 
-        async void ExecuteLoadCommand()
+        async void ExecuteEquipCommand()
         {
-            await GameController.Instance.LoadGame(SelectedSave.ID);
-            Mediator.Notify("GameStart", "");
+            if(SelectedItem != null)
+            {
+                if (SelectedItem.Id == 1)
+                {
+                    game.CurrentPlayer.EquippedWeapon = (Weapon)SelectedItem;
+                }
+                if (SelectedItem.Id == 2)
+                {
+                    game.CurrentPlayer.EquippedShield = (Shield)SelectedItem;
+                }
+            }
         }
 
-        bool CanExecuteLoadCommand()
-        {
-            return true;
-        }
 
         #endregion
     }

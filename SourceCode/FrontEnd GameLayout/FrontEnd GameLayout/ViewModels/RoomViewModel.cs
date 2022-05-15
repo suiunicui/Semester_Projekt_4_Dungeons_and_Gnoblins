@@ -673,6 +673,19 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        private ICommand _inventoryMenu;
+
+        public ICommand InventoryMenu
+        {
+            get
+            {
+                return _inventoryMenu ?? (_inventoryMenu = new RelayCommand(x =>
+                {
+                    Mediator.Notify("GoToInventory", "");
+                }));
+            }
+        }
+
         #endregion
 
     }

@@ -17,9 +17,9 @@ namespace FrontEnd_GameLayout.Views
     /// <summary>
     /// Interaction logic for LoadMenu.xaml
     /// </summary>
-    public partial class LoadMenu : UserControl
+    public partial class Inventory : UserControl
     {
-        public LoadMenu()
+        public Inventory()
         {
             InitializeComponent();
         }
