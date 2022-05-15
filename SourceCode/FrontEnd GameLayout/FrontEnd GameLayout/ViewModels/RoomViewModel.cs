@@ -113,6 +113,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 _selectedItem = value;
                 OnPropertyChanged("SelectedItem");
+                evaluateSelectedItem();
             }
         }
 
@@ -633,9 +634,8 @@ namespace FrontEnd_GameLayout.ViewModels
                 Mediator.Notify("GoToVictoryScreen", "");
             Description = game.CurrentLocation.Description;
             Items = game.CurrentLocation.Chest;
-            var RoomView = new Views.Room();
             checkIfRoomIsNew();
-            MovePlayerOnMap(RoomView);
+            MovePlayerOnMap();
         }
         bool CanExecuteMoveCommand(string direction)
         { 
@@ -645,13 +645,22 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private DelegateCommand _interactCommand;
         public DelegateCommand InteractCommand =>
-        _interactCommand ?? (_interactCommand = new DelegateCommand(ExecuteInteractCommand));
+        _interactCommand ?? (_interactCommand = new DelegateCommand(ExecuteInteractCommand, CanExecuteInteractCommand));
         void ExecuteInteractCommand()
         {
-            if (SelectedItem != null)
-            {
                 game.PickUpItem(SelectedItem);
-            }
+                Items = null;
+                Items = game.CurrentLocation.Chest;
+                SelectedItem = null;
+        }
+        bool CanExecuteInteractCommand()
+        {
+            return SelectedItem != null;
+        }
+
+        void evaluateSelectedItem()
+        {
+            InteractCommand.RaiseCanExecuteChanged();
         }
 
         private ICommand _gameMenu;
