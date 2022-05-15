@@ -162,19 +162,20 @@ namespace FrontEnd_GameLayout.ViewModels
         
         public DelegateCommand EquipCommand => _equipCommand ?? (_equipCommand = new DelegateCommand(ExecuteEquipCommand));
 
-        async void ExecuteEquipCommand()
+        void ExecuteEquipCommand()
         {
             if(SelectedItem != null)
             {
-                if (SelectedItem.Id == 1)
+                switch (SelectedItem)
                 {
-                    game.CurrentPlayer.EquippedWeapon = (Weapon)SelectedItem;
-                    EquippedWeapon = SelectedItem.ItemType;
-                }
-                if (SelectedItem.Id == 0)
-                {
-                    game.CurrentPlayer.EquippedShield = (Shield)SelectedItem;
-                    EquippedShield = SelectedItem.ItemType;
+                    case Weapon weapon:
+                        game.CurrentPlayer.EquippedWeapon = weapon;
+                        EquippedWeapon = weapon.ItemType;
+                        break;
+                    case Shield shield:
+                        game.CurrentPlayer.EquippedShield = shield;
+                        EquippedShield = shield.ItemType;
+                        break;
                 }
             }
         }
