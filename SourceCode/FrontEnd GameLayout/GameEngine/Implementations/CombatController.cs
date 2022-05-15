@@ -54,9 +54,9 @@ namespace GameEngine.Implementations
             {
                 if (playerAttack.hasCrit)
                 {
-                    uint damagaDealt = player.AttackCrit(ref enemy);
+                    uint damageDealt = player.AttackCrit(ref enemy);
                     log.RecordEvent("player attack", "A Critical Strike against the enemy.");
-                    log.RecordEvent("player damage", $"The attack dealt {damagaDealt} damage to the enemy.");
+                    log.RecordEvent("player damage", $"The attack dealt {damageDealt} damage to the enemy.");
                     return log;
                 }
                 else
