@@ -34,7 +34,7 @@ namespace Backend_API.DAL
         }
 
         //MVP Get //Bruges ikke til udvidelse
-        public Save GetSaveByID(int SaveId)
+        public Save MVPGetSaveByID(int SaveId)
         {
             var saves = _context.Saves.ToList();
 
