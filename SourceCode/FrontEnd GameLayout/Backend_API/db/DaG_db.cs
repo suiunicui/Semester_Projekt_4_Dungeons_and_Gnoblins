@@ -45,11 +45,11 @@ namespace Backend_API.db
 
             modelBuilder.Entity<Save>()
                 .HasData(
-                new Save { RoomID = 1, ID = 2, SaveName = "NewGame2", Username = "gamer1" },
-                new Save { RoomID = 1, ID = 1, SaveName = "NewGame1", Username = "gamer1" },
-                new Save { RoomID = 1, ID = 3, SaveName = "NewGame3", Username = "gamer1" },
-                new Save { RoomID = 1, ID = 4, SaveName = "NewGame4", Username = "gamer1" },
-                new Save { RoomID = 1, ID = 5, SaveName = "NewGame5", Username = "gamer1" }
+                new Save { RoomID = 0, ID = 2, SaveName = "NewGame2", Username = "gamer1" },
+                new Save { RoomID = 0, ID = 1, SaveName = "NewGame1", Username = "gamer1" },
+                new Save { RoomID = 0, ID = 3, SaveName = "NewGame3", Username = "gamer1" },
+                new Save { RoomID = 0, ID = 4, SaveName = "NewGame4", Username = "gamer1" },
+                new Save { RoomID = 0, ID = 5, SaveName = "NewGame5", Username = "gamer1" }
                 );
 
             modelBuilder.Entity<User>()
