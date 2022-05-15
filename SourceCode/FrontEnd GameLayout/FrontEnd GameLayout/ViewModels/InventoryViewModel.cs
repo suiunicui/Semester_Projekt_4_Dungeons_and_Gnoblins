@@ -177,12 +177,6 @@ namespace FrontEnd_GameLayout.ViewModels
                         EquippedShield = shield.ItemType;
                         break;
                 }
-                //if (SelectedItem.Id == 1)
-                //{
-                //}
-                //if (SelectedItem.Id == 0)
-                //{
-                //}
             }
         }
 

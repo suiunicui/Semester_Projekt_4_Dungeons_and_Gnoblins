@@ -20,8 +20,6 @@
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="South" Key="Down"/>
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="West" Key="Left"/>
         <KeyBinding Command="{Binding GameMenu}" Key="Esc"/>
-        <KeyBinding Command="{Binding InventoryMenu}" Key="I"/>
-        <KeyBinding Command="{Binding CharacterCommand}" Key="C"/>
     </UserControl.InputBindings>
     <DockPanel x:Name="Main" Focusable="True">
         <Grid>
@@ -375,8 +373,6 @@
                     <ColumnDefinition Width="100*"/>
                     <ColumnDefinition Width="25*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="Character" Content="_Character"  Grid.Column="7" Grid.Row="3" Style="{StaticResource buttonStyle}"/>
-                <Button x:Name="Inventory" Content="_Inventory"  Grid.Column="7" Grid.Row="5" Style="{StaticResource buttonStyle}" Command="{Binding InventoryMenu}"/>
                 <Button x:Name="menu" Content="Menu"  Grid.Column="7" Grid.Row="7" Style="{StaticResource buttonStyle}" Command="{Binding GameMenu}"/>
                 <Button x:Name="fight" Content="Fight!" Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="1" Style="{StaticResource buttonStyle}"
                         Command="{Binding FightCommand}"/>
