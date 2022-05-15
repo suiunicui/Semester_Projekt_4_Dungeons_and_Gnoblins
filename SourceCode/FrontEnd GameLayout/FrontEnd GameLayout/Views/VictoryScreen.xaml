@@ -34,9 +34,8 @@
                 Content="Yes, please" Command="{Binding MainMenu}"/>
         <Button Grid.Column="2" Grid.Row="6" Style="{StaticResource buttonStyle}"
                 Content="No, get me out of here!" Command="{Binding ExitGameCommand}"/>
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="So you have found the Sword Of Destiny, and saved the entire kingdom from extinction? Do you expect to be rewarded?
-                   Real heroes dont ask for that, and that is my gift to you the wisdom on how to become a real hero.
-                   But now the real question, do you dare to try again?" TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}"
-                   Grid.ColumnSpan="3" Grid.RowSpan="5"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="So you have found the Sword Of Destiny, and saved the entire kingdom from extinction? Do you expect to be rewarded? Real heroes dont ask for that! And that my friend, is my gift to you the wisdom on how to become a real hero. But now the real question, do you dare to try again?"
+                   TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}" TextWrapping="Wrap"
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Margin="150,0,150,0"/>
     </Grid>
 </UserControl>
