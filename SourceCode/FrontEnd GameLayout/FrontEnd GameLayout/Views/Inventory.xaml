@@ -28,19 +28,19 @@
         </Grid.ColumnDefinitions>
 
         <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
-                Content="Load" Command="{Binding LoadGame}" Grid.Row="5"/>
+                Content="Equip" Command="{Binding EquipCommand}" Grid.Row="5"/>
         
         <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
-                Content="Back" Command="{Binding MainMenu}" Grid.Row="6"/>
-        
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
-        <TextBlock Grid.Column="1" Grid.Row="3" Text="Select Game" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
+                Content="Back" Command="{Binding BackCommand}" Grid.Row="6"/>
 
-        <ListBox Grid.Column="1" Grid.Row="4" Style="{StaticResource listStyle}" ItemsSource="{Binding SavedGames}" SelectedItem="{Binding SelectedSave}">
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Inventory" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
+
+        <ListBox Grid.Column="1" Grid.Row="4" Style="{StaticResource listStyle}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="{Binding SaveName}" />
+                        <TextBlock Text="{Binding ItemType}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
