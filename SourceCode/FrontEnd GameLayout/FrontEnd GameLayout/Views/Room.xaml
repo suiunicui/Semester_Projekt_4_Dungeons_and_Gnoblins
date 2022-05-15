@@ -20,6 +20,8 @@
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="South" Key="Down"/>
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="West" Key="Left"/>
         <KeyBinding Command="{Binding GameMenu}" Key="Esc"/>
+        <KeyBinding Command="{Binding InventoryMenu}" Key="I"/>
+        <KeyBinding Command="{Binding CharacterCommand}" Key="C"/>
     </UserControl.InputBindings>
     <DockPanel x:Name="Main" Focusable="True">
         <Grid>

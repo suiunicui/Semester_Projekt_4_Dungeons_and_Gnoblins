@@ -126,6 +126,12 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        public uint PlayerHP
+        {
+            get { return game.CurrentPlayer.HP; }
+            set => game.CurrentPlayer.HP = value;
+        }
+
         #region Map visibility
 
         private Visibility room_2_Visibility = Visibility.Hidden;
@@ -632,6 +638,7 @@ namespace FrontEnd_GameLayout.ViewModels
                 CombatLog += "You have " + game.CurrentLocation.Player.HP + " hitpoint left. \n";
                 CombatLog += "The enemy has " + game.CurrentLocation.Enemy.HP + " hitpoints \n";
             }
+            OnPropertyChanged("PlayerHP");
         }
 
         bool CanExecuteFightCommand()
