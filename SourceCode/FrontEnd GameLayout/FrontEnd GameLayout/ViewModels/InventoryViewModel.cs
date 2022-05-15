@@ -21,6 +21,23 @@ namespace FrontEnd_GameLayout.ViewModels
         public InventoryViewModel()
         {
             Items = game.CurrentPlayer.Inventory;
+            if(game.CurrentPlayer.EquippedWeapon != null)
+            {
+                EquippedWeapon = game.CurrentPlayer.EquippedWeapon.ItemType;
+            }
+            else
+            {
+                EquippedWeapon = "";
+            }
+            if(game.CurrentPlayer.EquippedShield != null)
+            {
+                EquippedShield = game.CurrentPlayer.EquippedShield.ItemType;
+            }
+            else
+            {
+                EquippedShield = "";
+            }
+            
             Window_Width = Res.Width;
             Window_Height = Res.Height;
         }
@@ -79,6 +96,38 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+        private String _equippedWeapon;
+
+        public String EquippedWeapon
+        {
+            get { return _equippedWeapon; }
+            set
+            {
+                if (value != _equippedWeapon)
+                {
+                    _equippedWeapon = "Weapon: " + value;
+                    OnPropertyChanged("EquippedWeapon");
+                }
+            }
+        }
+
+        private String _equippedShield;
+
+        public String EquippedShield
+        {
+            get { return _equippedShield; }
+            set
+            {
+                if (value != _equippedShield)
+                {
+                    _equippedShield = "Shield: " + value;
+                    OnPropertyChanged("EquippedShield");
+                }
+            }
+        }
+
+        
+
         #endregion
 
         #region Commands
@@ -107,10 +156,12 @@ namespace FrontEnd_GameLayout.ViewModels
                 if (SelectedItem.Id == 1)
                 {
                     game.CurrentPlayer.EquippedWeapon = (Weapon)SelectedItem;
+                    EquippedWeapon = SelectedItem.ItemType;
                 }
-                if (SelectedItem.Id == 2)
+                if (SelectedItem.Id == 0)
                 {
                     game.CurrentPlayer.EquippedShield = (Shield)SelectedItem;
+                    EquippedShield = SelectedItem.ItemType;
                 }
             }
         }
