@@ -25,6 +25,18 @@ namespace FrontEnd_GameLayout.ViewModels
             Window_Height = Res.Height;
         }
 
+        private async void getListOfSaves()
+        {
+            // Only loads if user is signed in
+            if (backEndController.token != null)
+            {
+                SavedGames = await backEndController.GetListOfSave();
+            }
+        }
+
+
+        #region Properties
+
         static int window_Width;
         public int Window_Width
         {
@@ -47,21 +59,10 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        private async void getListOfSaves()
-        {
-            // Only loads if user is signed in
-            if (backEndController.token != null)
-            {
-                SavedGames = await backEndController.GetListOfSave();
-            }
-        }
-
-
-        #region Properties
-
         private List<SaveDTO> _savedGames = new List<SaveDTO>();
 
-        public List<SaveDTO> SavedGames {
+        public List<SaveDTO> SavedGames 
+        {
             get { return _savedGames; }
             set
             {
@@ -91,12 +92,16 @@ namespace FrontEnd_GameLayout.ViewModels
 
         public SaveDTO SelectedSave
         {
-            get { return _selectedSave; }
+            get 
+            {
+                return _selectedSave;
+            }
             set
             {
                 if (value != _selectedSave)
                 {
                     _selectedSave = value;
+                    SaveCommand();
                     OnPropertyChanged("SelectedSave");
                 }
             }
@@ -134,9 +139,16 @@ namespace FrontEnd_GameLayout.ViewModels
 
         bool CanExecuteSaveCommand()
         {
-            return true;
+            if(SelectedSave != null)
+                return true;
+            else
+                return false;
         }
 
+        void SaveCommand()
+        {
+            SaveGame.RaiseCanExecuteChanged();
+        }
         #endregion
     }
 }

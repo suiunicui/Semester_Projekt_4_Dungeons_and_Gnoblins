@@ -464,7 +464,7 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-        void MovePlayerOnMap(Views.Room Room = null)
+        void MovePlayerOnMap()
         {
 
             switch (game.CurrentLocation.Id + 1)
@@ -633,9 +633,8 @@ namespace FrontEnd_GameLayout.ViewModels
                 Mediator.Notify("GoToVictoryScreen", "");
             Description = game.CurrentLocation.Description;
             Items = game.CurrentLocation.Chest;
-            var RoomView = new Views.Room();
             checkIfRoomIsNew();
-            MovePlayerOnMap(RoomView);
+            MovePlayerOnMap();
         }
         bool CanExecuteMoveCommand(string direction)
         { 
