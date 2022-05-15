@@ -38,6 +38,13 @@ namespace FrontEnd_GameLayout.ViewModels
             Window_Height = Res.Height;
             Window_Width = Res.Width;
             Res.LastScreenCombat = true;
+            if (PlayerHP < 7 && PlayerHP > 4)
+                hpColor.Color = Colors.Yellow;
+            else if (PlayerHP <= 4)
+                hpColor.Color = Colors.Red;
+            else
+                hpColor.Color = Colors.Green;
+            OnPropertyChanged("HPColor");
         }
 
         #region Properties
@@ -129,7 +136,20 @@ namespace FrontEnd_GameLayout.ViewModels
         public uint PlayerHP
         {
             get { return game.CurrentPlayer.HP; }
-            set => game.CurrentPlayer.HP = value;
+            set 
+            { 
+                game.CurrentPlayer.HP = value;
+            }
+        }
+
+        private SolidColorBrush hpColor = new SolidColorBrush();
+        public SolidColorBrush HPColor
+        {
+            get { return hpColor; }
+            set 
+            {
+                OnPropertyChanged("HPColor");
+            }
         }
 
         #region Map visibility
@@ -639,6 +659,13 @@ namespace FrontEnd_GameLayout.ViewModels
                 CombatLog += "The enemy has " + game.CurrentLocation.Enemy.HP + " hitpoints \n";
             }
             OnPropertyChanged("PlayerHP");
+            if (PlayerHP < 7 && PlayerHP > 4)
+                hpColor.Color = Colors.Yellow;
+            else if (PlayerHP <= 4)
+                hpColor.Color = Colors.Red;
+            else
+                hpColor.Color = Colors.Green;
+            OnPropertyChanged("HPColor");
         }
 
         bool CanExecuteFightCommand()

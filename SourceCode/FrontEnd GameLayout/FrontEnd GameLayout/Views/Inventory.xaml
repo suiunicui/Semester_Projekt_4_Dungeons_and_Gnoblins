@@ -8,11 +8,17 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Loaded="UserControl_Loaded"
         d:DesignHeight="1080"
         d:DesignWidth="1920"
-        Height="{Binding Window_Height}" Width="{Binding Window_Width}">
+        Height="{Binding Window_Height}" Width="{Binding Window_Width}" Focusable="True">
 
-    <Grid>
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding BackCommand}" Key="Esc"/>
+        <KeyBinding Command="{Binding CharacterCommand}" Key="C"/>
+    </UserControl.InputBindings>
+
+    <Grid x:Name="Main" Focusable="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="5*"/>

@@ -36,6 +36,7 @@
             <Grid Grid.Row="0" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.2*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -43,8 +44,9 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" 
                            Text="{Binding Description}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
-                <ProgressBar Grid.Row="1" Grid.Column="0" Maximum="10" Margin="20,20,20,20" Value="{Binding PlayerHP}" Foreground="Red"
-                             />
+                <TextBlock Grid.Row="1" Grid.Column="0" 
+                           Text="Player HP:" Style="{StaticResource textblockStyle}"/>
+                <ProgressBar Grid.Row="2" Grid.Column="0" Maximum="10" Margin="20,0,20,42" Value="{Binding PlayerHP}" Foreground="{Binding HPColor}"/>
             </Grid>
             <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding CombatLog}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
             <!--Setting up the Map-->
@@ -375,8 +377,8 @@
                     <ColumnDefinition Width="100*"/>
                     <ColumnDefinition Width="25*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="Character" Content="_Character"  Grid.Column="7" Grid.Row="3" Style="{StaticResource buttonStyle}"/>
-                <Button x:Name="Inventory" Content="_Inventory"  Grid.Column="7" Grid.Row="5" Style="{StaticResource buttonStyle}" Command="{Binding InventoryMenu}"/>
+                <Button x:Name="Character" Content="Character"  Grid.Column="7" Grid.Row="3" Style="{StaticResource buttonStyle}" Command="{Binding CharacterCommand}"/>
+                <Button x:Name="Inventory" Content="Inventory"  Grid.Column="7" Grid.Row="5" Style="{StaticResource buttonStyle}" Command="{Binding InventoryMenu}"/>
                 <Button x:Name="menu" Content="Menu"  Grid.Column="7" Grid.Row="7" Style="{StaticResource buttonStyle}" Command="{Binding GameMenu}"/>
                 <Button x:Name="fight" Content="Fight!" Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="1" Style="{StaticResource buttonStyle}"
                         Command="{Binding FightCommand}"/>
