@@ -44,7 +44,7 @@
                 Content="Back" Command="{Binding BackCommand}" Grid.Row="12"/>
 
         <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" Text="Character" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="2" Text="Character" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
 
         <TextBlock Grid.Column="1" Grid.Row="5" Text="Stats" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
         <TextBlock Grid.Column="1" Grid.Row="7" Text="{Binding PlayerHP}" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource textblockStyle}"/>
