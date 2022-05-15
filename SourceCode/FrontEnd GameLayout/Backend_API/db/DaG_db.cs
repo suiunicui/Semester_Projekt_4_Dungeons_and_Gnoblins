@@ -91,5 +91,10 @@ namespace Backend_API.db
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Inventory_Items> Items { get; set; }
+
+        public DbSet<Enemies_killed> Enemies { get; set; }
+
+        public DbSet<Puzzles> Puzzles { get; set; }
     }
 }

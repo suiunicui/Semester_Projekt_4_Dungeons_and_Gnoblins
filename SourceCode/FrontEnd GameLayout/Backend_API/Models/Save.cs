@@ -20,11 +20,23 @@ namespace Backend_API.Models
 
         public string SaveName { get; set; }
 
+        public long? Health { get; set; }
+
+        public int? Armour_ID { get; set; }
+
+        public int? Weapon_ID { get; set; }
+
         public User User { get; set; }
 
         public string Username { get; set; }
 
         public List<VisitedRooms> VisitedRooms { get; set; }
+
+        public List<Puzzles> Save_Puzzles { get; set; }
+
+        public List<Inventory_Items> Save_Inventory_Items { get; set; }
+
+        public List<Enemies_killed> Save_Enemies_killed { get; set; }
 
     }
 }
