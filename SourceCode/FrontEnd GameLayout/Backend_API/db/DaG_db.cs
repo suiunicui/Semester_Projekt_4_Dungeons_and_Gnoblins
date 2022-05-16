@@ -32,13 +32,14 @@ namespace Backend_API.db
 
             //Puzzles
             modelBuilder.Entity<Puzzles>()
-                            .HasKey(i => new { i.Puzzles_ID, i.Save_ID });
+                .HasKey(i => new { i.Save_ID, i.Puzzles_ID, });
             //Inventory
             modelBuilder.Entity<Inventory_Items>()
-                            .HasKey(k => new { k.SaveID, k.ItemID });
+                 .HasKey(k => new { k.SaveID, k.ItemID });
             //Enemies
             modelBuilder.Entity<Enemies_killed>()
-                            .HasKey(k => new { k.SaveID, k.EnemyID });
+                 .HasKey(k => new { k.SaveID, k.EnemyID });
+
 
             // one to many relationship save vistedRooms
             modelBuilder.Entity<VisitedRooms>()
@@ -73,11 +74,11 @@ namespace Backend_API.db
 
             modelBuilder.Entity<Save>()
                 .HasData(
-                new Save { RoomID = 0, ID = 2, SaveName = "NewGame2", Username = "gamer1" },
-                new Save { RoomID = 0, ID = 1, SaveName = "NewGame1", Username = "gamer1" },
-                new Save { RoomID = 0, ID = 3, SaveName = "NewGame3", Username = "gamer1" },
-                new Save { RoomID = 0, ID = 4, SaveName = "NewGame4", Username = "gamer1" },
-                new Save { RoomID = 0, ID = 5, SaveName = "NewGame5", Username = "gamer1" }
+                new Save { RoomID = 0, ID = 2, SaveName = "NewGame2", Username = "gamer1", Health = 10 },
+                new Save { RoomID = 0, ID = 1, SaveName = "NewGame1", Username = "gamer1", Health = 10 },
+                new Save { RoomID = 0, ID = 3, SaveName = "NewGame3", Username = "gamer1", Health = 10 },
+                new Save { RoomID = 0, ID = 4, SaveName = "NewGame4", Username = "gamer1", Health = 10 },
+                new Save { RoomID = 0, ID = 5, SaveName = "NewGame5", Username = "gamer1", Health = 10 }
                 );
 
             modelBuilder.Entity<User>()

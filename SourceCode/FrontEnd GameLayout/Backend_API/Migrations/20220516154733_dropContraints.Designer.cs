@@ -4,6 +4,7 @@ using Backend_API.db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_API.Migrations
 {
     [DbContext(typeof(DaG_db))]
-    partial class DaG_dbModelSnapshot : ModelSnapshot
+    [Migration("20220516154733_dropContraints")]
+    partial class dropContraints
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,39 +26,42 @@ namespace Backend_API.Migrations
 
             modelBuilder.Entity("Backend_API.Models.Enemies_killed", b =>
                 {
-                    b.Property<int>("SaveID")
-                        .HasColumnType("int");
-
                     b.Property<long>("EnemyID")
                         .HasColumnType("bigint");
 
-                    b.HasKey("SaveID", "EnemyID");
+                    b.Property<int>("SaveID")
+                        .HasColumnType("int");
+
+                    b.HasIndex("SaveID");
 
                     b.ToTable("Enemies");
                 });
 
             modelBuilder.Entity("Backend_API.Models.Inventory_Items", b =>
                 {
-                    b.Property<int>("SaveID")
-                        .HasColumnType("int");
-
                     b.Property<long>("ItemID")
                         .HasColumnType("bigint");
 
-                    b.HasKey("SaveID", "ItemID");
+                    b.Property<int>("SaveID")
+                        .HasColumnType("int");
+
+                    b.HasIndex("SaveID");
 
                     b.ToTable("Items");
                 });
 
             modelBuilder.Entity("Backend_API.Models.Puzzles", b =>
                 {
-                    b.Property<int>("Save_ID")
-                        .HasColumnType("int");
-
                     b.Property<long>("Puzzles_ID")
                         .HasColumnType("bigint");
 
-                    b.HasKey("Save_ID", "Puzzles_ID");
+                    b.Property<int>("Save_ID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("saveID")
+                        .HasColumnType("int");
+
+                    b.HasIndex("saveID");
 
                     b.ToTable("Puzzles");
                 });
@@ -282,7 +287,7 @@ namespace Backend_API.Migrations
                         new
                         {
                             Username = "Gamer1",
-                            Password = "$2a$11$jW9/.SbTTKvoUx1sCVOtZON9Jctx9Caai9BTwNxp1tgqyZfQ5.HJ6"
+                            Password = "$2a$11$AgRdIQm3FIkKa1ZMvM4VWuhhth2QFhMvS3WRdXyiZiAkCVlpwGzY6"
                         });
                 });
 
@@ -302,7 +307,7 @@ namespace Backend_API.Migrations
             modelBuilder.Entity("Backend_API.Models.Enemies_killed", b =>
                 {
                     b.HasOne("Backend_API.Models.Save", "save")
-                        .WithMany("Save_Enemies_killed")
+                        .WithMany()
                         .HasForeignKey("SaveID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -313,7 +318,7 @@ namespace Backend_API.Migrations
             modelBuilder.Entity("Backend_API.Models.Inventory_Items", b =>
                 {
                     b.HasOne("Backend_API.Models.Save", "save")
-                        .WithMany("Save_Inventory_Items")
+                        .WithMany()
                         .HasForeignKey("SaveID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -324,8 +329,8 @@ namespace Backend_API.Migrations
             modelBuilder.Entity("Backend_API.Models.Puzzles", b =>
                 {
                     b.HasOne("Backend_API.Models.Save", "save")
-                        .WithMany("Save_Puzzles")
-                        .HasForeignKey("Save_ID")
+                        .WithMany()
+                        .HasForeignKey("saveID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -356,12 +361,6 @@ namespace Backend_API.Migrations
 
             modelBuilder.Entity("Backend_API.Models.Save", b =>
                 {
-                    b.Navigation("Save_Enemies_killed");
-
-                    b.Navigation("Save_Inventory_Items");
-
-                    b.Navigation("Save_Puzzles");
-
                     b.Navigation("VisitedRooms");
                 });
 

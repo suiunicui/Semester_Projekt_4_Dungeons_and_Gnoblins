@@ -20,7 +20,7 @@ namespace Backend_API.Models
 
         public string SaveName { get; set; }
 
-        public long? Health { get; set; }
+        public uint? Health { get; set; }
 
         public int? Armour_ID { get; set; }
 

@@ -4,8 +4,8 @@ namespace Backend_API.Models
 {
     public class Enemies_killed
     {
-        [Key]
-        public int EnemyID { get; set; }
+
+        public uint EnemyID { get; set; }
 
         public int SaveID { get; set; }
 

@@ -4,6 +4,7 @@ using Backend_API.db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_API.Migrations
 {
     [DbContext(typeof(DaG_db))]
-    partial class DaG_dbModelSnapshot : ModelSnapshot
+    [Migration("20220516110238_health")]
+    partial class health
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,8 +29,8 @@ namespace Backend_API.Migrations
                     b.Property<int>("SaveID")
                         .HasColumnType("int");
 
-                    b.Property<long>("EnemyID")
-                        .HasColumnType("bigint");
+                    b.Property<int>("EnemyID")
+                        .HasColumnType("int");
 
                     b.HasKey("SaveID", "EnemyID");
 
@@ -40,8 +42,8 @@ namespace Backend_API.Migrations
                     b.Property<int>("SaveID")
                         .HasColumnType("int");
 
-                    b.Property<long>("ItemID")
-                        .HasColumnType("bigint");
+                    b.Property<int>("ItemID")
+                        .HasColumnType("int");
 
                     b.HasKey("SaveID", "ItemID");
 
@@ -50,13 +52,15 @@ namespace Backend_API.Migrations
 
             modelBuilder.Entity("Backend_API.Models.Puzzles", b =>
                 {
+                    b.Property<int>("Puzzles_ID")
+                        .HasColumnType("int");
+
                     b.Property<int>("Save_ID")
                         .HasColumnType("int");
 
-                    b.Property<long>("Puzzles_ID")
-                        .HasColumnType("bigint");
+                    b.HasKey("Puzzles_ID", "Save_ID");
 
-                    b.HasKey("Save_ID", "Puzzles_ID");
+                    b.HasIndex("Save_ID");
 
                     b.ToTable("Puzzles");
                 });
@@ -282,7 +286,7 @@ namespace Backend_API.Migrations
                         new
                         {
                             Username = "Gamer1",
-                            Password = "$2a$11$jW9/.SbTTKvoUx1sCVOtZON9Jctx9Caai9BTwNxp1tgqyZfQ5.HJ6"
+                            Password = "$2a$11$a0cBl.aqZ0oJ8cM/qM.2euSjSDYdvehOv1BeekubHEg6hA/y0z2mS"
                         });
                 });
 

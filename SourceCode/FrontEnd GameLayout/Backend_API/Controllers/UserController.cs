@@ -75,11 +75,11 @@ namespace Backend_API.Controllers
             _context.Users.Add(user);
 
             _context.Saves.AddRange(
-                new Save { RoomID = 0,SaveName = "NewGame1", Username = user.Username},
-                new Save { RoomID = 0, SaveName = "NewGame2", Username = user.Username },
-                new Save { RoomID = 0, SaveName = "NewGame3", Username = user.Username },
-                new Save { RoomID = 0, SaveName = "NewGame4", Username = user.Username },
-                new Save { RoomID = 0, SaveName = "NewGame5", Username = user.Username });
+                new Save { RoomID = 0,SaveName = "NewGame1", Username = user.Username, Health = 10 },
+                new Save { RoomID = 0, SaveName = "NewGame2", Username = user.Username, Health = 10 },
+                new Save { RoomID = 0, SaveName = "NewGame3", Username = user.Username, Health = 10 },
+                new Save { RoomID = 0, SaveName = "NewGame4", Username = user.Username, Health = 10 },
+                new Save { RoomID = 0, SaveName = "NewGame5", Username = user.Username, Health = 10 });
 
             await _context.SaveChangesAsync();
 

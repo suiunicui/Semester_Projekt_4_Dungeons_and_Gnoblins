@@ -157,7 +157,6 @@ namespace Backend_API.DAL
                 item.SaveID = save.ID;
                 item.ItemID = i;
                 _context.Add(item);
-                //save.Save_Inventory_Items.Add(item);
                 _context.SaveChanges();
             }
 
@@ -212,8 +211,7 @@ namespace Backend_API.DAL
 
         public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO game)
         {
-            //check if save already exits if it does delete it
-
+           
             Save oldSave = _context.Saves.Where(i => i.ID == game.ID).FirstOrDefault();
 
             var inv = _context.Items
@@ -277,7 +275,6 @@ namespace Backend_API.DAL
                 item.SaveID = oldSave.ID;
                 item.ItemID = i;
                 _context.Items.Add(item);
-                //save.Save_Inventory_Items.Add(item);
                 await _context.SaveChangesAsync();
             }
 
@@ -287,7 +284,6 @@ namespace Backend_API.DAL
                 enemy.SaveID = oldSave.ID;
                 enemy.EnemyID = i;
                 _context.Enemies.Add(enemy);
-                // save.Save_Enemies_killed.Add(enemy);
                 await _context.SaveChangesAsync();
             }
 
@@ -298,7 +294,6 @@ namespace Backend_API.DAL
                 newpuzzle.Save_ID = oldSave.ID;
                 newpuzzle.Puzzles_ID = i;
                 _context.Puzzles.Add(newpuzzle);
-                // save.Save_Puzzles.Add(puzzle);
                 await _context.SaveChangesAsync();
             }
 
@@ -308,7 +303,6 @@ namespace Backend_API.DAL
                 newroom.SaveId = oldSave.ID;
                 newroom.VistedRoomId = r;
                 _context.VisitedRooms.Add(newroom);
-                // save.Save_Puzzles.Add(puzzle);
                 await _context.SaveChangesAsync();
             }
 

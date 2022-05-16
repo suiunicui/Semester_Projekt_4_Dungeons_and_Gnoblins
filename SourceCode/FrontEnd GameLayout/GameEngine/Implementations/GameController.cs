@@ -77,8 +77,11 @@ public class GameController : IGameController
         Game.VisitedRooms = VisitedRooms;
         Game.SlainEnemies = SlainEnemies;
         Game.Inventory = Inventory;
+        if (CurrentPlayer.EquippedWeapon != null)
         Game.WeaponId = CurrentPlayer.EquippedWeapon.Id;
+        if (CurrentPlayer.EquippedShield != null)
         Game.ShieldId = CurrentPlayer.EquippedShield.Id;
+        Game.Health = CurrentPlayer.HP;
         await backEndController.PostSaveAsync(Game);
     }
 
@@ -86,14 +89,14 @@ public class GameController : IGameController
     public async Task LoadGame(int id)
     {
         //BackEndController SaveLoader = new BackEndController();
+        Reset();
         SaveDTO Game = await backEndController.GetSaveAsync(id);
         CurrentLocation.RemovePlayer();
         CurrentLocation = GameMap.Rooms[Game.RoomId];
         VisitedRooms = Game.VisitedRooms;
         SlainEnemies= Game.SlainEnemies;
         Inventory = Game.Inventory;
-        CurrentPlayer.EquippedWeapon = Game.WeaponId;
-        CurrentPlayer.EquippedShield = Game.ShieldId;
+        CurrentPlayer.HP = Game.Health;
         GameMap.Rooms[CurrentLocation.Id].AddPlayer(CurrentPlayer);
 
         foreach (ILocation room in GameMap.Rooms)
@@ -113,10 +116,12 @@ public class GameController : IGameController
                     room.Chest.Remove(item);
                 }
             }
-
-            if (SlainEnemies.Contains(room.Enemy.Id))
+            if (room.Enemy != null)
             {
-                room.RemoveEnemy();
+                if (SlainEnemies.Contains(room.Enemy.Id))
+                {
+                    room.RemoveEnemy();
+                }
             }
         }
 
