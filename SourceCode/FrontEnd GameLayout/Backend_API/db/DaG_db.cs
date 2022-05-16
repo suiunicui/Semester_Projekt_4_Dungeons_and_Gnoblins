@@ -10,8 +10,7 @@ namespace Backend_API.db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-
+            //Keys
             modelBuilder.Entity<User>()
                 .HasKey(x => x.Username);
 
@@ -27,8 +26,19 @@ namespace Backend_API.db
             modelBuilder.Entity<RoomDescription>()
                 .HasKey(x => x.RoomDescriptionID);
 
+            //Rooms
             modelBuilder.Entity<VisitedRooms>()
                 .HasKey(x => new { x.SaveId, x.VistedRoomId});
+
+            //Puzzles
+            modelBuilder.Entity<Puzzles>()
+                            .HasKey(i => new { i.Puzzles_ID, i.Save_ID });
+            //Inventory
+            modelBuilder.Entity<Inventory_Items>()
+                            .HasKey(k => new { k.SaveID, k.ItemID });
+            //Enemies
+            modelBuilder.Entity<Enemies_killed>()
+                            .HasKey(k => new { k.SaveID, k.EnemyID });
 
             // one to many relationship save vistedRooms
             modelBuilder.Entity<VisitedRooms>()

@@ -24,124 +24,9 @@ namespace Backend_API.DAL
         }
 
         #region Nye DAL funktioner til udvidet
-        //MVP Save //Bruges ikke til udvidelse
-        public void SaveGame(Save save)
-        {
-            _context.Add(save);
+      
 
-            _context.SaveChanges();
-
-        }
-
-        //MVP Get //Bruges ikke til udvidelse
-        public Save MVPGetSaveByID(int SaveId)
-        {
-            var saves = _context.Saves.ToList();
-
-            foreach (var save in saves)
-            {
-                if (save.ID == SaveId)
-                    return save;
-            }
-
-            return null;
-
-        }
-
-        //Get list of savenames for user 
-        public List<string> getSaveNamesForUser(string username)
-        {
-            List<string> SaveNames = new List<string>();
-
-            //Finde brugeres saves
-            var userSaves = _context.Saves
-                .Where(x => x.Username == username).ToList();
-
-            foreach (var s in userSaves)
-            {
-                SaveNames.Add(s.SaveName);
-            }
-
-            return SaveNames;
-        }
-
-        //Get single Save by name and username 
-        public GameDTO GetSingleGame(string username, string savename)
-        {
-            //Finde brugeres saves
-            var userSaves = _context.Saves
-                .Where(x => x.Username == username).ToList();
-
-            //Find korrekt save med navn
-            var save = userSaves
-                .First(x => (x.SaveName == savename) && (x.Username == username));
-
-            GameDTO ToReturn = new GameDTO();
-
-            ToReturn.Username = save.Username;
-            ToReturn.RoomID = save.RoomID;
-            ToReturn.SaveName = save.SaveName;
-            ToReturn.Health = save.Health;
-            ToReturn.Weapon_ID = save.Weapon_ID;
-            ToReturn.Armour_ID = save.Armour_ID;
-
-            var inv = _context.Items.Where(s => s.SaveID == save.ID).ToList();
-            var enemies = _context.Enemies.Where(s => s.SaveID == save.ID).ToList();
-            var puzzle = _context.Puzzles.Where(s => s.Save_ID == save.ID).ToList();
-            var rooms = _context.VisitedRooms.Where(s=>s.SaveId == save.ID).ToList();
-
-            foreach (var room in rooms)
-            {
-                ToReturn.VisitedRooms.Add(room.VistedRoomId);
-            }
-
-            foreach (var i in inv)
-            {
-                ToReturn.itemsID.Add(i.ItemID);
-            }
-
-            foreach (var p in puzzle)
-            {
-                ToReturn.PuzzleID.Add(p.Puzzles_ID);
-            }
-
-            foreach (var e in enemies)
-            {
-                ToReturn.enemyID.Add(e.EnemyID);
-            }
-
-            return ToReturn;
-
-        }
-
-        //Get user to confirm password 
-        public User GetUserByUserName(string username)
-        {
-
-            var user = _context.Users.First(x => x.Username == username);
-
-            if (user == null)
-                return null;
-            else
-                return user;
-        }
-
-        //Create user 
-        public void CreateUser(string username, string password)
-        {
-
-
-            User user = new User();
-
-            user.Username = username;
-            user.Password = password;
-
-            _context.Users.Add(user);
-
-            _context.SaveChanges();
-        }
-
-        //Remove a user with saves
+        //Remove a user with saves //
         public void RemoveUser(string username)
         {
             var user = _context.Users.First(x => x.Username == username);
@@ -377,7 +262,7 @@ namespace Backend_API.DAL
             {
                 SaveName = save.SaveName,
                 ID = save.ID,
-                RoomId = save.RoomID,
+                RoomID = save.RoomID,
                 VisitedRooms = new List<uint>(),
                 Username = save.Username,
             };
