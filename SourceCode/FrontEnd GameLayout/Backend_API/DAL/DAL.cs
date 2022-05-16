@@ -107,29 +107,29 @@ namespace Backend_API.DAL
             foreach (var r in room)
             {
 
-                _context.Remove(r);
+                _context.VisitedRooms.Remove(r);
             }
 
             foreach (var i in inv)
             {
 
-                _context.Remove(i);
+                _context.Items.Remove(i);
             }
 
             foreach (var p in puzzle)
             {
-                _context.Remove(p);
+                _context.Puzzles.Remove(p);
             }
 
             foreach (var e in enemies)
             {
-                _context.Remove(e);
+                _context.Enemies.Remove(e);
             }
 
 
-            _context.Remove(toDelete);
+            _context.Saves.Remove(toDelete);
 
-            _context.SaveChanges();
+            //_context.SaveChanges();
         }
 
         //Save a full game 
@@ -215,34 +215,66 @@ namespace Backend_API.DAL
             //check if save already exits if it does delete it
 
             Save oldSave = _context.Saves.Where(i => i.ID == game.ID).FirstOrDefault();
-            if(oldSave != null)
+
+            var inv = _context.Items
+                .Where(s => s.SaveID == oldSave.ID).ToList();
+
+            var enemies = _context.Enemies
+                .Where(s => s.SaveID == oldSave.ID).ToList();
+
+            var puzzle = _context.Puzzles
+                .Where(s => s.Save_ID == oldSave.ID).ToList();
+
+            var room = _context.VisitedRooms
+                .Where(s => s.SaveId == oldSave.ID).ToList();
+
+            //Remove
+            foreach (var r in room)
             {
-                await DeleteSingleSave(oldSave.ID);
+
+                _context.VisitedRooms.Remove(r);
             }
 
-            //var user = _context.Users.First(x => x.Username == game.Username);
-            var save = new Save()
+            foreach (var i in inv)
             {
-                RoomID = game.RoomID,
-                SaveName = game.SaveName,
-                ID = game.ID,
-                Username = oldSave.Username,
-                Health = game.Health,
-                Armour_ID = game.Armour_ID,
-                Weapon_ID = game.Weapon_ID,
 
+                _context.Items.Remove(i);
+            }
 
-            };
+            foreach (var p in puzzle)
+            {
+                _context.Puzzles.Remove(p);
+            }
 
-            _context.Add(save);
+            foreach (var e in enemies)
+            {
+                _context.Enemies.Remove(e);
+            }
+
+            //if(oldSave != null)
+            //{
+            //    await DeleteSingleSave(oldSave.ID);
+            //}
+
+            //var user = _context.Users.First(x => x.Username == game.Username);
+
+            oldSave.RoomID = game.RoomID;
+            oldSave.SaveName = game.SaveName;
+            oldSave.ID = game.ID;
+            oldSave.Username = oldSave.Username;
+            oldSave.Health = game.Health;
+            oldSave.Armour_ID = game.Armour_ID;
+            oldSave.Weapon_ID = game.Weapon_ID;
+
+            ////_context.Saves.Add(save);
             await _context.SaveChangesAsync();
 
             //user.Saves.Add(save);
 
-            await foreach (var i in game.itemsID)
+            foreach (var i in game.itemsID)
             {
                 var item = new Inventory_Items();
-                item.SaveID = save.ID;
+                item.SaveID = oldSave.ID;
                 item.ItemID = i;
                 _context.Items.Add(item);
                 //save.Save_Inventory_Items.Add(item);
@@ -252,30 +284,30 @@ namespace Backend_API.DAL
             foreach (var i in game.enemyID)
             {
                 var enemy = new Enemies_killed();
-                enemy.SaveID = save.ID;
+                enemy.SaveID = oldSave.ID;
                 enemy.EnemyID = i;
                 _context.Enemies.Add(enemy);
                 // save.Save_Enemies_killed.Add(enemy);
                 await _context.SaveChangesAsync();
             }
-            
+
 
             foreach (var i in game.PuzzleID)
             {
-                var puzzle = new Puzzles();
-                puzzle.Save_ID = save.ID;
-                puzzle.Puzzles_ID = i;
-                _context.Puzzles.Add(puzzle);
+                var newpuzzle = new Puzzles();
+                newpuzzle.Save_ID = oldSave.ID;
+                newpuzzle.Puzzles_ID = i;
+                _context.Puzzles.Add(newpuzzle);
                 // save.Save_Puzzles.Add(puzzle);
                 await _context.SaveChangesAsync();
             }
 
             foreach (var r in game.VisitedRooms)
             {
-                var room = new VisitedRooms();
-                room.SaveId = save.ID;
-                room.VistedRoomId = r;
-                _context.VisitedRooms.Add(room);
+                var newroom = new VisitedRooms();
+                newroom.SaveId = oldSave.ID;
+                newroom.VistedRoomId = r;
+                _context.VisitedRooms.Add(newroom);
                 // save.Save_Puzzles.Add(puzzle);
                 await _context.SaveChangesAsync();
             }
@@ -332,6 +364,7 @@ namespace Backend_API.DAL
             ToReturn.Health = save.Health;
             ToReturn.Weapon_ID = save.Weapon_ID;
             ToReturn.Armour_ID = save.Armour_ID;
+            ToReturn.ID = save.ID;
 
             var inv = _context.Items.Where(s => s.SaveID == save.ID).ToList();
             var enemies = _context.Enemies.Where(s => s.SaveID == save.ID).ToList();
