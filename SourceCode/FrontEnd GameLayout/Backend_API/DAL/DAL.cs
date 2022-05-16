@@ -132,7 +132,7 @@ namespace Backend_API.DAL
         }
 
         //Save a full game 
-        public void SaveWholeGame(GameDTO game)
+        public void SaveWholeGame(SaveDTO game)
         {
             var user = _context.Users.First(x => x.Username == game.Username);
 
