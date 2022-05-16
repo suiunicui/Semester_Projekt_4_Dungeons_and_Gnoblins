@@ -75,8 +75,10 @@ public class GameController : IGameController
         Game.SaveName = Savename;
         Game.Username = "null";
         Game.VisitedRooms = VisitedRooms;
-        //Game.EnemiesSlain = SlainEnemies;
-        //Game.ItemsPickedUp = Inventory;
+        Game.SlainEnemies = SlainEnemies;
+        Game.Inventory = Inventory;
+        Game.WeaponId = CurrentPlayer.EquippedWeapon.Id;
+        Game.ShieldId = CurrentPlayer.EquippedShield.Id;
         await backEndController.PostSaveAsync(Game);
     }
 
@@ -88,9 +90,36 @@ public class GameController : IGameController
         CurrentLocation.RemovePlayer();
         CurrentLocation = GameMap.Rooms[Game.RoomId];
         VisitedRooms = Game.VisitedRooms;
-        //SlainEnemies= Game.EnemiesSlain;
-        //Inventory = Game.ItemsPickedUp;
+        SlainEnemies= Game.SlainEnemies;
+        Inventory = Game.Inventory;
+        CurrentPlayer.EquippedWeapon = Game.WeaponId;
+        CurrentPlayer.EquippedShield = Game.ShieldId;
         GameMap.Rooms[CurrentLocation.Id].AddPlayer(CurrentPlayer);
+
+        foreach (ILocation room in GameMap.Rooms)
+        {
+            foreach (Item item in room.Chest)
+            {
+                if (Inventory.Contains(item.Id))
+                {
+                    if (Game.WeaponId == item.Id)
+                    {
+                        CurrentPlayer.EquippedWeapon = (Weapon) item;
+                    }
+                    if (Game.ShieldId == item.Id)
+                    {
+                        CurrentPlayer.EquippedShield= (Shield) item;
+                    }
+                    room.Chest.Remove(item);
+                }
+            }
+
+            if (SlainEnemies.Contains(room.Enemy.Id))
+            {
+                room.RemoveEnemy();
+            }
+        }
+
     }
 
     public ILog Move(Direction dir)

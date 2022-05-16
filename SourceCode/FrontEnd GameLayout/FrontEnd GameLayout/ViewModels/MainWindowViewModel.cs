@@ -88,7 +88,7 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private void OnGameStart(object obj)
         {
-            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Roon.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Room.mp3", AppDomain.CurrentDomain.BaseDirectory));
             Res.Toggle_Music();
             ChangeViewModel(PageViewModels[1]);
         }
