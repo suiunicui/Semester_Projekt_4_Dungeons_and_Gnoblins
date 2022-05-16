@@ -29,7 +29,7 @@ COULD
   - Have Procedual world
   - Have Text Parser
   - Have Difficulty
+    - Have Security
 
 WON't
-  - Have Security
   - Have Graphics
