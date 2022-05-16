@@ -2,6 +2,14 @@
 {
     public class SaveDTO
     {
+        public SaveDTO()
+        {
+            itemsID = new List<int>();
+            enemyID = new List<int>();
+            PuzzleID = new List<int>();
+            VisitedRooms = new List<uint>();
+        }
+
         public int ID { get; set; }
 
         //User

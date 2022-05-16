@@ -12,8 +12,6 @@ namespace Backend_API.Models
 {
     public class Save
     {
-        [Key]
-        [Required]
         public int ID { get; set; }
 
         public int RoomID { get; set; }

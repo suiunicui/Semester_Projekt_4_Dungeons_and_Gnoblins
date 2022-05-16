@@ -78,16 +78,16 @@ namespace Backend_API.DAL
         }
 
         //Delete a single save with savename and username
-        public async Task DeleteSingleSave(string username, string savename)
+        public async Task DeleteSingleSave(int saveId)
         {
 
             //Finde brugeres saves
-            var userSaves = _context.Saves
-                .Where(x => x.Username == username).ToList();
+            //var userSaves = _context.Saves
+            //    .Where(x => x.Username == username).ToList();
 
             //Find korrekt save med navn
-            var toDelete = userSaves
-                .First(x => (x.SaveName == savename) && (x.Username == username));
+            var toDelete = _context.Saves
+                .First(x => x.ID == saveId);
 
 
             //Find de tilhørende Items, enemies og puzzles
@@ -133,7 +133,7 @@ namespace Backend_API.DAL
         }
 
         //Save a full game 
-        public void SaveWholeGame(GameDTO game)
+        public void SaveWholeGame(SaveDTO game)
         {
             var user = _context.Users.First(x => x.Username == game.Username);
 
@@ -217,7 +217,7 @@ namespace Backend_API.DAL
             Save oldSave = _context.Saves.Where(i => i.ID == game.ID).FirstOrDefault();
             if(oldSave != null)
             {
-                await DeleteSingleSave(game.Username, game.SaveName);
+                await DeleteSingleSave(oldSave.ID);
             }
 
             //var user = _context.Users.First(x => x.Username == game.Username);
@@ -230,6 +230,7 @@ namespace Backend_API.DAL
             save.Weapon_ID = game.Weapon_ID;
             save.Username = game.Username;
             save.SaveName = game.SaveName;
+            save.ID = game.ID;
 
             _context.Add(save);
             _context.SaveChanges();
@@ -276,6 +277,7 @@ namespace Backend_API.DAL
                 _context.SaveChanges();
             }
 
+            return game;
             //var newSave = new Save()
             //{
             //    RoomID = saveDTO.RoomId,
