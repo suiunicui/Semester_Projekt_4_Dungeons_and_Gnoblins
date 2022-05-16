@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameEngine.Abstract_Class
+namespace GameEngine.Implementations
 {
-    public class Shield : Item
+    public class BetterShield : Shield
     {
         public uint AC { get; set; }
-        public Shield(uint armorClass)
+        public BetterShield(uint armorClass):base(armorClass)
         {
-            AC = armorClass;
-            ItemType = "Shield";
+            ++AC;
+            ItemType = "Shield+1";
         }
     }
 }
