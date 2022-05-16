@@ -24,9 +24,10 @@ namespace Backend_API.DAL
         }
 
         #region Nye DAL funktioner til udvidet
-      
 
-        //Remove a user with saves //
+
+
+        //Remove a user with saves
         public void RemoveUser(string username)
         {
             var user = _context.Users.First(x => x.Username == username);
@@ -77,16 +78,16 @@ namespace Backend_API.DAL
         }
 
         //Delete a single save with savename and username
-        public void DeleteSingleSave(string username, string savename)
+        public async Task DeleteSingleSave(int saveId)
         {
 
             //Finde brugeres saves
-            var userSaves = _context.Saves
-                .Where(x => x.Username == username).ToList();
+            //var userSaves = _context.Saves
+            //    .Where(x => x.Username == username).ToList();
 
             //Find korrekt save med navn
-            var toDelete = userSaves
-                .First(x => (x.SaveName == savename) && (x.Username == username));
+            var toDelete = _context.Saves
+                .First(x => x.ID == saveId);
 
 
             //Find de tilhørende Items, enemies og puzzles
@@ -192,87 +193,191 @@ namespace Backend_API.DAL
         }
         #endregion
 
-        public async Task DeleteGame(int SaveId)
-        {
-            List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
+        //public async Task DeleteGame(int SaveId)
+        //{
+        //    List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
 
-            Save Save = _context.Saves.Where(i => i.ID == SaveId).FirstOrDefault();
+        //    Save Save = _context.Saves.Where(i => i.ID == SaveId).FirstOrDefault();
 
-            _context.Saves.Remove(Save);
-
-
-            foreach (VisitedRooms room in visitedList)
-            {
-                _context.VisitedRooms.Remove(room);
-            }
-
-        }
+        //    _context.Saves.Remove(Save);
 
 
-        public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO saveDTO)
+        //    foreach (VisitedRooms room in visitedList)
+        //    {
+        //        _context.VisitedRooms.Remove(room);
+        //    }
+
+        //}
+
+
+        public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO game)
         {
             //check if save already exits if it does delete it
 
-            Save oldSave = _context.Saves.Where(i => i.ID == saveDTO.ID).FirstOrDefault();
+            Save oldSave = _context.Saves.Where(i => i.ID == game.ID).FirstOrDefault();
             if(oldSave != null)
             {
-                await DeleteGame(oldSave.ID);
+                await DeleteSingleSave(oldSave.ID);
             }
 
-            var newSave = new Save()
+            //var user = _context.Users.First(x => x.Username == game.Username);
+
+            var save = new Save();
+
+            save.RoomID = game.RoomID;
+            save.Health = game.Health;
+            save.Armour_ID = game.Armour_ID;
+            save.Weapon_ID = game.Weapon_ID;
+            save.Username = game.Username;
+            save.SaveName = game.SaveName;
+            save.ID = game.ID;
+
+            _context.Add(save);
+            _context.SaveChanges();
+
+            //user.Saves.Add(save);
+
+            foreach (var i in game.itemsID)
             {
-                RoomID = saveDTO.RoomID,
-                SaveName = saveDTO.SaveName,
-                ID = saveDTO.ID,
-                Username = oldSave.Username
-
-            };
-
-            _context.Saves.Add(newSave);
-
-            await _context.SaveChangesAsync();
-
-            foreach (uint r in saveDTO.VisitedRooms)
-            {
-                var Visitedroom = new VisitedRooms()
-                {
-                    VistedRoomId = r,
-                    SaveId = newSave.ID
-                };
-
-                _context.VisitedRooms.Add(Visitedroom);
-
-                await _context.SaveChangesAsync();
+                var item = new Inventory_Items();
+                item.SaveID = save.ID;
+                item.ItemID = i;
+                _context.Add(item);
+                //save.Save_Inventory_Items.Add(item);
+                _context.SaveChanges();
             }
 
-            return saveDTO;
+            foreach (var i in game.enemyID)
+            {
+                var enemy = new Enemies_killed();
+                enemy.SaveID = save.ID;
+                enemy.EnemyID = i;
+                _context.Add(enemy);
+                // save.Save_Enemies_killed.Add(enemy);
+                _context.SaveChanges();
+            }
+
+            foreach (var i in game.PuzzleID)
+            {
+                var puzzle = new Puzzles();
+                puzzle.Save_ID = save.ID;
+                puzzle.Puzzles_ID = i;
+                _context.Add(puzzle);
+                // save.Save_Puzzles.Add(puzzle);
+                _context.SaveChanges();
+            }
+
+            foreach (var r in game.VisitedRooms)
+            {
+                var room = new VisitedRooms();
+                room.SaveId = save.ID;
+                room.VistedRoomId = r;
+                _context.Add(room);
+                // save.Save_Puzzles.Add(puzzle);
+                _context.SaveChanges();
+            }
+
+            return game;
+            //var newSave = new Save()
+            //{
+            //    RoomID = saveDTO.RoomId,
+            //    SaveName = saveDTO.SaveName,
+            //    ID = saveDTO.ID,
+            //    Username = oldSave.Username
+
+            //};
+
+            //_context.Saves.Add(newSave);
+
+            //await _context.SaveChangesAsync();
+
+            //foreach (uint r in saveDTO.VisitedRooms)
+            //{
+            //    var Visitedroom = new VisitedRooms()
+            //    {
+            //        VistedRoomId = r,
+            //        SaveId = newSave.ID
+            //    };
+
+            //    _context.VisitedRooms.Add(Visitedroom);
+
+            //    await _context.SaveChangesAsync();
+            //}
+
+            //return saveDTO;
 
         }
 
 
         public async Task<ActionResult<SaveDTO>> GetSaveByID(int SaveId)
-        { 
+        {
             Save save = await _context.Saves.FindAsync(SaveId);
 
-           
+            ////Finde brugeres saves
+            //var userSaves = _context.Saves
+            //    .Where(x => x.Username == username).ToList();
 
-            List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
+            ////Find korrekt save med navn
+            //var save = userSaves
+            //    .First(x => (x.SaveName == savename) && (x.Username == username));
 
-            SaveDTO newSave = new SaveDTO()
+            SaveDTO ToReturn = new SaveDTO();
+
+            ToReturn.Username = save.Username;
+            ToReturn.RoomID = save.RoomID;
+            ToReturn.SaveName = save.SaveName;
+            ToReturn.Health = save.Health;
+            ToReturn.Weapon_ID = save.Weapon_ID;
+            ToReturn.Armour_ID = save.Armour_ID;
+
+            var inv = _context.Items.Where(s => s.SaveID == save.ID).ToList();
+            var enemies = _context.Enemies.Where(s => s.SaveID == save.ID).ToList();
+            var puzzle = _context.Puzzles.Where(s => s.Save_ID == save.ID).ToList();
+            var rooms = _context.VisitedRooms.Where(s => s.SaveId == save.ID).ToList();
+
+            foreach (var room in rooms)
             {
-                SaveName = save.SaveName,
-                ID = save.ID,
-                RoomID = save.RoomID,
-                VisitedRooms = new List<uint>(),
-                Username = save.Username,
-            };
-
-            foreach (VisitedRooms r in visitedList)
-            {
-                newSave.VisitedRooms.Add(r.VistedRoomId);
+                ToReturn.VisitedRooms.Add(room.VistedRoomId);
             }
 
-            return newSave;
+            foreach (var i in inv)
+            {
+                ToReturn.itemsID.Add(i.ItemID);
+            }
+
+            foreach (var p in puzzle)
+            {
+                ToReturn.PuzzleID.Add(p.Puzzles_ID);
+            }
+
+            foreach (var e in enemies)
+            {
+                ToReturn.enemyID.Add(e.EnemyID);
+            }
+
+            return ToReturn;
+
+            //Save save = await _context.Saves.FindAsync(SaveId);
+
+
+
+            //List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
+
+            //SaveDTO newSave = new SaveDTO()
+            //{
+            //    SaveName = save.SaveName,
+            //    ID = save.ID,
+            //    RoomId = save.RoomID,
+            //    VisitedRooms = new List<uint>(),
+            //    Username = save.Username,
+            //};
+
+            //foreach (VisitedRooms r in visitedList)
+            //{
+            //    newSave.VisitedRooms.Add(r.VistedRoomId);
+            //}
+
+            //return newSave;
 
 
         }
@@ -280,6 +385,7 @@ namespace Backend_API.DAL
         public async Task<ActionResult<List<Save>>> GetAllSaves()
         {
             
+
             var rooms = await _context.Saves.ToListAsync();
 
             return rooms;
