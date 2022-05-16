@@ -92,36 +92,36 @@ namespace Backend_API.DAL
 
             //Find de tilhørende Items, enemies og puzzles
             var inv = _context.Items
-                .Where(s => s.SaveID == toDelete.ID).ToList();
+                .Where(s => s.SaveID == toDelete.ID).ToListAsync();
 
             var enemies = _context.Enemies
-                .Where(s => s.SaveID == toDelete.ID).ToList();
+                .Where(s => s.SaveID == toDelete.ID).ToListAsync();
 
             var puzzle = _context.Puzzles
-                .Where(s => s.Save_ID == toDelete.ID).ToList();
+                .Where(s => s.Save_ID == toDelete.ID).ToListAsync();
 
             var room = _context.VisitedRooms
-                .Where(s => s.SaveId == toDelete.ID).ToList();
+                .Where(s => s.SaveId == toDelete.ID).ToListAsync();
 
             //Remove
-            foreach (var r in room)
+            foreach (var r in room.Result)
             {
 
                 _context.Remove(r);
             }
 
-            foreach (var i in inv)
+            foreach (var i in inv.Result)
             {
 
                 _context.Remove(i);
             }
 
-            foreach (var p in puzzle)
+            foreach (var p in puzzle.Result)
             {
                 _context.Remove(p);
             }
 
-            foreach (var e in enemies)
+            foreach (var e in enemies.Result)
             {
                 _context.Remove(e);
             }
@@ -221,19 +221,21 @@ namespace Backend_API.DAL
             }
 
             //var user = _context.Users.First(x => x.Username == game.Username);
+            var save = new Save()
+            {
+                RoomID = game.RoomID,
+                SaveName = game.SaveName,
+                ID = game.ID,
+                Username = oldSave.Username,
+                Health = game.Health,
+                Armour_ID = game.Armour_ID,
+                Weapon_ID = game.Weapon_ID,
 
-            var save = new Save();
 
-            save.RoomID = game.RoomID;
-            save.Health = game.Health;
-            save.Armour_ID = game.Armour_ID;
-            save.Weapon_ID = game.Weapon_ID;
-            save.Username = game.Username;
-            save.SaveName = game.SaveName;
-            save.ID = game.ID;
+            };
 
-            _context.Add(save);
-            _context.SaveChanges();
+            _context.Saves.Add(save);
+            _context.SaveChangesAsync();
 
             //user.Saves.Add(save);
 
@@ -242,9 +244,9 @@ namespace Backend_API.DAL
                 var item = new Inventory_Items();
                 item.SaveID = save.ID;
                 item.ItemID = i;
-                _context.Add(item);
+                _context.Items.Add(item);
                 //save.Save_Inventory_Items.Add(item);
-                _context.SaveChanges();
+                _context.SaveChangesAsync();
             }
 
             foreach (var i in game.enemyID)
@@ -252,9 +254,9 @@ namespace Backend_API.DAL
                 var enemy = new Enemies_killed();
                 enemy.SaveID = save.ID;
                 enemy.EnemyID = i;
-                _context.Add(enemy);
+                _context.Enemies.Add(enemy);
                 // save.Save_Enemies_killed.Add(enemy);
-                _context.SaveChanges();
+                _context.SaveChangesAsync();
             }
 
             foreach (var i in game.PuzzleID)
@@ -262,9 +264,9 @@ namespace Backend_API.DAL
                 var puzzle = new Puzzles();
                 puzzle.Save_ID = save.ID;
                 puzzle.Puzzles_ID = i;
-                _context.Add(puzzle);
+                _context.Puzzles.Add(puzzle);
                 // save.Save_Puzzles.Add(puzzle);
-                _context.SaveChanges();
+                _context.SaveChangesAsync();
             }
 
             foreach (var r in game.VisitedRooms)
@@ -272,9 +274,9 @@ namespace Backend_API.DAL
                 var room = new VisitedRooms();
                 room.SaveId = save.ID;
                 room.VistedRoomId = r;
-                _context.Add(room);
+                _context.VisitedRooms.Add(room);
                 // save.Save_Puzzles.Add(puzzle);
-                _context.SaveChanges();
+                _context.SaveChangesAsync();
             }
 
             return game;

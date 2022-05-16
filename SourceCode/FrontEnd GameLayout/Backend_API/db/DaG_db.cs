@@ -17,8 +17,8 @@ namespace Backend_API.db
             modelBuilder.Entity<User>()
                 .HasIndex(p => new { p.Username, p.Password }).IsUnique();
 
-            //modelBuilder.Entity<Save>()
-            //    .HasKey(x => x.ID);
+            modelBuilder.Entity<Save>()
+                .HasKey(x => x.ID);
 
             modelBuilder.Entity<Save>()
                 .HasIndex(n => new { n.SaveName, n.Username }).IsUnique();

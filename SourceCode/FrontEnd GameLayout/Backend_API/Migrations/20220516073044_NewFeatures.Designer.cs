@@ -4,6 +4,7 @@ using Backend_API.db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_API.Migrations
 {
     [DbContext(typeof(DaG_db))]
-    partial class DaG_dbModelSnapshot : ModelSnapshot
+    [Migration("20220516073044_NewFeatures")]
+    partial class NewFeatures
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -282,7 +284,7 @@ namespace Backend_API.Migrations
                         new
                         {
                             Username = "Gamer1",
-                            Password = "$2a$11$JSXMHm8lPkMHEpWITIcMW.am/qd7UfeeQXwQ0IPDrQK84mvKY.E8O"
+                            Password = "$2a$11$vi/4f.Vex8q10mET9YYy9eawL0s6/4xUDdp71zmdG0OmCKJbl1ki6"
                         });
                 });
 
