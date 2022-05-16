@@ -221,7 +221,7 @@ namespace Backend_API.DAL
 
             var newSave = new Save()
             {
-                RoomID = saveDTO.RoomId,
+                RoomID = saveDTO.RoomID,
                 SaveName = saveDTO.SaveName,
                 ID = saveDTO.ID,
                 Username = oldSave.Username
