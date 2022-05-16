@@ -18,7 +18,7 @@ namespace Backend_API.db
                 .HasIndex(p => new { p.Username, p.Password }).IsUnique();
 
             //modelBuilder.Entity<Save>()
-            //    .HasKey(x => x.ID);
+                //.HasKey(x => x.ID);
 
             modelBuilder.Entity<Save>()
                 .HasIndex(n => new { n.SaveName, n.Username }).IsUnique();
@@ -51,6 +51,24 @@ namespace Backend_API.db
                 .WithMany(s => s.Saves)
                 .HasForeignKey(i => i.Username);
 
+
+            //1 save to many Puzzles
+            modelBuilder.Entity<Puzzles>()
+                .HasOne<Save>(i => i.save)
+                .WithMany(i => i.Save_Puzzles)
+                .HasForeignKey(s => s.Save_ID);
+
+            //1 Save to many Items
+            modelBuilder.Entity<Inventory_Items>()
+                .HasOne<Save>(i => i.save)
+                .WithMany(s => s.Save_Inventory_Items)
+                .HasForeignKey(s => s.SaveID);
+
+            //1 Save to many Enemies
+            modelBuilder.Entity<Enemies_killed>()
+                .HasOne<Save>(s => s.save)
+                .WithMany(s => s.Save_Enemies_killed)
+                .HasForeignKey(i => i.SaveID);
 
 
             modelBuilder.Entity<Save>()
