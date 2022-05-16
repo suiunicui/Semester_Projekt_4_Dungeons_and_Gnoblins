@@ -92,36 +92,36 @@ namespace Backend_API.DAL
 
             //Find de tilhørende Items, enemies og puzzles
             var inv = _context.Items
-                .Where(s => s.SaveID == toDelete.ID).ToListAsync();
+                .Where(s => s.SaveID == toDelete.ID).ToList();
 
             var enemies = _context.Enemies
-                .Where(s => s.SaveID == toDelete.ID).ToListAsync();
+                .Where(s => s.SaveID == toDelete.ID).ToList();
 
             var puzzle = _context.Puzzles
-                .Where(s => s.Save_ID == toDelete.ID).ToListAsync();
+                .Where(s => s.Save_ID == toDelete.ID).ToList();
 
             var room = _context.VisitedRooms
-                .Where(s => s.SaveId == toDelete.ID).ToListAsync();
+                .Where(s => s.SaveId == toDelete.ID).ToList();
 
             //Remove
-            foreach (var r in room.Result)
+            foreach (var r in room)
             {
 
                 _context.Remove(r);
             }
 
-            foreach (var i in inv.Result)
+            foreach (var i in inv)
             {
 
                 _context.Remove(i);
             }
 
-            foreach (var p in puzzle.Result)
+            foreach (var p in puzzle)
             {
                 _context.Remove(p);
             }
 
-            foreach (var e in enemies.Result)
+            foreach (var e in enemies)
             {
                 _context.Remove(e);
             }
@@ -234,19 +234,19 @@ namespace Backend_API.DAL
 
             };
 
-            _context.Saves.Add(save);
-            _context.SaveChangesAsync();
+            _context.Add(save);
+            await _context.SaveChangesAsync();
 
             //user.Saves.Add(save);
 
-            foreach (var i in game.itemsID)
+            await foreach (var i in game.itemsID)
             {
                 var item = new Inventory_Items();
                 item.SaveID = save.ID;
                 item.ItemID = i;
                 _context.Items.Add(item);
                 //save.Save_Inventory_Items.Add(item);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
 
             foreach (var i in game.enemyID)
@@ -256,8 +256,9 @@ namespace Backend_API.DAL
                 enemy.EnemyID = i;
                 _context.Enemies.Add(enemy);
                 // save.Save_Enemies_killed.Add(enemy);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
+            
 
             foreach (var i in game.PuzzleID)
             {
@@ -266,7 +267,7 @@ namespace Backend_API.DAL
                 puzzle.Puzzles_ID = i;
                 _context.Puzzles.Add(puzzle);
                 // save.Save_Puzzles.Add(puzzle);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
 
             foreach (var r in game.VisitedRooms)
@@ -276,7 +277,7 @@ namespace Backend_API.DAL
                 room.VistedRoomId = r;
                 _context.VisitedRooms.Add(room);
                 // save.Save_Puzzles.Add(puzzle);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
 
             return game;
