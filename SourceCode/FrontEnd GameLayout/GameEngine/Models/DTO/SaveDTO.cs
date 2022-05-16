@@ -11,5 +11,10 @@
         public string Username { get; set; }
 
         public List<uint> VisitedRooms { get; set; }
+        public List<uint> Inventory { get; set; }
+        public List<uint> SlainEnemies { get; set; }
+
+        public uint ShieldId { get; set; }
+        public uint WeaponId { get; set; }
     }
 }
