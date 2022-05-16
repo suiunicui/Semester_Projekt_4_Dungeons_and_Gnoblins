@@ -29,7 +29,7 @@ namespace FrontEnd_GameLayout.ViewModels
             Description = "Fight!!";//= game.CurrentLocation.Description;
             game.CombatController.CombatIsOver = false;
             if(game.CurrentLocation.Enemy != null) {
-                CombatLog = "You face a " + game.CurrentLocation.Enemy.Id + "\n"; //Make it a name...
+                CombatLog = "You face a " + game.CurrentLocation.Enemy.Name + "\n";
                 CombatLog += "You have " + game.CurrentLocation.Player.HP + " hitpoint left. \n";
                 CombatLog += "The enemy has " + game.CurrentLocation.Enemy.HP + " hitpoints \n";
             }
@@ -629,22 +629,18 @@ namespace FrontEnd_GameLayout.ViewModels
                 if(game.CurrentLocation.Enemy.HP == 0)
                 {
                     CombatLog = log.GetRecord("Enemy Status");
-                    Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
-                    Res.Toggle_Music();
                     game.EliminateEnemy();
                     Mediator.Notify("GameStart", "");
                 }
                 else if(game.CurrentLocation.Player.HP == 0)
                 {
                     CombatLog = log.GetRecord("Player Status");
-                    Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
-                    Res.Toggle_Music();
                     Mediator.Notify("GoToDeathScreen", "");
                 }
             }
             else
             {
-                CombatLog = "You face a " + game.CurrentLocation.Enemy.Id + "\n"; //Make it a name...
+                CombatLog = "You face a " + game.CurrentLocation.Enemy.Name + "\n";
                 CombatLog += log.GetRecord("player attack") + " \n";
                 if(log.GetRecord("player attack") != "Your attack missed, dealing 0 damage to the enemy.") 
                 {
@@ -679,8 +675,6 @@ namespace FrontEnd_GameLayout.ViewModels
         void ExecuteFleeCommand()
         {
             game.CombatController.Flee();
-            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
-            Res.Toggle_Music();
             game.CurrentLocation.RemovePlayer();
             game.CurrentLocation = game.GameMap.Rooms[ViewInfo.Instance.LastRoom];
             game.CurrentLocation.AddPlayer(game.CurrentPlayer);
@@ -695,8 +689,6 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameMenu ?? (_gameMenu = new RelayCommand(x =>
                 {
-                    Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
-                    Res.Toggle_Music();
                     Mediator.Notify("GoToInGameMenu", "");
                 }));
             }

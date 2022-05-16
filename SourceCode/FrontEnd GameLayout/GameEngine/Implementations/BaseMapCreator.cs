@@ -44,11 +44,11 @@ public class BaseMapCreator : IMapCreator
   {
     // Room ID, HP, AC, DamageDiceSides, DamageDiceCount, ToHitBonus
     StreamWriter sw = new StreamWriter(EnemyFilePath);
-    sw.WriteLine("2, 10, 12, 8, 1, 2");
-    sw.WriteLine("5, 10, 12, 8, 1, 2");
-    sw.WriteLine("12, 10, 12, 8, 1, 2");
-    sw.WriteLine("16, 10, 12, 8, 1, 2");
-    sw.WriteLine("18, 10, 12, 8, 1, 2");
+    sw.WriteLine("2, 10, 12, 8, 1, 2, Naked Gnoblin");
+    sw.WriteLine("5, 10, 12, 8, 1, 2, Welp");
+    sw.WriteLine("12, 10, 12, 8, 1, 2, Big Naked Gnoblin");
+    sw.WriteLine("16, 10, 12, 8, 1, 2, Brute Gnoblin");
+    sw.WriteLine("18, 20, 13, 10, 1, 2, Gnoblin King"); //boss
     sw.Close();
   }
 
@@ -59,9 +59,12 @@ public class BaseMapCreator : IMapCreator
 
     // Weapons
     sw.WriteLine("1 ,1 ,8 ,1 ,2 ,2");
+    sw.WriteLine("13, 3, 12, 1, 3, 3");
 
     // Shields Room Id, Item Type, AC
-    sw.WriteLine("2,2,1");
+    sw.WriteLine("2,2,2");
+    sw.WriteLine("6,4,2");
+
     sw.Close();
   }
 

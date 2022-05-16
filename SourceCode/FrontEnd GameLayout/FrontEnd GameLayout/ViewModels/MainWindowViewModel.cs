@@ -80,11 +80,16 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private void OnGoToMainMenu(object obj)
         {
+
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
             ChangeViewModel(PageViewModels[0]);
         }
 
         private void OnGameStart(object obj)
         {
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Roon.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
             ChangeViewModel(PageViewModels[1]);
         }
 
@@ -100,6 +105,8 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private void OnGoToInGameMenu(object obj)
         {
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
             ChangeViewModel(PageViewModels[4]);
         }
         private void OnGoToSettingsMenu(object obj)
@@ -118,14 +125,20 @@ namespace FrontEnd_GameLayout.ViewModels
         }
         private void OnGoToCombat(object obj)
         {
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Battle.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
             ChangeViewModel(PageViewModels[8]);
         }
         private void OnGoToDeathScreen(object obj)
         {
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
             ChangeViewModel(PageViewModels[9]);
         }
         private void OnGoToVictoryScreen(object obj)
         {
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
             ChangeViewModel(PageViewModels[10]);
         }
         private void OnGoToCharacterScreen(object obj)

@@ -9,10 +9,11 @@ public class Enemy : Actor
     public uint Id;
 
     public (uint numOfSides, uint numOfDice) DamageDice { get; set; }
+    public readonly string Name;
 
     public uint ToHit { get; set; }
     private DiceRoller _diceRoller;
-    public Enemy(uint healthPoint, uint armorClass, (uint numOfSides, uint numOfDice) damageDice, uint hit)
+    public Enemy(uint healthPoint, uint armorClass, (uint numOfSides, uint numOfDice) damageDice, uint hit, string name)
     {
         ++ID;
         Id = ID;
@@ -20,6 +21,7 @@ public class Enemy : Actor
         AC = armorClass;
         ToHit = hit;
         DamageDice = damageDice;
+        Name = name;
         _diceRoller = new BasicDiceRoller();
     }
 

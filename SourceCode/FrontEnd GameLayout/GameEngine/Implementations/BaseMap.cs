@@ -73,13 +73,14 @@ public class BaseMap : IMap
         while(!reader.EndOfStream)
         {
             string s = reader.ReadLine();
-            uint[] ss = s.Split(",").Select(uint.Parse).ToArray();
+            string name = s.Split(",").ToArray()[6];
+            uint[] ss = s.Split(",").ToArray().Where(x => x.Length<4).Select(uint.Parse).ToArray();
 
             for (int i = 0; i < mapSize; i++)
             {
                 if (i == ss[0])
                 {
-                    rooms[i].AddEnemy(new Enemy(ss[1], ss[2], (ss[3], ss[4]), ss[5]));
+                    rooms[i].AddEnemy(new Enemy(ss[1], ss[2], (ss[3], ss[4]), ss[5], name));
                     break;
                 }
             }
@@ -103,6 +104,12 @@ public class BaseMap : IMap
                             break;
                         case 2:
                             rooms[i].Chest.Add(new Shield(ss[2]));
+                            break;
+                        case 3:
+                            rooms[i].Chest.Add(new Axe((ss[2], ss[3]), ss[4], ss[5]));
+                            break;
+                        case 4:
+                            rooms[i].Chest.Add(new BetterShield(ss[2]));
                             break;
                         default:
                             break;
