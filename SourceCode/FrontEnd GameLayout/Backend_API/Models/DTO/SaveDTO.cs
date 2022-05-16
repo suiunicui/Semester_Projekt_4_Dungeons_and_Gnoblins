@@ -4,8 +4,8 @@
     {
         public SaveDTO()
         {
-            itemsID = new List<uint>();
-            enemyID = new List<uint>();
+            Inventory = new List<uint>();
+            SlainEnemies = new List<uint>();
             PuzzleID = new List<uint>();
             VisitedRooms = new List<uint>();
         }
@@ -28,10 +28,10 @@
 
 
         //Inventory
-        public List<uint>? itemsID { get; set; }
+        public List<uint>? SlainEnemies { get; set; }
 
         //Enemies
-        public List<uint>? enemyID { get; set; }
+        public List<uint>? Inventory { get; set; }
 
         //Puzzles
         public List<uint>? PuzzleID { get; set; }

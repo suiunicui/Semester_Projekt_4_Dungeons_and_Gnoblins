@@ -151,7 +151,7 @@ namespace Backend_API.DAL
 
             //user.Saves.Add(save);
 
-            foreach (var i in game.itemsID)
+            foreach (var i in game.Inventory)
             {
                 var item = new Inventory_Items();
                 item.SaveID = save.ID;
@@ -160,7 +160,7 @@ namespace Backend_API.DAL
                 _context.SaveChanges();
             }
 
-            foreach (var i in game.enemyID)
+            foreach (var i in game.SlainEnemies)
             {
                 var enemy = new Enemies_killed();
                 enemy.SaveID = save.ID;
@@ -269,7 +269,7 @@ namespace Backend_API.DAL
 
             //user.Saves.Add(save);
 
-            foreach (var i in game.itemsID)
+            foreach (var i in game.Inventory)
             {
                 var item = new Inventory_Items();
                 item.SaveID = oldSave.ID;
@@ -278,7 +278,7 @@ namespace Backend_API.DAL
                 await _context.SaveChangesAsync();
             }
 
-            foreach (var i in game.enemyID)
+            foreach (var i in game.SlainEnemies)
             {
                 var enemy = new Enemies_killed();
                 enemy.SaveID = oldSave.ID;
@@ -372,7 +372,7 @@ namespace Backend_API.DAL
 
             foreach (var i in inv)
             {
-                ToReturn.itemsID.Add(i.ItemID);
+                ToReturn.Inventory.Add(i.ItemID);
             }
 
             foreach (var p in puzzle)
@@ -382,7 +382,7 @@ namespace Backend_API.DAL
 
             foreach (var e in enemies)
             {
-                ToReturn.enemyID.Add(e.EnemyID);
+                ToReturn.SlainEnemies.Add(e.EnemyID);
             }
 
             return ToReturn;
