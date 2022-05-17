@@ -22,9 +22,9 @@
 
         public uint? Health { get; set; }
 
-        public int? Armour_ID { get; set; }
+        public int? ShieldId { get; set; }
 
-        public int? Weapon_ID { get; set; }
+        public int? WeaponId { get; set; }
 
 
         //Inventory
