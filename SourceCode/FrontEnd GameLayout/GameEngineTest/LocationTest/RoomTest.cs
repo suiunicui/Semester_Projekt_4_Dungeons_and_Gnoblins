@@ -40,14 +40,15 @@ public class RoomTest
     }
 
     [Test]
-    public void Constructor_Description_IsNotNull()
+    public void Constructor_Description_IsNull()
     {
-        Assert.That(uut.Description,Is.Not.Null);
+        Assert.That(uut.Description,Is.Null);
     }
 
     [Test]
     public void Constructor_Description_RoomId()
     {
+        uut.Description = "Room Id: 2";
         Assert.That(uut.Description,Is.EqualTo("Room Id: 2"));
     }
 
@@ -79,7 +80,7 @@ public class RoomTest
     [Test]
     public void AddEnemy_IfRoomHasNoEnemy_CanAddEnemy()
     {
-        Enemy enemy = new Enemy(10, 16, (1, 2), 2);
+        Enemy enemy = new Enemy(10, 16, (1, 2), 2, "Test");
         uut.AddEnemy(enemy);
         Assert.That(uut.Enemy,Is.EqualTo(enemy));
     }
@@ -87,7 +88,7 @@ public class RoomTest
     [Test]
     public void RemoveEnemy_IfRoomHasEnemy_canRemoveEnemy()
     {
-        Enemy enemy = new Enemy(10, 16, (1, 2), 2);
+        Enemy enemy = new Enemy(10, 16, (1, 2), 2, "Test");
         uut.AddEnemy(enemy);
         uut.RemoveEnemy();
         Assert.That(uut.Enemy,Is.Null);
