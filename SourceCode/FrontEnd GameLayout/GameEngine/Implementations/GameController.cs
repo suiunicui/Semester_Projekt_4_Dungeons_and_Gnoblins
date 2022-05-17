@@ -56,11 +56,10 @@ public class GameController : IGameController
 
     public async Task GetRoomDescriptionAsync()
     {
-        BackEndController roomDescription = new BackEndController();
         foreach (var item in GameMap.Rooms)
         {
             int IntId = Convert.ToInt32(item.Id + 1);
-            RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
+            RoomDescription tempDesc = await backEndController.GetRoomDescriptionAsync(IntId);
             item.Description = tempDesc.Description;
         }
     }

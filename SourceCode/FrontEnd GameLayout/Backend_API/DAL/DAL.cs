@@ -141,8 +141,8 @@ namespace Backend_API.DAL
 
             save.RoomID = game.RoomID;
             save.Health = game.Health;
-            save.Armour_ID = game.Armour_ID;
-            save.Weapon_ID = game.Weapon_ID;
+            save.Armour_ID = game.ShieldId;
+            save.Weapon_ID = game.WeaponId;
             save.Username = game.Username;
             save.SaveName = game.SaveName;
 
@@ -261,8 +261,8 @@ namespace Backend_API.DAL
             oldSave.ID = game.ID;
             oldSave.Username = oldSave.Username;
             oldSave.Health = game.Health;
-            oldSave.Armour_ID = game.Armour_ID;
-            oldSave.Weapon_ID = game.Weapon_ID;
+            oldSave.Armour_ID = game.ShieldId;
+            oldSave.Weapon_ID = game.WeaponId;
 
             ////_context.Saves.Add(save);
             await _context.SaveChangesAsync();
@@ -356,8 +356,8 @@ namespace Backend_API.DAL
             ToReturn.RoomID = save.RoomID;
             ToReturn.SaveName = save.SaveName;
             ToReturn.Health = save.Health;
-            ToReturn.Weapon_ID = save.Weapon_ID;
-            ToReturn.Armour_ID = save.Armour_ID;
+            ToReturn.WeaponId = save.Weapon_ID;
+            ToReturn.ShieldId = save.Armour_ID;
             ToReturn.ID = save.ID;
 
             var inv = _context.Items.Where(s => s.SaveID == save.ID).ToList();
