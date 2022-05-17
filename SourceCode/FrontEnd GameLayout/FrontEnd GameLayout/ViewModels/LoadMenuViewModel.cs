@@ -85,6 +85,7 @@ namespace FrontEnd_GameLayout.ViewModels
                 {
                     _selectedSave = value;
                     OnPropertyChanged("SelectedSave");
+                    LoadCommand();
                 }
             }
         }
@@ -118,7 +119,16 @@ namespace FrontEnd_GameLayout.ViewModels
 
         bool CanExecuteLoadCommand()
         {
+<<<<<<< HEAD
             return true;
+=======
+            return SelectedSave != null;
+        }
+
+        void LoadCommand()
+        {
+            LoadGame.RaiseCanExecuteChanged();
+>>>>>>> FrontEnd
         }
 
         #endregion

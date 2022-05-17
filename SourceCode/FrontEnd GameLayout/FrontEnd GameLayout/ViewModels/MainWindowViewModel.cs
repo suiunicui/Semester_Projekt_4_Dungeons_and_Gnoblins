@@ -80,11 +80,16 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private void OnGoToMainMenu(object obj)
         {
+
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
             ChangeViewModel(PageViewModels[0]);
         }
 
         private void OnGameStart(object obj)
         {
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Room.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
             ChangeViewModel(PageViewModels[1]);
         }
 
@@ -100,6 +105,11 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private void OnGoToInGameMenu(object obj)
         {
+<<<<<<< HEAD
+=======
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
+>>>>>>> FrontEnd
             ChangeViewModel(PageViewModels[4]);
         }
         private void OnGoToSettingsMenu(object obj)
@@ -118,12 +128,38 @@ namespace FrontEnd_GameLayout.ViewModels
         }
         private void OnGoToCombat(object obj)
         {
+<<<<<<< HEAD
+=======
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Battle.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
+>>>>>>> FrontEnd
             ChangeViewModel(PageViewModels[8]);
         }
         private void OnGoToDeathScreen(object obj)
         {
+<<<<<<< HEAD
             ChangeViewModel(PageViewModels[9]);
         }
+=======
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
+            ChangeViewModel(PageViewModels[9]);
+        }
+        private void OnGoToVictoryScreen(object obj)
+        {
+            Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
+            Res.Toggle_Music();
+            ChangeViewModel(PageViewModels[10]);
+        }
+        private void OnGoToCharacterScreen(object obj)
+        {
+            ChangeViewModel(PageViewModels[11]);
+        }
+        private void OnGoToInventory(object obj)
+        {
+            ChangeViewModel(PageViewModels[12]);
+        }
+>>>>>>> FrontEnd
 
         public MainWindowViewModel()
         {
@@ -143,6 +179,12 @@ namespace FrontEnd_GameLayout.ViewModels
             PageViewModels.Add(new LoginMenuViewModel());
             PageViewModels.Add(new CombatViewModel());
             PageViewModels.Add(new DeathScreenViewModel());
+<<<<<<< HEAD
+=======
+            PageViewModels.Add(new VictoryScreenViewModel());
+            PageViewModels.Add(new CharacterScreenViewModel());
+            PageViewModels.Add(new InventoryViewModel());
+>>>>>>> FrontEnd
             CurrentPageViewModel = PageViewModels[7];
 
             Mediator.Subscribe("GoToMainMenu", OnGoToMainMenu);
@@ -155,6 +197,12 @@ namespace FrontEnd_GameLayout.ViewModels
             Mediator.Subscribe("GoToLoginMenu", OnGoToLoginMenu);
             Mediator.Subscribe("GoToCombat", OnGoToCombat);
             Mediator.Subscribe("GoToDeathScreen", OnGoToDeathScreen);
+<<<<<<< HEAD
+=======
+            Mediator.Subscribe("GoToVictoryScreen", OnGoToVictoryScreen);
+            Mediator.Subscribe("GoToCharacterScreen", OnGoToCharacterScreen);
+            Mediator.Subscribe("GoToInventory", OnGoToInventory);
+>>>>>>> FrontEnd
 
             game.GetRoomDescriptionAsync();
         }

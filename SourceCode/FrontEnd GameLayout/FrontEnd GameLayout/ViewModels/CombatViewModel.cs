@@ -29,7 +29,11 @@ namespace FrontEnd_GameLayout.ViewModels
             Description = "Fight!!";//= game.CurrentLocation.Description;
             game.CombatController.CombatIsOver = false;
             if(game.CurrentLocation.Enemy != null) {
+<<<<<<< HEAD
                 CombatLog = "You face a " + game.CurrentLocation.Enemy.Id + "\n"; //Make it a name...
+=======
+                CombatLog = "You face a " + game.CurrentLocation.Enemy.Name + "\n";
+>>>>>>> FrontEnd
                 CombatLog += "You have " + game.CurrentLocation.Player.HP + " hitpoint left. \n";
                 CombatLog += "The enemy has " + game.CurrentLocation.Enemy.HP + " hitpoints \n";
             }
@@ -38,6 +42,16 @@ namespace FrontEnd_GameLayout.ViewModels
             Window_Height = Res.Height;
             Window_Width = Res.Width;
             Res.LastScreenCombat = true;
+<<<<<<< HEAD
+=======
+            if (PlayerHP < 7 && PlayerHP > 4)
+                hpColor.Color = Colors.Yellow;
+            else if (PlayerHP <= 4)
+                hpColor.Color = Colors.Red;
+            else
+                hpColor.Color = Colors.Green;
+            OnPropertyChanged("HPColor");
+>>>>>>> FrontEnd
         }
 
         #region Properties
@@ -126,6 +140,28 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
+<<<<<<< HEAD
+=======
+        public uint PlayerHP
+        {
+            get { return game.CurrentPlayer.HP; }
+            set 
+            { 
+                game.CurrentPlayer.HP = value;
+            }
+        }
+
+        private SolidColorBrush hpColor = new SolidColorBrush();
+        public SolidColorBrush HPColor
+        {
+            get { return hpColor; }
+            set 
+            {
+                OnPropertyChanged("HPColor");
+            }
+        }
+
+>>>>>>> FrontEnd
         #region Map visibility
 
         private Visibility room_2_Visibility = Visibility.Hidden;
@@ -603,22 +639,32 @@ namespace FrontEnd_GameLayout.ViewModels
                 if(game.CurrentLocation.Enemy.HP == 0)
                 {
                     CombatLog = log.GetRecord("Enemy Status");
+<<<<<<< HEAD
                     Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
                     Res.Toggle_Music();
+=======
+>>>>>>> FrontEnd
                     game.EliminateEnemy();
                     Mediator.Notify("GameStart", "");
                 }
                 else if(game.CurrentLocation.Player.HP == 0)
                 {
                     CombatLog = log.GetRecord("Player Status");
+<<<<<<< HEAD
                     Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
                     Res.Toggle_Music();
+=======
+>>>>>>> FrontEnd
                     Mediator.Notify("GoToDeathScreen", "");
                 }
             }
             else
             {
+<<<<<<< HEAD
                 CombatLog = "You face a " + game.CurrentLocation.Enemy.Id + "\n"; //Make it a name...
+=======
+                CombatLog = "You face a " + game.CurrentLocation.Enemy.Name + "\n";
+>>>>>>> FrontEnd
                 CombatLog += log.GetRecord("player attack") + " \n";
                 if(log.GetRecord("player attack") != "Your attack missed, dealing 0 damage to the enemy.") 
                 {
@@ -632,6 +678,17 @@ namespace FrontEnd_GameLayout.ViewModels
                 CombatLog += "You have " + game.CurrentLocation.Player.HP + " hitpoint left. \n";
                 CombatLog += "The enemy has " + game.CurrentLocation.Enemy.HP + " hitpoints \n";
             }
+<<<<<<< HEAD
+=======
+            OnPropertyChanged("PlayerHP");
+            if (PlayerHP < 7 && PlayerHP > 4)
+                hpColor.Color = Colors.Yellow;
+            else if (PlayerHP <= 4)
+                hpColor.Color = Colors.Red;
+            else
+                hpColor.Color = Colors.Green;
+            OnPropertyChanged("HPColor");
+>>>>>>> FrontEnd
         }
 
         bool CanExecuteFightCommand()
@@ -645,8 +702,11 @@ namespace FrontEnd_GameLayout.ViewModels
         void ExecuteFleeCommand()
         {
             game.CombatController.Flee();
+<<<<<<< HEAD
             Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
             Res.Toggle_Music();
+=======
+>>>>>>> FrontEnd
             game.CurrentLocation.RemovePlayer();
             game.CurrentLocation = game.GameMap.Rooms[ViewInfo.Instance.LastRoom];
             game.CurrentLocation.AddPlayer(game.CurrentPlayer);
@@ -661,13 +721,20 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 return _gameMenu ?? (_gameMenu = new RelayCommand(x =>
                 {
+<<<<<<< HEAD
                     Res.MusicUri = new Uri(String.Format("{0}\\Music\\Music.mp3", AppDomain.CurrentDomain.BaseDirectory));
                     Res.Toggle_Music();
+=======
+>>>>>>> FrontEnd
                     Mediator.Notify("GoToInGameMenu", "");
                 }));
             }
         }
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> FrontEnd
         #endregion
 
     }

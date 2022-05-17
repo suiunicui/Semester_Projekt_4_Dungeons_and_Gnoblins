@@ -21,7 +21,10 @@ public class BackEndController : IBackEndController
     public BackEndController()
     {
         _httpClient = new HttpClient();
+<<<<<<< HEAD
         //_httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token.JWT);
+=======
+>>>>>>> FrontEnd
         
     }
 
@@ -52,7 +55,10 @@ public class BackEndController : IBackEndController
 
             _save = JsonSerializer.Deserialize<SaveDTO>(responsBody, options);
           
+<<<<<<< HEAD
             Console.WriteLine("RoomId: {0}", _save.RoomId);
+=======
+>>>>>>> FrontEnd
 
         }
         catch (HttpRequestException e)
@@ -174,7 +180,10 @@ public class BackEndController : IBackEndController
 
                     token = JsonSerializer.Deserialize<Token>(responseContent, options);
 
+<<<<<<< HEAD
                     Console.WriteLine(token.JWT);
+=======
+>>>>>>> FrontEnd
                 }
 
             }
@@ -211,7 +220,10 @@ public class BackEndController : IBackEndController
 
                     token = JsonSerializer.Deserialize<Token>(responseContent, options);
 
+<<<<<<< HEAD
                     Console.WriteLine(token.JWT);
+=======
+>>>>>>> FrontEnd
                 }
 
             }

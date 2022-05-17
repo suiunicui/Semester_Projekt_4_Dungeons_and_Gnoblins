@@ -57,11 +57,19 @@ public class GameController : IGameController
     public async Task GetRoomDescriptionAsync()
     {
         BackEndController roomDescription = new BackEndController();
+<<<<<<< HEAD
         foreach (var item in GameMap.Rooms)
         {
             int IntId = Convert.ToInt32(item.Id + 1);
             RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
             item.Description = tempDesc.Description;
+=======
+        foreach (var Item in GameMap.Rooms)
+        {
+            int IntId = Convert.ToInt32(Item.Id + 1);
+            RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
+            Item.Description = tempDesc.Description;
+>>>>>>> FrontEnd
         }
     }
 
@@ -75,18 +83,77 @@ public class GameController : IGameController
         Game.SaveName = Savename;
         Game.Username = "null";
         Game.VisitedRooms = VisitedRooms;
+<<<<<<< HEAD
+=======
+        Game.SlainEnemies = SlainEnemies;
+        Game.Inventory = Inventory;
+        if (CurrentPlayer.EquippedWeapon != null)
+        Game.WeaponId = CurrentPlayer.EquippedWeapon.Id;
+        if (CurrentPlayer.EquippedShield != null)
+        Game.ShieldId = CurrentPlayer.EquippedShield.Id;
+        Game.Health = CurrentPlayer.HP;
+>>>>>>> FrontEnd
         await backEndController.PostSaveAsync(Game);
     }
 
     //Loader gemt spil
     public async Task LoadGame(int id)
     {
+<<<<<<< HEAD
         //BackEndController SaveLoader = new BackEndController();
+=======
+        await Reset();
+>>>>>>> FrontEnd
         SaveDTO Game = await backEndController.GetSaveAsync(id);
         CurrentLocation.RemovePlayer();
         CurrentLocation = GameMap.Rooms[Game.RoomId];
         VisitedRooms = Game.VisitedRooms;
+<<<<<<< HEAD
         GameMap.Rooms[CurrentLocation.Id].AddPlayer(CurrentPlayer);
+=======
+        SlainEnemies= Game.SlainEnemies;
+        Inventory = Game.Inventory;
+        CurrentPlayer.HP = Game.Health;
+        GameMap.Rooms[CurrentLocation.Id].AddPlayer(CurrentPlayer);
+        List<(uint,Item)> temparray = new List<(uint,Item)>();
+
+        foreach (ILocation room in GameMap.Rooms)
+        {
+            if (room.Chest != null)
+            {
+                foreach (Item item in room.Chest)
+                {
+                    if (Inventory.Contains(item.Id))
+                    {
+                        if (Game.WeaponId == item.Id)
+                        {
+                            CurrentPlayer.EquippedWeapon = (Weapon)item;
+                        }
+                        if (Game.ShieldId == item.Id)
+                        {
+                            CurrentPlayer.EquippedShield = (Shield)item;
+                        }
+                        CurrentPlayer.Inventory.Add(item);
+                        temparray.Add((room.Id, item));
+                    }
+                }
+            }
+
+            foreach ((uint TempRoom,Item TempItem) tempval in temparray)
+            {
+                GameMap.Rooms[tempval.TempRoom].Chest.Remove(tempval.TempItem);
+            }
+
+            if (room.Enemy != null)
+            {
+                if (SlainEnemies.Contains(room.Enemy.Id))
+                {
+                    room.RemoveEnemy();
+                }
+            }
+        }
+
+>>>>>>> FrontEnd
     }
 
     public ILog Move(Direction dir)

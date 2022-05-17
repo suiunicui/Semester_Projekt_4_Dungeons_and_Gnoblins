@@ -68,8 +68,11 @@ namespace FrontEnd_GameLayout.ViewModels
                 {
                     if (Res.LastScreenCombat == true)
                     {
+<<<<<<< HEAD
                         Res.MusicUri = new Uri(String.Format("{0}\\Music\\Battle.mp3", AppDomain.CurrentDomain.BaseDirectory));
                         Res.Toggle_Music();
+=======
+>>>>>>> FrontEnd
                         Mediator.Notify("GoToCombat", "");
                     }
                     else

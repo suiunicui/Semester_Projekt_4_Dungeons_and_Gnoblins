@@ -43,7 +43,11 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
+<<<<<<< HEAD
                         <TextBox Text="{Binding SaveName}" />
+=======
+                        <TextBox Text="{Binding SaveName}" Style="{StaticResource saveBoxStyle}"/>
+>>>>>>> FrontEnd
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

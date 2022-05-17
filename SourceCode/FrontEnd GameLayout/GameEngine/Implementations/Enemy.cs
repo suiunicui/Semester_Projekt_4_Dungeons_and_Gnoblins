@@ -9,10 +9,18 @@ public class Enemy : Actor
     public uint Id;
 
     public (uint numOfSides, uint numOfDice) DamageDice { get; set; }
+<<<<<<< HEAD
 
     public uint ToHit { get; set; }
     private DiceRoller _diceRoller;
     public Enemy(uint healthPoint, uint armorClass, (uint numOfSides, uint numOfDice) damageDice, uint hit)
+=======
+    public readonly string Name;
+
+    public uint ToHit { get; set; }
+    private DiceRoller _diceRoller;
+    public Enemy(uint healthPoint, uint armorClass, (uint numOfSides, uint numOfDice) damageDice, uint hit, string name)
+>>>>>>> FrontEnd
     {
         ++ID;
         Id = ID;
@@ -20,6 +28,10 @@ public class Enemy : Actor
         AC = armorClass;
         ToHit = hit;
         DamageDice = damageDice;
+<<<<<<< HEAD
+=======
+        Name = name;
+>>>>>>> FrontEnd
         _diceRoller = new BasicDiceRoller();
     }
 

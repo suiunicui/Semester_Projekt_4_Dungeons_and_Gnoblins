@@ -9,7 +9,10 @@
   <ItemGroup>
     <Folder Include="Interfaces\" />
     <Folder Include="Abstract Class\" />
+<<<<<<< HEAD
     <Folder Include="Implementations\" />
+=======
+>>>>>>> FrontEnd
     <Folder Include="Exceptions\" />
   </ItemGroup>
 

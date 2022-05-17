@@ -89,9 +89,16 @@ public class Player : Actor
             uint numOfDice = EquippedWeapon.DamageDice.numOfDice;
 
             uint damageDealt = _diceRoller.RollDice((numOfSides, numOfDice))
+<<<<<<< HEAD
                                + _diceRoller.RollDice((numOfDice, numOfDice));
 
             enemy.TakeDamage(damageDealt + EquippedWeapon.Damage);
+=======
+                               + _diceRoller.RollDice((numOfSides, numOfDice))
+                               + EquippedWeapon.Damage;
+
+            enemy.TakeDamage(damageDealt);
+>>>>>>> FrontEnd
             return damageDealt;
         }
 

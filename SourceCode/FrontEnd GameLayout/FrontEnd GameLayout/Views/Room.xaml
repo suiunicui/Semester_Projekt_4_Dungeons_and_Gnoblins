@@ -20,6 +20,11 @@
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="South" Key="Down"/>
         <KeyBinding Command="{Binding MoveCommand}" CommandParameter="West" Key="Left"/>
         <KeyBinding Command="{Binding GameMenu}" Key="Esc"/>
+<<<<<<< HEAD
+=======
+        <KeyBinding Command="{Binding InventoryMenu}" Key="I"/>
+        <KeyBinding Command="{Binding CharacterCommand}" Key="C"/>
+>>>>>>> FrontEnd
     </UserControl.InputBindings>
     <DockPanel x:Name="Main" Focusable="True">
         <Grid>
@@ -35,7 +40,11 @@
             <TextBlock Grid.Row="0" Grid.Column="1" 
                        Text="{Binding Description}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
 
+<<<<<<< HEAD
             <ListBox Grid.Column="1" Grid.Row="1" Style="{StaticResource listStyle}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Margin="5,20,20,20">
+=======
+            <ListBox Grid.Column="1" Grid.Row="1" Style="{DynamicResource listStyle}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Margin="5,20,20,20">
+>>>>>>> FrontEnd
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical">
@@ -382,8 +391,13 @@
                         Command="{Binding MoveCommand}" CommandParameter="West"/>
                 <Button x:Name="south" Content="Go South"  Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="7" Style="{StaticResource buttonStyle}" 
                         Command="{Binding MoveCommand}" CommandParameter="South"/>
+<<<<<<< HEAD
                 <Button x:Name="character" Content="Character"  Grid.Column="7" Grid.Row="3" Style="{StaticResource buttonStyle}"/>
                 <Button x:Name="inventory" Content="Inventory"  Grid.Column="7" Grid.Row="5" Style="{StaticResource buttonStyle}"/>
+=======
+                <Button x:Name="character" Content="Character"  Grid.Column="7" Grid.Row="3" Style="{StaticResource buttonStyle}" Command="{Binding CharacterCommand}"/>
+                <Button x:Name="inventory" Content="Inventory"  Grid.Column="7" Grid.Row="5" Style="{StaticResource buttonStyle}" Command="{Binding InventoryMenu}"/>
+>>>>>>> FrontEnd
                 <Button x:Name="menu" Content="Menu"  Grid.Column="7" Grid.Row="7" Style="{StaticResource buttonStyle}" Command="{Binding GameMenu}"/>
                 <Button x:Name="interact" Content="Interact" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="1" Style="{StaticResource buttonStyle}"
                         Command="{Binding InteractCommand}"/>

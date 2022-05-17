@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="FrontEnd_GameLayout.Views.VictoryScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEnd_GameLayout.Views"
+        mc:Ignorable="d"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Height="{Binding Window_Height}" Width="{Binding Window_Width}"
+        d:DesignHeight="1080" d:DesignWidth="1920">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+
+
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Grid.Row="6" Style="{StaticResource buttonStyle}"
+                Content="Yes, please" Command="{Binding MainMenu}"/>
+        <Button Grid.Column="2" Grid.Row="6" Style="{StaticResource buttonStyle}"
+                Content="No, get me out of here!" Command="{Binding ExitGameCommand}"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="So you have found the Sword Of Destiny, and saved the entire kingdom from extinction? Do you expect to be rewarded? Real heroes dont ask for that! And that my friend, is my gift to you the wisdom on how to become a real hero. But now the real question, do you dare to try again?"
+                   TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource titleblockStyle}" TextWrapping="Wrap"
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Margin="150,0,150,0"/>
+    </Grid>
+</UserControl>
