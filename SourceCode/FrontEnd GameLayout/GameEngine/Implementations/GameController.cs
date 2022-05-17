@@ -57,11 +57,11 @@ public class GameController : IGameController
     public async Task GetRoomDescriptionAsync()
     {
         BackEndController roomDescription = new BackEndController();
-        foreach (var item in GameMap.Rooms)
+        foreach (var Item in GameMap.Rooms)
         {
-            int IntId = Convert.ToInt32(item.Id + 1);
+            int IntId = Convert.ToInt32(Item.Id + 1);
             RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
-            item.Description = tempDesc.Description;
+            Item.Description = tempDesc.Description;
         }
     }
 
@@ -88,8 +88,7 @@ public class GameController : IGameController
     //Loader gemt spil
     public async Task LoadGame(int id)
     {
-        //BackEndController SaveLoader = new BackEndController();
-        Reset();
+        await Reset();
         SaveDTO Game = await backEndController.GetSaveAsync(id);
         CurrentLocation.RemovePlayer();
         CurrentLocation = GameMap.Rooms[Game.RoomId];
@@ -98,24 +97,35 @@ public class GameController : IGameController
         Inventory = Game.Inventory;
         CurrentPlayer.HP = Game.Health;
         GameMap.Rooms[CurrentLocation.Id].AddPlayer(CurrentPlayer);
+        List<(uint,Item)> temparray = new List<(uint,Item)>();
 
         foreach (ILocation room in GameMap.Rooms)
         {
-            foreach (Item item in room.Chest)
+            if (room.Chest != null)
             {
-                if (Inventory.Contains(item.Id))
+                foreach (Item item in room.Chest)
                 {
-                    if (Game.WeaponId == item.Id)
+                    if (Inventory.Contains(item.Id))
                     {
-                        CurrentPlayer.EquippedWeapon = (Weapon) item;
+                        if (Game.WeaponId == item.Id)
+                        {
+                            CurrentPlayer.EquippedWeapon = (Weapon)item;
+                        }
+                        if (Game.ShieldId == item.Id)
+                        {
+                            CurrentPlayer.EquippedShield = (Shield)item;
+                        }
+                        CurrentPlayer.Inventory.Add(item);
+                        temparray.Add((room.Id, item));
                     }
-                    if (Game.ShieldId == item.Id)
-                    {
-                        CurrentPlayer.EquippedShield= (Shield) item;
-                    }
-                    room.Chest.Remove(item);
                 }
             }
+
+            foreach ((uint TempRoom,Item TempItem) tempval in temparray)
+            {
+                GameMap.Rooms[tempval.TempRoom].Chest.Remove(tempval.TempItem);
+            }
+
             if (room.Enemy != null)
             {
                 if (SlainEnemies.Contains(room.Enemy.Id))

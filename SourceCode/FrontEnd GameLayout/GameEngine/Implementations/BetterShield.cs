@@ -11,6 +11,8 @@ namespace GameEngine.Implementations
         public uint AC { get; set; }
         public BetterShield(uint armorClass):base(armorClass)
         {
+            ++ID;
+            Id = ID;
             ++AC;
             ItemType = "Shield+1";
         }
