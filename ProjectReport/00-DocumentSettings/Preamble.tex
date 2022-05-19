@@ -1,0 +1,77 @@
+%Mathematics
+  \usepackage{amssymb}
+  \usepackage{amsthm}
+  \usepackage{amsmath}
+  \usepackage{calculator}
+  \usepackage{mathtools}
+  \mathtoolsset{showonlyrefs = true}
+
+% Layout and Graphics
+  \usepackage{fancyhdr}
+  \usepackage{hyperref}
+  \usepackage{lastpage}
+  \usepackage{pgf}
+  \usepackage{tikz, tikz-uml}
+  \usepackage[smartEllipses]{markdown}
+  \usepackage{url}
+  \usepackage
+  [
+    left = \numberPI cm,
+    right = \numberPI cm,
+    top = \numberPI cm,
+    bottom = \numberPI cm
+  ]{geometry}
+ 
+% Tikz Libraries
+  \usetikzlibrary{arrows.meta}
+  \usetikzlibrary{automata}
+  \usetikzlibrary{backgrounds}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{calendar}
+  \usetikzlibrary{decorations}
+  \usetikzlibrary{er}
+  \usetikzlibrary{folding}
+  \usetikzlibrary{intersections}
+  \usetikzlibrary{matrix}
+  \usetikzlibrary{mindmap}
+  \usetikzlibrary{patterns}
+  \usetikzlibrary{plothandlers}
+  \usetikzlibrary{plotmarks}
+  \usetikzlibrary{shapes}
+  \usetikzlibrary{trees}
+
+% Page Layout
+  \pagestyle{fancy}
+  \fancyhf{}
+  \fancyhead[L]{\authorName}
+  \fancyfoot[C]{\leftmark}
+  \fancyhead[R]{\subject}
+  \fancyfoot[R]{\thepage}
+
+  % Remove Section numbering
+  \makeatletter
+  \renewcommand{\@seccntformat}[1]{}
+  \makeatother
+
+  \renewcommand{\footrulewidth}{\numberGOLD pt}
+  \renewcommand{\headrulewidth}{\numberPI pt}
+
+
+% Costume commands
+\newcommand{\scale}[2]
+{
+  \MULTIPLY{\numberGOLD}{#1}{\sol}
+  #2
+}
+
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\Z}{\mathcal{Z}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\Q}{\mathcal{Q}}
+\newcommand{\F}{\mathcal{F}}
+
+\newcommand{\methodDoc}[3]
+{
+  #1 #2(#3)
+}
