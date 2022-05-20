@@ -36,8 +36,6 @@
         <DataTemplate DataType="{x:Type local:DeathScreenViewModel}">
             <local1:DeathScreen />
         </DataTemplate>
-<<<<<<< HEAD
-=======
         <DataTemplate DataType="{x:Type local:VictoryScreenViewModel}">
             <local1:VictoryScreen />
         </DataTemplate>
@@ -47,7 +45,6 @@
         <DataTemplate DataType="{x:Type local:InventoryViewModel}">
             <local1:Inventory />
         </DataTemplate>
->>>>>>> FrontEnd
         <SolidColorBrush x:Key="backgroundColor" Color="Black"/>
         <SolidColorBrush x:Key="textColor" Color="LightGray"/>
         <SolidColorBrush x:Key="textHighligtColor" Color="IndianRed"/>
@@ -485,9 +482,6 @@
             <Setter Property="FontStyle" Value="Italic"/>
             <Setter Property="BorderThickness" Value="0"/>
         </Style>
-<<<<<<< HEAD
-
-=======
         <Style x:Key="saveBoxStyle" TargetType="TextBox">
             <Setter Property="Background" Value="{StaticResource backgroundColor}"/>
             <Setter Property="Foreground" Value="{StaticResource textColor}"/>
@@ -502,7 +496,6 @@
             <Setter Property="FontStyle" Value="Italic"/>
             <Setter Property="BorderThickness" Value="1"/>
         </Style>
->>>>>>> FrontEnd
        
         
         

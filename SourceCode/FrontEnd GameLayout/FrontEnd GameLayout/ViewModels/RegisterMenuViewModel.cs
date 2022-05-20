@@ -24,10 +24,7 @@ namespace FrontEnd_GameLayout.ViewModels
         {
             Window_Width = Res.Width;
             Window_Height = Res.Height;
-<<<<<<< HEAD
-=======
             _newUser = new UserDTO();
->>>>>>> FrontEnd
         }
 
         static int window_Width;
@@ -58,11 +55,7 @@ namespace FrontEnd_GameLayout.ViewModels
         private string _username;
 
         public string Username
-<<<<<<< HEAD
-        {
-=======
         { 
->>>>>>> FrontEnd
             get { return _username; }
             set
             {
@@ -104,11 +97,6 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> FrontEnd
         private ICommand _backCommand;
 
         public ICommand BackCommand
@@ -131,19 +119,10 @@ namespace FrontEnd_GameLayout.ViewModels
         async void ExecuteRegisterCommand()
         {
             bool RegistrationSuccessful = true;
-<<<<<<< HEAD
-            _newUser = new UserDTO()
-            {
-                Username = _username,
-                Password = _password
-            };
-            
-=======
 
             _newUser.Username = _username;
             _newUser.Password = _password;
 
->>>>>>> FrontEnd
             try
             {
                 await httpHandler.PostRegisterAsync(_newUser);
@@ -164,10 +143,7 @@ namespace FrontEnd_GameLayout.ViewModels
 
         bool CanExecuteRegisterCommand()
         {
-<<<<<<< HEAD
-=======
             
->>>>>>> FrontEnd
             return true;
         }
 

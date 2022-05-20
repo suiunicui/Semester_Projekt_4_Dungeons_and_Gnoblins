@@ -10,12 +10,7 @@ namespace Backend_API.db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-<<<<<<< HEAD
-
-
-=======
             //Keys
->>>>>>> FrontEnd
             modelBuilder.Entity<User>()
                 .HasKey(x => x.Username);
 
@@ -31,11 +26,6 @@ namespace Backend_API.db
             modelBuilder.Entity<RoomDescription>()
                 .HasKey(x => x.RoomDescriptionID);
 
-<<<<<<< HEAD
-            modelBuilder.Entity<VisitedRooms>()
-                .HasKey(x => new { x.SaveId, x.VistedRoomId});
-
-=======
             //Rooms
             modelBuilder.Entity<VisitedRooms>()
                 .HasKey(x => new { x.SaveId, x.VistedRoomId});
@@ -51,33 +41,19 @@ namespace Backend_API.db
                  .HasKey(k => new { k.SaveID, k.EnemyID });
 
 
->>>>>>> FrontEnd
             // one to many relationship save vistedRooms
             modelBuilder.Entity<VisitedRooms>()
                 .HasOne<Save>(x => x.Save)
                 .WithMany(y => y.VisitedRooms)
                 .HasForeignKey(x => x.SaveId);
 
-<<<<<<< HEAD
-=======
             //many to one
->>>>>>> FrontEnd
             modelBuilder.Entity<Save>()
                 .HasOne<User>(s => s.User)
                 .WithMany(s => s.Saves)
                 .HasForeignKey(i => i.Username);
 
 
-<<<<<<< HEAD
-
-            modelBuilder.Entity<Save>()
-                .HasData(
-                new Save { RoomID = 1, ID = 2, SaveName = "NewGame2", Username = "gamer1" },
-                new Save { RoomID = 1, ID = 1, SaveName = "NewGame1", Username = "gamer1" },
-                new Save { RoomID = 1, ID = 3, SaveName = "NewGame3", Username = "gamer1" },
-                new Save { RoomID = 1, ID = 4, SaveName = "NewGame4", Username = "gamer1" },
-                new Save { RoomID = 1, ID = 5, SaveName = "NewGame5", Username = "gamer1" }
-=======
             //1 save to many Puzzles
             modelBuilder.Entity<Puzzles>()
                 .HasOne<Save>(i => i.save)
@@ -104,7 +80,6 @@ namespace Backend_API.db
                 new Save { RoomID = 0, ID = 3, SaveName = "NewGame3", Username = "gamer1", Health = 10 },
                 new Save { RoomID = 0, ID = 4, SaveName = "NewGame4", Username = "gamer1", Health = 10 },
                 new Save { RoomID = 0, ID = 5, SaveName = "NewGame5", Username = "gamer1", Health = 10 }
->>>>>>> FrontEnd
                 );
 
             modelBuilder.Entity<User>()
@@ -114,27 +89,6 @@ namespace Backend_API.db
 
             modelBuilder.Entity<RoomDescription>()
                 .HasData(
-<<<<<<< HEAD
-                new RoomDescription { RoomDescriptionID = 1, Description = "DB says: This is room 1" },
-                new RoomDescription { RoomDescriptionID = 2, Description = "DB says: This is room 2" },
-                new RoomDescription { RoomDescriptionID = 3, Description = "DB says: This is room 3" },
-                new RoomDescription { RoomDescriptionID = 4, Description = "DB says: This is room 4" },
-                new RoomDescription { RoomDescriptionID = 5, Description = "DB says: This is room 5" },
-                new RoomDescription { RoomDescriptionID = 6, Description = "DB says: This is room 6" },
-                new RoomDescription { RoomDescriptionID = 7, Description = "DB says: This is room 7" },
-                new RoomDescription { RoomDescriptionID = 8, Description = "DB says: This is room 8" },
-                new RoomDescription { RoomDescriptionID = 9, Description = "DB says: This is room 9" },
-                new RoomDescription { RoomDescriptionID = 10, Description = "DB says: This is room 10" },
-                new RoomDescription { RoomDescriptionID = 11, Description = "DB says: This is room 11" },
-                new RoomDescription { RoomDescriptionID = 12, Description = "DB says: This is room 12" },
-                new RoomDescription { RoomDescriptionID = 13, Description = "DB says: This is room 13" },
-                new RoomDescription { RoomDescriptionID = 14, Description = "DB says: This is room 14" },
-                new RoomDescription { RoomDescriptionID = 15, Description = "DB says: This is room 15" },
-                new RoomDescription { RoomDescriptionID = 16, Description = "DB says: This is room 16" },
-                new RoomDescription { RoomDescriptionID = 17, Description = "DB says: This is room 17" },
-                new RoomDescription { RoomDescriptionID = 18, Description = "DB says: This is room 18" },
-                new RoomDescription { RoomDescriptionID = 19, Description = "DB says: This is room 19" },
-=======
                 new RoomDescription { RoomDescriptionID = 1, Description =
                 "1. The king has died of a magical curse caused by mysterious powers and a dooming presence is in store for the kingdom of Valirea. The threats of raids and magic power from foreign kingdoms are present and will end all of what you love and cherish. A strange oracle has foreseen that all this can be stopped if the Sword of Destiny is found and kept by the kingdom. The Sword of destiny is enchanted with holy powers and can protect the kingdom from evil. But to retrieve The Sword of Destiny, a mighty and brave warrior must face a trial in the lair of doom. It has been told that many have failed and perished in a attempt to retrieve the sword. You see no other choice and volunteer to save the kingdom of Valirea. You have entered the dark lair to retrieve the Sword of Destiny. The sheer cold and silence gives you discomforting feeling. You ask yourself, Is this really a good idea? \n\n\n To move to the next room, use the arrow keys or the move buttons on the screen."
                 },
@@ -156,7 +110,6 @@ namespace Backend_API.db
                 new RoomDescription { RoomDescriptionID = 17, Description = "17. The brute-gnoblin put up a good fight, but it is gone like the others. The room you entered is lit room with torches." },
                 new RoomDescription { RoomDescriptionID = 18, Description = "18. A door is present and you need a key. It might be somewhere else in the dungeon. You can sense an evil presence behind the door." },
                 new RoomDescription { RoomDescriptionID = 19, Description = "19. The Gnoblin king has been slayed. I can now retrieve the Sword of Destiny." },
->>>>>>> FrontEnd
                 new RoomDescription { RoomDescriptionID = 20, Description = "DB says: This is room 20" }
                 );
         }
@@ -170,13 +123,10 @@ namespace Backend_API.db
 
         public DbSet<User> Users { get; set; }
 
-<<<<<<< HEAD
-=======
         public DbSet<Inventory_Items> Items { get; set; }
 
         public DbSet<Enemies_killed> Enemies { get; set; }
 
         public DbSet<Puzzles> Puzzles { get; set; }
->>>>>>> FrontEnd
     }
 }

@@ -28,17 +28,6 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-<<<<<<< HEAD
-                <ColumnDefinition/>
-                <ColumnDefinition Width="63*"/>
-                <ColumnDefinition Width="64*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="1" 
-                       Text="{Binding Description}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
-            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding CombatLog}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
-
-
-=======
                 <ColumnDefinition Width="63*"/>
                 <ColumnDefinition Width="64*"/>
             </Grid.ColumnDefinitions>
@@ -58,7 +47,6 @@
                 <ProgressBar Grid.Row="2" Grid.Column="0" Maximum="10" Margin="20,0,20,42" Value="{Binding PlayerHP}" Foreground="{Binding HPColor}"/>
             </Grid>
             <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding CombatLog}" Style="{StaticResource textblockStyle}" TextWrapping="Wrap" Margin="5,20,20,20"/>
->>>>>>> FrontEnd
             <!--Setting up the Map-->
             <Grid x:Name="Mapgrid" Grid.Row="0" Grid.Column="2" >
                 <Grid.RowDefinitions>
@@ -387,11 +375,6 @@
                     <ColumnDefinition Width="100*"/>
                     <ColumnDefinition Width="25*"/>
                 </Grid.ColumnDefinitions>
-<<<<<<< HEAD
-                <Button x:Name="character" Content="Character"  Grid.Column="7" Grid.Row="3" Style="{StaticResource buttonStyle}"/>
-                <Button x:Name="inventory" Content="Inventory"  Grid.Column="7" Grid.Row="5" Style="{StaticResource buttonStyle}"/>
-=======
->>>>>>> FrontEnd
                 <Button x:Name="menu" Content="Menu"  Grid.Column="7" Grid.Row="7" Style="{StaticResource buttonStyle}" Command="{Binding GameMenu}"/>
                 <Button x:Name="fight" Content="Fight!" Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="1" Style="{StaticResource buttonStyle}"
                         Command="{Binding FightCommand}"/>
