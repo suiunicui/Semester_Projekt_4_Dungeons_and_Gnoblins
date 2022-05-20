@@ -113,10 +113,7 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 _selectedItem = value;
                 OnPropertyChanged("SelectedItem");
-<<<<<<< HEAD
-=======
                 evaluateSelectedItem();
->>>>>>> FrontEnd
             }
         }
 
@@ -376,99 +373,6 @@ namespace FrontEnd_GameLayout.ViewModels
             {
                 game.VisitedRooms.Add(game.CurrentLocation.Id);
             }
-<<<<<<< HEAD
-        }
-
-        void loadMap()
-        {
-            foreach (uint id in game.VisitedRooms)
-            {
-                switch (id + 1)
-                {
-                    case 1:
-                        break;
-                    case 2:
-                        Room_2_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_2_Visibility");
-                        break;
-                    case 3:
-                        Room_3_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_3_Visibility");
-                        break;
-                    case 4:
-                        Room_4_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_4_Visibility");
-                        break;
-                    case 5:
-                        Room_5_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_5_Visibility");
-                        break;
-                    case 6:
-                        Room_6_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_6_Visibility");
-                        break;
-                    case 7:
-                        Room_7_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_7_Visibility");
-                        break;
-                    case 8:
-                        Room_8_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_8_Visibility");
-                        break;
-                    case 9:
-                        Room_9_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_9_Visibility");
-                        break;
-                    case 10:
-                        Room_10_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_10_Visibility");
-                        break;
-                    case 11:
-                        PlayerRow = 2;
-                        playerColumn = 4;
-                        Room_11_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_11_Visibility");
-                        break;
-                    case 12:
-                        Room_12_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_12_Visibility");
-                        break;
-                    case 13:
-                        Room_13_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_13_Visibility");
-                        break;
-                    case 14:
-                        Room_14_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_14_Visibility");
-                        break;
-                    case 15:
-                        Room_15_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_15_Visibility");
-                        break;
-                    case 16:
-                        Room_16_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_16_Visibility");
-                        break;
-                    case 17:
-                        Room_17_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_17_Visibility");
-                        break;
-                    case 18:
-                        Room_18_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_18_Visibility");
-                        break;
-                    case 19:
-                        Room_19_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_19_Visibility");
-                        break;
-                    case 20:
-                        Room_20_Visibility = Visibility.Visible;
-                        OnPropertyChanged("Room_20_Visibility");
-                        break;
-                }
-            }
-=======
->>>>>>> FrontEnd
         }
 
         void loadMap()
@@ -722,17 +626,6 @@ namespace FrontEnd_GameLayout.ViewModels
             //Description = Log.GetEventRecord("New Room Description");
             if(game.CurrentLocation.Enemy != null)
             {
-<<<<<<< HEAD
-                Res.MusicUri = new Uri(String.Format("{0}\\Music\\Battle.mp3", AppDomain.CurrentDomain.BaseDirectory));
-                Res.Toggle_Music();
-                Mediator.Notify("GoToCombat", "");
-            }
-            Description = game.CurrentLocation.Description;
-            Items = game.CurrentLocation.Chest;
-            var RoomView = new Views.Room();
-            checkIfRoomIsNew();
-            MovePlayerOnMap(RoomView);
-=======
                 Mediator.Notify("GoToCombat", "");
             }
             if (game.CurrentLocation.Id == 19)
@@ -741,7 +634,6 @@ namespace FrontEnd_GameLayout.ViewModels
             Items = game.CurrentLocation.Chest;
             checkIfRoomIsNew();
             MovePlayerOnMap();
->>>>>>> FrontEnd
         }
         bool CanExecuteMoveCommand(string direction)
         { 
@@ -751,23 +643,6 @@ namespace FrontEnd_GameLayout.ViewModels
 
         private DelegateCommand _interactCommand;
         public DelegateCommand InteractCommand =>
-<<<<<<< HEAD
-        _interactCommand ?? (_interactCommand = new DelegateCommand(ExecuteInteractCommand));
-        void ExecuteInteractCommand()
-        {
-            if (SelectedItem != null)
-            {
-                game.PickUpItem(SelectedItem);
-                if(SelectedItem.Id == 1)
-                {
-                    game.CurrentPlayer.EquippedWeapon = (Weapon)SelectedItem;
-                }
-                if (SelectedItem.Id == 2)
-                {
-                    game.CurrentPlayer.EquippedShield = (Shield)SelectedItem;
-                }
-            }
-=======
         _interactCommand ?? (_interactCommand = new DelegateCommand(ExecuteInteractCommand, CanExecuteInteractCommand));
         void ExecuteInteractCommand()
         {
@@ -784,7 +659,6 @@ namespace FrontEnd_GameLayout.ViewModels
         void evaluateSelectedItem()
         {
             InteractCommand.RaiseCanExecuteChanged();
->>>>>>> FrontEnd
         }
 
         private ICommand _gameMenu;
@@ -800,8 +674,6 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-<<<<<<< HEAD
-=======
         private ICommand _inventoryMenu;
 
         public ICommand InventoryMenu
@@ -827,7 +699,6 @@ namespace FrontEnd_GameLayout.ViewModels
                 }));
             }
         }
->>>>>>> FrontEnd
         #endregion
 
     }

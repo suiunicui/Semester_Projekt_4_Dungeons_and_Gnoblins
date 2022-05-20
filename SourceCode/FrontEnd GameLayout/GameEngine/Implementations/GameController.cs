@@ -57,19 +57,11 @@ public class GameController : IGameController
     public async Task GetRoomDescriptionAsync()
     {
         BackEndController roomDescription = new BackEndController();
-<<<<<<< HEAD
-        foreach (var item in GameMap.Rooms)
-        {
-            int IntId = Convert.ToInt32(item.Id + 1);
-            RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
-            item.Description = tempDesc.Description;
-=======
         foreach (var Item in GameMap.Rooms)
         {
             int IntId = Convert.ToInt32(Item.Id + 1);
             RoomDescription tempDesc = await roomDescription.GetRoomDescriptionAsync(IntId);
             Item.Description = tempDesc.Description;
->>>>>>> FrontEnd
         }
     }
 
@@ -83,8 +75,6 @@ public class GameController : IGameController
         Game.SaveName = Savename;
         Game.Username = "null";
         Game.VisitedRooms = VisitedRooms;
-<<<<<<< HEAD
-=======
         Game.SlainEnemies = SlainEnemies;
         Game.Inventory = Inventory;
         if (CurrentPlayer.EquippedWeapon != null)
@@ -92,25 +82,17 @@ public class GameController : IGameController
         if (CurrentPlayer.EquippedShield != null)
         Game.ShieldId = CurrentPlayer.EquippedShield.Id;
         Game.Health = CurrentPlayer.HP;
->>>>>>> FrontEnd
         await backEndController.PostSaveAsync(Game);
     }
 
     //Loader gemt spil
     public async Task LoadGame(int id)
     {
-<<<<<<< HEAD
-        //BackEndController SaveLoader = new BackEndController();
-=======
         await Reset();
->>>>>>> FrontEnd
         SaveDTO Game = await backEndController.GetSaveAsync(id);
         CurrentLocation.RemovePlayer();
         CurrentLocation = GameMap.Rooms[Game.RoomId];
         VisitedRooms = Game.VisitedRooms;
-<<<<<<< HEAD
-        GameMap.Rooms[CurrentLocation.Id].AddPlayer(CurrentPlayer);
-=======
         SlainEnemies= Game.SlainEnemies;
         Inventory = Game.Inventory;
         CurrentPlayer.HP = Game.Health;
@@ -153,7 +135,6 @@ public class GameController : IGameController
             }
         }
 
->>>>>>> FrontEnd
     }
 
     public ILog Move(Direction dir)

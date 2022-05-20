@@ -25,8 +25,6 @@ namespace FrontEnd_GameLayout.ViewModels
             Window_Height = Res.Height;
         }
 
-<<<<<<< HEAD
-=======
         private async void getListOfSaves()
         {
             // Only loads if user is signed in
@@ -39,7 +37,6 @@ namespace FrontEnd_GameLayout.ViewModels
 
         #region Properties
 
->>>>>>> FrontEnd
         static int window_Width;
         public int Window_Width
         {
@@ -62,28 +59,10 @@ namespace FrontEnd_GameLayout.ViewModels
             }
         }
 
-<<<<<<< HEAD
-        private async void getListOfSaves()
-        {
-            // Only loads if user is signed in
-            if (backEndController.token != null)
-            {
-                SavedGames = await backEndController.GetListOfSave();
-            }
-        }
-
-
-        #region Properties
-
-        private List<SaveDTO> _savedGames = new List<SaveDTO>();
-
-        public List<SaveDTO> SavedGames {
-=======
         private List<SaveDTO> _savedGames = new List<SaveDTO>();
 
         public List<SaveDTO> SavedGames 
         {
->>>>>>> FrontEnd
             get { return _savedGames; }
             set
             {
@@ -113,23 +92,16 @@ namespace FrontEnd_GameLayout.ViewModels
 
         public SaveDTO SelectedSave
         {
-<<<<<<< HEAD
-            get { return _selectedSave; }
-=======
             get 
             {
                 return _selectedSave;
             }
->>>>>>> FrontEnd
             set
             {
                 if (value != _selectedSave)
                 {
                     _selectedSave = value;
-<<<<<<< HEAD
-=======
                     SaveCommand();
->>>>>>> FrontEnd
                     OnPropertyChanged("SelectedSave");
                 }
             }
@@ -167,11 +139,6 @@ namespace FrontEnd_GameLayout.ViewModels
 
         bool CanExecuteSaveCommand()
         {
-<<<<<<< HEAD
-            return true;
-        }
-
-=======
             if(SelectedSave != null)
                 return true;
             else
@@ -182,7 +149,6 @@ namespace FrontEnd_GameLayout.ViewModels
         {
             SaveGame.RaiseCanExecuteChanged();
         }
->>>>>>> FrontEnd
         #endregion
     }
 }

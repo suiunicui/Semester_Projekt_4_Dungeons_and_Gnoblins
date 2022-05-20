@@ -20,11 +20,7 @@ public class PlayerTest
         basicDiceRoller = Substitute.For<DiceRoller>();
         weapon = Substitute.For<Sword>(((uint) 8, (uint) 1), (uint) 2, (uint) 2);
         uut = new Player(10, 16, weapon, basicDiceRoller);
-<<<<<<< HEAD
-        enemy = new Enemy(10, 10, (10, 1), 2);
-=======
         enemy = new Enemy(10, 10, (10, 1), 2, "test");
->>>>>>> FrontEnd
     }
 
     [Test]
@@ -111,18 +107,10 @@ public class PlayerTest
     public void AttackCrit_EnemyTakeCorrectDamage()
     {
         basicDiceRoller.RollDice(uut.EquippedWeapon.DamageDice).Returns((uint) 2, (uint) 2);
-<<<<<<< HEAD
-
-        uint damage = uut.AttackCrit(ref enemy);
-
-        Assert.That(uut.EquippedWeapon, Is.Not.Null);
-        Assert.That(enemy.HP, Is.EqualTo(6));
-=======
         uut.EquippedWeapon.Damage = 2;
         uint damage = uut.AttackCrit(ref enemy);
 
         Assert.That(uut.EquippedWeapon, Is.Not.Null);
         Assert.That(enemy.HP, Is.EqualTo(4));
->>>>>>> FrontEnd
     }
 }

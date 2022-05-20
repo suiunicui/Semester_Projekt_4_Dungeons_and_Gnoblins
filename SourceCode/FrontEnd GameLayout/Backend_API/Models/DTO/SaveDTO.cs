@@ -2,17 +2,6 @@
 {
     public class SaveDTO
     {
-<<<<<<< HEAD
-        public int ID { get; set; }
-
-        public int RoomId { get; set; }
-
-        public string SaveName { get; set; }
-
-        public string Username { get; set; }
-
-        public List<uint> VisitedRooms { get; set; }
-=======
         public SaveDTO()
         {
             Inventory = new List<uint>();
@@ -48,6 +37,5 @@
         public List<uint>? PuzzleID { get; set; }
 
         public List<uint>? VisitedRooms { get; set; }
->>>>>>> FrontEnd
     }
 }

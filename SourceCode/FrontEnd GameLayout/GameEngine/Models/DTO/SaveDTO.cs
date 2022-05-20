@@ -2,8 +2,6 @@
 {
     public class SaveDTO
     {
-<<<<<<< HEAD
-=======
         public SaveDTO()
         {
             Inventory = new List<uint>();
@@ -12,7 +10,6 @@
             VisitedRooms = new List<uint>();
         }
 
->>>>>>> FrontEnd
         public int ID { get; set; }
 
         public int RoomId { get; set; }
@@ -21,9 +18,6 @@
 
         public string Username { get; set; }
 
-<<<<<<< HEAD
-        public List<uint> VisitedRooms { get; set; }
-=======
         public uint Health { get; set; }
 
         public List<uint> VisitedRooms { get; set; }
@@ -33,6 +27,5 @@
 
         public uint? ShieldId { get; set; }
         public uint? WeaponId { get; set; }
->>>>>>> FrontEnd
     }
 }

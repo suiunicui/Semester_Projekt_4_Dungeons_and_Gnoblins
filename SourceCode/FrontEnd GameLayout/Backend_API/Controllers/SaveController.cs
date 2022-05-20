@@ -34,12 +34,8 @@ namespace Backend_API.Controllers
         public async Task<ActionResult<SaveDTO>> GetSave(int id)
         {
             var identity = User.Identity;
-<<<<<<< HEAD
-
-=======
           
             
->>>>>>> FrontEnd
             var save = await _save.GetSaveByID(id);
 
             if (save == null)

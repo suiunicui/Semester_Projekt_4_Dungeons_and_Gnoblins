@@ -23,62 +23,6 @@ namespace Backend_API.DAL
 
         }
 
-<<<<<<< HEAD
-        public async Task DeleteGame(int SaveId)
-        {
-            List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
-
-            Save Save = _context.Saves.Where(i => i.ID == SaveId).FirstOrDefault();
-
-            _context.Saves.Remove(Save);
-
-
-            foreach (VisitedRooms room in visitedList)
-            {
-                _context.VisitedRooms.Remove(room);
-            }
-
-        }
-
-
-        public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO saveDTO)
-        {
-            //check if save already exits if it does delete it
-
-            Save oldSave = _context.Saves.Where(i => i.ID == saveDTO.ID).FirstOrDefault();
-            if(oldSave != null)
-            {
-                await DeleteGame(oldSave.ID);
-            }
-
-            var newSave = new Save()
-            {
-                RoomID = saveDTO.RoomId,
-                SaveName = saveDTO.SaveName,
-                ID = saveDTO.ID,
-                Username = oldSave.Username
-
-            };
-
-            _context.Saves.Add(newSave);
-
-            await _context.SaveChangesAsync();
-
-            foreach (uint r in saveDTO.VisitedRooms)
-            {
-                var Visitedroom = new VisitedRooms()
-                {
-                    VistedRoomId = r,
-                    SaveId = newSave.ID
-                };
-
-                _context.VisitedRooms.Add(Visitedroom);
-
-                await _context.SaveChangesAsync();
-            }
-
-            return saveDTO;
-=======
         #region Nye DAL funktioner til udvidet
 
 
@@ -390,36 +334,11 @@ namespace Backend_API.DAL
             //}
 
             //return saveDTO;
->>>>>>> FrontEnd
 
         }
 
 
         public async Task<ActionResult<SaveDTO>> GetSaveByID(int SaveId)
-<<<<<<< HEAD
-        { 
-            Save save = await _context.Saves.FindAsync(SaveId);
-
-           
-
-            List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
-
-            SaveDTO newSave = new SaveDTO()
-            {
-                SaveName = save.SaveName,
-                ID = save.ID,
-                RoomId = save.RoomID,
-                VisitedRooms = new List<uint>(),
-                Username = save.Username,
-            };
-
-            foreach (VisitedRooms r in visitedList)
-            {
-                newSave.VisitedRooms.Add(r.VistedRoomId);
-            }
-
-            return newSave;
-=======
         {
             Save save = await _context.Saves.FindAsync(SaveId);
 
@@ -489,7 +408,6 @@ namespace Backend_API.DAL
             //}
 
             //return newSave;
->>>>>>> FrontEnd
 
 
         }
@@ -497,10 +415,7 @@ namespace Backend_API.DAL
         public async Task<ActionResult<List<Save>>> GetAllSaves()
         {
             
-<<<<<<< HEAD
-=======
 
->>>>>>> FrontEnd
             var rooms = await _context.Saves.ToListAsync();
 
             return rooms;

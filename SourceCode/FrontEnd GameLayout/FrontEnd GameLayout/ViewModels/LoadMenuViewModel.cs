@@ -119,16 +119,12 @@ namespace FrontEnd_GameLayout.ViewModels
 
         bool CanExecuteLoadCommand()
         {
-<<<<<<< HEAD
-            return true;
-=======
             return SelectedSave != null;
         }
 
         void LoadCommand()
         {
             LoadGame.RaiseCanExecuteChanged();
->>>>>>> FrontEnd
         }
 
         #endregion

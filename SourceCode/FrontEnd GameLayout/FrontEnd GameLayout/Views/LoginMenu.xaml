@@ -43,17 +43,10 @@
                    TextAlignment="Center" VerticalAlignment="Center" Style="{StaticResource textblockStyle}" Grid.ColumnSpan="2" />
 
         <TextBox Name="InputUsername" Grid.Row="3" Grid.Column="1" FontSize="20"
-<<<<<<< HEAD
-                 Text="{Binding Username}" Grid.ColumnSpan="2"/>
-
-        <TextBox Name="InputPassword" Grid.Row="6" Grid.Column="1" FontSize="20" 
-                 Text="{Binding Password}" Grid.ColumnSpan="2"/>
-=======
                  Text="{Binding Username}" Grid.ColumnSpan="2" Style="{StaticResource textBoxStyle}"/>
 
         <TextBox Name="InputPassword" Grid.Row="6" Grid.Column="1" FontSize="20" 
                  Text="{Binding Password}" Grid.ColumnSpan="2" Style="{StaticResource textBoxStyle}"/>
->>>>>>> FrontEnd
         <TextBlock Name="Errormessage" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" 
                    Style="{StaticResource textblockStyle}" Text="{Binding ErrorText}"/> 
         <Button Grid.Column="1" Grid.Row="8" Style="{StaticResource buttonStyle}"
