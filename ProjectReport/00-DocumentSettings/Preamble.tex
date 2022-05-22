@@ -13,7 +13,6 @@
   \usepackage{pgf}
   \usepackage{tikz, tikz-uml}
   \usepackage[
-    backend=biber,
     style=numeric,
     urldate=long
     ]{biblatex}
@@ -56,7 +55,7 @@
 
   % Remove Section numbering
   \makeatletter
-  \renewcommand{\@seccntformat}[1]{}
+    \renewcommand{\@seccntformat}[1]{}
   \makeatother
 
   \renewcommand{\footrulewidth}{\numberGOLD pt}
@@ -65,7 +64,7 @@
 
 % Costume commands
 \definecolor{light-gray}{gray}{0.50}
-\newcommand{\ansvar}[1]{\footnotesize\vspace{-0.4 cm}{\textbf{\textcolor{light-gray}{Ansvarlig: #1\\}}}\normalsize\\}
+\newcommand{\ansvar}[1]{\footnotesize\vspace{-0.3 cm}{\textbf{\textcolor{light-gray}{Ansvarlig: #1\\}}}\normalsize\\}
 
 \newcommand{\scale}[2]
 {
