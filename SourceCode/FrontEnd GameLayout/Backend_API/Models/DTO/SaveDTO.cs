@@ -4,9 +4,9 @@
     {
         public SaveDTO()
         {
-            itemsID = new List<int>();
-            enemyID = new List<int>();
-            PuzzleID = new List<int>();
+            Inventory = new List<uint>();
+            SlainEnemies = new List<uint>();
+            PuzzleID = new List<uint>();
             VisitedRooms = new List<uint>();
         }
 
@@ -20,21 +20,21 @@
 
         public string SaveName { get; set; }
 
-        public long? Health { get; set; }
+        public uint? Health { get; set; }
 
-        public int? Armour_ID { get; set; }
+        public int? ShieldId { get; set; }
 
-        public int? Weapon_ID { get; set; }
+        public int? WeaponId { get; set; }
 
 
         //Inventory
-        public List<int>? itemsID { get; set; }
+        public List<uint>? SlainEnemies { get; set; }
 
         //Enemies
-        public List<int>? enemyID { get; set; }
+        public List<uint>? Inventory { get; set; }
 
         //Puzzles
-        public List<int>? PuzzleID { get; set; }
+        public List<uint>? PuzzleID { get; set; }
 
         public List<uint>? VisitedRooms { get; set; }
     }

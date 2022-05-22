@@ -141,8 +141,8 @@ namespace Backend_API.DAL
 
             save.RoomID = game.RoomID;
             save.Health = game.Health;
-            save.Armour_ID = game.Armour_ID;
-            save.Weapon_ID = game.Weapon_ID;
+            save.Armour_ID = game.ShieldId;
+            save.Weapon_ID = game.WeaponId;
             save.Username = game.Username;
             save.SaveName = game.SaveName;
 
@@ -151,17 +151,16 @@ namespace Backend_API.DAL
 
             //user.Saves.Add(save);
 
-            foreach (var i in game.itemsID)
+            foreach (var i in game.Inventory)
             {
                 var item = new Inventory_Items();
                 item.SaveID = save.ID;
                 item.ItemID = i;
                 _context.Add(item);
-                //save.Save_Inventory_Items.Add(item);
                 _context.SaveChanges();
             }
 
-            foreach (var i in game.enemyID)
+            foreach (var i in game.SlainEnemies)
             {
                 var enemy = new Enemies_killed();
                 enemy.SaveID = save.ID;
@@ -212,8 +211,7 @@ namespace Backend_API.DAL
 
         public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO game)
         {
-            //check if save already exits if it does delete it
-
+           
             Save oldSave = _context.Saves.Where(i => i.ID == game.ID).FirstOrDefault();
 
             var inv = _context.Items
@@ -263,31 +261,29 @@ namespace Backend_API.DAL
             oldSave.ID = game.ID;
             oldSave.Username = oldSave.Username;
             oldSave.Health = game.Health;
-            oldSave.Armour_ID = game.Armour_ID;
-            oldSave.Weapon_ID = game.Weapon_ID;
+            oldSave.Armour_ID = game.ShieldId;
+            oldSave.Weapon_ID = game.WeaponId;
 
             ////_context.Saves.Add(save);
             await _context.SaveChangesAsync();
 
             //user.Saves.Add(save);
 
-            foreach (var i in game.itemsID)
+            foreach (var i in game.Inventory)
             {
                 var item = new Inventory_Items();
                 item.SaveID = oldSave.ID;
                 item.ItemID = i;
                 _context.Items.Add(item);
-                //save.Save_Inventory_Items.Add(item);
                 await _context.SaveChangesAsync();
             }
 
-            foreach (var i in game.enemyID)
+            foreach (var i in game.SlainEnemies)
             {
                 var enemy = new Enemies_killed();
                 enemy.SaveID = oldSave.ID;
                 enemy.EnemyID = i;
                 _context.Enemies.Add(enemy);
-                // save.Save_Enemies_killed.Add(enemy);
                 await _context.SaveChangesAsync();
             }
 
@@ -298,7 +294,6 @@ namespace Backend_API.DAL
                 newpuzzle.Save_ID = oldSave.ID;
                 newpuzzle.Puzzles_ID = i;
                 _context.Puzzles.Add(newpuzzle);
-                // save.Save_Puzzles.Add(puzzle);
                 await _context.SaveChangesAsync();
             }
 
@@ -308,7 +303,6 @@ namespace Backend_API.DAL
                 newroom.SaveId = oldSave.ID;
                 newroom.VistedRoomId = r;
                 _context.VisitedRooms.Add(newroom);
-                // save.Save_Puzzles.Add(puzzle);
                 await _context.SaveChangesAsync();
             }
 
@@ -362,8 +356,8 @@ namespace Backend_API.DAL
             ToReturn.RoomID = save.RoomID;
             ToReturn.SaveName = save.SaveName;
             ToReturn.Health = save.Health;
-            ToReturn.Weapon_ID = save.Weapon_ID;
-            ToReturn.Armour_ID = save.Armour_ID;
+            ToReturn.WeaponId = save.Weapon_ID;
+            ToReturn.ShieldId = save.Armour_ID;
             ToReturn.ID = save.ID;
 
             var inv = _context.Items.Where(s => s.SaveID == save.ID).ToList();
@@ -378,7 +372,7 @@ namespace Backend_API.DAL
 
             foreach (var i in inv)
             {
-                ToReturn.itemsID.Add(i.ItemID);
+                ToReturn.Inventory.Add(i.ItemID);
             }
 
             foreach (var p in puzzle)
@@ -388,7 +382,7 @@ namespace Backend_API.DAL
 
             foreach (var e in enemies)
             {
-                ToReturn.enemyID.Add(e.EnemyID);
+                ToReturn.SlainEnemies.Add(e.EnemyID);
             }
 
             return ToReturn;

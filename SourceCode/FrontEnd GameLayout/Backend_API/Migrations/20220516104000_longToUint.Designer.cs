@@ -4,6 +4,7 @@ using Backend_API.db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_API.Migrations
 {
     [DbContext(typeof(DaG_db))]
-    partial class DaG_dbModelSnapshot : ModelSnapshot
+    [Migration("20220516104000_longToUint")]
+    partial class longToUint
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,8 +29,8 @@ namespace Backend_API.Migrations
                     b.Property<int>("SaveID")
                         .HasColumnType("int");
 
-                    b.Property<long>("EnemyID")
-                        .HasColumnType("bigint");
+                    b.Property<int>("EnemyID")
+                        .HasColumnType("int");
 
                     b.HasKey("SaveID", "EnemyID");
 
@@ -40,8 +42,8 @@ namespace Backend_API.Migrations
                     b.Property<int>("SaveID")
                         .HasColumnType("int");
 
-                    b.Property<long>("ItemID")
-                        .HasColumnType("bigint");
+                    b.Property<int>("ItemID")
+                        .HasColumnType("int");
 
                     b.HasKey("SaveID", "ItemID");
 
@@ -50,13 +52,15 @@ namespace Backend_API.Migrations
 
             modelBuilder.Entity("Backend_API.Models.Puzzles", b =>
                 {
+                    b.Property<int>("Puzzles_ID")
+                        .HasColumnType("int");
+
                     b.Property<int>("Save_ID")
                         .HasColumnType("int");
 
-                    b.Property<long>("Puzzles_ID")
-                        .HasColumnType("bigint");
+                    b.HasKey("Puzzles_ID", "Save_ID");
 
-                    b.HasKey("Save_ID", "Puzzles_ID");
+                    b.HasIndex("Save_ID");
 
                     b.ToTable("Puzzles");
                 });
@@ -81,97 +85,97 @@ namespace Backend_API.Migrations
                         new
                         {
                             RoomDescriptionID = 1,
-                            Description = "1: The king has died of a magical curse caused by mysterious powers and a dooming presence is in store for the kingdom of Valirea. The threats of raids and magic power from foreign kingdoms are present and will end all of what you love and cherish. A strange oracle has foreseen that all this can be stopped if the Sword of Destiny is found and kept by the kingdom. The Sword of destiny is enchanted with holy powers and can protect the kingdom from evil. But to retrieve The Sword of Destiny, a mighty and brave warrior must face a trial in the lair of doom. It has been told that many have failed and perished in a attempt to retrieve the sword. You see no other choice and volunteer to save the kingdom of Valirea. You have entered the dark lair to retrieve the Sword of Destiny. The sheer cold and silence gives you discomforting feeling. You ask yourself, Is this really a good idea?. To move to the next room, use the arrow - keys or the move - buttons on the screen."
+                            Description = "DB says: This is room 1"
                         },
                         new
                         {
                             RoomDescriptionID = 2,
-                            Description = "2. You hear a strange rumble. What is happening? The opening behind you begins to collapse. You sprint to avoid getting smashed by the falling rocks. There's no escape now! You stumble upon a rusty sword on the ground.Might be useful. Use the interact button to pick up found items. Found items can be located and equipped in the inventory. If you wish to view your character's stats, click the character-option.2"
+                            Description = "DB says: This is room 2"
                         },
                         new
                         {
                             RoomDescriptionID = 3,
-                            Description = "3. That was a strange encounter, but the naked gnoblin is no more. You've made it through to a room with lit torches on the walls. The lit torches reveals blood soaked walls and the thought of you becoming the next victim hits your thoughts.You stumble on a dusty shield in the corner of the room.Might be useful after that encounter."
+                            Description = "DB says: This is room 3"
                         },
                         new
                         {
                             RoomDescriptionID = 4,
-                            Description = "4. The door revealed a tunnel that led to a poorly lit room. It stinks of rotten flesh and you want to move further into the lair. Which way do you want to go?"
+                            Description = "DB says: This is room 4"
                         },
                         new
                         {
                             RoomDescriptionID = 5,
-                            Description = "5. This room seems empty and dark. There are writings on the wall and a little door for what you assume is for a dwarf-like creature. You check it out and conclude you can squeeze yourself through the door."
+                            Description = "DB says: This is room 5"
                         },
                         new
                         {
                             RoomDescriptionID = 6,
-                            Description = "6. The whelps corpse has a weird smell to it. The room leads to another door. What is behind it?"
+                            Description = "DB says: This is room 6"
                         },
                         new
                         {
                             RoomDescriptionID = 7,
-                            Description = "7. What is this? It looks like a cellar that hasn't been used for quite a while. A corpse is present behind the bars.The corpse has been there for a long time and has rotten down to mere bones.You stumble upon a key and a shield in the hands of the poor creature.Might be useful later."
+                            Description = "DB says: This is room 7"
                         },
                         new
                         {
                             RoomDescriptionID = 8,
-                            Description = "8. This badly-lit corridor leads to a rusty door. What's behind it?"
+                            Description = "DB says: This is room 8"
                         },
                         new
                         {
                             RoomDescriptionID = 9,
-                            Description = "9. The room is empty, but leads to another door."
+                            Description = "DB says: This is room 9"
                         },
                         new
                         {
                             RoomDescriptionID = 10,
-                            Description = "10. It seems you've stumpled upon a dining room. Skeletons are still seated at the table. What the hell happened here? You gaze upon the table and see a key. Might be useful later."
+                            Description = "DB says: This is room 10"
                         },
                         new
                         {
                             RoomDescriptionID = 11,
-                            Description = "11. Wait, a well? A rope is attached to it so i can climb down. A door is also present. Which way will you go? Either option seems dangerous. "
+                            Description = "DB says: This is room 11"
                         },
                         new
                         {
                             RoomDescriptionID = 12,
-                            Description = "12. The room is lit by a mysterious item in the middle. This seems important for your journey."
+                            Description = "DB says: This is room 12"
                         },
                         new
                         {
                             RoomDescriptionID = 13,
-                            Description = "13. The dead naked Gnoblin looks horrendous. That's a sight you don't want to see again."
+                            Description = "DB says: This is room 13"
                         },
                         new
                         {
                             RoomDescriptionID = 14,
-                            Description = "14. Ew. The room is filled by a stench of rotten flesh. A dead soldier lies in the corner with a battleaxe in hand. It seems well-crafted."
+                            Description = "DB says: This is room 14"
                         },
                         new
                         {
                             RoomDescriptionID = 15,
-                            Description = "15. The door locks as you enter the room. Something mysterious is happening."
+                            Description = "DB says: This is room 15"
                         },
                         new
                         {
                             RoomDescriptionID = 16,
-                            Description = "16. The corridor is split between two ways. Which way do you take?"
+                            Description = "DB says: This is room 16"
                         },
                         new
                         {
                             RoomDescriptionID = 17,
-                            Description = "17. The brute-gnoblin put up a good fight, but it is gone like the others. The room you entered is lit room with torches."
+                            Description = "DB says: This is room 17"
                         },
                         new
                         {
                             RoomDescriptionID = 18,
-                            Description = "18. A door is present and you need a key. It might be somewhere else in the dungeon. You can sense an evil presence behind the door."
+                            Description = "DB says: This is room 18"
                         },
                         new
                         {
                             RoomDescriptionID = 19,
-                            Description = "19. The Gnoblin king has been slayed. I can now retrieve the Sword of Destiny."
+                            Description = "DB says: This is room 19"
                         },
                         new
                         {
@@ -221,7 +225,6 @@ namespace Backend_API.Migrations
                         new
                         {
                             ID = 2,
-                            Health = 10L,
                             RoomID = 0,
                             SaveName = "NewGame2",
                             Username = "gamer1"
@@ -229,7 +232,6 @@ namespace Backend_API.Migrations
                         new
                         {
                             ID = 1,
-                            Health = 10L,
                             RoomID = 0,
                             SaveName = "NewGame1",
                             Username = "gamer1"
@@ -237,7 +239,6 @@ namespace Backend_API.Migrations
                         new
                         {
                             ID = 3,
-                            Health = 10L,
                             RoomID = 0,
                             SaveName = "NewGame3",
                             Username = "gamer1"
@@ -245,7 +246,6 @@ namespace Backend_API.Migrations
                         new
                         {
                             ID = 4,
-                            Health = 10L,
                             RoomID = 0,
                             SaveName = "NewGame4",
                             Username = "gamer1"
@@ -253,7 +253,6 @@ namespace Backend_API.Migrations
                         new
                         {
                             ID = 5,
-                            Health = 10L,
                             RoomID = 0,
                             SaveName = "NewGame5",
                             Username = "gamer1"
@@ -282,7 +281,7 @@ namespace Backend_API.Migrations
                         new
                         {
                             Username = "Gamer1",
-                            Password = "$2a$11$eBR2jvBORTwPn5i1fPnGn.8Z7zI4EwpPCbDul39D9ajjCthy/Rd32"
+                            Password = "$2a$11$Dp/QoGReQdn66b8elwq9WufXZqTYpled4dReD9OIg0e7YnVRp33Wq"
                         });
                 });
 

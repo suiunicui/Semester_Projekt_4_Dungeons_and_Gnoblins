@@ -32,13 +32,14 @@ namespace Backend_API.db
 
             //Puzzles
             modelBuilder.Entity<Puzzles>()
-                            .HasKey(i => new { i.Puzzles_ID, i.Save_ID });
+                .HasKey(i => new { i.Save_ID, i.Puzzles_ID, });
             //Inventory
             modelBuilder.Entity<Inventory_Items>()
-                            .HasKey(k => new { k.SaveID, k.ItemID });
+                 .HasKey(k => new { k.SaveID, k.ItemID });
             //Enemies
             modelBuilder.Entity<Enemies_killed>()
-                            .HasKey(k => new { k.SaveID, k.EnemyID });
+                 .HasKey(k => new { k.SaveID, k.EnemyID });
+
 
             // one to many relationship save vistedRooms
             modelBuilder.Entity<VisitedRooms>()
@@ -74,11 +75,11 @@ namespace Backend_API.db
 
             modelBuilder.Entity<Save>()
                 .HasData(
-                new Save { RoomID = 0, ID = 2, SaveName = "NewGame2", Username = "gamer1" },
-                new Save { RoomID = 0, ID = 1, SaveName = "NewGame1", Username = "gamer1" },
-                new Save { RoomID = 0, ID = 3, SaveName = "NewGame3", Username = "gamer1" },
-                new Save { RoomID = 0, ID = 4, SaveName = "NewGame4", Username = "gamer1" },
-                new Save { RoomID = 0, ID = 5, SaveName = "NewGame5", Username = "gamer1" }
+                new Save { RoomID = 0, ID = 2, SaveName = "NewGame2", Username = "gamer1", Health = 10 },
+                new Save { RoomID = 0, ID = 1, SaveName = "NewGame1", Username = "gamer1", Health = 10 },
+                new Save { RoomID = 0, ID = 3, SaveName = "NewGame3", Username = "gamer1", Health = 10 },
+                new Save { RoomID = 0, ID = 4, SaveName = "NewGame4", Username = "gamer1", Health = 10 },
+                new Save { RoomID = 0, ID = 5, SaveName = "NewGame5", Username = "gamer1", Health = 10 }
                 );
 
             modelBuilder.Entity<User>()
@@ -88,10 +89,11 @@ namespace Backend_API.db
 
             modelBuilder.Entity<RoomDescription>()
                 .HasData(
-                new RoomDescription { RoomDescriptionID = 1, Description = 
-                "1: The king has died of a magical curse caused by mysterious powers and a dooming presence is in store for the kingdom of Valirea. The threats of raids and magic power from foreign kingdoms are present and will end all of what you love and cherish. A strange oracle has foreseen that all this can be stopped if the Sword of Destiny is found and kept by the kingdom. The Sword of destiny is enchanted with holy powers and can protect the kingdom from evil. But to retrieve The Sword of Destiny, a mighty and brave warrior must face a trial in the lair of doom. It has been told that many have failed and perished in a attempt to retrieve the sword. You see no other choice and volunteer to save the kingdom of Valirea. You have entered the dark lair to retrieve the Sword of Destiny. The sheer cold and silence gives you discomforting feeling. You ask yourself, Is this really a good idea?. To move to the next room, use the arrow - keys or the move - buttons on the screen." },
-                new RoomDescription { RoomDescriptionID = 2, Description = "2. You hear a strange rumble. What is happening? The opening behind you begins to collapse. You sprint to avoid getting smashed by the falling rocks. There's no escape now! You stumble upon a rusty sword on the ground.Might be useful. Use the interact button to pick up found items. Found items can be located and equipped in the inventory. If you wish to view your character's stats, click the character-option.2" },
-                new RoomDescription { RoomDescriptionID = 3, Description = "3. That was a strange encounter, but the naked gnoblin is no more. You've made it through to a room with lit torches on the walls. The lit torches reveals blood soaked walls and the thought of you becoming the next victim hits your thoughts.You stumble on a dusty shield in the corner of the room.Might be useful after that encounter." },
+                new RoomDescription { RoomDescriptionID = 1, Description =
+                "1. The king has died of a magical curse caused by mysterious powers and a dooming presence is in store for the kingdom of Valirea. The threats of raids and magic power from foreign kingdoms are present and will end all of what you love and cherish. A strange oracle has foreseen that all this can be stopped if the Sword of Destiny is found and kept by the kingdom. The Sword of destiny is enchanted with holy powers and can protect the kingdom from evil. But to retrieve The Sword of Destiny, a mighty and brave warrior must face a trial in the lair of doom. It has been told that many have failed and perished in a attempt to retrieve the sword. You see no other choice and volunteer to save the kingdom of Valirea. You have entered the dark lair to retrieve the Sword of Destiny. The sheer cold and silence gives you discomforting feeling. You ask yourself, Is this really a good idea? \n\n\n To move to the next room, use the arrow keys or the move buttons on the screen."
+                },
+                new RoomDescription { RoomDescriptionID = 2, Description = "2. You hear a strange rumble. What is happening? The opening behind you begins to collapse. You sprint to avoid getting smashed by the falling rocks. There's no escape now! You stumble upon a rusty sword on the ground. Might be useful. \n\nUse the interact button to pick up found items. \nFound items can be located and equipped in the inventory.\nIf you wish to view your character's stats, click the character-option." },
+                new RoomDescription { RoomDescriptionID = 3, Description = "3. That was a strange encounter, but the naked gnoblin is no more. You've made it through to a room with lit torches on the walls. The lit torches reveals blood soaked walls and the thought of you becoming the next victim hits your thoughts.You stumble on a dusty shield in the corner of the room. Might be useful after that encounter." },
                 new RoomDescription { RoomDescriptionID = 4, Description = "4. The door revealed a tunnel that led to a poorly lit room. It stinks of rotten flesh and you want to move further into the lair. Which way do you want to go?" },
                 new RoomDescription { RoomDescriptionID = 5, Description = "5. This room seems empty and dark. There are writings on the wall and a little door for what you assume is for a dwarf-like creature. You check it out and conclude you can squeeze yourself through the door." },
                 new RoomDescription { RoomDescriptionID = 6, Description = "6. The whelps corpse has a weird smell to it. The room leads to another door. What is behind it?" },

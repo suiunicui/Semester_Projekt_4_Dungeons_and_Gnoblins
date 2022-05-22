@@ -12,6 +12,8 @@ namespace GameEngine.Implementations
         public uint AC { get; set; }
         public Shield(uint armorClass)
         {
+            ++ID;
+            Id = ID;
             AC = armorClass;
             ItemType = "Shield";
         }
