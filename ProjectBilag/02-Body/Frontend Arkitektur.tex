@@ -1,3 +1,29 @@
 \subsection{Frontend Arkitektur}
 
-\
+Frontend applikationen vil have til formål, at håndtere brugerinput og output. Dvs. at der i Frontenden vises det data fra gamelogic, som brugeren skal have, og at det præsenteres på en overskuelig og brugervenlig måde. Dette resulterer i at brugeren kan forstå og kan finde ud af at bruge spillet på den tiltænkte måde.
+Derudover skal Frontenden tage hånd om bruger input, og sørge for at brugeren giver korrekt input og at der tages hånd om eventuelt forkert input.
+
+\subsubsection{Pseudo Frontend Arkitektur}
+(Hovedrapport stuff)
+For at give overblik over, hvordan kommunikationen mellem frontend, backend og gamecontroller kommer til at foregå, er der lavet et pseudo sekvensdiagram for UserStories:
+- Login
+- Register
+- Save Game
+- Load Game
+(/Hovedrapport stuff)
+
+Der er ikke lavet sekvensdiagrammer for alle af projektets userstories, da mange af disse fungerer på samme måde og derfor ikke bidrager med noget nyt ift. dokumentationen.
+Nedenfor ses pseudo sekvensdiagrammer for de fire userstories:
+- Login
+- Register
+- Save Game
+- Load Game
+
+\begin{figure}[h]
+\centering
+\includegraphics[width = \textwidth]{02-Body/Images/RoomMockup.PNG}
+\caption{Et mockup af det primære spil vindue. Tekst i venstre side af skærmen giver en beskrivelse af det rum spilleren er i, samt en liste af elementer i rommet som spilleren kan interagere med. Øverst til højre vises et billede af banen. Spilleren interagerer med spillet via knapper i højre hjørne. Knapperne "Go {North/West/South/East}" fører spilleren ind i et andet rum mens de resterende knapper (markeret "Button") bruges til andre funktionaliterer i spillet.}
+\label{fig:Design-FE-mockup-room}
+\end{figure}
+
+
