@@ -2,8 +2,11 @@
 
 Det endelige design af vinderne følger tæte det oprindelige mockup design. Der benyttes MVVM (Model View View Model) designpatterns  Det har undervejs i implementeringen vist sig et behov for væsentlig flere menuer end først antaget, og disse er implementeret efter samme ovreordnede design som resten af systemet.\\
 Det endelige design har følgende views: Login, Register, Main, Settings, Ingame, Load, Save, Inventory, Character, Victory, Defeat, Room og Combat.\\
-Til at skifte view uden at oprætte et nyt vindue bruges et mediator design, hvor hver knap som skal skifte view notifier mediatoren. Dette virker fordi alle views er oprættet som WPF user controlls, og ikke views, hvilket tillader at et main view kan skifte mellem viewmodels.\\
-De følgende afsnit viser et udvalg af view, samt en beskrivelse af hvordan de afviger fra det oprindelige design og en beskrivelse af interesante programerings-tekniske beslutninger.
+Til at skifte view uden at oprætte et nyt vindue bruges et mediator design, hvor hver knap som skal skifte view notifier mediatoren. Dette virker fordi alle views er oprættet som WPF user controlls, og ikke views, hvilket tillader at et main view kan skifte mellem viewmodels. \footcite{https://www.technical-recipes.com/2018/navigating-between-views-in-wpf-mvvm/}\\
+
+\noindent Der er implementeret at nogle af spillets funktioner kan tilgås via key-bindings, hvilket har nødsaget et brud på MVVM designet. Når mediatoren skifter view bilver fokus ikke sat til det nye view, og keybinding virker derfor ikke. For at løse dette sættes top-elementet på den nye side som fokus. Dette kan dog ikke gøres i MVVM, så her er det pattern brudt, da det er nødvændigt at gå ind i code-behind filen for at sætte fokus.
+
+\noindent De følgende afsnit viser et udvalg af view, samt en beskrivelse af hvordan de afviger fra det oprindelige design og en beskrivelse af interesante programerings-tekniske beslutninger.
 
 \subsubsection{Login view}
 De overordnede struktur af login (\autoref{fig:Design-FE-impl-login}) og register menuerne følger meget tæt det oprindelige design. Alle elementer er blevet stiliseret så de matcher det ønskede look. Dette er gjort ved brug af globale resourses og styles i app.xaml filen. Dette gør det nemt at oprætte nye views og ændre udseende af hele spillet. Selve login håndteres af backenden som kaldes af login og register knapperne via command binding.
