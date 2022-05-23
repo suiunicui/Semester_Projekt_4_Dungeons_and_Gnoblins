@@ -1,6 +1,6 @@
 \subsection{Frontend Implementering}
-
-Det endelige design af vinderne følger tæte det oprindelige mockup design. Der benyttes MVVM (Model View View Model) designpatterns  Det har undervejs i implementeringen vist sig et behov for væsentlig flere menuer end først antaget, og disse er implementeret efter samme ovreordnede design som resten af systemet.\\
+\label{sec:Frontend Implementering}
+Det endelige design af vinderne følger tæt det oprindelige mockup design. Der benyttes MVVM (Model View View Model) designpatterns  Det har undervejs i implementeringen vist sig et behov for væsentlig flere menuer end først antaget, og disse er implementeret efter samme ovreordnede design som resten af systemet.\\
 Det endelige design har følgende views: Login, Register, Main, Settings, Ingame, Load, Save, Inventory, Character, Victory, Defeat, Room og Combat.\\
 Til at skifte view uden at oprætte et nyt vindue bruges et mediator design, hvor hver knap som skal skifte view notifier mediatoren. Dette virker fordi alle views er oprættet som WPF user controlls, og ikke views, hvilket tillader at et main view kan skifte mellem viewmodels. \footcite{https://www.technical-recipes.com/2018/navigating-between-views-in-wpf-mvvm/}\\
 

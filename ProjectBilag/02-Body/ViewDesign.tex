@@ -1,27 +1,27 @@
 \subsection{Frontend Design}
 
-I frontenden ønskes det at hele spillet foregår i et vindue. Det er derfor nødvengita at programmet kan skifte mellem forskellige view uden at skulle åbne et nyt vindue. Løsningen til dette beskrives i implementering.
+I frontenden ønskes det at hele spillet foregår i et vindue. Det er derfor nødvendigt at programmet kan skifte mellem forskellige views uden at skulle åbne et nyt vindue, hver gang der skiftes. Løsningen til denne udfordring beskrives nærmere i implementerings afsnittet, nemlig \autoref{sec:Frontend Implementering}.
 Spillet vil bestå af en række af vinduer, som giver spilleren den nødvændige information for at de kan spille spillet (så som at logge ind, gemme og hente spil, samt spille spillet).\\
 Inden arbejdet på Frontend arkitekturen begyndte, er der blevet lavet en teknologiundersøgelse \textbf{(INDSÆT REFERENCE HER)}, om hvilket udviklingsværktøh Frontenden og derigennem spillet skulle udvikles i. Baseret på denne teknologiundersøgelse er der blevet valgt, at spillet vil blive udviklet i et .NET framework. Dette valg er blandt andet truffet da dette framework passer bedre med den opdeling af arbejde der er lavet i projektgruppen, altså opdelingen af Frontend og Backend. For andre grunde, se \textbf{(INDSÆT REFERENCE HER)}, hvor flere fordele og ulemper for både unity og .NET frameworket er sat op.\\
 Her følger en række af mockups\footnote{Lavet i Unity} af nogle af spillets views.
 
 \subsubsection{Room}
 
-Room view (\autoref{fig:Design-FE-mockup-room}) er det primære spil-vindue. Her præsenteres spilleren for en beskrivelse af det rum de er i, samt hvilke elementer i rummet de kan interagere med. Der vises også et kort over banen. Kortet Viser kun de rum spilleren allerede har været i, mens resten holdes skjult.\\
-En række af knapper nederst i højre hjørne giver spilleren mulighed for at interagere med spillet. Fire knapper ("Go {North/West/South/East}") lader spilleren gå fra et rum til et andet. Ikke alle rum har forbingelse til alle sider, så det er f.eks. ikke altid muligt at trykke på "Go North". Kortet og rum beskrivelsen fortæller hvilken vej det er muligt at bevæge sig.\\
-Udover de fire retnings knapper er der et antal andre knapper. Disse bruges til at gemme spillet, gå til menuer, samt interagere med elementerne i rummet. Det specifikke antal og deres funktion er afhængig af den præcise implementering.
+Room view (\autoref{fig:Design-FE-mockup-room}) er det primære spil-vindue. Her præsenteres spilleren for en beskrivelse af det rum de er i, samt hvilke elementer i rummet de kan interagere med. Der vises også et kort over banen. Kortet Viser kun de rum spilleren allerede har været i, mens resten holdes skjult. Når brugeren så besøger et nyt rum, kan dette ses selvom spilleren forlader rummet. Dette lader spilleren udforske og oplåse hele kortet.\\
+En række knapper nederst i højre hjørne på skærmen giver spilleren mulighed for at interagere med spillet. Fire knapper ("Go {North/West/South/East}") lader spilleren gå fra et rum til et andet. Ikke alle rum har forbingelse til alle sider, så det er f.eks. ikke altid muligt at trykke på "Go North". Kortet og rum beskrivelsen fortæller hvilken vej det er muligt at bevæge sig i.\\
+Udover de fire retningsknapper er der et antal andre knapper. Disse bruges til at gemme spillet, gå til menuer, samt interagere med elementerne i rummet. Det specifikke antal og deres funktion er afhængig af den præcise implementering.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/RoomMockup.PNG}
-\caption{Et mockup af det primære spil vindue. Tekst i venstre side af skærmen giver en beskrivelse af det rum spilleren er i, samt en liste af elementer i rommet som spilleren kan interagere med. Øverst til højre vises et billede af banen. Spilleren interagerer med spillet via knapper i højre hjørne. Knapperne "Go {North/West/South/East}" fører spilleren ind i et andet rum mens de resterende knapper (markeret "Button") bruges til andre funktionaliterer i spillet.}
+\caption{Et mockup af det primære spil vindue. Tekst øverst i venstre side af skærmen giver en beskrivelse af det rum spilleren er i, samt en liste af elementer i rummet som spilleren kan interagere med. Øverst til højre vises et billede af banen. Spilleren interagerer med spillet via knapper nederst i højre hjørne. Knapperne "Go {North/West/South/East}" fører spilleren ind i et andet rum, mens de resterende knapper (markeret "Button") bruges til andre funktionaliterer i spillet.}
 \label{fig:Design-FE-mockup-room}
 \end{figure}
 
 \subsubsection{Combat}
 
-Combat vinduet er baseret på room vinduet. Strukturen er den samme: der er et kort øverst til højre, en beskrivelse øverst til venstre og knapper neders til højre. Nederst til venstre er der inform om hvordan kampen går,  i stedet for en liste af elementer i rummet.\\
-Knapperne består af nogle "menu" knapper, som lader dig gå til spil menuer, samt en 'Fight' knap og en 'Flee' knap. 'Fight' knappen lader spilleren kæmpe mod fjenden, mens 'Flee' knappen lader spilleren flygte fra kampen.
+Combat vinduet er baseret på room vinduet. Strukturen er den samme: der er et kort øverst til højre, en beskrivelse øverst til venstre og knapper neders til højre. Nederst til venstre er der information om hvordan kampen går,  i stedet for en liste af elementer i rummet.\\
+Knapperne består af nogle "menu" knapper, som lader dig gå til spil menuer, samt en 'Fight' knap og en 'Flee' knap. 'Fight' knappen lader spilleren kæmpe mod fjenden, mens 'Flee' knappen lader spilleren flygte fra kampen og tilbage til rummet som spilleren kom fra.
 
 
 \begin{figure}[h]
@@ -34,7 +34,7 @@ Knapperne består af nogle "menu" knapper, som lader dig gå til spil menuer, sa
 
 \subsubsection{Login}
 
-Når spillet starter bedes spilleren logge ind på deres profil. Dette sker i login vinduet. Spilleren kan indtaste sit brugernavn og kodeord i de to tekstfelter 'Username' og 'Password'. Knappen login fører dem videre til spillet, hvis det indtastede login er korrekt.\\
+Når spillet startes bedes spilleren prompte at logge ind på deres profil. Dette sker i login vinduet. Spilleren kan indtaste sit brugernavn og kodeord i de to tekstfelter 'Username' og 'Password'. Knappen login fører dem videre til spillet, hvis det indtastede login er korrekt.\\
 Knappen create user fører spilleren til et vindue som ligner login vinduet, og som lader spilleren oprætte en ny bruger.\\
 Exit lukker spillet.
 
