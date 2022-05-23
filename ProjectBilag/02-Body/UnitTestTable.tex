@@ -1,3 +1,25 @@
+\section{Testing}
+\subsection{Modultest Game Engine}
+Denne modultest har til formål at teste Game Engine, for at sikre at Spillet
+funktionaliteter afvilket på korrekt vis men spillet spilles. Der er gjort
+stor brug af Robert C. Martins ``Three Laws of TDD'' \parencite[Side 122]{CleanCode}.
+
+I tilfælde som GameController, Players og andre klasser, som er afhængige af 
+eksempelvis DiceRoller eller andre klasser, er der blevet brugt mocks og
+dependency injections til at dække alle senarier som det ses \autoref{fig:mock}.
+
+Dependencies til DiceRoller har især krævet mocks da denne ellers genererer 
+psudo-random tal hvilket gør det umuligt at test andre komponenter, som er 
+afhængig af specifikke outputs for teste en specifik opførsel.
+
+\newpage 
+
+\subsubsection{GodkendelsesTabel Game Engine}
+\captionof{table}{Her Ses en komplet liste over alle test foretages på
+                  Game Engine komponenter, med kommentar til deres resultater
+                  og en endelig vurdering af test resultaterne.}
+\vspace{-1em}
+\begin{center}
 \begin{longtable}{|l|p{0.25\linewidth}|p{0.25\linewidth}|l|}
   \hline
   \multicolumn{4}{|c|}{\textbf{Game Engine GodkendelsesTabel}} \\ \hline
@@ -132,5 +154,25 @@
   OK
   \\ \hline
 \end{longtable}
+\addtocounter{table}{-1}
+\end{center}
+
+\newpage 
+
+\begin{figure}[h]
+  \centering
+  \caption{Here mocks and dependency injections are made to test 
+  certain dependencies for the player class.}
+  \includegraphics[scale=0.5]{02-Body/Images/Mocks_And_Dependency_Injection.png}
+  \label{fig:mock}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \caption{Demonstration Af hvordan mocks kan bruges til at teste specifikke scenarier}
+  \includegraphics[scale=0.5]{02-Body/Images/UseOfMocks.png}
+  \label{fig:MockUse}
+\end{figure}
 
 
+\newpage
