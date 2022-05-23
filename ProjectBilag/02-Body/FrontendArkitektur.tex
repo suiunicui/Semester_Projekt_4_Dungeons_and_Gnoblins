@@ -29,7 +29,7 @@ Nedenfor ses pseudo sekvensdiagrammer for de fire userstories:\\
 \label{fig:Arkitektur-FrontEnd-Login}
 \end{figure}
 
-\noindent Dernæst ses "Register" (\autoref{fig:Arkitektur-FrontEnd-Register}), som viser forløbet af hvordan en bruger kan registrere sig med en profil i systememt. Der kan ses på (\autoref{fig:Arkitektur-FrontEnd-Login}), at hvis en bruger ikke er oprettet skal man gøre dette først. Derefter skal man vælge et brugernavn og kodeord, hvis brugernavnet er ledigt og alt ellers går godt, kommer man tilbage til "Login" skærmen. ellers får man en fejlbesked på skærmen og bliver bedt om at prøve med et andet brugernavn.\\
+\noindent Dernæst ses "Register" (\autoref{fig:Arkitektur-FrontEnd-Register}), som viser forløbet af hvordan en bruger kan registrere sig med en profil i systememt. Der kan ses på \autoref{fig:Arkitektur-FrontEnd-Login}, at hvis en bruger ikke er oprettet skal man gøre dette først. Derefter skal man vælge et brugernavn og kodeord, hvis brugernavnet er ledigt og alt ellers går godt, kommer man tilbage til "Login" skærmen. ellers får man en fejlbesked på skærmen og bliver bedt om at prøve med et andet brugernavn.\\
 
 \begin{figure}[h]
 \centering
@@ -38,7 +38,7 @@ Nedenfor ses pseudo sekvensdiagrammer for de fire userstories:\\
 \label{fig:Arkitektur-FrontEnd-Register}
 \end{figure}
 
-\noindent På (\autoref{fig:Arkitektur-FrontEnd-Save}) ses "Save Game", som viser forløbet når en bruger gerne vil gemme sit igangværende spil, set fra Frontends perspektiv. Her kan man bide mærke, at når der skiftes skærm, vil den nye skærm få initialiseret sine variabler i sin constructor og derfor er der kun et selv kald hver gang skærmen skiftes.
+\noindent På \autoref{fig:Arkitektur-FrontEnd-Save} ses "Save Game", som viser forløbet når en bruger gerne vil gemme sit igangværende spil, set fra Frontends perspektiv. Her kan man bide mærke i, at når der skiftes skærm, vil den nye skærm få initialiseret sine variabler i sin constructor og derfor er der kun et selv kald hver gang skærmen skiftes.
 Hertil skal der nævnes at hvis brugeren er i "Combat State" er det ikke muligt at gemme spillet og knappen "Save Game" på "In Game Menu" vil ikke kunne ses eller bruges.\\
 
 \begin{figure}[h]
@@ -48,7 +48,7 @@ Hertil skal der nævnes at hvis brugeren er i "Combat State" er det ikke muligt 
 \label{fig:Arkitektur-FrontEnd-Save}
 \end{figure}
 
-\noindent Tilsidst kan der på (\autoref{fig:Arkitektur-FrontEnd-Load}) ses "Load Game", som viser forløbet når en bruger gerne vil hente et tidligere gemt spil fra databasen, set fra Frontends perspektiv. Denne userstory minder på mange måder om "Save Game", men i stedet for at sende et element til databasen, skal der hentes et gemt spil fra databasen, med alle de data der skal bruges for at kunne loade sit spil op præcis som man forlod det. \\
+\noindent Tilsidst kan der på \autoref{fig:Arkitektur-FrontEnd-Load} ses "Load Game", som viser forløbet når en bruger gerne vil hente et tidligere gemt spil fra databasen, set fra Frontends perspektiv. Denne userstory minder på mange måder om "Save Game", men i stedet for at sende et element til databasen, skal der hentes et gemt spil fra databasen, med alle de data der skal bruges for at kunne loade sit spil op præcis som man forlod det. \\
 
 \begin{figure}[h]
 \centering
