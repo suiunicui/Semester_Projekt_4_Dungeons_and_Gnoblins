@@ -47,9 +47,6 @@ builder.Services.AddSwaggerGen(c =>
         Version = "v1",
         Description = "D and G Api",
     });
-    //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    //c.IncludeXmlComments(xmlPath);
 
     OpenApiSecurityScheme securityDefination = new OpenApiSecurityScheme()
     {
