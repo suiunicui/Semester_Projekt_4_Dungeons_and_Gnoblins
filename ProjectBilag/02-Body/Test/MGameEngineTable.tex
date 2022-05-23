@@ -1,9 +1,9 @@
 \subsubsection{GodkendelsesTabel Game Engine}
-Nedestående præsenteres en fuld table for alle classes testet som 
-led i Game Enginen. De vigtigste er GameController, CombatController,
+Nedestående præsenteres en fuld tabel for alle classes testet som 
+led i Game Engine. De vigtigste er GameController, CombatController,
 Player/Room og DiceRoller. Dice Danner ``Core Mechanics'' for spillet.
 
-Interessant nok ses her at GameController fejler sine test grundet er
+Interessant nok ses her at GameController fejler sine test grundet at
 der ikke er skrevet test til mange af GameControllerens ansvars punkter.
 
 \captionof{table}{Her Ses en komplet liste over alle test foretages på
@@ -152,15 +152,14 @@ der ikke er skrevet test til mange af GameControllerens ansvars punkter.
 \newpage 
 
 \subsubsection{Mock testing}
-I nogle tilfælde er det kan det være umuligt er lave troværdige tests, når
+I nogle tilfælde kan det være umuligt er lave troværdige tests, når
 en klasse f.eks. Player er dyb afhængig af DiceRoller klassen. Dette skyldes
 at DiceRoller danner pseudo-random outputs og derfor er test med den ikke 
 altid troværdige.
 
-Her benyttes mock tests og dependency injectiosn til at sikre at DiceRoller 
+Her benyttes mock tests og dependency injections til at sikre at DiceRoller 
 klassen danner de samme outputs hver gang en test køres.
-Derved kan alle senarier for Player klassen testest afhængigt at DiceRoller
-bestemte output. 
+Derved kan alle senarier for Player klassen testes, hvor man kan regne med at DiceRoller giver et bestemt output. 
 
 \begin{figure}[h]
   \centering
@@ -182,10 +181,8 @@ bestemte output.
 \newpage 
 
 \subsubsection{Test Resultater for Game Engine}
-Nedestående vises kort en resultatet for Game Engine test
-når de alle køres vi visuel studio. Som det kan ses så er
-alle testene succesfulde hvilket giver hvis garanti for at
-game engine opføre sig som specificeret i kravspecifikationerne.
+Nedestående vises kort resultatet for Game Engine test, når de alle køres via visuel studio. Som det kan ses så er alle testene succesfulde, hvilket giver hvis garanti for at
+game engine opfører sig som specificeret i kravspecifikationerne og i de implementerede interfaces.
 
 \begin{figure}[h]
   \centering

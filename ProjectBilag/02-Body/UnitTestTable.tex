@@ -1,22 +1,20 @@
 \section{Testing}
-testing er en af grundstenene for et succesful softwaresystemer, da der ellers 
-er lav garanti for, at systemet fungere som ønsket.
-nedstående afsnit dækker testing af dungeons and gnoblins spillet og den går over
-test af de store komponenter, frontend, game engine, backend og databasen. her 
+Testing er en af grundstenene for et succesfuldt softwaresystem, da der ellers 
+er lav garanti for, at systemet fungerer som ønsket.
+Nedenstående afsnit dækker testing af "Dungeons and Gnoblins" spillet og afsnittet dækker  over test af de store komponenter, såsom: frontend, game engine, backend og databasen. her 
 er inkluderet integration- og accepttest af spillet.
 
 \subsection{Modultest Game Engine}
-Dette modultest har til formål at teste Game Engine, for at sikre at Spillet
-funktionaliteter afvilket på korrekt vis men spillet spilles. Der er gjort
+Denne modultest har til formål at teste Game Engine, for at sikre at spillets
+funktionaliteter bliver afvilket på korrektvis, mens spillet spilles. Der er gjort
 stor brug af Robert C. Martins ``Three Laws of TDD'' \parencite[Side 122]{CleanCode}.
 
 I tilfælde som GameController, Players og andre klasser, som er afhængige af 
 eksempelvis DiceRoller eller andre klasser, er der blevet brugt mocks og
-dependency injections til at dække alle senarier som det ses \autoref{fig:mock}.
+dependency injections til at dække alle senarier som det ses på \autoref{fig:mock}.
 
-Dependencies til DiceRoller har især krævet mocks da denne ellers genererer 
-psudo-random tal hvilket gør det umuligt at test andre komponenter, som er 
-afhængig af specifikke outputs for teste en specifik opførsel.
+Dependencies til DiceRoller har især krævet mocks, da denne ellers genererer 
+psudo-random tal, hvilket gør det nærmest umuligt at teste andre komponenter som er afhængig af Diceroller, på en måde som er både dækkende og som kan gentages.
 
 \newpage 
 
