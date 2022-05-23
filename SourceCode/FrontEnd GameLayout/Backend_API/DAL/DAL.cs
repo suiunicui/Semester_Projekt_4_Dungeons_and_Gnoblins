@@ -249,13 +249,6 @@ namespace Backend_API.DAL
                 _context.Enemies.Remove(e);
             }
 
-            //if(oldSave != null)
-            //{
-            //    await DeleteSingleSave(oldSave.ID);
-            //}
-
-            //var user = _context.Users.First(x => x.Username == game.Username);
-
             oldSave.RoomID = game.RoomID;
             oldSave.SaveName = game.SaveName;
             oldSave.ID = game.ID;
@@ -307,33 +300,7 @@ namespace Backend_API.DAL
             }
 
             return game;
-            //var newSave = new Save()
-            //{
-            //    RoomID = saveDTO.RoomId,
-            //    SaveName = saveDTO.SaveName,
-            //    ID = saveDTO.ID,
-            //    Username = oldSave.Username
-
-            //};
-
-            //_context.Saves.Add(newSave);
-
-            //await _context.SaveChangesAsync();
-
-            //foreach (uint r in saveDTO.VisitedRooms)
-            //{
-            //    var Visitedroom = new VisitedRooms()
-            //    {
-            //        VistedRoomId = r,
-            //        SaveId = newSave.ID
-            //    };
-
-            //    _context.VisitedRooms.Add(Visitedroom);
-
-            //    await _context.SaveChangesAsync();
-            //}
-
-            //return saveDTO;
+       
 
         }
 
@@ -342,13 +309,6 @@ namespace Backend_API.DAL
         {
             Save save = await _context.Saves.FindAsync(SaveId);
 
-            ////Finde brugeres saves
-            //var userSaves = _context.Saves
-            //    .Where(x => x.Username == username).ToList();
-
-            ////Find korrekt save med navn
-            //var save = userSaves
-            //    .First(x => (x.SaveName == savename) && (x.Username == username));
 
             SaveDTO ToReturn = new SaveDTO();
 
