@@ -1,26 +1,11 @@
-\section{Testing}
-testing er en af grundstenene for et succesful softwaresystemer, da der ellers 
-er lav garanti for, at systemet fungere som ønsket.
-nedstående afsnit dækker testing af dungeons and gnoblins spillet og den går over
-test af de store komponenter, frontend, game engine, backend og databasen. her 
-er inkluderet integration- og accepttest af spillet.
-
-\subsection{Modultest Game Engine}
-Dette modultest har til formål at teste Game Engine, for at sikre at Spillet
-funktionaliteter afvilket på korrekt vis men spillet spilles. Der er gjort
-stor brug af Robert C. Martins ``Three Laws of TDD'' \parencite[Side 122]{CleanCode}.
-
-I tilfælde som GameController, Players og andre klasser, som er afhængige af 
-eksempelvis DiceRoller eller andre klasser, er der blevet brugt mocks og
-dependency injections til at dække alle senarier som det ses \autoref{fig:mock}.
-
-Dependencies til DiceRoller har især krævet mocks da denne ellers genererer 
-psudo-random tal hvilket gør det umuligt at test andre komponenter, som er 
-afhængig af specifikke outputs for teste en specifik opførsel.
-
-\newpage 
-
 \subsubsection{GodkendelsesTabel Game Engine}
+Nedestående præsenteres en fuld table for alle classes testet som 
+led i Game Enginen. De vigtigste er GameController, CombatController,
+Player/Room og DiceRoller. Dice Danner ``Core Mechanics'' for spillet.
+
+Interessant nok ses her at GameController fejler sine test grundet er
+der ikke er skrevet test til mange af GameControllerens ansvars punkter.
+
 \captionof{table}{Her Ses en komplet liste over alle test foretages på
                   Game Engine komponenter, med kommentar til deres resultater
                   og en endelig vurdering af test resultaterne.}
@@ -166,7 +151,16 @@ afhængig af specifikke outputs for teste en specifik opførsel.
 
 \newpage 
 
-\subsubsection{}
+\subsubsection{Mock testing}
+I nogle tilfælde er det kan det være umuligt er lave troværdige tests, når
+en klasse f.eks. Player er dyb afhængig af DiceRoller klassen. Dette skyldes
+at DiceRoller danner pseudo-random outputs og derfor er test med den ikke 
+altid troværdige.
+
+Her benyttes mock tests og dependency injectiosn til at sikre at DiceRoller 
+klassen danner de samme outputs hver gang en test køres.
+Derved kan alle senarier for Player klassen testest afhængigt at DiceRoller
+bestemte output. 
 
 \begin{figure}[h]
   \centering
@@ -181,9 +175,17 @@ afhængig af specifikke outputs for teste en specifik opførsel.
            den ønskede værdi for situationen, der er under test.
            Alle test tildeles informative navne, for at sikre læsbarhed i forhold 
            til testenes formål.}
-  \includegraphics[scale=0.5]{02-body/Images/useofmocks.png}
+  \includegraphics[scale=0.45]{02-body/Images/useofmocks.png}
   \label{fig:mockuse}
 \end{figure}
+
+\newpage 
+
+\subsubsection{Test Resultater for Game Engine}
+Nedestående vises kort en resultatet for Game Engine test
+når de alle køres vi visuel studio. Som det kan ses så er
+alle testene succesfulde hvilket giver hvis garanti for at
+game engine opføre sig som specificeret i kravspecifikationerne.
 
 \begin{figure}[h]
   \centering
@@ -191,10 +193,9 @@ afhængig af specifikke outputs for teste en specifik opførsel.
           om at Game Engine udfører dens funktionalitet, som det er beskrevet i kravene.
           Dette siges da alle testene er skrevet på baggrund af kravene som black-box tests
           og ikke som white-box test efter implementeringen.}
-  \includegraphics[scale=0.5]{02-body/Images/Test Results.png}
+  \includegraphics[scale=0.4]{02-body/Images/Test Results.png}
   \label{fig:TestResultsGameEngine}
 \end{figure}
 
 
 
-\newpage
