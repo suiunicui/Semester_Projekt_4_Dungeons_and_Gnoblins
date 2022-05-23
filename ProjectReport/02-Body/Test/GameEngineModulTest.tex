@@ -1,0 +1,64 @@
+\subsection{Game Engine Modultest}
+
+\noindent \GE{} er testet gennem automatiseret unittests, der er skrevet i henhold til Robert C. Martins 
+``Three Laws of TDD''\ \parencite[Side 122]{CleanCode}. Grundet denne tilgang til testing er \GE{}
+testet eksklusivt gennem black-box testing \parencite{BlackBoxLecture}, da testene kun tester den 
+offentlige interface.
+
+Følgende præsenteres et uddrag af testresultaterne for \GE{} med en beskrivelse af kravene til hvert 
+komponent i \GE{}, kommentar til test resultatet og en endelig vurdering af test resultatet.
+
+\begin{center}
+  \begin{longtable}{|l|p{0.25\linewidth}|p{0.25\linewidth}|l|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Game Engine GodkendelsesTabel (Uddrag)}} \\ \hline
+    \textbf{Komponent under test} & \textbf{Forventet Adfærd} & \textbf{Kommentar} & \textbf{Test Resultat} \\ \hline
+    GameController
+    &
+    \begin{enumerate}
+      \item \begin{flushleft} Kan skifte Player til Nyt Room \end{flushleft}
+      \item \begin{flushleft} Kan samle Item op fra Room  \end{flushleft}
+      \item \begin{flushleft} Kan save Game \end{flushleft}
+      \item \begin{flushleft} Kan loaded Games \end{flushleft}
+      \item \begin{flushleft} Kan eliminere Enemy fra Game \end{flushleft}
+      \item \begin{flushleft} Kan reset Game \end{flushleft}
+      \item \begin{flushleft} Kan anskaffe Room description \end{flushleft}
+    \end{enumerate}
+    &
+    \flushleft 
+    GameController Har kun test for at skifte til nyt Room
+    &
+    FAIL
+    \\ \hline
+    CombatController
+    &
+    \begin{enumerate}
+      \item \begin{flushleft} Kan Håndtere Combat Rounds \end{flushleft}
+      \item \begin{flushleft} Kan håndtere at Player løber væk fra Combat \end{flushleft}
+    \end{enumerate}
+    &
+    \flushleft
+    Combatcontroller kan håndtere at spilleren løber fra combat og at Player engager i combat.
+    &
+    OK
+    \\ \hline
+    DiceRoller
+    &
+    \begin{enumerate}
+    \item \begin{flushleft} Kan emulerer et kast med en N siddet terning \end{flushleft}
+    \item \begin{flushleft} Kan emulerer N kast med en M siddet terning \end{flushleft}
+    \end{enumerate}
+    &
+    \flushleft
+    DiceRoller Kan emulere et eller flere terninge kast med samme antal sidder.
+    &
+    OK
+    \\ \hline
+\end{longtable}
+  \captionof{figure}{%
+    Uddrag af Unittest table; som viser kritiske komponenter, hvilket krav der er stillet til disse
+    komponenter, kommentar til testne og det endelige test resultat. Den fulde test table kan ses 
+    i det tekniske bilag \parencite{GameEngineTestTable}.
+  }%
+  \addtocounter{table}{-1}
+\end{center}
