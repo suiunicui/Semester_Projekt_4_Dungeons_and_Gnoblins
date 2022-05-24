@@ -8,17 +8,27 @@ Alle funktionelle test er beskrevet med user-stories og er evalueret med et ``Go
 eller ``Fejl'' (\textbf{REF Here}) og evt.\ en foklarende kommentar. Ikke funktionelle 
 test er har fået en evaluering ``OK'' eller ``FEJL'' og kan ses i større detail i (\textbf{REF HERE}).
 Langt største delen af alle test, for produktet er bestået med få test, som fejler. 
-Nogle fejler da, kravende har ændre sig undervejs og kravende ikke er blevet tilstrækkeligt
-updated undervejs andre er ikke blevet implementeret grundet tidspress. \\
+Nogle fejler da, implementeringen ikke blev som forventet, mens andre ikke er blevet 
+implementeret på grund af tidspress. \\
+
+To eksempeller er ``puzzels'' og ``Delete Save Game'', der skulle have været implementeret som en del af det færdige spil.
+Grundet tidspress er denne feature ikke blevet implementeret, men i stedet for, er den blevet
+nedprioteret til fordel for andre features som ``Combat'', der blevet vurderet mere essentielle.
+``Delete Save Game'' er ikke blevet implementeret som specificeret i kravspecifikationerne men
+eksistere i stedet for som evnen til at overskrive allerede eksisterende save games. Her er 
+kravende ikke blevet updateret til at reflektere den anderlede implementering
 
 Lad der dog ikke herske tvivl om, at der er store huler i projektets test suit, der
-betyder at store features ikke er test i tilstrækkeligt omfang. Features som load- og save
+betyder at store features ikke er testet i tilstrækkeligt omfang. Features som load- og save
 game er implementeret og testet ved visuel bekræftelse, men der er en betydelig mangel på
-modultest til yderligere at bekræfte, at disse feature fungere som ønsket (\textbf{REF HERE}). \\
+modultest til yderligere at bekræfte, at disse features fungere som ønsket (\textbf{REF HERE}). \\
 
-Den stores success rate skyldes en insistens på tidlige integration mellem alle store komponenter for at sikre at alt
-kommunikation mellem frontend, game engine, backend og databasen har fungeret fra et tidligt tidspunkt i projektet.
-I stedet for at integrere og teste alting samtidigt, er hvert komponent blevet gradvist integreret i
-projektet. Det har vist sig nemmere at integrerer mange små ændringer end at lave en stor integration.
+Den stores success rate skyldes en insistens på tidlige integration mellem alle store komponenter for at sikre, at 
+alt kommunikation mellem frontend, game engine, backend og databasen har fungeret fra et tidligt 
+tidspunkt i projektet. I stedet for at integrere og teste alting samtidigt, er hvert komponent 
+blevet gradvist integreret i projektet. Det har vist sig nemmere at integrerer mange små ændringer
+end at lave en stor integration.
+
+
 
 
