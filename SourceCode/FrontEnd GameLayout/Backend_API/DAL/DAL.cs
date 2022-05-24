@@ -300,7 +300,6 @@ namespace Backend_API.DAL
             }
 
             return game;
-       
 
         }
 
