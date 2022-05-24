@@ -1,0 +1,26 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Spilbeskrivelse}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Login-screen}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Core gameplay layout}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Settings}{5}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Arkitektur}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Frontend Arkitektur}{5}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Pseudo Frontend Arkitektur}{6}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Frontend Design}{8}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Room}{8}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Combat}{9}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Login}{9}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Settings}{10}{subsubsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.3}Database Design}{11}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Frontend Implementering}{12}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Login view}{13}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Room View}{14}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Combat View}{14}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}Settings view}{15}{subsubsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.5}Load view}{16}{subsubsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.6}Note om Baggrundsfarver}{16}{subsubsection.2.4.6}%
+\contentsline {section}{\numberline {3}Test}{17}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Modultest Game Engine}{17}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}GodkendelsesTabel Game Engine}{18}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Mock testing}{21}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Test Resultater for Game Engine}{22}{subsubsection.3.1.3}%
