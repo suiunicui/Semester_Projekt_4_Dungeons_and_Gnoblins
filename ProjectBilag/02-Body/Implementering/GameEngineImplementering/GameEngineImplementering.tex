@@ -16,18 +16,7 @@ og logs som er mere specifikke til spillet og ikke til den interne logik.\\
   \label{fig:CoreClassDiagram}
 \end{figure}
 
-\noindent GameControlleren er det centrale komponent i game enginen, denne er ansvarlig 
-for kommunikation til frontend del af applikationen. I denne implementering af 
-GameControlleren har den adgang til alle spillet funktionaliteter gennem dennes
-association til Combatcontroller, se \autoref{fig:CoreClassDiagram}, og BackendController
-, som ikke er vist på \autoref{fig:CoreClassDiagram}.
-
-Fra et implementering perspektiv er dette en nem løsning for en lille applikationen som denne
-men fra et design perspektiv er dette en dårlig løsning. GameControlleren har alt for mange
-grunde til at ændre sig og følger næppe SOLID principperne.
-
-
-
-
+\input{02-Body/Implementering/GameEngineImplementering/GameController.tex}
+\input{02-Body/Implementering/GameEngineImplementering/MapGeneration.tex}
 
 
