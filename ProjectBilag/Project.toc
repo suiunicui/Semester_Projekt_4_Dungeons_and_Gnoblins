@@ -4,23 +4,34 @@
 \contentsline {subsection}{\numberline {1.3}Core gameplay layout}{4}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Settings}{5}{subsection.1.4}%
 \contentsline {section}{\numberline {2}Arkitektur}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Frontend Arkitektur}{5}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Pseudo Frontend Arkitektur}{6}{subsubsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.2}Frontend Design}{8}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Room}{8}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Combat}{9}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Login}{9}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Settings}{10}{subsubsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.3}Database Design}{11}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Frontend Implementering}{12}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Login view}{13}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Room View}{14}{subsubsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}Combat View}{14}{subsubsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.4}Settings view}{15}{subsubsection.2.4.4}%
-\contentsline {subsubsection}{\numberline {2.4.5}Load view}{16}{subsubsection.2.4.5}%
-\contentsline {subsubsection}{\numberline {2.4.6}Note om Baggrundsfarver}{16}{subsubsection.2.4.6}%
-\contentsline {section}{\numberline {3}Test}{17}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Modultest Game Engine}{17}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}GodkendelsesTabel Game Engine}{18}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Mock testing}{21}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Test Resultater for Game Engine}{22}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {2.1}Systemarkitektur}{5}{subsection.2.1}%
+\contentsline {section}{\numberline {3}GameController Arkitektur}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}States og Character interagering}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Room State og Character interagering}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Combat State og Combat simulering}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Forbindelser til andre moduler}{7}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Frontend Arkitektur}{7}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Pseudo Frontend Arkitektur}{8}{subsubsection.3.5.1}%
+\contentsline {section}{\numberline {4}Design}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Overordnet System Design}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Frontend Design}{11}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Room}{11}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Combat}{12}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Login}{12}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Settings}{12}{subsubsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.3}Database Design}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Frontend Implementering}{13}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Login view}{14}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Room View}{14}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Combat View}{14}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Settings view}{14}{subsubsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.5}Load view}{15}{subsubsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.6}Note om Baggrundsfarver}{15}{subsubsection.4.4.6}%
+\contentsline {section}{\numberline {5}Implementering}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Game Engine}{16}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Test}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Modultest Game Engine}{16}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}GodkendelsesTabel Game Engine}{17}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Mock testing}{20}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Test Resultater for Game Engine}{21}{subsubsection.6.1.3}%
+\contentsline {section}{\numberline {7}Fremtidig Arbejde}{22}{section.7}%
