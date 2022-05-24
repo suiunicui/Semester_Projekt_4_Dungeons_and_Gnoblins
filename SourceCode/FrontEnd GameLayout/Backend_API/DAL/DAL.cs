@@ -191,23 +191,32 @@ namespace Backend_API.DAL
             }
         }
         #endregion
+        public async Task<ActionResult<User>> GetUser(string username)
+        {
+            var user = await _context.Users.Where(u => u.Username == username).FirstOrDefaultAsync();
 
-        //public async Task DeleteGame(int SaveId)
-        //{
-        //    List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
+            if (user == null)
+            {
+                return null;
+            }
+            return user;
+        }
 
-        //    Save Save = _context.Saves.Where(i => i.ID == SaveId).FirstOrDefault();
+        public async Task<ActionResult<User>> RegisterUser(User user)
+        {
+            _context.Users.Add(user);
 
-        //    _context.Saves.Remove(Save);
+            _context.Saves.AddRange(
+                new Save { RoomID = 0, SaveName = "NewGame1", Username = user.Username, Health = 10 },
+                new Save { RoomID = 0, SaveName = "NewGame2", Username = user.Username, Health = 10 },
+                new Save { RoomID = 0, SaveName = "NewGame3", Username = user.Username, Health = 10 },
+                new Save { RoomID = 0, SaveName = "NewGame4", Username = user.Username, Health = 10 },
+                new Save { RoomID = 0, SaveName = "NewGame5", Username = user.Username, Health = 10 });
 
+            await _context.SaveChangesAsync();
 
-        //    foreach (VisitedRooms room in visitedList)
-        //    {
-        //        _context.VisitedRooms.Remove(room);
-        //    }
-
-        //}
-
+            return user;
+        }
 
         public async Task<ActionResult<SaveDTO>> SaveGame(SaveDTO game)
         {
@@ -257,10 +266,8 @@ namespace Backend_API.DAL
             oldSave.Armour_ID = game.ShieldId;
             oldSave.Weapon_ID = game.WeaponId;
 
-            ////_context.Saves.Add(save);
             await _context.SaveChangesAsync();
 
-            //user.Saves.Add(save);
 
             foreach (var i in game.Inventory)
             {
@@ -345,30 +352,6 @@ namespace Backend_API.DAL
             }
 
             return ToReturn;
-
-            //Save save = await _context.Saves.FindAsync(SaveId);
-
-
-
-            //List<VisitedRooms> visitedList = _context.VisitedRooms.Where(i => i.SaveId == SaveId).ToList();
-
-            //SaveDTO newSave = new SaveDTO()
-            //{
-            //    SaveName = save.SaveName,
-            //    ID = save.ID,
-            //    RoomId = save.RoomID,
-            //    VisitedRooms = new List<uint>(),
-            //    Username = save.Username,
-            //};
-
-            //foreach (VisitedRooms r in visitedList)
-            //{
-            //    newSave.VisitedRooms.Add(r.VistedRoomId);
-            //}
-
-            //return newSave;
-
-
         }
 
         public async Task<ActionResult<List<Save>>> GetAllSaves()

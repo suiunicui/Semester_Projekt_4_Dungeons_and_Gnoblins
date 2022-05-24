@@ -33,21 +33,27 @@ namespace Backend_API.Controllers
 
         public UserController(DaG_db context)
         {
-            _context = context;
+            _save = new DAL.DAL(context);
         }
 
-        
+        private readonly DAL.DAL _save;
+
+
+
         [HttpGet("GetUser")]
         public async Task<ActionResult<UserDTO>> GetUser(string username)
         {
-            var user = await _context.Users.FindAsync(username);
+            var user = _save.GetUser(username);
+            
 
             if (user == null)
             {
                 return NotFound();
             }
+
             var userDto = new UserDTO();
-            userDto.Username = user.Username;
+            var p = user.Result.Value;
+            userDto.Username = p.Username;
 
             return userDto;
         }
@@ -58,7 +64,9 @@ namespace Backend_API.Controllers
         public async Task<ActionResult<Token>> Register(UserDTO regUser)
         {
             regUser.Username = regUser.Username.ToLower();
-            var nameExist = await _context.Users.Where(u => u.Username == regUser.Username).FirstOrDefaultAsync();
+            var nameExist = _save.GetUser(regUser.Username);
+
+            //var nameExist = await _context.Users.Where(u => u.Username == regUser.Username).FirstOrDefaultAsync();
             if (nameExist != null)
             {
                 return BadRequest(new { errorMessage = "Name is already in use" });
@@ -72,16 +80,17 @@ namespace Backend_API.Controllers
 
 
             user.Password = BCrypt.Net.BCrypt.HashPassword(regUser.Password, BcryptWorkfactor);
-            _context.Users.Add(user);
+            await _save.RegisterUser(user);
+            //_context.Users.Add(user);
 
-            _context.Saves.AddRange(
-                new Save { RoomID = 0,SaveName = "NewGame1", Username = user.Username, Health = 10 },
-                new Save { RoomID = 0, SaveName = "NewGame2", Username = user.Username, Health = 10 },
-                new Save { RoomID = 0, SaveName = "NewGame3", Username = user.Username, Health = 10 },
-                new Save { RoomID = 0, SaveName = "NewGame4", Username = user.Username, Health = 10 },
-                new Save { RoomID = 0, SaveName = "NewGame5", Username = user.Username, Health = 10 });
+            //_context.Saves.AddRange(
+            //    new Save { RoomID = 0,SaveName = "NewGame1", Username = user.Username, Health = 10 },
+            //    new Save { RoomID = 0, SaveName = "NewGame2", Username = user.Username, Health = 10 },
+            //    new Save { RoomID = 0, SaveName = "NewGame3", Username = user.Username, Health = 10 },
+            //    new Save { RoomID = 0, SaveName = "NewGame4", Username = user.Username, Health = 10 },
+            //    new Save { RoomID = 0, SaveName = "NewGame5", Username = user.Username, Health = 10 });
 
-            await _context.SaveChangesAsync();
+            //await _context.SaveChangesAsync();
 
             var jwtToken = new Token();
 
@@ -96,10 +105,15 @@ namespace Backend_API.Controllers
 
         {
             userDTO.Username = userDTO.Username.ToLower();
-            var user = await _context.Users.Where(u => u.Username == userDTO.Username).FirstOrDefaultAsync();
+            var user = _save.GetUser(userDTO.Username);
+            //var user = await _context.Users.Where(u => u.Username == userDTO.Username).FirstOrDefaultAsync();
+
+            var NewUser = user.Result.Value;
+
+
             if (user != null)
             {
-                var isValid = BCrypt.Net.BCrypt.Verify(userDTO.Password, user.Password);
+                var isValid = BCrypt.Net.BCrypt.Verify(userDTO.Password, NewUser.Password);
                 if (isValid == true)
                 {
                     return new Token {JWT = GenerateToken(userDTO)};    
