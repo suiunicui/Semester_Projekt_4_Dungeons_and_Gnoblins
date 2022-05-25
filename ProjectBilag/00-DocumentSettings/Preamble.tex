@@ -10,10 +10,12 @@
   \usepackage{fancyhdr}
   \usepackage{hyperref}
   \usepackage{lastpage}
+  \usepackage{float}
   \usepackage{caption}
   \usepackage{longtable}
   \usepackage{pgf}
   \usepackage{tikz, tikz-uml}
+  \usepackage{listings}
   \usepackage[
     backend=biber,
     style=numeric,
@@ -56,13 +58,10 @@
   \fancyhead[R]{\subject}
   \fancyfoot[R]{\thepage}
 
-  % Remove Section numbering
-  \makeatletter
-  \renewcommand{\@seccntformat}[1]{}
-  \makeatother
-
   \renewcommand{\footrulewidth}{\numberGOLD pt}
   \renewcommand{\headrulewidth}{\numberPI pt}
+  \setlength\parindent{0pt}
+
 
 
 % Costume commands
