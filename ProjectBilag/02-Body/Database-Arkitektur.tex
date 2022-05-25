@@ -2,7 +2,7 @@
 
 I oprettelsen af systemets database skal der tages hånd om, hvordan kommunikationen skal foregå imellem systemets segmenter, samt databasens funktionalitet. Her er der blevet besluttet at der anvendes en DAL, der fungerer ved at hver gang databasen skal kontaktes, så foregår det igennem denne. Yderligere vil denne DAL også simplificere kommunikationen mellem databasen og Back-End.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/C4TopLvlDB}
 \caption{C4 top level diagram, som viser kommunikation mellem systemets segmenter}
@@ -14,7 +14,7 @@ For at illustrere databasens funktionalitet er der blevet dannet sekvensdiagramm
 
 For at illustrere databasens funktionalitet er der blevet dannet sekvensdiagrammer, som viser hvordan databasen vil kunne gemme et spil og hente et gemt spil.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/RoomDescriptionsDB.PNG}
 \caption{Sekvensdiagram for hvordan rum beskrivelser vil blive hente fra databasen af SaveController}
@@ -23,7 +23,7 @@ For at illustrere databasens funktionalitet er der blevet dannet sekvensdiagramm
 
 I diagrammet GetRoomDescription ses der, hvordan kommunikationen ville foregå for at hente rum beskrivelsen. Her ses der at SaveController, fra Back-End, går til DAL, som så henter rum beskrivelsen fra databasen, og herefter returneres dataene fra databasen til DAL og så fra DAL til SaveController.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/GetAllSavesDB.PNG}
 \caption{Sekvensdiagram for User story 17: GetAllSaves, i relation til hentet data fra database}
@@ -32,7 +32,7 @@ I diagrammet GetRoomDescription ses der, hvordan kommunikationen ville foregå f
 
 I diagrammet GetAllSaves foregår kommunikation på samme måde som ved at hente rum beskrivelser. Forskellen her er dog at der i stedet for hentes en list af alle gemte spil.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/GetSaveDB.PNG}
 \caption{Sekvensdiagram for User story 18: GetAllSaves, i relation til hentet data fra specifikt gemt spil fra database}
@@ -41,7 +41,7 @@ I diagrammet GetAllSaves foregår kommunikation på samme måde som ved at hente
 
 I diagrammet GetSave ses der hvordan et specifikt gemt spil hentes. Her ses der at det igen går først igennem DAL. Et gemt spil vil have et ID, som der kan anvendes til at finde de korresponderende værdier som dette gemte spil har. Her ses der at der vil findes items, enemies, puzzles og hvilke rum en spiller har besøgt. Dataene returneres herefter til DAL og så til SaveController.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/SaveGameDB.pdf}
 \caption{Sekvensdiagram for User story 7: SaveGame. Dette diagram viser hvordan et spil gemmes}
@@ -56,7 +56,7 @@ I dette diagram, SaveGame, ses der hvordan et spil vil gemmes. Måden dette vil 
 I dette segment vil der blive forklaret tankerne bag arkitekturen vedr. oprettelsen af en funktionel database, som kan anvendes til at opbevaring af data til dette projekt.
 Til oprettelsen af en funktionsdygtig database, i dette projekt, kræves der et relativt tæt sammenhold mellem databasen og backend api’en. API’en er ansvarlig for kommunikation mellem Front-end, Game Module og databasen.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DALArkitektur}
 \caption{C3 diagram for blokkene involveret i DAL's funktionalitet}
@@ -74,7 +74,7 @@ Udenfor systemets DAL ville der også være inkluderet Models i konstruktionen a
 
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/ER-RoomDescription.PNG}
 \caption{ER diagram for Roomdescription. En beskrivelse består blot af en beskrivende string samt det tilhørende unikke rumid.}

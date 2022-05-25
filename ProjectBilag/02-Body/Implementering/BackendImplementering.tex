@@ -6,7 +6,7 @@ I det følgende afsnit gennemgåes implementerings detaljer omkring backendens c
 SaveController klassen inkluderer librariet Mircosoft.AspNetCore.MVC, dette gør det muligt, at anvende atributter til at definere hvilke Http metoder som funktionerne anvender eksempelvis HttpGet se figur x (Mangler ref).\\
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_Code_GetSave.PNG}
 \caption{Code snippet af HttpGet metode som modtager et id og retunere et SaveDTO object til clienten}
@@ -21,7 +21,7 @@ SaveController inkludere også Microsoft.AspNetCore.Authorization librariet, som
 
 UserController klassen minder meget om SaveController klassen, den gør ligeledes brug af Libraries Microsoft.AspNetCore.MVC og Microsoft.AspNetCore.Authorize. På figur x (mangler ref til figur) ses Login funktionen.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_Code_Login.PNG}
 \caption{Code snippet af HttpPost metode som modtager et UserDTO object og retunerer en JWT hvis brugeren findes og password’et er korrekt}
@@ -34,7 +34,7 @@ Her tilføjes endnu en atrribut AllowAnonymous, da login skal være et anonymt k
 BackEndControlleren indeholde som det blev nævnt i backend Design afsnittet (Mangler Ref) et HttpClient objekt til at håndtere http request/response, og et Token objekt til at holde på den modtagne JWT.
 Et klasse diagram over BackEndControlleren kan ses på figur x.\\
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_klasse_BackEndController.PNG}
 \caption{klasse diagram af BackEndController}
