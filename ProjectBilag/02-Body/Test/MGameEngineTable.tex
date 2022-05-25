@@ -28,7 +28,11 @@ der ikke er skrevet test til mange af GameControllerens ansvars punkter.
     \end{enumerate}
   &
   \flushleft 
-  Game Controller Har kun test for at skifte til nyt Room
+  Game Controller Har kun test for at skifte til nyt Room, dette betyder at der 
+  ikke kan stilles garanti for at resterende implementeringer af load- og save game
+  osv. fungere som ønsket. Disse ting er svagt testet gennem visuelt trial and error
+  test. Men fordi der ikke er skrevet nogen specifikke test til dem Fejler 
+  GameControlleren sin komponent test.
   &
   FAIL
   \\ \hline
@@ -41,6 +45,10 @@ der ikke er skrevet test til mange af GameControllerens ansvars punkter.
   &
   \flushleft
   Combat controller kan håndtere at spilleren løber fra combat og at Player engager i combat.
+  CombatController can stille garanti for at combat sker i den rigtige orden og at hverken
+  spiller eller enemy kan angribe hvis denne er død.
+  Ydmere stiller den garanti for at både enemy og spiller kan lave ``critial hits'' hvis dice
+  rolleren slår 20.
   &
   OK
   \\ \hline
@@ -52,7 +60,9 @@ der ikke er skrevet test til mange af GameControllerens ansvars punkter.
   \end{enumerate}
   &
   \flushleft
-  DiceRoller Kan emulere et eller flere terninge kast med samme antal sidder.
+  DiceRoller Kan emulere et eller flere terninge kast med samme antal sidder. Denne kan
+  ydmere stille krav for at fordellingen af disse terningekast har en normal distribution 
+  og dermed er alle udfald lige sandsynlige.
   &
   OK
   \\ \hline
@@ -63,9 +73,13 @@ der ikke er skrevet test til mange af GameControllerens ansvars punkter.
   \end{enumerate}
   &
   \flushleft
-  BaseMapCreator can på korrekt vis generere et map layout file
+  BaseMapCreator can på korrekt vis generere et map layout file, den kan ydmere
+  generer item layout files og Enemy layout files, der hjælper Map klassen med 
+  at genererer spillet Map. Der ikke skrevet test for eksistensen af item og enemy 
+  layout Map og derfor kan der ikke stille garanti for at disse bliver genereret 
+  på korrektvis. Testen Fejler derfor.
   &
-  OK
+  FAIL
   \\ \hline
   BaseMap
   &
@@ -74,9 +88,13 @@ der ikke er skrevet test til mange af GameControllerens ansvars punkter.
   \end{enumerate}
   &
   \flushleft
-  Map kan anskaffe Rooms uf fra en given Direction.
+  Map kan anskaffe Rooms uf fra en given Direction. Map kan på korrektvis generer et 
+  map udfra mappets layout file. Den kan også på korrektvis finde udaf hvilke Rooms
+  har adgang til hinanden. Der er ikke skrevet test for at bekræfte at enemy og items er 
+  i de korrekte lokationer baseret på enemy og item layout filerne.
+  Derfor fejler denne sin Test.
   &
-  OK
+  FAIL
   \\ \hline
   Player
   &
@@ -88,7 +106,7 @@ der ikke er skrevet test til mange af GameControllerens ansvars punkter.
   \end{enumerate}
   &
   \flushleft
-  Player kan angribe, skade og tage skade fra enemy.
+  Player kan angribe, skade og tage skade fra enemy. 
   &
   OK
   \\ \hline

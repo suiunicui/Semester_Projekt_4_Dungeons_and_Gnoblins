@@ -1,3 +1,9 @@
 \section{Implementering}
+\subsection{System Implementering}
+Under implementeringen af nogle funktioner i samtlige moduler, er funktioner blevet lavet til funktioner der følger følgende opstilling:\\
+public async Task $<$T$>$ Foobar();\\ 
+Funktionerne returnerer en Task af typen T og den kan gøres asynkront. Dette er specielt vigtigt når man kontakter databasen, da programmet ikke må køre videre før den asynkrone funktion er færdig med sit database kald. Når en funktion i f.eks. Game Controlleren kalder: public async Task $<$SaveDTO$>$ GetSaveAsync(int id) i backend controlleren, i sin egen funktion SaveGame() skal SaveGame() også erklæres async og returnerer en Task af typen T og derfor er nærmest alle funktioner der kontakter databasen erklæret for async kald, som returnerer typen Task.
 
+
+\input{02-Body/Implementering/FrontendImplementering.tex}
 \input{02-Body/Implementering/GameEngineImplementering/GameEngineImplementering.tex}
