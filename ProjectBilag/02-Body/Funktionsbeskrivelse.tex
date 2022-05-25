@@ -76,7 +76,7 @@
 
 \methodDoc{void}{Player player}{}{AddPlayer}
 {%
-  Tilføjer en spiller til et room.
+  Tilføjer en spiller til et room. smider MemberOverwrite Exception hvis spiller allerede er i room.
 }
 
 \methodDoc{void}{void}{}{RemovePlayer}
@@ -96,14 +96,102 @@
 
 \subsubsection{Combat Controller}
 
-\methodDoc{ILog}{ref Player player, ref Enemy enemy}{EngageCombat}
+\methodDoc{ILog}{ref Player player, ref Enemy enemy}{}{EngageCombat}
 {%
-  Emulere en rundte i combat, hvor spilleren slår først og hvis enemy dør, stopper combat ellers slår enemy på player.
+  Emulere en runde i combat, hvor spilleren slår først og hvis enemy dør, stopper combat ellers slår enemy på player.
 }
 
 \methodDoc{void}{void}{}{Flee}
 {%
-  stopper combat.
+  Stopper combat.
+}
+
+\subsubsection{Backend Controller}
+
+\methodDoc{Task\l SaveDTO \g}{int id}{async}{GetSaveAsync}
+{%
+  de-serialisere save game og returner spillet til game controller. 
+}
+
+\methodDoc{Task\l RoomDescription \g}{int id}{async}{GetRoomDescription}
+{%
+  De-serialisere Room og returner room description.
+}
+
+\methodDoc{Task\l List\l SaveDTO \g \g}{void}{async}{GetListOfSave}
+{%
+  De-serialisere alle save games og returner en liste af save games.
+}
+
+\methodDoc{Task}{SaveDTO save}{async}{PostSaveAsync}
+{%
+  Serialisere et save game og sender det til databasen
+  Serialisere et save game og sender det til databasen.
+}
+
+\methodDoc{Task}{UserDTO}{async}{PostLoginAsync}
+{%
+  Serialisere en userDTO og sender login til databasen. Returner en token hvis login er succesfuld.
+}
+
+\subsubsection{Base Map Creator}
+
+\methodDoc{void}{void}{}{GenerateMapLayoutFile}
+{%
+  Genererer en Map Layout File i current dictory.
+}
+\methodDoc{void}{void}{}{GenerateEnemylayoutFile}
+{%
+  Genererer en Enemy Layout File i current dictory.
+}
+
+\methodDoc{void}{void}{}{GenerateItemLayoutFile}
+{%
+  Genererer en Item Layout File i current dictory.
+}
+
+\subsubsection{Enemy}
+
+\methodDoc{(uint hasHit, uint HasCrit)}{Player player}{virtual}{Hit}
+{%
+  simulere et angreb på spiller og retunere om angrebet rammer og om det er et crit.
+}
+
+\methodDoc{uint}{ref Player player}{virtual}{Attack}
+{%
+  udregner skade og updater player HealthPoint.
+}
+
+\methodDoc{uint}{ref Player player}{virtual}{AttackCrit}
+{%
+  udregner skade for et crit angreb og opdatere spillerens liv.
+}
+
+\methodDoc{void}{uint damage}{virtual}{TakeDamage}
+{%
+  Sænker enemies liv med en mængde lig damage, men kan ikke blive lavere end 0.
+}
+
+\subsubsection{Player}
+
+\methodDoc{(uint hasHit, uint HasCrit)}{Enemy enemy}{virtual}{Hit}
+{%
+  simulere et angreb på enemy og retunere om angrebet rammer og om det er et crit.
+}
+
+\methodDoc{uint}{ref Enemy enemy}{virtual}{Attack}
+{%
+  udregner skade og opdatere enemy HealthPoint.
+}
+
+\methodDoc{uint}{ref Enemy enemy}{virtual}{AttackCrit}
+{%
+  udregner skade for et crit angreb og opdatere enemys liv.
+}
+
+\methodDoc{void}{uint damage}{virtual}{TakeDamage}
+{%
+  Sænker player liv med en mængde lig damage, men kan ikke blive lavere end 0.
 }
 
 
