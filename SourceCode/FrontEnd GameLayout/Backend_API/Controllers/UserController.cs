@@ -24,8 +24,6 @@ namespace Backend_API.Controllers
     [Authorize]
     public class UserController : Controller
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
         private readonly DaG_db _context;
 
         const int BcryptWorkfactor = 11;

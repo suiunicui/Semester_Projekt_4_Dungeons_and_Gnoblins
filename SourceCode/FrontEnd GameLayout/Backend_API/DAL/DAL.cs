@@ -300,7 +300,6 @@ namespace Backend_API.DAL
             }
 
             return game;
-       
 
         }
 
@@ -376,9 +375,9 @@ namespace Backend_API.DAL
         {
             
 
-            var rooms = await _context.Saves.ToListAsync();
+            var saves = await _context.Saves.ToListAsync();
 
-            return rooms;
+            return saves;
 
         }
 
