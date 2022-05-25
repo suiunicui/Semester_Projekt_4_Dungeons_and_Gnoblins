@@ -71,8 +71,9 @@ I tabel xx herudner ses en tabel over udførte test, forventede resultater, den 
 Alle test er udført og vi observerer det forventede resultat. Vi vurderer derfor alle test som OK.
 
 \begin{table}[H]
-\begin{tabular}{|p{0.75cm}|p{3.75cm}|p{3.5cm}|p{3.5cm}|p{1.75cm}|} \hline
- \textbf{Test} & \textbf{Funktion} & \textbf{Forventet resultat} & \textbf{Observering} & \textbf{Vurdering} \\ \textbf{(OK/Fail)}\\\hline
+\caption{Tabel over modulttest af DAL forbindelse til databsen. Alle test observeringer stemmeroverens med forventningerne og markeres derfor OK }%
+\begin{tabular}{|p{0.75cm}|p{3.6cm}|p{3.5cm}|p{3.5cm}|p{1.9cm}|} \hline
+ \textbf{Test} & \textbf{Funktion} & \textbf{Forventet resultat} & \textbf{Observering} & \textbf{Vurdering} \textbf{(OK/Fail)}\\\hline
  1 & GetRoomDescription(id) & Her forventes det at funktionen henter beskrivelsen fra den valgte rumId. & Funktionen henterbeskrivelsen korrekt og vi kan udskrive denne på konsolen. & OK \\ \hline
  2 & GetAllSaves & Det forventes at alle spillets saves, med tilhørende info, hentes fra databasen & Alle saves hentes fra databasen og information om disse kan udskrives på konsolen. & OK \\ \hline
  3 & GetSaveById(id) & Det forventes at der hentes alle oplysninger om et enkelt save fra databasen med tilsvarende id, som den medsendte parameter & Det korrekte save samt tilhørende info hentes og kan udskrive til konsolen & OK \\ \hline
