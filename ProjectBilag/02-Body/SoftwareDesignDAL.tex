@@ -1,23 +1,21 @@
 Software Design:
-DAL Design
-På figur xxx herunder ses klassediagrammet over backend DAL, som benyttes til database access.
-Som det kan ses på diagrammet, indeholder DAL en database context, som benyttes til at forbinde backend applicationen til databasen. Derudover består DAL af fire overordnede funktioner, hvoraf de 3 tilhører en user story. Den sidste benyttes når vi starter spillet, til at lave rumbeskrivelser. 
-
-
-DbClassDiagram.	
- 
+DAL Design 
+På figur xxx herunder ses klassediagrammet over backend DAL, som benyttes til database access. Som det kan ses på diagrammet, indeholder DAL en database context, som benyttes til at forbinde backend applicationen til databasen. 
+Derudover består DAL af fire overordnede funktioner, hvoraf de 3 tilhører en user story. 
+Den sidste benyttes når vi starter spillet, til at lave rumbeskrivelser.
 Følgende funktion benyttes når spil klienten startes, da beskrivelser af rum ikke ændre sig gennem spillets levetid, i den nuværende itteration.
 Navn: GetRoomDescription
 Parametre: int RoomDescription id
 Returtype: Task<ActionResult<RoomDescription>>
 Beskrivelse: Denne funktion finder og returnerer en beskrivelse for det valgte RoomDescriptionID. Dette kan også ses på sekvensdiagrammet på figur xxx herunder.
- 
 User story funktioner
 De følgende 3 funktioner benyttes til udførelse af forskellige user stories.
 Det drejer sig om:
-•	User story 7 – Save game
-•	User story 17 – Load game list
-•	User story 18 – Load game
+
+User story 7 – Save game
+User story 17 – Load game list
+User story 18 – Load game
+
 Den første funktion SaveGame benyttes til at udføre user story 7.
 Her skal der gemmes et spil. Da vi har et krav om kun at holde 5 gemte spil pr bruger, vælger vi, når vi opretter en bruger, at give ham 5 ”tomme” saves. Når brugeren så ønsker at gemme et spil, skal vi ikke tilføje et nyt, men blot overskrive et valgt gammelt save.
 Dette kan også ses på sekvensdiagrammet på figur xxx.
@@ -25,20 +23,12 @@ Navn: SaveGame
 Parametre: SaveDTO
 Returtype: Task<ActionResult<SaveDTO>>
 Beskrivelse: Da der i vores frontend sørges for at en bruger blot kan have 5 saves, starter vi med at finde det save vi gerne vil overskrive. Det gamle save, samt tilhørende lister slettes, hvorefter det nye save gemmes og eventuelle nye lister til fx. items gemmes.
-
- 
- 
-
-
- 
 Den anden funktion GetAllSaves benyttes til at udføre user story 17.
 Her skal der loades en liste af gemte spil, når brugeren ønsker at se sine gemte spil. Dette kan også ses på sekvensdiagrammet på figur xxx.
-Navn:  GetAllSaves
+Navn: GetAllSaves
 Parametre: ingen
 Returtype: Task<ActionResult<List<Save>>> 
 Beskrivelse: Her hentes all gemte saves i spillet.
-
-  
 
 Den tredje funktion GetById benyttes til at udføre user story 18.
 Her skal der loades et gemt spil, som brugeren nu ønsker at spille. 
@@ -46,7 +36,4 @@ Dette kan også ses på sekvensdiagrammet på figur xxx.
 Navn: GetSaveById 
 Parametre: int saveID
 Returtype: Task<ActionResult<SaveDTO>>
-Beskrivelse: Denne funktion finder det save med det medsendte ID, samt tilhørende lister, indsætter værdier i et SaveDTO objekt, hvorefter det returneres. 
-
- 
- 
+Beskrivelse: Denne funktion finder det save med det medsendte ID, samt tilhørende lister, indsætter værdier i et SaveDTO objekt, hvorefter det returneres.
