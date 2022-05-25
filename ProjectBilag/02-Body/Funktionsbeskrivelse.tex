@@ -1,6 +1,109 @@
 \subsection{Funktionsbeskrivelse}
 
+\subsubsection{Game Controller}
+
 \methodDoc{Task}{void}{async}{Reset}
 {%
-  Hello
+  Resetter game state til default tilstand.
 }
+
+\methodDoc{Task}{void}{async}{GetRoomDescription}
+{%
+  Initializere alle room descriptions fra databasen til de korrekte Rooms.
+}
+
+\methodDoc{Tast}{int id, string Savename}{async}{SaveGame}
+{%
+  Gemmer game state og sender de via backend til databasen hvor det bliver gemt med det parameter id og navn.  
+}
+
+\methodDoc{Task}{int id}{async}{LoadGame}
+{%
+  Resetter game state til default, skaffer
+  save game med det givet id og initializer
+  game state til at matche Save game statet.
+}
+
+\methodDoc{ILog}{Enum Direction}{}{Move}
+{%
+  flytter spilleren i den angivet retning
+  hvis og kun hvis en forbindelse eksistere
+  mellem det nuværende room og den ønskede
+  bevægelses retning.
+}
+
+\methodDoc{void}{void}{}{EliminateEnemy}
+{%
+  Fjerner en enemy fra game state.
+}
+
+\methodDoc{void}{Item}{}{PickUpItem}
+{%
+  Tilføjer et item til spilleren inventory og 
+  fjerne denne fra room.
+}
+
+\subsubsection{Log}
+
+\methodDoc{void}{string key, string value}{}{RecordEvent}
+{%
+  Gemmer et vent i dictionarien
+}
+
+\methodDoc{string}{string key}{}{GetRecord}
+{%
+  Udskriver et event ud fra den givene key string.
+}
+
+\methodDoc{ILog}{ILog a, Log b}{static}{operator +}
+{%
+  Tilføjer alle events fra en log til en anden log.
+}
+
+\subsubsection{DiceRoller}
+
+\methodDoc{uint}{uint numOfSides}{}{RollDice}
+{%
+  Simulere et terninge kast og returnere et tal mellem  1 and numOfSides (Incl.)
+}
+
+\methodDoc{uint}{(uint NumOfSides, uint NumOfDice)}{}{RollDice}
+{%
+  Simulatere flere terningeslag og returnere summen af disse kast.
+}
+
+\subsubsection{Room}
+
+\methodDoc{void}{Player player}{}{AddPlayer}
+{%
+  Tilføjer en spiller til et room.
+}
+
+\methodDoc{void}{void}{}{RemovePlayer}
+{%
+  fjerner en spiller fra et room.
+}
+
+\methodDoc{void}{Enemy enemy}{}{AddEnemy}
+{%
+  tilføjer en enemy til et room.
+}
+
+\methodDoc{void}{void}{}{RemoveEnemy}
+{%
+  fjerner en enemy fra et room.
+}
+
+\subsubsection{Combat Controller}
+
+\methodDoc{ILog}{ref Player player, ref Enemy enemy}{EngageCombat}
+{%
+  Emulere en rundte i combat, hvor spilleren slår først og hvis enemy dør, stopper combat ellers slår enemy på player.
+}
+
+\methodDoc{void}{void}{}{Flee}
+{%
+  stopper combat.
+}
+
+
