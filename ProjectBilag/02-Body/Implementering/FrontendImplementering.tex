@@ -4,6 +4,31 @@ Det endelige design af vinderne følger tæt det oprindelige mockup design. Der 
 Det endelige design har følgende views:
 Login, Register, Main, Settings, Ingame, Load, Save, Inventory, Character, Victory, Defeat, Room og Combat.\\
 Til at skifte views uden at oprette et nyt vindue bruges et mediator design, hvor hver knap som skifter view giver en besked til mediatoren. Dette virker fordi alle views er oprettet som WPF user controlls, og ikke views, hvilket tillader at et main view kan skifte mellem viewmodels, derved skifter vil alt indhold på vinduet, men uden at selve rammen skiftet. Dette resulterer i et mere flydende User Interface for brugeren og derved en alt i alt bedre oplevelse. \footcite{https://www.technical-recipes.com/2018/navigating-between-views-in-wpf-mvvm/}\\
+Et eksempel på hvordan mediatoren kaldes ved et tryk på en knap kan ses i følgende kode eksempel:
+
+\begin{lstlisting}[language=c]
+private DelegateCommand _loadGame;
+    
+public DelegateCommand LoadGame => _loadGame ?? (
+	_loadGame = new DelegateCommand(
+	ExecuteLoadCommand, CanExecuteLoadCommand));
+
+async void ExecuteLoadCommand()
+{
+    await GameController.Instance.LoadGame(SelectedSave.ID);
+    Mediator.Notify("GameStart", "");
+}
+
+bool CanExecuteLoadCommand()
+{
+    return SelectedSave != null;
+}
+
+void LoadCommand()
+{
+    LoadGame.RaiseCanExecuteChanged();
+}
+\end{lstlisting}
 
 \noindent Der er implementeret at nogle af spillets funktioner kan tilgås via key-bindings, hvilket har nødsaget et brud på MVVM-designet. Når mediatoren skifter mellem views bilver fokus ikke sat til indholdet af det nye view, og keybindings virker derfor ikke. For at løse dette sættes top-elementet på den nye side som fokus. Dette kan dog ikke gøres i MVVM, så her er det pattern brudt, da det er nødvændigt at gå ind i code-behind filen for at sætte fokus.
 
@@ -71,6 +96,16 @@ Load (\autoref{fig:Design-FE-impl-load}) og Save menuerne præsenterer spilleren
 \end{figure}
 
 \subsubsection{Note om Baggrundsfarver}
-Da den generelle baggrundsfarve i spillet er sort er alle spillets interface elementer oprettet så baggrundsfarven matcher. Dette er for det meste nemt opnået ved brug af WPF styles, men enkelte elementer (så som resolution dropdown menu, brugt i settings menuen) viste sig at være betydeligt mere omfattende. Det viser sig at det valgte element (WPF combobox) ikke tillader at baggrundsfarven for dropdown elementerne ændres i Windows 8 eller senere. Løsningen er at lave en kopi af hele templaten (ca. 300 linjer kode) for combobox og ændre 3-4 linjer. \footcite{https://social.technet.microsoft.com/wiki/contents/articles/24240.changing-the-background-color-of-a-combobox-in-wpf-on-windows-8.aspx}
+Da den generelle baggrundsfarve i spillet er sort er alle spillets interface elementer oprettet så baggrundsfarven matcher. Dette er for det meste nemt opnået ved brug af WPF styles, f.eks.:
+\begin{lstlisting}
+<Style x:Key="textBoxStyle" TargetType="TextBox">
+    <Setter Property="Background" Value="{StaticResource backgroundColor}"/>
+    <Setter Property="Foreground" Value="{StaticResource textColor}"/>
+    <Setter Property="FontSize" Value="25"/>
+    <Setter Property="FontStyle" Value="Italic"/>
+    <Setter Property="BorderThickness" Value="1"/>
+</Style>
+\end{lstlisting}
+men enkelte elementer (så som resolution dropdown menu, brugt i settings menuen) viste sig at være betydeligt mere omfattende. Det viser sig at det valgte element (WPF combobox) ikke tillader at baggrundsfarven for dropdown elementerne ændres i Windows 8 eller senere. Løsningen er at lave en kopi af hele templaten (ca. 300 linjer kode) for combobox og ændre 3-4 linjer. \footcite{https://social.technet.microsoft.com/wiki/contents/articles/24240.changing-the-background-color-of-a-combobox-in-wpf-on-windows-8.aspx}
 
 \newpage
