@@ -14,7 +14,7 @@ Denne route sender et scecifikt game state til databasen, for den bruger som er 
 \item GET: /api/Save/Get List Of Saves\\
 Denne route henter en liste af game states, for den bruger som er logget ind. 
 \item GET: /api/Save/Get Room Description\\
-Denne route henter alle beskrivelser af rummene i spillet.
+Denne route henter en beskrivelse af det valgt rum i spillet.
 \end{itemize}
 
 \textbf{User:}\\
@@ -33,7 +33,7 @@ De data objekter som gemmes i SQL databasen indeholder nogle navigational proper
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_DTO.PNG}
 \caption{klasse diagram over DTO'er for User og Save}
-\label{fig:Arkitektur-Backend-DTO}
+\label{fig:Design-Backend-DTO}
 \end{figure}
 
 På den måde kan man sikre at kun den nødvendige data sendes til clienten.\\
@@ -67,7 +67,7 @@ Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_sekvens_1.PNG}
 \caption{Sekvensdiagram som viser funktionaliteten i User Story 1 Log in}
-\label{fig:Arkitektur-Backend-Sekvens-1}
+\label{fig:Design-Backend-Sekvens-1}
 \end{figure}
 
 Authentication controlleren fra C3 modellen hedder her “UserController” og har til opgave at gøre det muligt for en bruger at registrere sig og logge ind. Login implementeres i Login() funktionen, som er det endpoint clienten kalder for at logge ind. Her bliver der tjekket om det indtastede brugernavn findes i databasen. Hvis brugernavnet findes, så bliver adgangskoden tjekket med funktionen verify fra Bcrypt klassen, og passer den, bliver der returneret en JWT token. Hvis brugernavnet derimod allerede eksiterer eller adgangskoden ikke er korrekt retuneres en fejlmeddelse.\\
@@ -79,7 +79,7 @@ Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_sekvens_2.PNG}
 \caption{Sekvensdiagram som viser funktionaliteten i User Story 2 Opret Bruger}
-\label{fig:Arkitektur-Backend-Sekvens-2}
+\label{fig:Design-Backend-Sekvens-2}
 \end{figure}
 
 For at kunne logge ind skal det være muligt at oprette en bruger til dette laves en Register(UserDTO regUser) funktion. Denne starter med at checke om brugernavnet er optaget. Er den det, returneres der en fejlmeddelelse, og ellers registreres brugeren. Dernæst bliver det valgte kodeord ”hashed”, således at der opnås en vis sikkerhed i systemet. Når der oprettes en ny bruger skal denne have tildelt 5 pladser i databasen til sine gemte spil, dette sker ved at der oprettes en liste af saves som indeholder, som indeholder 5 nye saves, disse gemmes med contexten i SQL databasen. Hvis alt går godt retuneres en JWT token.\\
@@ -92,7 +92,7 @@ På figur 3 kan ses en oversigt over de klasser, metoder og attributter, som anv
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_klasse_1_2.PNG}
 \caption{Samlet klasse diagram over User story 1 og 2}
-\label{fig:Arkitektur-Backend-Klasse-1-2}
+\label{fig:Design-Backend-Klasse-1-2}
 \end{figure}
 
 \subsubsection{Applikationsmodel Save Controller}
@@ -104,7 +104,7 @@ Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_sekvens_7.PNG}
 \caption{sekvensdiagram over User Story 7 Save and Exit}
-\label{fig:Arkitektur-Backend-Sekvens-7}
+\label{fig:Design-Backend-Sekvens-7}
 \end{figure}
 
 Der bruges en httpPost funktion kaldet PostSave som gemmer et nyt spil i databasen ved at ligge det modtagene gamestate fra parameter listen ind i et funktionskald SaveGame() i DAL klassen, som så sørger for at gemme spillet i databasen på den korrekte måde.\\
@@ -117,7 +117,7 @@ Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_sekvens_17.PNG}
 \caption{Sekvensdiagram over User Story 17 Main Menu -> Load List Game}
-\label{fig:Arkitektur-Backend-Sekvens-17}
+\label{fig:Design-Backend-Sekvens-17}
 \end{figure}
 
 Da vi gerne vil gøre det muligt at have 5 save games pr. profil, skal det naturligvis være muligt at kunne vælge mellem de forskellige saves, til dette laves funktion GetListOfSaves(). Clienten kalder her GetListOfSaves() som er et HttpGet endpoint, denne funktion henter alle saves i DAL klassen ved at kalde GetAllSaves(). SaveController finder så de gemte spil i listen hvor brugernavnet passer med den burger, som er logget ind ved brug af User.Identity som stilles til rådighed af ControllerBase klassen, her i kan claims for den nuværende JWT nemlig findes.\\
@@ -129,7 +129,7 @@ Når clienten udfører en HTTP request med URL’en :” https://localhost:7046/
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_sekvens_18.PNG}
 \caption{Sekvens diagram over User story 18 Main Menu -> Load Game -> Load}
-\label{fig:Arkitektur-Backend-Sekvens-18}
+\label{fig:Design-Backend-Sekvens-18}
 \end{figure}
 
 \textbf{User Story 19 : Main Menu -> Load Game -> Delete Game}\\
@@ -143,7 +143,7 @@ Et Samlet klasse diagram for User story 7, 17 og 18 kan ses på figur x (Mangler
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_klasse_7_17_18.PNG}
 \caption{Samlet klasse diagram for User story 7, 17 og 18}
-\label{fig:Arkitektur-Backend-Sekvens-7-17-18}
+\label{fig:Design-Backend-Sekvens-7-17-18}
 \end{figure}
 
 Udover de funktioner som bliver brugt i User stories, tilføjes der er en funktion GetRoomDescription, som blot henter en beskrivelse af det rum brugeren befinder sig i.\\
