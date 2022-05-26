@@ -15,7 +15,7 @@ Følgende elementer er nødvendigt at installere inden spillet køres.
   - Åben Backend applikationen appsetting.json og ændre dit password i connection string
   så det matcher passworded til dit docker image.
   - Kør backend applikationen på din enhed.
-  - åben nu Dungeons and Gnoblins på din enhed og spil spillet.
+  - Åben nu Dungeons and Gnoblins på din enhed og spil spillet.
 
 Download Docker: https://www.docker.com/get-started/  
 Microsoft SQL Docker Image: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&preserve-view=true&pivots=cs1-powershell
