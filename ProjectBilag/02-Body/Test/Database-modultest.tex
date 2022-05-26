@@ -2,7 +2,13 @@
 Der er som gruppe taget en beslutning om at hoste databasen lokalt i en docker container. Dette blev valgt på baggrund af en samtale med vejleder, hvor vi blandt andet, grundet sikkerhedsforanstaltning på au’s netværk, kunne løbe ind i nogle problemer.
 Den lokale hosting medførte at vi kunne holde øje med databasens udformningen, samt den gemte data gennem Microsoft azure datastudie.\\
 
-For at teste DAL funktioner og dens forbindelse til databasen, oprettes først et DAL objekt med en context som indeholder en korrekt connectionstring.\\
+For at teste DAL funktioner og dens forbindelse til databasen, oprettes først et DAL objekt med en context som indeholder en korrekt connectionstring.
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.5\textwidth]{02-Body/Images/DAL-Database/DataHelper.png}
+\caption{Oprettelse af DAL objekt med context indeholdende connectionstring}
+\label{fig:Datahelper}
+\end{figure}
 
 Til test hvor der skal indsættes data i databasen oprettes der objekter af den korrekte type hvorefter DAL funktioner til indsættes kaldes. Korrektheden af de indsatte data kan herefter tjekkes med datastudie.
 Et eksempel på dette kan ses på figur xx herunder.
@@ -11,19 +17,19 @@ Her opsættes gamesave til ”Gamer1”, med navnet ”My First Run”, hvorefte
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 0.5\textwidth]{02-Body/Images/DAL-Database/NewSave.png}
-\caption{Kode til test af SaveGame}
+\includegraphics[width = 0.5\textwidth]{02-Body/Images/DAL-Database/NewSave-Test.png}
+\caption{Kode til test af SaveGame, hvor der oprettes et nyt save som overskriver det gamle save med saveID 1}
 \label{fig:SaveGame-test}
 \end{figure}
 
 På figur xxx herunder ses et screenshot fra datastudie hvor de 5 saves til ”Gamer1” kan ses.
-Det noteres at alle saves er ”blanke” og starter i rum 1.
+Det noteres at alle saves er "tomme" og starter i rum 1.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/DatastudieFørIndsættelse.png}
-\caption{}
-\label{fig:}
+\caption{Screenshot fra datastudie hvor de 5 ens "tomme" saves kan ses}
+\label{fig:datastudie-før}
 \end{figure}
 
 Herefter køres programmet fra figur xx(kode), og vi kan nu se ændringerne i databasen.
@@ -32,8 +38,8 @@ Det noteres at SaveName og de andre attributter nu er opdateret korrekt efter ko
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/DataStudieEfterIndsættelse.png}
-\caption{}
-\label{fig:}
+\caption{Sceenshot af datastudie efter overskrivning af save 1. Her er savet opdateret til nu at hedde "My First Run" og health og roomID er ændret }
+\label{fig:datastudie-efter}
 \end{figure}
 
 De øvrige tilhørende lister til det gemte save er også opdateret med korrekte værdie. Dette kan også ses på figur xx herunder.
@@ -41,8 +47,8 @@ De øvrige tilhørende lister til det gemte save er også opdateret med korrekte
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.4\textwidth]{02-Body/Images/DAL-Database/Lister.png}
-\caption{}
-\label{fig:}
+\caption{Sceenshot af datastudie efter overskrivning af save 1 med ekstra tabeller som referer til det rigtige saveID}
+\label{fig:Datastudie-ekstra}
 \end{figure}
 
 Funktioner hvor der skal læses fra Db kaldes DAL funktionen hvorefter den fundne information udskrives til konsolen ved hjælp af console writeline. Korrektheden af data i konsolen dobbelttjekkes med datastudie.
@@ -52,7 +58,7 @@ Her henter vi de gemte save fra tidligere fra ”Gamer1” ved navn ”My First 
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.5\textwidth]{02-Body/Images/DAL-Database/KodeTilLæsning.png}
-\caption{}
+\caption{Kode til test af GetSaveByID, hvor der hentes et save med saveID 1, hvoreft er det og tilhørende info udskrives på konsolen}
 \label{fig:KodeTilLæsningAfSave}
 \end{figure}
 
@@ -62,7 +68,7 @@ Det noteres at det udskrevne data stemmeroverens med det indsatte data fra den t
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.25\textwidth]{02-Body/Images/DAL-Database/ConsoleOutput.png}
-\caption{Konsoleudskrift efter læsning af spil fra databasen}
+\caption{Konsoleudskrift efter læsning af spil fra databasen, hvor det noteres at informationen stemmer overens med det indsatte i \textbf{REF TIL FIGUR MED INDSÆTTELSE}}
 \label{fig:Modulttest-consoleOutput}
 \end{figure}
 
@@ -73,6 +79,7 @@ Alle test er udført og vi observerer det forventede resultat. Vi vurderer derfo
 \begin{table}[H]
 \caption{Tabel over modulttest af DAL forbindelse til databsen. Alle test observeringer stemmeroverens med forventningerne og markeres derfor OK }
 \begin{tabular}{|p{0.75cm}|p{3.6cm}|p{3.5cm}|p{3.5cm}|p{1.9cm}|} \hline
+\multicolumn{5}{|c|}{\textbf{DAL-Database Godkendelses Tabel}} \\ \hline
  \textbf{Test} & \textbf{Funktion} & \textbf{Forventet resultat} & \textbf{Observering} & \textbf{Vurdering} \textbf{(OK/Fail)}\\\hline
  1 & GetRoomDescription(id) & Her forventes det at funktionen henter beskrivelsen fra den valgte rumId. & Funktionen henterbeskrivelsen korrekt og vi kan udskrive denne på konsolen. & OK \\ \hline
  2 & GetAllSaves & Det forventes at alle spillets saves, med tilhørende info, hentes fra databasen & Alle saves hentes fra databasen og information om disse kan udskrives på konsolen. & OK \\ \hline

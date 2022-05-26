@@ -4,11 +4,13 @@ Som det kan ses på diagrammet, indeholder DAL en database context, som benyttes
 Derudover består DAL af fire overordnede funktioner, hvoraf de 3 tilhører en user story. 
 Den sidste funktion benyttes når vi starter spillet, til at lave rumbeskrivelser.\\
 
+\textbf{FIGUR KORREKTHED????}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/DAL-DB-CD.PNG}
-\caption{Samlet klasse diagram for User story 7, 17 og 18 i DAL}
-\label{fig:DAL-Sekvens-7-17-18}
+\caption{Samlet klasse diagram for User story 7, 17 og 18 med DAL db context og entitetsklasser}
+\label{fig:DAL-Klasse-7-17-18}
 \end{figure}
 
 Følgende funktion benyttes når spil klienten startes, da beskrivelser af rum ikke ændre sig gennem spillets levetid, i den nuværende itteration.\\
@@ -16,8 +18,8 @@ Følgende funktion benyttes når spil klienten startes, da beskrivelser af rum i
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/RoomDescriptionSd.PNG}
-\caption{}
-\label{fig:DAL-Sekvens-7-17-18}
+\caption{Sekvensdiagram om læsning af en rumbeskrivelse}
+\label{fig:DAL-Sekvens-RumBeskrivelser}
 \end{figure}
 
 Navn: GetRoomDescription \\
@@ -45,16 +47,8 @@ Dette kan også ses på sekvensdiagrammet på figur xxx.\\\\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/SaveSd2.PNG}
-\caption{}
-\label{fig:DAL-Sekvens-7}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/SaveSd2.PNG}
-\caption{}
+\includegraphics[width = 0.7\textwidth]{02-Body/Images/DAL-Database/SaveSd.PNG}
+\caption{Sekvensdiagram for user story 7 save game som beskriver queries til databasen for at gemme et spil}
 \label{fig:DAL-Sekvens-7}
 \end{figure}
 
@@ -70,7 +64,7 @@ Her skal der loades en liste af gemte spil, når brugeren ønsker at se sine gem
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/GetSavesSd.PNG}
-\caption{}
+\caption{Sekvensdiagram for user story 17 GetAllSaves som beskriver queries til databasen for at hente alle saves}
 \label{fig:DAL-Sekvens-17}
 \end{figure}
 
@@ -86,7 +80,7 @@ Dette kan også ses på sekvensdiagrammet på figur xxx.\\\\
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/GetSavesByIdSd.PNG}
-\caption{}
+\caption{Sekvensdiagram for user story 18 GetSaveById som beskriver queries til databasen for at hente et specifikt save og dens tilhørende information}
 \label{fig:DAL-Sekvens-18}
 \end{figure}
 
