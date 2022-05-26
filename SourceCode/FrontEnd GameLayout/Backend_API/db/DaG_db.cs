@@ -15,9 +15,6 @@ namespace Backend_API.db
             modelBuilder.Entity<User>()
                 .HasKey(x => x.Username);
 
-            modelBuilder.Entity<User>()
-                .HasIndex(p => new { p.Username, p.Password }).IsUnique();
-
             //Save
             modelBuilder.Entity<Save>()
                 .HasKey(x => x.ID);
@@ -55,7 +52,6 @@ namespace Backend_API.db
                 .HasOne<User>(s => s.User)
                 .WithMany(s => s.Saves)
                 .HasForeignKey(i => i.Username);
-
 
             //1 save to many Puzzles
             modelBuilder.Entity<Puzzles>()
