@@ -12,8 +12,6 @@ I oprettelsen af systemets database skal der tages hånd om, hvordan kommunikati
 Måden kommunikationen vil foregå igennem systemet vises her. Her ses der at en bruger interagere med Front-End, data går videre til Game Module, som kommunikere med Back-End, hvor der til sidst enten bliver skrevet til databasen eller hentet data fra databasen
 For at illustrere databasens funktionalitet er der blevet dannet sekvensdiagrammer, som viser hvordan databasen vil kunne gemme et spil og hente et gemt spil.
 
-For at illustrere databasens funktionalitet er der blevet dannet sekvensdiagrammer, som viser hvordan databasen vil kunne gemme et spil og hente et gemt spil.
-
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/RoomDescriptionsDB.PNG}
@@ -39,7 +37,7 @@ I diagrammet GetAllSaves foregår kommunikation på samme måde som ved at hente
 \label{fig:GetSaveDB}
 \end{figure}
 
-I diagrammet GetSave ses der hvordan et specifikt gemt spil hentes. Her ses der at det igen går først igennem DAL. Et gemt spil vil have et ID, som der kan anvendes til at finde de korresponderende værdier som dette gemte spil har. Her ses der at der vil findes items, enemies, puzzles og hvilke rum en spiller har besøgt. Dataene returneres herefter til DAL og så til SaveController.
+I diagrammet GetSave ses der hvordan et specifikt gemt spil hentes. Her ses der at dataene igen går først igennem DAL. Et gemt spil vil have et ID, som der kan anvendes til at finde de korresponderende værdier som dette gemte spil har. Her ses der at der vil findes items, enemies, puzzles og hvilke rum en spiller har besøgt. Dataene returneres herefter til DAL og så til SaveController.
 
 \begin{figure}[H]
 \centering
@@ -48,12 +46,13 @@ I diagrammet GetSave ses der hvordan et specifikt gemt spil hentes. Her ses der 
 \label{fig:SaveGameDB}
 \end{figure}
 
-I dette diagram, SaveGame, ses der hvordan et spil vil gemmes. Måden dette vil fungere på er at spilleren vil starte med fem tomme gemte spil, som bliver seeded til databasen. Dette bliver gjort for at begrænse en bruger til fem gemte spil. Så for at gemme et spil findes der først hvilket gemte spil der skal overskrives. Derefter findes de relevante værdier i dette gemte spil. Hernæst slettes disse værdier og der tilføjes de nye korrekte værdier.
+I dette diagram, SaveGame, ses der hvordan et spil vil gemmes. Måden dette vil fungere på er at spilleren vil starte med fem tomme gemte spil, som bliver seeded til databasen. Dette bliver gjort for at begrænse en bruger til fem gemte spil. Så for at gemme et spil findes der først hvilket gemte spil der skal overskrives. Derefter findes de relevante værdier i dette gemte spil. Hernæst slettes disse værdier og der tilføjes de nye korrekte værdier.\\
+Brugeren vil derfor ikke have mulighed for at oprette et nyt spil, men kun mulighed for at overskrive en af fem tomme spil, som bliver oprettet for hver bruger.
 
 
 
 \subsection{DAL Arkitektur}
-I dette segment vil der blive forklaret tankerne bag arkitekturen vedr. oprettelsen af en funktionel database, som kan anvendes til at opbevaring af data til dette projekt.
+I dette segment vil der blive forklaret tankerne bag arkitekturen vedr. oprettelsen af en funktionel DAL, som kan anvendes til at styre kommunikationen til og fra databasen.
 Til oprettelsen af en funktionsdygtig database, i dette projekt, kræves der et relativt tæt sammenhold mellem databasen og backend api’en. API’en er ansvarlig for kommunikation mellem Front-end, Game Module og databasen.
 
 \begin{figure}[H]
