@@ -10,7 +10,7 @@ SaveController klassen inkluderer librariet Mircosoft.AspNetCore.MVC, dette gør
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_Code_GetSave.PNG}
 \caption{Code snippet af HttpGet metode som modtager et id og retunere et SaveDTO object til clienten}
-\label{fig:Arkitektur-Backend-Code-GetSave}
+\label{fig:Implementering-Backend-Code-GetSave}
 \end{figure}
 
 Librariet gør det ligeledes muligt at retunere ActionResults, som kan indeholde objekter og en status kode eller blot en status kode, hvis noget går galt. Alle funktionerne er async og retunerer en Task, hvilket gør at der er tale om asynkrone funktioner, der først retunerer en værdi når dataen er klar. Dette gør også at clienten kan klare andre opgaver ind til dataen er klar.
@@ -25,7 +25,7 @@ UserController klassen minder meget om SaveController klassen, den gør ligelede
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_Code_Login.PNG}
 \caption{Code snippet af HttpPost metode som modtager et UserDTO object og retunerer en JWT hvis brugeren findes og password’et er korrekt}
-\label{fig:Arkitektur-Backend-Code-Lgoin}
+\label{fig:Implementering-Backend-Code-Lgoin}
 \end{figure}
 
 Her tilføjes endnu en atrribut AllowAnonymous, da login skal være et anonymt kald, fordi brugeren endnu ikke er logget ind på clienten. Hvis brugeren findes og kodeordet er korrekt retuneres en ny JWT.\\
@@ -38,7 +38,7 @@ Et klasse diagram over BackEndControlleren kan ses på figur x.\\
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_klasse_BackEndController.PNG}
 \caption{klasse diagram af BackEndController}
-\label{fig:Arkitektur-Backend-Klasse-BackEndController}
+\label{fig:Implementering-Backend-Klasse-BackEndController}
 \end{figure}
 
 For at sikre at der kun findes en JWT i programmet ad gangen, skal BackEndController implementeres klassen som en singleton, hvilket vil sige at der kun eksiterer en enkelt instance i hele programmet, som der er global adgang til. På den måde sikres det nemlig at BackEndController altid indeholder den korrekte JWT, uanset hvor henne i programmet der laves en request fra. Uden dette ville JWT nemlig kun være sat inde i det scope, hvor der blev logget ind eller en bruger blev registreret fra, altså der hvor den nuværende instance af BackendControlleren eksiterer. Funktionerne her er ligeledes asynkrone.\\
