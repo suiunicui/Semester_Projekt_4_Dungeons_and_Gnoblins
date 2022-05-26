@@ -1,4 +1,4 @@
-\subsection{Database modultest}
+\subsection{Modultest database}
 Der er som gruppe taget en beslutning om at hoste databasen lokalt i en docker container. Dette blev valgt på baggrund af en samtale med vejleder, hvor vi blandt andet, grundet sikkerhedsforanstaltning på au’s netværk, kunne løbe ind i nogle problemer.
 Den lokale hosting medførte at vi kunne holde øje med databasens udformningen, samt den gemte data gennem Microsoft azure datastudie.\\
 
@@ -6,7 +6,7 @@ For at teste DAL funktioner og dens forbindelse til databasen, oprettes først e
 
 Til test hvor der skal indsættes data i databasen oprettes der objekter af den korrekte type hvorefter DAL funktioner til indsættes kaldes. Korrektheden af de indsatte data kan herefter tjekkes med datastudie.
 Et eksempel på dette kan ses på figur xx herunder.
-Der oprettes et DAL objekt, datahelper, og et GameDTO objekt, gamesave.
+Der oprettes et DAL objekt, datahelper, og et GameDTO objekt, gamesave.\\
 Her opsættes gamesave til ”Gamer1”, med navnet ”My First Run”, hvorefter der tilføjes yderligere data. Det overskrevne save er ”NewGame1”, som her har id 1.
 
 \begin{figure}[H]
