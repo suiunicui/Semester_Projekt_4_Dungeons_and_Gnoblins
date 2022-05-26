@@ -1,7 +1,7 @@
 \section{Accepttestspecifikation}
-For accepttestspecifikationen er der opstillet tests for dette projekt, og på baggrund af disse kan der betragtes som et funktionelt og acceptabelt produkt. Denne accepttestspecifikation er delt op i Funktionelle krav og ikke funktionelle krav.
+For accepttestspecifikationen er der opstillet tests for dette projekt, og på baggrund af disse kan det betragtes som et funktionelt og acceptabelt produkt. Denne accepttestspecifikation er delt op i Funktionelle krav og ikke funktionelle krav.
 
-\subsubsection{Funktionelle}
+\subsection{Funktionelle}
 \paragraph{Test af User Story 1 - Login}
 
 \bf{Scenarie - Succesfuld login}
@@ -361,13 +361,12 @@ Kommentar:\\
 Resultat: Fejl\\
 Kommentar: Bruger kan gå til main menu, men sidste beskrivelse giver en uklar besked.\\
 
-\paragraph{Ikke funktionelle}
-\bf{GUI}\\
+\subsection{ikke-funktionelle}
+\bf{GUI}
 \begin{table}[H]
 \caption{}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
 GUI'en skal tilbyde valget mellem 3 resolutions & Visuel & Godkendt & \\
@@ -375,16 +374,14 @@ GUI'en skal tilbyde valget mellem 3 resolutions & Visuel & Godkendt & \\
 GUI'en skal kunne være fullscreen & Visuel & Fejl & Window bar kunne ikke fjernes i fuldskærms opløsning\\
 \hline
 GUI'en skal kunne være windowed & Visuel & Godkendt & \\
-\hline
 \end{tabular}
 \end{table}
 
-\bf{SOUND}\\
+\bf{SOUND}
 \begin{table}[H]
 \caption{}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
 Lyden skal kunne justeres mellem 0-100\% relativt til PC'ens lyd niveau. & Auditorisk/Visuel & Godkendt & \\
@@ -392,12 +389,11 @@ Lyden skal kunne justeres mellem 0-100\% relativt til PC'ens lyd niveau. & Audit
 \end{tabular}
 \end{table}
 
-\bf{DATABASE}\\
+\bf{DATABASE}
 \begin{table}[H]
 \caption{}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
 Skal kunne gemme maksimalt 5 save games & Visuel & Fejl & Back-end begrænser antal gemte spil, databasen kan indeholde flere gemte spil end fem.  \\
@@ -417,12 +413,11 @@ Skal gemme hvilke rum man har været i. & Visuel & Godkendt & \\
 \end{tabular}
 \end{table}
 
-\bf{GAMEPLAY}\\
+\bf{GAMEPLAY}
 \begin{table}[H]
 \caption{}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
 Spillets kort skal holde styr på hvilke rum man kan komme til for et givet rum. & Visuel & Godkendt & \\
@@ -442,7 +437,6 @@ Spillerens rygsæk skal kunne indeholde alle spillets genstande. & Visuel & Godk
 Spilleren skal have mulighed for at bruge ét våben og et skjold af gangen. & Visuel & Godkendt & \\
 \hline
 Spilleren skal have mulighed for at skifte hvilket våben og hvilket skjold der bruges. & Visuel & Godkendt & \\
-\hline
 \end{tabular}
 \end{table}
 
@@ -450,8 +444,7 @@ Spilleren skal have mulighed for at skifte hvilket våben og hvilket skjold der 
 \begin{table}[H]
 \caption{}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
 Når spilleren/fjenden prøver at slå, rammer man kun hvis man på sit angreb slår højere end modstanderens rustningsværdi. Dette afgøres af et simuleret 20 sidet terninge kast, hvortil der lægges en værdi til, korresponderende til spilleren/fjendens våben bonusser. & Visuel & Godkendt & Et angreb går også igennem hvis slaget er lige på PC's rustningsværdi \\
@@ -469,12 +462,11 @@ Hvis spilleren drikker en livseleksir bliver spillerens nuværende liv sat til f
 \end{tabular}
 \end{table}
 
-\bf{PERFORMANCE}\\
+\bf{PERFORMANCE}
 \begin{table}[H]
 \caption{}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
  Spillet skal respondere indenfor maksimalt 5s & Visuel & Godkendt & \\
@@ -484,12 +476,11 @@ Beskrivelse & Verificering & Resultat & Kommentar \\
 \end{tabular}
 \end{table}
 
-\bf{STABILITY}\\
+\bf{STABILITY}
 \begin{table}[H]
 \caption{}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
  MEANTIME BETWEEN FAILURE 1Time + 10Min? & Visuel & Fejl & MTBF er ikke testet \\
@@ -497,12 +488,11 @@ Beskrivelse & Verificering & Resultat & Kommentar \\
 \end{tabular}
 \end{table}
 
-\bf{DOCUMENTATION}\\
+\bf{DOCUMENTATION}
 \begin{table}[H]
 \caption{}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
 Spillet skal have en manual/help page til hvordan alting virker. & Visuel & Fejl & Der er et tutorial rum i stedet for \\
@@ -510,12 +500,11 @@ Spillet skal have en manual/help page til hvordan alting virker. & Visuel & Fejl
 \end{tabular}
 \end{table}
 
-\bf{STABILITY}\\
+\bf{STABILITY}
 \begin{table}[H]
 \caption{}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
  Username skal være mindst 6 characters & Visuel & Fejl & Der er ikke checks på Username længde\\
@@ -531,5 +520,5 @@ Beskrivelse & Verificering & Resultat & Kommentar \\
 \end{tabular}
 \end{table}
 
-\subsubsection{Accepttestspecifikation konklusion}
+\subsection{Accepttestspecifikation konklusion}
 Fejlene i vores tests er samlet i checks på Password og Username, hvor der ikke er tilstrækkelige tests. Dog baseret på vores MOSCOW krav om at sikkerhed ikke er fokus, så er dette stadig acceptabelt for dette projekt. Yderligere er MTBF ikke testet, da dette ville være utrolig besværligt for dette type projekt. Ud fra de ovenstående tests kan der konkluderes at gruppen har fået lavet et funktionelt produkt.
