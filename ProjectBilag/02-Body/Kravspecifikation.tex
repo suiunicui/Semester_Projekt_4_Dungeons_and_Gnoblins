@@ -1,3 +1,19 @@
+\section{Systembeskrivelse}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{02-Body/Images/C4TopLvlDB}
+\caption{C4 top level diagram, som viser kommunikation mellem systemets segmenter}
+\label{fig:C4TopLvlDB}
+\end{figure}
+
+På figuren herover ses systemets toplevel arkitektur.
+Denne består af en bruger som interagerer med systemet gennem frontendapplikationen som skrives i WPF. States i denne applikation styres af Game modul som holder styr på hvor spilleren befinder sig, hvilke items der er samlet op og andre nyttige information som skal bruges gennem spillet.
+Spillets backend benyttes primært til bruger authentication og som bindeled til databasen.
+Databasen indeholder oplysninger om blandt andet brugere, de gemte spil og oplysninger om historien for de forskellige rum.
+
+
+
 \section{Kravspecifikation}
 
 I det følgende afsnit vil vi uddybe de forudbestemt krav til projektets specifikation. Dette indeholder en systembeskrivelse, samt en accepttestspecifikation til de opsatte krav.
@@ -604,7 +620,7 @@ Kommentar:\\
 
 \paragraph{Ikke funktionelle}
 \bf{GUI}\\
-\begin{table}
+\begin{table}[H]
 \caption{}
 \label{tab:}
 \begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
@@ -615,6 +631,149 @@ GUI'en skal tilbyde valget mellem 3 resolutions & Visuel & & \\
 GUI'en skal kunne være fullscreen & Visuel & &\\
 \hline
 GUI'en skal kunne være windowed & Visuel & & \\
+\end{tabular}
+\end{table}
+
+\bf{SOUND}\\
+\begin{table}[H]
+\caption{}
+\label{tab:}
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+Beskrivelse & Verificering & Resultat & Kommentar \\
+\hline
+Lyden skal kunne justeres mellem 0-100\% relativt til PC'ens lyd niveau. & Auditorisk/Visuel & & \\
+\hline
+\end{tabular}
+\end{table}
+
+\bf{DATABASE}\\
+\begin{table}[H]
+\caption{}
+\label{tab:}
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+Beskrivelse & Verificering & Resultat & Kommentar \\
+\hline
+Skal kunne gemme maksimalt 5 save games & Visuel & & \\
+\hline
+Skal kunne loade et spil indenfor maksimalt 5s & Visuel & &\\
+\hline
+Skal gemme hvilke genstande man bruger lige nu & Visuel & & \\
+\hline
+Skal gemme hvor meget liv man har tilbage. & Visuel & & \\
+\hline
+Skal gemme hvilke fjender man har slået ihjel. & Visuel & & \\
+\hline
+Skal gemme hvilke puzzles man har løst & Visuel & & \\
+\hline
+Skal gemme hvilke rum man har været i. & Visuel & & \\
+\hline
+\end{tabular}
+\end{table}
+
+\bf{GAMEPLAY}\\
+\begin{table}[H]
+\caption{}
+\label{tab:}
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+Beskrivelse & Verificering & Resultat & Kommentar \\
+\hline
+Spillets kort skal holde styr på hvilke rum man kan komme til for et givet rum. & Visuel & & \\
+\hline
+Spillets kort skal kun vise de rum som spilleren har været i. & Visuel & &\\
+\hline
+Spillets kort skal, hvis spilleren har været i alle rum vise alle rum. & Visuel & & \\
+\hline
+Et rum kan have maksimalt 4 forbindelser til andre rum. & Visuel & & \\
+\hline
+Et rum skal have mindst 1 forbindelse til andre rum. & Visuel & & \\
+\hline
+Alle Rum skal kunne nås fra ethvert andet rum, måske ikke direkte, men man skal kunne komme dertil. & Visuel & & \\
+\hline
+Spillerens rygsæk skal kunne indeholde alle spillets genstande. & Visuel & & \\
+\hline
+Spilleren skal have mulighed for at bruge ét våben og et skjold af gangen. & Visuel & & \\
+\hline
+Spilleren skal have mulighed for at skifte hvilket våben og hvilket skjold der bruges. & Visuel & & \\
+\end{tabular}
+\end{table}
+
+\bf{COMBAT}\\
+\begin{table}[H]
+\caption{}
+\label{tab:}
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+Beskrivelse & Verificering & Resultat & Kommentar \\
+\hline
+Når spilleren/fjenden prøver at slå, rammer man kun hvis man på sit angreb slår højere end modstanderens rustningsværdi. Dette afgøres af et simuleret 20 sidet terninge kast, hvortil der lægges en værdi til, korresponderende til spilleren/fjendens våben bonusser. & Visuel & & \\
+\hline
+Hvis spilleren/fjenden rammer, bliver skaden bestemt af et/flere simulerede terningekast, afhængigt af hvilket våben der bruges. & Visuel & &\\
+\hline
+Hvis spilleren/fjenden rammer, bliver skaden bestemt af et flere simulerede terningekast, afhængigt af hvilket våben der bruges.  & Visuel & & \\
+\hline
+Hvis spilleren, når nul liv inden fjenden, så dør spilleren og spillet er tabt. & Visuel & & \\
+\hline
+Hvis fjenden, når nul liv inden spilleren, så dør fjenden og spilleren kan nu frit udforske rummet, som fjenden var i. & Visuel & & \\
+\hline
+Hvis spilleren drikker en livseleksir bliver spillerens nuværende liv sat til fuldt & Visuel & & \\
+\hline
+\end{tabular}
+\end{table}
+
+\bf{PERFORMANCE}\\
+\begin{table}[H]
+\caption{}
+\label{tab:}
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+Beskrivelse & Verificering & Resultat & Kommentar \\
+\hline
+ Spillet skal respondere indenfor maksimalt 5s & Visuel & & \\
+\hline
+ Spillet må ikke have mere end én kommando i aktionskøen af gangen & Visuel & &\\
+\hline
+\end{tabular}
+\end{table}
+
+\bf{STABILITY}\\
+\begin{table}[H]
+\caption{}
+\label{tab:}
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+Beskrivelse & Verificering & Resultat & Kommentar \\
+\hline
+ MEANTIME BETWEEN FAILURE 1Time + 10Min? & Visuel & & \\
+\hline
+\end{tabular}
+\end{table}
+
+\bf{DOCUMENTATION}\\
+\begin{table}[H]
+\caption{}
+\label{tab:}
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+Beskrivelse & Verificering & Resultat & Kommentar \\
+\hline
+Spillet skal have en manual/help page til hvordan alting virker. & Visuel & & \\
+\hline
+\end{tabular}
+\end{table}
+
+\bf{STABILITY}\\
+\begin{table}[H]
+\caption{}
+\label{tab:}
+\begin{tabular}{p{3cm}|p{3cm}|p{3cm}|p{3cm}}
+Beskrivelse & Verificering & Resultat & Kommentar \\
+\hline
+ Username skal være mindst 6 characters & Visuel & & \\
+\hline
+ Username skal være unikt & Visuel & & \\
+\hline
+ Password skal være mindst 8 characters & Visuel & & \\
+\hline
+ Password skal have store og små bogstavers & Visuel & & \\
+\hline
+ Password må ikke indeholde username & Visuel & & \\
+\hline
 \end{tabular}
 \end{table}
 
