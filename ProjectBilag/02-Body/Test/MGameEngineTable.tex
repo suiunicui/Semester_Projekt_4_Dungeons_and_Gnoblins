@@ -1,7 +1,7 @@
 \subsubsection{GodkendelsesTabel Game Engine}
 Nedestående præsenteres en fuld tabel for alle classes testet som 
 led i Game Engine. De vigtigste er GameController, CombatController,
-Player/Room og DiceRoller. Dice Danner ``Core Mechanics'' for spillet.
+Player/Room og DiceRoller. Dice danner ``Core Mechanics'' for spillet.
 
 Interessant nok ses her at GameController fejler sine test grundet at
 der ikke er skrevet test til mange af GameControllerens ansvars punkter.
@@ -28,10 +28,10 @@ der ikke er skrevet test til mange af GameControllerens ansvars punkter.
     \end{enumerate}
   &
   \flushleft 
-  Game Controller Har kun test for at skifte til nyt Room, dette betyder at der 
+  Game Controller er kun test for at skifte til nyt Room, dette betyder at der 
   ikke kan stilles garanti for at resterende implementeringer af load- og save game
   osv. fungere som ønsket. Disse ting er svagt testet gennem visuelt trial and error
-  test. Men fordi der ikke er skrevet nogen specifikke test til dem Fejler 
+  test, men da der ikke er skrevet nogen specifikke test til dem Fejler 
   GameControlleren sin komponent test.
   &
   FAIL
@@ -44,8 +44,8 @@ der ikke er skrevet test til mange af GameControllerens ansvars punkter.
   \end{enumerate}
   &
   \flushleft
-  Combat controller kan håndtere at spilleren løber fra combat og at Player engager i combat.
-  CombatController can stille garanti for at combat sker i den rigtige orden og at hverken
+  Combat controller kan håndtere at spilleren løber fra combat og at Player indgår i combat.
+  CombatController kan stille garanti for at combat sker i den rigtige orden og at hverken
   spiller eller enemy kan angribe hvis denne er død.
   Ydmere stiller den garanti for at både enemy og spiller kan lave ``critial hits'' hvis dice
   rolleren slår 20.
@@ -199,7 +199,7 @@ Derved kan alle senarier for Player klassen testes, hvor man kan regne med at Di
 \newpage 
 
 \subsubsection{Test Resultater for Game Engine}
-Nedestående vises kort resultatet for Game Engine test, når de alle køres via visuel studio. Som det kan ses så er alle testene succesfulde, hvilket giver hvis garanti for at
+Nedestående vises kort resultatet for Game Engine test, når de alle køres via visual studio. Som det kan ses så er alle testene succesfulde, hvilket giver hvis garanti for at
 game engine opfører sig som specificeret i kravspecifikationerne og i de implementerede interfaces.
 
 \begin{figure}[H]
