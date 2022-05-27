@@ -1,9 +1,9 @@
 \subsection{Frontend Design}
 
-I frontenden ønskes det at hele spillet foregår i et vindue. Det er derfor nødvendigt at programmet kan skifte mellem forskellige views uden at skulle åbne et nyt vindue, hver gang der skiftes. Løsningen til denne udfordring beskrives nærmere i implementerings afsnittet, nemlig \autoref{sec:Frontend Implementering}.
+I frontenden ønskes det at hele spillet foregår i et vindue. Det er derfor nødvendigt at programmet kan skifte mellem forskellige views uden at skulle åbne et nyt vindue, hver gang der skiftes. Løsningen til denne udfordring beskrives nærmere i implementerings afsnittet, i \autoref{sec:Frontend Implementering}.
 Spillet vil bestå af en række af vinduer, som giver spilleren den nødvændige information for at de kan spille spillet (så som at logge ind, gemme og hente spil, samt spille spillet).\\
 Inden arbejdet på Frontend arkitekturen begyndte, er der blevet lavet en teknologiundersøgelse \autoref{sec:unity-.net}, om hvilket udviklingsværktøj Frontenden og derigennem spillet skulle udvikles i. Baseret på denne teknologiundersøgelse er der blevet valgt, at spillet vil blive udviklet i et .NET framework. Dette valg er blandt andet truffet da dette framework passer bedre med den opdeling af arbejde der er lavet i projektgruppen, altså opdelingen af Frontend og Backend. For andre grunde, se \autoref{sec:unity-.net}, hvor flere fordele og ulemper for både unity og .NET frameworket er sat op.\\
-Her følger en række af mockups\footnote{Lavet i Unity} af nogle af spillets views.
+Her følger en række af illustrationer\footnote{Lavet i Unity} af nogle af spillets views.
 
 \subsubsection{Room}
 
@@ -20,7 +20,7 @@ Udover de fire retningsknapper er der et antal andre knapper. Disse bruges til a
 
 \subsubsection{Combat}
 
-Combat vinduet er baseret på room vinduet. Strukturen er den samme: der er et kort øverst til højre, en beskrivelse øverst til venstre og knapper neders til højre. Nederst til venstre er der information om hvordan kampen går,  i stedet for en liste af elementer i rummet.\\
+Combat vinduet er baseret på room vinduet. Strukturen er den samme: der er et kort øverst til højre, en beskrivelse øverst til venstre og knapper nederst til højre. Nederst til venstre er der information om hvordan kampen går,  i stedet for en liste af elementer i rummet.\\
 Knapperne består af nogle "menu" knapper, som lader dig gå til spil menuer, samt en 'Fight' knap og en 'Flee' knap. 'Fight' knappen lader spilleren kæmpe mod fjenden, mens 'Flee' knappen lader spilleren flygte fra kampen og tilbage til rummet som spilleren kom fra.
 
 
