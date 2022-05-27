@@ -30,7 +30,7 @@ Denne route logger en bruger ind ved at tjekke bruger oplysninger med dem som er
 
 \subsubsection{Data Transfer Object:}
 
-De data objekter som gemmes i SQL databasen indeholder nogle navigational properties, som bruges til at query data’en og til at opretter relationer mellem objekterne. Da disse properties ikke har nogen relevans for clienten oprettes der følgende DTO’er for modellerne User og Save som ses på figur x (Mangler ref til figur).\\
+De data objekter som gemmes i SQL databasen indeholder nogle navigational properties, som bruges til at query data’en og til at opretter relationer mellem objekterne. Da disse properties ikke har nogen relevans for clienten oprettes der følgende DTO’er for modellerne User og Save som ses på \autoref{fig:Design-Backend-DTO}\\
 
 \begin{figure}[H]
 \centering
@@ -64,7 +64,7 @@ Funktionen verify(”password”, hashedpassword) bruges til at verificere om et
 
 \subsubsection{Applikationsmodel User Controller}
 \textbf{User Story 1: Log in}\\
-Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/User/Login”, udføres følgende aktioner som fremgår af sekvensdiagrammet på figur x.(ref til figur)\\ 
+Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/User/Login”, udføres følgende aktioner som fremgår af sekvensdiagrammet på \autoref{fig:Design-Backend-Sekvens-1}\\ 
 
 \begin{figure}[H]
 \centering
@@ -76,7 +76,7 @@ Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046
 Authentication controlleren fra C3 modellen hedder her “UserController” og har til opgave at gøre det muligt for en bruger at registrere sig og logge ind. Login implementeres i Login() funktionen, som er det endpoint clienten kalder for at logge ind. Her bliver der tjekket om det indtastede brugernavn findes i databasen. Hvis brugernavnet findes, så bliver adgangskoden tjekket med funktionen verify fra Bcrypt klassen, og passer den, bliver der returneret en JWT token. Hvis brugernavnet derimod allerede eksiterer eller adgangskoden ikke er korrekt retuneres en fejlmeddelse.\\
 
 \textbf{User Story 2: Opret Bruger}\\
-Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/User/Register”, udføres følgende aktioner som fremgår af sekvensdiagrammet på figur x (mangler ref).\\
+Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/User/Register”, udføres følgende aktioner som fremgår af sekvensdiagrammet på \autoref{fig:Design-Backend-Sekvens-2}\\
 
 \begin{figure}[H]
 \centering
@@ -89,7 +89,7 @@ For at kunne logge ind skal det være muligt at oprette en bruger til dette lave
 
 \textbf{Samlet Klasse diagram over User Story 1 og 2}\\
 
-På figur 3 kan ses en oversigt over de klasser, metoder og attributter, som anvendes i udførelsen af User story 1 og 2. Hertil anvendes også klassen Bcrypt som ikke er taget med, da den blot er brugt udefra, detaljer om Bcrypt kan ses i afsnitet ovenover.\\
+På \autoref{fig:Design-Backend-Klasse-1-2} kan ses en oversigt over de klasser, metoder og attributter, som anvendes i udførelsen af User story 1 og 2. Hertil anvendes også klassen Bcrypt som ikke er taget med, da den blot er brugt udefra, detaljer om Bcrypt kan ses i afsnitet ovenover.\\
 
 \begin{figure}[H]
 \centering
@@ -101,7 +101,7 @@ På figur 3 kan ses en oversigt over de klasser, metoder og attributter, som anv
 \subsubsection{Applikationsmodel Save Controller}
 \textbf{User Story 7: Exit Menu -\g Save and Exit}\\
 Load/save controlleren fra C3 modellen er blevet til en enkelt controller, som kaldes for ”SaveController”. Denne controller har til ansvar for at gemme et spil, men samtidig også være i stand til at kunne hente save games, altså at loade dem.
-Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/Save”, udføres følgende aktioner som fremgår af sekvensdiagrammet på figur x (mangler ref)\\
+Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/Save”, udføres følgende aktioner som fremgår af sekvensdiagrammet på \autoref{fig:Design-Backend-Sekvens-7}\\
 
 \begin{figure}[H]
 \centering
@@ -114,19 +114,19 @@ Der bruges en httpPost funktion kaldet PostSave som gemmer et nyt spil i databas
 
 \textbf{User Story 17: Exit Menu -\g Save and Exit}\\
 
-Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/Save/Get List Of Saves”, udføres følgende aktioner som fremgår af sekvensdiagrammet på figur x (mangler ref).\\
+Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/Save/Get List Of Saves”, udføres følgende aktioner som fremgår af sekvensdiagrammet på \autoref{fig:Design-Backend-Sekvens-17}\\
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_sekvens_17.PNG}
-\caption{Sekvensdiagram over User Story 17 Main Menu -> Load List Game}
+\caption{Sekvensdiagram over User Story 17 Main Menu -\g Load List Game}
 \label{fig:Design-Backend-Sekvens-17}
 \end{figure}
 
 Da vi gerne vil gøre det muligt at have 5 save games pr. profil, skal det naturligvis være muligt at kunne vælge mellem de forskellige saves, til dette laves funktion GetListOfSaves(). Clienten kalder her GetListOfSaves() som er et HttpGet endpoint, denne funktion henter alle saves i DAL klassen ved at kalde GetAllSaves(). SaveController finder så de gemte spil i listen hvor brugernavnet passer med den burger, som er logget ind ved brug af User.Identity som stilles til rådighed af ControllerBase klassen, her i kan claims for den nuværende JWT nemlig findes.\\
 
 \textbf{UserStory 18 : Main Menu -\g Load Game -\g Load}\\
-Når clienten udfører en HTTP request med URL’en :” https://localhost:7046/api/Save?id={id}”, udføres følgende aktioner som fremgår af sekvensdiagrammet på figur x (mangler ref)\\
+Når clienten udfører en HTTP request med URL’en :” https://localhost:7046/api/Save?id={id}”, udføres følgende aktioner som fremgår af sekvensdiagrammet på \autoref{fig:Design-Backend-Sekvens-18}\\
 
 \begin{figure}[H]
 \centering
@@ -140,7 +140,7 @@ Når clienten udfører en HTTP request med URL’en :” https://localhost:7046/
 Under design fasen blev det besluttet at overskrive gemte saves fremfor at slette og lave et nyt, da et saves Id på den måde ikke ændret sig i databasen når man lavede et nyt save. Derfor er User story 19 som omhandler Delete game ikke taget med i design fasen.\\
 
 \textbf{Samlet klasse diagram over User story 7, 17 og 18}\\
-Et Samlet klasse diagram for User story 7, 17 og 18 kan ses på figur x (Mangler ref)\\
+Et Samlet klasse diagram for User story 7, 17 og 18 kan ses på \autoref{fig:Design-Backend-Sekvens-7-17-18}\\
 
 \begin{figure}[H]
 \centering
