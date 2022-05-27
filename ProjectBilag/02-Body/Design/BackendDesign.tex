@@ -99,7 +99,7 @@ På figur 3 kan ses en oversigt over de klasser, metoder og attributter, som anv
 \end{figure}
 
 \subsubsection{Applikationsmodel Save Controller}
-\textbf{User Story 7: Exit Menu -> Save and Exit}\\
+\textbf{User Story 7: Exit Menu -\g Save and Exit}\\
 Load/save controlleren fra C3 modellen er blevet til en enkelt controller, som kaldes for ”SaveController”. Denne controller har til ansvar for at gemme et spil, men samtidig også være i stand til at kunne hente save games, altså at loade dem.
 Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/Save”, udføres følgende aktioner som fremgår af sekvensdiagrammet på figur x (mangler ref)\\
 
@@ -112,7 +112,7 @@ Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046
 
 Der bruges en httpPost funktion kaldet PostSave som gemmer et nyt spil i databasen ved at ligge det modtagene gamestate fra parameter listen ind i et funktionskald SaveGame() i DAL klassen, som så sørger for at gemme spillet i databasen på den korrekte måde.\\
 
-\textbf{User Story 17: Exit Menu -> Save and Exit}\\
+\textbf{User Story 17: Exit Menu -\g Save and Exit}\\
 
 Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/Save/Get List Of Saves”, udføres følgende aktioner som fremgår af sekvensdiagrammet på figur x (mangler ref).\\
 
@@ -125,7 +125,7 @@ Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046
 
 Da vi gerne vil gøre det muligt at have 5 save games pr. profil, skal det naturligvis være muligt at kunne vælge mellem de forskellige saves, til dette laves funktion GetListOfSaves(). Clienten kalder her GetListOfSaves() som er et HttpGet endpoint, denne funktion henter alle saves i DAL klassen ved at kalde GetAllSaves(). SaveController finder så de gemte spil i listen hvor brugernavnet passer med den burger, som er logget ind ved brug af User.Identity som stilles til rådighed af ControllerBase klassen, her i kan claims for den nuværende JWT nemlig findes.\\
 
-\textbf{UserStory 18 : Main Menu -> Load Game -> Load}\\
+\textbf{UserStory 18 : Main Menu -\g Load Game -\g Load}\\
 Når clienten udfører en HTTP request med URL’en :” https://localhost:7046/api/Save?id={id}”, udføres følgende aktioner som fremgår af sekvensdiagrammet på figur x (mangler ref)\\
 
 \begin{figure}[H]
@@ -135,7 +135,7 @@ Når clienten udfører en HTTP request med URL’en :” https://localhost:7046/
 \label{fig:Design-Backend-Sekvens-18}
 \end{figure}
 
-\textbf{User Story 19 : Main Menu -> Load Game -> Delete Game}\\
+\textbf{User Story 19 : Main Menu -\g Load Game -\g Delete Game}\\
 
 Under design fasen blev det besluttet at overskrive gemte saves fremfor at slette og lave et nyt, da et saves Id på den måde ikke ændret sig i databasen når man lavede et nyt save. Derfor er User story 19 som omhandler Delete game ikke taget med i design fasen.\\
 

@@ -11,7 +11,7 @@ For at teste DAL funktioner og dens forbindelse til databasen, oprettes først e
 \end{figure}
 
 Til test hvor der skal indsættes data i databasen oprettes der objekter af den korrekte type hvorefter DAL funktioner til indsættes kaldes. Korrektheden af de indsatte data kan herefter tjekkes med datastudie.
-Et eksempel på dette kan ses på figur xx herunder.
+Et eksempel på dette kan ses på \autoref{fig:SaveGame-test} herunder.
 Der oprettes et DAL objekt, datahelper, og et GameDTO objekt, gamesave.\\
 Her opsættes gamesave til ”Gamer1”, med navnet ”My First Run”, hvorefter der tilføjes yderligere data. Det overskrevne save er ”NewGame1”, som her har id 1.
 
@@ -22,7 +22,7 @@ Her opsættes gamesave til ”Gamer1”, med navnet ”My First Run”, hvorefte
 \label{fig:SaveGame-test}
 \end{figure}
 
-På figur xxx herunder ses et screenshot fra datastudie hvor de 5 saves til ”Gamer1” kan ses.
+På \autoref{fig:datastudie-før} herunder ses et screenshot fra datastudie hvor de 5 saves til ”Gamer1” kan ses.
 Det noteres at alle saves er "tomme" og starter i rum 1.
 
 \begin{figure}[H]
@@ -32,8 +32,8 @@ Det noteres at alle saves er "tomme" og starter i rum 1.
 \label{fig:datastudie-før}
 \end{figure}
 
-Herefter køres programmet fra figur xx(kode), og vi kan nu se ændringerne i databasen.
-Det noteres at SaveName og de andre attributter nu er opdateret korrekt efter koden.
+Herefter køres programmet fra \autoref{fig:SaveGame-test}, og vi kan nu se ændringerne i databasen.
+Det noteres at SaveName og de andre attributter i figur \autoref{fig:datastudie-efter} nu er opdateret korrekt efter koden.
 
 \begin{figure}[H]
 \centering
@@ -42,7 +42,7 @@ Det noteres at SaveName og de andre attributter nu er opdateret korrekt efter ko
 \label{fig:datastudie-efter}
 \end{figure}
 
-De øvrige tilhørende lister til det gemte save er også opdateret med korrekte værdie. Dette kan også ses på figur xx herunder.
+De øvrige tilhørende lister til det gemte save er også opdateret med korrekte værdie. Dette kan også ses på \autoref{fig:Datastudie-ekstra} herunder.
 
 \begin{figure}[H]
 \centering
@@ -52,7 +52,7 @@ De øvrige tilhørende lister til det gemte save er også opdateret med korrekte
 \end{figure}
 
 Funktioner hvor der skal læses fra Db kaldes DAL funktionen hvorefter den fundne information udskrives til konsolen ved hjælp af console writeline. Korrektheden af data i konsolen dobbelttjekkes med datastudie.
-Et eksempel på dette ses på figur xx herunder.
+Et eksempel på dette ses på \autoref{fig:KodeTilLæsningAfSave} herunder.
 Her henter vi de gemte save fra tidligere fra ”Gamer1” ved navn ”My First Run”, hvorefter data fra dette save udskrives i konsolen.
 
 \begin{figure}[H]
@@ -62,22 +62,23 @@ Her henter vi de gemte save fra tidligere fra ”Gamer1” ved navn ”My First 
 \label{fig:KodeTilLæsningAfSave}
 \end{figure}
 
-Når kodestykket ovenfor køres får vi resultatet i konsol som set på figur xx herunder.
+Når kodestykket ovenfor køres får vi resultatet i konsol som set på \autoref{fig:Modulttest-consoleOutput} herunder.
 Det noteres at det udskrevne data stemmeroverens med det indsatte data fra den tidligere funktionstest.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.25\textwidth]{02-Body/Images/DAL-Database/ConsoleOutput.png}
-\caption{Konsoleudskrift efter læsning af spil fra databasen, hvor det noteres at informationen stemmer overens med det indsatte i \textbf{REF TIL FIGUR MED INDSÆTTELSE}}
+\caption{Konsoleudskrift efter læsning af spil fra databasen, hvor det noteres at informationen stemmer overens med det indsatte i \autoref{fig:SaveGame-test}}
 \label{fig:Modulttest-consoleOutput}
 \end{figure}
 
 
-I tabel xx herudner ses en tabel over udførte test, forventede resultater, den faktiske observering og vurderingen af observeringen.
+I \autoref{table:Modulttest-DB-Tabel} herudner ses en tabel over udførte test, forventede resultater, den faktiske observering og vurderingen af observeringen.
 Alle test er udført og vi observerer det forventede resultat. Vi vurderer derfor alle test som OK.
 
 \begin{table}[H]
 \caption{Tabel over modulttest af DAL forbindelse til databsen. Alle test observeringer stemmeroverens med forventningerne og markeres derfor OK }
+\label{table:Modulttest-DB-Tabel}
 \begin{tabular}{|p{0.75cm}|p{3.6cm}|p{3.5cm}|p{3.5cm}|p{1.9cm}|} \hline
 \multicolumn{5}{|c|}{\textbf{DAL-Database Godkendelses Tabel}} \\ \hline
  \textbf{Test} & \textbf{Funktion} & \textbf{Forventet resultat} & \textbf{Observering} & \textbf{Vurdering} \textbf{(OK/Fail)}\\\hline

@@ -3,12 +3,12 @@
 Resultat af den tekniske analyse af Front-end delen af projekt, blev at anvende .NET Core frameworket WPF til spillets GUI. Med dette på plads skal det besluttes hvordan spillets back-end skal bygges op. Back-end’ens ansvar er at flytte og validere data mellem spillet GUI og spillets tilhørende Database. Da det er blevet besluttet at anvende en Microsoft SQL database og at GUI’en udvikles i WPF, giver det mening at back-end’en ligeledes udvikles i et .NET miljø. Derfor ser vi på følgende to muligheder.\\
 
 
-\subsubsection{Mulighed 1: WPF -> ASP.NET Core -> Entity Framework Core -> Database}
+\subsubsection{Mulighed 1: WPF -\g ASP.NET Core -\g Entity Framework Core -\g Database}
 Denne mulighed indebære .NET frameworket ASP.NET Core. Her vil dataflowet altså blive følgende. Data’en skal flyttes først fra WPF til ASP.NET og derfra med EF Core til databasen, og så tilbage igen.
 Det skal altså være muligt for WPF App’en at kontakte et Web Api og sende/modtage dataobjekter, dette kan gøres med HTTP request/response, hvilket vil kræve at data objekterne seraliseres og deseraliseres til/fra JSON, afhængigt af om der modtages eller sendes. For at dataen kan blive behandlet på back-end siden vil det kræve at JSON dataen så konverteres tilbage til objekter. Når dataen er færdigbehandlet kan web api’et kontakte databasen og sendes/modtage den nødvendige data. Med ASP.NET fåes muligheden for at lave et Web API server med en pipeline til at håndtere de forskellige forespørgelser, hvilket vil resultere i at systemets ansvarsområder bliver bedre fordelt. Hertil giver ASP.Net mulighed for authentication af brugere, samt Authorization af indkommende kald fra klienten, hvilket vil gøre systemet mere beskyttet. \\
 
 
-\subsubsection{Mulighed 2: WPF -> Entity Framework Core -> database}
+\subsubsection{Mulighed 2: WPF -\g Entity Framework Core -\g database}
 
 Dette er en mere simpel løsning, da det ikke kræver frameworket ASP.NET Core. Dataflowet vil her være direkte fra WPF til databasen ved hjælp af EF Core. På den måde opnåes den samme funktionalitet, men med et framework mindre. Det vil også være hurtigere at implementere og give et mindre risiko fyldt design, da der fjernes interface mellem Front-end applikationen og databasen. Med EF core fåes et mere Lightweight system med mindre overhead, som går fint i tråd med vores minimale valg af WPF fremfor Unity. Tilgengæld undværes et Web api med pipelines, hvilket resulterer i at back-end’ens opgaver, vil blive tættere koblet op ad WPF applikatonen.\\
 
