@@ -4,7 +4,10 @@
 I nedstående afsnit fremlægges metoder og processer brugt til udviklingen af
 Dungeons and Gnoblins spillet.
 
-\subsection{Udviklingsforløb}
+\subsubsection{Gruppedannelse}
+Gruppen blev dannet på baggrund af at vi som studerende selv skulle finde medlemmer og danne projektgrupper. 4 af gruppens medlemmer var dannet inden semesterets start og de resterende 4 blev indmeldt efter offentliggørelsen af semesterprojektet. Gruppen redegjorde først ideer til projektet og blev hurtigt forventningsafstemt om projektets resultat skulle være middelmådigt. 
+
+\subsubsection{Projektforløb og møder}
 Projektets endelige mål har været implementeringen af et text-based adventure game.
 Hertil har gruppen gjort brug af agile processen til at imødekomme dette mål.
 
@@ -13,10 +16,7 @@ hvilke features spillet har skulle inkludere. Continuous integration er dernæst
 været et vigtigt værktøj til implementeringen af de ønskede features, med et klart
 ønske om at integrere nye features ind i projektet få tidligt som muligt.\\
 
-Ugentlig har gruppen været engageret i et SCRUM møde, hvori hvert medlem har infomeret
-resten af gruppen om hvor langt i processen de er på daværende tidspunkt. Således har
-alle i gruppen altid været klar over projektets fremskridt og evt.\ problemmer der måtte
-være opstået i projektet.
+I løbet af projektforløbet blev der afholdt to faste ugentlige møder. Et internt gruppemøde om mandagen og vejledermøde om onsdagen. Hertil var der fra start uddelt rollerne Mødeleder og referent til gruppens medlemmer som gik på skift hver uge. Til hvert møde blev der gennemgået hvad der var blev arbejdet med, hvilke udfordringer der forekom samt hvad der fremadrettet skulle arbejdes med for hver af gruppens medlemmer. Dette gjorde vi i form af SCRUM for at give et bedre overblik for projektets fremgang og dermed vurderer om gruppen var bagud eller foran ift. Gruppens tidsplan. Vores SCRUM-proces var ikke avanceret hvor der blev koordineret SCRUM Master og Product Owner, men blev derimod anvendt som redskab til at skabe et overblik over arbejdsfordelingen og udviklingen. Tidsplanen blev udarbejdet ved projektets start og havde formålet at give gruppen deadlines for projektets udviklingsproces.
 
 \begin{figure}[H]
   \centering
@@ -33,7 +33,10 @@ Ugentlige opdateringer og møder omkring potentielle problemmer udviklingsforlø
 at gruppen har kunne tage hånd om evt. problemmer tidligt i forløbet og derved løse dem
 før de har udviklet sig til større problemmer.
 
-\newpage
+Til styring og implementering af souce code har vi benytte git som et version control system.
+fordelen ved git er at det tillade flere udviklere at arbejde på det samme projekt og integere 
+deres løsninger. Der er dog chancer for merge konflikter hvilket kan, i værkste tilfælde, før
+til problemmer med at integrer de forskellige løsninger korrekt med hinanden.
 
 \subsection{Modellering}
 Projektet benytter UML til at beskrive og modellere software-- arkitektur
@@ -53,6 +56,10 @@ af systemmets komponenter og deres kommunikation med hinanden.
 
 STM og SD diagrammer er brugt til at give programmets udførsel struktur, og fungere
 som en hjælp til at visualisere programmets forskellige states og flow of execution.
+Det giver et nemt overblik over hvordan funktionskald mellem forskellige komponenter
+har skal fungere således, at der ikke opstår misforsåelse grupperne imellem. 
+
+
 
 \subsubsection{Iterativ Udviklingsforløb}
 
@@ -68,3 +75,4 @@ har returneret efter et funktionskald.
 
 Denne flexible arbejdsmetode har igen ført til at problemmer ikke har kunne vokse men
 at der blevet taget hånd om dem mens det stadig har været muligt at håndtere dem.
+
