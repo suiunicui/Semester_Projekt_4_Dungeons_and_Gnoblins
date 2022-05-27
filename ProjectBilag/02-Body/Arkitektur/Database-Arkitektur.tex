@@ -41,7 +41,7 @@ I diagrammet GetSave ses der hvordan et specifikt gemt spil hentes. Her ses der 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = \textwidth]{02-Body/Images/SaveGameDB.pdf}
+\includegraphics[width = 0.7\textwidth]{02-Body/Images/SaveGameDB.png}
 \caption{Sekvensdiagram for User story 7: SaveGame. Dette diagram viser hvordan et spil gemmes}
 \label{fig:SaveGameDB}
 \end{figure}
@@ -71,4 +71,3 @@ LoadGame i DAL er ansvarlig for at hente spillerens data fra databasen, såsom h
 Hernæst er der SaveGame. Denne indeholder funktionaliteten for at sende et gemt spil, altså dataene for spillerens nuværende spil. Heri vil der også gemmes information og spillerens nuværende tilstand i spillet. Det ville f.eks. være rummet som spilleren er i når spillet bliver gemt.
 Begge af disse vil være ansvarlige for at håndtere data som er individuelle for hver spiller og hvert gemt spil.
 Udenfor systemets DAL ville der også være inkluderet Models i konstruktionen af systemets database. Models vil indeholde de entities som Authentication og Load-/SaveGame vil bestå af. Yderligere vil Models også være ansvarlig for forholdene imellem de forskellige entities. 
-
