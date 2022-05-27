@@ -15,13 +15,13 @@ Selve Web API’ets arkitektur bygges op omkring MVC (Model-View-Controller) mø
 
 Som det kan ses på figuren består mønstret overordnet af 4 dele client, controller, model og et DAL (Data Access Layer). Da der er tale om et Web API gøres der ikke brug af view moduller. De enkelte moduler har følgende ansvar.
 
-\subsubsection{Client:}
+\textbf{Client:}\\
 Clientens rolle er at kontakte Web API’et med henblik på at få udført en service, eksempel at logge ind.
-\subsubsection{Controller:}
+\textbf{Controller:}\\
 Controllernes ansvar er at håndterer indkommende kald fra clienten, og route til de rigtige Http endpoints, hvorefter databasen kontaktes igennem DAL.
-\subsubsection{DAL:}
+\textbf{DAL:}\\
 DAL’s ansvar er at kontakte og administere kommuikation med databasen i form af queries. Det er også her relationerne imellem data objekterne defineres.
-\subsubsection{Model:}
+\textbf{Model:}\\
 Modelernes ansvar er at håndtere og definere den data som kan sendes frem og tilbage mellem clienten og databasen, de sørger altså for at binde alle modulerne sammen, således at der er enighed omkring hvordan data objekterne ser ud.
 Som det kan ses passer MVC mønstret perfekt til den funktionalitet der ønskes. Mønstret gør det muligt at lave en logisk gruppering af relaterede opgaver, og er med til at sikre høj samhørighed i applikationen, ved at de enkelte ansvarsområder fordeles ud på hver sine moduler. På figur 1 ses det tydeligt hvordan koblingen mellem de enkelte moduler holdes på et lavt niveau, hvilket gør det lettere at bygge videre på og tilføje ny funktionalitet.
 
@@ -59,17 +59,16 @@ Der bygges videre på C4 modellen for systemet , et level 3 component diagram ov
 
 Figuren illustrerer en lagdelt struktur, hvor der ses en client som kalder ned i controllerne Authentication og Save Controller, som kalder videre til DAL, som så tilgår databasen denne kommunikationsvej går begge veje.
 
-\subsubsection{Client}
+\textbf{Client:}\\
 Der eksisterer en client, som kommunikerer med backenden Game Module. Game Module’s kald til backenden kan overordnet set indeles i to undergrupper, bruger håndtering og save håndtering. Bruger håndtering indeholder kald som omhandler login og registreing  (User story 1 og 2), hvor save håndtering omhandler loading og saving af Game state (User story 7, 17, 18 og 19). Kommuniaktionen her vil foregå ved netværkskald med protokolen HTTPS. Clienten udfører request/response kald til backenden igennem specifikke URL’s. For at data objekterne kan sendes frem og tilbage med HTTPS kald skal disse seralizeres og deseralizeres mellem JSON-objekter og .Net objekter.
-\subsubsection{Controller}
+\textbf{Controller:}\\
 Inde i backenden anvendes ASP. Net MVC controllere(Mangler ref)   til at modtage og svare på kald fra clienten. Der laves en controller for Bruger håndtering og en controller for Save håndtering. Hver request mappes til en specifik controller. Controllerne vil så indeholde action metoder, som udføres når den modtagere et kald. Når controlleren har udført sin action retuneres et Action Result, hvor i et data objekt kan wrappes eller den kan indeholde en fejlmeddelse hvis noget går galt.
-\subsubsection{DAL}
+\textbf{DAL:}\\
 De to controllere kalder som sagt videre ned i DAL laget, dette lag består af en database kontekst DaG\_db og en hjælper klasse til at udfører Queries. Her gøres brug af EF (Entity Framework) Core, som gør det muligt at arbejde med DbContext klassen, denne bruges til skabe en kontekst af databasen hvor i de enkelte modeller kan mappes til entities med Db<set>. Dette giver mulighed for at udfører operationer/queries på SQL databasen ved hjælp af LINQ (Language-Integrated Query).
-\subsubsection{Model}
+\textbf{Model:}\\
 Modellerne fungerer som bindeledet mellem alle komponenterne, de definere den data som der arbejdes på, og vil blot bestå af en række C\# klasser.\\
 
 Som det kan ses passer MVC mønstret perfekt til den funktionalitet der ønskes. Mønstret gør det muligt at lave en logisk gruppering af relaterede opgaver, og er med til at sikre høj samhørighed i applikationen, ved at de enkelte ansvarsområder fordeles ud på hver sine moduler. På figur 1 ses det tydeligt hvordan koblingen mellem de enkelte moduler holdes på et lavt niveau, hvilket gør det lettere at bygge videre på og tilføje ny funktionalitet.
-
 
 
 \subsubsection{REST}
