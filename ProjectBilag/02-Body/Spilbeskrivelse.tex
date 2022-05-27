@@ -2,9 +2,6 @@
 
 \subsection{Spilbeskrivelse}
 
-PC = Player Character
-RNG = Random Number Generator
-
 Spillet designes som et text-based spil, hvilket er en spilgenre hvor brugeren interagerer med spillet igennem tekst beskrivelser. Spillet består overordnet af fire dele med hver deres ansvar: en grafisk brugergrænseflade, en database, en back-end til netværkskommunikation, samt selve spil logikken. Brugergrænsefladen gør det muligt for brugeren at integrere med spillet. Den vil bestå af en række forskellige vinduer med hver sit formål (login screen, gameplay screen og settings screen), der hovedsageligt vil indeholde knapper og beskrivende tekst. Databasens ansvar er at gemme de enkelte spil. Databasen er en relationel database som sammenholder de enkelte brugeres profiler (Username og password) med informationer omkring deres fremskridt i spillet, såsom placering, items og stats. Det skal være muligt for en bruger at hente sine gemte spil ned på flere forskellige enheder. Til dette skal der bruges en netværksforbindelse til databasen.   
 
 \subsection{Login-screen}
@@ -54,6 +51,6 @@ Det skal være muligt for spilleren at tilgå en menu med spillets indstillinger
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/SettingsMenu-udkast.png}
 \caption{Udkast til settings menuen, hvor man til venstre kan sætte spillets resolution og til højre kan sætte spillets musik volume.
-Nederst er der 3 forskellige muligheder, gem settings, default setting og at gå tilbage}
+Nederst er der 3 forskellige muligheder, gem settings, default settings og at gå tilbage}
 \label{fig:Settings-udkast}
 \end{figure}
