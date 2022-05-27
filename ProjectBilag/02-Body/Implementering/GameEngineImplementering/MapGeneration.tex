@@ -22,22 +22,22 @@ danne et map udfra denne fil.
 Filen består af linjer med formen \textit{``leftRoomId, TopRoomId, RightRoomId, BottomRoomId''}. Den først linje dækker room 1, næste linje dækker room 2 osv.
 
 Hver linje i map layout filen mappes til en liste af roomId'er,  der kan insertes i Map
-klassens mapLayout listea. Denne Liste danner grundlaget for spillets map og 
+klassens mapLayout liste. Denne Liste danner grundlaget for spillets map og 
 diktere hvordan spilleren kan navigere i spillet. Denne mapping mellem strings og int array
 er vist i \autoref{fig:RoomConverter}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.8]{02-Body/Implementering/GameEngineImplementering/Images/MappingRoomString.png}
-    \caption{viser illustrer hvordan en linje fra map layout filen omdannes til en liste af room id'er 
+    \caption{illustrer hvordan en linje fra map layout filen omdannes til en liste af room id'er 
            som rummet er forbundet med. Dette er kerne mekanismen for hvordan en spiller kan navigere
-           rund i spillet, da en spiller ikke kan bevæge sig fra et Room til et anden, der ikke er 
+           rundt i spillet, da en spiller ikke kan bevæge sig fra et Room til et anden, der ikke er 
            i denne liste af forbindelser mellem det nuværende room og den ønskede bevægelses retning.}
   \label{fig:RoomConverter}
 \end{figure}
 
 \paragraph{Items og Enemies \\}
-Som det sker for rooms, ligeledes sker der for enemies og items. MapCreator klassen
+Som det sker for rooms, ligeledes sker det for enemies og items. MapCreator klassen
 generer seperate filer for enemy positions og item lokationer. Map klassen 
 kan herefter læse filen og mappe hver linje i filen til, en enemy eller item og 
 placere det i det korrekte room.
