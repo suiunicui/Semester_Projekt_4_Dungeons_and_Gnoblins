@@ -1,5 +1,5 @@
 \subsection{Software Design DAL Design}
-På figur xxx herunder ses klassediagrammet over backend DAL, som benyttes til database access. 
+På \autoref{fig:DAL-Klasse-7-17-18} herunder ses klassediagrammet over backend DAL, som benyttes til database access. 
 Som det kan ses på diagrammet, indeholder DAL en database context, som benyttes til at forbinde backend applicationen til databasen. 
 Derudover består DAL af fire overordnede funktioner, hvoraf de 3 tilhører en user story. 
 Den sidste funktion benyttes når vi starter spillet, til at lave rumbeskrivelser.\\
@@ -13,7 +13,7 @@ Den sidste funktion benyttes når vi starter spillet, til at lave rumbeskrivelse
 \label{fig:DAL-Klasse-7-17-18}
 \end{figure}
 
-Følgende funktion benyttes når spil klienten startes, da beskrivelser af rum ikke ændre sig gennem spillets levetid, i den nuværende itteration.\\
+Følgende funktion som beskrives på \autoref{fig:DAL-Sekvens-Rumbeskrivelser} benyttes når spil klienten startes, da beskrivelser af rum ikke ændre sig gennem spillets levetid, i den nuværende itteration.\\
 
 \begin{figure}[H]
 \centering
@@ -59,7 +59,7 @@ Returtype: Task\l ActionResult\l SaveDTO\g\g \\
 Beskrivelse: Da der i vores frontend sørges for at en bruger blot kan have 5 saves, starter vi med at finde det save vi gerne vil overskrive. Det gamle save, samt tilhørende lister slettes, hvorefter det nye save gemmes og eventuelle nye lister til fx. items gemmes.\\\\
 
 Den anden funktion GetAllSaves benyttes til at udføre user story 17.
-Her skal der loades en liste af gemte spil, når brugeren ønsker at se sine gemte spil. Dette kan også ses på sekvensdiagrammet på figur xxx.\\\\
+Her skal der loades en liste af gemte spil, når brugeren ønsker at se sine gemte spil. Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-17} .\\\\
 
 \begin{figure}[H]
 \centering
