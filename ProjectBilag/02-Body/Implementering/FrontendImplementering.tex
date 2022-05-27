@@ -3,7 +3,7 @@
 Det endelige design af vinderne følger tæt det oprindelige mockup design. Der benyttes MVVM (Model, View and View Model) designpatterns  Det har undervejs i implementeringen vist sig et behov for væsentlig flere menuer end først antaget, og disse er implementeret efter samme overordnede design, som resten af systemet, så derved følges stilen og følelsen af spillet.\\
 Det endelige design har følgende views:
 Login, Register, Main, Settings, Ingame, Load, Save, Inventory, Character, Victory, Defeat, Room og Combat.\\
-Til at skifte views uden at oprette et nyt vindue bruges et mediator design, hvor hver knap som skifter view giver en besked til mediatoren. Dette virker fordi alle views er oprettet som WPF user controlls, og ikke views, hvilket tillader at et main view kan skifte mellem viewmodels, derved skifter vil alt indhold på vinduet, men uden at selve rammen skiftet. Dette resulterer i et mere flydende User Interface for brugeren og derved en alt i alt bedre oplevelse. \footcite{https://www.technical-recipes.com/2018/navigating-between-views-in-wpf-mvvm/}\\
+Til at skifte views uden at oprette et nyt vindue bruges et mediator design, hvor hver knap som skifter view giver en besked til mediatoren. Dette virker fordi alle views er oprettet som WPF user controlls, og ikke views, hvilket tillader at et main view kan skifte mellem viewmodels, derved skifter vil alt indhold på vinduet, men uden at selve rammen skiftet. Dette resulterer i et mere flydende User Interface for brugeren og derved en alt i alt bedre oplevelse. \cite{Mediator}\\
 Et eksempel på hvordan mediatoren kaldes ved et tryk på en knap kan ses i følgende kode eksempel:
 
 \begin{lstlisting}[language=c]
@@ -35,7 +35,7 @@ void LoadCommand()
 \noindent De følgende afsnit viser et udvalg af view, samt en beskrivelse af hvordan de afviger fra det oprindelige design og en beskrivelse af interesante programerings-tekniske beslutninger.
 
 \subsubsection{Login view}
-De overordnede struktur af login (\autoref{fig:Design-FE-impl-login}) og register menuerne følger meget tæt det oprindelige design. Alle elementer er blevet stiliseret så de matcher det ønskede look. Dette er gjort ved brug af globale resourses og styles i app.xaml filen(\textbf{INDSÆT REFERENCE HER}). Dette gør det nemt at oprette nye views og ændre udseende af hele spillet. Selve login håndteres af backenden som kaldes af login og register knapperne via command bindings.
+Den overordnede struktur af login (\autoref{fig:Design-FE-impl-login}) og register menuerne følger meget tæt det oprindelige design. Alle elementer er blevet stiliseret så de matcher det ønskede look. Dette er gjort ved brug af globale resourses og styles i app.xaml filen(\textbf{INDSÆT REFERENCE TIL HVOR FILEN KAN FINDES HER}). Dette gør det nemt at oprette nye views og ændre udseende af hele spillet. Selve login håndteres af backenden som kaldes af login og register knapperne via command bindings.
 
 \begin{figure}[H]
 \centering
@@ -106,6 +106,6 @@ Da den generelle baggrundsfarve i spillet er sort er alle spillets interface ele
     <Setter Property="BorderThickness" Value="1"/>
 </Style>
 \end{lstlisting}
-men enkelte elementer (så som resolution dropdown menu, brugt i settings menuen) viste sig at være betydeligt mere omfattende. Det viser sig at det valgte element (WPF combobox) ikke tillader at baggrundsfarven for dropdown elementerne ændres i Windows 8 eller senere. Løsningen er at lave en kopi af hele templaten (ca. 300 linjer kode) for combobox og ændre 3-4 linjer. \footcite{https://social.technet.microsoft.com/wiki/contents/articles/24240.changing-the-background-color-of-a-combobox-in-wpf-on-windows-8.aspx}
+men enkelte elementer (så som resolution dropdown menu, brugt i settings menuen) viste sig at være betydeligt mere omfattende. Det viser sig at det valgte element (WPF combobox) ikke tillader at baggrundsfarven for dropdown elementerne ændres i Windows 8 eller senere. Løsningen er at lave en kopi af hele templaten (ca. 300 linjer kode) for combobox og ændre 3-4 linjer. \cite{comboBox}
 
 \newpage
