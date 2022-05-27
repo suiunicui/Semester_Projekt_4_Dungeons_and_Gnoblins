@@ -4,16 +4,15 @@ Som det kan ses på diagrammet, indeholder DAL en database context, som benyttes
 Derudover består DAL af fire overordnede funktioner, hvoraf de 3 tilhører en user story. 
 Den sidste funktion benyttes når vi starter spillet, til at lave rumbeskrivelser.\\
 
-\textbf{FIGUR KORREKTHED????}
-
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/DAL-DB-CD.PNG}
-\caption{Samlet klasse diagram for User story 7, 17 og 18 med DAL db context og entitetsklasser}
+\caption{Samlet klasse diagram for User story 7, 17 og 18 med DAL db context og entitetsklasser.
+For læseligheden er DAL klassen ikke forbundet til forskellige entitetsklasser selvom disse benyttes.}
 \label{fig:DAL-Klasse-7-17-18}
 \end{figure}
 
-Følgende funktion som beskrives på \autoref{fig:DAL-Sekvens-Rumbeskrivelser} benyttes når spil klienten startes, da beskrivelser af rum ikke ændre sig gennem spillets levetid, i den nuværende itteration.\\
+Følgende funktion som beskrives på \autoref{fig:DAL-Sekvens-RumBeskrivelser} benyttes når spil klienten startes, da beskrivelser af rum ikke ændre sig gennem spillets levetid, i den nuværende itteration.\\
 
 \begin{figure}[H]
 \centering
@@ -75,7 +74,7 @@ Beskrivelse: Her hentes all gemte saves i spillet.\\\\
 
 Den tredje funktion GetById benyttes til at udfører user story 18.
 Her skal der loades et gemt spil, som brugeren nu ønsker at spille. 
-Dette kan også ses på sekvensdiagrammet på figur xxx.\\\\
+Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-18}.\\\\
 
 \begin{figure}[H]
 \centering
