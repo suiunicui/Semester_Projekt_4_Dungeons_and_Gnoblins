@@ -1,6 +1,6 @@
 \subsection{Backend Arkitektur}
 
-I dette afsnit redegøres for arkitekturen af backend containeren. Dokumentet vil først komme med en kort redegørelse for MVC mønstrets opbygning og dets bidrag til arkitekturen. Dernæst gennemgås de relevante krav hvad angår backenden, disse krav bruges som input til arkitekturen. Med kravene på plads præsenteres et C3 diagram over backend’en, som viser hvordan Web api’et opbygges. Til slut præsenteres REST principper samt hvordan de anvendes.
+I dette afsnit redegøres for arkitekturen af backend containeren. Dokumentet vil først komme med en kort redegørelse for MVC mønstrets opbygning og dets bidrag til arkitekturen. Dernæst gennemgås de relevante krav, hvad angår backenden, disse krav bruges som input til arkitekturen. Med kravene på plads præsenteres et C3 diagram over backend’en, som viser hvordan Web api’et opbygges. Til slut præsenteres REST principper samt hvordan de anvendes.
 Systemets backend vil bestå af et Web API udviklet i frameworket ASP.NET Core. Web API’et skal give mulighed for containeren GameEngine at tilgå databasen igennem HTTP request/responses, for at hente og sende den nødvendige data til databasen. Hertil skal backend’en sørger for Authentication og Authorization af de indkommende kald.\\
 
 \subsubsection{MVC}
@@ -66,13 +66,13 @@ Inde i backenden anvendes ASP. Net MVC controllere(Mangler ref) til at modtage o
 De to controllere kalder som sagt videre ned i DAL laget, dette lag består af en database kontekst DaG\_db og en hjælper klasse til at udfører Queries. Her gøres brug af EF (Entity Framework) Core, som gør det muligt at arbejde med DbContext klassen, denne bruges til skabe en kontekst af databasen, hvor i de enkelte modeller kan mappes til entities.\\
 
 \textbf{Model:}\\
-Modellerne fungerer som bindeledet mellem alle komponenterne, de definere den data som der arbejdes på, og vil blot bestå af en række C\# klasser.\\
+Modellerne fungerer som bindeledet mellem alle komponenterne, de definerer den data som der arbejdes på, og vil blot bestå af en række C\# klasser.\\
 
 Som det kan ses passer MVC mønstret perfekt til den funktionalitet der ønskes. Mønstret gør det muligt at lave en logisk gruppering af relaterede opgaver, og er med til at sikre høj samhørighed i applikationen, ved at de enkelte ansvarsområder fordeles ud på hver sine moduler. På figur 1 \autoref{fig:Arkitektur-Backend-C3} ses det tydeligt hvordan koblingen mellem de enkelte moduler holdes på et lavt niveau, hvilket gør det lettere at bygge videre på og tilføje ny funktionalitet.\\
 
 
 \subsubsection{REST}
-Web Api’et arkitektur vil gøre brug af REST principper, for ikke at gøre data overførelserne for komplekse og for at overholde SoC, ved at adskille repræsentationen og dataen fra hinanden, på den måde sikres det at dataen, kan blive repræsenteret på den ønskede måde, og ikke er tvunget til at blive gemt på en specifikt måde.
+Web Api’et arkitektur vil gøre brug af REST principper, for ikke at gøre data overførelserne for komplekse og for at overholde SoC, ved at adskille repræsentationen og dataen fra hinanden. På den måde sikres det at dataen, kan blive repræsenteret på den ønskede måde, og ikke er tvunget til at blive gemt på en specifikt måde.
 Dette kommer til udtryk ved følgende 5 REST principper(Mangler ref)  som søges opnået:
 \begin{enumerate}
  \item Alle de data objekter der arbejdes med tilhører en bestemt unique URI. Dataen hentes, sendes og manipuleres igennem standard HTTP metoder som (GET, POST, PUT, DELETE).
