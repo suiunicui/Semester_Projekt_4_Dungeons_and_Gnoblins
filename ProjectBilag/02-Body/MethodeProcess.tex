@@ -2,45 +2,7 @@
 I nedstående afsnit fremlægges metoder og processer brugt 
 til udviklingen af Dungeons and Gnoblins spillet. 
 
-
 \subsection{UML}
-
-\subsubsection{Gruppedannelse}
-Gruppen blev dannet på baggrund af at vi som studerende selv skulle finde medlemmer og danne projektgrupper. 4 af gruppens medlemmer var dannet inden semesterets start og de resterende 4 blev indmeldt efter offentliggørelsen af semesterprojektet. Gruppen redegjorde først ideer til projektet og blev hurtigt forventningsafstemt om projektets resultat skulle være middelmådigt. 
-
-\subsubsection{Projektforløb og møder}
-Projektets endelige mål har været implementeringen af et text-based adventure game.
-Hertil har gruppen gjort brug af agile processen til at imødekomme dette mål.
-
-Først har gruppen specifiseret Kravspecifikationerne for spillet, med ønsker om
-hvilke features spillet har skulle inkludere. Continuous integration er dernæst
-været et vigtigt værktøj til implementeringen af de ønskede features, med et klart
-ønske om at integrere nye features ind i projektet få tidligt som muligt.\\
-
-I løbet af projektforløbet blev der afholdt to faste ugentlige møder. Et internt gruppemøde om mandagen og vejledermøde om onsdagen. Hertil var der fra start uddelt rollerne Mødeleder og referent til gruppens medlemmer som gik på skift hver uge. Til hvert møde blev der gennemgået hvad der var blev arbejdet med, hvilke udfordringer der forekom samt hvad der fremadrettet skulle arbejdes med for hver af gruppens medlemmer. Dette gjorde vi i form af SCRUM for at give et bedre overblik for projektets fremgang og dermed vurderer om gruppen var bagud eller foran ift. Gruppens tidsplan. Vores SCRUM-proces var ikke avanceret hvor der blev koordineret SCRUM Master og Product Owner, men blev derimod anvendt som redskab til at skabe et overblik over arbejdsfordelingen og udviklingen. Tidsplanen blev udarbejdet ved projektets start og havde formålet at give gruppen deadlines for projektets udviklingsproces.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=.5]{02-Body/Images/Agile.png}
-  \caption{Viser et billed af agile modellen som består af mangle iterationer
-           af design, develop, test, og deploy. Dette minder om continuous integration
-           og har hindret mange problemmer for udviklingsforløbet}
-  \label{fig:Agile}
-\end{figure}
-
-SCRUM og AGILE bringer klarhed til medlemmerne om deres roller og opgaver over en 
-kommende tidperiode med en backlog over opgaver, som skal færdiggøres over et sprint (1 uge).
-Ugentlige opdateringer og møder omkring potentielle problemmer udviklingsforløbet betyder
-at gruppen har kunne tage hånd om evt. problemmer tidligt i forløbet og derved løse dem
-før de har udviklet sig til større problemmer.
-
-Til styring og implementering af souce code har vi benytte git som et version control system.
-fordelen ved git er at det tillade flere udviklere at arbejde på det samme projekt og integere 
-deres løsninger. Der er dog chancer for merge konflikter hvilket kan, i værkste tilfælde, før
-til problemmer med at integrer de forskellige løsninger korrekt med hinanden.
-
-\subsection{Modellering}
-
 Projektet benytter UML til at beskrive og modellere software-- arkitektur
 og design. UML giver et nemt overblik over projektets struktur, og den 
 ønskede opførsel for programmets forskellige features.
@@ -49,15 +11,6 @@ og design. UML giver et nemt overblik over projektets struktur, og den
 
 STM og SD diagrammer er brugt til at give programmets udførsel struktur, og fungere
 som en hjælp til at visualisere programmets forskellige states og flow of execution.
-Det giver et nemt overblik over hvordan funktionskald mellem forskellige komponenter
-har skal fungere således, at der ikke opstår misforsåelse grupperne imellem. 
-
-Generelt er arkitekturen opbygget som "pseudo" diagrammer. Dvs. de ligner ikke fuldstændigt 
-det endelige design, men har til formål at vise den overordnede tankegang i systemet og 
-samtidig virke som et udviklingsværktøj til at videreudvikle systemet. Da der i gruppen 
-er blevet arbejdet iterativt, er der forskelle mellem diagrammer for arkitektur og design,
-da der er blevet tilføjet flere moduler og funktioner undervejs. Den overordnede tanke i 
-projektet er der dog ikke blevet ændret på.
 
 En C4 model fungere som et high level visualisering af hele systemets arkitektur.
 Her kan ses hvilket moduler, der er i stand til at kommuniker med hinanden og hvilke,
@@ -80,7 +33,4 @@ Tidligt i projektet har der været forsøg på at lave continous integration så
 kun kommunikere sammen tidligt i processen. Det har ført til at hver nye feature derefter 
 har været nem at integrere, som det sidste led i hver iteration efter færdiggørelsen af en
 ny feature. 
-
-Denne flexible arbejdsmetode har igen ført til at problemmer ikke har kunne vokse men
-at der blevet taget hånd om dem mens det stadig har været muligt at håndtere dem.
 
