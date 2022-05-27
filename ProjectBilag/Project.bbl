@@ -1,0 +1,153 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Choose-Unity}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a8f83a25cb133a47f9d9ff0af8aa78ec}{%
+           family={Anurag},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8f83a25cb133a47f9d9ff0af8aa78ec}
+      \strng{fullhash}{a8f83a25cb133a47f9d9ff0af8aa78ec}
+      \strng{bibnamehash}{a8f83a25cb133a47f9d9ff0af8aa78ec}
+      \strng{authorbibnamehash}{a8f83a25cb133a47f9d9ff0af8aa78ec}
+      \strng{authornamehash}{a8f83a25cb133a47f9d9ff0af8aa78ec}
+      \strng{authorfullhash}{a8f83a25cb133a47f9d9ff0af8aa78ec}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{13 Pros & Cons to Know Before Choosing Unity 3D}
+      \field{year}{30/03-2018}
+      \verb{urlraw}
+      \verb https://www.newgenapps.com/blogs/unity-3d-pros-cons-analysis-choose-unity/
+      \endverb
+      \verb{url}
+      \verb https://www.newgenapps.com/blogs/unity-3d-pros-cons-analysis-choose-unity/
+      \endverb
+    \endentry
+    \entry{CleanCode}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6f41df64eb0dc4855be70172368604c2}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education}%
+      }
+      \strng{namehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{bibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorbibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authornamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhash}{6f41df64eb0dc4855be70172368604c2}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780132350884}
+      \field{title}{Clean Code}
+      \field{year}{2008}
+      \keyw{Software Design}
+    \endentry
+    \entry{Microsoft.com}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69c6351fababb3c1d2c44011ebad5ad9}{%
+           family={Microsoft.com},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{69c6351fababb3c1d2c44011ebad5ad9}
+      \strng{fullhash}{69c6351fababb3c1d2c44011ebad5ad9}
+      \strng{bibnamehash}{69c6351fababb3c1d2c44011ebad5ad9}
+      \strng{authorbibnamehash}{69c6351fababb3c1d2c44011ebad5ad9}
+      \strng{authornamehash}{69c6351fababb3c1d2c44011ebad5ad9}
+      \strng{authorfullhash}{69c6351fababb3c1d2c44011ebad5ad9}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microsoft.com}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb www.Microsoft.com
+      \endverb
+      \verb{url}
+      \verb www.Microsoft.com
+      \endverb
+    \endentry
+    \entry{Unity.com}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82dd98f1d663acc318e6a8ec4ab69b7a}{%
+           family={Unity},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{82dd98f1d663acc318e6a8ec4ab69b7a}
+      \strng{fullhash}{82dd98f1d663acc318e6a8ec4ab69b7a}
+      \strng{bibnamehash}{82dd98f1d663acc318e6a8ec4ab69b7a}
+      \strng{authorbibnamehash}{82dd98f1d663acc318e6a8ec4ab69b7a}
+      \strng{authornamehash}{82dd98f1d663acc318e6a8ec4ab69b7a}
+      \strng{authorfullhash}{82dd98f1d663acc318e6a8ec4ab69b7a}
+      \field{sortinit}{U}
+      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Unity.com}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb www.Unity.com
+      \endverb
+      \verb{url}
+      \verb www.Unity.com
+      \endverb
+    \endentry
+    \entry{Unity-Pros-Cons}{online}{}
+      \name{author}{1}{}{%
+        {{hash=88183b946cc5f0e8c96b2e66e1c74a7e}{%
+           family={Unknown},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{88183b946cc5f0e8c96b2e66e1c74a7e}
+      \strng{fullhash}{88183b946cc5f0e8c96b2e66e1c74a7e}
+      \strng{bibnamehash}{88183b946cc5f0e8c96b2e66e1c74a7e}
+      \strng{authorbibnamehash}{88183b946cc5f0e8c96b2e66e1c74a7e}
+      \strng{authornamehash}{88183b946cc5f0e8c96b2e66e1c74a7e}
+      \strng{authorfullhash}{88183b946cc5f0e8c96b2e66e1c74a7e}
+      \field{sortinit}{U}
+      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Unity Review: Pros and Cons}
+      \field{year}{Visited 15/03-2022}
+      \verb{urlraw}
+      \verb https://citrusbits.com/a-unity-review-pros-and-cons/
+      \endverb
+      \verb{url}
+      \verb https://citrusbits.com/a-unity-review-pros-and-cons/
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{https://social.technet.microsoft.com/wiki/contents/articles/24240.changing-the-background-color-of-a-combobox-in-wpf-on-windows-8.aspx}
+  \missing{https://www.technical-recipes.com/2018/navigating-between-views-in-wpf-mvvm/}
+\endrefsection
+\endinput
+
