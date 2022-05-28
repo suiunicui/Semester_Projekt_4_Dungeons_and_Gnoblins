@@ -1,0 +1,23 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'Project.blg'
+[46] biber:322> INFO - === Sat May 28, 2022, 18:19:35
+[61] Biber.pm:415> INFO - Reading 'Project.bcf'
+[104] Biber.pm:943> INFO - Found 19 citekeys in bib section 0
+[114] Biber.pm:4256> INFO - Processing section 0
+[115] Utils.pm:75> INFO - Globbing data source '03-EndMatter/References.bib'
+[117] Utils.pm:91> INFO - Globbed data source '03-EndMatter/References.bib' to 03-EndMatter/References.bib
+[123] Biber.pm:4455> INFO - Looking for bibtex format file '03-EndMatter/References.bib' for section 0
+[130] bibtex.pm:1653> INFO - LaTeX decoding ...
+[136] bibtex.pm:1471> INFO - Found BibTeX data source '03-EndMatter/References.bib'
+[137] Utils.pm:293> WARN - Duplicate entry key: 'MVC' in file '03-EndMatter/References.bib', skipping ...
+[152] Utils.pm:293> WARN - year field '30/03-2018' in entry 'Choose-Unity' is not an integer - this will probably not sort properly.
+[155] Utils.pm:293> WARN - year field 'Visited 15/03-2022' in entry 'Unity-Pros-Cons' is not an integer - this will probably not sort properly.
+[159] Utils.pm:293> WARN - year field 'Visited 20/03-2022' in entry 'Yalantis' is not an integer - this will probably not sort properly.
+[161] Utils.pm:293> WARN - year field 'Visited 20/03-2022' in entry 'IBM' is not an integer - this will probably not sort properly.
+[164] Utils.pm:293> WARN - year field 'Visited 21/03-2022' in entry 'MongoDB.com' is not an integer - this will probably not sort properly.
+[166] Utils.pm:293> WARN - year field 'Visited 28/05-2022' in entry 'REST' is not an integer - this will probably not sort properly.
+[168] Utils.pm:293> WARN - year field 'Visited 28/05-2022' in entry 'Bcrypt' is not an integer - this will probably not sort properly.
+[185] Utils.pm:293> WARN - year field 'Visited 28/05-2022' in entry 'Swagger' is not an integer - this will probably not sort properly.
+[186] Utils.pm:309> ERROR - BibTeX subsystem: /tmp/biber_tmp_Qmy1/References.bib_731.utf8, line 18, syntax error: found "Framework", expected ","
+[186] Biber.pm:128> INFO - WARNINGS: 9
+[186] Biber.pm:132> INFO - ERRORS: 1

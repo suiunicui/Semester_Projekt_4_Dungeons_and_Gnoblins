@@ -2182,25 +2182,11 @@
     <bcf:datasource type="file" datatype="bibtex">03-EndMatter/References.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Unity.com</bcf:citekey>
-    <bcf:citekey order="2">Choose-Unity</bcf:citekey>
-    <bcf:citekey order="3">Unity-Pros-Cons</bcf:citekey>
-    <bcf:citekey order="4">Microsoft.com</bcf:citekey>
-    <bcf:citekey order="5">Yalantis</bcf:citekey>
-    <bcf:citekey order="6">IBM</bcf:citekey>
-    <bcf:citekey order="7">MongoDB.com</bcf:citekey>
-    <bcf:citekey order="8">Entity Framework Core</bcf:citekey>
-    <bcf:citekey order="9">MVC pattern</bcf:citekey>
-    <bcf:citekey order="10">MVC controller</bcf:citekey>
-    <bcf:citekey order="11">EF Core</bcf:citekey>
-    <bcf:citekey order="12">REST</bcf:citekey>
-    <bcf:citekey order="13">Language Integrated Query</bcf:citekey>
-    <bcf:citekey order="14">Bcrypt</bcf:citekey>
-    <bcf:citekey order="15">SQL server with docker</bcf:citekey>
-    <bcf:citekey order="16">Mediator</bcf:citekey>
-    <bcf:citekey order="17">comboBox</bcf:citekey>
-    <bcf:citekey order="18">CleanCode</bcf:citekey>
-    <bcf:citekey order="19">Swagger</bcf:citekey>
+    <bcf:citekey order="1">TekniskBilag</bcf:citekey>
+    <bcf:citekey order="2">TekniskBilag</bcf:citekey>
+    <bcf:citekey order="3">TekniskBilag</bcf:citekey>
+    <bcf:citekey order="4">TekniskBilag</bcf:citekey>
+    <bcf:citekey order="5">SQL server with docker</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
