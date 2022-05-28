@@ -4,7 +4,7 @@ I dette afsnit redegøres for arkitekturen af backend containeren. Dokumentet vi
 Systemets backend vil bestå af et Web API udviklet i frameworket ASP.NET Core. Web API’et skal give mulighed for containeren GameEngine at tilgå databasen igennem HTTP request/responses, for at hente og sende den nødvendige data til databasen. Hertil skal backend’en sørger for Authentication og Authorization af de indkommende kald.\\
 
 \subsubsection{MVC}
-Selve Web API’ets arkitektur bygges op omkring MVC (Model-View-Controller) mønstret. En illustration af MVC mønstrets struktur kan ses på \autoref{fig:Arkitektur-Backend-MVC} (mangler ref til kilde).
+Selve Web API’ets arkitektur bygges op omkring MVC (Model-View-Controller) mønstret. En illustration af MVC mønstrets struktur kan ses på \autoref{fig:Arkitektur-Backend-MVC} \cite{MVC pattern}.
 
 \begin{figure}[H]
 \centering
@@ -43,7 +43,7 @@ Af de ikke funktionelle krav er følgende krav relevante:
 \item Skal kunne respondere indenfor maksimalt 5 s.
 \end{itemize}
 De ikke funktionelle krav tages hånd om under designet og implementeringen af backenden.
-For ydderligere detaljer omkring funktionelle og ikke funktionelle krav henvises til Bilag x
+For ydderligere detaljer omkring funktionelle og ikke funktionelle krav henvises til afsnit omkring kravspecifikation \autoref{ssec:Kravspecifikation}
 
 
 Der bygges videre på C4 modellen for systemet , et level 3 component diagram over backend containeren udarbejdes, som viser hvilke componenter containeren indeholder, deres ansvarsområder, hvordan de kommunikere indbyrdes og med de omkring liggende containere, samt hvilke teknologier der anvendes i implementeringen. Diagrammet kan ses på \autoref{fig:Arkitektur-Backend-C3}. 
