@@ -3,7 +3,7 @@ Game Enginen er skrevet i C\#, et objectorienteret programmering sprog
 med stærkt library support der tillader udvikleren at fokusere på udvikling
 af applikationer istedet for udvikling af libraries til at støtte projektet. \\
 
-\noindent Nedstående præstenteres en diagram over de mest kritiske komponenter
+\noindent Nedstående præstenteres et diagram over de mest kritiske komponenter
 Game Enginens interne spil logik og deres relationer til hinanden.
 Der er ikke medtaget interfaces, eller klasser som er map, items, BackendController 
 og logs som er mere specifikke til spillet og ikke til den interne logik.\\
@@ -11,7 +11,7 @@ og logs som er mere specifikke til spillet og ikke til den interne logik.\\
 \begin{figure}[H]
   \centering
    
-  \includegraphics[width=0.9\linewidth, height=15cm, trim = 0 8cm 0 3cm]{02-Body/Implementering/GameEngineImplementering/Images/Core Class Diagram.pdf}
+  \includegraphics[width=0.9\linewidth, height=15cm, trim = 0 8cm 0 0cm]{02-Body/Implementering/GameEngineImplementering/Images/Core Class Diagram.pdf}
   \caption{Viser det mest definerende elementer af Game Engine og deres relationerne til hinanden. Der er her ikke medtaget interface,
            abstract klasser, item, logs og map. }%
   \label{fig:CoreClassDiagram}
@@ -25,8 +25,8 @@ og logs som er mere specifikke til spillet og ikke til den interne logik.\\
 
 Gennem udviklingen af Game Enginen er der brugt interfaces eller abstrakte 
 klasser til implementering af alle funktionaliteter. Dette gør det både nemt
-at teste implementeringerne sam at udvide spillet. Men for scopet af opgaven
-er dette nok ``Overkill''. Det er godt at bruge men for en applikation så 
+at teste implementeringerne samt at udvide spillet. Men for scopet af opgaven
+er dette nok ``Overkill''. Det er godt at bruge, men for en applikation så 
 lille som denne, der ikke kommer til at udvide sig er det nok for meget 
 boilerplate kode. 
 

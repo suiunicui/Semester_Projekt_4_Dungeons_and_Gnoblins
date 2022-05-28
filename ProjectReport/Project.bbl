@@ -1,0 +1,82 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{TekniskBilag}{misc}{}
+      \name{author}{8}{}{%
+        {{hash=cd0f15b59b0dff5e3b096fa3f0d00a5f}{%
+           family={Møller},
+           familyi={M\bibinitperiod},
+           given={Magnus\bibnamedelima Blaabjerg},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=e809ce1bdbbe7ae6342d33f55dd08af1}{%
+           family={Dyrbye},
+           familyi={D\bibinitperiod},
+           given={Sune\bibnamedelima Andreas},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=bb8a3cc93eac1b43052ec3620f46dc89}{%
+           family={Høgsberg},
+           familyi={H\bibinitperiod},
+           given={Morten},
+           giveni={M\bibinitperiod}}}%
+        {{hash=06417e7488eef08ba16159f101cd3d01}{%
+           family={Engelund},
+           familyi={E\bibinitperiod},
+           given={Rasmus},
+           giveni={R\bibinitperiod}}}%
+        {{hash=734e8a2c12173c88b4a5932c32da5f38}{%
+           family={Hundahl},
+           familyi={H\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+        {{hash=df102fd3a2b573b11c488d80e55513f7}{%
+           family={Dennis},
+           familyi={D\bibinitperiod},
+           given={Oscar},
+           giveni={O\bibinitperiod}}}%
+        {{hash=215d369bca8b2cb1b1c9b20a577d695e}{%
+           family={Hoberg},
+           familyi={H\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c28bd3db21aa4c6f062fb4cd15173d87}{%
+           family={Vu},
+           familyi={V\bibinitperiod},
+           given={Luyen},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{dba9ae07df4a7cdbb2f43a2ca0228864}
+      \strng{fullhash}{bc300ac0ac1747b141a4bf09e0bcca99}
+      \strng{bibnamehash}{dba9ae07df4a7cdbb2f43a2ca0228864}
+      \strng{authorbibnamehash}{dba9ae07df4a7cdbb2f43a2ca0228864}
+      \strng{authornamehash}{dba9ae07df4a7cdbb2f43a2ca0228864}
+      \strng{authorfullhash}{bc300ac0ac1747b141a4bf09e0bcca99}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Teknisk Bilag - Dungeons and Gnoblins}
+      \field{year}{2022}
+    \endentry
+  \enddatalist
+  \missing{SQL server with docker}
+\endrefsection
+\endinput
+
