@@ -1,16 +1,16 @@
-\subsection{Frontend Arkitektur}
+\subsection{Front-end Arkitektur}
 
-Front-end applikationen er det man kan kalde, brugerens vindue til spillet, det er i dette modul at brugeren vil få alt sit information og vil få mulighed for at lave inputs til spillet. Det er yderligere her at der skal tages hånd om brugerens input således at de rigtige funktioner i Game Enginen bliver kaldt når brugeren trykker på en vilkårlig knap.\\
-Front-end'en er opbygget af et hav af forskellige skærme og menuer, og for at give et overblik over disse er der lavet følgende C3 model for Front-end'en (\autoref{fig:Arkitektur-FrontEnd-C3}), som giver en idé om hvilke skærme og menuer der kan gå til hvilke andre menuer/skærme. Udover dette fortæller modellen også om hvordan og hvilke skærme og menuer der snakker med noget uden for Front-end'en selv f.eks. skal der ved Login/Register kontaktes databasen for at få verificeret logind-oplysninger, og samtidig skal der ved save og load-game hentes en liste af gemte spil i databasen hvorefter der skal henholdsvis skrives og hentes fra databasen alt efter om man gemmer eller henter et spil. Der skal hertil nævnes at Login og Register står til at snakke med backenden direkte og ikke igennem gamelogic blokken, dette er valgt da funktionen ikke kaldes i gamelogic blokken, men den kaldes direkte i backend controlleren. Derudover er modellen mere overskuelig på denne måde og fungerer bedre til at give overblik over navigationen igennem menuerne.
+Front-end applikationen er det man kan kalde, brugerens vindue til spillet, det er i dette modul at brugeren vil få alt sit information og vil få mulighed for at lave inputs til spillet. Det er yderligere her at der skal tages hånd om brugerens input således at de rigtige funktioner i Game Enginen bliver kaldt, når brugeren trykker på en vilkårlig knap.\\
+Front-end'en er opbygget af et hav af forskellige skærme og menuer, og for at give et overblik over disse er der lavet følgende C3 model for Front-end'en (\autoref{fig:Arkitektur-FrontEnd-C3}), som giver en idé om hvilke skærme og menuer der kan gå til hvilke andre menuer/skærme. Udover dette fortæller modellen også om hvordan og hvilke skærme og menuer der snakker med noget uden for Front-end'en selv f.eks. skal der ved Login/Register kontaktes databasen for at få verificeret logind-oplysninger, og samtidig skal der ved save og load-game hentes en liste af gemte spil i databasen hvorefter der skal henholdsvis skrives og hentes fra databasen alt efter om man gemmer eller henter et spil.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Frontend_C3.pdf}
-\caption{C3-Model for Frontend. Modellen fortæller hvordan man kan navigere igennem forskellige menuer og hvilke menuer der kan føre til hvad. Derudover kan man se hvilke blokke der snakker ud af frontenden og sammen med resten af systemet.}
+\caption{C3-Model for Front-end. Modellen fortæller hvordan man kan navigere igennem forskellige menuer og hvilke menuer der kan føre til hvad. Derudover kan man se hvilke blokke der snakker ud af front-end'en og sammen med resten af systemet.}
 \label{fig:Arkitektur-FrontEnd-C3}
 \end{figure}
 
-\subsubsection{Pseudo Frontend Arkitektur}
+\subsubsection{Pseudo Front-end Arkitektur}
 For at give overblik over, hvordan kommunikationen mellem frontend, backend og gamecontroller kommer til at foregå, er der lavet et pseudo sekvensdiagram for følgende UserStories:
 \\
 - Login\\
