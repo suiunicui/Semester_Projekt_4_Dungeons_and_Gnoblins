@@ -7,9 +7,9 @@
 \label{fig:C4TopLvlDB}
 \end{figure}
 
-På figuren herover ses systemets toplevel arkitektur.
-Denne består af en bruger som interagerer med systemet gennem frontendapplikationen som skrives i WPF. States i denne applikation styres af Game modul som holder styr på hvor spilleren befinder sig, hvilke items der er samlet op og andre nyttige information som skal bruges gennem spillet.
-Spillets backend benyttes primært til bruger authentication og som bindeled til databasen.
+På \autoref{fig:C4TopLvlDB} ses systemets toplevel arkitektur.
+Denne består af en bruger som interagerer med systemet gennem frontendapplikationen som skrives i WPF. States i denne applikation styres af Game module som holder styr på hvor spilleren befinder sig, hvilke items der er samlet op og andre nyttige information som skal bruges gennem spillet.
+Spillets backend benyttes primært til bruger-authentication og som bindeled til databasen.
 Databasen indeholder oplysninger om blandt andet brugere, de gemte spil og oplysninger om historien for de forskellige rum.
 
 \newpage
@@ -22,7 +22,7 @@ I det følgende afsnit beskrives kravene for systemet. Afsnittet indeholder et u
 
 
 \subsection{Funktionelle krav - User Stories}
-Her beskrives systemets funktionelle krav. Kravene beskrives i from af User Stories, der er her taget udgangspunkt i User Story 1,2, 15 og 18, da disse indebærer alle systemets dele samt den mest centrale funktionalitet.\\  
+Her beskrives systemets funktionelle krav. Kravene beskrives i form af User Stories. Der er her taget udgangspunkt i User Story 1,2, 15 og 18, da disse indebærer alle systemets dele samt den mest centrale funktionalitet.\\  
  
 User Story 1: Log in \\
   Som Bruger \\
@@ -79,12 +79,11 @@ Systemets ikke-funktionelle krav opstilles efter en række kategorier med inspir
 \textbf{COMBAT:}
 
 \begin{itemize}
-\item Når spilleren/fjenden prøver at slå, rammer man kun hvis man på sit angreb slår højere end modstanderens rustningsværdi. Dette afgøres af et simuleret 20-sidet terninge kast, hvortil der lægges en værdi til, korresponderende til spilleren/fjendens våben bonusser.
+\item Når spilleren/fjenden prøver at slå, rammer man kun hvis man på sit angreb slår højere end modstanderens rustningsværdi. Dette afgøres af et simuleret 20-sidet terninge kast, hvortil der lægges en værdi til, korresponderende til spilleren/fjendens våben bonusser. \textbf{FUNKTIONEL?}
 \item Hvis spilleren/fjenden rammer, bliver skaden bestemt af et/flere simulerede terningekast, afhængigt af hvilket våben der bruges
 \item Hvis spilleren, når nul liv inden fjenden, så dør spilleren og spillet er tabt.
 \item Hvis fjenden, når nul liv inden spilleren, så dør fjenden og spilleren kan nu frit udforske rummet, som fjenden var i.
 \item Hvis spilleren drikker en livseleksir bliver spillerens nuværende liv sat til fuldt.
-\item Hvis spilleren/fjenden rammer, bliver skaden bestemt af et/flere simulerede terningekast, afhængigt af hvilket våben der bruges.
 \end{itemize}
 
 \textbf{PERFORMANCE:}    
@@ -98,7 +97,7 @@ Systemets ikke-funktionelle krav opstilles efter en række kategorier med inspir
     
 
 \subsection{Afgrænsning}
-I dette projekt afgrænses systemet på følgende måder. Der vil ikke være fokus på at hoste systemets backend (Web API og Database) på en ekstern server, dette er valgt for at holde fokus på selve udviklingen af systemet. Dette er noget som tages videre i det fremtidige arbejde.  
+I dette projekt afgrænses systemet på følgende måder. Der vil ikke være fokus på at hoste systemets backend (Web API og Database) på en ekstern server. Dette er valgt for at holde fokus på selve udviklingen af systemet. Dette er noget som tages videre i det fremtidige arbejde.  
 
 \subsubsection{MOSCOW krav}
 \label{sssec:MOSCOW}
@@ -128,9 +127,9 @@ I dette afsnit er opstillet en MoSCW analyse af de krav som er opsat til projekt
 \textbf{SHOULD}
 \begin{itemize}
 
-\item Have Enemies
+\item Have Fjender
 \item Have Items
-\item Have Combat mechanics
+\item Have Kamp systemer
 \item Have End Screen
 \item Have Character Stats
  
@@ -141,16 +140,16 @@ I dette afsnit er opstillet en MoSCW analyse af de krav som er opsat til projekt
 \begin{itemize}
 
 \item Have Level development
-\item Have Procedual world
+\item Have Procedual verden
 \item Have Text Parser
-\item Have Difficulty
-\item Have Security
+\item Have Sværhedsgrad
+\item Have sikkerhed
 
 \end{itemize}
 
 \textbf{WON'T}
 \begin{itemize}
-\item Have Graphics
+\item Have Grafik
 \end{itemize}
 
  

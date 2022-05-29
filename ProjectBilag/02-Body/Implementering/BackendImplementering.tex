@@ -1,8 +1,25 @@
 \subsection{Backend Implementering}
 
-I det følgende afsnit gennemgåes implementerings detaljer omkring backendens controller klasser, samt BackEndController klassen på client siden. Alle controller klasserne er implementeret i C\#, da dette er sproget som anvendes i Asp.net Core. \\
+I det følgende afsnit gennemgåes implementerings detaljer omkring Web api'ets controller klasser, samt for BackEndController klassen på client siden. Disse klasser gør alle brug af nogle model DTO'er som ligeledes præsenteres.\\
+
+Alle controller klasserne er implementeret i C\#, da dette er sproget som anvendes i Asp.net Core. \\
+
+\subsubsection{Data Transfer Object:}
+
+De data objekter som gemmes i SQL databasen vil indeholde nogle navigational properties, som bruges til at query data’en og til at opretter relationer mellem objekterne. Da disse properties ikke har nogen relevans for clienten oprettes der følgende DTO’er for modellerne User og Save som ses på \autoref{fig:Design-Backend-DTO}\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = \textwidth]{02-Body/Images/Backend_DTO.PNG}
+\caption{klasse diagram over DTO'er for User og Save}
+\label{fig:Design-Backend-DTO}
+\end{figure}
+
+På den måde kan man sikre at kun den nødvendige data sendes til clienten.\\
 
 \subsubsection{SaveController}
+Alle routes som omhandler game state skal authorizes, mens routes, som omhandler brugeren tilader anonyme forespørgelser.
+
 SaveController klassen inkluderer librariet Mircosoft.AspNetCore.MVC, dette gør det muligt, at anvende atributter til at definere hvilke Http metoder som funktionerne anvender eksempelvis HttpGet se \autoref{fig:Implementering-Backend-Code-GetSave}.
 
 \begin{figure}[H]
@@ -13,7 +30,7 @@ SaveController klassen inkluderer librariet Mircosoft.AspNetCore.MVC, dette gør
 \end{figure}
 
 Librariet gør det ligeledes muligt at retunere ActionResults, som kan indeholde objekter og en status kode eller blot en status kode, hvis noget går galt. Alle funktionerne er async og retunerer en Task, hvilket gør at der er tale om asynkrone funktioner, der først retunerer en værdi når dataen er klar. Dette gør også at clienten kan klare andre opgaver ind til dataen er klar.
-SaveController inkluderer også Microsoft.AspNetCore.Authorization librariet, som bidrager med funktionalitet til kun at tilade kald, fra en korrekt bruger med Atributten [Authorize]. Da der kun findes en type af identiteter nemlig en helt normal bruger, som har adgang til alle endpoints, skal der findes en måde at sikre at brugeren kun kan tilgå sine egne data. Derfor gøres brug af User.Identity, kan ses på figur 10. Dette anvendes til at hente Claims User'eren tilhørende den nuværende action, hvilket så kan bruges til at tjekke om brugeren har lov til at hente det pågældende gemte spil.\\
+SaveController inkluderer også Microsoft.AspNetCore.Authorization librariet, som bidrager med funktionalitet til kun at tilade kald, fra en korrekt bruger med Atributten [Authorize]. Da der kun findes en type af identiteter nemlig en helt normal bruger, som har adgang til alle endpoints, skal der findes en måde at sikre at brugeren kun kan tilgå sine egne data. Derfor gøres brug af User.Identity, kan ses på figur 10. Dette anvendes til at hente Claims for User'eren tilhørende den nuværende action, hvilket så kan bruges til at tjekke om brugeren har lov til at hente det pågældende gemte spil.\\
     
 
 \subsubsection{UserController}
@@ -28,6 +45,10 @@ UserController klassen minder meget om SaveController klassen, den gør ligelede
 \end{figure}
 
 Her tilføjes endnu en attribut AllowAnonymous, da login skal være et anonymt kald, fordi brugeren endnu ikke er logget ind på clienten. Hvis brugeren findes og pasword'et er korrekt retuneres en ny JWT.\\
+
+Til at Hashe passwords med anvendes Bcrypt \cite{Bcrypt}. Der findes en C\# udgave kaldet Bcrypt.Net  som vil blive anvendt. Helt præcist er det funktionen HashPassword(”password”, BcryptWorkfactor), denne funktion skal have en BcryptWorkfactor, hvilket er et tal der siger noget om hvor mange iterationer Bcrypt vil bruge på at generere et ”salt” til at hashe password’et med. Her anbefales det at bruge en værdi på 11, da det generelt set anses som tilstrækeligt niveau hvad angår sikkerhed.
+Funktionen verify(”password”, hashedpassword) bruges til at verificere om et givent password svare til dets krypterede udgave.\\
+
 
 \subsubsection{BackEndController Client}
 BackEndControlleren indeholde som det blev nævnt i backend Design afsnittet \autoref{ssec: Backend Design} et HttpClient objekt til at håndtere http request/response, og et Token objekt til at holde på den modtagne JWT.

@@ -1,0 +1,28 @@
+\subsection{Diskussion af testresultater}
+Projektets implementering og kravspecifikationerne har produceret adskillige tests, som 
+projektet i overvejende grad har bestået. De fleste features er blevet
+testet i henhold til kravspecifikationerne se \autoref{sec:kravspec} og har produceret 
+resultater, der indikerer at hver feature fungerer som ønsket. \\
+
+Alle funktionelle tests er beskrevet med user-stories og er evalueret med et ``Godkendt''
+eller ``Fejl'' \autoref{tab:testEngine} og evt.\ en foklarende kommentar. Ikke funktionelle 
+test har fået en evaluering ``OK'' eller ``FEJL''.
+Langt størstedelen af alle tests, for produktet, er bestået med få tests som fejler. 
+Nogle tests fejler, da implementeringen ikke blev som forventet, mens andre ikke er blevet 
+implementeret på grund af tidspres. \\
+
+To eksempler er ``puzzles'' og ``Delete Save Game'', der skulle have været implementeret, som en del af det færdige spil.
+Grundet tidspres er disse features ikke blevet implementeret, men i stedet for, er de blevet
+nedprioteret til fordel for andre features, såsom ``Combat'' der er blevet vurderet mere essentiel.
+``Delete Save Game'' er ikke blevet implementeret som specificeret i kravspecifikationerne men
+eksisterer i stedet for, som evnen til at overskrive allerede eksisterende save games. Her er 
+kravende ikke blevet opdateret til at reflektere den anderledes implementering. Yderligere er MTBF heller ikke blevet testes da dette vil være besværligt at teste for denne type projekt.\\
+
+Den stores success rate skyldes en insistens på tidlige integration mellem alle store komponenter for at sikre, at 
+alt kommunikation mellem frontend, game engine, backend og databasen har fungeret fra et tidligt 
+tidspunkt i projektet. I stedet for at integrere og teste alting samtidigt, er hvert komponent 
+blevet gradvist integreret i projektet. Det har vist sig nemmere at integrerer mange små ændringer
+end at lave en stor integration til sidst i udviklingsfasen.
+
+Lad der dog ikke herske tvivl om, at der er store huller i projektets test suit, det
+betyder at store features ikke er testet i tilstrækkeligt omfang. Features som load- og save game er implementeret og testet ved visuel bekræftelse, men der er en betydelig mangel på modultest til yderligere at bekræfte, at disse feature fungerer som ønsket (se \autoref{sec:kravspec}). \\

@@ -1,136 +1,132 @@
-\BOOKMARK [1][-]{section.1}{Forord}{}% 1
-\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
-\BOOKMARK [1][-]{section.3}{Ordforklaring}{}% 3
-\BOOKMARK [1][-]{section.4}{Spilbeskrivelse}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Login-screen}{section.4}% 5
-\BOOKMARK [2][-]{subsection.4.2}{Core gameplay layout}{section.4}% 6
-\BOOKMARK [2][-]{subsection.4.3}{Settings}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.4}{MapBeskrivelse}{section.4}% 8
-\BOOKMARK [1][-]{section.5}{Systembeskrivelse}{}% 9
-\BOOKMARK [1][-]{section.6}{Kravspecifikation}{}% 10
-\BOOKMARK [2][-]{subsection.6.1}{Funktionelle krav - User Stories}{section.6}% 11
-\BOOKMARK [2][-]{subsection.6.2}{Ikke-funktionelle krav}{section.6}% 12
-\BOOKMARK [2][-]{subsection.6.3}{MOSCOW krav}{section.6}% 13
-\BOOKMARK [2][-]{subsection.6.4}{Accepttest}{section.6}% 14
-\BOOKMARK [3][-]{subsubsection.6.4.1}{Funktionelle}{subsection.6.4}% 15
-\BOOKMARK [3][-]{subsubsection.6.4.2}{Ikke funktionelle}{subsection.6.4}% 16
-\BOOKMARK [1][-]{section.7}{Metode og Proces}{}% 17
-\BOOKMARK [2][-]{subsubsection.7.0.1}{Gruppedannelse}{section.7}% 18
-\BOOKMARK [3][-]{subsubsection.7.0.2}{Projektforl\370b og m\370der}{subsubsection.7.0.1}% 19
-\BOOKMARK [2][-]{subsection.7.1}{Modellering}{section.7}% 20
-\BOOKMARK [3][-]{subsubsection.7.1.1}{Iterativ Udviklingsforl\370b}{subsection.7.1}% 21
-\BOOKMARK [1][-]{section.8}{Analyser}{}% 22
-\BOOKMARK [2][-]{subsection.8.1}{Teknologiunders\370gelse: Unity - .Net}{section.8}% 23
-\BOOKMARK [3][-]{subsubsection.8.1.1}{Unity:}{subsection.8.1}% 24
-\BOOKMARK [3][-]{subsubsection.8.1.2}{.NET framework:}{subsection.8.1}% 25
-\BOOKMARK [2][-]{subsection.8.2}{Teknologiunders\370gelse: Database SQL/NOSQL}{section.8}% 26
-\BOOKMARK [3][-]{subsubsection.8.2.1}{SQL}{subsection.8.2}% 27
-\BOOKMARK [3][-]{subsubsection.8.2.2}{No-SQL}{subsection.8.2}% 28
-\BOOKMARK [3][-]{subsubsection.8.2.3}{Konklusion}{subsection.8.2}% 29
-\BOOKMARK [2][-]{subsection.8.3}{Teknisk Analyse Backend}{section.8}% 30
-\BOOKMARK [3][-]{subsubsection.8.3.1}{Mulighed 1: WPF ->ASP.NET Core ->Entity Framework Core ->Database}{subsection.8.3}% 31
-\BOOKMARK [3][-]{subsubsection.8.3.2}{Mulighed 2: WPF ->Entity Framework Core ->database}{subsection.8.3}% 32
-\BOOKMARK [3][-]{subsubsection.8.3.3}{Konklusion}{subsection.8.3}% 33
-\BOOKMARK [1][-]{section.9}{Arkitektur}{}% 34
-\BOOKMARK [2][-]{subsection.9.1}{Systemarkitektur}{section.9}% 35
-\BOOKMARK [2][-]{subsection.9.2}{Frontend Arkitektur}{section.9}% 36
-\BOOKMARK [3][-]{subsubsection.9.2.1}{Pseudo Frontend Arkitektur}{subsection.9.2}% 37
-\BOOKMARK [2][-]{subsection.9.3}{GameController Arkitektur}{section.9}% 38
-\BOOKMARK [3][-]{subsubsection.9.3.1}{States og Character interagering}{subsection.9.3}% 39
-\BOOKMARK [3][-]{subsubsection.9.3.2}{Room State og Character interagering}{subsection.9.3}% 40
-\BOOKMARK [3][-]{subsubsection.9.3.3}{Combat State og Combat simulering}{subsection.9.3}% 41
-\BOOKMARK [3][-]{subsubsection.9.3.4}{Forbindelser til andre moduler}{subsection.9.3}% 42
-\BOOKMARK [2][-]{subsection.9.4}{Backend Arkitektur}{section.9}% 43
-\BOOKMARK [3][-]{subsubsection.9.4.1}{MVC}{subsection.9.4}% 44
-\BOOKMARK [3][-]{subsubsection.9.4.2}{C3-Model for backend}{subsection.9.4}% 45
-\BOOKMARK [3][-]{subsubsection.9.4.3}{REST}{subsection.9.4}% 46
-\BOOKMARK [3][-]{subsubsection.9.4.4}{Konlusion}{subsection.9.4}% 47
-\BOOKMARK [2][-]{subsection.9.5}{Database Arkitektur}{section.9}% 48
-\BOOKMARK [2][-]{subsection.9.6}{DAL Arkitektur}{section.9}% 49
-\BOOKMARK [1][-]{section.10}{Design}{}% 50
-\BOOKMARK [2][-]{subsection.10.1}{Overordnet System Design}{section.10}% 51
-\BOOKMARK [2][-]{subsection.10.2}{Frontend Design}{section.10}% 52
-\BOOKMARK [3][-]{subsubsection.10.2.1}{Room}{subsection.10.2}% 53
-\BOOKMARK [3][-]{subsubsection.10.2.2}{Combat}{subsection.10.2}% 54
-\BOOKMARK [3][-]{subsubsection.10.2.3}{Login}{subsection.10.2}% 55
-\BOOKMARK [3][-]{subsubsection.10.2.4}{Settings}{subsection.10.2}% 56
-\BOOKMARK [2][-]{subsection.10.3}{Game Controller Design}{section.10}% 57
-\BOOKMARK [3][-]{subsubsection.10.3.1}{Map Creation}{subsection.10.3}% 58
-\BOOKMARK [3][-]{subsubsection.10.3.2}{Player class og Items}{subsection.10.3}% 59
-\BOOKMARK [3][-]{subsubsection.10.3.3}{Enemies}{subsection.10.3}% 60
-\BOOKMARK [3][-]{subsubsection.10.3.4}{Combat}{subsection.10.3}% 61
-\BOOKMARK [3][-]{subsubsection.10.3.5}{Saves}{subsection.10.3}% 62
-\BOOKMARK [2][-]{subsection.10.4}{Backend Design}{section.10}% 63
-\BOOKMARK [3][-]{subsubsection.10.4.1}{Analyse konklusion}{subsection.10.4}% 64
-\BOOKMARK [3][-]{subsubsection.10.4.2}{Routes}{subsection.10.4}% 65
-\BOOKMARK [3][-]{subsubsection.10.4.3}{Data Transfer Object:}{subsection.10.4}% 66
-\BOOKMARK [3][-]{subsubsection.10.4.4}{Authentication/Authorization med JWT Token}{subsection.10.4}% 67
-\BOOKMARK [3][-]{subsubsection.10.4.5}{Hashing}{subsection.10.4}% 68
-\BOOKMARK [3][-]{subsubsection.10.4.6}{BackEndController p\345 client siden}{subsection.10.4}% 69
-\BOOKMARK [2][-]{subsection.10.5}{Applikationsmodeller}{section.10}% 70
-\BOOKMARK [3][-]{subsubsection.10.5.1}{Applikationsmodel User Controller}{subsection.10.5}% 71
-\BOOKMARK [3][-]{subsubsection.10.5.2}{Applikationsmodel Save Controller}{subsection.10.5}% 72
-\BOOKMARK [3][-]{subsubsection.10.5.3}{Konklusion}{subsection.10.5}% 73
-\BOOKMARK [2][-]{subsection.10.6}{Software Design DAL Design}{section.10}% 74
-\BOOKMARK [3][-]{subsubsection.10.6.1}{User story funktioner}{subsection.10.6}% 75
-\BOOKMARK [2][-]{subsection.10.7}{Database Design}{section.10}% 76
-\BOOKMARK [1][-]{section.11}{Implementering}{}% 77
-\BOOKMARK [2][-]{subsection.11.1}{System Implementering}{section.11}% 78
-\BOOKMARK [2][-]{subsection.11.2}{Frontend Implementering}{section.11}% 79
-\BOOKMARK [3][-]{subsubsection.11.2.1}{Login view}{subsection.11.2}% 80
-\BOOKMARK [3][-]{subsubsection.11.2.2}{Room View}{subsection.11.2}% 81
-\BOOKMARK [3][-]{subsubsection.11.2.3}{Combat View}{subsection.11.2}% 82
-\BOOKMARK [3][-]{subsubsection.11.2.4}{Settings view}{subsection.11.2}% 83
-\BOOKMARK [3][-]{subsubsection.11.2.5}{Load view}{subsection.11.2}% 84
-\BOOKMARK [3][-]{subsubsection.11.2.6}{Note om Baggrundsfarver}{subsection.11.2}% 85
-\BOOKMARK [2][-]{subsection.11.3}{Game Engine}{section.11}% 86
-\BOOKMARK [3][-]{subsubsection.11.3.1}{Gamecontroller Implementering}{subsection.11.3}% 87
-\BOOKMARK [3][-]{subsubsection.11.3.2}{Generering af Map}{subsection.11.3}% 88
-\BOOKMARK [3][-]{subsubsection.11.3.3}{Log}{subsection.11.3}% 89
-\BOOKMARK [2][-]{subsection.11.4}{Kommentar til implementeringen}{section.11}% 90
-\BOOKMARK [2][-]{subsection.11.5}{Backend Implementering}{section.11}% 91
-\BOOKMARK [3][-]{subsubsection.11.5.1}{SaveController}{subsection.11.5}% 92
-\BOOKMARK [3][-]{subsubsection.11.5.2}{UserController}{subsection.11.5}% 93
-\BOOKMARK [3][-]{subsubsection.11.5.3}{BackEndController Client}{subsection.11.5}% 94
-\BOOKMARK [3][-]{subsubsection.11.5.4}{Konlusion}{subsection.11.5}% 95
-\BOOKMARK [2][-]{subsection.11.6}{Database Implementering}{section.11}% 96
-\BOOKMARK [1][-]{section.12}{Test}{}% 97
-\BOOKMARK [2][-]{subsection.12.1}{Modultest Frontend}{section.12}% 98
-\BOOKMARK [3][-]{subsubsection.12.1.1}{Test metoder}{subsection.12.1}% 99
-\BOOKMARK [3][-]{subsubsection.12.1.2}{Eksempel p\345 frontend test i forbindelse med Game Engine}{subsection.12.1}% 100
-\BOOKMARK [3][-]{subsubsection.12.1.3}{Eksempel p\345 frontend test}{subsection.12.1}% 101
-\BOOKMARK [2][-]{subsection.12.2}{Modultest Game Engine}{section.12}% 102
-\BOOKMARK [3][-]{subsubsection.12.2.1}{GodkendelsesTabel Game Engine}{subsection.12.2}% 103
-\BOOKMARK [3][-]{subsubsection.12.2.2}{Mock testing}{subsection.12.2}% 104
-\BOOKMARK [3][-]{subsubsection.12.2.3}{Test Resultater for Game Engine}{subsection.12.2}% 105
-\BOOKMARK [2][-]{subsection.12.3}{Modultest database}{section.12}% 106
-\BOOKMARK [3][-]{subsubsection.12.3.1}{Diskussion af database modultest}{subsection.12.3}% 107
-\BOOKMARK [2][-]{subsection.12.4}{Backend Modultest}{section.12}% 108
-\BOOKMARK [1][-]{section.13}{Integrationstest}{}% 109
-\BOOKMARK [2][-]{subsection.13.1}{Tidlig Integrationstest}{section.13}% 110
-\BOOKMARK [2][-]{subsection.13.2}{Fulde Integrationstest}{section.13}% 111
-\BOOKMARK [1][-]{section.14}{Accepttestspecifikation}{}% 112
-\BOOKMARK [2][-]{subsection.14.1}{Funktionelle}{section.14}% 113
-\BOOKMARK [2][-]{subsection.14.2}{ikke-funktionelle}{section.14}% 114
-\BOOKMARK [2][-]{subsection.14.3}{Diskussion af testresultater}{section.14}% 115
-\BOOKMARK [2][-]{subsection.14.4}{Funktionsbeskrivelse}{section.14}% 116
-\BOOKMARK [3][-]{subsubsection.14.4.1}{Game Controller}{subsection.14.4}% 117
-\BOOKMARK [3][-]{subsubsection.14.4.2}{Log}{subsection.14.4}% 118
-\BOOKMARK [3][-]{subsubsection.14.4.3}{DiceRoller}{subsection.14.4}% 119
-\BOOKMARK [3][-]{subsubsection.14.4.4}{Room}{subsection.14.4}% 120
-\BOOKMARK [3][-]{subsubsection.14.4.5}{Combat Controller}{subsection.14.4}% 121
-\BOOKMARK [3][-]{subsubsection.14.4.6}{Backend Controller}{subsection.14.4}% 122
-\BOOKMARK [3][-]{subsubsection.14.4.7}{Base Map Creator}{subsection.14.4}% 123
-\BOOKMARK [3][-]{subsubsection.14.4.8}{Enemy}{subsection.14.4}% 124
-\BOOKMARK [3][-]{subsubsection.14.4.9}{Player}{subsection.14.4}% 125
-\BOOKMARK [1][-]{section.15}{Fremtidigt Arbejde}{}% 126
-\BOOKMARK [1][-]{section.16}{Konklusion}{}% 127
-\BOOKMARK [2][-]{subsection.16.1}{Personlige konklusioner}{section.16}% 128
-\BOOKMARK [3][-]{subsubsection.16.1.1}{Luyen Vu}{subsection.16.1}% 129
-\BOOKMARK [3][-]{subsubsection.16.1.2}{Oscar Dennis}{subsection.16.1}% 130
-\BOOKMARK [3][-]{subsubsection.16.1.3}{Rasmus Engelund}{subsection.16.1}% 131
-\BOOKMARK [3][-]{subsubsection.16.1.4}{Magnus Blaabjerg M\370ller}{subsection.16.1}% 132
-\BOOKMARK [3][-]{subsubsection.16.1.5}{Morten H\370gsberg}{subsection.16.1}% 133
-\BOOKMARK [3][-]{subsubsection.16.1.6}{Anders Hundahl}{subsection.16.1}% 134
-\BOOKMARK [3][-]{subsubsection.16.1.7}{Sune Dyrbye}{subsection.16.1}% 135
-\BOOKMARK [3][-]{subsubsection.16.1.8}{Jacob Hoberg}{subsection.16.1}% 136
+\BOOKMARK [1][-]{section.1}{\376\377\000F\000o\000r\000o\000r\000d}{}% 1
+\BOOKMARK [1][-]{section.2}{\376\377\000I\000n\000t\000r\000o\000d\000u\000c\000t\000i\000o\000n}{}% 2
+\BOOKMARK [1][-]{section.3}{\376\377\000O\000r\000d\000f\000o\000r\000k\000l\000a\000r\000i\000n\000g}{}% 3
+\BOOKMARK [1][-]{section.4}{\376\377\000S\000p\000i\000l\000b\000e\000s\000k\000r\000i\000v\000e\000l\000s\000e}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{\376\377\000M\000i\000n\000i\000m\000a\000l\000\040\000V\000i\000a\000b\000l\000e\000\040\000P\000r\000o\000d\000u\000c\000t}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{\376\377\000L\000o\000g\000i\000n\000-\000s\000c\000r\000e\000e\000n}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{\376\377\000C\000o\000r\000e\000\040\000g\000a\000m\000e\000p\000l\000a\000y\000\040\000l\000a\000y\000o\000u\000t}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{\376\377\000S\000e\000t\000t\000i\000n\000g\000s}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{\376\377\000M\000a\000p\000B\000e\000s\000k\000r\000i\000v\000e\000l\000s\000e}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{\376\377\000S\000y\000s\000t\000e\000m\000b\000e\000s\000k\000r\000i\000v\000e\000l\000s\000e}{}% 10
+\BOOKMARK [1][-]{section.6}{\376\377\000K\000r\000a\000v\000s\000p\000e\000c\000i\000f\000i\000k\000a\000t\000i\000o\000n}{}% 11
+\BOOKMARK [2][-]{subsection.6.1}{\376\377\000F\000u\000n\000k\000t\000i\000o\000n\000e\000l\000l\000e\000\040\000k\000r\000a\000v\000\040\000-\000\040\000U\000s\000e\000r\000\040\000S\000t\000o\000r\000i\000e\000s}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.2}{\376\377\000I\000k\000k\000e\000-\000f\000u\000n\000k\000t\000i\000o\000n\000e\000l\000l\000e\000\040\000k\000r\000a\000v}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.3}{\376\377\000M\000O\000S\000C\000O\000W\000\040\000k\000r\000a\000v}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.4}{\376\377\000A\000c\000c\000e\000p\000t\000t\000e\000s\000t}{section.6}% 15
+\BOOKMARK [3][-]{subsubsection.6.4.1}{\376\377\000F\000u\000n\000k\000t\000i\000o\000n\000e\000l\000l\000e}{subsection.6.4}% 16
+\BOOKMARK [3][-]{subsubsection.6.4.2}{\376\377\000I\000k\000k\000e\000\040\000f\000u\000n\000k\000t\000i\000o\000n\000e\000l\000l\000e}{subsection.6.4}% 17
+\BOOKMARK [1][-]{section.7}{\376\377\000A\000n\000a\000l\000y\000s\000e\000r}{}% 18
+\BOOKMARK [2][-]{subsection.7.1}{\376\377\000T\000e\000k\000n\000o\000l\000o\000g\000i\000u\000n\000d\000e\000r\000s\000\370\000g\000e\000l\000s\000e\000:\000\040\000U\000n\000i\000t\000y\000\040\000-\000\040\000.\000N\000e\000t}{section.7}% 19
+\BOOKMARK [3][-]{subsubsection.7.1.1}{\376\377\000U\000n\000i\000t\000y\000:}{subsection.7.1}% 20
+\BOOKMARK [3][-]{subsubsection.7.1.2}{\376\377\000.\000N\000E\000T\000\040\000f\000r\000a\000m\000e\000w\000o\000r\000k\000:}{subsection.7.1}% 21
+\BOOKMARK [2][-]{subsection.7.2}{\376\377\000T\000e\000k\000n\000o\000l\000o\000g\000i\000u\000n\000d\000e\000r\000s\000\370\000g\000e\000l\000s\000e\000:\000\040\000D\000a\000t\000a\000b\000a\000s\000e\000\040\000S\000Q\000L\000/\000N\000O\000S\000Q\000L}{section.7}% 22
+\BOOKMARK [3][-]{subsubsection.7.2.1}{\376\377\000S\000Q\000L}{subsection.7.2}% 23
+\BOOKMARK [3][-]{subsubsection.7.2.2}{\376\377\000N\000o\000-\000S\000Q\000L}{subsection.7.2}% 24
+\BOOKMARK [3][-]{subsubsection.7.2.3}{\376\377\000K\000o\000n\000k\000l\000u\000s\000i\000o\000n}{subsection.7.2}% 25
+\BOOKMARK [2][-]{subsection.7.3}{\376\377\000T\000e\000k\000n\000i\000s\000k\000\040\000A\000n\000a\000l\000y\000s\000e\000\040\000B\000a\000c\000k\000e\000n\000d}{section.7}% 26
+\BOOKMARK [3][-]{subsubsection.7.3.1}{\376\377\000M\000u\000l\000i\000g\000h\000e\000d\000\040\0001\000:\000\040\000W\000P\000F\000\040\000-\000>\000A\000S\000P\000.\000N\000E\000T\000\040\000C\000o\000r\000e\000\040\000-\000>\000E\000n\000t\000i\000t\000y\000\040\000F\000r\000a\000m\000e\000w\000o\000r\000k\000\040\000C\000o\000r\000e\000\040\000-\000>\000D\000a\000t\000a\000b\000a\000s\000e}{subsection.7.3}% 27
+\BOOKMARK [3][-]{subsubsection.7.3.2}{\376\377\000M\000u\000l\000i\000g\000h\000e\000d\000\040\0002\000:\000\040\000W\000P\000F\000\040\000-\000>\000E\000n\000t\000i\000t\000y\000\040\000F\000r\000a\000m\000e\000w\000o\000r\000k\000\040\000C\000o\000r\000e\000\040\000-\000>\000d\000a\000t\000a\000b\000a\000s\000e}{subsection.7.3}% 28
+\BOOKMARK [3][-]{subsubsection.7.3.3}{\376\377\000K\000o\000n\000k\000l\000u\000s\000i\000o\000n}{subsection.7.3}% 29
+\BOOKMARK [1][-]{section.8}{\376\377\000A\000r\000k\000i\000t\000e\000k\000t\000u\000r}{}% 30
+\BOOKMARK [2][-]{subsection.8.1}{\376\377\000S\000y\000s\000t\000e\000m\000a\000r\000k\000i\000t\000e\000k\000t\000u\000r}{section.8}% 31
+\BOOKMARK [2][-]{subsection.8.2}{\376\377\000F\000r\000o\000n\000t\000e\000n\000d\000\040\000A\000r\000k\000i\000t\000e\000k\000t\000u\000r}{section.8}% 32
+\BOOKMARK [3][-]{subsubsection.8.2.1}{\376\377\000P\000s\000e\000u\000d\000o\000\040\000F\000r\000o\000n\000t\000e\000n\000d\000\040\000A\000r\000k\000i\000t\000e\000k\000t\000u\000r}{subsection.8.2}% 33
+\BOOKMARK [2][-]{subsection.8.3}{\376\377\000G\000a\000m\000e\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r\000\040\000A\000r\000k\000i\000t\000e\000k\000t\000u\000r}{section.8}% 34
+\BOOKMARK [3][-]{subsubsection.8.3.1}{\376\377\000S\000t\000a\000t\000e\000s\000\040\000o\000g\000\040\000C\000h\000a\000r\000a\000c\000t\000e\000r\000\040\000i\000n\000t\000e\000r\000a\000g\000e\000r\000i\000n\000g}{subsection.8.3}% 35
+\BOOKMARK [3][-]{subsubsection.8.3.2}{\376\377\000R\000o\000o\000m\000\040\000S\000t\000a\000t\000e\000\040\000o\000g\000\040\000C\000h\000a\000r\000a\000c\000t\000e\000r\000\040\000i\000n\000t\000e\000r\000a\000g\000e\000r\000i\000n\000g}{subsection.8.3}% 36
+\BOOKMARK [3][-]{subsubsection.8.3.3}{\376\377\000C\000o\000m\000b\000a\000t\000\040\000S\000t\000a\000t\000e\000\040\000o\000g\000\040\000C\000o\000m\000b\000a\000t\000\040\000s\000i\000m\000u\000l\000e\000r\000i\000n\000g}{subsection.8.3}% 37
+\BOOKMARK [3][-]{subsubsection.8.3.4}{\376\377\000F\000o\000r\000b\000i\000n\000d\000e\000l\000s\000e\000r\000\040\000t\000i\000l\000\040\000a\000n\000d\000r\000e\000\040\000m\000o\000d\000u\000l\000e\000r}{subsection.8.3}% 38
+\BOOKMARK [2][-]{subsection.8.4}{\376\377\000B\000a\000c\000k\000e\000n\000d\000\040\000A\000r\000k\000i\000t\000e\000k\000t\000u\000r}{section.8}% 39
+\BOOKMARK [3][-]{subsubsection.8.4.1}{\376\377\000M\000V\000C}{subsection.8.4}% 40
+\BOOKMARK [3][-]{subsubsection.8.4.2}{\376\377\000C\0003\000-\000M\000o\000d\000e\000l\000\040\000f\000o\000r\000\040\000b\000a\000c\000k\000e\000n\000d}{subsection.8.4}% 41
+\BOOKMARK [3][-]{subsubsection.8.4.3}{\376\377\000R\000E\000S\000T}{subsection.8.4}% 42
+\BOOKMARK [3][-]{subsubsection.8.4.4}{\376\377\000K\000o\000n\000l\000u\000s\000i\000o\000n}{subsection.8.4}% 43
+\BOOKMARK [2][-]{subsection.8.5}{\376\377\000D\000a\000t\000a\000b\000a\000s\000e\000\040\000A\000r\000k\000i\000t\000e\000k\000t\000u\000r}{section.8}% 44
+\BOOKMARK [2][-]{subsection.8.6}{\376\377\000D\000A\000L\000\040\000A\000r\000k\000i\000t\000e\000k\000t\000u\000r}{section.8}% 45
+\BOOKMARK [1][-]{section.9}{\376\377\000D\000e\000s\000i\000g\000n}{}% 46
+\BOOKMARK [2][-]{subsection.9.1}{\376\377\000O\000v\000e\000r\000o\000r\000d\000n\000e\000t\000\040\000S\000y\000s\000t\000e\000m\000\040\000D\000e\000s\000i\000g\000n}{section.9}% 47
+\BOOKMARK [2][-]{subsection.9.2}{\376\377\000F\000r\000o\000n\000t\000e\000n\000d\000\040\000D\000e\000s\000i\000g\000n}{section.9}% 48
+\BOOKMARK [3][-]{subsubsection.9.2.1}{\376\377\000R\000o\000o\000m}{subsection.9.2}% 49
+\BOOKMARK [3][-]{subsubsection.9.2.2}{\376\377\000C\000o\000m\000b\000a\000t}{subsection.9.2}% 50
+\BOOKMARK [3][-]{subsubsection.9.2.3}{\376\377\000L\000o\000g\000i\000n}{subsection.9.2}% 51
+\BOOKMARK [3][-]{subsubsection.9.2.4}{\376\377\000S\000e\000t\000t\000i\000n\000g\000s}{subsection.9.2}% 52
+\BOOKMARK [2][-]{subsection.9.3}{\376\377\000G\000a\000m\000e\000\040\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r\000\040\000D\000e\000s\000i\000g\000n}{section.9}% 53
+\BOOKMARK [3][-]{subsubsection.9.3.1}{\376\377\000M\000a\000p\000\040\000C\000r\000e\000a\000t\000i\000o\000n}{subsection.9.3}% 54
+\BOOKMARK [3][-]{subsubsection.9.3.2}{\376\377\000P\000l\000a\000y\000e\000r\000\040\000c\000l\000a\000s\000s\000\040\000o\000g\000\040\000I\000t\000e\000m\000s}{subsection.9.3}% 55
+\BOOKMARK [3][-]{subsubsection.9.3.3}{\376\377\000E\000n\000e\000m\000i\000e\000s}{subsection.9.3}% 56
+\BOOKMARK [3][-]{subsubsection.9.3.4}{\376\377\000C\000o\000m\000b\000a\000t}{subsection.9.3}% 57
+\BOOKMARK [3][-]{subsubsection.9.3.5}{\376\377\000S\000a\000v\000e\000s}{subsection.9.3}% 58
+\BOOKMARK [2][-]{subsection.9.4}{\376\377\000B\000a\000c\000k\000e\000n\000d\000\040\000D\000e\000s\000i\000g\000n}{section.9}% 59
+\BOOKMARK [3][-]{subsubsection.9.4.1}{\376\377\000A\000n\000a\000l\000y\000s\000e\000\040\000k\000o\000n\000k\000l\000u\000s\000i\000o\000n}{subsection.9.4}% 60
+\BOOKMARK [3][-]{subsubsection.9.4.2}{\376\377\000R\000o\000u\000t\000e\000s}{subsection.9.4}% 61
+\BOOKMARK [3][-]{subsubsection.9.4.3}{\376\377\000D\000a\000t\000a\000\040\000T\000r\000a\000n\000s\000f\000e\000r\000\040\000O\000b\000j\000e\000c\000t\000:}{subsection.9.4}% 62
+\BOOKMARK [3][-]{subsubsection.9.4.4}{\376\377\000A\000u\000t\000h\000e\000n\000t\000i\000c\000a\000t\000i\000o\000n\000/\000A\000u\000t\000h\000o\000r\000i\000z\000a\000t\000i\000o\000n\000\040\000m\000e\000d\000\040\000J\000W\000T\000\040\000T\000o\000k\000e\000n}{subsection.9.4}% 63
+\BOOKMARK [3][-]{subsubsection.9.4.5}{\376\377\000H\000a\000s\000h\000i\000n\000g}{subsection.9.4}% 64
+\BOOKMARK [3][-]{subsubsection.9.4.6}{\376\377\000B\000a\000c\000k\000E\000n\000d\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r\000\040\000p\000\345\000\040\000c\000l\000i\000e\000n\000t\000\040\000s\000i\000d\000e\000n}{subsection.9.4}% 65
+\BOOKMARK [2][-]{subsection.9.5}{\376\377\000A\000p\000p\000l\000i\000k\000a\000t\000i\000o\000n\000s\000m\000o\000d\000e\000l\000l\000e\000r}{section.9}% 66
+\BOOKMARK [3][-]{subsubsection.9.5.1}{\376\377\000A\000p\000p\000l\000i\000k\000a\000t\000i\000o\000n\000s\000m\000o\000d\000e\000l\000\040\000U\000s\000e\000r\000\040\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r}{subsection.9.5}% 67
+\BOOKMARK [3][-]{subsubsection.9.5.2}{\376\377\000A\000p\000p\000l\000i\000k\000a\000t\000i\000o\000n\000s\000m\000o\000d\000e\000l\000\040\000S\000a\000v\000e\000\040\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r}{subsection.9.5}% 68
+\BOOKMARK [3][-]{subsubsection.9.5.3}{\376\377\000K\000o\000n\000k\000l\000u\000s\000i\000o\000n}{subsection.9.5}% 69
+\BOOKMARK [2][-]{subsection.9.6}{\376\377\000S\000o\000f\000t\000w\000a\000r\000e\000\040\000D\000e\000s\000i\000g\000n\000\040\000D\000A\000L\000\040\000D\000e\000s\000i\000g\000n}{section.9}% 70
+\BOOKMARK [3][-]{subsubsection.9.6.1}{\376\377\000U\000s\000e\000r\000\040\000s\000t\000o\000r\000y\000\040\000f\000u\000n\000k\000t\000i\000o\000n\000e\000r}{subsection.9.6}% 71
+\BOOKMARK [2][-]{subsection.9.7}{\376\377\000D\000a\000t\000a\000b\000a\000s\000e\000\040\000D\000e\000s\000i\000g\000n}{section.9}% 72
+\BOOKMARK [1][-]{section.10}{\376\377\000I\000m\000p\000l\000e\000m\000e\000n\000t\000e\000r\000i\000n\000g}{}% 73
+\BOOKMARK [2][-]{subsection.10.1}{\376\377\000S\000y\000s\000t\000e\000m\000\040\000I\000m\000p\000l\000e\000m\000e\000n\000t\000e\000r\000i\000n\000g}{section.10}% 74
+\BOOKMARK [2][-]{subsection.10.2}{\376\377\000F\000r\000o\000n\000t\000e\000n\000d\000\040\000I\000m\000p\000l\000e\000m\000e\000n\000t\000e\000r\000i\000n\000g}{section.10}% 75
+\BOOKMARK [3][-]{subsubsection.10.2.1}{\376\377\000L\000o\000g\000i\000n\000\040\000v\000i\000e\000w}{subsection.10.2}% 76
+\BOOKMARK [3][-]{subsubsection.10.2.2}{\376\377\000R\000o\000o\000m\000\040\000V\000i\000e\000w}{subsection.10.2}% 77
+\BOOKMARK [3][-]{subsubsection.10.2.3}{\376\377\000C\000o\000m\000b\000a\000t\000\040\000V\000i\000e\000w}{subsection.10.2}% 78
+\BOOKMARK [3][-]{subsubsection.10.2.4}{\376\377\000S\000e\000t\000t\000i\000n\000g\000s\000\040\000v\000i\000e\000w}{subsection.10.2}% 79
+\BOOKMARK [3][-]{subsubsection.10.2.5}{\376\377\000L\000o\000a\000d\000\040\000v\000i\000e\000w}{subsection.10.2}% 80
+\BOOKMARK [3][-]{subsubsection.10.2.6}{\376\377\000N\000o\000t\000e\000\040\000o\000m\000\040\000B\000a\000g\000g\000r\000u\000n\000d\000s\000f\000a\000r\000v\000e\000r}{subsection.10.2}% 81
+\BOOKMARK [2][-]{subsection.10.3}{\376\377\000G\000a\000m\000e\000\040\000E\000n\000g\000i\000n\000e}{section.10}% 82
+\BOOKMARK [3][-]{subsubsection.10.3.1}{\376\377\000G\000a\000m\000e\000c\000o\000n\000t\000r\000o\000l\000l\000e\000r\000\040\000I\000m\000p\000l\000e\000m\000e\000n\000t\000e\000r\000i\000n\000g}{subsection.10.3}% 83
+\BOOKMARK [3][-]{subsubsection.10.3.2}{\376\377\000G\000e\000n\000e\000r\000e\000r\000i\000n\000g\000\040\000a\000f\000\040\000M\000a\000p}{subsection.10.3}% 84
+\BOOKMARK [3][-]{subsubsection.10.3.3}{\376\377\000L\000o\000g}{subsection.10.3}% 85
+\BOOKMARK [2][-]{subsection.10.4}{\376\377\000K\000o\000m\000m\000e\000n\000t\000a\000r\000\040\000t\000i\000l\000\040\000i\000m\000p\000l\000e\000m\000e\000n\000t\000e\000r\000i\000n\000g\000e\000n}{section.10}% 86
+\BOOKMARK [2][-]{subsection.10.5}{\376\377\000B\000a\000c\000k\000e\000n\000d\000\040\000I\000m\000p\000l\000e\000m\000e\000n\000t\000e\000r\000i\000n\000g}{section.10}% 87
+\BOOKMARK [3][-]{subsubsection.10.5.1}{\376\377\000S\000a\000v\000e\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r}{subsection.10.5}% 88
+\BOOKMARK [3][-]{subsubsection.10.5.2}{\376\377\000U\000s\000e\000r\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r}{subsection.10.5}% 89
+\BOOKMARK [3][-]{subsubsection.10.5.3}{\376\377\000B\000a\000c\000k\000E\000n\000d\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r\000\040\000C\000l\000i\000e\000n\000t}{subsection.10.5}% 90
+\BOOKMARK [3][-]{subsubsection.10.5.4}{\376\377\000K\000o\000n\000l\000u\000s\000i\000o\000n}{subsection.10.5}% 91
+\BOOKMARK [2][-]{subsection.10.6}{\376\377\000D\000a\000t\000a\000b\000a\000s\000e\000\040\000I\000m\000p\000l\000e\000m\000e\000n\000t\000e\000r\000i\000n\000g}{section.10}% 92
+\BOOKMARK [1][-]{section.11}{\376\377\000T\000e\000s\000t}{}% 93
+\BOOKMARK [2][-]{subsection.11.1}{\376\377\000M\000o\000d\000u\000l\000t\000e\000s\000t\000\040\000F\000r\000o\000n\000t\000e\000n\000d}{section.11}% 94
+\BOOKMARK [3][-]{subsubsection.11.1.1}{\376\377\000T\000e\000s\000t\000\040\000m\000e\000t\000o\000d\000e\000r}{subsection.11.1}% 95
+\BOOKMARK [3][-]{subsubsection.11.1.2}{\376\377\000E\000k\000s\000e\000m\000p\000e\000l\000\040\000p\000\345\000\040\000f\000r\000o\000n\000t\000e\000n\000d\000\040\000t\000e\000s\000t\000\040\000i\000\040\000f\000o\000r\000b\000i\000n\000d\000e\000l\000s\000e\000\040\000m\000e\000d\000\040\000G\000a\000m\000e\000\040\000E\000n\000g\000i\000n\000e}{subsection.11.1}% 96
+\BOOKMARK [3][-]{subsubsection.11.1.3}{\376\377\000E\000k\000s\000e\000m\000p\000e\000l\000\040\000p\000\345\000\040\000f\000r\000o\000n\000t\000e\000n\000d\000\040\000t\000e\000s\000t}{subsection.11.1}% 97
+\BOOKMARK [2][-]{subsection.11.2}{\376\377\000M\000o\000d\000u\000l\000t\000e\000s\000t\000\040\000G\000a\000m\000e\000\040\000E\000n\000g\000i\000n\000e}{section.11}% 98
+\BOOKMARK [3][-]{subsubsection.11.2.1}{\376\377\000G\000o\000d\000k\000e\000n\000d\000e\000l\000s\000e\000s\000T\000a\000b\000e\000l\000\040\000G\000a\000m\000e\000\040\000E\000n\000g\000i\000n\000e}{subsection.11.2}% 99
+\BOOKMARK [3][-]{subsubsection.11.2.2}{\376\377\000M\000o\000c\000k\000\040\000t\000e\000s\000t\000i\000n\000g}{subsection.11.2}% 100
+\BOOKMARK [3][-]{subsubsection.11.2.3}{\376\377\000T\000e\000s\000t\000\040\000R\000e\000s\000u\000l\000t\000a\000t\000e\000r\000\040\000f\000o\000r\000\040\000G\000a\000m\000e\000\040\000E\000n\000g\000i\000n\000e}{subsection.11.2}% 101
+\BOOKMARK [2][-]{subsection.11.3}{\376\377\000M\000o\000d\000u\000l\000t\000e\000s\000t\000\040\000d\000a\000t\000a\000b\000a\000s\000e}{section.11}% 102
+\BOOKMARK [3][-]{subsubsection.11.3.1}{\376\377\000D\000i\000s\000k\000u\000s\000s\000i\000o\000n\000\040\000a\000f\000\040\000d\000a\000t\000a\000b\000a\000s\000e\000\040\000m\000o\000d\000u\000l\000t\000e\000s\000t}{subsection.11.3}% 103
+\BOOKMARK [2][-]{subsection.11.4}{\376\377\000B\000a\000c\000k\000e\000n\000d\000\040\000M\000o\000d\000u\000l\000t\000e\000s\000t}{section.11}% 104
+\BOOKMARK [1][-]{section.12}{\376\377\000I\000n\000t\000e\000g\000r\000a\000t\000i\000o\000n\000s\000t\000e\000s\000t}{}% 105
+\BOOKMARK [2][-]{subsection.12.1}{\376\377\000T\000i\000d\000l\000i\000g\000\040\000I\000n\000t\000e\000g\000r\000a\000t\000i\000o\000n\000s\000t\000e\000s\000t}{section.12}% 106
+\BOOKMARK [2][-]{subsection.12.2}{\376\377\000F\000u\000l\000d\000e\000\040\000I\000n\000t\000e\000g\000r\000a\000t\000i\000o\000n\000s\000t\000e\000s\000t}{section.12}% 107
+\BOOKMARK [1][-]{section.13}{\376\377\000A\000c\000c\000e\000p\000t\000t\000e\000s\000t\000s\000p\000e\000c\000i\000f\000i\000k\000a\000t\000i\000o\000n}{}% 108
+\BOOKMARK [2][-]{subsection.13.1}{\376\377\000F\000u\000n\000k\000t\000i\000o\000n\000e\000l\000l\000e}{section.13}% 109
+\BOOKMARK [2][-]{subsection.13.2}{\376\377\000i\000k\000k\000e\000-\000f\000u\000n\000k\000t\000i\000o\000n\000e\000l\000l\000e}{section.13}% 110
+\BOOKMARK [2][-]{subsection.13.3}{\376\377\000D\000i\000s\000k\000u\000s\000s\000i\000o\000n\000\040\000a\000f\000\040\000t\000e\000s\000t\000r\000e\000s\000u\000l\000t\000a\000t\000e\000r}{section.13}% 111
+\BOOKMARK [2][-]{subsection.13.4}{\376\377\000F\000u\000n\000k\000t\000i\000o\000n\000s\000b\000e\000s\000k\000r\000i\000v\000e\000l\000s\000e}{section.13}% 112
+\BOOKMARK [3][-]{subsubsection.13.4.1}{\376\377\000G\000a\000m\000e\000\040\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r}{subsection.13.4}% 113
+\BOOKMARK [3][-]{subsubsection.13.4.2}{\376\377\000L\000o\000g}{subsection.13.4}% 114
+\BOOKMARK [3][-]{subsubsection.13.4.3}{\376\377\000D\000i\000c\000e\000R\000o\000l\000l\000e\000r}{subsection.13.4}% 115
+\BOOKMARK [3][-]{subsubsection.13.4.4}{\376\377\000R\000o\000o\000m}{subsection.13.4}% 116
+\BOOKMARK [3][-]{subsubsection.13.4.5}{\376\377\000C\000o\000m\000b\000a\000t\000\040\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r}{subsection.13.4}% 117
+\BOOKMARK [3][-]{subsubsection.13.4.6}{\376\377\000B\000a\000c\000k\000e\000n\000d\000\040\000C\000o\000n\000t\000r\000o\000l\000l\000e\000r}{subsection.13.4}% 118
+\BOOKMARK [3][-]{subsubsection.13.4.7}{\376\377\000B\000a\000s\000e\000\040\000M\000a\000p\000\040\000C\000r\000e\000a\000t\000o\000r}{subsection.13.4}% 119
+\BOOKMARK [3][-]{subsubsection.13.4.8}{\376\377\000E\000n\000e\000m\000y}{subsection.13.4}% 120
+\BOOKMARK [3][-]{subsubsection.13.4.9}{\376\377\000P\000l\000a\000y\000e\000r}{subsection.13.4}% 121
+\BOOKMARK [1][-]{section.14}{\376\377\000F\000r\000e\000m\000t\000i\000d\000i\000g\000t\000\040\000A\000r\000b\000e\000j\000d\000e}{}% 122
+\BOOKMARK [1][-]{section.15}{\376\377\000K\000o\000n\000k\000l\000u\000s\000i\000o\000n}{}% 123
+\BOOKMARK [2][-]{subsection.15.1}{\376\377\000P\000e\000r\000s\000o\000n\000l\000i\000g\000e\000\040\000k\000o\000n\000k\000l\000u\000s\000i\000o\000n\000e\000r}{section.15}% 124
+\BOOKMARK [3][-]{subsubsection.15.1.1}{\376\377\000L\000u\000y\000e\000n\000\040\000V\000u}{subsection.15.1}% 125
+\BOOKMARK [3][-]{subsubsection.15.1.2}{\376\377\000O\000s\000c\000a\000r\000\040\000D\000e\000n\000n\000i\000s}{subsection.15.1}% 126
+\BOOKMARK [3][-]{subsubsection.15.1.3}{\376\377\000R\000a\000s\000m\000u\000s\000\040\000E\000n\000g\000e\000l\000u\000n\000d}{subsection.15.1}% 127
+\BOOKMARK [3][-]{subsubsection.15.1.4}{\376\377\000M\000a\000g\000n\000u\000s\000\040\000B\000l\000a\000a\000b\000j\000e\000r\000g\000\040\000M\000\370\000l\000l\000e\000r}{subsection.15.1}% 128
+\BOOKMARK [3][-]{subsubsection.15.1.5}{\376\377\000M\000o\000r\000t\000e\000n\000\040\000H\000\370\000g\000s\000b\000e\000r\000g}{subsection.15.1}% 129
+\BOOKMARK [3][-]{subsubsection.15.1.6}{\376\377\000A\000n\000d\000e\000r\000s\000\040\000H\000u\000n\000d\000a\000h\000l}{subsection.15.1}% 130
+\BOOKMARK [3][-]{subsubsection.15.1.7}{\376\377\000S\000u\000n\000e\000\040\000D\000y\000r\000b\000y\000e}{subsection.15.1}% 131
+\BOOKMARK [3][-]{subsubsection.15.1.8}{\376\377\000J\000a\000c\000o\000b\000\040\000H\000o\000b\000e\000r\000g}{subsection.15.1}% 132

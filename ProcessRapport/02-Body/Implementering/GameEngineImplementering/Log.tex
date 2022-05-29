@@ -1,0 +1,18 @@
+\subsubsection{Log}
+Komunikkation med frontend fra GameControlleren og CombatControlleren
+gør brug af en log.
+Logen består af et dictionary datastruktur som GameControlleren og 
+CombatControlleren benytter til at logge vigtige infomation, som 
+frontend kunne have brug for at vise til spilleren. \\
+
+\noindent Dette kan være infomation om spillerens bevægelse fra
+et Room til et andet. Det kan også være infomation omkring spillerens
+eller enemies tilbageværende livsmængde osv. Dette isolere frontend 
+fuldt fra Game Engine, da frontend ikke har andre accesspunkter til
+infomation om hvad der sker i spillet. 
+
+Derved opnår frontend seperation of respondsibility da frontend nu 
+kun er ansvarlig for at display infomation som det er givet af game
+enginen.
+
+\newpage
