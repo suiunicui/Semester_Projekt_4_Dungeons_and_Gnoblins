@@ -1,307 +1,149 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Forord}{5}{section.1}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Introduction}{5}{section.2}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Ordforklaring}{6}{section.3}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Spilbeskrivelse}{7}{section.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Login-screen}{7}{subsection.4.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Core gameplay layout}{7}{subsection.4.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Settings}{9}{subsection.4.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}MapBeskrivelse}{10}{subsection.4.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Systembeskrivelse}{12}{section.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Kravspecifikation}{12}{section.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Funktionelle krav - User Stories}{13}{subsection.6.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Ikke-funktionelle krav}{15}{subsection.6.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}MOSCOW krav}{17}{subsection.6.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}Accepttest}{17}{subsection.6.4}%
-\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Minimal Viable Product}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Login-screen}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Core gameplay layout}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Settings}{10}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}MapBeskrivelse}{11}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Systembeskrivelse}{13}{section.5}%
+\contentsline {section}{\numberline {6}Kravspecifikation}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Funktionelle krav - User Stories}{14}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Ikke-funktionelle krav}{16}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}MOSCOW krav}{18}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Accepttest}{18}{subsection.6.4}%
 \contentsline {subsubsection}{\numberline {6.4.1}Funktionelle}{18}{subsubsection.6.4.1}%
-\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Test af User Story 1 - Login}{18}{section*.10}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 2 - Opret profil}{18}{section*.11}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 3 og 4 - Main Menu}{19}{section*.12}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 5-16 - Exit Menu}{19}{section*.13}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 17 og 18 - Save Menu}{21}{section*.14}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 19-22 - Main Menu}{21}{section*.15}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 23-28 - Spil spillet}{22}{section*.16}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.4.2}Ikke funktionelle}{23}{subsubsection.6.4.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Metode og Proces}{29}{section.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.0.1}Gruppedannelse}{29}{subsubsection.7.0.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.0.2}Projektforløb og møder}{29}{subsubsection.7.0.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Modellering}{30}{subsection.7.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.1}Iterativ Udviklingsforløb}{31}{subsubsection.7.1.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Analyser}{32}{section.8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Teknologiundersøgelse: Unity - .Net}{32}{subsection.8.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.1.1}Unity:}{32}{subsubsection.8.1.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.1.2}.NET framework:}{32}{subsubsection.8.1.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Teknologiundersøgelse: Database SQL/NOSQL}{33}{subsection.8.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.2.1}SQL}{33}{subsubsection.8.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.2.2}No-SQL}{33}{subsubsection.8.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.2.3}Konklusion}{34}{subsubsection.8.2.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3}Teknisk Analyse Backend}{34}{subsection.8.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.3.1}Mulighed 1: WPF -$>$ASP.NET Core -$>$Entity Framework Core -$>$Database}{34}{subsubsection.8.3.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.3.2}Mulighed 2: WPF -$>$Entity Framework Core -$>$database}{34}{subsubsection.8.3.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.3.3}Konklusion}{34}{subsubsection.8.3.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Arkitektur}{35}{section.9}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Systemarkitektur}{35}{subsection.9.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Frontend Arkitektur}{35}{subsection.9.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.2.1}Pseudo Frontend Arkitektur}{36}{subsubsection.9.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}GameController Arkitektur}{41}{subsection.9.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.3.1}States og Character interagering}{41}{subsubsection.9.3.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.3.2}Room State og Character interagering}{42}{subsubsection.9.3.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.3.3}Combat State og Combat simulering}{42}{subsubsection.9.3.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.3.4}Forbindelser til andre moduler}{43}{subsubsection.9.3.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Backend Arkitektur}{44}{subsection.9.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.4.1}MVC}{44}{subsubsection.9.4.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.4.2}C3-Model for backend}{45}{subsubsection.9.4.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.4.3}REST}{47}{subsubsection.9.4.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.4.4}Konlusion}{47}{subsubsection.9.4.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.5}Database Arkitektur}{48}{subsection.9.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.6}DAL Arkitektur}{52}{subsection.9.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Design}{53}{section.10}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Overordnet System Design}{53}{subsection.10.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2}Frontend Design}{55}{subsection.10.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.2.1}Room}{55}{subsubsection.10.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.2.2}Combat}{56}{subsubsection.10.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.2.3}Login}{57}{subsubsection.10.2.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.2.4}Settings}{58}{subsubsection.10.2.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3}Game Controller Design}{60}{subsection.10.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.3.1}Map Creation}{60}{subsubsection.10.3.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.3.2}Player class og Items}{60}{subsubsection.10.3.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.3.3}Enemies}{60}{subsubsection.10.3.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.3.4}Combat}{60}{subsubsection.10.3.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.3.5}Saves}{61}{subsubsection.10.3.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4}Backend Design}{61}{subsection.10.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.4.1}Analyse konklusion}{61}{subsubsection.10.4.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.4.2}Routes}{61}{subsubsection.10.4.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.4.3}Data Transfer Object:}{62}{subsubsection.10.4.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.4.4}Authentication/Authorization med JWT Token}{62}{subsubsection.10.4.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.4.5}Hashing}{63}{subsubsection.10.4.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.4.6}BackEndController på client siden}{63}{subsubsection.10.4.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.5}Applikationsmodeller}{63}{subsection.10.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.1}Applikationsmodel User Controller}{64}{subsubsection.10.5.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.2}Applikationsmodel Save Controller}{66}{subsubsection.10.5.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.3}Konklusion}{70}{subsubsection.10.5.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.6}Software Design DAL Design}{71}{subsection.10.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.6.1}User story funktioner}{72}{subsubsection.10.6.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.7}Database Design}{75}{subsection.10.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Implementering}{77}{section.11}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1}System Implementering}{77}{subsection.11.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.2}Frontend Implementering}{77}{subsection.11.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.2.1}Login view}{78}{subsubsection.11.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.2.2}Room View}{79}{subsubsection.11.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.2.3}Combat View}{80}{subsubsection.11.2.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.2.4}Settings view}{81}{subsubsection.11.2.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.2.5}Load view}{82}{subsubsection.11.2.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.2.6}Note om Baggrundsfarver}{83}{subsubsection.11.2.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.3}Game Engine}{84}{subsection.11.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.3.1}Gamecontroller Implementering}{85}{subsubsection.11.3.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.3.2}Generering af Map}{87}{subsubsection.11.3.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Gem en map layout fil \\}{87}{section*.74}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Lav en klasse som generer map layout filen \\}{87}{section*.75}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Items og Enemies \\}{87}{section*.77}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.3.3}Log}{87}{subsubsection.11.3.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.4}Kommentar til implementeringen}{88}{subsection.11.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.5}Backend Implementering}{88}{subsection.11.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.5.1}SaveController}{88}{subsubsection.11.5.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.5.2}UserController}{89}{subsubsection.11.5.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.5.3}BackEndController Client}{89}{subsubsection.11.5.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {11.5.4}Konlusion}{90}{subsubsection.11.5.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.6}Database Implementering}{91}{subsection.11.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Test}{93}{section.12}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1}Modultest Frontend}{93}{subsection.12.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.1.1}Test metoder}{93}{subsubsection.12.1.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.1.2}Eksempel på frontend test i forbindelse med Game Engine}{94}{subsubsection.12.1.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.1.3}Eksempel på frontend test}{94}{subsubsection.12.1.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.2}Modultest Game Engine}{94}{subsection.12.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.2.1}GodkendelsesTabel Game Engine}{95}{subsubsection.12.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.2.2}Mock testing}{98}{subsubsection.12.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.2.3}Test Resultater for Game Engine}{99}{subsubsection.12.2.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.3}Modultest database}{100}{subsection.12.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.3.1}Diskussion af database modultest}{103}{subsubsection.12.3.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.4}Backend Modultest}{103}{subsection.12.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13}Integrationstest}{107}{section.13}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.1}Tidlig Integrationstest}{107}{subsection.13.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.2}Fulde Integrationstest}{107}{subsection.13.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14}Accepttestspecifikation}{108}{section.14}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.1}Funktionelle}{108}{subsection.14.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 1 - Login}{108}{section*.98}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 2 - Opret profil}{108}{section*.99}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 3 og 4 - Main Menu}{109}{section*.100}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 5-16 - Exit Menu}{109}{section*.101}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 17 og 18 - Save Menu}{111}{section*.102}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 19-22 - Main Menu}{112}{section*.103}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test af User Story 23-28 - Spil spillet}{112}{section*.104}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.2}ikke-funktionelle}{114}{subsection.14.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.3}Diskussion af testresultater}{119}{subsection.14.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.4}Funktionsbeskrivelse}{119}{subsection.14.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.4.1}Game Controller}{119}{subsubsection.14.4.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.4.2}Log}{120}{subsubsection.14.4.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.4.3}DiceRoller}{120}{subsubsection.14.4.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.4.4}Room}{121}{subsubsection.14.4.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.4.5}Combat Controller}{121}{subsubsection.14.4.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.4.6}Backend Controller}{121}{subsubsection.14.4.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.4.7}Base Map Creator}{122}{subsubsection.14.4.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.4.8}Enemy}{122}{subsubsection.14.4.8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.4.9}Player}{123}{subsubsection.14.4.9}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {15}Fremtidigt Arbejde}{123}{section.15}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {16}Konklusion}{124}{section.16}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.1}Personlige konklusioner}{124}{subsection.16.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.1.1}Luyen Vu}{124}{subsubsection.16.1.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.1.2}Oscar Dennis}{124}{subsubsection.16.1.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.1.3}Rasmus Engelund}{124}{subsubsection.16.1.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.1.4}Magnus Blaabjerg Møller}{125}{subsubsection.16.1.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.1.5}Morten Høgsberg}{125}{subsubsection.16.1.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.1.6}Anders Hundahl}{125}{subsubsection.16.1.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.1.7}Sune Dyrbye}{125}{subsubsection.16.1.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.1.8}Jacob Hoberg}{125}{subsubsection.16.1.8}%
+\contentsline {paragraph}{Test af User Story 2 - Opret profil}{19}{section*.11}%
+\contentsline {paragraph}{Test af User Story 3-5 - Main Menu}{19}{section*.12}%
+\contentsline {paragraph}{Test af User Story 6-14 - Exit Menu}{20}{section*.13}%
+\contentsline {paragraph}{Test af User Story 15 og 16 - Save Menu}{22}{section*.14}%
+\contentsline {paragraph}{Test af User Story 17-19 - Main Menu}{22}{section*.15}%
+\contentsline {paragraph}{Test af User Story 20-26 - Spil spillet}{23}{section*.16}%
+\contentsline {subsubsection}{\numberline {6.4.2}Ikke funktionelle}{24}{subsubsection.6.4.2}%
+\contentsline {section}{\numberline {7}Analyser}{29}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Teknologiundersøgelse: Unity - .Net}{29}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Unity:}{29}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}.NET framework:}{29}{subsubsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.2}Teknologiundersøgelse: Database SQL/NOSQL}{30}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}SQL}{30}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}No-SQL}{31}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Konklusion}{31}{subsubsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.3}Teknisk Analyse Backend}{31}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Mulighed 1: WPF -$>$ASP.NET Core -$>$Entity Framework Core -$>$Database}{31}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Mulighed 2: WPF -$>$Entity Framework Core -$>$database}{31}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Konklusion}{32}{subsubsection.7.3.3}%
+\contentsline {section}{\numberline {8}Arkitektur}{33}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Systemarkitektur}{33}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Frontend Arkitektur}{33}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Pseudo Frontend Arkitektur}{34}{subsubsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.3}GameController Arkitektur}{39}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}States og Character interagering}{39}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Room State og Character interagering}{40}{subsubsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.3}Combat State og Combat simulering}{40}{subsubsection.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.3.4}Forbindelser til andre moduler}{41}{subsubsection.8.3.4}%
+\contentsline {subsection}{\numberline {8.4}Backend Arkitektur}{42}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}MVC}{42}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}C3-Model for backend}{43}{subsubsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.3}REST}{45}{subsubsection.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.4.4}Konlusion}{45}{subsubsection.8.4.4}%
+\contentsline {subsection}{\numberline {8.5}Database Arkitektur}{46}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}DAL Arkitektur}{50}{subsection.8.6}%
+\contentsline {section}{\numberline {9}Design}{51}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Overordnet System Design}{51}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Frontend Design}{53}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Room}{53}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}Combat}{54}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.3}Login}{55}{subsubsection.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.2.4}Settings}{56}{subsubsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.3}Game Controller Design}{58}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Map Creation}{58}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}Player class og Items}{58}{subsubsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.3}Enemies}{58}{subsubsection.9.3.3}%
+\contentsline {subsubsection}{\numberline {9.3.4}Combat}{58}{subsubsection.9.3.4}%
+\contentsline {subsubsection}{\numberline {9.3.5}Saves}{59}{subsubsection.9.3.5}%
+\contentsline {subsection}{\numberline {9.4}Backend Design}{59}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Analyse konklusion}{59}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}Routes}{59}{subsubsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.3}Data Transfer Object:}{60}{subsubsection.9.4.3}%
+\contentsline {subsubsection}{\numberline {9.4.4}Authentication/Authorization med JWT Token}{60}{subsubsection.9.4.4}%
+\contentsline {subsubsection}{\numberline {9.4.5}Hashing}{61}{subsubsection.9.4.5}%
+\contentsline {subsubsection}{\numberline {9.4.6}BackEndController på client siden}{61}{subsubsection.9.4.6}%
+\contentsline {subsection}{\numberline {9.5}Applikationsmodeller}{61}{subsection.9.5}%
+\contentsline {subsubsection}{\numberline {9.5.1}Applikationsmodel User Controller}{62}{subsubsection.9.5.1}%
+\contentsline {subsubsection}{\numberline {9.5.2}Applikationsmodel Save Controller}{64}{subsubsection.9.5.2}%
+\contentsline {subsubsection}{\numberline {9.5.3}Konklusion}{68}{subsubsection.9.5.3}%
+\contentsline {subsection}{\numberline {9.6}Software Design DAL Design}{69}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}User story funktioner}{70}{subsubsection.9.6.1}%
+\contentsline {subsection}{\numberline {9.7}Database Design}{73}{subsection.9.7}%
+\contentsline {section}{\numberline {10}Implementering}{75}{section.10}%
+\contentsline {subsection}{\numberline {10.1}System Implementering}{75}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Frontend Implementering}{75}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Login view}{76}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Room View}{77}{subsubsection.10.2.2}%
+\contentsline {subsubsection}{\numberline {10.2.3}Combat View}{78}{subsubsection.10.2.3}%
+\contentsline {subsubsection}{\numberline {10.2.4}Settings view}{79}{subsubsection.10.2.4}%
+\contentsline {subsubsection}{\numberline {10.2.5}Load view}{80}{subsubsection.10.2.5}%
+\contentsline {subsubsection}{\numberline {10.2.6}Note om Baggrundsfarver}{81}{subsubsection.10.2.6}%
+\contentsline {subsection}{\numberline {10.3}Game Engine}{82}{subsection.10.3}%
+\contentsline {subsubsection}{\numberline {10.3.1}Gamecontroller Implementering}{83}{subsubsection.10.3.1}%
+\contentsline {subsubsection}{\numberline {10.3.2}Generering af Map}{85}{subsubsection.10.3.2}%
+\contentsline {paragraph}{Gem en map layout fil \\}{85}{section*.72}%
+\contentsline {paragraph}{Lav en klasse som generer map layout filen \\}{85}{section*.73}%
+\contentsline {paragraph}{Items og Enemies \\}{85}{section*.75}%
+\contentsline {subsubsection}{\numberline {10.3.3}Log}{85}{subsubsection.10.3.3}%
+\contentsline {subsection}{\numberline {10.4}Kommentar til implementeringen}{86}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Backend Implementering}{86}{subsection.10.5}%
+\contentsline {subsubsection}{\numberline {10.5.1}SaveController}{86}{subsubsection.10.5.1}%
+\contentsline {subsubsection}{\numberline {10.5.2}UserController}{87}{subsubsection.10.5.2}%
+\contentsline {subsubsection}{\numberline {10.5.3}BackEndController Client}{87}{subsubsection.10.5.3}%
+\contentsline {subsubsection}{\numberline {10.5.4}Konlusion}{88}{subsubsection.10.5.4}%
+\contentsline {subsection}{\numberline {10.6}Database Implementering}{89}{subsection.10.6}%
+\contentsline {section}{\numberline {11}Test}{91}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Modultest Frontend}{91}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}Test metoder}{91}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}Eksempel på frontend test i forbindelse med Game Engine}{92}{subsubsection.11.1.2}%
+\contentsline {subsubsection}{\numberline {11.1.3}Eksempel på frontend test}{92}{subsubsection.11.1.3}%
+\contentsline {subsection}{\numberline {11.2}Modultest Game Engine}{92}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}GodkendelsesTabel Game Engine}{93}{subsubsection.11.2.1}%
+\contentsline {subsubsection}{\numberline {11.2.2}Mock testing}{96}{subsubsection.11.2.2}%
+\contentsline {subsubsection}{\numberline {11.2.3}Test Resultater for Game Engine}{97}{subsubsection.11.2.3}%
+\contentsline {subsection}{\numberline {11.3}Modultest database}{98}{subsection.11.3}%
+\contentsline {subsubsection}{\numberline {11.3.1}Diskussion af database modultest}{101}{subsubsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.4}Backend Modultest}{101}{subsection.11.4}%
+\contentsline {section}{\numberline {12}Integrationstest}{105}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Tidlig Integrationstest}{105}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Fulde Integrationstest}{105}{subsection.12.2}%
+\contentsline {section}{\numberline {13}Accepttestspecifikation}{106}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Funktionelle}{106}{subsection.13.1}%
+\contentsline {paragraph}{Test af User Story 1 - Login}{106}{section*.96}%
+\contentsline {paragraph}{Test af User Story 2 - Opret profil}{106}{section*.97}%
+\contentsline {paragraph}{Test af User Story 3-5 - Main Menu}{107}{section*.98}%
+\contentsline {paragraph}{Test af User Story 6-14 - Exit Menu}{107}{section*.99}%
+\contentsline {paragraph}{Test af User Story 15 og 16 - Save Menu}{109}{section*.100}%
+\contentsline {paragraph}{Test af User Story 17-19 - Main Menu}{110}{section*.101}%
+\contentsline {paragraph}{Test af User Story 20-26 - Spil spillet}{110}{section*.102}%
+\contentsline {subsection}{\numberline {13.2}ikke-funktionelle}{112}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Diskussion af testresultater}{117}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Funktionsbeskrivelse}{117}{subsection.13.4}%
+\contentsline {subsubsection}{\numberline {13.4.1}Game Controller}{117}{subsubsection.13.4.1}%
+\contentsline {subsubsection}{\numberline {13.4.2}Log}{118}{subsubsection.13.4.2}%
+\contentsline {subsubsection}{\numberline {13.4.3}DiceRoller}{118}{subsubsection.13.4.3}%
+\contentsline {subsubsection}{\numberline {13.4.4}Room}{119}{subsubsection.13.4.4}%
+\contentsline {subsubsection}{\numberline {13.4.5}Combat Controller}{119}{subsubsection.13.4.5}%
+\contentsline {subsubsection}{\numberline {13.4.6}Backend Controller}{119}{subsubsection.13.4.6}%
+\contentsline {subsubsection}{\numberline {13.4.7}Base Map Creator}{120}{subsubsection.13.4.7}%
+\contentsline {subsubsection}{\numberline {13.4.8}Enemy}{120}{subsubsection.13.4.8}%
+\contentsline {subsubsection}{\numberline {13.4.9}Player}{121}{subsubsection.13.4.9}%
+\contentsline {section}{\numberline {14}Fremtidigt Arbejde}{121}{section.14}%
+\contentsline {section}{\numberline {15}Konklusion}{122}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Personlige konklusioner}{122}{subsection.15.1}%
+\contentsline {subsubsection}{\numberline {15.1.1}Luyen Vu}{122}{subsubsection.15.1.1}%
+\contentsline {subsubsection}{\numberline {15.1.2}Oscar Dennis}{122}{subsubsection.15.1.2}%
+\contentsline {subsubsection}{\numberline {15.1.3}Rasmus Engelund}{122}{subsubsection.15.1.3}%
+\contentsline {subsubsection}{\numberline {15.1.4}Magnus Blaabjerg Møller}{123}{subsubsection.15.1.4}%
+\contentsline {subsubsection}{\numberline {15.1.5}Morten Høgsberg}{123}{subsubsection.15.1.5}%
+\contentsline {subsubsection}{\numberline {15.1.6}Anders Hundahl}{123}{subsubsection.15.1.6}%
+\contentsline {subsubsection}{\numberline {15.1.7}Sune Dyrbye}{123}{subsubsection.15.1.7}%
+\contentsline {subsubsection}{\numberline {15.1.8}Jacob Hoberg}{123}{subsubsection.15.1.8}%
