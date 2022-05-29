@@ -8,15 +8,15 @@
 
   Gennem projektet blev det klar fra starten, at tidlig integration mellem projektets fire grene, frontend
   game engine, backend og database, var kritisk for projektets succes. Dette skyldes at processen når mange
-  små ændringer integreres i projektet er simplere end proceseen der skal til at integrere store ændringer.
+  små ændringer integreres i projektet er simplere end proceseen der skal til at integrere store ændringer. Selvom projektet ikke har brugt fult automatiseret continuous integration har ofte testning af det integrerede system sikret at afvigelser mellem individuelle moduler ikke voksede til en størrelse som gjorde det uoverskueligt at løse. Det hyppige integration har også hurtigt givet os et grundlæggende system, som alle efterfølgende moduler kunne bygges ovenpå. Dette medførte at alle efterfølgende moduler, som nødvendigvis virkede med basen (som de var bygget på) integrerede nemt med hverandre.
 
   Projektet følger den originale arkitektur ganske tæt, med kun få ændringer. Disse ændringer er der taget
   højde for senere i designet af projektets forskellige komponenter.
 
   Slut produktet er således en gennemtestet prototype til et spil, der med tiden kunne være blevet et fuld udbygget
-  text-based adventure game, og det endte med at blive et gennemført proof of concept.
+  text-based adventure game, og det endte med at blive et gennemført proof of concept.\\
 \end{abstract}
-
+\renewcommand{\abstractname}{Abstract}
 \begin{abstract}
 \noindent 1980 saw the premier release of the text-based adventure game, Zork, which allowed 
 the developers to tell a complex story despite the lack of advanced 2D and 3D graphics.
@@ -29,9 +29,10 @@ Throughout the projekt it became clear from early iterations that early integrat
 between the projects four main branches, frontend, game engine, backend and database would be
 critical for success as it simplified the final integration, when doing many small interations
 instead of a few large once.
+While the projet did not use an automated continuous integration, frequent integration testing ensured that no mismatch between modeules grew into an unsurmountable obstacle. The integration also allowed for an early base which could be expanded on. This in turn ensured that all susequent systems (which by neccessity conformed to the already established base) integrated well with eachother.
 
 The project mostly follows the original architecture with only few deviations, that are otherwise
-accounted for in the design og the projects many components. 
+accounted for in the design and the projects many components. 
 
 The end product is a well tested, prototype of what could later become a full fledged text-based
 adventure game, and it turned out to be an excellent proof of concept.\\
