@@ -31,10 +31,11 @@ De relevante user stories for backend containeren udvælges. Disse omhandler hå
 \begin{itemize}
 \item User Story 1 : Log in
 \item User Story 2 : Opret Bruger
-\item UserStory 7 : Exit Menu -\g Save and Exit
-\item UserStory 17 : Main Menu -\g Load List Game
-\item UserStory 18 : Main Menu -\g Load Game -\g Load
-\item UserStory 19 : Main Menu -\g Load Game -\g Delete Game
+\item User Story 8: Exit Menu - Save - No combat
+\item UserStory 15 : Save Menu - Save Game
+\item UserStory 18 : Main Menu - Load Game - Load
+
+
 \end{itemize}
 Af de ikke funktionelle krav er følgende krav relevante:
 \begin{itemize}
@@ -59,7 +60,7 @@ Der bygges videre på C4 modellen for systemet , et level 3 component diagram ov
 Figuren illustrerer en lagdelt struktur, hvor der ses en client som kalder ned i controllerne Authentication og Save Controller, som kalder videre til DAL, som så tilgår databasen denne kommunikationsvej går begge veje.
 
 \textbf{Client:}\\
-Der eksisterer en client, som kommunikerer med backenden Game Module. Game Module’s kald til backenden kan overordnet set indeles i to undergrupper, bruger håndtering og save håndtering. Bruger håndtering indeholder kald som omhandler login og registreing  (User story 1 og 2), hvor save håndtering omhandler loading og saving af Game state (User story 7, 17, 18 og 19). Kommuniaktionen her vil foregå ved netværkskald med protokolen HTTPS. Clienten udfører request/response kald til backenden igennem specifikke URL’s. For at data objekterne kan sendes frem og tilbage med HTTPS kæves disse seralizeres og deseralizeres mellem JSON-objekter og .Net objekter.\\
+Der eksisterer en client, som kommunikerer med backenden Game Module. Game Module’s kald til backenden kan overordnet set indeles i to undergrupper, bruger håndtering og save håndtering. Bruger håndtering indeholder kald som omhandler login og registreing  (User story 1 og 2), hvor save håndtering omhandler loading og saving af Game state (User story 8, 15, 17 og 18). Kommuniaktionen her vil foregå ved netværkskald med protokolen HTTPS. Clienten udfører request/response kald til backenden igennem specifikke URL’s. For at data objekterne kan sendes frem og tilbage med HTTPS kæves disse seralizeres og deseralizeres mellem JSON-objekter og .Net objekter.\\
 \textbf{Controller:}\\
 Inde i backenden anvendes ASP. Net MVC controllere \cite{MVC controller} til at modtage og svare på kald fra clienten. Der laves en controller for Bruger håndtering og en controller for Save håndtering. Hver request mappes til en specifik controller. Controllerne vil så indeholde action metoder, som udføres når den modtagere et kald. Når controlleren har udført sin action retuneres et Action Result, hvor i et data objekt kan wrappes eller den kan indeholde en fejlmeddelse hvis noget går galt.\\
 \textbf{DAL:}\\

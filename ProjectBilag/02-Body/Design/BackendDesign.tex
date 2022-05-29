@@ -73,7 +73,7 @@ Klassen vil gøre brug af en HttpClient som er en klasse .Net stiller til rådig
 
 
 \subsection{Applikationsmodeller}
-I dette afsnit gennemgåes applikationsmodeller for de enkelte user stories, der udarbejdes sekvensdiagrammer for at beskrive funktionalitet og klasse diagrammer til at beskrive indeholdet og sammen spillet imellem klasserne. Applikationsmodellerne deles op efter controllere, en for UserControlleren og en for SaveControlleren. Fokuset vil her ligge på controller klasserne, for en beskrivelse af DAL komponenterne henvises til database design afsnitet \autoref{ssec:DB Design}.\\
+I dette afsnit gennemgåes applikationsmodeller for de user stories som vedrører backend'en, der udarbejdes sekvensdiagrammer for at beskrive funktionalitet og klasse diagrammer til at beskrive indeholdet og sammen spillet imellem klasserne. Applikationsmodellerne deles op efter controllere, en for UserControlleren og en for SaveControlleren. Fokuset vil her ligge på controller klasserne, for en beskrivelse af DAL komponenterne henvises til database design afsnitet \autoref{ssec:DB Design}.\\
 
 \subsubsection{Applikationsmodel User Controller}
 \textbf{User Story 1: Log in}\\
@@ -112,33 +112,33 @@ På \autoref{fig:Design-Backend-Klasse-1-2} kan ses en oversigt over de klasser,
 \end{figure}
 
 \subsubsection{Applikationsmodel Save Controller}
-\textbf{User Story 7: Exit Menu -\g Save and Exit}\\
+\textbf{User Story 15: Save Menu - Save Game}\\
 Load/save controlleren fra C3 modellen er blevet til en enkelt controller, som kaldes for ”SaveController”. Denne controller har til ansvar at gemme et spil, men samtidig også være i stand til at kunne hente gemte spil, altså at loade dem.
-Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/Save”, udføres følgende aktioner som fremgår af sekvensdiagrammet på \autoref{fig:Design-Backend-Sekvens-7}\\
+Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/Save”, udføres følgende aktioner som fremgår af sekvensdiagrammet på \autoref{fig:Design-Backend-Sekvens-15}\\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = \textwidth]{02-Body/Images/Backend_sekvens_7.PNG}
-\caption{sekvensdiagram over User Story 7 Save and Exit}
-\label{fig:Design-Backend-Sekvens-7}
+\includegraphics[width = \textwidth]{02-Body/Images/Backend_sekvens_15.PNG}
+\caption{sekvensdiagram over User Story 15 Save and Exit}
+\label{fig:Design-Backend-Sekvens-15}
 \end{figure}
 
 Der bruges en httpPost funktion kaldet PostSave som gemmer et nyt spil i databasen ved at ligge det modtagene gamestate fra parameter listen ind i et funktionskald SaveGame() i DAL klassen, som så sørger for at gemme spillet i databasen på den korrekte måde.\\
 
-\textbf{User Story 17: Exit Menu -\g Save and Exit}\\
+\textbf{User Story 17: Main Menu - Load Game}\\
 
 Når clienten udfører en HTTP request med URL’en : ” https://localhost:7046/api/Save/Get List Of Saves”, udføres følgende aktioner som fremgår af sekvensdiagrammet på \autoref{fig:Design-Backend-Sekvens-17}\\
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_sekvens_17.PNG}
-\caption{Sekvensdiagram over User Story 17 Main Menu -\g Load List Game}
+\caption{Sekvensdiagram over User Story 17 Main Menu - Load Game}
 \label{fig:Design-Backend-Sekvens-17}
 \end{figure}
 
 Da vi gerne vil gøre det muligt at have 5 save games pr. profil, skal det naturligvis være muligt at kunne vælge mellem de forskellige saves, til dette laves funktion GetListOfSaves(). Clienten kalder her GetListOfSaves() som er et HttpGet endpoint, denne funktion henter alle saves i DAL klassen ved at kalde GetAllSaves(). SaveController finder så de gemte spil i listen hvor brugernavnet passer med den burger, som er logget ind ved brug af User.Identity som stilles til rådighed af ControllerBase klassen, her i kan claims for den nuværende JWT nemlig findes.\\
 
-\textbf{UserStory 18 : Main Menu -\g Load Game -\g Load}\\
+\textbf{UserStory 18 : Main Menu - Load Game - Load}\\
 Når clienten udfører en HTTP request med URL’en :” https://localhost:7046/api/Save?id={id}”, udføres følgende aktioner som fremgår af sekvensdiagrammet på \autoref{fig:Design-Backend-Sekvens-18}\\
 
 \begin{figure}[H]
@@ -148,18 +148,15 @@ Når clienten udfører en HTTP request med URL’en :” https://localhost:7046/
 \label{fig:Design-Backend-Sekvens-18}
 \end{figure}
 
-\textbf{User Story 19 : Main Menu -\g Load Game -\g Delete Game}\\
 
-Under design fasen blev det besluttet at overskrive gemte saves fremfor at slette og lave et nyt, da et saves Id på den måde ikke ændret sig i databasen når man lavede et nyt save. Derfor er User story 19 som omhandler Delete game ikke taget med i design fasen.\\
-
-\textbf{Samlet klasse diagram over User story 7, 17 og 18}\\
-Et Samlet klasse diagram for User story 7, 17 og 18 kan ses på \autoref{fig:Design-Backend-Sekvens-7-17-18}\\
+\textbf{Samlet klasse diagram over User story 15, 17 og 18}\\
+Et Samlet klasse diagram for User story 15, 17 og 18 kan ses på \autoref{fig:Design-Backend-Sekvens-15-17-18}\\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = \textwidth]{02-Body/Images/Backend_klasse_7_17_18.PNG}
-\caption{Samlet klasse diagram for User story 7, 17 og 18}
-\label{fig:Design-Backend-Sekvens-7-17-18}
+\includegraphics[width = \textwidth]{02-Body/Images/Backend_klasse_15_17_18.PNG}
+\caption{Samlet klasse diagram for User story 15, 17 og 18}
+\label{fig:Design-Backend-Sekvens-15-17-18}
 \end{figure}
 
 Udover de funktioner som bliver brugt i User stories, tilføjes der er en funktion GetRoomDescription, som blot henter en beskrivelse af det rum brugeren befinder sig i.\\
