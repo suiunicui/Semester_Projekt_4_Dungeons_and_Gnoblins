@@ -2189,14 +2189,14 @@
     <bcf:citekey order="5">Yalantis</bcf:citekey>
     <bcf:citekey order="6">IBM</bcf:citekey>
     <bcf:citekey order="7">MongoDB.com</bcf:citekey>
-    <bcf:citekey order="8">Entity Framework Core</bcf:citekey>
+    <bcf:citekey order="8">Entity-Framework-Core</bcf:citekey>
     <bcf:citekey order="9">MVC pattern</bcf:citekey>
     <bcf:citekey order="10">MVC controller</bcf:citekey>
     <bcf:citekey order="11">EF Core</bcf:citekey>
     <bcf:citekey order="12">REST</bcf:citekey>
-    <bcf:citekey order="13">Language Integrated Query</bcf:citekey>
+    <bcf:citekey order="13">Language-Integrated-Query</bcf:citekey>
     <bcf:citekey order="14">Bcrypt</bcf:citekey>
-    <bcf:citekey order="15">SQL server with docker</bcf:citekey>
+    <bcf:citekey order="15">SQL-server-with-docker</bcf:citekey>
     <bcf:citekey order="16">Mediator</bcf:citekey>
     <bcf:citekey order="17">comboBox</bcf:citekey>
     <bcf:citekey order="18">CleanCode</bcf:citekey>
