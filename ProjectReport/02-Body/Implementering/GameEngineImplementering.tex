@@ -10,14 +10,14 @@ kommunikation med frontend modulet. Game controlleren har adgang til alle
 aspekter af spillet, gennem sin association med Combat controllern og 
 backend controlleren.
 
-Det er en nem løsning, og den fungere godt givet det begrænsede scope som 
+\noindent Det er en nem løsning, og den fungere godt givet det begrænsede scope som 
 game enginen skal fungere under.
 For en mere kompliceret applikation med forventninger om udvidelser er det
 dog ikke en god implementering da game controlleren har for mange grunde
 til at ændre sig. Den har altså et for bredt ansvarsområde og kan formentlig
 splittes op i flere klasser.
 
-Når game controlleren instantieres laves et map af Map og Map creator klassen
+\noindent Når game controlleren instantieres laves et map af Map og Map creator klassen
 hvilket før til en længere process hvor map creator klassen laver nogle
 layout filer som map klassen kan læse for at danne et map i spillet, som 
 spilleren kan navigere \parencite[Section 11.3.2][]{TekniskBilag}.\\
@@ -26,7 +26,7 @@ spilleren kan navigere \parencite[Section 11.3.2][]{TekniskBilag}.\\
 dens relation til backend controlleren, der kan lave fetch til spillets
 database.
 
-Selve Load process er kompliceret, da den involvere adskillige iterationer
+\noindent Selve Load process er kompliceret, da den involvere adskillige iterationer
 igennem alle rooms, items og fjender i spillet for at bekræfte om disse er
 blevet besøgt, indsamlet eller beseret tidligere \parencite[Section 11.3.1]
 [Figure 55]{TekniskBilag}.

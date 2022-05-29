@@ -2,9 +2,9 @@
 \label{ssec: Modultest database}
 Den lokale hosting medførte at vi kunne holde øje med databasens udformningen, samt den gemte data, gennem Microsoft azure datastudie.\\
 
-For at teste DAL funktioner og dens forbindelse til databasen, oprettes først et DAL objekt med en context som indeholder en korrekt connectionstring.
+\noindent For at teste DAL funktioner og dens forbindelse til databasen, oprettes først et DAL objekt med en context som indeholder en korrekt connectionstring.
 
-Til test hvor der skal indsættes data i databasen oprettes der objekter af den korrekte type hvorefter DAL funktioner til indsættelse kaldes. Korrektheden af de indsatte data kan herefter tjekkes med datastudie.
+\noindent Til test hvor der skal indsættes data i databasen oprettes der objekter af den korrekte type hvorefter DAL funktioner til indsættelse kaldes. Korrektheden af de indsatte data kan herefter tjekkes med datastudie.
 Et eksempel på dette kan ses på \autoref{fig:SaveGame-test} herunder.
 Her oprettes et GameDTO objekt, gamesave.\\
 Gamesave opsættes til ”Gamer1”, med navnet ”My First Run”, hvorefter der tilføjes yderligere data. Det overskrevne save er ”NewGame1”, som her har id 1.
@@ -16,7 +16,7 @@ Gamesave opsættes til ”Gamer1”, med navnet ”My First Run”, hvorefter de
 \label{fig:SaveGame-test}
 \end{figure}
 
-På \autoref{fig:datastudie-før} herunder ses et screenshot fra datastudie hvor de 5 saves til ”Gamer1” kan ses.
+\noindent På \autoref{fig:datastudie-før} herunder ses et screenshot fra datastudie hvor de 5 saves til ”Gamer1” kan ses.
 Det noteres at alle saves er "tomme" og starter i rum 1.
 
 \begin{figure}[H]
@@ -36,7 +36,7 @@ Det noteres at SaveName og de andre attributter i \autoref{fig:datastudie-efter}
 \label{fig:datastudie-efter}
 \end{figure}
 
-De øvrige tilhørende lister til det gemte save er også opdateret med korrekte værdie. Dette kan også ses på \autoref{fig:Datastudie-ekstra} herunder.
+\noindent De øvrige tilhørende lister til det gemte save er også opdateret med korrekte værdie. Dette kan også ses på \autoref{fig:Datastudie-ekstra} herunder.
 
 \begin{figure}[H]
 \centering
@@ -45,7 +45,7 @@ De øvrige tilhørende lister til det gemte save er også opdateret med korrekte
 \label{fig:Datastudie-ekstra}
 \end{figure}
 
-I \autoref{table:Modulttest-DB-Tabel} herunder ses en tabel over udførte test, forventede resultater, den faktiske observering og vurderingen af observeringen.
+\noindent I \autoref{table:Modulttest-DB-Tabel} herunder ses en tabel over udførte test, forventede resultater, den faktiske observering og vurderingen af observeringen.
 Alle test er udført og vi observerer det forventede resultat. Vi vurderer derfor alle test som OK.
 
 \begin{table}[H]

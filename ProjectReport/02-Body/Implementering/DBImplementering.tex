@@ -7,7 +7,7 @@ Disse keys og relations opsættes i projektets backend ved hjælp af fluent api,
 Ved ændringer af databasens udseende og form kan EFcore migrations hjælpe med at oprette de korrekte queries således at databasen bliver ændret korrekt, samt at man ved forkerte ændringer hurtigt kan hoppe tilbage til en tidligere migration ved eventuelle fejl. I EF core benyttes Language Integrated Query (LINQ) til at skrive ensartede queries til databasen.\\
 Der er som gruppe taget en beslutning om at hoste databasen lokalt i en docker container. Dette blev valgt på baggrund af en samtale med vejleder, hvor vi blandt andet, grundet sikkerhedsforanstaltning på au’s netværk og problemer med microsoft licenser, kunne løbe ind i nogle problemer.\\
 
-Der er i projektets backend oprettet klasser, models, tilsvarende ER diagrammernes entiteter. Udover det valgte atributter er der også oprettet navigationals i de nødvendige klasse så der kan laves relationer.
+\noindent Der er i projektets backend oprettet klasser, models, tilsvarende ER diagrammernes entiteter. Udover det valgte atributter er der også oprettet navigationals i de nødvendige klasse så der kan laves relationer.
 På \autoref{fig:DbKeys} herunder ses opsætningen af keys for de forskellige entiteter. Disse er opsat med fluent api efter ER diagrammerne på \autoref{fig:ER-Roomdescription} og \autoref{fig:ER-GameSave}.
 
 \begin{figure}[H]
@@ -17,7 +17,7 @@ På \autoref{fig:DbKeys} herunder ses opsætningen af keys for de forskellige en
 \label{fig:DbKeys}
 \end{figure}
 
-Udover de forskellige keys, skal der også opsættes relationer mellem de forskellige entiteter, som vist på ER-Diagrammerne \autoref{fig:ER-Roomdescription} og \autoref{fig:ER-GameSave}, samt referencer til foreign keys. 
+\noindent Udover de forskellige keys, skal der også opsættes relationer mellem de forskellige entiteter, som vist på ER-Diagrammerne \autoref{fig:ER-Roomdescription} og \autoref{fig:ER-GameSave}, samt referencer til foreign keys. 
 Opsætningen kan ses på \autoref{fig:DbRelations} herunder: 
 
 \begin{figure}[H]
@@ -27,7 +27,7 @@ Opsætningen kan ses på \autoref{fig:DbRelations} herunder:
 \label{fig:DbRelations}
 \end{figure}
 
-Databasen er seedet ved hjælp af hasdata funktionen. Her oprettes en enkelt bruger, ”Gamer1”, med password ”123”, som hashes ind i databasen. "Gamer1" får derudover også 5 tilhørende "tomme" saves og til slut er der også indsat rumbeskrivelser for hver af de 20 rum. Dette ses på \autoref{fig:DbSeeding} herunder.
+\noindent Databasen er seedet ved hjælp af hasdata funktionen. Her oprettes en enkelt bruger, ”Gamer1”, med password ”123”, som hashes ind i databasen. "Gamer1" får derudover også 5 tilhørende "tomme" saves og til slut er der også indsat rumbeskrivelser for hver af de 20 rum. Dette ses på \autoref{fig:DbSeeding} herunder.
 
 \begin{figure}[H]
 \centering
