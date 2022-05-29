@@ -7,7 +7,7 @@ Den sidste funktion benyttes når vi starter spillet, til at lave rumbeskrivelse
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/DAL-DB-CD.PNG}
-\caption{Samlet klasse diagram for User story 7, 17 og 18 med DAL db context og entitetsklasser.
+\caption{Samlet klasse diagram for User story 8, 15, 17 og 18 med DAL db context og entitetsklasser.
 For læseligheden er DAL klassen ikke forbundet til forskellige entitetsklasser selvom disse benyttes.}
 \label{fig:DAL-Klasse-7-17-18}
 \end{figure}
@@ -32,22 +32,22 @@ Dette kan også ses på sekvensdiagrammet på figur xxx herunder.
 De følgende 3 funktioner benyttes til udførelse af forskellige user stories.
 Det drejer sig om:
 \begin{itemize}
-\item User story 7 – Save game
-\item User story 17 – Load game list
+\item User story 15 – Save game
+\item User story 8 - Save - No Combat  + User story 17 – Load game list 
 \item User story 18 – Load game \\
 \end{itemize}
 
-Den første funktion SaveGame benyttes til at udføre user story 7.
+Den første funktion SaveGame benyttes til at udføre user story 15.
 Her skal der gemmes et spil.
 Da vi har et krav om kun at holde 5 gemte spil pr. bruger, vælger vi at oprette 5 ”tomme” saves, når vi opretter brugeren.  
 Når brugeren så ønsker at gemme et spil, skal vi ikke tilføje et nyt, men istedet overskrive et valgt gammelt save.
-Dette kan også ses på sekvensdiagrammet på figur xxx.\\
+Dette kan også ses på sekvensdiagrammet på figur \autoref{fig:DAL-Sekvens-7}\\
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.7\textwidth]{02-Body/Images/DAL-Database/SaveSd.PNG}
-\caption{Sekvensdiagram for user story 7 save game som beskriver queries til databasen for at gemme et spil}
+\caption{Sekvensdiagram for user story 15 save game som beskriver queries til databasen for at gemme et spil}
 \label{fig:DAL-Sekvens-7}
 \end{figure}
 
@@ -57,13 +57,13 @@ Parametre: SaveDTO\\
 Returtype: Task\l ActionResult\l SaveDTO\g\g \\
 Beskrivelse: Da der i vores frontend sørges for at en bruger blot kan have 5 saves, starter vi med at finde det save vi gerne vil overskrive. Det gamle save, samt tilhørende lister slettes, hvorefter det nye save gemmes og eventuelle nye lister til fx. items gemmes.\\
 
-Den anden funktion GetAllSaves benyttes til at udføre user story 17.
+Den anden funktion GetAllSaves benyttes til at udføre user story 8 og 17.
 Her skal der loades en liste af gemte spil, når brugeren ønsker at se sine gemte spil. Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-17} .
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/GetSavesSd.PNG}
-\caption{Sekvensdiagram for user story 17 GetAllSaves som beskriver queries til databasen for at hente alle saves}
+\caption{Sekvensdiagram for user story 8 og 17 GetAllSaves som beskriver queries til databasen for at hente alle saves}
 \label{fig:DAL-Sekvens-17}
 \end{figure}
 

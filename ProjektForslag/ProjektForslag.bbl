@@ -1,0 +1,82 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{WikiBeyondZork}{online}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 03-02-2022}
+      \field{title}{Beyond Zork}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Beyond_Zork
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Beyond_Zork
+      \endverb
+    \endentry
+    \entry{Statista}{online}{}
+      \name{author}{1}{}{%
+        {{hash=62182ca58a739daa8ddd8a48b7b19abb}{%
+           family={Statista},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{bibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorbibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authornamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 03-02-2022}
+      \field{title}{Share of gamers in the United States who prefer single player or multiplayer video games as of October 2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/1276132/single-player-vs-multiplayer-video-gaming-preference-usa/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/1276132/single-player-vs-multiplayer-video-gaming-preference-usa/
+      \endverb
+    \endentry
+    \entry{WikiZork}{online}{}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 03-02-2022}
+      \field{title}{Zork}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Zork
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Zork
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
