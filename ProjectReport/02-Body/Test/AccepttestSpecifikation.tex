@@ -3,9 +3,11 @@ For accepttestspecifikationen er der for dette projekt, opstillet tests, og på 
 Denne accepttestspecifikation er delt op i Funktionelle krav og ikke funktionelle krav.
 
 \subsection{Funktionelle}
+Ved de funktionelle krave er der her taget udgangspunkt i User Story 1,2,7 og 17, da disse indebærer alle systemets dele samt den mest centrale funktionalitet.\\
+De resterende accepttest kan findes \textbf{REF HER}
 \paragraph{Test af User Story 1 - Login}
 
-\textbf{Scenarie - Succesfuld login}
+\textbf{1. Scenarie - Succesfuld login}
 
 \textit{Givet at brugerens profil er oprettet på databasen og at serveren er oppe.}
 
@@ -18,7 +20,7 @@ Denne accepttestspecifikation er delt op i Funktionelle krav og ikke funktionell
 Resultat: Godkendt\\
 Kommentar:\\
 
-\textbf{Scenarie - Fejlet login}
+\textbf{1. Scenarie - Fejlet login}
 
 \textit{Givet at brugerens profil er oprettet på databasen og at serveren er oppe.}
 
@@ -33,7 +35,7 @@ Kommentar: Viser korrekt error besked\\
 
 \paragraph{Test af User Story 2 - Opret profil}
 
-\textbf{Scenarie - Bruger opretter profil}
+\textbf{2. Scenarie - Bruger opretter profil}
 
 \textit{Givet at brugerens profil er oprettet på databasen og at serveren er oppe.}
 
@@ -46,7 +48,7 @@ Kommentar: Viser korrekt error besked\\
 Resultat: Godkendt\\
 Kommentar:\\
 
-\textbf{Scenarie - Bruger opretter samme profil}
+\textbf{2. Scenarie - Bruger opretter samme profil}
 
 \textit{Givet at brugerens profil er oprettet på databasen og at serveren er oppe.}
 
@@ -58,158 +60,9 @@ Kommentar:\\
 Resultat: Godkendt\\
 Kommentar: Viser korrekt error besked\\
 
-\paragraph{Test af User Story 3 og 4 - Main Menu}
+\paragraph{Test af User Story 15 og 18}
 
-\textbf{Scenarie - Tilgå settings}
-
-\textit{Givet at brugeren er logget ind og har adgang til spillet.}
-
-\begin{itemize}
-  \item Når bruger trykker settings i UI
-  \item Så går spillet til settings menuen
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - Start spillet}
-
-\textit{Givet at brugeren er logget ind og har adgang til spillet.}
-
-\begin{itemize}
-  \item Når bruger trykker "New Game"
-  \item Så vises game-interface for brugeren
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - Exit game}
-
-\textit{Givet at brugeren er logget ind og har adgang til spillet.}
-
-\begin{itemize}
-  \item Når bruger trykker "Exit game"
-  \item Så lukker spillet
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\paragraph{Test af User Story 5-16 - Exit Menu}
-
-\textbf{Scenarie - Exit spil}
-
-\textit{Givet at brugeren har trykket "New Game"}
-
-\begin{itemize}
-  \item Når bruger trykker "Escape" på keyboardet
-  \item Så popper et menuvindue op med mulighederne "Resume Game", "Save Game", ”Main Menu" og "Settings"
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - In game menu - Resume game}
-
-\textit{Givet at brugeren har trykket "New Game" og derefter har trykket "Escape" på keyboard}
-
-\begin{itemize}
-  \item Når bruger trykker "Resume Game" i In game menu
-  \item Så forsvinder menuvinduet og spillet fortsætter
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - In game menu - Save -- No Combat}
-
-\textit{Givet at brugeren har trykket "New Game" og derefter har trykket "Escape" på keyboard}
-
-\begin{itemize}
-  \item Når bruger trykker på "Save Game" i In game menuen
-  \item Så vises save menuen
-  \item Og en liste af gemte spil
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar: Der vises maks. fem spil\\
-
-\textbf{Scenarie - In game menu - Save -- Combat}
-
-\textit{Givet at brugeren er i combat}
-
-\begin{itemize}
-  \item Når bruger trykker "Escape" på keyboarded
-  \item Så kan man ikke se en "Save Game" knap i game menuen
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - In game menu - Main Menu}
-
-\textit{Givet at brugeren har trykket "New Game" og derefter har trykket "Escape" på keyboard}
-
-\begin{itemize}
-  \item Når bruger trykker "Main Menu" i In game menu
-  \item Så vises hovedmenuen
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - In game menu - Settings}
-
-\textit{Givet at brugeren har trykket "New Game" og derefter har trykket "Escape" på keyboard}
-
-\begin{itemize}
-  \item Når bruger trykker "Settings"
-  \item Så åbnes et vindue med mulighed for konfiguration af spil for bruger
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - Exit menu - Settings - Apply}
-
-\textit{Givet at brugeren har trykket "Settings" og ændret på resolution indstilling}
-
-\begin{itemize}
-  \item Når bruger trykker "Apply"
-  \item Så ændres indstillinger som brugeren har ændret
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar: Skærm opløsning ændres korrekt\\
-
-\textbf{Scenarie - Exit menu - Settings - Back}
-
-\textit{Givet at brugeren har trykket "Settings"}
-
-\begin{itemize}
-  \item Når bruger trykker "Back"
-  \item Så vises In game menuen
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - Exit menu - Settings - Default}
-
-\textit{Givet at brugeren har trykket "Settings" og har ændret mindst 1 indstlling}
-
-\begin{itemize}
-  \item Når bruger trykker "Default"
-  \item Så ændres alle indstiliinger tilbage til default settings
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar: Indstillinger ændres til Default indstillinger korrekt.\\
-
-\paragraph{Test af User Story 17 og 18 - Save Menu}
-
-\textbf{Scenarie - Save Menu - Save Game}
+\textbf{15. Scenarie - Save Menu - Save Game}
 
 \textit{Givet at brugeren har trykket "Save game" fra Settings menu og ikke er i combat.}
 
@@ -223,33 +76,7 @@ Kommentar: Indstillinger ændres til Default indstillinger korrekt.\\
 Resultat: Godkendt\\
 Kommentar:\\
 
-\textbf{Scenarie - Save Menu - Back}
-
-\textit{Givet at brugeren har trykket "Save game" fra Settings menu}
-
-\begin{itemize}
-  \item Når bruger trykker "Back" i save game menuen
-  \item Så vender spillet ilbage til In game menuen
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\paragraph{Test af User Story 19-22 - Main Menu}
-
-\textbf{Scenarie - Main menu - Load Game}
-
-\textit{Givet at brugeren er logget ind og har adgang til spillet.}
-
-\begin{itemize}
-  \item Når bruger trykker "Load game"
-  \item Så vises en liste af gemte spil på profilen
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - Main menu - Load Game - Load}
+\textbf{18. Scenarie - Main menu - Load Game - Load}
 
 \textit{Givet at brugeren er logget ind og har adgang til spillet og trykket "Load Game"}
 
@@ -262,137 +89,8 @@ Kommentar:\\
 Resultat: Godkendt\\
 Kommentar: Bruger starter i korrekt rum med korrekt inventory\\
 
-\textbf{Scenarie - Main menu - Load Game - Back}
-
-\textit{Givet at brugeren er logget ind og har adgang til spillet og trykket "Load Game"}
-
-\begin{itemize}
-  \item Når bruger trykker "Back" i load game-menuen
-  \item Så vender spillet tilbage til hovedmenuen
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\paragraph{Test af User Story 23-28 - Spil spillet}
-
-\textbf{Scenarie - Spil spillet - Start spillet}
-
-\textit{Givet at brugeren har trykket "New Game"}
-
-\begin{itemize}
-  \item Når bruger anvender piltasterne på keyboard eller trykker på knappen på interfacet til at bevæge sig sydpå fra startrummet
-  \item Så bevæger brugeren sig ind i rummet "Syd" for det rum de står i
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - Spil spillet - Enter nyt room}
-
-\textit{Givet at brugeren har trykket "New Game"}
-
-\begin{itemize}
-  \item Når bruger går ind i et nyt rum ved brug af keyboard
-  \item Så giver UI en beskrivelse af rummet spilleren befinder sig i
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar: Rum beskrivelser ændres korrekt når spiller går i nyt rum\\
-
-\textbf{Scenarie - Spil spillet - Combat}
-
-\textit{Givet at brugeren møder en fjende i et rum}
-
-\begin{itemize}
-  \item Når bruger trykker "Fight!"
-  \item Så ruller brugeren et tal mod fjenden om at skade fjenden
-  \item Og derefter ruller fjenden et tal om at skade brugeren
-\end{itemize}
-
-Resultat: Fejl\\
-Kommentar: Kravet er testes af unit tests, så der vides at det er korrekt, men det kan ikke bekræftes visuelt\\
-
-\textbf{Scenarie - Spil spillet - Combat - Flygt}
-
-\textit{Givet at brugeren møder en fjende i et rum}
-
-\begin{itemize}
-  \item Når bruger trykker "Flee"
-  \item Så flyttes brugeren tilbage til det rum han kom fra
-  \item Og får ikke sit mistede liv tilbage igen
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - Spil spillet - Inventory}
-
-\textit{Givet at brugeren har trykket "New Game"}
-
-\begin{itemize}
-  \item Når bruger trykker "Inventory"
-  \item Så vises genstande som bruger besidder
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - Spil spillet - Interact}
-
-\textit{Givet at brugeren har trykket "Start spil" og at der ike er fjender i rummet}
-
-\begin{itemize}
-  \item Når bruger trykker "Interact"
-  \item Så kan bruger tage potentielle genstande i rummet til brugerens "Inventory"
-\end{itemize}
-
-Resultat: Godkendt\\
-Kommentar:\\
-
-\textbf{Scenarie - Spil spillet - Level klaret}
-
-\textit{Givet at brugeren har fuldført det næstsidste rum}
-
-\begin{itemize}
-  \item Når bruger bevæger sig ind i sidste rum
-  \item Så får bruger en besked om at spillet er klaret og får mulighed for at gå til "Main Menu"
-\end{itemize}
-
-Resultat: Fejl\\
-Kommentar: Bruger kan gå til main menu, men sidste beskrivelse giver en uklar besked.\\
-
-\subsection{ikke-funktionelle}
-\textbf{GUI}
-\begin{table}[H]
-\caption{ Fuldført ikke funktionelle tests for GUI}
-\label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
-Beskrivelse & Verificering & Resultat & Kommentar \\
-\hline
-GUI'en skal tilbyde valget mellem 3 resolutions & Visuel & Godkendt & \\
-\hline
-GUI'en skal kunne være fullscreen & Visuel & Fejl & Window bar kunne ikke fjernes i fuldskærms opløsning\\
-\hline
-GUI'en skal kunne være windowed & Visuel & Godkendt & \\
-\hline
-\end{tabular}
-\end{table}
-
-\textbf{SOUND}
-\begin{table}[H]
-\caption{ Fuldført ikke funktionelle tests for SOUND}
-\label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
-Beskrivelse & Verificering & Resultat & Kommentar \\
-\hline
-Lyden skal kunne justeres mellem 0-100\% relativt til PC'ens lyd niveau. & Auditorisk/Visuel & Godkendt & \\
-\hline
-\end{tabular}
-\end{table}
-
+\subsection{Ikke-funktionelle}
+Herunder er udfyldte accepttest for systemets ikke-funktionelle krav. Her tages der igen et udpluk, som indeholder de mest kritiske krav. De resterende kan findes her\textbf{REF HERE}\\
 \textbf{DATABASE}
 \begin{table}[H]
 \caption{ Fuldført ikke funktionelle tests for DATABASE}
@@ -481,53 +179,6 @@ Beskrivelse & Verificering & Resultat & Kommentar \\
  Spillet skal respondere indenfor maksimalt 5s & Visuel & Godkendt & \\
 \hline
  Spillet må ikke have mere end én kommando i aktionskøen af gangen & Visuel & Fejl & Aktions kø er ikke blevet implementeret\\
-\hline
-\end{tabular}
-\end{table}
-
-\textbf{STABILITY}
-\begin{table}[H]
-\caption{ Fuldført ikke funktionelle tests for STABILITY}
-\label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
-Beskrivelse & Verificering & Resultat & Kommentar \\
-\hline
- MEANTIME BETWEEN FAILURE 1Time + 10Min? & Visuel & Fejl & MTBF er ikke testet \\
-\hline
-\end{tabular}
-\end{table}
-
-\textbf{DOCUMENTATION}
-\begin{table}[H]
-\caption{ Fuldført ikke funktionelle tests for DOCUMENTATION}
-\label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
-Beskrivelse & Verificering & Resultat & Kommentar \\
-\hline
-Spillet skal have en manual/help page til hvordan alting virker. & Visuel & Fejl & Der er et tutorial rum i stedet for \\
-\hline
-\end{tabular}
-\end{table}
-
-\textbf{SECURITY}
-\begin{table}[H]
-\caption{ Fuldført ikke funktionelle tests for SECURITY}
-\label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-\hline
-Beskrivelse & Verificering & Resultat & Kommentar \\
-\hline
- Username skal være mindst 6 characters & Visuel & Fejl & Der er ikke checks på Username længde\\
-\hline
- Username skal være unikt & Visuel & Godkendt & \\
-\hline
- Password skal være mindst 8 characters & Visuel & Fejl & \\
-\hline
- Password skal have store og små bogstavers & Visuel & Fejl & \\
-\hline
- Password må ikke indeholde username & Visuel & Fejl & Der er ikke checks på Password \\
 \hline
 \end{tabular}
 \end{table}
