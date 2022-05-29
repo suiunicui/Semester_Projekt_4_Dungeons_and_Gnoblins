@@ -1,0 +1,23 @@
+\subsection{Teknologiundersøgelse: Database SQL/NOSQL}
+Til at opbevare vores data til spillet og dennes loginsystem, skal vi benytte en database. Hertil skal der undersøges muligheder for at finde en database som gør det muligt for at bruge meget præcise tabeller med forhold til hinanden for at kunne genskabe et spil der er blevet gemt. Så derfor undersøges der fordele og ulemper ved SQL og NoSQL, og derefter ville der kunne vælges en af deres respektive applikationer, såsom MySQL (SQL) eller MongoDB (NoSQL).
+
+\subsubsection{SQL}
+En mulighed for vores database er at anvende en SQL baseret database. Denne form for database er relational, da den har en samling af data med forudbestemte forhold derimellem. Genstande organiseres I tabeller som indeholder information om objektet. Yderligere er SQL kendt og vel dokumenteret, som resulterer i at denne type database har et stort fællesskab bag den, med mulighed for støtte til arbejdet med den. Hernæst fungerer SQL også med ACID-principperne, som er; 
+
+\begin{itemize}
+\item Atomicity: Hver transaktion ses som en samlet unit, derfor vil transaktion enten være fuldført komplet, eller fejle, hvis en eller flere operationer fejler.
+\item Consistency: Kun gyldige data kan skrives i databasen. Hvis inputtet data er ugyldigt så ville databasen returnere til, hvordan den var før transaktionen, og pga. dette kan fejl transaktioner ikke korruptere databasen.
+\item Isolation: Ufærdige transaktioner forbliver isoleret. Dette medfører at alle transaktioner bliver behandlet individuelt.
+\item Durability: Data bliver gemt af systemet selvom en transaktion fejler, og pga. dette vil data ikke blive mistet ved at f.eks. systemet crasher under transaktionen.
+\end{itemize}
+Derudover er SQL også portabel og kan anvendes i programmer på PC’er uanset servers, OS og embedded systemer. Ydermere har SQL også hurtige query processering, som betyder at store mængder af data, og operationer som indsættelse, at slette og datamanipulation, sker hurtigt og effektivt. \\
+SQL har selvfølgelig også nogle ulemper såsom, at den har rigide og fastlåste skemaer. Disse resulterer i at databasen ikke er fleksibel, og har ikke mulighed for ændringer eftersom at kravene ændres. For at akkommodere tilpasninger, så skal koden for databasen skrives om.
+
+\subsubsection{No-SQL}
+Et andet alternativ ville være en database baseret på No-SQL. Denne har, modsat SQL, fleksible datamodeller, som gør det nemmere at lave ændringer i databasen efterhånden som kravene til databasen ændres. Yderligere har No-SQL også horizontal scaling, som betyder at hvis der rammes den nuværende servers kapacitet, så har man muligheden for at tilføje mindre ekstra servers, hvor at man ville skulle migrere til en større server i SQL. Dette gør det muligt for hurtigt at justere kapaciteten. 
+Mere er NoSQL data ofte opsat efter queries. Sådan at data der skal hentes sammen, er ofte opbevaret sammen. Dette resulterer i hurtigere queries.
+
+\subsubsection{Konklusion}
+I dette foranstående segment blev der diskuteret fordele og ulemper ved anvendelse af SQL kontra No-SQL. Hertil bliver der opstillet et valg om hvilket af disse to, der ville være bedst egnet til dette system. Valget vil blive taget senere i design fasen for databasen til projektet.\\
+\cite{Yalantis} \cite{IBM} \cite{MongoDB.com}
+
