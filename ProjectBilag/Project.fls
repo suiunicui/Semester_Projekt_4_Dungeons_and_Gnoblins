@@ -469,14 +469,6 @@ INPUT ./02-Body/Images/C4TopLvlDB.png
 INPUT ./02-Body/Images/C4TopLvlDB.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
-INPUT 02-Body/MethodeProcess.tex
-INPUT 02-Body/MethodeProcess.tex
-INPUT 02-Body/Images/Agile.png
-INPUT ./02-Body/Images/Agile.png
-INPUT ./02-Body/Images/Agile.png
-INPUT 02-Body/Images/C4TopLvlDB.PNG
-INPUT ./02-Body/Images/C4TopLvlDB.PNG
-INPUT ./02-Body/Images/C4TopLvlDB.PNG
 INPUT 02-Body/Analyser/Analyser.tex
 INPUT 02-Body/Analyser/Analyser.tex
 INPUT 02-Body/Analyser/Unity - Frontend.tex
