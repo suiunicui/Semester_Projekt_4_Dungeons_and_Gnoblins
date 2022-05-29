@@ -18,7 +18,7 @@ SaveController klassen består af en række HTTP metoder, disse defineres ved at
 
 På figuren ses en implementering af http metoden som bruges til sende et gemt spil til clienten. Funkionen retunere en Task ActionResult, som kan indeholde et SaveDTO object eller blot en status kode.
 
-SaveController klassen tillader kun kald fra en korrekt bruger, derfor tilføjes atributten Authorize fra Microsoft.AspNetCore.Authorization librariet. User.Identity benyttes så inde i selve funktionen, til at tilgå claims for den aktuelle bruger som laver forspørgslen. Herefter verifiseres det om denne brugers Username passer med det Username som hører til det Save objekt der hentes.\\  
+SaveController klassen tillader kun kald fra en korrekt bruger, derfor tilføjes atributten Authorize fra Microsoft.AspNetCore.Authorization librariet. User.Identity benyttes så inde i selve funktionen, til at tilgå claims for den aktuelle bruger som laver forespørgslen. Herefter verificeres det om denne brugers Username passer med det Username som hører til det Save objekt der hentes.\\  
 
     
 
@@ -36,12 +36,12 @@ UserController klassen skal modsat SaveController klassen tillade anonyme kald, 
 
 Hvis brugeren findes og pasword'et er korrekt retuneres en ny JWT, og brugeren er logget ind.\\
 
-Til at Hashe en bruger passwords med anvendes Bcrypt \cite{Bcrypt}. Bcrypt indeholder funktionen HashPassword(”password”, BcryptWorkfactor), denne funktion skal have en BcryptWorkfactor, samt et password. Funktionen verify(”password”, hashedpassword) bruges til at verificere om et givent password svare til dets krypterede udgave.\\
+Til at Hashe en bruger passwords med anvendes Bcrypt \cite{Bcrypt}. Bcrypt indeholder funktionen HashPassword(”password”, BcryptWorkfactor), denne funktion skal have en BcryptWorkfactor, samt et password. Funktionen verify(”password”, hashedpassword) bruges til at verificere om et givent password svarer til dets krypterede udgave.\\
 
 
 \subsubsection{BackEndController Client}
 
-BackEndControlleren benytte sig af et HttpClient objekt til at håndtere http request/response, og et Token objekt til at holde på den modtagne JWT.
+BackEndControlleren benytter sig af et HttpClient objekt til at håndtere http request/response, og et Token objekt til at holde på den modtagne JWT.
 Et klasse diagram over BackEndControlleren kan ses på \autoref{fig:Implementering-Backend-Klasse-BackEndController}\\
 
 \begin{figure}[H]
@@ -51,7 +51,7 @@ Et klasse diagram over BackEndControlleren kan ses på \autoref{fig:Implementeri
 \label{fig:Implementering-Backend-Klasse-BackEndController}
 \end{figure}
 
-BackEndController klassen implementeres som en sigleton. Dette gøres for at sikre at der kun findes en JWT i programmet adgangen og for at BackEndControlleren instansen altid indeholder den korrekte JWT uanset hvor henne i client applikationen der laves en request fra.\\
+BackEndController klassen implementeres som en singleton. Dette gøres for at sikre at der kun findes en JWT i programmet af gangen og for at BackEndControlleren instansen altid indeholder den korrekte JWT uanset hvorhenne i client applikationen der laves en request fra.\\
 
 
 \subsubsection{Konlusion}

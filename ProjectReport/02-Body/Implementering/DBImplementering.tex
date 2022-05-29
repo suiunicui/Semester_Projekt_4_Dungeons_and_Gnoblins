@@ -5,7 +5,7 @@ EF core gør det nemt at oprette og håndtere objekter C\# som skal gemmes eller
 Til modellering af databasen benyttes det udarbejdede ER-diagram hvorpå keys og relations er bestemt.\\
 Disse keys og relations opsættes i projektets backend ved hjælp af fluent api, hvori man nemt kan specificere keys, foreign keys, relations, hasData og meget mere.\\
 Ved ændringer af databasens udseende og form kan EFcore migrations hjælpe med at oprette de korrekte queries således at databasen bliver ændret korrekt, samt at man ved forkerte ændringer hurtigt kan hoppe tilbage til en tidligere migration ved eventuelle fejl. I EF core benyttes Language Integrated Query (LINQ) til at skrive ensartede queries til databasen.\\
-Der er som gruppe taget en beslutning om at hoste databasen lokalt i en docker container. Dette blev valgt på baggrund af en samtale med vejleder, hvor vi blandt andet, grundet sikkerhedsforanstaltning på au’s netværk og problemer med microsoft licenser, kunne løbe ind i nogle problemer.\\
+Der er som gruppe taget en beslutning om at hoste databasen lokalt i en docker container. Dette blev valgt på baggrund af en samtale med vejleder, på baggrund af, sikkerhedsforanstaltning på au’s netværk og problemer med microsoft licenser.\\
 
 \noindent Der er i projektets backend oprettet klasser, models, tilsvarende ER diagrammernes entiteter. Udover det valgte atributter er der også oprettet navigationals i de nødvendige klasse så der kan laves relationer.
 På \autoref{fig:DbKeys} herunder ses opsætningen af keys for de forskellige entiteter. Disse er opsat med fluent api efter ER diagrammerne på \autoref{fig:ER-Roomdescription} og \autoref{fig:ER-GameSave}.
