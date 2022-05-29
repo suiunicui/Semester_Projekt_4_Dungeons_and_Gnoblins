@@ -41,7 +41,7 @@ Den første funktion SaveGame benyttes til at udføre user story 7.
 Her skal der gemmes et spil.
 Da vi har et krav om kun at holde 5 gemte spil pr. bruger, vælger vi at oprette 5 ”tomme” saves, når vi opretter brugeren.  
 Når brugeren så ønsker at gemme et spil, skal vi ikke tilføje et nyt, men istedet overskrive et valgt gammelt save.
-Dette kan også ses på sekvensdiagrammet på figur xxx.\\\\
+Dette kan også ses på sekvensdiagrammet på figur xxx.\\
 
 
 \begin{figure}[H]
@@ -55,10 +55,10 @@ Dette kan også ses på sekvensdiagrammet på figur xxx.\\\\
 Navn: SaveGame\\
 Parametre: SaveDTO\\
 Returtype: Task\l ActionResult\l SaveDTO\g\g \\
-Beskrivelse: Da der i vores frontend sørges for at en bruger blot kan have 5 saves, starter vi med at finde det save vi gerne vil overskrive. Det gamle save, samt tilhørende lister slettes, hvorefter det nye save gemmes og eventuelle nye lister til fx. items gemmes.\\\\
+Beskrivelse: Da der i vores frontend sørges for at en bruger blot kan have 5 saves, starter vi med at finde det save vi gerne vil overskrive. Det gamle save, samt tilhørende lister slettes, hvorefter det nye save gemmes og eventuelle nye lister til fx. items gemmes.\\
 
 Den anden funktion GetAllSaves benyttes til at udføre user story 17.
-Her skal der loades en liste af gemte spil, når brugeren ønsker at se sine gemte spil. Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-17} .\\\\
+Her skal der loades en liste af gemte spil, når brugeren ønsker at se sine gemte spil. Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-17} .
 
 \begin{figure}[H]
 \centering
@@ -70,11 +70,11 @@ Her skal der loades en liste af gemte spil, når brugeren ønsker at se sine gem
 Navn: GetAllSaves\\
 Parametre: ingen\\
 Returtype: Task\l ActionResult\l List\l Save\g\g\g \\
-Beskrivelse: Her hentes all gemte saves i spillet.\\\\
+Beskrivelse: Her hentes all gemte saves i spillet.\\
 
 Den tredje funktion GetById benyttes til at udfører user story 18.
 Her skal der loades et gemt spil, som brugeren nu ønsker at spille. 
-Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-18}.\\\\
+Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-18}.\\
 
 \begin{figure}[H]
 \centering

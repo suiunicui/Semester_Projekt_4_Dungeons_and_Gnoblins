@@ -1,0 +1,50 @@
+\subsection{Game Engine}
+Game Engine er implementeret i C\#, et objectorienteret programmeringsprog
+med stærk library support, der tillader at udvikle af applikationer. 
+\autoref{fig:CoreDiagram} giver en klar insigt i hvordan kerne delen af
+game engine er designet til at virke. 
+
+\subsubsection{Game Controller}
+Game controlleren er det centrale komponent i game engine; ansvarlig for 
+kommunikation med frontend modulet. Game controlleren har adgang til alle
+aspekter af spillet, gennem sin association med Combat controllern og 
+backend controlleren.
+
+\noindent Det er en nem løsning, og den fungere godt givet det begrænsede scope som 
+game enginen skal fungere under.
+For en mere kompliceret applikation med forventninger om udvidelser er det
+dog ikke en god implementering da game controlleren har for mange grunde
+til at ændre sig. Den har altså et for bredt ansvarsområde og kan formentlig
+splittes op i flere klasser.
+
+\noindent Når game controlleren instantieres laves et map af Map og Map creator klassen
+hvilket før til en længere process hvor map creator klassen laver nogle
+layout filer som map klassen kan læse for at danne et map i spillet, som 
+spilleren kan navigere \parencite[Section 11.3.2][]{TekniskBilag}.\\
+
+\noindent Game controlleren er i stand til at save og load games gennem 
+dens relation til backend controlleren, der kan lave fetch til spillets
+database.
+
+\noindent Selve Load process er kompliceret, da den involvere adskillige iterationer
+igennem alle rooms, items og fjender i spillet for at bekræfte om disse er
+blevet besøgt, indsamlet eller beseret tidligere \parencite[Section 11.3.1]
+[Figure 55]{TekniskBilag}.
+Save game er simplere da game controlleren selv har adgang til alt infomation
+som er nødvendigt for et komplet save game.
+
+\subsubsection{Combat Controller}
+Skulle spilleren befinde sig i combat, er det combat controlleren, der styre programmets
+``flow of execution''. Først angriber spilleren; fjenden hvorefter fjenden angriber spilleren
+hvis og kun hvis fjenden stadig er i live. Combat controlleren benytter en diceRoller til
+at simulere terningekast, der benyttes til at bedømme om spilleren og fjenden rammer med
+deres repektive angreb og efterfølgende; hvor meget deres angreb skader. Spilleren kan opsamle
+og benytte våben til at forbedre deres terningekast \parencite[Section 10.3.2][]{TekniskBilag}. 
+
+\subsubsection{Log}
+Game Controlleren kommunikere med frontend gennem en log. Loggen logger forskellige
+events når game controlleren ændre game statet. Frontend kan derefter benytte loggen
+til at læse og display hvilket ændringer, der er foretage og præsentere det til spilleren
+på en brugbar måde.
+
+\newpage
