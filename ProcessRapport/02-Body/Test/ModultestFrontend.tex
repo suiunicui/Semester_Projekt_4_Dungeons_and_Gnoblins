@@ -1,0 +1,13 @@
+\subsection{Modultest Frontend}
+Modultesten af Frontenden er lavet i meget tæt samarbejde med Game Engine holdet. Dette er valgt sådan, at når Game Engine lavede en ny funktion eller funktionalitet, gik frontend holdet igang med at implementere en visuel repræsentation af denne nye funktion/funktionalitet. Således var det ikke kun en visuel test af at views så godt ud eller at man kunne trykke på en knap, men derimod kunne både frontenden og Game Enginen testes i samarbejde, hvor den reelle funktionalitet for systemet blev testet.
+
+\subsubsection{Test metoder}
+Hver gang der er blevet lavet små eller større ændringer i frontenden, er der blevet lavet både en funktionel og visuel test af de nye ændringer. Dette blev gjort for æstetiske ændringer ved at kigge i preview vinduet i WPF for det view der blev ændret. Var det derimod en ændring der inkluderede databinding til Game Enginen, blev det nødvendigt at teste hele programmet ved brug af compileren og derved lave en runtest, som inkluderede at det rigtige data blev hentet fra Game Enginen eller at den rigtige funktionalitet blev kaldt ved et tryk på en knap.
+
+\subsubsection{Eksempel på frontend test i forbindelse med Game Engine}
+Et godt eksempel på hvordan frontend testene blev kørt er ved implementeringen af Room-viewets map element og mere specifikt bevægelsen fra et rum til et andet, altså de implementerede "Go North,East,South,West" knapper, som krævede både en visuel og funktionel del.\\
+Den visuelle del bestod i at kortet skulle opdateres, spilleren flyttes og rum-beskrivelsen opdateres.\\
+Den funktionelle del bestod i at Game Enginen skulle kontaktes på korrekt vis med rigtige parametre. De rigtige databindings skulle opdateres, således at den visuelle del blev opdateret korrekt og derefter skulle informationen om det rum gemmes korrekt i Game Enginen.\\
+For at være sikker på at alt data blev opdateret korrekt blev programmet kørt i debug mode, hvor der kunne sættes break-points i koden og værdierne på diverse variabler, såsom roomdescription og currentroom kunne undersøges. Samtidig blev der kigget på den visuelle del af selve viewet, hvor der blev tjekket om beskrivelsen blev korrekt displayet, mappen opdateret korrekt og at spilleren flyttes korrekt.
+\subsubsection{Eksempel på frontend test}
+Ikke alle moduler krævede at Game Enginen blev kontaktet. Eksempelvis Mediatoren, som er beskrevet i Frontend implementings afsnittet som kan findes her: \autoref{sec:Frontend Implementering}. Med dette modul blev der lavet mocks, hvor vi satte en dummy knap op til at kunne kalde notify() funktionen i Mediatoren og der blev tjekket visuelt om viewet blev skiftet uden at hele applikationsvinduet blev skiftet og at det korrekte view blev vist. 

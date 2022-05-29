@@ -1,0 +1,17 @@
+
+\subsection{Fulde Integrationstest}
+
+Med den indledende integrationstest, er kommunikationen igennem sytemet på plads, samt de basale funktionaliteter. Nu udvides spillet med flere features, generelt drejer det sig om følgende features: Login, Register, Enemies, Items, Health, EquipedItems, Shield, Combat, Map Visibility og Room Descriptions. Dette er features, som kræver yderligere udvikling indenfor alle tekniske områder af projektet.\\
+
+
+Feature udviklingen i Frontend og Game Engine Modul udvikles sammen, derfor er de moduler allerede integreret med hinanden, det samme gælder for Backend og Databasen.\\
+
+Der laves endnu en integrations test med alle de nye features. Her opstod en række nye problemer hvad angår Http kommuniaktionen imellem backend'en og frontend'en. Dette bundede i overenstemmelsen af data modellerne på backend og frontend siden. Det drejede sig helt specifikt omkring de nyeligt tilføjede properties til modellen "Save", på fronted'en blev brugt datatypen uint imens der på backend blev brugt int, samtidigt med at properties hed noget forskelligt. Derfor blev de nye properties ignorede når data'en blev seraliseret og deseraliseret. Dette problem var ikke noget som debuggeren gjorde opmærksom på derfor tog det relativt lang tid at få det løst.\\
+
+Et andet problem som opstod, var angående Room Description, her blev det besluttet under implementering at gemme dem i databasen fremfor lokalt, grundet problemer med resources og deres specifikke stier på forskellige pc'er.\\
+
+Med disse problemer løst, resulterede integrationstesten i vores færdige produkt, som blev anvendt i acceptesten. Acceptesten samt en demonstrations video af produktet kan ses her. \textbf{REF TIL VIDEO AF ACCEPTEST VIDEO}\\    
+ 
+
+  
+

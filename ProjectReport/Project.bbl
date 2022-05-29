@@ -19,6 +19,31 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Mediator}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0d2366f384b6c702db8e9dd8b74534db}{%
+           family={Andy},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d2366f384b6c702db8e9dd8b74534db}
+      \strng{fullhash}{0d2366f384b6c702db8e9dd8b74534db}
+      \strng{bibnamehash}{0d2366f384b6c702db8e9dd8b74534db}
+      \strng{authorbibnamehash}{0d2366f384b6c702db8e9dd8b74534db}
+      \strng{authornamehash}{0d2366f384b6c702db8e9dd8b74534db}
+      \strng{authorfullhash}{0d2366f384b6c702db8e9dd8b74534db}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Navigating between views in WPF / MVVM}
+      \field{year}{Visited 12/04-2022}
+      \verb{urlraw}
+      \verb https://www.technical-recipes.com/2018/navigating-between-views-in-wpf-mvvm/
+      \endverb
+      \verb{url}
+      \verb https://www.technical-recipes.com/2018/navigating-between-views-in-wpf-mvvm/
+      \endverb
+    \endentry
     \entry{TekniskBilag}{misc}{}
       \name{author}{8}{}{%
         {{hash=cd0f15b59b0dff5e3b096fa3f0d00a5f}{%
