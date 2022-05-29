@@ -18,7 +18,7 @@ Databasen indeholder oplysninger om blandt andet brugere, de gemte spil og oplys
 \section{Kravspecifikation}
 \label{sec:kravspec}
 
-I det følgende afsnit beskrives kravene for systemet. Afsnittet indeholder et udpluk af de funktionelle og ikke funtionelle krav, som omhandler det samlede system. Til slut i afsnittet afgrænses projektets omfang her præsenteres en MoSCoW-analyse prioritering over de ikke funktionelle krav, samt hvilke rammer som sættes for projektets omfang. For en fuld kravspecifikation henvises til bilag \textbf{(Mangler Ref til bilag)}.\\  
+I det følgende afsnit beskrives kravene for systemet. Afsnittet indeholder et udpluk af de funktionelle og ikke funtionelle krav, som omhandler det samlede system. Til slut i afsnittet afgrænses projektets omfang her præsenteres en MoSCoW-analyse prioritering over kravene, samt hvilke rammer som sættes for projektets omfang. For en fuld kravspecifikation henvises til bilag \textbf{(Mangler Ref til bilag)}.\\  
 
 
 \subsection{Funktionelle krav - User Stories}
@@ -33,17 +33,17 @@ User Story 2: Opret profil \\
   Som Bruger \\
   Kan jeg oprette en ny profil \\
   For at jeg kan logge ind på spillet. \\
-
-User Story 7: Exit Menu - Save and Exit\\
-  Som Bruger \\
-  Kan jeg trykke på "Save and Exit" \\
-  For at spillet gemmes og bruger bliver vist Main Menu\\
+  
+UserStory 15 : Save Menu - Save Game\\
+  Som bruger \\
+  Kan jeg trykke på et eksisterne spil, ændre navnet og trykke "Save Game" \\
+  For at gemme spillet.\\
 
   
-UserStory 17 : Main Menu - Load Game\\
-  Som bruger \\x
+UserStory 18 : Main Menu - Load Game - Load\\
+  Som bruger \\
   Kan jeg trykke på "load game" \\
-  For at få en liste a save games.\\
+  For at komme ind i spillet og fortsætte med at spille det valgte spil\\
 
 
 \subsection{Ikke-funktionelle krav}
@@ -94,6 +94,7 @@ Systemets ikke-funktionelle krav opstilles efter en række kategorier med inspir
 \item Spillet må ikke have mere end én kommando i aktionskøen af gangen
 \end{itemize}
 
+\newpage
     
 
 \subsection{Afgrænsning}
@@ -127,11 +128,11 @@ I dette afsnit er opstillet en MoSCW analyse af de krav som er opsat til projekt
 \textbf{SHOULD}
 \begin{itemize}
 
-\item Have Enemies\\
-\item Have Items\\
-\item Have Combat mechanics\\
-\item Have End Screen\\
-\item Have Character Stats\\
+\item Have Enemies
+\item Have Items
+\item Have Combat mechanics
+\item Have End Screen
+\item Have Character Stats
  
 \end{itemize}
 
@@ -139,11 +140,11 @@ I dette afsnit er opstillet en MoSCW analyse af de krav som er opsat til projekt
 
 \begin{itemize}
 
-\item Have Level development\\
-\item Have Procedual world\\
-\item Have Text Parser\\
-\item Have Difficulty\\
-\item Have Security\\
+\item Have Level development
+\item Have Procedual world
+\item Have Text Parser
+\item Have Difficulty
+\item Have Security
 
 \end{itemize}
 
