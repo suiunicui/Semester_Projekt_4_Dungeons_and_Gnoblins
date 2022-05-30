@@ -1,16 +1,16 @@
 \subsection{Game Engine}
 Game Engine er implementeret i C\#, et objectorienteret programmeringsprog
-med stærk library support, der tillader at udvikle af applikationer. 
-\autoref{fig:CoreDiagram} giver en klar insigt i hvordan kerne delen af
+med stærk library support, der tillader udvikling af applikationer. 
+\autoref{fig:CoreDiagram} giver en klar indsigt i hvordan kernedelen af
 game engine er designet til at virke. 
 
 \subsubsection{Game Controller}
 Game controlleren er det centrale komponent i game engine; ansvarlig for 
 kommunikation med frontend modulet. Game controlleren har adgang til alle
-aspekter af spillet, gennem sin association med Combat controllern og 
+aspekter af spillet, gennem sin association med Combat controlleren og 
 backend controlleren.
 
-\noindent Det er en nem løsning, og den fungere godt givet det begrænsede scope som 
+\noindent Det er en nem løsning, og den fungerer godt givet det begrænsede scope som 
 game enginen skal fungere under.
 For en mere kompliceret applikation med forventninger om udvidelser er det
 dog ikke en god implementering da game controlleren har for mange grunde
@@ -30,7 +30,7 @@ database.
 igennem alle rooms, items og fjender i spillet for at bekræfte om disse er
 blevet besøgt, indsamlet eller beseret tidligere \parencite[Section 11.3.1]
 [Figure 55]{TekniskBilag}.
-Save game er simplere da game controlleren selv har adgang til alt infomation
+Save game er simplere, da game controlleren selv har adgang til alt infomation
 som er nødvendigt for et komplet save game.
 
 \subsubsection{Combat Controller}
@@ -42,9 +42,9 @@ deres repektive angreb og efterfølgende; hvor meget deres angreb skader. Spille
 og benytte våben til at forbedre deres terningekast \parencite[Section 10.3.2][]{TekniskBilag}. 
 
 \subsubsection{Log}
-Game Controlleren kommunikere med frontend gennem en log. Loggen logger forskellige
+Game Controlleren kommunikerer med front-end gennem en log. Loggen logger forskellige
 events når game controlleren ændre game statet. Frontend kan derefter benytte loggen
-til at læse og display hvilket ændringer, der er foretage og præsentere det til spilleren
-på en brugbar måde.
+til at læse og vise hvilket ændringer, der er foretaget og præsentere dem til spilleren
+på en brugbar måde og brugervenlig måde.
 
 \newpage

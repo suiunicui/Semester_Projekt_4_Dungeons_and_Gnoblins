@@ -1,0 +1,33 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.27)  29 MAY 2022 22:39
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**References.tex
+(./References.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-05-04>
+! Undefined control sequence.
+l.1 \printbibliography
+                      %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+! Emergency stop.
+<*> References.tex
+                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 16 strings out of 478300
+ 395 string characters out of 5849123
+ 289973 words of memory out of 5000000
+ 18293 multiletter control sequences out of 15000+600000
+ 469259 words of font info for 28 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 13i,0n,12p,65b,10s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
