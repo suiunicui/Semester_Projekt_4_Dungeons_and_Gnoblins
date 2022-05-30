@@ -6,4 +6,20 @@ projektet med mindskede risici. Der er foretaget teknologiundersøgelser, for at
 Der er i teknologiundersøgelserne blevet undersøgt forskellige løsninger til diverse valg der skulle træffes tidligt i udviklingsfasen.\\
 For det første skulle der træffes et valg om hvilket framework Frontend'en skulle udvikles i. Valget blev hurtigt indsnævret til to kandidater, nemlig .Net og Unity. Kort sagt blev der fundet frem til at med den opdeling af arbejdet, som gruppen ønskede at bruge, gav det mest mening at bruge et framework med en skarp opdeling af Front-end og Back-end. Dette kunne .Net opfylde. Derudover blev der i undervisningen på 4.semester undervist i .NET frameworket, således at der kunne fokuseres på at lave projektet og ikke lære frameworket at kende. 
 
+
+\subsection{Teknologi Undersøgelse Backend}
+Back-end’ens ansvar er at flytte og validere data mellem spillets frontend og spillets tilhørende Database. Da frontend'en udvikles i WPF vil det give mening at Backend ligeledes udvikles i et .NET miljø. Der undersøges følgende to muligheder.\\
+
+\subsubsection{Mulighed 1: WPF -\g ASP.NET Core -\g Entity Framework Core -\g Database}
+Denne mulighed indebærer .NET frameworket ASP.NET Core. Her vil dataflowet altså blive følgende. Data’en skal flyttes først fra WPF til ASP.NET og derfra med EF Core\cite{Entity-Framework-Core} til databasen, og så tilbage igen.
+
+\subsubsection{Mulighed 2: WPF -\g Entity Framework Core -\g database}
+Dette er en mere simpel løsning, da det ikke kræver frameworket ASP.NET Core. Dataflowet vil her være direkte fra WPF til databasen ved hjælp af EF Core. Her fåes nemlig muligheden for at separere data resourcerne fra resten af applikationen samtidig med vi for en mere sikker og pålidelig håndtering af brugere
+
+Det besluttes at gå med mulighed 1, her fåes nemlig muligheden for at separere data resourcerne fra resten af applikationen samtidig med vi for en mere sikker og pålidelig håndtering af brugere.
+
+
+
 \input{02-Body/Analyse/DatabaseAnalyse.tex}
+
+
