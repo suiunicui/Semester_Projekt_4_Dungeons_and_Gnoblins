@@ -1,0 +1,26 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'Project.blg'
+[51] biber:322> INFO - === Mon May 30, 2022, 09:38:13
+[67] Biber.pm:415> INFO - Reading 'Project.bcf'
+[112] Biber.pm:943> INFO - Found 10 citekeys in bib section 0
+[123] Biber.pm:4256> INFO - Processing section 0
+[123] Utils.pm:75> INFO - Globbing data source '03-EndMatter/References.bib'
+[125] Utils.pm:91> INFO - Globbed data source '03-EndMatter/References.bib' to 03-EndMatter/References.bib
+[131] Biber.pm:4455> INFO - Looking for bibtex format file '03-EndMatter/References.bib' for section 0
+[138] bibtex.pm:1653> INFO - LaTeX decoding ...
+[147] bibtex.pm:1471> INFO - Found BibTeX data source '03-EndMatter/References.bib'
+[161] Utils.pm:293> WARN - year field 'Visited 20/03-2022' in entry 'Yalantis' is not an integer - this will probably not sort properly.
+[164] Utils.pm:293> WARN - year field 'Visited 20/03-2022' in entry 'IBM' is not an integer - this will probably not sort properly.
+[166] Utils.pm:293> WARN - year field 'Visited 21/03-2022' in entry 'MongoDB.com' is not an integer - this will probably not sort properly.
+[176] Utils.pm:293> WARN - year field 'Visited 28/05-2022' in entry 'Bcrypt' is not an integer - this will probably not sort properly.
+[178] Utils.pm:293> WARN - year field 'Visited 12/04-2022' in entry 'Mediator' is not an integer - this will probably not sort properly.
+[180] Utils.pm:293> WARN - year field 'Visited 28/05-2022' in entry 'Swagger' is not an integer - this will probably not sort properly.
+[181] Utils.pm:293> WARN - I didn't find a database entry for 'REFERENCE' (section 0)
+[182] Utils.pm:293> WARN - I didn't find a database entry for 'SQL server with docker' (section 0)
+[191] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[191] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[191] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[192] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[199] bbl.pm:652> INFO - Writing 'Project.bbl' with encoding 'UTF-8'
+[204] bbl.pm:755> INFO - Output to Project.bbl
+[205] Biber.pm:128> INFO - WARNINGS: 8
