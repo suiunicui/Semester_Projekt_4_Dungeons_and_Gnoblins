@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="FrontEnd_GameLayout.Views.Inventory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEnd_GameLayout.Views"
+        mc:Ignorable="d"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Loaded="UserControl_Loaded"
+        d:DesignHeight="1080"
+        d:DesignWidth="1920"
+        Height="{Binding Window_Height}" Width="{Binding Window_Width}" Focusable="True">
+
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding BackCommand}" Key="Esc"/>
+        <KeyBinding Command="{Binding CharacterCommand}" Key="C"/>
+    </UserControl.InputBindings>
+
+    <Grid x:Name="Main" Focusable="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="2" Style="{StaticResource buttonStyle}"
+                Content="Equip" Command="{Binding EquipCommand}" Grid.Row="9"/>
+        
+        <Button Grid.Column="3" Style="{StaticResource buttonStyle}"
+                Content="Back" Command="{Binding BackCommand}" Grid.Row="10"/>
+        <Button Grid.Column="1" Style="{StaticResource buttonStyle}"
+                Content="Character" Command="{Binding CharacterCommand}" Grid.Row="10"/>
+
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Text="Dungeons and Gnoblins" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}" Margin="0,36,0,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Inventory" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
+
+        <ListBox Grid.Column="1" Grid.Row="4" Grid.RowSpan="5" Style="{StaticResource listStyle}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding ItemType}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock Grid.Column="3" Grid.Row="3" Text="Equiped" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource titleblockStyle}"/>
+        <TextBlock Grid.Column="3" Grid.Row="5" Text="{Binding EquippedWeapon}" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource textblockStyle}"/>
+        <TextBlock Grid.Column="3" Grid.Row="7" Text="{Binding EquippedShield}" TextAlignment="Center" VerticalAlignment="Top" Style="{StaticResource textblockStyle}"/>
+    </Grid>
+</UserControl>
