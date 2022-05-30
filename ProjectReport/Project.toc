@@ -21,44 +21,61 @@
 \contentsline {subsection}{\numberline {6.1}Systemarkitektur}{14}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Front-end Arkitektur}{14}{subsection.6.2}%
 \contentsline {subsubsection}{\numberline {6.2.1}Pseudo Front-end Arkitektur}{15}{subsubsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.3}Database Arkitektur}{17}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}DAL Arkitektur}{17}{subsubsection.6.3.1}%
-\contentsline {section}{\numberline {7}Design}{17}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Overordnet System Design}{17}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Front-end Design}{19}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Game Engine}{20}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Game Controller}{21}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Combat Controller}{22}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Room}{22}{subsubsection.7.3.3}%
-\contentsline {subsubsection}{\numberline {7.3.4}Player}{22}{subsubsection.7.3.4}%
-\contentsline {subsection}{\numberline {7.4}Software Design DAL Design}{23}{subsection.7.4}%
-\contentsline {subsubsection}{\numberline {7.4.1}User story funktioner}{24}{subsubsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.5}Database Design}{27}{subsection.7.5}%
-\contentsline {section}{\numberline {8}Implementering}{29}{section.8}%
-\contentsline {subsection}{\numberline {8.1}System Implementering}{29}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Front-end Implementering}{29}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Room View}{30}{subsubsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.3}Game Engine}{31}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Game Controller}{31}{subsubsection.8.3.1}%
-\contentsline {subsubsection}{\numberline {8.3.2}Combat Controller}{32}{subsubsection.8.3.2}%
-\contentsline {subsubsection}{\numberline {8.3.3}Log}{32}{subsubsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.4}Database Implementering}{33}{subsection.8.4}%
-\contentsline {section}{\numberline {9}Test}{35}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Modultest Frontend}{35}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}Test metoder}{35}{subsubsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.2}Game Engine Modul Test}{36}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1}Test Resultater for Game Engine}{37}{subsubsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.3}Modultest database}{39}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Integrationstest}{41}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Tidlig Integrationstest}{41}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Fulde Integrationstest}{42}{subsection.10.2}%
-\contentsline {section}{\numberline {11}Accepttestspecifikation}{42}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Funktionelle}{42}{subsection.11.1}%
-\contentsline {paragraph}{Test af User Story 1 - Login}{42}{section*.31}%
-\contentsline {paragraph}{Test af User Story 2 - Opret profil}{43}{section*.32}%
-\contentsline {paragraph}{Test af User Story 15 og 18}{43}{section*.33}%
-\contentsline {subsection}{\numberline {11.2}Ikke-funktionelle}{44}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Diskussion af testresultater}{47}{subsection.11.3}%
-\contentsline {section}{\numberline {12}Fremtidigt Arbejde}{47}{section.12}%
-\contentsline {section}{\numberline {13}Konklusion}{48}{section.13}%
-\contentsline {section}{\numberline {14}Bilag}{49}{section.14}%
+\contentsline {subsection}{\numberline {6.3}GameController Arkitektur}{17}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}States og Character interagering}{17}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Room State og Character interagering}{18}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}Combat State og Combat simulering}{18}{subsubsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.4}Database Arkitektur}{19}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}DAL Arkitektur}{20}{subsubsection.6.4.1}%
+\contentsline {section}{\numberline {7}Design}{20}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Overordnet System Design}{20}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Front-end Design}{22}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Game Engine}{23}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Game Controller}{24}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Combat Controller}{25}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Room}{25}{subsubsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.4}Player}{25}{subsubsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.4}Backend Design}{26}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Routes}{26}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}Authentication/Authorization med JWT Token}{26}{subsubsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.3}Hashing}{27}{subsubsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.4}BackEndController på client siden}{27}{subsubsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.5}Applikations modeller}{27}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}Konklusion}{28}{subsubsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.6}Software Design DAL Design}{29}{subsection.7.6}%
+\contentsline {subsubsection}{\numberline {7.6.1}User story funktioner}{30}{subsubsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.7}Database Design}{33}{subsection.7.7}%
+\contentsline {section}{\numberline {8}Implementering}{35}{section.8}%
+\contentsline {subsection}{\numberline {8.1}System Implementering}{35}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Front-end Implementering}{35}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Room View}{36}{subsubsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.3}Game Engine}{37}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Game Controller}{37}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Combat Controller}{38}{subsubsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.3}Log}{38}{subsubsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.4}Backend Implementering}{39}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}SaveController}{39}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}UserController}{40}{subsubsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.3}BackEndController Client}{40}{subsubsection.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.4.4}Konlusion}{41}{subsubsection.8.4.4}%
+\contentsline {subsection}{\numberline {8.5}Database Implementering}{42}{subsection.8.5}%
+\contentsline {section}{\numberline {9}Test}{44}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Modultest Frontend}{44}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Test metoder}{44}{subsubsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.2}Game Engine Modul Test}{45}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Test Resultater for Game Engine}{46}{subsubsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.3}Modultest database}{47}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Backend Modultest}{49}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Integrationstest}{53}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Tidlig Integrationstest}{53}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Fulde Integrationstest}{53}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Accepttestspecifikation}{54}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Funktionelle}{54}{subsection.11.1}%
+\contentsline {paragraph}{Test af User Story 1 - Login}{54}{section*.41}%
+\contentsline {paragraph}{Test af User Story 2 - Opret profil}{54}{section*.42}%
+\contentsline {paragraph}{Test af User Story 15 og 18}{55}{section*.43}%
+\contentsline {subsection}{\numberline {11.2}Ikke-funktionelle}{55}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Diskussion af testresultater}{59}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Fremtidigt Arbejde}{59}{section.12}%
+\contentsline {section}{\numberline {13}Konklusion}{60}{section.13}%
+\contentsline {section}{\numberline {14}Bilag}{61}{section.14}%

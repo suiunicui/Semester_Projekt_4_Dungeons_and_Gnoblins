@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.27)  29 MAY 2022 21:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.27)  30 MAY 2022 01:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1346,20 +1346,8 @@ File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (./00-DocumentSettings/Definitions.tex)
 \@quotelevel=\count525
 \@quotereset=\count526
- (./Project.aux
 
-LaTeX Warning: Label `fig:Arkitektur-SD-SaveGame' multiply defined.
-
-
-LaTeX Warning: Label `tab:' multiply defined.
-
-
-LaTeX Warning: Label `tab:' multiply defined.
-
-
-LaTeX Warning: Label `tab:' multiply defined.
-
-)
+No file Project.aux.
 \openout1 = `Project.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -1381,7 +1369,6 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 Package hyperref Info: Link coloring OFF on input line 7.
- (./Project.out) (./Project.out)
 \@outlinefile=\write8
 \openout8 = `Project.out'.
 
@@ -1391,7 +1378,6 @@ Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 7.
-
 (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count527
@@ -1480,7 +1466,7 @@ Package biblatex Info: Reference segment=0 on input line 7.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (./01-FrontMatter/FrontMatter.tex (./01-FrontMatter/Title.tex
-<02-Body/Images/FrontImage.png, id=272, 803.0pt x 448.67625pt>
+<02-Body/Images/FrontImage.png, id=31, 803.0pt x 448.67625pt>
 File: 02-Body/Images/FrontImage.png Graphic file (type png)
 <use 02-Body/Images/FrontImage.png>
 Package pdftex.def Info: 02-Body/Images/FrontImage.png  used on input line 2.
@@ -1528,12 +1514,17 @@ LaTeX Warning: Citation 'REFERENCE' on page 6 undefined on input line 4.
 LaTeX Warning: Citation 'REFERENCE' on page 6 undefined on input line 6.
 
 [6]) (./02-Body/Docs/Kravspecifikation.tex
-<02-Body/Images/C4TopLvlDB.png, id=371, 489.62926pt x 371.58826pt>
+<02-Body/Images/C4TopLvlDB.png, id=223, 489.62926pt x 371.58826pt>
 File: 02-Body/Images/C4TopLvlDB.png Graphic file (type png)
 <use 02-Body/Images/C4TopLvlDB.png>
 Package pdftex.def Info: 02-Body/Images/C4TopLvlDB.png  used on input line 5.
 (pdftex.def)             Requested size: 435.52144pt x 330.52539pt.
- [7 <./02-Body/Images/C4TopLvlDB.PNG>]
+
+
+LaTeX Warning: Reference `fig:C4TopLvlDB' on page 7 undefined on input line 10.
+
+
+[7 <./02-Body/Images/C4TopLvlDB.PNG>]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
@@ -1574,14 +1565,8 @@ Overfull \hbox (14.06271pt too wide) in paragraph at lines 83--84
 /flere simulerede terningekast, afh^^Zngigt
  []
 
-
-Overfull \hbox (14.06271pt too wide) in paragraph at lines 87--88
-[]\OT1/cmr/m/n/10 Hvis spilleren/f-jen-den ram-mer, bliver skaden bestemt af et
-/flere simulerede terningekast, afh^^Zngigt
- []
-
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
@@ -1590,13 +1575,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 7.
 
-<02-Body/Images/Agile.png, id=393, 475.7775pt x 456.70625pt>
+<02-Body/Images/Agile.png, id=245, 475.7775pt x 456.70625pt>
 File: 02-Body/Images/Agile.png Graphic file (type png)
 <use 02-Body/Images/Agile.png>
 Package pdftex.def Info: 02-Body/Images/Agile.png  used on input line 18.
 (pdftex.def)             Requested size: 237.88815pt x 228.35255pt.
 [11 <./02-Body/Images/Agile.png>]
-<02-Body/Images/C4TopLvlDB.PNG, id=399, 489.62926pt x 371.58826pt>
+<02-Body/Images/C4TopLvlDB.PNG, id=251, 489.62926pt x 371.58826pt>
 File: 02-Body/Images/C4TopLvlDB.PNG Graphic file (type png)
 <use 02-Body/Images/C4TopLvlDB.PNG>
 Package pdftex.def Info: 02-Body/Images/C4TopLvlDB.PNG  used on input line 43.
@@ -1607,23 +1592,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--61
  []
 
 ) (./02-Body/Analyse/Analyse.tex [12 <./02-Body/Images/C4TopLvlDB.PNG>]
-(./02-Body/Analyse/DatabaseAnalyse.tex))
-(./02-Body/Arkitektur/Arkitektur-overordnet.tex [13]
+(./02-Body/Analyse/DatabaseAnalyse.tex
+
+LaTeX Warning: Citation 'Yalantis' on page 13 undefined on input line 22.
+
+
+LaTeX Warning: Citation 'IBM' on page 13 undefined on input line 22.
+
+
+LaTeX Warning: Citation 'MongoDB.com' on page 13 undefined on input line 22.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
+
+ []
+
+)) (./02-Body/Arkitektur/Arkitektur-overordnet.tex
+
+LaTeX Warning: Reference `fig:Arkitektur-SD-SaveGame' on page 13 undefined on i
+nput line 9.
+
+[13]
 
 pdfTeX warning: pdflatex.exe (file ./02-Body/Images/Arkitektur-C4TopLevel.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<02-Body/Images/Arkitektur-C4TopLevel.pdf, id=412, 605.86348pt x 468.67096pt>
+<02-Body/Images/Arkitektur-C4TopLevel.pdf, id=263, 605.86348pt x 468.67096pt>
 File: 02-Body/Images/Arkitektur-C4TopLevel.pdf Graphic file (type pdf)
 <use 02-Body/Images/Arkitektur-C4TopLevel.pdf>
 Package pdftex.def Info: 02-Body/Images/Arkitektur-C4TopLevel.pdf  used on inpu
 t line 13.
 (pdftex.def)             Requested size: 435.52144pt x 336.90646pt.
-(./02-Body/Arkitektur/FrontendArkitektur.tex [14 <./02-Body/Images/Arkitektur-C
-4TopLevel.pdf>]
+(./02-Body/Arkitektur/FrontendArkitektur.tex
+
+LaTeX Warning: Reference `fig:Arkitektur-FrontEnd-C3' on page 14 undefined on i
+nput line 4.
+
+[14 <./02-Body/Images/Arkitektur-C4TopLevel.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./02-Body/Images/Frontend_C3.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<02-Body/Images/Frontend_C3.pdf, id=432, 843.63177pt x 547.44528pt>
+<02-Body/Images/Frontend_C3.pdf, id=281, 843.63177pt x 547.44528pt>
 File: 02-Body/Images/Frontend_C3.pdf Graphic file (type pdf)
 <use 02-Body/Images/Frontend_C3.pdf>
 Package pdftex.def Info: 02-Body/Images/Frontend_C3.pdf  used on input line 8.
@@ -1632,6 +1640,10 @@ Package pdftex.def Info: 02-Body/Images/Frontend_C3.pdf  used on input line 8.
 Underfull \hbox (badness 10000) in paragraph at lines 14--20
 
  []
+
+
+LaTeX Warning: Reference `fig:Arkitektur-FrontEnd-Save' on page 15 undefined on
+ input line 23.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
@@ -1643,7 +1655,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--25
 pdfTeX warning: pdflatex.exe (file ./02-Body/Images/Front-End_-_Arkitektur-save
 game.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> al
 lowed
-<02-Body/Images/Front-End_-_Arkitektur-savegame.pdf, id=456, 557.92442pt x 351.
+<02-Body/Images/Front-End_-_Arkitektur-savegame.pdf, id=303, 557.92442pt x 351.
 11174pt>
 File: 02-Body/Images/Front-End_-_Arkitektur-savegame.pdf Graphic file (type pdf
 )
@@ -1652,43 +1664,68 @@ Package pdftex.def Info: 02-Body/Images/Front-End_-_Arkitektur-savegame.pdf  us
 ed on input line 28.
 (pdftex.def)             Requested size: 435.52144pt x 274.08571pt.
 [16 <./02-Body/Images/Front-End_-_Arkitektur-savegame.pdf>])
-(./02-Body/Arkitektur/DatabaseArkitektur.tex
-<02-Body/Images/RoomDescriptionsDB.PNG, id=482, 613.0905pt x 227.6505pt>
+(./02-Body/Arkitektur/GameControllerArkitektur.tex
+
+pdfTeX warning: pdflatex.exe (file ./02-Body/Images/Arkitektur - State Logic.pd
+f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<02-Body/Images/Arkitektur - State Logic.pdf, id=330, 1208.83615pt x 1231.23991
+pt>
+File: 02-Body/Images/Arkitektur - State Logic.pdf Graphic file (type pdf)
+<use 02-Body/Images/Arkitektur - State Logic.pdf>
+Package pdftex.def Info: 02-Body/Images/Arkitektur - State Logic.pdf  used on i
+nput line 6.
+(pdftex.def)             Requested size: 435.52144pt x 443.5842pt.
+[17 <./02-Body/Images/Arkitektur - State Logic.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./02-Body/Images/Arkitektur - Combat State.p
+df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<02-Body/Images/Arkitektur - Combat State.pdf, id=351, 1178.84409pt x 1192.6958
+9pt>
+File: 02-Body/Images/Arkitektur - Combat State.pdf Graphic file (type pdf)
+<use 02-Body/Images/Arkitektur - Combat State.pdf>
+Package pdftex.def Info: 02-Body/Images/Arkitektur - Combat State.pdf  used on 
+input line 15.
+(pdftex.def)             Requested size: 435.52144pt x 440.6354pt.
+) [18] (./02-Body/Arkitektur/DatabaseArkitektur.tex [19 <./02-Body/Images/Arkit
+ektur - Combat State.pdf>]
+<02-Body/Images/RoomDescriptionsDB.PNG, id=370, 613.0905pt x 227.6505pt>
 File: 02-Body/Images/RoomDescriptionsDB.PNG Graphic file (type png)
 <use 02-Body/Images/RoomDescriptionsDB.PNG>
 Package pdftex.def Info: 02-Body/Images/RoomDescriptionsDB.PNG  used on input l
 ine 9.
 (pdftex.def)             Requested size: 435.52144pt x 161.71982pt.
-))
-(./02-Body/Design/Design-overordnet.tex [17 <./02-Body/Images/RoomDescriptionsD
-B.PNG>]
+
+
+LaTeX Warning: Reference `fig:RoomDescriptionsDB' on page 20 undefined on input
+ line 14.
+
+)) (./02-Body/Design/Design-overordnet.tex
 
 pdfTeX warning: pdflatex.exe (file ./02-Body/Images/Arkitektur-SDSaveGame.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<02-Body/Images/Arkitektur-SDSaveGame.pdf, id=490, 936.6192pt x 491.436pt>
+<02-Body/Images/Arkitektur-SDSaveGame.pdf, id=371, 936.6192pt x 491.436pt>
 File: 02-Body/Images/Arkitektur-SDSaveGame.pdf Graphic file (type pdf)
 <use 02-Body/Images/Arkitektur-SDSaveGame.pdf>
 Package pdftex.def Info: 02-Body/Images/Arkitektur-SDSaveGame.pdf  used on inpu
 t line 9.
 (pdftex.def)             Requested size: 435.52144pt x 228.51538pt.
-
+[20 <./02-Body/Images/RoomDescriptionsDB.PNG>]
 
 pdfTeX warning: pdflatex.exe (file ./02-Body/Images/Arkitektur-SDLoadGame.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<02-Body/Images/Arkitektur-SDLoadGame.pdf, id=491, 933.84883pt x 488.18384pt>
+<02-Body/Images/Arkitektur-SDLoadGame.pdf, id=378, 933.84883pt x 488.18384pt>
 File: 02-Body/Images/Arkitektur-SDLoadGame.pdf Graphic file (type pdf)
 <use 02-Body/Images/Arkitektur-SDLoadGame.pdf>
 Package pdftex.def Info: 02-Body/Images/Arkitektur-SDLoadGame.pdf  used on inpu
 t line 16.
 (pdftex.def)             Requested size: 435.52144pt x 227.67354pt.
-[18 <./02-Body/Images/Arkitektur-SDSaveGame.pdf>]
 (./02-Body/Design/Frontend-Design.tex
 
-LaTeX Warning: Reference `sec:unity-.net' on page 19 undefined on input line 4.
+LaTeX Warning: Reference `sec:unity-.net' on page 21 undefined on input line 4.
 
 
 
-LaTeX Warning: Reference `sec:unity-.net' on page 19 undefined on input line 4.
+LaTeX Warning: Reference `sec:unity-.net' on page 21 undefined on input line 4.
 
 
 
@@ -1696,45 +1733,144 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
+[21 <./02-Body/Images/Arkitektur-SDSaveGame.pdf> <./02-Body/Images/Arkitektur-S
+DLoadGame.pdf
+
+pdfTeX warning: pdflatex.exe (file ./02-Body/Images/Arkitektur-SDLoadGame.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `fig:Design-FE-mockup-room' on page 22 undefined on in
+put line 7.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--10
 
  []
 
-<02-Body/Images/RoomMockup.PNG, id=517, 945.5325pt x 530.98375pt>
+<02-Body/Images/RoomMockup.PNG, id=424, 945.5325pt x 530.98375pt>
 File: 02-Body/Images/RoomMockup.PNG Graphic file (type png)
 <use 02-Body/Images/RoomMockup.PNG>
 Package pdftex.def Info: 02-Body/Images/RoomMockup.PNG  used on input line 15.
 (pdftex.def)             Requested size: 435.52144pt x 244.57956pt.
-[19 <./02-Body/Images/Arkitektur-SDLoadGame.pdf>])
-(./02-Body/Design/GameEngine.tex
+[22]) (./02-Body/Design/GameEngine.tex
 
 pdfTeX warning: pdflatex.exe (file ./02-Body/Images/CoreClassDiagram.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<02-Body/Images/CoreClassDiagram.pdf, id=545, 598.15468pt x 846.0408pt>
+<02-Body/Images/CoreClassDiagram.pdf, id=429, 598.15468pt x 846.0408pt>
 File: 02-Body/Images/CoreClassDiagram.pdf Graphic file (type pdf)
 <use 02-Body/Images/CoreClassDiagram.pdf>
 Package pdftex.def Info: 02-Body/Images/CoreClassDiagram.pdf  used on input lin
 e 11.
 (pdftex.def)             Requested size: 435.52144pt x 429.57336pt.
-[20 <./02-Body/Images/roomMockup.png>] [21 <./02-Body/Images/CoreClassDiagram.p
-df>] [22]) (./02-Body/Design/DAL-Design.tex
+[23 <./02-Body/Images/roomMockup.png>] [24 <./02-Body/Images/CoreClassDiagram.p
+df>]
+
+LaTeX Warning: Reference `fig:CoreDiagram' on page 25 undefined on input line 4
+7.
+
+
+LaTeX Warning: Reference `fig:CoreDiagram' on page 25 undefined on input line 5
+8.
+
+[25]) (./02-Body/Design/BackendDesign.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+LaTeX Warning: Citation 'Bcrypt' on page 26 undefined on input line 40.
+
+[26]
+
+LaTeX Warning: Reference `fig:Design-Backend-Klasse-1-2' on page 27 undefined o
+n input line 50.
+
+<02-Body/Images/Backend_klasse_1_2.PNG, id=474, 483.30562pt x 410.2828pt>
+File: 02-Body/Images/Backend_klasse_1_2.PNG Graphic file (type png)
+<use 02-Body/Images/Backend_klasse_1_2.PNG>
+Package pdftex.def Info: 02-Body/Images/Backend_klasse_1_2.PNG  used on input l
+ine 55.
+(pdftex.def)             Requested size: 435.52144pt x 369.73315pt.
+
+LaTeX Warning: Reference `fig:Design-Backend-Sekvens-15-17-18' on page 27 undef
+ined on input line 60.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+[27 <./02-Body/Images/Backend_klasse_1_2.png>]
+<02-Body/Images/Backend_klasse_15_17_18.PNG, id=481, 660.21657pt x 296.60812pt>
+
+File: 02-Body/Images/Backend_klasse_15_17_18.PNG Graphic file (type png)
+<use 02-Body/Images/Backend_klasse_15_17_18.PNG>
+Package pdftex.def Info: 02-Body/Images/Backend_klasse_15_17_18.PNG  used on in
+put line 65.
+(pdftex.def)             Requested size: 435.52144pt x 195.66692pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+[28 <./02-Body/Images/Backend_klasse_15_17_18.png>])
+(./02-Body/Design/DAL-Design.tex
+
+LaTeX Warning: Reference `fig:DAL-Klasse-7-17-18' on page 29 undefined on input
+ line 2.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 2--6
 
  []
 
-<02-Body/Images/DAL-Database/DAL-DB-CD.PNG, id=586, 752.8125pt x 487.06969pt>
+<02-Body/Images/DAL-Database/DAL-DB-CD.PNG, id=488, 752.8125pt x 487.06969pt>
 File: 02-Body/Images/DAL-Database/DAL-DB-CD.PNG Graphic file (type png)
 <use 02-Body/Images/DAL-Database/DAL-DB-CD.PNG>
 Package pdftex.def Info: 02-Body/Images/DAL-Database/DAL-DB-CD.PNG  used on inp
 ut line 9.
 (pdftex.def)             Requested size: 435.52144pt x 281.78712pt.
 
+LaTeX Warning: Reference `fig:DAL-Sekvens-RumBeskrivelser' on page 29 undefined
+ on input line 15.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-<02-Body/Images/DAL-Database/RoomDescriptionSd.PNG, id=588, 602.25pt x 223.5853
+<02-Body/Images/DAL-Database/RoomDescriptionSd.PNG, id=489, 602.25pt x 223.5853
 1pt>
 File: 02-Body/Images/DAL-Database/RoomDescriptionSd.PNG Graphic file (type png)
 
@@ -1742,32 +1878,40 @@ File: 02-Body/Images/DAL-Database/RoomDescriptionSd.PNG Graphic file (type png)
 Package pdftex.def Info: 02-Body/Images/DAL-Database/RoomDescriptionSd.PNG  use
 d on input line 19.
 (pdftex.def)             Requested size: 435.52144pt x 161.69432pt.
-[23 <./02-Body/Images/DAL-Database/DAL-DB-CD.PNG>]
+[29 <./02-Body/Images/DAL-Database/DAL-DB-CD.PNG>]
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
+
+
+LaTeX Warning: Reference `fig:DAL-Sekvens-7' on page 30 undefined on input line
+ 44.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 40--45
 
  []
 
-<02-Body/Images/DAL-Database/SaveSd.PNG, id=598, 320.69812pt x 622.57594pt>
+<02-Body/Images/DAL-Database/SaveSd.PNG, id=496, 320.69812pt x 622.57594pt>
 File: 02-Body/Images/DAL-Database/SaveSd.PNG Graphic file (type png)
 <use 02-Body/Images/DAL-Database/SaveSd.PNG>
 Package pdftex.def Info: 02-Body/Images/DAL-Database/SaveSd.PNG  used on input 
 line 49.
 (pdftex.def)             Requested size: 304.86366pt x 591.85228pt.
-[24 <./02-Body/Images/DAL-Database/RoomDescriptionSd.PNG>]
+[30 <./02-Body/Images/DAL-Database/RoomDescriptionSd.PNG>]
 Overfull \vbox (9.65585pt too high) has occurred while \output is active []
 
 
-[25 <./02-Body/Images/DAL-Database/SaveSd.PNG>]
+[31 <./02-Body/Images/DAL-Database/SaveSd.PNG>]
 Underfull \hbox (badness 10000) in paragraph at lines 55--59
 
  []
 
-<02-Body/Images/DAL-Database/GetSavesSd.PNG, id=613, 680.5425pt x 294.34969pt>
+
+LaTeX Warning: Reference `fig:DAL-Sekvens-17' on page 32 undefined on input lin
+e 61.
+
+<02-Body/Images/DAL-Database/GetSavesSd.PNG, id=511, 680.5425pt x 294.34969pt>
 File: 02-Body/Images/DAL-Database/GetSavesSd.PNG Graphic file (type png)
 <use 02-Body/Images/DAL-Database/GetSavesSd.PNG>
 Package pdftex.def Info: 02-Body/Images/DAL-Database/GetSavesSd.PNG  used on in
@@ -1779,25 +1923,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--74
  []
 
 
+LaTeX Warning: Reference `fig:DAL-Sekvens-18' on page 32 undefined on input lin
+e 77.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 75--78
 
  []
 
-<02-Body/Images/DAL-Database/GetSavesByIdSd.PNG, id=615, 538.26094pt x 360.5971
+<02-Body/Images/DAL-Database/GetSavesByIdSd.PNG, id=512, 538.26094pt x 360.5971
 8pt>
 File: 02-Body/Images/DAL-Database/GetSavesByIdSd.PNG Graphic file (type png)
 <use 02-Body/Images/DAL-Database/GetSavesByIdSd.PNG>
 Package pdftex.def Info: 02-Body/Images/DAL-Database/GetSavesByIdSd.PNG  used o
 n input line 81.
 (pdftex.def)             Requested size: 435.52144pt x 291.77399pt.
-[26 <./02-Body/Images/DAL-Database/GetSavesSd.PNG>])
+[32 <./02-Body/Images/DAL-Database/GetSavesSd.PNG>])
 (./02-Body/Design/Database-Design.tex
 Underfull \hbox (badness 10000) in paragraph at lines 86--1
 
  []
 
 
-LaTeX Warning: Citation 'SQL server with docker' on page 27 undefined on input 
+LaTeX Warning: Citation 'SQL server with docker' on page 33 undefined on input 
 line 4.
 
 
@@ -1811,22 +1959,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-<02-Body/Images/ER-RoomDescription.PNG, id=624, 170.88844pt x 118.19156pt>
+
+LaTeX Warning: Reference `fig:ER-Roomdescription' on page 33 undefined on input
+ line 9.
+
+<02-Body/Images/ER-RoomDescription.PNG, id=519, 170.88844pt x 118.19156pt>
 File: 02-Body/Images/ER-RoomDescription.PNG Graphic file (type png)
 <use 02-Body/Images/ER-RoomDescription.PNG>
 Package pdftex.def Info: 02-Body/Images/ER-RoomDescription.PNG  used on input l
 ine 13.
 (pdftex.def)             Requested size: 174.2059pt x 120.49428pt.
-[27 <./02-Body/Images/DAL-Database/GetSavesByIdSd.PNG>]
-<02-Body/Images/ER-GameSave.PNG, id=632, 444.91219pt x 287.57437pt>
+[33 <./02-Body/Images/DAL-Database/GetSavesByIdSd.PNG>]
+
+LaTeX Warning: Reference `fig:ER-GameSave' on page 34 undefined on input line 1
+9.
+
+<02-Body/Images/ER-GameSave.PNG, id=526, 444.91219pt x 287.57437pt>
 File: 02-Body/Images/ER-GameSave.PNG Graphic file (type png)
 <use 02-Body/Images/ER-GameSave.PNG>
 Package pdftex.def Info: 02-Body/Images/ER-GameSave.PNG  used on input line 22.
 
 (pdftex.def)             Requested size: 435.52144pt x 281.50502pt.
- [28 <./02-Body/Images/ER-RoomDescription.png> <./02-Body/Images/ER-GameSave.pn
-g>]))
-(./02-Body/Implementering/Implementering.tex
+[34 <./02-Body/Images/ER-RoomDescription.png> <./02-Body/Images/ER-GameSave.png
+>]
+
+LaTeX Warning: Reference `Section: DB-Implementering' on page 35 undefined on i
+nput line 45.
+
+)) (./02-Body/Implementering/Implementering.tex
 (./02-Body/Implementering/FEImplementering.tex
 (c:/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -1842,7 +2002,7 @@ File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 10.
- [29]
+ [35]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
 5.
 
@@ -1851,47 +2011,148 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
-<02-Body/Images/room_final.PNG, id=654, 1445.4pt x 784.43062pt>
+
+
+LaTeX Warning: Reference `fig:Design-FE-impl-room' on page 36 undefined on inpu
+t line 36.
+
+<02-Body/Images/room_final.PNG, id=547, 1445.4pt x 784.43062pt>
 File: 02-Body/Images/room_final.PNG Graphic file (type png)
 <use 02-Body/Images/room_final.PNG>
 Package pdftex.def Info: 02-Body/Images/room_final.PNG  used on input line 42.
 (pdftex.def)             Requested size: 435.52144pt x 236.36037pt.
-)
-(./02-Body/Implementering/GameEngineImplementering.tex [30]
+) (./02-Body/Implementering/GameEngineImplementering.tex [36]
+
+LaTeX Warning: Reference `fig:CoreDiagram' on page 37 undefined on input line 4
+.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 20--24
 
  []
 
-[31 <./02-Body/Images/room_final.png>] [32])
+[37 <./02-Body/Images/room_final.png>] [38])
+(./02-Body/Implementering/BackendImplementering.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+LaTeX Warning: Reference `fig:Implementering-Backend-Code-GetSave' on page 39 u
+ndefined on input line 10.
+
+<02-Body/Images/Backend_Code_GetSave.PNG, id=584, 309.40594pt x 287.57437pt>
+File: 02-Body/Images/Backend_Code_GetSave.PNG Graphic file (type png)
+<use 02-Body/Images/Backend_Code_GetSave.PNG>
+Package pdftex.def Info: 02-Body/Images/Backend_Code_GetSave.PNG  used on input
+ line 14.
+(pdftex.def)             Requested size: 348.41847pt x 323.86264pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+LaTeX Warning: Reference `fig:Implementering-Backend-Code-Lgoin' on page 39 und
+efined on input line 27.
+
+<02-Body/Images/Backend_Code_Login.PNG, id=585, 483.30562pt x 201.75375pt>
+File: 02-Body/Images/Backend_Code_Login.PNG Graphic file (type png)
+<use 02-Body/Images/Backend_Code_Login.PNG>
+Package pdftex.def Info: 02-Body/Images/Backend_Code_Login.PNG  used on input l
+ine 31.
+(pdftex.def)             Requested size: 435.52144pt x 181.81374pt.
+[39 <./02-Body/Images/Backend_Code_GetSave.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+LaTeX Warning: Citation 'Bcrypt' on page 40 undefined on input line 39.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+LaTeX Warning: Reference `fig:Implementering-Backend-Klasse-BackEndController' 
+on page 40 undefined on input line 45.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+
+ []
+
+<02-Body/Images/Backend_klasse_BackEndController.PNG, id=592, 402.00188pt x 250
+.68657pt>
+File: 02-Body/Images/Backend_klasse_BackEndController.PNG Graphic file (type pn
+g)
+<use 02-Body/Images/Backend_klasse_BackEndController.PNG>
+Package pdftex.def Info: 02-Body/Images/Backend_klasse_BackEndController.PNG  u
+sed on input line 49.
+(pdftex.def)             Requested size: 435.52144pt x 271.58662pt.
+[40 <./02-Body/Images/Backend_Code_Login.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+[41 <./02-Body/Images/Backend_klasse_BackEndController.png>])
 (./02-Body/Implementering/DBImplementering.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-<02-Body/Images/DAL-Database/DbKeys.PNG, id=694, 389.95688pt x 404.26031pt>
+
+LaTeX Warning: Reference `fig:DbKeys' on page 42 undefined on input line 11.
+
+
+LaTeX Warning: Reference `fig:ER-Roomdescription' on page 42 undefined on input
+ line 11.
+
+
+LaTeX Warning: Reference `fig:ER-GameSave' on page 42 undefined on input line 1
+1.
+
+<02-Body/Images/DAL-Database/DbKeys.PNG, id=605, 389.95688pt x 404.26031pt>
 File: 02-Body/Images/DAL-Database/DbKeys.PNG Graphic file (type png)
 <use 02-Body/Images/DAL-Database/DbKeys.PNG>
 Package pdftex.def Info: 02-Body/Images/DAL-Database/DbKeys.PNG  used on input 
 line 15.
 (pdftex.def)             Requested size: 261.31552pt x 270.90851pt.
-<02-Body/Images/DAL-Database/DbRelations.PNG, id=698, 286.06876pt x 376.40625pt
+
+LaTeX Warning: Reference `fig:ER-Roomdescription' on page 42 undefined on input
+ line 20.
+
+
+LaTeX Warning: Reference `fig:ER-GameSave' on page 42 undefined on input line 2
+0.
+
+
+LaTeX Warning: Reference `fig:DbRelations' on page 42 undefined on input line 2
+1.
+
+<02-Body/Images/DAL-Database/DbRelations.PNG, id=606, 286.06876pt x 376.40625pt
 >
 File: 02-Body/Images/DAL-Database/DbRelations.PNG Graphic file (type png)
 <use 02-Body/Images/DAL-Database/DbRelations.PNG>
 Package pdftex.def Info: 02-Body/Images/DAL-Database/DbRelations.PNG  used on i
 nput line 25.
 (pdftex.def)             Requested size: 217.76071pt x 286.53119pt.
-[33 <./02-Body/Images/DAL-Database/DbKeys.PNG>]
-<02-Body/Images/DAL-Database/DbSeeding.PNG, id=707, 476.53032pt x 377.91188pt>
+[42 <./02-Body/Images/DAL-Database/DbKeys.PNG>]
+
+LaTeX Warning: Reference `fig:DbSeeding' on page 43 undefined on input line 30.
+
+
+<02-Body/Images/DAL-Database/DbSeeding.PNG, id=613, 476.53032pt x 377.91188pt>
 File: 02-Body/Images/DAL-Database/DbSeeding.PNG Graphic file (type png)
 <use 02-Body/Images/DAL-Database/DbSeeding.PNG>
 Package pdftex.def Info: 02-Body/Images/DAL-Database/DbSeeding.PNG  used on inp
 ut line 34.
 (pdftex.def)             Requested size: 370.19588pt x 293.59949pt.
-)) (./02-Body/Test/Test.tex
-[34 <./02-Body/Images/DAL-Database/DbRelations.PNG>]
-(./02-Body/Test/ModultestFrontend.tex [35 <./02-Body/Images/DAL-Database/DbSeed
-ing.PNG>]) (./02-Body/Test/GameEngineModulTest.tex
+)) (./02-Body/Test/Test.tex [43 <./02-Body/Images/DAL-Database/DbRelations.PNG>
+] (./02-Body/Test/ModultestFrontend.tex [44 <./02-Body/Images/DAL-Database/DbSe
+eding.PNG>]) (./02-Body/Test/GameEngineModulTest.tex
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 10.
@@ -1908,26 +2169,34 @@ Overfull \hbox (12.54109pt too wide) in alignment at lines 13--68
  [] [] [] [] 
  []
 
-[36]
-<02-body/Images/Test Results.png, id=733, 364.36125pt x 283.0575pt>
+[45]
+<02-body/Images/Test Results.png, id=640, 364.36125pt x 283.0575pt>
 File: 02-body/Images/Test Results.png Graphic file (type png)
 <use 02-body/Images/Test Results.png>
 Package pdftex.def Info: 02-body/Images/Test Results.png  used on input line 79
 .
 (pdftex.def)             Requested size: 145.74191pt x 113.22098pt.
- [37 <./02-Body/Images/Test Results.png>] [38])
+ [46 <./02-Body/Images/Test Results.png>])
 (./02-Body/Test/Database-modultest.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<02-Body/Images/DAL-Database/DB-Test.png, id=750, 210.7875pt x 200.24812pt>
+
+LaTeX Warning: Reference `fig:SaveGame-test' on page 47 undefined on input line
+ 8.
+
+<02-Body/Images/DAL-Database/DB-Test.png, id=651, 210.7875pt x 200.24812pt>
 File: 02-Body/Images/DAL-Database/DB-Test.png Graphic file (type png)
 <use 02-Body/Images/DAL-Database/DB-Test.png>
 Package pdftex.def Info: 02-Body/Images/DAL-Database/DB-Test.png  used on input
  line 14.
 (pdftex.def)             Requested size: 217.76071pt x 206.87814pt.
-<02-Body/Images/DAL-Database/DatastudieFørIndsættelse.png, id=752, 476.53032p
+
+LaTeX Warning: Reference `fig:datastudie-før' on page 47 undefined on input li
+ne 19.
+
+<02-Body/Images/DAL-Database/DatastudieFørIndsættelse.png, id=652, 476.53032p
 t x 132.495pt>
 File: 02-Body/Images/DAL-Database/DatastudieFørIndsættelse.png Graphic file (
 type png)
@@ -1935,7 +2204,16 @@ type png)
 Package pdftex.def Info: 02-Body/Images/DAL-Database/DatastudieFørIndsættelse
 .png  used on input line 24.
 (pdftex.def)             Requested size: 435.52144pt x 121.09828pt.
-<02-Body/Images/DAL-Database/DataStudieEfterIndsættelse.png, id=755, 420.06938
+[47 <./02-Body/Images/DAL-Database/DB-Test.PNG>]
+
+LaTeX Warning: Reference `fig:SaveGame-test' on page 48 undefined on input line
+ 29.
+
+
+LaTeX Warning: Reference `fig:datastudie-efter' on page 48 undefined on input l
+ine 30.
+
+<02-Body/Images/DAL-Database/DataStudieEfterIndsættelse.png, id=659, 420.06938
 pt x 115.93312pt>
 File: 02-Body/Images/DAL-Database/DataStudieEfterIndsættelse.png Graphic file 
 (type png)
@@ -1943,15 +2221,23 @@ File: 02-Body/Images/DAL-Database/DataStudieEfterIndsættelse.png Graphic file
 Package pdftex.def Info: 02-Body/Images/DAL-Database/DataStudieEfterIndsættels
 e.png  used on input line 34.
 (pdftex.def)             Requested size: 435.52144pt x 120.19788pt.
-[39 <./02-Body/Images/DAL-Database/DB-Test.PNG> <./02-Body/Images/DAL-Database/
-DatastudieFørIndsættelse.png>]
-<02-Body/Images/DAL-Database/Lister.png, id=765, 95.35625pt x 98.3675pt>
+
+LaTeX Warning: Reference `fig:Datastudie-ekstra' on page 48 undefined on input 
+line 39.
+
+<02-Body/Images/DAL-Database/Lister.png, id=660, 95.35625pt x 98.3675pt>
 File: 02-Body/Images/DAL-Database/Lister.png Graphic file (type png)
 <use 02-Body/Images/DAL-Database/Lister.png>
 Package pdftex.def Info: 02-Body/Images/DAL-Database/Lister.png  used on input 
 line 43.
 (pdftex.def)             Requested size: 174.2059pt x 179.73003pt.
 
+LaTeX Warning: Reference `table:Modulttest-DB-Tabel' on page 48 undefined on in
+put line 48.
+
+[48 <./02-Body/Images/DAL-Database/DatastudieFørIndsættelse.png> <./02-Body/I
+mages/DAL-Database/DataStudieEfterIndsættelse.png> <./02-Body/Images/DAL-Datab
+ase/Lister.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\OT1/cmr/bx/n/10 Vurdering
  []
@@ -2036,8 +2322,199 @@ Overfull \hbox (1.47754pt too wide) in paragraph at lines 54--62
 [][] 
  []
 
-[40 <./02-Body/Images/DAL-Database/DataStudieEfterIndsættelse.png> <./02-Body/
-Images/DAL-Database/Lister.png>]) (./02-Body/Test/TidligIntegration.tex
+) (./02-Body/Test/BackendModultest.tex
+
+LaTeX Warning: Reference `ssec: Modultest database' on page 49 undefined on inp
+ut line 3.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+LaTeX Warning: Citation 'Swagger' on page 49 undefined on input line 5.
+
+
+LaTeX Warning: Reference `fig:Modultest-Backend-swagger' on page 49 undefined o
+n input line 5.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+<02-Body/Images/Backend_swagger.PNG, id=671, 483.30562pt x 253.69781pt>
+File: 02-Body/Images/Backend_swagger.PNG Graphic file (type png)
+<use 02-Body/Images/Backend_swagger.PNG>
+Package pdftex.def Info: 02-Body/Images/Backend_swagger.PNG  used on input line
+ 9.
+(pdftex.def)             Requested size: 435.52144pt x 228.624pt.
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+LaTeX Warning: Reference `table: succes' on page 50 undefined on input line 16.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]\OT1/cmr/bx/n/10 Vurdering
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]\OT1/cmr/m/n/10 PostSave(SaveDTO
+ []
+
+
+Underfull \hbox (badness 4193) in paragraph at lines 24--24
+[]\OT1/cmr/m/n/10 Der bliver sendt et
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 24--24
+\OT1/cmr/m/n/10 r-rekte v^^Zrdier bliver
+ []
+
+
+Underfull \hbox (badness 3199) in paragraph at lines 25--25
+[]\OT1/cmr/m/n/10 Register(UserDTO re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\OT1/cmr/m/n/10 oplysninger omkring
+ []
+
+
+Underfull \hbox (badness 4467) in paragraph at lines 25--25
+[]\OT1/cmr/m/n/10 Brugeren bliver reg-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\OT1/cmr/m/n/10 blandt de an-dre
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\OT1/cmr/m/n/10 der re-turneres en
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]\OT1/cmr/m/n/10 Login(UserDTO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]\OT1/cmr/m/n/10 Der tjekkes om
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\OT1/cmr/m/n/10 oplysningerne passer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\OT1/cmr/m/n/10 med en reg-istr-eret
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\OT1/cmr/m/n/10 bruger, og passer
+ []
+
+
+Underfull \hbox (badness 5431) in paragraph at lines 26--26
+\OT1/cmr/m/n/10 det logges der ind.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\OT1/cmr/m/n/10 Der re-turneres en
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 28--28
+[]\OT1/cmr/m/n/10 Der hentes en liste
+ []
+
+
+Underfull \hbox (badness 4229) in paragraph at lines 28--28
+\OT1/cmr/m/n/10 af game states, for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\OT1/cmr/m/n/10 for den speci-fikke
+ []
+
+
+Overfull \hbox (5.50069pt too wide) in paragraph at lines 29--29
+[]\OT1/cmr/m/n/10 GetRoomDescription(int
+ []
+
+
+Overfull \hbox (1.47754pt too wide) in paragraph at lines 22--31
+[][] 
+ []
+
+[50 <./02-Body/Images/Backend_swagger.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]\OT1/cmr/bx/n/10 Vurdering
+ []
+
+
+Underfull \hbox (badness 3199) in paragraph at lines 40--40
+[]\OT1/cmr/m/n/10 Register(UserDTO re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]\OT1/cmr/m/n/10 Brugernavnet er
+ []
+
+
+Underfull \hbox (badness 5519) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 allerede i brug, og
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 40--40
+\OT1/cmr/m/n/10 "Name is al-ready in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]\OT1/cmr/m/n/10 Login(UserDTO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]\OT1/cmr/m/n/10 Oplysningerne stem-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]\OT1/cmr/m/n/10 PostSave(SaveDTO
+ []
+
+
+Overfull \hbox (1.47754pt too wide) in paragraph at lines 38--47
+[][] 
+ []
+
+[51] [52]) (./02-Body/Test/TidligIntegration.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
@@ -2052,7 +2529,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 
  []
 
-) (./02-Body/Test/FuldeIntegrationsTest.tex [41]
+) (./02-Body/Test/FuldeIntegrationsTest.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
@@ -2072,12 +2549,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-) (./02-Body/Test/AccepttestSpecifikation.tex
+) (./02-Body/Test/AccepttestSpecifikation.tex [53]
 Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
 
-[42]
+
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
@@ -2092,7 +2569,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
  []
 
-
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
  []
@@ -2147,7 +2624,7 @@ Underfull \hbox (badness 7649) in paragraph at lines 112--112
 \OT1/cmr/m/n/10 puz-zles man har
  []
 
-[43]
+[55]
 Underfull \hbox (badness 5548) in paragraph at lines 127--127
 []\OT1/cmr/m/n/10 Spillets kort skal
  []
@@ -2287,7 +2764,7 @@ Underfull \hbox (badness 6825) in paragraph at lines 143--143
 \OT1/cmr/m/n/10 og hvilket skjold
  []
 
-[44]
+[56]
 Underfull \hbox (badness 2644) in paragraph at lines 156--156
 []\OT1/cmr/m/n/10 N^^War spilleren/f-jen-
  []
@@ -2432,7 +2909,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--169
 
  []
 
-[45]
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 181--181
 []\OT1/cmr/m/n/10 Spillet m^^Wa ikke
  []
@@ -2462,10 +2939,18 @@ Underfull \hbox (badness 1308) in paragraph at lines 181--182
 \OT1/cmr/m/n/10 ikke blevet im-ple-
  []
 
-[46]) (./02-Body/Test/Discussion.tex
+[58]) (./02-Body/Test/Discussion.tex
+
+LaTeX Warning: Reference `sec:kravspec' on page 59 undefined on input line 4.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 2--6
 
  []
+
+
+LaTeX Warning: Reference `tab:testEngine' on page 59 undefined on input line 8.
+
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--14
@@ -2482,6 +2967,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--24
 
  []
 
+
+LaTeX Warning: Reference `sec:kravspec' on page 59 undefined on input line 26.
+
 )) (./02-Body/Docs/Fremtidig-Arbejde.tex
 Underfull \hbox (badness 10000) in paragraph at lines 25--1
 
@@ -2492,7 +2980,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-[47]
+[59]
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
@@ -2512,15 +3000,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
-[48])) (./03-EndMatter/EndMatter.tex (./03-EndMatter/References.tex)
+[60])) (./03-EndMatter/EndMatter.tex (./03-EndMatter/References.tex)
 (./03-EndMatter/BilagsListe.tex)) 
 AED: lastpage setting LastPage
-[49] (./Project.aux)
+[61] (./Project.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package rerunfilecheck Warning: File `Project.out' has changed.
@@ -2528,8 +3016,8 @@ Package rerunfilecheck Warning: File `Project.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `Project.out':
-(rerunfilecheck)             Before: C4C53224398447A8AEB14BA971AF1F44;8709
-(rerunfilecheck)             After:  BFB241A97C46761CCB7A1A636F9F675F;8817.
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  82F69107CE097AA34A561818D86444FD;11790.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                Project
@@ -2540,13 +3028,13 @@ Package logreq Info: Writing requests to 'Project.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41685 strings out of 478300
- 847305 string characters out of 5849123
- 1619942 words of memory out of 5000000
- 58866 multiletter control sequences out of 15000+600000
+ 41743 strings out of 478300
+ 850348 string characters out of 5849123
+ 1613499 words of memory out of 5000000
+ 58871 multiletter control sequences out of 15000+600000
  480139 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,12n,100p,876b,1882s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,100p,1139b,1882s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-di
@@ -2561,10 +3049,10 @@ dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2022/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-
 super/sfrm1000.pfb>
-Output written on Project.pdf (49 pages, 2156026 bytes).
+Output written on Project.pdf (61 pages, 2549377 bytes).
 PDF statistics:
- 934 PDF objects out of 1000 (max. 8388607)
- 760 compressed objects within 8 object streams
- 186 named destinations out of 1000 (max. 500000)
- 729 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 859 PDF objects out of 1000 (max. 8388607)
+ 657 compressed objects within 7 object streams
+ 225 named destinations out of 1000 (max. 500000)
+ 289 words of extra memory for PDF output out of 10000 (max. 10000000)
 

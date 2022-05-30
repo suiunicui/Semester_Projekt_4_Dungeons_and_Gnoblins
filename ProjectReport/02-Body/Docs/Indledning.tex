@@ -1,63 +1,16 @@
 \newpage
 
-\section{Metode og Proces}
-I nedstående afsnit fremlægges metoder og processer brugt til udviklingen af
-Dungeons and Gnoblins spillet kort, for at se mere om metode og proces henvises der til den vedhæftede process rapport \textbf{INDSÆT REFERENCE HER}.
+\section{Indledning}
+I 1980 udkom det første Text-based adventure game ”Zork” fra virksomheden Infocom (reference). Spillet blev en kæmpe succes, der stod for 20\% af virksomhedens salg i 1984, og var det mest solgte spil i 1982 (reference). Dette gav anledning til at lave en efterfølger på det populære spil, som udkom i det sene 80’ere. Her var spillet blevet udvidet med flere features.
+Fra moderene forbrugeres synspunkt har Zork spillene nogle problemer. Blandt andet den manglende evne til at lave ”save games” som kan gemmes i cloud. Dette ville i dag gøre det muligt at kunne tilgå et specifik spil fra en anden enhed, uden at man skal flytte filer. Der var desuden ingen authentication, hvilket betyder at enhver der havde adgang til den pågældende PC, ville være i stand til at fortsætte eller slette gemte spil. 
+Dette projekt vil forsøge at genopfriske den text-based adventure genre, ved at lave et nyt spil. Der vil blive taget inspiration fra Zork serien, ved at grundbasen for spillet, vil forblive nogenlunde det samme. Dog har projektet til hensigt at forsøge at tilføje nogle moderne aspekter til spillet - Heriblandt en opdaterende GUI der viser et map, en backend server til at save games og for authentication.
 
-\subsubsection{Projektforløb og møder}
-Projektets endelige mål har været implementeringen af et text-based adventure game.
-Hertil har gruppen gjort brug af agile develepment processen til at imødekomme dette mål.
 
-Først har gruppen specifiseret Kravspecifikationerne for spillet, med ønsker om
-hvilke features spillet har skulle inkludere.
+\subsubsection{Problemformulering}
+Text based RPG er som sagt en spilgenre som var yderst populær i 80’erne. Målet med dette projekt er at genoplive spil genren Text based RPG, ved at udvikle et spil som kombinerer den klassiske spilgenre med ny teknologi. Problemet med tidligere Text based RPG spil, er at der har været begrænset mobilitet i forhold til at gemme og hente spillet på forskellige enheder. I forbindelse med denne problemstilling kan det være svært for brugeren at skabe sig et overblik over sine fremskridt i spillet efter en potentiel pause herfra. Hvad angår sikkerhed er det heller ikke noget der traditionelt har været fokus på i forbindelse med genren. På baggrund af disse udfordringer ved Text based RPG spil, vil dette projekt undersøge følgende problemstilling:
 
-I løbet af projektforløbet blev der afholdt to faste ugentlige møder. Et internt gruppemøde og et vejledemøde. Til hvert møde blev der gennemgået hvad der var blev arbejdet med, hvilke udfordringer der forekom samt hvad der fremadrettet skulle arbejdes med for hver af gruppens medlemmer. Dette gjorde vi i form af SCRUM for at give et bedre overblik for projektets fremgang og dermed vurderer om gruppen var bagud eller foran ift. Gruppens tidsplan.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=.5]{02-Body/Images/Agile.png}
-  \caption{Viser et billed af agile modellen som består af mangle iterationer
-           af design, develop, test, og deploy. Dette minder om continuous integration
-           og har hindret mange problemmer for udviklingsforløbet}
-  \label{fig:Agile}
-\end{figure}
-
-SCRUM og AGILE bringer klarhed til medlemmerne om deres roller og opgaver over en 
-kommende tidperiode med en backlog over opgaver, som skal færdiggøres over et sprint (1 uge).
-Ugentlige opdateringer og møder omkring potentielle problemmer udviklingsforløbet betyder
-at gruppen har kunne tage hånd om evt. problemmer tidligt i forløbet og derved løse dem
-før de har udviklet sig til større problemmer.
-Til styring og implementering af souce code er der i gruppen blevet benyttet git som et versions styrings system.
-
-\subsection{Modellering}
-Projektet benytter UML til at beskrive og modellere software-- arkitektur
-og design, hvilket gør det nemt at simplificere og visualisere strukturen på software
-løsningen. 
-
-Selve arkitekturen er vist med C4 modellen som giver et lageret indblik i både
-akitekturen på et højt niveau, men med evnen til at give en detaljeret beskrivelse
-af systemmets komponenter og deres kommunikation med hinanden.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.8]{02-Body/Images/C4TopLvlDB.PNG}
-  \caption{Et eksempel på en C4 model, og det overblik et sådan diagram kan give over et system.}
-  \label{fig:c4}
-\end{figure}
-
-STM og SD diagrammer er brugt til at give programmets udførsel struktur, og fungerer,
-som en hjælp til at visualisere programmets forskellige states og flow of execution.
-Det giver et nemt overblik over hvordan funktionskald mellem forskellige komponenter
-har skal fungere således, at der ikke opstår misforsåelse grupperne imellem. 
-
-Generelt er arkitekturen opbygget som "pseudo" diagrammer. Dvs. de ligner ikke fuldstændigt det endelige design, men har til formål at vise den overordnede tankegang i systemet og samtidig virke som et udviklingsværktøj til at videreudvikle systemet. Da der i gruppen er blevet arbejdet iterativt, er der forskelle mellem diagrammer for arkitektur og design,da der er blevet tilføjet flere moduler og funktioner undervejs. Den overordnede tanke i projektet er der dog ikke blevet ændret på.
-
-\subsubsection{Iterativ Udviklingsforløb}
-
-AGILE og continuous integration fungerer på en naturlig iterativ måde, der tillader 
-ændringer til måde designet og implementeringen undervejs i udviklingsforløbet.
-Under hvert SCRUM møde er der taget stilling til om, der skulle laves ændringer i 
-gruppens tilgang til projektet, altså om en implementering skulle ændres. \\
+Er det muligt at genoplive den klassiske spilgenre Text-based RPG, igennem tilføjelse af moderne teknologier såsom cloudsaving, således at genren bliver attraktiv for den nye generation af spillere samtidigt med at den klassiske spiloplevelse fastholdes?
+\\
 
 
 
