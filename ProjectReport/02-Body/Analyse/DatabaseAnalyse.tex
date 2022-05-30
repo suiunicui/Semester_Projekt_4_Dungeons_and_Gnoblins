@@ -2,17 +2,19 @@
 }
 I dette afsnit diskuteres mulighederne for oprettelsen af en database. Heri vil der diskuteres fordele og ulemper ved anvendelsen af henholdsvis SQL eller No-SQL. Selve valget for databasen vil blive taget i design fasen.
 
+
 \subsubsection{SQL}
 Den første mulighed for systemets database er at anvende en SQL baseret database. Denne form for database
 er relational, da den har en samling af data med forudbestemte forhold derimellem. Genstande
 organiseres I tabeller som indeholder information om objektet. Yderligere er SQL kendt og vel
 dokumenteret, som resulterer i at denne type database har et stort fællesskab bag den, med mulighed for online støtte til arbejdet med den. Ydermere fungerer SQL også med ACID-principperne.
-
+\cite{Yalantis} \cite{IBM} 
 \subsubsection{No-SQL}
 Et andet alternativ ville være en database baseret på No-SQL. Denne har, modsat SQL, fleksible
 datamodeller, som gør det nemmere at lave ændringer i databasen efterhånden som kravene til
 databasen ændres. Yderligere har No-SQL også horizontal scaling, som betyder at hvis der rammes
 den nuværende servers kapacitet, så har man muligheden for at tilføje mindre ekstra servers, hvor at man ville skulle migrere til en større server i SQL. Hernæst er NoSQL data ofte opsat efter queries. Sådan at data der skal hentes sammen,
-ofte er opbevaret sammen. Dette resulterer i hurtigere queries.
+ofte er opbevaret sammen. Dette resulterer i hurtigere queries.\\
+\cite{MongoDB.com}
 
 \noindent Yderligere forklaring vedr. de teknologiske undersøgelser for databasen kan findes i teknisk bilag Sektion 7.2
