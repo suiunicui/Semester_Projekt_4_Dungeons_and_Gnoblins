@@ -4,6 +4,8 @@ Den lokale hosting medførte at vi kunne holde øje med databasens udformningen,
 
 \noindent For at teste DAL funktioner og dens forbindelse til databasen, oprettes først et DAL objekt med en context som indeholder en korrekt connectionstring.
 
+\noindent Til test hvor der skal læses fra databasen, kaldes den passende DAL funktion, hvorefter den hentede information udskrives på konsolen. Korrektheden af det fundne tjekkes med data studie.
+
 \noindent Til test hvor der skal indsættes data i databasen oprettes der objekter af den korrekte type hvorefter DAL funktioner til indsættelse kaldes. Korrektheden af de indsatte data kan herefter tjekkes med datastudie.
 Et eksempel på dette kan ses på \autoref{fig:SaveGame-test} herunder.
 Her oprettes et GameDTO objekt, gamesave.\\
@@ -45,20 +47,7 @@ Det noteres at SaveName og de andre attributter i \autoref{fig:datastudie-efter}
 \label{fig:Datastudie-ekstra}
 \end{figure}
 
-\noindent I \autoref{table:Modulttest-DB-Tabel} herunder ses en tabel over udførte test, forventede resultater, den faktiske observering og vurderingen af observeringen.
-Alle test er udført og vi observerer det forventede resultat. Vi vurderer derfor alle test som OK.
-
-\begin{table}[H]
-\caption{Tabel over modulttest af DAL forbindelse til databsen. Alle test observeringer stemmeroverens med forventningerne og markeres derfor OK }
-\label{table:Modulttest-DB-Tabel}
-\begin{tabular}{|p{0.75cm}|p{3.6cm}|p{3.5cm}|p{3.5cm}|p{1.9cm}|} \hline
-\multicolumn{5}{|c|}{\textbf{DAL-Database Godkendelses Tabel}} \\ \hline
- \textbf{Test} & \textbf{Funktion} & \textbf{Forventet resultat} & \textbf{Observering} & \textbf{Vurdering} \textbf{(OK/Fail)}\\\hline
- 1 & GetRoomDescription(id) & Her forventes det at funktionen henter beskrivelsen fra den valgte rumId. & Funktionen henterbeskrivelsen korrekt og vi kan udskrive denne på konsolen. & OK \\ \hline
- 2 & GetAllSaves & Det forventes at alle spillets saves, med tilhørende info, hentes fra databasen & Alle saves hentes fra databasen og information om disse kan udskrives på konsolen. & OK \\ \hline
- 3 & GetSaveById(id) & Det forventes at der hentes alle oplysninger om et enkelt save fra databasen med tilsvarende id, som den medsendte parameter & Det korrekte save samt tilhørende info hentes og kan udskrive til konsolen & OK \\ \hline
- 4 & SaveGame(Game) & Det forventes at det valgte save med samme id som det nye, overskrives, og at tilhørende info opdateres & Det observeres at det gamle save med samme id, nu er ændret og har korrekte nye værdier & OK \\ \hline
-\end{tabular}
-\end{table}
+I ovenstående sekvens ses det at data bliver indsat korrekt i databasen og funktionen er altså godtkendt.
+I det tekniske bilag \textbf{AFSNIT REF HER} findes en tabel over godkendelse af DAL-Db forbindelsen.\\
 
 Den ovenstående modultest er generelt godkendet da alle funktioner opfører sig som forventet, i og med at der hentes og gemmes korrekt i databasen. Med alle funktioner testet og godkendt er DAL-database forbindelsen klar til at blive integreret med resten af systemet.
