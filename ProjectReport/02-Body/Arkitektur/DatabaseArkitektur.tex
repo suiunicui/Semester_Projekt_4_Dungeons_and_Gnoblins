@@ -1,4 +1,5 @@
 \subsection{Database Arkitektur}
+\label{ssec: databaseArkitektur}
 Systemets database vil stå for at opbevare data for brugerne, dette vil være i form af data indeholdt i et gemt spil.\\
 I oprettelsen af systemets database skal der tages hånd om, hvordan kommunikationen skal foregå imellem systemets segmenter, samt databasens funktionalitet. Her er der blevet besluttet at der anvendes en DAL, der fungerer ved at hver gang databasen skal kontaktes, så foregår det igennem denne. Yderligere vil denne DAL også simplificere kommunikationen mellem databasen og Back-end'en. 
 
