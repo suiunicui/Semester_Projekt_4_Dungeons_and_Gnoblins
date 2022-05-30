@@ -1,12 +1,10 @@
 \subsection{Backend Design}
 \label{ssec: Backend Design}
-Design overvejelser  angående systemets backend Web Api vil her blive gennemgået. Først præsenteres hvilke routes Api'et stiller til rådighed. Herefter gennemgåes hvordan Api'et håndtere authentication/authorization, samt hvordan passwords vil blive gemt. Hertil vil en BackEndController klasse, som skal bruges på client siden blive redegjort for. Tilslut præsenteres resultatet applikations modellen nemlig klasse digrammer for de to controllers udførelse af User Stories.\\ For ydderligere detlajer omkring designet af backend'ens Web Api henvises til bilag \textbf{Mangler ref til bilag bed design}
-
-\noindent I forbindelse med udviklingen af Backendens Web Api er der lavet en tekniskanalyse som kan findes i afsnit (\textbf{ref til tekanalyse}), konklusionen her på blev at anvende frameworket ASP.Net Core.\\
+Design overvejelser  angående systemets backend Web Api vil her blive gennemgået. Først præsenteres hvilke routes Api'et stiller til rådighed, hvordan authentication/authorization håndteres, samt hvordan passwords vil blive gemt. Hertil vil en BackEndController klasse, som skal bruges på client siden blive redegjort for. Tilslut præsenteres resultatet af afapplikationsmodellerne. For ydderligere detlajer omkring designet af backend'ens Web Api henvises til bilag \textbf{Teknisk bilag afsnit 10.4}
 
 
 \subsubsection{Routes}
-Applikationens nødvendige routes kan inddeles i to under grupper ”Save” og "User". En oversigt over de forskellige routes med en tilhørrende beskrivelse kan ses nedenfor.\\
+En oversigt over Applikationens forskellige routes med en tilhørende beskrivelse kan ses nedenfor.\\
 
 \textbf{Save:}\\
 \begin{itemize}
@@ -44,7 +42,7 @@ Da en brugers password er følsom data, krypteres dette i backend'en igennem has
 Til brug af clienten for at tilgå backenden, skal der bruges en BackEndController klasse, dennes ansvar vil være at udføre HTTP request/responses, og vil indeholde en funktion for hvert endpoint. Klassen vil gøre brug af en HttpClient som er en klasse .Net stiller til rådighed til at håndtering af HTTP request/responses.
 
 
-\subsection{Applikations modeller}
+\subsection{Applikationsmodeller}
 Der udarbejdes appilationsmodeller for de to controller klassers håndtering af User stories, de frembragte klasse diagrammer kan ses nedenfor.
 
 Usercontrolleren har til opgave at gøre det muligt for en bruger at registrere sig og logge ind. Et klasse diagram som viser de nødvendige funktioner for udførelsen af User story 1 og 2 kan ses på \autoref{fig:Design-Backend-Klasse-1-2}

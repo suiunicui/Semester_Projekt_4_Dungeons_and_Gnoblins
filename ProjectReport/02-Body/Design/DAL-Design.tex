@@ -37,42 +37,7 @@ Det drejer sig om:
 \item User story 18 – Load game \\
 \end{itemize}
 
-Den første funktion SaveGame benyttes til at udføre user story 15.
-Her skal der gemmes et spil.
-Da vi har et krav om kun at holde 5 gemte spil pr. bruger, vælger vi at oprette 5 ”tomme” saves, når vi opretter brugeren.  
-Når brugeren så ønsker at gemme et spil, skal vi ikke tilføje et nyt, men istedet overskrive et valgt gammelt save.
-Dette kan også ses på sekvensdiagrammet på figur \autoref{fig:DAL-Sekvens-7}\\
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = 0.7\textwidth]{02-Body/Images/DAL-Database/SaveSd.PNG}
-\caption{Sekvensdiagram for user story 15 save game som beskriver queries til databasen for at gemme et spil}
-\label{fig:DAL-Sekvens-7}
-\end{figure}
-
-
-Navn: SaveGame\\
-Parametre: SaveDTO\\
-Returtype: Task\l ActionResult\l SaveDTO\g\g \\
-Beskrivelse: Da der i vores frontend sørges for at en bruger blot kan have 5 saves, starter vi med at finde det save vi gerne vil overskrive. Det gamle save, samt tilhørende lister slettes, hvorefter det nye save gemmes og eventuelle nye lister til fx. items gemmes.\\
-
-Den anden funktion GetAllSaves benyttes til at udføre user story 8 og 17.
-Her skal der loades en liste af gemte spil, når brugeren ønsker at se sine gemte spil. Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-17} .
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/GetSavesSd.PNG}
-\caption{Sekvensdiagram for user story 8 og 17 GetAllSaves som beskriver queries til databasen for at hente alle saves}
-\label{fig:DAL-Sekvens-17}
-\end{figure}
-
-Navn: GetAllSaves\\
-Parametre: ingen\\
-Returtype: Task\l ActionResult\l List\l Save\g\g\g \\
-Beskrivelse: Her hentes all gemte saves i spillet.\\
-
-Den tredje funktion GetById benyttes til at udfører user story 18.
+Funktionen GetById benyttes til at udfører user story 18.
 Her skal der loades et gemt spil, som brugeren nu ønsker at spille. 
 Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-18}.\\
 
@@ -83,7 +48,10 @@ Dette kan også ses på sekvensdiagrammet på \autoref{fig:DAL-Sekvens-18}.\\
 \label{fig:DAL-Sekvens-18}
 \end{figure}
 
+Funktionsbeskrivelse:\\
 Navn: GetSaveById \\
 Parametre: int saveID\\
 Returtype: Task\l ActionResult\l SaveDTO\g\g\\
 Beskrivelse: Denne funktion finder det save med det medsendte ID, samt tilhørende lister, indsætter værdier i et SaveDTO objekt, hvorefter det returneres.\\
+
+Funktionsbeskrivelser og sekvensdiagrammer for de 2 andre user story funktioner kan findes \textbf{REF TIL TEKNISK BILAG}
