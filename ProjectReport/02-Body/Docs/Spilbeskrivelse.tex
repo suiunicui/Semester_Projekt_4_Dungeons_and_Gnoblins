@@ -2,10 +2,10 @@
 
 \section{Spilbeskrivelse}
 
-Spillet designes som et tekst-baseret spil, hvilket er en spilgenre, hvor brugeren interagerer med spillet igennem tekstbeskrivelser. Spillet består overordnet af fire dele med hver deres ansvar; en grafisk brugergrænseflade, en database, en back-end til netværkskommunikation, samt selve spil logikken. Brugergrænsefladen gør det muligt for brugeren at integrere med spillet. Den vil bestå af en række forskellige vinduer med hver sit formål (login screen, gameplay screen og settings screen), der hovedsageligt vil indeholde knapper og beskrivende tekst. Databasens ansvar er at gemme de enkelte spil. Databasen er en relationel database som sammenholder de enkelte brugeres profiler (Username og password) med informationer omkring deres fremskridt i spillet, såsom placering, items og stats. Det skal være muligt for en bruger at hente sine gemte spil ned på flere forskellige enheder. Til dette skal der bruges en netværksforbindelse til databasen.   
+Der udvikles et tekst-basseret spil kaldet "Dungeons and Gnoblins". Spillet består af fire dele en grafisk brugergrænseflade til interaktioner, en database til at gemme profiler og spil, en back-end til netværkskommunikation og selve spil logikken.
 
 \subsection{Login-screen}
-Det første brugeren bliver mødt af er en login-skærm. Her skal brugeren enten indtaste sine login-oplysninger eller oprette sig en profil i systemet. Systemet har en database hvor alle profiler er lagret. Herunder ses en illustration af spillets login-screen. 
+Det første brugeren bliver mødt af er en login-skærm. Her skal brugeren enten logge ind eller opretter en profil.  Herunder ses en illustration af spillets login-screen. 
 
 \begin{figure}[H]
 \centering
@@ -15,10 +15,8 @@ Det første brugeren bliver mødt af er en login-skærm. Her skal brugeren enten
 \end{figure}
 
 \subsection{Core gameplay layout}
-PC kommer ind i et rum (se \autoref{fig:Core-Gameplay-Layout-udkast}). Brugeren bliver præsenteret med en beskrivelse af rummet, en liste af elementer i rummet, og en række muligheder for at interagere med rummet (interaktionen foregår ved at trykke på knapperne markeret “Button” i \autoref{fig:Core-Gameplay-Layout-udkast}). Når brugeren er færdig med at interagere med rummet, forlader de det ved at vælge en retning (“go north/south/east/west”). 
-Dette fører dem ind i et nyt rum, mappet opdateres og loopet starter forfra.
-Bevægelsen i spillet kan gøres i de forklarede fire retninger. Disse retninger indikerer for spilleren hvilke rum de kan bevæge sig ind i relativt til det rum de er i, der kunne f.eks. være rum, som kun har en vej ind og en vej ud, så kan man ikke gå andre veje end vejen man kom ind. North/south/east og west retningerne er baseret på et kompas, så derfor ville North resultere i at bevæge spillerens karakter opad, South nedad osv.
-Rum på mappet loades efterhånden som man besøger dem.
+På \autoref{fig:Core-Gameplay-Layout-udkast} er vist en illustration af hvad brugeren møder ved indtrædelse i et rum. Til venstre ses en beskrivelse af rummet samt en liste af ting som er i rummet. Til højre ses et map af spillet, nedenfor dette er en række knapper som brugeren kan bruge til at interegere med spillet eksempelvis navigering eller opsamling af ting.
+
 
 \begin{figure}[H]
 \centering
@@ -27,15 +25,7 @@ Rum på mappet loades efterhånden som man besøger dem.
 \label{fig:Core-Gameplay-Layout-udkast}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width = 0.5\textwidth]{02-Body/Images/Map-closeup.png}
-\caption{Closeup af et udkast til et start map, hvor man med prikken kan se spillerens lokation.}
-\label{fig:Map-Layout-udkast}
-\end{figure}
-
-Et rum kan indeholde fjender, som skal bekæmpes før man kan tilgå resten af rummet. Kamp foregår ved at spillet “slår en terning“ (RNG) for både PC og fjenden og lægger deres “combat stat” til slaget. Hvis det lykkes brugeren at slå højere end modstanderens ``defense stats'' gives skade til modstanderen ud fra et PCs ``damage stat'', ligeledes sker det for modstanderen hvis brugeren ikke har besejret modstanderen på sin tur. Skaden trækkes fra PC/modstanderens liv. Når PCs liv bliver 0 dør karakteren. Hvis PC dør taber brugeren spillet. Hvis hverken PC eller fjenden er død efter en kamp får brugeren valget mellem at flygte (gå tilbage til det rum de kom fra) eller fortsætte kampen (start loopet forfra). 
-Det er muligt at finde våben og udrustning i banen, som kan bruges til at forbedre PCs stats. 
+Et rum kan indeholde fjender, som der kan kæmpes imod. En kamp foregår ved at spilleren og fjenden laver et "terninge kast", hvis der slåes højere end modstanderens "defense stats" gives skade til modstanderen. En spiller dør hvis denne mister alt sit liv og dermed er spillet tabt. På \autoref{fig:Combat-udkast} ses en illustration af combat screen.
 
 \begin{figure}[H]
 \centering
@@ -45,7 +35,9 @@ Det er muligt at finde våben og udrustning i banen, som kan bruges til at forbe
 \end{figure}
 
 \subsection{Settings}
-Det skal være muligt for spilleren at tilgå en menu med spillets indstillinger. Her skal det være muligt for brugeren at tilpasse spillets layout indstillinger så som resolution og window size. Det skal ligeledes være muligt at justere lydstyrken for spillet. En illustration af hvordan denne menu kunne se ud er vist på \autoref{fig:Settings-udkast}.
+Det skal være muligt for spilleren at tilgå en menu med spillets indstillinger. Her kan spilleren ændre på resolution, window size og lydstyrken for spillet.
+
+En illustration af hvordan denne menu kunne se ud er vist på \autoref{fig:Settings-udkast}.
 
 \begin{figure}[H]
 \centering
