@@ -1,4 +1,4 @@
-\subsection{Software Design DAL Design}
+\subsection{Software Design DAL}
 På \autoref{fig:DAL-Klasse-7-17-18} herunder ses klassediagrammet over backend DAL, som benyttes til database access. 
 Som det kan ses på diagrammet, indeholder DAL en database context, som benyttes til at forbinde backend applicationen til databasen. 
 Derudover består DAL af fire overordnede funktioner, hvoraf de 3 tilhører en user story. 
@@ -12,21 +12,7 @@ For læseligheden er DAL klassen ikke forbundet til forskellige entitetsklasser 
 \label{fig:DAL-Klasse-7-17-18}
 \end{figure}
 
-Følgende funktion som beskrives på \autoref{fig:DAL-Sekvens-RumBeskrivelser} benyttes når spil klienten startes, da beskrivelser af rum ikke ændre sig gennem spillets levetid, i den nuværende itteration.\\
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = \textwidth]{02-Body/Images/DAL-Database/RoomDescriptionSd.PNG}
-\caption{Sekvensdiagram om læsning af en rumbeskrivelse}
-\label{fig:DAL-Sekvens-RumBeskrivelser}
-\end{figure}
-
-Navn: GetRoomDescription \\
-Parametre: int RoomDescriptionId \\
-Returtype: Task\l ActionResult\l RoomDescription\g\g\\
-Beskrivelse: Denne funktion finder og returnerer en beskrivelse for det valgte RoomDescriptionID. 
-Dette kan også ses på sekvensdiagrammet på figur \autoref{fig:DAL-Sekvens-RumBeskrivelser}.
-
+Beskrivelse af funktionen til afhentelse af RoomDesriptions kan findes i \parentcite[][Section 10.6]{Teknisk Bilag}
 
 \subsubsection{User story funktioner}
 De følgende 3 funktioner benyttes til udførelse af forskellige user stories.
