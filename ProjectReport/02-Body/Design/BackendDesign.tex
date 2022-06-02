@@ -1,7 +1,6 @@
 \subsection{Backend Design}
 \label{ssec: Backend Design}
-Design overvejelser  angående systemets backend Web Api vil her blive gennemgået. Først præsenteres hvilke routes Api'et stiller til rådighed, hvordan authentication/authorization håndteres, samt hvordan passwords vil blive gemt. Hertil vil en BackEndController klasse, som skal bruges på client siden blive redegjort for. Tilslut præsenteres resultatet af afapplikationsmodellerne. For ydderligere detlajer omkring designet af backend'ens Web Api henvises til bilag \textbf{Teknisk bilag afsnit 10.4}
-
+Design overvejelser  angående systemets Backend Web Api vil her blive gennemgået. Først præsenteres hvilke routes Api'et stiller til rådighed, hvordan authentication/authorization håndteres, samt hvordan passwords vil blive gemt. Hertil vil en BackEndController klasse, som skal bruges på client siden blive redegjort for. Tilslut præsenteres resultatet af afapplikationsmodellerne. For ydderligere detlajer omkring designet af Backend'ens Web Api henvises til bilag \parencite[][Section 8.4]{TekniskBilag}.
 
 \subsubsection{Routes}
 En oversigt over Applikationens forskellige routes med en tilhørende beskrivelse kan ses nedenfor.\\
@@ -35,11 +34,11 @@ For at generere denne token implementeres en funktion, som opretter en token eft
 
 \subsubsection{Hashing}
 \label{sssec: Hashing}
-Da en brugers password er følsom data, krypteres dette i backend'en igennem hashing inden det gemmes i databasen. Til at udføre hashing anvendes Bcrypt \cite{Bcrypt}.
+Da en brugers password er følsom data, krypteres dette i Backend'en igennem hashing inden det gemmes i databasen. Til at udføre hashing anvendes Bcrypt \cite{Bcrypt}.
 
 
 \subsubsection{BackEndController på client siden}
-Til brug af clienten for at tilgå backenden, skal der bruges en BackEndController klasse, dennes ansvar vil være at udføre HTTP request/responses, og vil indeholde en funktion for hvert endpoint. Klassen vil gøre brug af en HttpClient som er en klasse .Net stiller til rådighed til at håndtering af HTTP request/responses.
+Til brug af clienten for at tilgå Backenden, skal der bruges en BackEndController klasse, dennes ansvar vil være at udføre HTTP request/responses, og vil indeholde en funktion for hvert endpoint. Klassen vil gøre brug af en HttpClient som er en klasse .Net stiller til rådighed til at håndtering af HTTP request/responses.
 
 
 \subsubsection{Applikationsmodeller}
@@ -65,9 +64,11 @@ Usercontrolleren har til opgave at gøre det muligt for en bruger at registrere 
 \label{fig:Design-Backend-Sekvens-15-17-18}
 \end{figure}
 
-\noindent En fuld applikationsmodel over UserController og SaveControllers håndtering af de relevante User Stories kan ses i \textbf{Teknisk bilag afsnit 8.5}.\\
+\noindent En fuld applikationsmodel over UserController og SaveControllers håndtering af de relevante User Stories kan ses i bilag \parencite[][Section 5]{TekniskBilag}.\\
 
-Backenden er blevet designet til at stille authentication/authorization til rådighed igennem, JWT. Derudover er der blevet opstillet de nødvendige routes for udførelsen af User Stories, som er blevet fundet igennem applikationsmodeller. BackendControlleren klassen er blevet introduceret på clienten, som står for HTTP request/response.\\ 
-
+Backenden er blevet designet til at stille authentication/authorization til rådighed igennem, JWT. 
+Derudover er der blevet opstillet de nødvendige routes for udførelsen af User Stories, som
+er blevet fundet igennem applikationsmodeller. BackendControlleren klassen er blevet introduceret 
+på clienten, som står for HTTP request/response.\\ 
 
 \newpage

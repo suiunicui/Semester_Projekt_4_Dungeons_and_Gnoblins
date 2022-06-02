@@ -1,6 +1,6 @@
-\subsection{Front-end Implementering}
+\subsection{Frontend Implementering}
 \label{Sec:FE-Implementering}
-Til Front-end implementering er der brugt WPF med MVVM design patterns.
+Til Frontend implementering er der brugt WPF med MVVM design patterns.
 Til at skifte views uden at oprette et nyt vindue bruges et mediator design, hvor hver knap som skifter view giver en besked til mediatoren. Dette virker fordi alle views er oprettet som WPF user controls, og ikke views, hvilket tillader at et main view kan skifte mellem viewmodels, derved skifter alt indhold på vinduet, men uden at selve rammen skifter. Dette resulterer i et mere flydende User Interface for brugeren og derved en alt i alt bedre oplevelse. \cite{Mediator}\\
 Et eksempel på hvordan mediatoren kaldes ved et tryk på en knap kan ses i følgende kode eksempel:
 
@@ -29,7 +29,7 @@ void LoadCommand()
 \end{lstlisting}
 
 Visuelt er alle views implementeret tæt på det oprindelige design. Antallet og placering af knapper har ændret sig en smule, men den primære ide er uændret. Et eksempel på dette er room view.
-For at se mere om hvordan andre views og menuer er implementeret se Tekniskbilag(sektion 9.2).
+For at se mere om hvordan andre views og menuer er implementeret se bilag \parencite[][Section 9.2]{TekniskBilag}
 
 \subsubsection{Room View}
 
