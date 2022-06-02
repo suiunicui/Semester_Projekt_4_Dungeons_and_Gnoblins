@@ -3,9 +3,9 @@ For accepttestspecifikationen er der for dette projekt, opstillet tests, og på 
 Denne accepttestspecifikation er delt op i Funktionelle krav og ikke funktionelle krav.
 
 \subsection{Funktionelle}
-Ved de funktionelle krave er der her taget udgangspunkt i User Story 1,2,7 og 17, da disse indebærer alle systemets dele samt den mest centrale funktionalitet.\\
+Ved de funktionelle krave er der her taget udgangspunkt i User Story 1,2,15 og 18, da disse indebærer alle systemets dele samt den mest centrale funktionalitet.\\
 De resterende accepttest kan findes i det tekniske bilag sektion 14.1.
-\paragraph{Test af User Story 1 - Login}
+\paragraph{Test af User Story 1 - Login\\}
 
 \textbf{1. Scenarie - Succesfuld login}
 
@@ -20,7 +20,7 @@ De resterende accepttest kan findes i det tekniske bilag sektion 14.1.
 Resultat: Godkendt\\
 Kommentar:\\
 
-\textbf{1. Scenarie - Fejlet login}
+\textbf{2. Scenarie - Fejlet login\\}
 
 \textit{Givet at brugerens profil er oprettet på databasen og at serveren er oppe.}
 
@@ -33,9 +33,9 @@ Kommentar:\\
 Resultat: Godkendt\\
 Kommentar: Viser korrekt error besked\\
 
-\paragraph{Test af User Story 2 - Opret profil}
+\paragraph{Test af User Story 2 - Opret profil\\}
 
-\textbf{2. Scenarie - Bruger opretter profil}
+\textbf{1. Scenarie - Bruger opretter profil}
 
 \textit{Givet at brugerens profil er oprettet på databasen og at serveren er oppe.}
 
@@ -60,9 +60,9 @@ Kommentar:\\
 Resultat: Godkendt\\
 Kommentar: Viser korrekt error besked\\
 
-\paragraph{Test af User Story 15 og 18}
+\paragraph{Test af User Story 15 og 18\\}
 
-\textbf{15. Scenarie - Save Menu - Save Game}
+\textbf{1. Scenarie - Save Menu - Save Game}
 
 \textit{Givet at brugeren har trykket "Save game" fra Settings menu og ikke er i combat.}
 
@@ -76,7 +76,7 @@ Kommentar: Viser korrekt error besked\\
 Resultat: Godkendt\\
 Kommentar:\\
 
-\textbf{18. Scenarie - Main menu - Load Game - Load}
+\textbf{1. Scenarie - Main menu - Load Game - Load}
 
 \textit{Givet at brugeren er logget ind og har adgang til spillet og trykket "Load Game"}
 
@@ -89,8 +89,11 @@ Kommentar:\\
 Resultat: Godkendt\\
 Kommentar: Bruger starter i korrekt rum med korrekt inventory\\
 
+\newpage
+
 \subsection{Ikke-funktionelle}
-Herunder er udfyldte accepttest for systemets ikke-funktionelle krav. Her tages der igen et udpluk, som indeholder de mest kritiske krav. De resterende kan findes i det tekniske bilag sektion 14.2.
+Herunder er udfyldte accepttest for systemets ikke-funktionelle krav. Her tages der igen et udpluk, som indeholder de mest kritiske krav. De resterende kan findes i det tekniske bilag sektion 14.2.\\
+
 \textbf{DATABASE}
 \begin{table}[H]
 \caption{ Fuldført ikke funktionelle tests for DATABASE}
@@ -109,6 +112,8 @@ Skal gemme hvilke rum man har været i. & Visuel & Godkendt & \\
 \hline
 \end{tabular}
 \end{table}
+
+\newpage
 
 \textbf{GAMEPLAY}
 \begin{table}[H]
@@ -133,11 +138,13 @@ Spilleren skal have mulighed for at skifte hvilket våben og hvilket skjold der 
 \end{tabular}
 \end{table}
 
+\newpage
+
 \textbf{COMBAT}\\
 \begin{table}[H]
 \caption{ Fuldført ikke funktionelle tests for COMBAT}
 \label{tab:}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\begin{tabular}{|p{4cm}|p{2cm}|p{3cm}|p{3cm}|}
 \hline
 Beskrivelse & Verificering & Resultat & Kommentar \\
 \hline
@@ -155,6 +162,8 @@ Hvis spilleren drikker en livseleksir bliver spillerens nuværende liv sat til f
 \hline
 \end{tabular}
 \end{table}
+
+\newpage
 
 \textbf{PERFORMANCE}
 \begin{table}[H]

@@ -48,9 +48,6 @@ Et klasse diagram over BackEndControlleren kan ses på \autoref{fig:Implementeri
 
 BackEndController klassen implementeres som en singleton. Dette gøres for at sikre at der kun findes en JWT i programmet af gangen og for at BackEndControlleren instansen altid indeholder den korrekte JWT uanset hvorhenne i client applikationen der laves en request fra.\\
 
-
-\subsubsection{Konlusion}
-
 Backend'ens Funktioner implementeres som asynkrone funktioner, der først retunerer en værdi når resourcen som efterspørges er klar. Client klassen BackEndController implementeres som en singleton for at holde styr på den aktuelle JWT.
 
 \newpage
