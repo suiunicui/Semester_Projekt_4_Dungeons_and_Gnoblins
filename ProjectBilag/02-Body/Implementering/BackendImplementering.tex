@@ -30,7 +30,7 @@ SaveController klassen inkluderer librariet Mircosoft.AspNetCore.MVC, dette gør
 \end{figure}
 
 Librariet gør det ligeledes muligt at retunere ActionResults, som kan indeholde objekter og en status kode eller blot en status kode, hvis noget går galt. Alle funktionerne er async og retunerer en Task, hvilket gør at der er tale om asynkrone funktioner, der først retunerer en værdi når dataen er klar. Dette gør også at clienten kan klare andre opgaver ind til dataen er klar.
-SaveController inkluderer også Microsoft.AspNetCore.Authorization librariet, som bidrager med funktionalitet til kun at tilade kald, fra en korrekt bruger med Atributten [Authorize]. Da der kun findes en type af identiteter nemlig en helt normal bruger, som har adgang til alle endpoints, skal der findes en måde at sikre at brugeren kun kan tilgå sine egne data. Derfor gøres brug af User.Identity, kan ses på figur 10. Dette anvendes til at hente Claims for User'eren tilhørende den nuværende action, hvilket så kan bruges til at tjekke om brugeren har lov til at hente det pågældende gemte spil.\\
+SaveController inkluderer også Microsoft.AspNetCore.Authorization librariet, som bidrager med funktionalitet til kun at tilade kald, fra en korrekt bruger med Atributten [Authorize]. Da der kun findes en type af identiteter nemlig en helt normal bruger, som har adgang til alle endpoints, skal der findes en måde at sikre at brugeren kun kan tilgå sine egne data. Derfor gøres brug af User.Identity, kan ses på \autoref{fig:Implementering-Backend-Code-Lgoin}. Dette anvendes til at hente Claims for User'eren tilhørende den nuværende action, hvilket så kan bruges til at tjekke om brugeren har lov til at hente det pågældende gemte spil.\\
     
 
 \subsubsection{UserController}
@@ -51,7 +51,7 @@ Funktionen verify(”password”, hashedpassword) bruges til at verificere om et
 
 
 \subsubsection{BackEndController Client}
-BackEndControlleren indeholde som det blev nævnt i backend Design afsnittet \autoref{ssec: Backend Design} et HttpClient objekt til at håndtere http request/response, og et Token objekt til at holde på den modtagne JWT.
+BackEndControlleren indeholder som det blev nævnt i backend Design afsnittet \autoref{ssec: Backend Design} et HttpClient objekt til at håndtere http request/response, og et Token objekt til at holde på den modtagne JWT.
 Et klasse diagram over BackEndControlleren kan ses på \autoref{fig:Implementering-Backend-Klasse-BackEndController}\\
 
 \begin{figure}[H]
