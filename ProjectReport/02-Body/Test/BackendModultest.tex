@@ -30,21 +30,7 @@ I \autoref{table: succes} kan ses en tabel oversigt over tests af succes scenari
 \end{tabular}
 \end{table}
 
-I nedenstående tabel \label{table: fejl} testes om funktionerne håndtere fejlscenarier korrekt.
-
-\begin{table}[H]
-\caption{Tabel over modultest af Backendes Web Api, her vises testes af fejlscenarier for alle Web Api http funktioner}%
-\label{table: fejl}
-\begin{tabular}{|p{0.75cm}|p{3.6cm}|p{3.5cm}|p{3.5cm}|p{1.9cm}|} \hline
- \textbf{Test} & \textbf{Funktion} & \textbf{Forventet resultat} & \textbf{Observering} & \textbf{Vurdering} \textbf{(OK/Fail)}\\\hline
- 1 & Register(UserDTO regUser) & Brugernavnet er allerede i brug, og der sendes en fejlmeddelelse  & Status: 400. Besked: ”Name is already in use”. & OK \\ \hline
- 2 & Login(UserDTO userDTO) & Oplysningerne stemmer ikke overens med en registreret bruger, og der bør sendes en fejlmeddelelse. & Status: 400. Besked: ”Wrong Username or Password” & OK \\ \hline
- 3 & GetSave(int id) & Der er ikke logget ind, så der kan ikke hentes et game state. & Status: 401, Unauthorized & OK \\ \hline
- 4 & GetListOfSave() & Der er ikke logget ind, og derfor kan der ikke hentes et liste. &Status: 401, Unauthorized  & OK \\ \hline
- 5 & PostSave(SaveDTO saveDTO) & Der er ikke logget ind, og derfor kan der ikke gemmes er spil. & Status: 401, Unauthorized & OK \\ \hline
-
-\end{tabular}
-\end{table}
+For en tabel oversigt over test af fejlscenarier for web api'ets funktioner henvises til tekniske bilag sektion 11.4.
 
 Med alle funktioner testet med et godkendt resultat, er backenden klar til at blive integreret med de andre moduler for systemet.
 
