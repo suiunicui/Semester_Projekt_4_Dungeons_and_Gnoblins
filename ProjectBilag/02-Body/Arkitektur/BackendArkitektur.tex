@@ -1,10 +1,10 @@
 \subsection{Backend Arkitektur}
 
-I dette afsnit redegøres for arkitekturen af backend containeren. Dokumentet vil først komme med en kort redegørelse for MVC mønstrets opbygning og dets bidrag til arkitekturen. Dernæst gennemgås de relevante krav, hvad angår backenden, disse krav bruges som input til arkitekturen. Med kravene på plads præsenteres et C3 diagram over backend’en, som viser hvordan Web api’et opbygges. Til slut præsenteres REST principper samt hvordan de anvendes.
+I dette afsnit redegøres for arkitekturen af backend containeren. Dokumentet vil først komme med en kort redegørelse for MVC mønstrets opbygning og dets bidrag til arkitekturen. Dernæst gennemgås de relevante krav, hvad angår backenden, disse krav bruges som input til arkitekturen. Med kravene på plads præsenteres et C4 level 3 diagram over backend’en, som viser hvordan Web api’et opbygges. Til slut præsenteres REST principper samt hvordan de anvendes.
 Systemets backend vil bestå af et Web API udviklet i frameworket ASP.NET Core. Web API’et skal give mulighed for containeren GameEngine at tilgå databasen igennem HTTP request/responses, for at hente og sende den nødvendige data til databasen. Hertil skal backend’en sørger for Authentication og Authorization af de indkommende kald.\\
 
 \subsubsection{MVC}
-Selve Web API’ets arkitektur bygges op omkring MVC (Model-View-Controller) mønstret. En illustration af MVC mønstrets struktur kan ses på \autoref{fig:Arkitektur-Backend-MVC} \cite{MVC pattern}.
+Selve Web API’ets arkitektur bygges op omkring MVC (Model-View-Controller) mønstret. En illustration af MVC mønstrets struktur kan ses på \autoref{fig:Arkitektur-Backend-MVC} \cite{MVCpattern}.
 
 \begin{figure}[H]
 \centering
@@ -47,7 +47,7 @@ De ikke funktionelle krav tages hånd om under designet og implementeringen af b
 For ydderligere detaljer omkring funktionelle og ikke funktionelle krav henvises til afsnit omkring kravspecifikation \autoref{sec:KravSpec}
 
 
-Der bygges videre på C4 modellen for systemet , et level 3 component diagram over backend containeren udarbejdes, som viser hvilke componenter containeren indeholder, deres ansvarsområder, hvordan de kommunikere indbyrdes og med de omkring liggende containere, samt hvilke teknologier der anvendes i implementeringen. Diagrammet kan ses på \autoref{fig:Arkitektur-Backend-C3}. 
+Der bygges videre på C4 modellen for systemet, et level 3 component diagram over backend containeren udarbejdes, som viser hvilke componenter containeren indeholder, deres ansvarsområder, hvordan de kommunikere indbyrdes og med de omkring liggende containere, samt hvilke teknologier der anvendes i implementeringen. Diagrammet kan ses på \autoref{fig:Arkitektur-Backend-C3}. 
 
 
 \begin{figure}[H]
@@ -62,7 +62,7 @@ Figuren illustrerer en lagdelt struktur, hvor der ses en client som kalder ned i
 \textbf{Client:}\\
 Der eksisterer en client, som kommunikerer med backenden Game Module. Game Module’s kald til backenden kan overordnet set indeles i to undergrupper, bruger håndtering og save håndtering. Bruger håndtering indeholder kald som omhandler login og registreing  (User story 1 og 2), hvor save håndtering omhandler loading og saving af Game state (User story 8, 15, 17 og 18). Kommuniaktionen her vil foregå ved netværkskald med protokolen HTTPS. Clienten udfører request/response kald til backenden igennem specifikke URL’s. For at data objekterne kan sendes frem og tilbage med HTTPS kæves disse seralizeres og deseralizeres mellem JSON-objekter og .Net objekter.\\
 \textbf{Controller:}\\
-Inde i backenden anvendes ASP. Net MVC controllere \cite{MVC controller} til at modtage og svare på kald fra clienten. Der laves en controller for Bruger håndtering og en controller for Save håndtering. Hver request mappes til en specifik controller. Controllerne vil så indeholde action metoder, som udføres når den modtagere et kald. Når controlleren har udført sin action retuneres et Action Result, hvor i et data objekt kan wrappes eller den kan indeholde en fejlmeddelse hvis noget går galt.\\
+Inde i backenden anvendes ASP. Net MVC controllere \cite{MVCcontroller} til at modtage og svare på kald fra clienten. Der laves en controller for Bruger håndtering og en controller for Save håndtering. Hver request mappes til en specifik controller. Controllerne vil så indeholde action metoder, som udføres når den modtagere et kald. Når controlleren har udført sin action retuneres et Action Result, hvor i et data objekt kan wrappes eller den kan indeholde en fejlmeddelse hvis noget går galt.\\
 \textbf{DAL:}\\
 De to controllere kalder som sagt videre ned i DAL laget, dette lag består af en database kontekst DaG\_db og en hjælper klasse til at udfører Queries. Her gøres brug af EF (Entity Framework) Core \cite{EF Core}, som gør det muligt at arbejde med DbContext klassen, denne bruges til skabe en kontekst af databasen, hvor i de enkelte modeller kan mappes til entities.\\
 

@@ -2,7 +2,7 @@
 \label{ssec: BackendArkitektur}
 I dette afsnit gives en redegørelse for backendens arkitektur samt formål.\\ 
  
-\noindent Backend containeren består overordnet set af to dele et Web Api og en database, i dette afsnit vil fokusset ligge på Web Api'et for flere detaljer omkring databasens arkitektur henvises til afsnit \textbf{ssec: databaseArkitektur}. Web Api'et vil blive udviklet i frameworket ASP.NET Core. Web api'et skal kunne tilgåes af clienter igennem HTTP request/responses. Web api'et kontakter efterfølgende databasen igennem et DAL. Hertil skal Web api'et sørge for Authentication og Authorization af kald fra clienten.\\
+\noindent Backend containeren består overordnet set af to dele et Web Api og en database, i dette afsnit vil fokusset ligge på Web Api'et for flere detaljer omkring databasens arkitektur henvises til afsnit \autoref{ssec: databaseArkitektur}. Web Api'et vil blive udviklet i frameworket ASP.NET Core. Web api'et skal kunne tilgåes af clienter igennem HTTP request/responses. Web api'et kontakter efterfølgende databasen igennem et DAL. Hertil skal Web api'et sørge for Authentication og Authorization af kald fra clienten.\\
 
 \subsubsection{C3 Model}
 
@@ -18,15 +18,15 @@ I dette afsnit gives en redegørelse for backendens arkitektur samt formål.\\
 \noindent Figuren illustrerer en lagdelt struktur, som gør brug af MVC mønstret. Der ses en client (Game Module) som kalder ned i to controllere Authentication og Save Controller. Kommunikationen her i mellem foregår med HTTPS req/resp, med dataen på JSON format.\\
 
 \noindent \textbf{Controller:}\\
-Controllerne opdeles efter ansvar, en som står for bruger håndtering og en som står for at gemme/hente spil. Disse vil bestå af ASP.Net MVC Controllere \cite{MVC controller}.
+Controllerne opdeles efter ansvar, en som står for bruger håndtering og en som står for at gemme/hente spil. Disse vil bestå af ASP.Net MVC Controllere \cite{MVCcontroller}.
 
 \noindent \textbf{DAL:}\\
-De to controllere kalder videre ned i DAL laget, som består af en database kontekst og en klasse til at håndtere queries for SaveControlleren. Til at skabe denne database kontekst anvendes EF Core \cite{EF Core}.
+De to controllere kalder videre ned i DAL laget, som består af en database kontekst og en klasse til at håndtere queries for SaveControlleren. Til at skabe denne database kontekst anvendes EF Core \cite{EFCore}.
 
 \noindent \textbf{Model:}\\
 Modellerne fungerer som bindeledet mellem alle komponenterne, de definerer den data som der arbejdes på, og vil bestå af en række C\# klasser.\\
 
-\noindent MVC mønstret bidrager med at skabe højere samhørighed i applikationen ved at muliggøre en logisk opdelling af funktionalitet i controllerne. Dets ses også at koblingen mellem modulerne er forholdsvis lav såldes, således det er let at bygge videre på og tilføje ny funktionalitet uden at ødelægge noget.\\
+\noindent MVC mønstret bidrager med at skabe højere samhørighed i applikationen ved at muliggøre en logisk opdelling af funktionalitet i controllerne. Dets ses også at koblingen mellem modulerne er forholdsvis lav, således det er let at bygge videre på og tilføje ny funktionalitet uden at ødelægge noget.\\
 
 \subsubsection{REST}
 I designet af Web Api'et søges det at opnå følgende 5 REST principper \cite{REST}.
