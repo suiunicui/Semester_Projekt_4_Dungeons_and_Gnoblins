@@ -17,8 +17,8 @@ Der er løbende blevet foretaget modultest, da det er forholdsvist enkelt at ben
 
 
 \begin{table}[H]
-\label{table: succes}
 \caption{Tabel over modultest af Backendes Web Api, her vises testes af succes scenarier for alle Web Api http funktioner. }%
+\label{table: succes}
 \begin{tabular}{|p{0.75cm}|p{3.6cm}|p{3.5cm}|p{3.5cm}|p{1.9cm}|} \hline
  \textbf{Test} & \textbf{Funktion} & \textbf{Forventet resultat} & \textbf{Observering} & \textbf{Vurdering} \textbf{(OK/Fail)}\\\hline
  1 & PostSave(SaveDTO saveDTO) & Der bliver sendt et specifikt gamestate, for brugeren der er logget ind. & Det er muligt at sende game statet, og de korrekte værdier bliver sendt med. & OK \\ \hline
@@ -33,8 +33,8 @@ Der er løbende blevet foretaget modultest, da det er forholdsvist enkelt at ben
 I nesdstående tabel \label{table: fejl} testes om funktionerne håndtere fejlscenarier korrekt.
 
 \begin{table}[H]
-\label{table: fejl}
 \caption{Tabel over modultest af Backendes Web Api, her vises testes af fejlscenarier for alle Web Api http funktioner}%
+\label{table: fejl}
 \begin{tabular}{|p{0.75cm}|p{3.6cm}|p{3.5cm}|p{3.5cm}|p{1.9cm}|} \hline
  \textbf{Test} & \textbf{Funktion} & \textbf{Forventet resultat} & \textbf{Observering} & \textbf{Vurdering} \textbf{(OK/Fail)}\\\hline
  1 & Register(UserDTO regUser) & Brugernavnet er allerede i brug, og der sendes en fejlmeddelelse  & Status: 400. Besked: ”Name is already in use”. & OK \\ \hline
