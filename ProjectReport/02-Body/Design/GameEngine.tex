@@ -1,7 +1,7 @@
-\subsection{Game Engine}
+\subsection{Game Engine design}
 \label{sec:GameEngineDesign}
 
-\noindent Spillets logik styrres fra game engine, der består
+\noindent Spillets logik styres fra game engine, der består
 af de komponenter, som modellere spillets verden og dens 
 logik. Af disse komponenter er Game Controlleren, Combat Controlleren,
 Room, og Player de mest essentielle.
@@ -29,7 +29,7 @@ i overenstemmelse med spillets map layout. Skulle spilleren forsøge at
 bevæge sig i en retning, der ikke er tilladt ifølge map layoutet bliver 
 spilleren stående i det nuværende rum.
 
-Skulle spilleren bevæge sig ind i et rum med et ``item'' styre 
+Skulle spilleren bevæge sig ind i et rum med et ``item'', styre 
 game controlleren spillerens evne til at inteagere med ``itemet''.
 Spilleren har evenen til at samle ``items'' op, og derved øge deres
 stats.
@@ -40,7 +40,7 @@ flygte fra denne. Game controlleren gør dette ved at kalde combat controlleren,
 som håndtere kamp i spillet.
 
 \subsubsection{Combat Controller}
-Combat controlleren håndtere spillet logik, i det omfang det relatere sig til
+Combat controlleren håndterer spillets logik, i det omfang det relatere sig til
 kamp mellem spilleren og en fjende \parencite[Section 9.3.3][Figur 17]{TekniskBilag}.
 
 \noindent Combat i spillet afvikles ved hjælp af flere simulerede terningekast (RNG) se dicerollern,
@@ -59,9 +59,9 @@ og fjerne spilleren og fjender for rummet se \autoref{fig:CoreDiagram}. Ikke des
 kunne spilleren ikke navigere verden uden existensen af disse diskrete områder.
 
 \subsubsection{Player}
-Spilleren karakter (PC) repræsentere spilleren i spillet. Dette komponent er ansvarlig for at
+Spilleren karakter (PC) repræsenterer spilleren i spillet. Dette komponent er ansvarlig for at
 holde styr på spillerens tilstand i spillet og giver spilleren evnen til at forsvare
-sig selv i kamp. Denne simulere en spillers forsøg på at ramme en fjende, skade en 
+sig selv i kamp. Denne simulerer en spillers forsøg på at ramme en fjende, skade en 
 fjende og opdatere spilleren liv, forsvar og ``items'' undervejs i spillet 
 \parencite[Section 13.3.2][]{TekniskBilag}.
 

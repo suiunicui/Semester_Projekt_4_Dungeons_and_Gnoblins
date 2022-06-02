@@ -30,7 +30,7 @@ void LoadCommand()
 }
 \end{lstlisting}
 
-\noindent Der er implementeret at nogle af spillets funktioner kan tilgås via key-bindings, hvilket har nødsaget et brud på MVVM-designet. Når mediatoren skifter mellem views bilver fokus ikke sat til indholdet af det nye view, og keybindings virker derfor ikke. For at løse dette sættes top-elementet på den nye side som fokus. Dette kan dog ikke gøres i MVVM, så her er det pattern brudt, da det er nødvendigt at gå ind i code-behind filen for at sætte fokus.
+\noindent Der er implementeret at nogle af spillets funktioner kan tilgås via key-bindings, hvilket har nødsaget et brud på MVVM-designet. Når mediatoren skifter mellem views bliver fokus ikke sat til indholdet af det nye view, og keybindings virker derfor ikke. For at løse dette sættes top-elementet på den nye side som fokus. Dette kan dog ikke gøres i MVVM, så her er det pattern brudt, da det er nødvendigt at gå ind i code-behind filen for at sætte fokus.
 
 \noindent De følgende afsnit viser et udvalg af view, samt en beskrivelse af hvordan de afviger fra det oprindelige design og en beskrivelse af interesante programerings-tekniske beslutninger.
 
@@ -40,7 +40,7 @@ Den overordnede struktur af login (\autoref{fig:Design-FE-impl-login}) og regist
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/login_final.PNG}
-\caption{Endelig login skærm. Brugenavn og kodeord kan indtastes i de to felter. Register knappen fører til et nyt view, hvor man kan oprætte en bruger, mens login knappen fører spilleren til main menu, hvis deres login er korrekt.}
+\caption{Endelig login skærm. Brugenavn og kodeord kan indtastes i de to felter. Register knappen fører til et nyt view, hvor man kan oprette en bruger, mens login knappen fører spilleren til main menu, hvis deres login er korrekt.}
 \label{fig:Design-FE-impl-login}
 \end{figure}
 
@@ -59,7 +59,7 @@ Alt tekst er vist med data binding.
 
 \subsubsection{Combat View}
 
-Combat view (\autoref{fig:Design-FE-impl-combat}) er bygget med room view som skabelon, så de fleste elementer er ens. Knappernes antal og funktion er ændret, og sammenlignet med det oprindelige design er knapperne for items og character fjernet, da det blev besluttet at det ikke skulle være muligt at tilgå sit inventory under en kamp. I stedet for en beskrivelse af rummet og en liste af items vises der nu en beskrivelse af hvordan kampen går nederst i venstre side af skærmen. Tal-værdierne hentes fra gameengine, og sættes ind i en tekststreng, som gør det nemt for brugeren at forstå hvordan det skal fortolkes. Der er yderligere tilføjet en healthbar, som giver en visuel indikation af, hvor tæt spilleren er på at tabe spillet og skifter frave fra grøn til gul til rød, som spilleren tager mere skade. Baren giver derfor lidt farve til et ellers meget gråtonet spil.
+Combat view (\autoref{fig:Design-FE-impl-combat}) er bygget med room view som skabelon, så de fleste elementer er ens. Knappernes antal og funktion er ændret, og sammenlignet med det oprindelige design er knapperne for items og character fjernet, da det blev besluttet at det ikke skulle være muligt at tilgå sit inventory under en kamp. I stedet for en beskrivelse af rummet og en liste af items vises der nu en beskrivelse af hvordan kampen går nederst i venstre side af skærmen. Tal-værdierne hentes fra gameengine, og sættes ind i en tekststreng, som gør det nemt for brugeren at forstå hvordan det skal fortolkes. Der er yderligere tilføjet en healthbar, som giver en visuel indikation af, hvor tæt spilleren er på at tabe spillet og skifter farve fra grøn til gul til rød, som spilleren tager mere skade. Baren giver derfor lidt farve til et ellers meget gråtonet spil.
 
 \begin{figure}[H]
 \centering
