@@ -6,6 +6,7 @@ Game Controllerns rolle er at skabe logikken for brugeren i spillet. Game Contro
 \includegraphics[width = \textwidth]{02-Body/Images/Arkitektur - State Logic.pdf}
 \caption{Flow Chart over systemets states når spillet er startet. Dette bilag viser arkitekturen over det ønskede states i systemet når bruger har startet spillet. Dette viser også hvordan spillets fremgang er ønsket og hvordan bruger kommer videre i spillet igennem de forskellige states.}
 \end{figure}
+
 \subsubsection{Room State og Character interagering}
 Game Controlleren er delt op i spillets game states som kan ses i bilaget ovenover. Der er hovedsageligt 2 states når spillet er startet. Room State og Combat state. Når spillet er startet for brugeren, starter brugeren i et room state. I dette state kan der interageres med rummet, hvis der er genstande til stede. Her kan brugeren også brugerdefinere sin spiller ved brug af knappen inventory og skifte våben eller skjold. Her kan der også se spillerens evner ved brug af knappen Character. Derudover er der også implementeret beskrivelser fra de forskellige rum som hentes fra modulet Database via modulet Back end.
 \subsubsection{Combat State}

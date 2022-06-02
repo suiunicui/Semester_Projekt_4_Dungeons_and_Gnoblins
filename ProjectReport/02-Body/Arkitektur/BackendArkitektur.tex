@@ -1,17 +1,17 @@
 \subsection{Backend Arkitektur}
 \label{ssec: BackendArkitektur}
-I dette afsnit gives en redegørelse for backendens arkitektur samt formål.\\ 
+I dette afsnit gives en redegørelse for Backendens arkitektur samt formål.\\ 
  
 \noindent Backend containeren består overordnet set af to dele et Web Api og en database, i dette afsnit vil fokusset ligge på Web Api'et for flere detaljer omkring databasens arkitektur henvises til afsnit \autoref{ssec: databaseArkitektur}. Web Api'et vil blive udviklet i frameworket ASP.NET Core. Web api'et skal kunne tilgåes af clienter igennem HTTP request/responses. Web api'et kontakter efterfølgende databasen igennem et DAL. Hertil skal Web api'et sørge for Authentication og Authorization af kald fra clienten.\\
 
 \subsubsection{C3 Model}
 
-\noindent Til at beskrive backendens arkitektur udarbejdes et C4 level 3 diagram. Diagrammet som kan ses på \autoref{fig:Arkitektur-Backend-C3} giver et overblik over hvilke componenter backenden består af.
+\noindent Til at beskrive Backendens arkitektur udarbejdes et C4 level 3 diagram. Diagrammet som kan ses på \autoref{fig:Arkitektur-Backend-C3} giver et overblik over hvilke componenter Backenden består af.
  
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/Backend_C3.PNG}
-\caption{C3-Model over Backend container,figuren giver et overblik over de componenter backenden består, samt hvordan disse kommunikere indbyrdes og med omkring liggende containere.}
+\caption{C3-Model over Backend container,figuren giver et overblik over de componenter Backenden består, samt hvordan disse kommunikere indbyrdes og med omkring liggende containere.}
 \label{fig:Arkitektur-Backend-C3}
 \end{figure}
 
@@ -43,6 +43,6 @@ I designet af Web Api'et søges det at opnå følgende 5 REST principper \cite{R
 
 For en mere dybdegående breskrivelse af Backend Web Api'ets arkitektur henvises til bilag \textbf{Teknisk bilag afsnit 9.4}
 
-Systemets backend består at Web Api, som bygges op omkring MVC mønstret, Web Api’et vil gøre brug af REST principper for at adskille data resourcerne fra deres repræsentation på clientens side.
+Systemets Backend består at Web Api, som bygges op omkring MVC mønstret, Web Api’et vil gøre brug af REST principper for at adskille data resourcerne fra deres repræsentation på clientens side.
 
 \newpage
