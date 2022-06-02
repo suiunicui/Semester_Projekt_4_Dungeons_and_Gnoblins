@@ -1,19 +1,4 @@
-\section{Systembeskrivelse}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width = \textwidth]{02-Body/Images/C4TopLvlDB}
-\caption{C4 top level diagram, som viser kommunikation mellem systemets segmenter}
-\label{fig:C4TopLvlDB}
-\end{figure}
-
-På \autoref{fig:C4TopLvlDB} ses systemets toplevel arkitektur.
-Denne består af en bruger, som interagerer med systemet gennem frontendapplikationen som skrives i WPF. States i denne applikation styres af Game Engine,
-som holder styr på hvor spilleren befinder sig hvilke items, der er samlet op og andre nyttige information, som skal bruges gennem spillet.
-Spillets backend benyttes primært til bruger-authentication og som bindeled til databasen.
-Databasen indeholder oplysninger om blandt andet brugere, de gemte spil og oplysninger om historien for de forskellige rum.
-
-\newpage
 
 \section{Kravspecifikation}
 \label{sec:kravspec}
