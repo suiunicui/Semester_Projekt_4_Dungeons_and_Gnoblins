@@ -4,7 +4,7 @@
 Projektets database har gruppen valgt at hoste i lokal storage. Dette er valgt da der under semesterets forløbet opstod problemer med skolens licens af Microsoft produkter. For at undgå at komme ud for udfordringer med hosting senere i forløbet, blev der valgt at gå med den sikre løsning, at hoste databasen lokalt på enheden. Til dette benyttede gruppen et docker image\cite{SQL server with docker}, specifikt det samme image som blev benyttet i DAB undervisning, til vores SQL server.
 Hvis ikke der var problemer microsoft, havde gruppen i stedet valgt at lagre data på en cloud-based storage fremfor lokal storage.\\
 
-\noindent For at kunne udarbejde et ER diagram til modellering af vores sql database skal vi start med at finde ud af hvilke krav vi har til og hvilke attributter vi ønsker at gemme i vores database.\\
+\noindent For at kunne udarbejde et ER diagram til modellering af vores sql database skal vi starte med at finde ud af hvilke krav vi har til og hvilke attributter vi ønsker at gemme i vores database.\\
 Først og fremmest ønskede gruppen at vi kunne gemme beskrivelserne af de forskellige rum, i spillets layout, for at formindske antallet af filer i klienten.\\ 
 Her benyttes rummets id som key, da vi ikke ønsker at man skal kunne oprette flere beskrivelser til samme rum. Diagrammet kan ses på \autoref{fig:ER-Roomdescription}.
 
@@ -31,7 +31,7 @@ I et gemt spil ønkede vi at gemme en række forskellige attributter for spiller
 Første og fremmest får hvert spil et unikt id som vi benytter til identifikation.
 Et gemt spil får et navn, valgt af brugeren, som gør det nemmere for brugeren at differentiere mellem de forskellige spil. \\ 
 En spillers Health og samt hvilket rum, spilleren står i gemmes.
-En spiller kan derudover også holde item, som armor og våben, i hånden eller i sit inventory. Dette gemmes også henholdsvist som en del af et save og i en inventory liste tilhørende spillet. 
+En spiller kan derudover også holde items, såsom armor og våben, i hånden eller i sit inventory. Dette gemmes også henholdsvist som en del af et save og i en inventory liste tilhørende spillet. 
 
 \noindent Tabellerne til højre har 2 atributter, et ID, som svarer til en bestemt item, enemy, puzzle eller rum, og en reference til et tilhørende SaveID. 
 Denne parring er unik, da man ikke kan holde 2 af den samme genstand, dræbe den samme enemy, løse den samme puzzle eller gemme det samme rum til path 2 gange.\\
