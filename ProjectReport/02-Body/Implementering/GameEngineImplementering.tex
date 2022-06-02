@@ -20,7 +20,7 @@ splittes op i flere klasser.
 \noindent Når game controlleren instantieres laves et map af Map og Map creator klassen
 hvilket før til en længere process hvor map creator klassen laver nogle
 layout filer som map klassen kan læse for at danne et map i spillet, som 
-spilleren kan navigere \parencite[Section 11.3.2][]{TekniskBilag}.\\
+spilleren kan navigere \parencite[Section 9.3.2][]{TekniskBilag}.\\
 
 \noindent Game controlleren er i stand til at save og load games gennem 
 dens relation til Backend controlleren, der kan lave fetch til spillets
@@ -28,7 +28,7 @@ database.
 
 \noindent Selve Load process er kompliceret, da den involvere adskillige iterationer
 igennem alle rooms, items og fjender i spillet for at bekræfte om disse er
-blevet besøgt, indsamlet eller beseret tidligere \parencite[Section 11.3.1]
+blevet besøgt, indsamlet eller beseret tidligere \parencite[Section 9.3.1]
 [Figure 55]{TekniskBilag}.
 Save game er simplere, da game controlleren selv har adgang til alt infomation
 som er nødvendigt for et komplet save game.
@@ -39,7 +39,7 @@ Skulle spilleren befinde sig i combat, er det combat controlleren, der styre pro
 hvis og kun hvis fjenden stadig er i live. Combat controlleren benytter en diceRoller til
 at simulere terningekast, der benyttes til at bedømme om spilleren og fjenden rammer med
 deres repektive angreb og efterfølgende; hvor meget deres angreb skader. Spilleren kan opsamle
-og benytte våben til at forbedre deres terningekast \parencite[Section 10.3.2][]{TekniskBilag}. 
+og benytte våben til at forbedre deres terningekast \parencite[Section 8.3.2][]{TekniskBilag}. 
 
 \subsubsection{Log}
 Game Controlleren kommunikerer med Frontend gennem en log. Loggen logger forskellige

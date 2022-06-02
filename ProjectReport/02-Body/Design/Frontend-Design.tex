@@ -1,14 +1,14 @@
 \subsection{Frontend Design}
 \label{ssec:FE Design}
 
-Inden arbejdet på Frontend arkitekturen begyndte, er der blevet lavet en teknologiundersøgelse se bilag \parencite[][Section 8]{TekniskBilag}, om hvilket udviklingsværktøj Frontenden og derigennem spillet skulle udvikles i. Baseret på denne teknologiundersøgelse er der blevet valgt, at spillet vil blive udviklet i et .NET framework. Dette valg er blandt andet truffet, da dette framework passer bedre med den opdeling af arbejde der er lavet i projektgruppen, altså opdelingen af Frontend og Backend. For andre grunde, se Tekniskbilag (sektion 6.1), hvor flere fordele og ulemper for både unity og .NET frameworket er sat op.\\
+Inden arbejdet på Frontend arkitekturen begyndte, er der blevet lavet en teknologiundersøgelse se bilag \parencite[][Section 6]{TekniskBilag}, om hvilket udviklingsværktøj Frontenden og derigennem spillet skulle udvikles i. Baseret på denne teknologiundersøgelse er der blevet valgt, at spillet vil blive udviklet i et .NET framework. Dette valg er blandt andet truffet, da dette framework passer bedre med den opdeling af arbejde der er lavet i projektgruppen, altså opdelingen af Frontend og Backend. For andre grunde, se Tekniskbilag (sektion 6.1), hvor flere fordele og ulemper for både unity og .NET frameworket er sat op.\\
 
 \noindent Spillets Frontend består af en række menuer, samt selve spil viewet. Spillet skifter så mellem disse forskellige menuer og views i samme vindue, således at brugeren får en flydende overgang.
 Det primære spil-vindue er room view, et mock-up af dette view kan se på \autoref{fig:Design-FE-mockup-room}. Her præsenteres spilleren for en beskrivelse af det rum de er i, samt hvilke elementer i rummet de kan interagere med. Der vises også et kort over banen. Kortet viser kun de rum spilleren allerede har været i, mens resten holdes skjult. Når brugeren så besøger et nyt rum, kan dette ses selvom spilleren forlader rummet. Dette lader spilleren udforske og oplåse hele kortet.\\
 En række knapper nederst i højre hjørne på skærmen giver spilleren mulighed for at interagere med spillet. Fire knapper ("Go {North/West/South/East}") lader spilleren gå fra et rum til et andet. Ikke alle rum har forbindelse til alle sider, så det er f.eks. ikke altid muligt at trykke på "Go North". Kortet og rum beskrivelsen fortæller hvilken vej det er muligt at bevæge sig i.\\
 Udover de fire retningsknapper er der et antal andre knapper. Disse bruges til at gemme spillet, gå til menuer, samt interagere med elementerne i rummet. Det specifikke antal og deres funktion er afhængig af den præcise implementering.\\
 
-\noindent For at læse mere om spillets andre menuer og views se bilag \parencite[][Section 9]{TekniskBilag}
+\noindent For at læse mere om spillets andre menuer og views se bilag \parencite[][Section 7]{TekniskBilag}
 
 \begin{figure}[H]
 \centering

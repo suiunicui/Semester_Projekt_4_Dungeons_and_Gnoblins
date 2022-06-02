@@ -20,11 +20,11 @@ Room, og Player de mest essentielle.
 Game Controlleren styre alle UI funktionaliteter, når brugeren
 trykker på en knap, der påvirker spillets state, gøres dette
 gennem game controlleren. Game controlleren instantieres når
-et spil startes; hvilket danner et map \parencite[Section 10.3.1][]
+et spil startes; hvilket danner et map \parencite[Section 8.3.1][]
 {TekniskBilag}, spilleren kan navigere rundt på. 
 
 Game controlleren tillader at spilleren kan bevæge sig mellem
-spillets forskellige rum \parencite[Section 9.3.1][]{TekniskBilag} 
+spillets forskellige rum \parencite[Section 7.3.1][]{TekniskBilag} 
 i overenstemmelse med spillets map layout. Skulle spilleren forsøge at
 bevæge sig i en retning, der ikke er tilladt ifølge map layoutet bliver 
 spilleren stående i det nuværende rum.
@@ -41,7 +41,7 @@ som håndtere kamp i spillet.
 
 \subsubsection{Combat Controller}
 Combat controlleren håndterer spillets logik, i det omfang det relatere sig til
-kamp mellem spilleren og en fjende \parencite[Section 9.3.3][Figur 17]{TekniskBilag}.
+kamp mellem spilleren og en fjende \parencite[Section 7.3.3][Figur 17]{TekniskBilag}.
 
 \noindent Combat i spillet afvikles ved hjælp af flere simulerede terningekast (RNG) se dicerollern,
 i \autoref{fig:CoreDiagram} der afgører både om spilleren/fjenden rammer fjenden/spilleren 
@@ -63,7 +63,7 @@ Spillerens karakter (PC) repræsenterer spilleren i spillet. Dette komponent er 
 holde styr på spillerens tilstand i spillet og giver spilleren evnen til at forsvare
 sig selv i kamp. Denne simulerer en spillers forsøg på at ramme en fjende, skade en 
 fjende og opdatere spilleren liv, forsvar og ``items'' undervejs i spillet 
-\parencite[Section 10.3.2][]{TekniskBilag}.
+\parencite[Section 8.3.2][]{TekniskBilag}.
 
 
 \newpage

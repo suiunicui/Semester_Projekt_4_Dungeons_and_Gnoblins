@@ -1,6 +1,6 @@
 \subsection{Backend Design}
 \label{ssec: Backend Design}
-Design overvejelser  angående systemets Backend Web Api vil her blive gennemgået. Først præsenteres hvilke routes Api'et stiller til rådighed, hvordan authentication/authorization håndteres, samt hvordan passwords vil blive gemt. Hertil vil en BackEndController klasse, som skal bruges på client siden blive redegjort for. Tilslut præsenteres resultatet af afapplikationsmodellerne. For ydderligere detlajer omkring designet af Backend'ens Web Api henvises til bilag \parencite[][Section 10.4]{TekniskBilag}.
+Design overvejelser  angående systemets Backend Web Api vil her blive gennemgået. Først præsenteres hvilke routes Api'et stiller til rådighed, hvordan authentication/authorization håndteres, samt hvordan passwords vil blive gemt. Hertil vil en BackEndController klasse, som skal bruges på client siden blive redegjort for. Tilslut præsenteres resultatet af afapplikationsmodellerne. For ydderligere detlajer omkring designet af Backend'ens Web Api henvises til bilag \parencite[][Section 8.4]{TekniskBilag}.
 
 \subsubsection{Routes}
 En oversigt over Applikationens forskellige routes med en tilhørende beskrivelse kan ses nedenfor.\\
@@ -64,7 +64,7 @@ Usercontrolleren har til opgave at gøre det muligt for en bruger at registrere 
 \label{fig:Design-Backend-Sekvens-15-17-18}
 \end{figure}
 
-\noindent En fuld applikationsmodel over UserController og SaveControllers håndtering af de relevante User Stories kan ses i bilag \parencite[][Section 10]{TekniskBilag}.\\
+\noindent En fuld applikationsmodel over UserController og SaveControllers håndtering af de relevante User Stories kan ses i bilag \parencite[][Section 5]{TekniskBilag}.\\
 
 Backenden er blevet designet til at stille authentication/authorization til rådighed igennem, JWT. 
 Derudover er der blevet opstillet de nødvendige routes for udførelsen af User Stories, som
