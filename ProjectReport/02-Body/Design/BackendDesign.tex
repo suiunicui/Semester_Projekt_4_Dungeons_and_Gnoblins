@@ -42,7 +42,7 @@ Da en brugers password er følsom data, krypteres dette i backend'en igennem has
 Til brug af clienten for at tilgå backenden, skal der bruges en BackEndController klasse, dennes ansvar vil være at udføre HTTP request/responses, og vil indeholde en funktion for hvert endpoint. Klassen vil gøre brug af en HttpClient som er en klasse .Net stiller til rådighed til at håndtering af HTTP request/responses.
 
 
-\subsection{Applikationsmodeller}
+\subsubsection{Applikationsmodeller}
 Der udarbejdes appilationsmodeller for de to controller klassers håndtering af User stories, de frembragte klasse diagrammer kan ses nedenfor.
 
 Usercontrolleren har til opgave at gøre det muligt for en bruger at registrere sig og logge ind. Et klasse diagram som viser de nødvendige funktioner for udførelsen af User story 1 og 2 kan ses på \autoref{fig:Design-Backend-Klasse-1-2}
@@ -66,9 +66,6 @@ Usercontrolleren har til opgave at gøre det muligt for en bruger at registrere 
 \end{figure}
 
 \noindent En fuld applikationsmodel over UserController og SaveControllers håndtering af de relevante User Stories kan ses i \textbf{Teknisk bilag afsnit 8.5}.\\
-
-
-\subsubsection{Konklusion}
 
 Backenden er blevet designet til at stille authentication/authorization til rådighed igennem, JWT. Derudover er der blevet opstillet de nødvendige routes for udførelsen af User Stories, som er blevet fundet igennem applikationsmodeller. BackendControlleren klassen er blevet introduceret på clienten, som står for HTTP request/response.\\ 
 

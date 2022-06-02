@@ -5,9 +5,9 @@
 Spillet designes som et tekst-baseret spil, hvilket er en spilgenre, hvor brugeren interagerer med spillet igennem tekstbeskrivelser. Spillet består overordnet af fire dele med hver deres ansvar; en grafisk brugergrænseflade, en database, en back-end til netværkskommunikation, samt selve spil logikken. Brugergrænsefladen gør det muligt for brugeren at integrere med spillet. Den vil bestå af en række forskellige vinduer med hver sit formål (login screen, gameplay screen og settings screen), der hovedsageligt vil indeholde knapper og beskrivende tekst. Databasens ansvar er at gemme de enkelte spil. Databasen er en relationel database som sammenholder de enkelte brugeres profiler (Username og password) med informationer omkring deres fremskridt i spillet, såsom placering, items og stats. Det skal være muligt for en bruger at hente sine gemte spil ned på flere forskellige enheder. Til dette skal der bruges en netværksforbindelse til databasen.   
 \subsection{Minimal Viable Product}
 \label{ssec:MVP}
-Minimal Viable Product er et tidligt stadie på et produkt, hvor det indeholder nok features til at blive præsenteret til kunden. Produktet er i dette stadie langt fra at være at være det endelige produkt, men kan bruges til at forbinde projektets moduler sammen.
+Minimal Viable Product er et tidligt stadie på et produkt, hvor det indeholder nok features til at blive præsenteret til kunden. Produktet er i dette stadie langt fra at være det endelige produkt, men kan bruges til at forbinde projektets moduler sammen.
 I gruppens projekt blev der lavet et Minimal Viable Product for at etablere en forbindelse mellem projektets moduler. Dette skabte dermed et fundament for projektet og der kunne derefter tilføjes flere features undervejs i forløbet.
-Projektets Minimal Viable Product er spil-mæssigt bygget så der kan startes et spil og man som bruger efterfølgende kan bevæge sig rundt på mappet. Herved kan der etableres en forbindelse mellem modulet Front-end og Game-logic. Derefter skal spillet kunne loade og gemme et save. Ved gem af save, så skal spillets akutelle forløb gemmes, så det gemmes hvor spilleren er på mappet. Ved load af save, så skal spillets aktuelle forløb hentes og loades for bruger, så det loades hvor spilleren er på mappet og derved fortsætte spillet herfra. Dette etablere dermed forbindelsen overfor de resterende moduler, Back-end og database. 
+Projektets Minimal Viable Product er spil-mæssigt bygget så der kan startes et spil og man som bruger efterfølgende kan bevæge sig rundt på mappet. Herved kan der etableres en forbindelse mellem modulerne, Front-end og Game-logic. Derefter skal spillet kunne loade og gemme et save. Ved gem af save, så skal spillets akutelle forløb gemmes, så det gemmes hvor spilleren er på mappet. Ved load af save, så skal spillets aktuelle forløb hentes og loades for bruger, så det loades hvor spilleren er på mappet og derved fortsætte spillet herfra. Dette etablere dermed forbindelsen overfor de resterende moduler, Back-end og database. 
 
 
 \subsection{Login-screen}
@@ -23,13 +23,13 @@ Det første brugeren bliver mødt af er en login-skærm. Her skal brugeren enten
 \subsection{Core gameplay layout}
 PC kommer ind i et rum (se \autoref{fig:Core-Gameplay-Layout-udkast}). Brugeren bliver præsenteret med en beskrivelse af rummet, en liste af elementer i rummet, og en række muligheder for at interagere med rummet (interaktionen foregår ved at trykke på knapperne markeret “Button” i \autoref{fig:Core-Gameplay-Layout-udkast}). Når brugeren er færdig med at interagere med rummet, forlader de det ved at vælge en retning (“go north/south/east/west”). 
 Dette fører dem ind i et nyt rum, mappet opdateres og loopet starter forfra.
-Bevægelsen i spillet kan gøres i de forklarede fire retninger. Disse retninger indikerer for spilleren hvilke rum de kan bevæge sig ind i relativt til det rum de er i, der kunne f.eks. være rum, som kun har en vej ind og en vej ud, så kan man ikke gå andre veje end vejen man kom ind. North/south/east og west retningerne er baseret på et kompas, så derfor ville North resultere i at bevæge spillerens karakter opad, South nedad osv.
+Bevægelsen i spillet kan gøres i de forklarede fire retninger. Disse retninger indikerer for spilleren hvilke rum de kan bevæge sig ind i, relativt til det rum de er i, der kunne f.eks. være rum, som kun har en vej ind og en vej ud, så kan man ikke gå andre veje end vejen man kom ind. North/south/east og west retningerne er baseret på et kompas, så derfor ville North resultere i at bevæge spillerens karakter opad, South nedad osv.
 Rum på mappet loades efterhånden som man besøger dem.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = \textwidth]{02-Body/Images/SpilLayout-udkast.png}
-\caption{Udkast til core gameplay layout hvor man der til venstre en en beskrivelse af historien efterfulgt af ting man kan interagere med. I højre side er der øverst en visuel præsentation af spillets map og hvor spilleren er derpå. Nederst til højre kan man bevæge sig i spillet og der er knappet til at lave forskellige interaktioner.}
+\caption{Udkast til core gameplay layout hvor der til venstre en en beskrivelse af historien efterfulgt af ting man kan interagere med. I højre side er der øverst en visuel præsentation af spillets map og hvor spilleren er derpå. Nederst til højre kan man bevæge sig i spillet og der er knappet til at lave forskellige interaktioner.}
 \label{fig:Core-Gameplay-Layout-udkast}
 \end{figure}
 
