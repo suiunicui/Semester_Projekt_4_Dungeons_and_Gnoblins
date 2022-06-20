@@ -74,11 +74,8 @@ namespace Backend_API.Controllers
         }
 
         [HttpGet("Get_Room_Description"), AllowAnonymous]
-        
-
         public async Task<ActionResult<RoomDescription>> GetRoomDescription(int id)
         {
-
 
             return await _save.GetRoomDescription(id);
 
